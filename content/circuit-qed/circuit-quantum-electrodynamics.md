@@ -1,0 +1,32 @@
+---
+title: 电路量子电动力学
+description: 用量子化微波电路研究人工原子与单个或少量微波光子相互作用的框架。
+aliases:
+  - cQED
+  - circuit QED
+  - 电路量子电动学
+tags:
+  - 电路量子电动力学
+  - 理论
+date: 2026-09-08
+---
+
+<div class="entry-lead">电路 QED 把腔量子电动力学搬到芯片上：传输线或集总谐振器提供量子化电磁模式，超导电路或半导体量子点充当可调“人工原子”。</div>
+
+## 基本参数
+
+一个二能级与单腔模的最小模型是[[jaynes-cummings-model|Jaynes–Cummings 模型]]。实验由耦合强度 $g$、腔损耗率 $\kappa$ 和比特退相干率 $\gamma$ 三个尺度分类：
+
+- 大失谐给出[[readout-measurement/dispersive-readout|色散读出]]；
+- $g$ 超过主要损耗时进入[[strong-coupling|强耦合]]；
+- 多比特共享腔模可产生[[cavity-mediated-coupling|远程有效作用]]。
+
+## 半导体版本的挑战
+
+量子点电荷偶极容易耦合电场，但[[materials-devices/charge-noise|电荷噪声]]大；纯自旋相干更好，电偶极却弱。因此微磁体、自旋轨道耦合、翻转模式和高阻抗腔都在做同一件事：为自旋引入足够强、又不过度噪声敏感的电荷混合。
+
+## 论文依据
+
+- [[sources/zhang-miaolei-2014|张苗磊 2014]]，PDF pp. 4–5：量子点–腔理论与参数提取。
+- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 7–8：半导体 cQED 强耦合与动力学。
+- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF pp. 7–8：Si/SiGe 自旋比特–光子耦合。

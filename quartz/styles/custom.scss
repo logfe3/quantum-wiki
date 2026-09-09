@@ -1,0 +1,364 @@
+@use "./variables.scss" as *;
+
+// A quiet laboratory-notebook treatment layered on top of Quartz.
+body {
+  background:
+    radial-gradient(
+      circle at 8% 3%,
+      color-mix(in srgb, var(--secondary) 10%, transparent),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 94% 12%,
+      color-mix(in srgb, var(--tertiary) 9%, transparent),
+      transparent 30rem
+    ),
+    var(--light);
+}
+
+.page {
+  isolation: isolate;
+}
+
+.page-title {
+  letter-spacing: -0.035em;
+
+  a {
+    color: var(--dark);
+    background: linear-gradient(120deg, var(--secondary), var(--tertiary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.article-title {
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.page > #quartz-body {
+  .center > article {
+    background: color-mix(in srgb, var(--light) 91%, transparent);
+    border: 1px solid color-mix(in srgb, var(--lightgray) 78%, transparent);
+    border-radius: 18px;
+    box-shadow:
+      0 18px 45px color-mix(in srgb, var(--dark) 6%, transparent),
+      inset 0 1px color-mix(in srgb, white 45%, transparent);
+    padding: 2rem 2.25rem 2.5rem;
+  }
+
+  .sidebar {
+    scrollbar-width: thin;
+  }
+
+  .sidebar.right > *,
+  .explorer {
+    border: 1px solid color-mix(in srgb, var(--lightgray) 78%, transparent);
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--light) 82%, transparent);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--dark) 4%, transparent);
+    padding: 0.8rem 1rem;
+  }
+}
+
+.search > .search-button {
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--light) 84%, transparent);
+  padding-inline: 0.8rem;
+}
+
+a.internal {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+article {
+  font-size: 1.02rem;
+
+  h2 {
+    padding-top: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-right: 0.58rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+    transform: translateY(-0.12rem);
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--secondary) 10%, transparent);
+  }
+
+  .table-container > table {
+    width: calc(100% - 0.25rem);
+    margin: 1.2rem 0.125rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+
+    th {
+      background: color-mix(in srgb, var(--secondary) 8%, var(--light));
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+}
+
+.wiki-hero {
+  position: relative;
+  overflow: hidden;
+  margin: -0.4rem 0 1.8rem;
+  padding: 2.25rem;
+  border: 1px solid color-mix(in srgb, var(--secondary) 24%, var(--lightgray));
+  border-radius: 18px;
+  background: linear-gradient(
+    125deg,
+    color-mix(in srgb, var(--secondary) 12%, var(--light)),
+    color-mix(in srgb, var(--tertiary) 8%, var(--light))
+  );
+}
+
+.wiki-hero::after {
+  content: "ψ";
+  position: absolute;
+  right: 1rem;
+  bottom: -3.5rem;
+  color: color-mix(in srgb, var(--secondary) 10%, transparent);
+  font-family: Georgia, serif;
+  font-size: 12rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.wiki-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.8rem;
+  color: var(--secondary);
+  font-family: var(--codeFont);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wiki-hero h2 {
+  max-width: 30rem;
+  margin: 0;
+  font-size: clamp(1.65rem, 4vw, 2.55rem);
+  line-height: 1.18;
+}
+
+.wiki-hero h2::before {
+  display: none;
+}
+
+.wiki-hero p {
+  position: relative;
+  z-index: 1;
+  max-width: 38rem;
+  margin-bottom: 0;
+}
+
+.stat-grid,
+.category-grid,
+.source-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.stat-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.25rem 0 2rem;
+}
+
+.stat {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--light) 88%, transparent);
+}
+
+.stat strong {
+  display: block;
+  color: var(--dark);
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.stat span {
+  color: var(--gray);
+  font-size: 0.82rem;
+}
+
+.category-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.1rem 0 2rem;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  min-height: 8.5rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--light) 88%, transparent);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.category-card.internal {
+  padding: 1.2rem 1.25rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--light) 88%, transparent);
+  line-height: normal;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--secondary) 55%, var(--lightgray));
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--secondary) 10%, transparent);
+}
+
+.category-card .card-index {
+  color: var(--gray);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+}
+
+.category-card .card-title {
+  display: block;
+  margin: 0.45rem 0 0.35rem;
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.category-card p {
+  margin: 0;
+  color: var(--darkgray);
+  font-size: 0.9rem;
+  line-height: 1.45rem;
+}
+
+.entry-lead {
+  margin: 0.25rem 0 1.6rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in srgb, var(--secondary) 7%, transparent);
+  color: var(--dark);
+  font-size: 1.08rem;
+}
+
+.equation-note,
+.source-note {
+  margin: 1.2rem 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--tertiary) 5%, var(--light));
+}
+
+.source-note {
+  font-size: 0.93rem;
+}
+
+.source-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.source-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--light) 90%, transparent);
+}
+
+.source-card h3 {
+  margin-top: 0;
+}
+
+.source-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.7rem 0 1.4rem;
+}
+
+.paper-meta span,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--secondary) 24%, var(--lightgray));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--secondary) 7%, var(--light));
+  padding: 0.25rem 0.65rem;
+  color: var(--darkgray);
+  font-size: 0.78rem;
+}
+
+article h2[id="论文依据"] + ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+article h2[id="论文依据"] + ul > li {
+  margin: 0.55rem 0;
+  padding: 0.65rem 0.8rem;
+  border-left: 2px solid color-mix(in srgb, var(--tertiary) 55%, var(--lightgray));
+  background: color-mix(in srgb, var(--tertiary) 4%, transparent);
+}
+
+@media all and (min-width: 801px) {
+  .page > #quartz-body .sidebar.left .explorer {
+    flex: 1 1 0;
+    min-height: 0;
+  }
+
+  .page > #quartz-body .sidebar.left .explorer-content {
+    min-height: 0;
+    max-height: calc(100vh - 19rem);
+    overscroll-behavior: contain;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .page > #quartz-body .center > article {
+    border-radius: 14px;
+    padding: 1.25rem 1rem 1.8rem;
+  }
+
+  .wiki-hero {
+    padding: 1.4rem;
+  }
+
+  .wiki-hero::after {
+    opacity: 0.55;
+  }
+
+  .stat-grid,
+  .category-grid,
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+}
