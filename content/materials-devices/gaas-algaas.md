@@ -20,7 +20,11 @@ GaAs/AlGaAs 异质结由分子束外延（MBE）按层依次生长 GaAs 与 Al<s
 
 表面蒸镀的金属门电极在 2DEG 之上形成肖特基接触；负偏压时把覆盖区下方的 2DEG 排空，正偏压时把电子吸引至金属–半导体界面附近形成积累层。用细栅围出"岛"、用 barrier 栅隔出势垒，就把 2DEG 切成[[fundamentals/semiconductor-quantum-dot|半导体量子点]]——横向量子点的源、漏与量子点都在同一 2DEG 层内，载流子沿平行于界面的方向输运。AlGaAs 层中掺 Si 后做高温快速退火，可形成与 2DEG 连通的 Ni/Ge/Au 欧姆接触，把量子点信号引出到外部测量电路。
 
-<!-- FIGURE: GaAs/AlGaAs 异质结层结构与垂直能带图——自上而下为 GaAs 盖帽、AlGaAs 隔离、n-AlGaAs 掺杂层、AlGaAs 缓冲、GaAs 基底；右侧能带示意导带在界面处形成三角势阱，标注 2DEG 位置 -->
+![[assets/figures/materials-devices/chen-baobao-2017-fig1-5-gaas-sqd-dqd-sem.jpg]]
+
+*GaAs/AlGaAs 单量子点与双量子点典型扫描电镜照片（[陈宝宝 2017]([[sources/chen-baobao-2017]])，图 1.5）*
+
+<!-- 原始占位：GaAs/AlGaAs 异质结层结构与垂直能带图——自上而下为 GaAs 盖帽、AlGaAs 隔离、n-AlGaAs 掺杂层、AlGaAs 缓冲、GaAs 基底；右侧能带示意导带在界面处形成三角势阱，标注 2DEG 位置 -->
 
 ## 异质结的能带与三角势阱
 

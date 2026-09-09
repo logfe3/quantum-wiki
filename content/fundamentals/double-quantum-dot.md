@@ -22,7 +22,11 @@ date: 2026-09-08
 - 作为研究**分子式杂化**（hybridization）的最小平台：通过调节失谐 $\varepsilon$ 与点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t_c$，实验上能完整扫过局域–非局域转变的相图；
 - 作为多类量子比特的**物理载体**：同一器件只需选择不同的子空间编码，即可承载[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与各类衍生比特。
 
-<!-- FIGURE: 串联双量子点示意图：左右两点经互电容 $C_m$、互电阻 $R_m$ 耦合，各自经柱塞栅 $V_{g1}$、$V_{g2}$ 调能级；SEM 实物图标注源、漏、柱塞与势垒栅 -->
+![[assets/figures/fundamentals/yang-2023-fig1-3-dqd-device.jpg]]
+
+*双量子点器件结构与电子传输示意图（[杨杰诚 2023]([[sources/yang-jiecheng-2023]])，图 1.3）*
+
+<!-- 原始占位：串联双量子点示意图：左右两点经互电容 $C_m$、互电阻 $R_m$ 耦合，各自经柱塞栅 $V_{g1}$、$V_{g2}$ 调能级；SEM 实物图标注源、漏、柱塞与势垒栅 -->
 
 ## 两种几何：串联与并联
 

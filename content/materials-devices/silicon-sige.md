@@ -24,7 +24,11 @@ Si/SiGe 异质结（Si/SiGe heterostructure）的核心是一个"三明治"：�
 - **纵向**由能带不连续性提供，来自材料生长，一旦长好就固定；
 - **横向**由栅极电场提供，可在实验中连续调节——这正是[[fundamentals/tunnel-coupling|隧穿耦合]]、[[fundamentals/electrochemical-potential|电化学势]]、[[qubit-control/exchange-interaction|交换相互作用]]全都可以电控的原因。
 
-<!-- FIGURE: Si/SiGe 异质结层结构剖面（Si cap / SiGe spacer / Si 量子阱 / SiGe buffer / graded buffer / Si 衬底）与对应的导带底能级示意，标出费米面与三角势阱中的 2DEG -->
+![[assets/figures/materials-devices/yang-2023-fig1-1-sisiGe-band.jpg]]
+
+*Si/SiGe 异质结的能带与结构示意图（[杨杰诚 2023]([[sources/yang-jiecheng-2023]])，图 1.1）*
+
+<!-- 原始占位：Si/SiGe 异质结层结构剖面（Si cap / SiGe spacer / Si 量子阱 / SiGe buffer / graded buffer / Si 衬底）与对应的导带底能级示意，标出费米面与三角势阱中的 2DEG -->
 
 ## 能带工程：应变与能谷
 
