@@ -1,5 +1,5 @@
 ---
-title: 量子百科
+title: 量子点百科
 description: 从 26 篇学位论文中提炼的半导体量子点、量子比特操控、读出与腔量子电动力学中文知识库。
 tags:
   - 首页
@@ -14,7 +14,7 @@ date: 2026-09-08
 
 <div class="stat-grid">
   <div class="stat"><strong>26</strong><span>份来源 PDF</span></div>
-  <div class="stat"><strong>63</strong><span>个核心词条</span></div>
+  <div class="stat"><strong>76</strong><span>个核心词条</span></div>
   <div class="stat"><strong>6</strong><span>条知识主线</span></div>
 </div>
 

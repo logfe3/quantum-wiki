@@ -21,3 +21,7 @@ date: 2026-09-08
 | [双量子点](./double-quantum-dot)               | 两个人工原子如何组合？               |
 | [电荷稳定图](./charge-stability-diagram)       | 蜂窝线、三重点和偏压三角形表示什么？ |
 | [隧穿耦合](./tunnel-coupling)                  | 两点间杂化强度如何进入比特哈密顿量？ |
+| [自旋轨道耦合](./spin-orbit-coupling)          | 电场怎样被自旋"看见"，EDSR 的微观起源？ |
+| [谷劈裂](./valley-splitting)                   | 硅基量子点中为什么能谷会引入额外的二能级？ |
+| [超精细相互作用](./hyperfine-interaction)      | 核自旋怎样成为自旋比特的退相干主因？ |
+| [Zeeman 效应](./zeeman-effect)                 | 外磁场下自旋能级如何分裂？g 因子为何可调？ |

@@ -8,10 +8,12 @@ date: 2026-09-08
 ---
 
 - [[qpc-charge-sensor|QPC 电荷传感器]]
+- [[single-electron-transistor|单电子晶体管]]
 - [[rf-reflectometry|射频反射测量]]
 - [[gate-based-sensing|栅极射频传感]]
 - [[single-shot-readout|单发读出]]
 - [[threshold-independent-readout|阈值无关读出]]
+- [[energy-selective-readout|能量选择性读出]]
 - [[dispersive-readout|色散读出]]
 - [[parametric-amplifier|参量放大器]]
 - [[purcell-filter|Purcell 滤波器]]
