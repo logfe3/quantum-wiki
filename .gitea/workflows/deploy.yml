@@ -1,0 +1,46 @@
+name: Build & Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    # 构建产物推回仓库 site 分支，部署端从 site 分支拉取/发布
+    # Gitea Actions 自动注入 GITEA_TOKEN；若推送被拒绝，请在仓库 Settings → Secrets 手动配置同名 secret
+    runs-on: ubuntu-latest
+    env:
+      GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
+    steps:
+      - name: 拉取代码
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE"
+          rm -rf "$GITHUB_WORKSPACE/src"
+          git clone --depth 1 --branch main \
+            "https://agony:${GITEA_TOKEN}@git.chenzhaoyun.com/agony/quantum-dot-wiki.git" \
+            "$GITHUB_WORKSPACE/src"
+
+      - name: 安装依赖
+        run: |
+          cd "$GITHUB_WORKSPACE/src"
+          # 不指定 --registry：锁文件的 resolved 全部指向 registry.npmjs.org，
+          # npmmirror 未同步 @quartz-community/* 等包，强制镜像源会 404
+          npm ci
+
+      - name: 构建
+        run: |
+          cd "$GITHUB_WORKSPACE/src"
+          npx quartz build
+          echo "SOURCE_SHA=$(git -C "$GITHUB_WORKSPACE/src" rev-parse --short HEAD)" >> "$GITHUB_ENV"
+
+      - name: 发布构建产物到 site 分支
+        run: |
+          cd "$GITHUB_WORKSPACE/src/public"
+          git init -q
+          git checkout -q -b site
+          git config user.name "ci-bot"
+          git config user.email "ci-bot@chenzhaoyun.com"
+          git add -A
+          git commit -qm "site build of main@${SOURCE_SHA}"
+          git push -qf "https://agony:${GITEA_TOKEN}@git.chenzhaoyun.com/agony/quantum-dot-wiki.git" site

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 量子百科
-  pageTitleSuffix: "｜论文知识库"
-  baseUrl: logfe3.github.io/quantum-thesis-wiki
+  pageTitle: 量子点百科
+  pageTitleSuffix: "｜学位论文知识库"
+  baseUrl: wiki.chenzhaoyun.com/quantum-dot-wiki
   enableSPA: true
   enablePopovers: true
   analytics: null
