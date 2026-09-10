@@ -136,9 +136,11 @@ $$
 杠杆臂 $\alpha$ 是电化学势–电压转换系数，直接决定了腔电压扰动被放大到失谐量多少倍。常用提取方法有三种：
 
 1. **库仑菱形法**：由相邻电子数对应的库仑菱形，得到加电子能 $E_{\rm add}$ 与栅压周期 $\Delta V_G$，
-$$
+
+```math
 \alpha=\frac{E_{\rm add}}{|e|\,\Delta V_G},
-$$
+```
+
 利用菱形两条边的斜率可独立校验 $\alpha$ 的电压–能量转换关系。在 Si/SiGe 三量子点中，由库仑菱形测得电极 lever arm 约为 $126\ \mathrm{meV/V}$。
 2. **光子辅助隧穿法**：对量子点电极施加微波驱动 $f_d$，电子可吸收 $n$ 个光子（$n$ 为整数）跨越失谐量，边带间距即一个光子的能量，$h f_d$ 与电极电压周期 $\Delta V$ 之比即 $\alpha/h$。例如固定 $f_d=10\ \mathrm{GHz}$、微扰 $eV_{\rm AC}\,h f_d\ll(2t_c)^2$ 即可读出 lever arm。
 3. **two-tone 谱法**：固定失谐 $\varepsilon=0$，把驱动频率 $f_d$ 与电极电压 $V_L$ 联合扫描，bit 跃迁能与电极电压的拟合斜率 $\alpha=\Delta\varepsilon/\Delta V_L$ 同样给出杠杆臂。

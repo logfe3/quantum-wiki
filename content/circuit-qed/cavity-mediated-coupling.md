@@ -46,10 +46,10 @@ $$
  1. **总激发数守恒**：RWA 后 $\hat N=a^\dagger a+\sum_k\sigma_{+,k}\sigma_{-,k}$ 与 $\hat H_{\mathrm{TC}}$ 对易，希尔伯特空间按激发数分解为相互独立的小子空间；
  2. **集体耦合增强**：当所有比特调至与腔共振 $\omega_{a,k}=\omega_r$ 时，低激发子空间的本征态为集体模式 $|0\rangle_C$（"暗态"）与 $|\pm\rangle_C$。以两比特为例（[[sources/ref-13|文献 13]] 式 3.2–3.3；[[sources/ref-17|文献 17]] 式 5.2–5.3），
 
-$$
+```math
 |0\rangle_C=\frac{1}{g_C}(g_{c,1}|ge0\rangle-g_{c,2}|eg0\rangle),\qquad
 |\pm\rangle_C=\frac{1}{\sqrt{2}g_C}\bigl(g_{c,2}|ge0\rangle+g_{c,1}|eg0\rangle\mp g_C|gg1\rangle\bigr),
-$$
+```
 
 其中 $g_C=\sqrt{g_{c,1}^2+g_{c,2}^2}$ 称为**集体增强耦合速率**（collectively enhanced coupling rate）。暗态 $|0\rangle_C$ 不含光子成分、与腔的偶极矩阵元为零，无法从基态 $|gg0\rangle$ 经单光子过程达到；而 $|\pm\rangle_C$ 之间的能级间距即**增强真空 Rabi 劈裂**，大小为 $2\hbar g_C$。这一增强反映了多个比特共同与光子耦合时，比单比特真空 Rabi 劈裂 $2g_k$ 更大的能级分裂。
 

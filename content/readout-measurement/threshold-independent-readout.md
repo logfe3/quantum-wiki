@@ -55,10 +55,10 @@ $$
 
 - **自旋–电荷转换可见度** $V^{STC}$：只考虑时间窗口 $t_r$——窗口内激发态电子是否跳出过、基态电子是否误跳出。因为只关心"是否跳出过"，可以去掉回填通道，用修改后的转移矩阵求出解析解：
 
-$$
+```math
 V^{STC}(t)=\frac{\Gamma_\uparrow^\mathrm{out}-\Gamma_\downarrow^\mathrm{out}}{W+\Gamma_\uparrow^\mathrm{out}-\Gamma_\downarrow^\mathrm{out}}
 \left(e^{-t\Gamma_\downarrow^\mathrm{out}}-e^{-t(W+\Gamma_\uparrow^\mathrm{out})}\right),
-$$
+```
 
 求极值点得最佳时间窗口
 
@@ -74,9 +74,9 @@ $$
 - **电荷探测可见度** $V^E$：选定 $t_r$ 后，只考虑阈值 $x_t$ 对信号最大值分布的划分。设两态信号在窗口内最大值的概率密度为 $N_\uparrow(x)$、$N_\downarrow(x)$，则 $F_i=\int N_i(x)\,dx$（积分限分别为阈值的一侧）。由于最大值分布没有解析式，$V^E$ 只能靠 Monte-Carlo 模拟数值获得。
 - **读取可见度** $V^R=F_\uparrow^R+F_\downarrow^R-1$：对 $(t_r, x_t)$ 两个参数的整体表征。把两阶段判决的正确/错误路径全部展开，可严格证明因子化关系
 
-$$
+```math
 V^R=V^{STC}\times V^E.
-$$
+```
 
 由于 $V^{STC}$ 与 $V^E$ 的最优点并不重合（$V^E$ 随窗口增大而下降），$V^R$ 的最佳窗口与 $t_\mathrm{opt}^{STC}$ 略有偏移。这一关系也提供了便捷算法：$V^E=V^R/V^{STC}$，不必单独模拟。
 

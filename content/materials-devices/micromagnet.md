@@ -186,9 +186,9 @@ $$
 - **Rabi 频率**：呈明显的**非正弦**调制，最大值与最小值相差约 4.1 倍（$\theta_B=90°$ 处 $f_{\mathrm{rabi}}=2.38$ MHz，$\theta_B=340°$ 处 $0.58$ MHz）。非正弦行为正是 SSOC 区别于 ISOC 的判据——它来自面内与面外横向梯度对总梯度的竞争贡献，且与磁体形状、相对位置有关，一般写不出解析式。
 - **品质因子**：$Q_{\mathrm{rabi}}=2f_{\mathrm{rabi}}T_2^{\mathrm{rabi}}$ 同样非正弦，实测在 $\theta_B=270°$ 附近达到约 100，在 $340°$ 附近仅约 5。定义仿真品质因子
 
-$$
+```math
 Q=\frac{d\mathbf{B}_{\mathrm{tr}}^{\mathrm{tot}}/dy}{\sqrt{\left(d\mathbf{B}_{\mathrm{long}}/dx\right)^{2}+\left(d\mathbf{B}_{\mathrm{long}}/dy\right)^{2}}}
-$$
+```
 
 （假设电荷噪声各向同性），数值计算给出最优角度在 $15°$ 与 $130°$，即**偏离传统工作点（沿磁体长轴）一定角度**：在这些方向上纵向梯度 $d\mathbf{B}_{\mathrm{long}}/dy$ 被显著抑制，而横向梯度仍保持较高。这是一条纯粹靠转动磁场、不改动器件就能提升保真度的优化路径。
 

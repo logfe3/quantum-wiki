@@ -121,22 +121,28 @@ $$
 自旋本身不带电，电荷噪声必须"借道"才能影响它。借道方式有二：
 
 1. **自旋轨道耦合 / $g$ 张量的电压依赖**。把空穴比特写成有效自旋 $1/2$ 系统
-$$
+
+```math
 H_s=\mathbf{S}\cdot\boldsymbol{\omega}_L(\mathbf{V}_G),
 \qquad
 \boldsymbol{\omega}_L(\mathbf{V}_G)=\frac{\mu_B}{\hbar}\,\mathsf{g}(\mathbf{V}_G)\cdot\mathbf{B},
-$$
+```
+
 $g$ 张量显含栅压，于是拉莫尔频率 $f_L=\frac{\mu_B}{h}\left|\mathsf{g}(\mathbf{V}_G^0)\cdot\mathbf{B}\right|$ 也随栅压变化。定义**纵向自旋–电场敏感度**（longitudinal spin–electric susceptibility, LSES）
+
 $$
 D_{G_i}=\frac{\partial f_L}{\partial V_{G_i}^{0}},
 $$
+
 它的大小直接反映比特对电荷噪声的敏感程度，实验上就是"比特频率随柱塞栅压的斜率"。
 
 2. **[[materials-devices/micromagnet|微磁体]]纵向梯度场**。微磁体的杂散场与电驱动位移结合给出横向梯度 $b_{tr}=(\vec{e}_{MW}\cdot\nabla)B_{MM}^{\perp}$，驱动[[qubit-control/electric-dipole-spin-resonance|EDSR]]；而其纵向分量与涨落电场结合给出 $b_{long}=(\vec{e}_{noise}\cdot\nabla)B_{MM}^{/\!/}$，直接把电荷噪声转成频率噪声。二者的比值定义了品质因子
-$$
+
+```math
 Q=\frac{\mathrm{d}B_{tr}^{tot}/\mathrm{d}y}
 {\sqrt{\left(\mathrm{d}B_{long}/\mathrm{d}x\right)^{2}+\left(\mathrm{d}B_{long}/\mathrm{d}y\right)^{2}}},
-$$
+```
+
 最大化 $Q$ 的面内磁场角并不沿磁体轴向，而是偏离一定角度。
 
 在平面锗中，有效 $g$ 因子的各向异性源于重空穴–轻空穴（HH–LH）混合，而混合程度又由量子点的电势分布决定，因此 $g$ 与 LSES 都强烈依赖磁场取向。面内旋转磁场时
@@ -209,9 +215,11 @@ $$
 
 - **电荷比特的对称点** $\varepsilon=0$：$\partial\omega_{01}/\partial\varepsilon=0$，一阶失谐噪声被完全抑制，代价是失去了用失谐调频的手段。
 - **交换门的对称操作点**。交换耦合与失谐 $\epsilon=\alpha(V_{P2}-V_{P1})$ 的关系为
-$$
+
+```math
 J=\frac{2tU}{U^{2}-\epsilon^{2}},
-$$
+```
+
 $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。$J$ 在 $\epsilon=0$ 处取极小值、对 $\epsilon$ 一阶不敏感，因此实验上不再用失谐脉冲、而是用快速电压脉冲直接抬降点间势垒来开关 $J$，可有效抑制电荷噪声对 $J$ 的干扰。需要注意的是，正反脉冲会使两点电化学势非对称偏移，实测对称点常偏离失谐零点，需用 Hahn 回波型序列单独标定（引入[[scaling-automation/virtual-gates|虚拟栅极]]可缓解）。
 - **空穴自旋比特的磁场取向甜点**。由于 LSES 随磁场角呈抛物线型变化，选择使 $|D_{G_i}|$ 最小的磁场方向即可显著抑制退相干。理论进一步指出，LSES 为零的方向在描述磁场取向的单位球面上不是孤立点，而是连成连续轨迹（"最优操控线"，sweet lines），且轨迹位置可由栅压调控——这为在多比特阵列中寻找**共同**最优磁场配置提供了可能。
 
@@ -246,9 +254,11 @@ $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。
 1. **定标**。先测[[fundamentals/coulomb-diamond|库仑菱形]]提取杠杆臂 $\alpha$。
 2. **测谱**。把量子点调到[[fundamentals/coulomb-blockade|库仑阻塞]]区（避开能量量子化的影响），源极加直流偏压（如 $200\ \mu\mathrm{V}$，用直流而非交流以排除激励信号干扰），漏极电流经前置放大器转成电压后送入频谱仪，得到电流噪声谱 $S_I(f)$。在库仑峰的峰底（阻塞区）、斜率最大处、峰顶三个位置分别取谱：峰底零电流处测到的实际上是隧穿几率涨落 $\Delta\Gamma$ 引起的噪声，可作为本底。
 3. **积分**。对低频段积分得到电流涨落
-$$
+
+```math
 \Delta I=\sqrt{\int_{f_1}^{f_2}\left[S_I^{2}(f)-S_{BG}^{2}(f)\right]df},
-$$
+```
+
 $S_{BG}$ 为系统噪声本底。
 4. **换算**。$\Delta V=\Delta I/\left|dI/dV\right|$，再乘 $\alpha$ 得 $\Delta\varepsilon$。
 

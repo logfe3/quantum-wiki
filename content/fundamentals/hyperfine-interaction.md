@@ -49,13 +49,25 @@ $$
 ### 磁场量级
 
 - **理论上限**：若 $N$ 个核全部沿 $z$ 方向完全极化，Overhauser 场幅值约为
-$$B_{N,\max}=\frac{1}{g\mu_B}\sum_k A_k\,I_k\sim 1\text{–}5\ \mathrm{T},$$
+
+```math
+B_{N,\max}=\frac{1}{g\mu_B}\sum_k A_k\,I_k\sim 1\text{–}5\ \mathrm{T},
+```
+
 对 GaAs 量子点典型值。
 - **未极化下的均方根涨落**：核自旋取向随机时，中心极限定理给出
-$$B_{N,\mathrm{rms}}\sim \frac{B_{N,\max}}{\sqrt{N}}.$$
+
+```math
+B_{N,\mathrm{rms}}\sim \frac{B_{N,\max}}{\sqrt{N}}.
+```
+
 对一个 $N\approx 10^6$ 的量子点，$B_{N,\mathrm{rms}}\approx 1\text{–}5\ \mathrm{mT}$（[文献 2]([[sources/shang-runan-2014]])，PDF p. 26；[文献 25]([[sources/zhou-yuchen-2026]])，PDF p. 82）。$B_N$ 涨落的特征时间由核–核偶极相互作用决定（$\sim 10$–$100\ \mu\mathrm{s}$），与电子自旋动力学相比可视为准静态。
 - **双量子点之间的梯度**：左右两点各自覆盖不同的核集合，差分
-$$\Delta\mathbf{B}_N=\mathbf{B}_{N,L}-\mathbf{B}_{N,R}$$
+
+```math
+\Delta\mathbf{B}_N=\mathbf{B}_{N,L}-\mathbf{B}_{N,R}
+```
+
 是双点 S–T<sub>±</sub> 比特操控的物理引擎（[文献 6]([[sources/chen-baobao-2017]])，PDF pp. 33, 36–41；[文献 25]([[sources/zhou-yuchen-2026]])，PDF pp. 83, 138）。
 
 对应的能量尺度为 $E_N=g\mu_B|\Delta\mathbf{B}_N|$，在平面锗空穴体系中实测约 $0.1\ \mathrm{meV}$（[文献 25]([[sources/zhou-yuchen-2026]])，PDF p. 83，式 4.4）。
@@ -64,22 +76,24 @@ $$\Delta\mathbf{B}_N=\mathbf{B}_{N,L}-\mathbf{B}_{N,R}$$
 
 双量子点 (1,1) 区两电子自旋态可按 $\{T_+,T_0,T_-,S\}$ 基展开。设外磁场沿 $z$、交换相互作用为 $J(\epsilon)$、左右两点的 Overhauser 场分别为 $\mathbf{B}_{N,L}$、$\mathbf{B}_{N,R}$，则四个能级在 $\{|T_+\rangle,|T_0\rangle,|T_-\rangle,|S\rangle\}$ 基下的哈密顿量为（[文献 6]([[sources/chen-baobao-2017]])，PDF p. 30，式 2.12–2.13；[文献 2]([[sources/shang-runan-2014]])，PDF p. 26，式 1.4）
 
-$$
+```math
 H=g\mu_B\begin{pmatrix}
 B_Z & 0 & 0 & \tfrac{dB_x-\mathrm{i}\,dB_y}{2}\\[3pt]
 0 & 0 & 0 & -dB_z\\[3pt]
 0 & 0 & -B_Z & -\tfrac{dB_x+\mathrm{i}\,dB_y}{2}\\[3pt]
 \tfrac{dB_x+\mathrm{i}\,dB_y}{2} & -dB_z & -\tfrac{dB_x-\mathrm{i}\,dB_y}{2} & -\tfrac{J(\epsilon)}{g\mu_B}
 \end{pmatrix},
-$$
+```
 
 其中
-$$B_Z=B_{\mathrm{ext}}+\tfrac{1}{2}(B_{N,L}^z+B_{N,R}^z),\qquad
-\mathbf{dB}=\tfrac{1}{2}(\mathbf{B}_{N,L}-\mathbf{B}_{N,R}).$$
+```math
+B_Z=B_{\mathrm{ext}}+\tfrac{1}{2}(B_{N,L}^z+B_{N,R}^z),\qquad
+\mathbf{dB}=\tfrac{1}{2}(\mathbf{B}_{N,L}-\mathbf{B}_{N,R}).
+```
 
 极限 $B_Z\gg B_N$ 时把 $T_+$ 与 $S$ 张成有效二能级（[文献 6]([[sources/chen-baobao-2017]])，PDF p. 30，式 2.14–2.15）：
 
-$$
+```math
 H_{S-T_+}=\begin{pmatrix}
 0 & -g\mu_B\,dB_Z\\
 -g\mu_B\,dB_Z & -J(\epsilon)
@@ -88,7 +102,7 @@ H_{S-T_+}^{\perp}=g\mu_B\begin{pmatrix}
 B_Z & \tfrac{dB_x-\mathrm{i}\,dB_y}{2}\cos\theta\\[3pt]
 \tfrac{dB_x+\mathrm{i}\,dB_y}{2}\cos\theta & -J(\epsilon)/g\mu_B
 \end{pmatrix},
-$$
+```
 
 其中 $\theta=\arctan(2\Delta/\sqrt{\epsilon^2+4\Delta^2})$ 由失谐 $\epsilon$ 与隧穿耦合 $\Delta$ 决定。结果是 Overhauser 场的 **z 分量梯度**耦合 $S\leftrightarrow T_0$，**横向分量梯度**驱动 $S\leftrightarrow T_+$，把 $S$–$T_+$ 简并交叉变为反交叉。
 

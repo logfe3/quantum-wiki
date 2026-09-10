@@ -128,9 +128,11 @@ $$
 
 - **有限翻转时间** $\tau_\mathrm{sw}$：翻转期间磁场连续变化，自旋可能部分跟随磁场方向产生额外旋转。线性近似给出保真度损失 $\delta\mathcal{F}_\mathrm{fin}\approx \tfrac{1}{2}(\omega_0\tau_\mathrm{sw}/2)^2$，当 $\omega_0\tau_\mathrm{sw}\ll 1$ 时可忽略。优化方向是把 $\tau_\mathrm{sw}$ 压低到 $1\,\mu\mathrm{s}$ 以下；
 - **SOT 翻转非理想**：临界电流密度不足或热涨落导致部分失败。设成功概率 $p_\mathrm{sw}$、失败时磁矩不变，则单比特保真度
-$$
+
+```math
 \mathcal{F}_\mathrm{sw}=p_\mathrm{sw}+\frac{1-p_\mathrm{sw}}{6}\bigl(1+\cos\theta_\mathrm{ideal}\bigr),
-$$
+```
+
 典型 $p_\mathrm{sw}=0.999$、$\theta_\mathrm{ideal}=\pi/2$ 时 $\delta\mathcal{F}_\mathrm{sw}\approx 8.3\times 10^{-4}$；
 - **量子点位置偏移**：设面内偏移 $\Delta=\sqrt{\Delta x^2+\Delta y^2}$，磁体间距 $D\approx 360\,\mathrm{nm}$，按偶极子展开给出净磁场方向偏角 $\delta\theta\approx 3\Delta/D$，进而保真度损失 $\delta\mathcal{F}_\mathrm{pos}\approx \tfrac{1}{4}(\delta\theta)^2\approx (3\Delta/D)^2/4$；
 - **静态磁场方向偏差**：磁各向异性、外场不均匀、工艺误差引入与设计轴的静态偏角 $\delta\theta_\mathrm{mag}$ 与相对强度误差 $\epsilon=\delta B/B_1$，损失 $\delta\mathcal{F}_\mathrm{static}\approx \tfrac{1}{4}[(\delta\theta_\mathrm{mag})^2+(\epsilon\theta_\mathrm{ideal})^2]$；

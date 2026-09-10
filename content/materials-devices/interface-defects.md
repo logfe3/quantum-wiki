@@ -202,7 +202,7 @@ $$
 | 量 | 典型值 | 体系 | 来源 |
 | --- | --- | --- | --- |
 | SiGe 势垒层厚度 $t_\text{SiGe}$ | $32\,\text{nm}$ | 应变锗异质结 | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |
-| 界面 SiO<sub>x</sub> 厚度 $t_\text{SiO}_x$ | $1.5\,\text{nm}$ | 应变锗表面氧化 | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |
+| 界面 SiO<sub>x</sub> 厚度 $t_{\text{SiO}_x}$ | $1.5\,\text{nm}$ | 应变锗表面氧化 | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |
 | Ge/SiGe 价带偏移 $\Delta E_v$ | $114\,\text{meV}$ | 应变锗 | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |
 | 锗空穴有效质量 $m^*_\text{Ge}$ | $0.0728\,m_0$ | 应变锗 | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |
 | SiGe 合金相对介电常数 $\epsilon_\text{SiGe}$ | $15.34$ | Si<sub>0.2</sub>Ge<sub>0.8</sub> | [文献 23]([[sources/ma-jingrui-2026]]) PDF p. 43 |

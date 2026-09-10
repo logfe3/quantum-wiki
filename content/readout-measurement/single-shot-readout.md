@@ -20,13 +20,17 @@ date: 2026-09-08
 
 1. **映射**：把自旋或逻辑态转换为不同电荷占据、隧穿事件或谐振腔响应。半导体量子点中最常见的两类是[[#能量选择隧穿读出|能量选择隧穿读出]]（Elzerman readout，[文献 15]([[sources/hu-ruizi-2022]])，PDF pp. 34–35）与[[#泡利自旋阻塞读出|泡利自旋阻塞读出]]（Pauli spin blockade, PSB；[文献 6]([[sources/chen-baobao-2017]])，PDF p. 4）。前者把塞曼能级差作为"读出窗口"，后者把单态–三重态能级差作为读出窗口，可达数十至上百 μeV。
 2. **获取**：在状态弛豫前，用传感器和放大链积累足够信噪比。硅基量子点中传感器多为单电子晶体管（SET）或[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]，超导电路则用[[readout-measurement/dispersive-readout|色散读出]]配合[[readout-measurement/parametric-amplifier|参量放大器]]。把传感器和积分线路的传递函数推到底，对应一次积分的信噪比
-$$
+
+```math
 \mathrm{SNR}=\frac{|C_e-C_g|^2}{\sigma_g^2+\sigma_e^2},
-$$
+```
+
 其中 $C_{g,e}$ 是两个态对应的高斯圆斑中心在 $I$–$Q$ 平面上的坐标，$\sigma_{g,e}$ 是圆斑半径（[文献 14]([[sources/duan-peng-2022]])，PDF p. 62）。当系统噪声与态无关、信号为高斯分布时，态分离错误率
+
 $$
 E_\mathrm{sep}=\mathrm{erfc}\!\left(\sqrt{\mathrm{SNR}/2}\right).
 $$
+
 3. **判决**：用阈值、模板匹配或分类器把时间轨迹映射为状态标签。最简单的方法是投影阈值法——把 $I$–$Q$ 数据沿两圆斑中心连线投影、选单一阈值；多比特联合读出时可用[[readout-measurement/readout-crosstalk|抗串扰分类器]]（如浅层神经网络，文献 14，PDF pp. 134–136）。判决后得到两个态各自的正确判定概率 $F_\uparrow,F_\downarrow$，合成可见度 $V^R=F_\uparrow+F_\downarrow-1$；硅自旋比特在 §"参数与量级"所列参数下可达 $V^R\approx 85.4\%$（[文献 15]([[sources/hu-ruizi-2022]])，PDF p. 64）。
 
 仅报告两个直方图的分离度（"信号良好"）会高估完整读出性能。完整读出保真度必须同时计入三类错误——初始化错误（init）、自旋–电荷转换/态分离错误（sep）、以及积分期间的 $T_1$ 弛豫错误（$E_{T_1}\simeq 1-e^{-\tau/(2T_1)}$，[文献 14]([[sources/duan-peng-2022]])，PDF p. 65）。在表面码阈值（$\approx 1\%$）约束下，错误率通常先平均分配给三类，对应的读取时间预算 $\tau_\mathrm{th}=T_1/100$、所需的最小信噪比 $\mathrm{SNR}_\mathrm{th}\simeq 3.97$（[文献 14]([[sources/duan-peng-2022]])，PDF p. 65）。

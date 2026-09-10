@@ -181,9 +181,11 @@ $$
 - **共隧穿**（cotunneling）：当 $|eV_{SD}|<E_C$ 时，顺序隧穿被禁止；但电子仍可通过虚占据中间态一次性穿过量子点，电流 $\propto V_{SD}^2/E_C^2$。这是"充电能越高、共隧穿越被抑制"的直接推论；
 - **光子辅助隧穿**（photon-assisted tunneling, PAT）：微波驱动下电子吸收 $n\hbar\omega$ 跨越失谐，阻塞区内出现等距 PAT 复制线，间距由驱动频率给出。这是用外部驱动绕开充电能门槛的实验手段；
 - **近藤效应**（Kondo effect）：当点内净自旋为 $1/2$ 时，点自旋与库电子在低温下屏蔽成单态，产生零偏压电导峰；Kondo 温度
-$$
+
+```math
 T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|(\epsilon_d+U)}{2U\Gamma}\right]
-$$
+```
+
 中的 $U$ 正是充电能；$U$ 越大则 $T_K$ 越低，Kondo 峰越难观测。
 
 充电能同时也是[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]的能量参考标度：当缺陷态的能量落在 $\mu(N)$ 附近时，电子在缺陷和量子点之间隧穿，造成 $E_C$ 漂移与库仑峰跳变。阵列规模扩大时，这种漂移会显著放大，需要[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/automatic-tuning|自动调控]]补偿。

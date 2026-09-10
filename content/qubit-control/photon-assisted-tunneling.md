@@ -124,9 +124,11 @@ $$
 
 PAT 共振峰的强度与宽度承载相干信息：
 - **弛豫时间 $T_1$**：把连续微波斩波成 50% 占空比可调周期 $\tau$ 的脉冲，PAT 峰高作为 $\tau$ 的函数按
-$$
+
+```math
 \frac{M(\tau)}{M(\tau_0)}=\frac{1}{2}+\frac{T_1}{\tau}\left(1-e^{-\tau/2T_1}\right)
-$$
+```
+
 衰减，拟合得 $T_1$；
 - **退相干时间 $T_2^*$**：饱和一阶 PAT 共振峰的半高全宽（FWHM）$\Delta V_{\mathrm{FWHM}}$ 通过杠杆臂换算成能量 $\hbar\Delta\omega=\alpha\,\Delta V_{\mathrm{FWHM}}$，再除以 $\hbar$ 得 $T_2^*=1/\Delta\omega$。在非掺杂 GaAs 双量子点上，曾测得 FWHM $\approx 0.42\ \mathrm{mV}$、$\alpha=0.06\ \mathrm{meV/mV}$，对应 $\hbar\Delta\omega\approx 12.6\ \mu\mathrm{eV}$，即 $T_2^*\approx 330\ \mathrm{ps}$。
 

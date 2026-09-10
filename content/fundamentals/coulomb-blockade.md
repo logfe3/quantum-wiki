@@ -35,7 +35,11 @@ $$
 库仑阻塞的定量描述基于[[constant-interaction-model|常相互作用模型]]（constant interaction model, CI 模型），它包含两条假设：
 
 1. 量子点中电子之间、以及电子与外界电极之间的库仑相互作用，全部压缩为一个常数总电容
-$$C_\Sigma=C_S+C_D+C_G,$$
+
+```math
+C_\Sigma=C_S+C_D+C_G,
+```
+
 即点与源、漏、栅电容之和；
 2. 点内单粒子能级 $E_n$ 由束缚势决定（可含磁场依赖），与电子填充数无关。
 
@@ -126,12 +130,25 @@ $$
 "阻塞"禁止的只是顺序隧穿，并非绝对零电导：
 
 - **共隧穿**（cotunneling）：电子经虚占据中间态一次性穿过量子点，属于更高阶过程，在阻塞谷中产生弱但有限的电流；
-- **近藤效应**（Kondo effect）：当点内净自旋为 $1/2$（电子数为奇）时，点自旋与电子库传导电子在低温下屏蔽成单态。把量子点映射为安德森杂质模型（Anderson impurity model）：
-$$H=H_R+H_L+H_{QD}+H_I,\quad H_{QD}=\sum_{\sigma}\epsilon_d\,d^\dagger_\sigma d_\sigma+U n_\uparrow n_\downarrow,$$
-$$H_I=\sum_{k\sigma}V_{Rk\sigma}\left[c^\dagger_{Rk\sigma}d_\sigma+\mathrm{h.c.}\right]+\sum_{k\sigma}V_{Lk\sigma}\left[c^\dagger_{Lk\sigma}d_\sigma+\mathrm{h.c.}\right],$$
-其中 $U$ 即点内库仑相互作用。系统在 Kondo 温度
-$$T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gamma}\right]$$
-以下于阻塞谷中央产生零偏压电导峰（zero-bias peak, ZBP）——在原本 $dI/dV=0$ 的阻塞区出现电导。实验判据有二：加平行磁场后峰按塞曼能劈裂为二；升温后峰高下降直至消失；
+- **近藤效应**（Kondo effect）：当点内净自旋为 $1/2$（电子数为奇）时，点自旋与电子库传导电子在低温下屏蔽成单态。把量子点映射为安德森杂质模型（Anderson impurity model）。
+
+  哈密顿量写作
+
+  ```math
+H=H_R+H_L+H_{QD}+H_I,\quad H_{QD}=\sum_{\sigma}\epsilon_d\,d^\dagger_\sigma d_\sigma+U n_\uparrow n_\downarrow,
+```
+
+  ```math
+H_I=\sum_{k\sigma}V_{Rk\sigma}\left[c^\dagger_{Rk\sigma}d_\sigma+\mathrm{h.c.}\right]+\sum_{k\sigma}V_{Lk\sigma}\left[c^\dagger_{Lk\sigma}d_\sigma+\mathrm{h.c.}\right],
+```
+
+  其中 $U$ 即点内库仑相互作用。系统在 Kondo 温度
+
+  ```math
+T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gamma}\right]
+```
+
+  以下于阻塞谷中央产生零偏压电导峰（zero-bias peak, ZBP）——在原本 $dI/dV=0$ 的阻塞区出现电导。实验判据有二：加平行磁场后峰按塞曼能劈裂为二；升温后峰高下降直至消失；
 - **光子辅助过程**：强微波驱动下，电子可吸收光子能量跨越失谐，在阻塞区诱导[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]（photon-assisted tunneling）边带。
 
 因此，"库仑阻塞"总是相对特定的输运阶次、温度与测量分辨率而言的。

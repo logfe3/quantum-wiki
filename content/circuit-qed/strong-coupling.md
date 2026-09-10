@@ -39,9 +39,9 @@ $$
 - **时域**：若系统初态制备为 $|e,0\rangle$，则激发在比特与腔模之间相干往返的速率为 $2g$——这就是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 振荡]]。振荡能在 $\Gamma_\mathrm{eff}=(\kappa+\gamma)/2$ 的耗散包络下完成 $\sim 2g/(\kappa+\gamma)$ 个周期。
 - **频域**：将比特频率扫过腔频，原本应在 $\omega_q=\omega_r$ 处"交叉"的两条谱线会拉开为间距 $2g$ 的两条杂化支——这就是真空 Rabi 劈裂。两条支的线宽等于腔耗散与比特退相干之和的一半 $(\kappa+\gamma)/2$，劈裂能谱可分辨的条件是
 
-$$
+```math
 2g>\kappa+\gamma .
-$$
+```
 
 半导体量子点的能谱通常以频域方式测量，因此文献中常把 $2g>\kappa+\gamma$ 视为"劈裂可分辨"的工作判据。
 

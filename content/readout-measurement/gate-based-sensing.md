@@ -29,9 +29,11 @@ date: 2026-09-08
 
 - **隧穿电容 $C_T$ 与电导 $G_T$**——载流子在量子点和电子库之间的隧穿。固定栅压、改变失谐 $\varepsilon$ 越过一条 charge transition 线时，量子点–储库之间发生一次电荷交换；等效电导随 $\omega$ 的响应可由费米黄金定则给出。隧穿电容在隧穿频率 $\Gamma$ 之上趋于零、在 $\Gamma$ 之下保持有限峰值 $e^2/(4k_\mathrm{B}T)$ 量级，因此"隧穿耗散"贡献谐振电路的线宽；
 - **量子电容 $C_Q$**——双量子点能级对栅压的曲率 $\partial^2 E/\partial N^2$。在 charge transition 线附近的两个简并电荷态之间，电子可瞬时在两侧分布，等效电容增加
-$$
+
+```math
 C_Q = \frac{e^2\,\partial\langle N\rangle}{\partial\mu}
-$$
+```
+
 形式上正比于态密度（density of states）。量子电容贡献谐振电路的频率偏移，且改变方向随栅压跨越 transition 线而翻转；偏离 transition 时 $C_Q$ 指数压低，恢复为纯几何电容 $C_g$。
 
 把两部分叠加，栅极端口总电容可写为

@@ -277,7 +277,7 @@ $$
 - [[sources/ref-12|文献 12]]，PDF pp. 53–55：高度可调双量子点结构与五栅工艺（30 nm Pd 源漏、30 nm Al₂O₃ 绝缘、3/25 nm Ti/Pd 顶层栅），以及典型电荷稳定图、蜂窝结构与偏压三角形、参数 $C_{G2}=6.7\ \mathrm{aF}$、$\alpha_L=0.14$、$E_{CL}=4.3\ \mathrm{meV}$、$\Delta_{ST}\approx 1.1\ \mathrm{meV}$。
 - [[sources/ref-12|文献 12]]，PDF p. 57：自旋阻塞区漏电流 $I(B)$ 双峰谷结构与拟合公式，提取 $t=45\pm 5\ \mu\mathrm{eV}$、$t_\mathrm{SO}=27\pm 3\ \mu\mathrm{eV}$ 的定量结果。
 - [[sources/ref-12|文献 12]]，PDF p. 60：EDSR 谱线 g 因子 3.5 与 $T_2^*=2\hbar\sqrt{\ln 2}/(g\mu_B\Delta B_{\mathrm{EDSR}})$ 的下限估计。
-- [[sources/ref-12|文献 12]]，PDF pp. 76–78：JC 哈密顿量 $H=\hbar\Delta_0 a^\dagger a+(\hbar\Delta/2)\sigma_Z+\hbar g_\mathrm{eff}}(\sigma_+ a+\sigma_- a^\dagger)$、$g_\mathrm{eff}}=g_C\sin\theta$ 与反射式幅值/相位拟合；得到 $2t_C/h=6.20\ \mathrm{GHz}$、$g_C/2\pi=15\ \mathrm{MHz}$、$\gamma/2\pi=0.28\ \mathrm{GHz}$。
+- [[sources/ref-12|文献 12]]，PDF pp. 76–78：JC 哈密顿量 $H=\hbar\Delta_0 a^\dagger a+(\hbar\Delta/2)\sigma_Z+\hbar g_\mathrm{eff}(\sigma_+ a+\sigma_- a^\dagger)$、$g_\mathrm{eff}=g_C\sin\theta$ 与反射式幅值/相位拟合；得到 $2t_C/h=6.20\ \mathrm{GHz}$、$g_C/2\pi=15\ \mathrm{MHz}$、$\gamma/2\pi=0.28\ \mathrm{GHz}$。
 - [[sources/ref-12|文献 12]]，PDF p. 79：自旋–光子耦合的混合角路径与大失谐路径两条估算，分别得到 $g_S/2\pi\sim 3\ \mathrm{MHz}$（$\varepsilon=0$）与 $g_S/2\pi\sim 0.22\ \mathrm{MHz}$（$\varepsilon\neq 0$）。
 - [[sources/ref-12|文献 12]]，PDF p. 80：隧穿率随 $V_\mathrm{G3}$ 在 6.2–8.5 GHz 范围内可调、$\gamma/2\pi=0.28$–$0.32\ \mathrm{GHz}$，以及空穴温度 ~125 mK 与样品残余缺陷对调节能力的限制。
 - [[sources/ref-12|文献 12]]，PDF pp. 90–91：定位型锗纳米线生长于图形化 Si 衬底凹槽边缘、宽 80 nm / 高 15 nm / 长 4 μm、间距 200 nm 的两根纳米线集成制备方法。

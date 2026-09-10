@@ -107,9 +107,9 @@ $$
 1. 在 $(1,2)$–$(2,1)$ 反交叉附近，$S_z=\pm 1/2$ 子空间含三个低能双重态——$|0\rangle_L$、$|1\rangle_L$ 与 $|E\rangle$（中间态）。后两者与 $|E\rangle$ 之间存在隧穿耦合 $\Delta_1$、$\Delta_2$，但 $|0\rangle_L$ 与 $|1\rangle_L$ 之间无直接耦合，必须借 $|E\rangle$ 间接驱动。
 2. 把 $|0\rangle_L$ 与 $|E\rangle$ 写在反交叉附近的标准两态基上，哈密顿量化为
 
-$$
+```math
 H_{\mathrm{cross}}=\begin{pmatrix} -\varepsilon/2 & \Delta\\ \Delta & 0 \end{pmatrix},
-$$
+```
 
 其中 $\varepsilon$ 是失谐、$\Delta$ 是耦合。本征能级为 $(-\varepsilon\pm\sqrt{\varepsilon^2+4\Delta^2})/2$，在反交叉 $\varepsilon=0$ 处能级间隔最小、为 $2\Delta$。在远离反交叉 $\varepsilon\gg\Delta$ 处，两个本征态近似回到裸态，能级间隔近似等于裸态能量差（Si 体系中即 valley splitting，GaAs 体系中即 $S$–$T$ 间隔），两条能级几乎平行。
 
