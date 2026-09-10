@@ -94,7 +94,12 @@ plugins:
     enabled: true
     options:
       renderEngine: katex
+      katexOptions:
+        strict: "ignore"
+        throwOnError: false
     order: 80
+  - source: "./plugins-local/cjk-math"
+    enabled: true
   - source: "@quartz-community/quartz-fonts"
     enabled: false
   - source: "@quartz-community/remove-draft"

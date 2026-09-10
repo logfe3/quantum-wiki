@@ -96,8 +96,10 @@ $$
 当泵浦失谐 $\Delta = 0$ 时，称放大器工作在简并模式（degenerate mode）。把光场算符分解为两个正交分量
 
 $$
-\hat{a}_{\parallel}^{\mathrm{in,out}}(\omega) = \hat{a}_S^{\mathrm{in,out}}(\omega) + e^{-2i\theta}[\hat{a}_I^{\mathrm{in,out}}(-\omega)]^\dagger, \\
-\hat{a}_{\perp}^{\mathrm{in,out}}(\omega) = \hat{a}_S^{\mathrm{in,out}}(\omega) - e^{-2i\theta}[\hat{a}_I^{\mathrm{in,out}}(-\omega)]^\dagger,
+\begin{aligned}
+\hat{a}_{\parallel}^{\mathrm{in,out}}(\omega) &= \hat{a}_S^{\mathrm{in,out}}(\omega) + e^{-2i\theta}[\hat{a}_I^{\mathrm{in,out}}(-\omega)]^\dagger, \\
+\hat{a}_{\perp}^{\mathrm{in,out}}(\omega) &= \hat{a}_S^{\mathrm{in,out}}(\omega) - e^{-2i\theta}[\hat{a}_I^{\mathrm{in,out}}(-\omega)]^\dagger,
+\end{aligned}
 $$
 
 可以看出简并模式相当于沿驱动相位选出一个特定正交分量。两个正交分量各自独立地获得增益 $G_\parallel = |g_\parallel|^2$、$G_\perp = |g_\perp|^2$，并满足
