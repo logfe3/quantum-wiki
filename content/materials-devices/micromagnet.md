@@ -255,21 +255,21 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 磁体材料 | Co（铁磁性强、微纳工艺成熟），下垫 Ti 黏附层防脱落 | 杨杰诚 2023 / 胡睿梓 2022 |
-| 饱和磁化强度 $M$ | $1.8$ T（仿真常用假设） | 楚凝 2025 |
-| 工作磁化强度 | $0.4$ T（先加大外场饱和磁化，再降至约 100 mT 工作区，利用磁滞回线） | 杨杰诚 2023 |
-| 条形磁体尺寸（Si-MOS） | 长 $3.5\ \mu\mathrm{m}$、宽 $0.9\ \mu\mathrm{m}$，Ti/Co $10/250$ nm | 楚凝 2025 |
-| 仿真最优结构（Si/SiGe 同层） | 长 1000 nm、宽 600 nm、厚 200 nm、间隔 380–400 nm | 杨杰诚 2023 |
-| 磁体–量子点垂直距离 $d$ | 20 nm（Si-MOS）、50 nm（同层）、70 nm（多层）、110–120 nm（早期方案） | 楚凝 2025 / 杨杰诚 2023 |
-| 有效横向梯度 $b_{\mathrm{coup}}$ | $>0.58$ mT/nm 方可支持高速操控；矩形 0.465 → 多边形 0.606 mT/nm | 杨杰诚 2023 |
-| 有害纵向梯度 $b_{\mathrm{deph}}$ | $2\times10^{-5}$–$2.1\times10^{-3}$ mT/nm（依结构） | 杨杰诚 2023 |
-| 两点磁场差 $\Delta B_z$ | 25–39 mT（仿真）；GaAs 寻址判据 $>18$ mT；自旋–光子强耦合 $\gtrsim 20$ mT | 杨杰诚 2023 |
-| 量子点处磁体附加场 $B_M$ | $95.7$ mT（Si/SiGe 三点阵列实测拟合） | 江顺利 2025 |
-| Rabi 频率 $f_{\mathrm{rabi}}$ | 1.26–2.4 MHz（Si-MOS 实测）；约 6 MHz（同层多边形仿真）；文献可达 30 MHz | 胡睿梓 2022 / 楚凝 2025 / 杨杰诚 2023 / 王宁 2025 |
-| Rabi 品质因子 $Q_{\mathrm{rabi}}$ | 5–100，随面内磁场角度变化 | 楚凝 2025 |
-| 翻转模式横向场差 $b_\perp$ | $\sim 0.02$ mT，对应 $f_{\mathrm{charge}}=2.36\pm0.12$ GHz | 胡睿梓 2022 |
-| EDSR 下电子位移振幅 | $\sim 1$ nm | 杨杰诚 2023 |
-| 比特频率预估不确定度 | $\sim 1$ GHz（磁体尺寸/形状/材料差异），而共振峰宽仅 $\sim 1$ MHz | 王宁 2025 |
+| 磁体材料 | Co（铁磁性强、微纳工艺成熟），下垫 Ti 黏附层防脱落 | 文献 19 / 文献 15 |
+| 饱和磁化强度 $M$ | $1.8$ T（仿真常用假设） | 文献 22 |
+| 工作磁化强度 | $0.4$ T（先加大外场饱和磁化，再降至约 100 mT 工作区，利用磁滞回线） | 文献 19 |
+| 条形磁体尺寸（Si-MOS） | 长 $3.5\ \mu\mathrm{m}$、宽 $0.9\ \mu\mathrm{m}$，Ti/Co $10/250$ nm | 文献 22 |
+| 仿真最优结构（Si/SiGe 同层） | 长 1000 nm、宽 600 nm、厚 200 nm、间隔 380–400 nm | 文献 19 |
+| 磁体–量子点垂直距离 $d$ | 20 nm（Si-MOS）、50 nm（同层）、70 nm（多层）、110–120 nm（早期方案） | 文献 22 / 文献 19 |
+| 有效横向梯度 $b_{\mathrm{coup}}$ | $>0.58$ mT/nm 方可支持高速操控；矩形 0.465 → 多边形 0.606 mT/nm | 文献 19 |
+| 有害纵向梯度 $b_{\mathrm{deph}}$ | $2\times10^{-5}$–$2.1\times10^{-3}$ mT/nm（依结构） | 文献 19 |
+| 两点磁场差 $\Delta B_z$ | 25–39 mT（仿真）；GaAs 寻址判据 $>18$ mT；自旋–光子强耦合 $\gtrsim 20$ mT | 文献 19 |
+| 量子点处磁体附加场 $B_M$ | $95.7$ mT（Si/SiGe 三点阵列实测拟合） | 文献 20 |
+| Rabi 频率 $f_{\mathrm{rabi}}$ | 1.26–2.4 MHz（Si-MOS 实测）；约 6 MHz（同层多边形仿真）；文献可达 30 MHz | 文献 15 / 文献 22 / 文献 19 / 文献 21 |
+| Rabi 品质因子 $Q_{\mathrm{rabi}}$ | 5–100，随面内磁场角度变化 | 文献 22 |
+| 翻转模式横向场差 $b_\perp$ | $\sim 0.02$ mT，对应 $f_{\mathrm{charge}}=2.36\pm0.12$ GHz | 文献 15 |
+| EDSR 下电子位移振幅 | $\sim 1$ nm | 文献 19 |
+| 比特频率预估不确定度 | $\sim 1$ GHz（磁体尺寸/形状/材料差异），而共振峰宽仅 $\sim 1$ MHz | 文献 21 |
 
 ## 实验特征与测量
 
@@ -317,25 +317,25 @@ $$
 
 ## 论文依据
 
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF p. 22：EDSR 下 Rabi 频率与微磁体梯度 $b_{SL}$ 成正比的表达式（式 2.12）及形成因子、约束势长度、轨道能级间隔的定义。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 31–32：高速自旋操控要求 $b_{SL}>0.58$ mT/nm，寻址条件 $\Delta f>f_{\mathrm{Rabi}}+1/T_2^{*}$ 与简化判据，$|g|=0.40$ 的 GaAs 量子点在 $f_{\mathrm{Rabi}}=50$ MHz 下需 $\Delta B_z>18$ mT；"平行"与"垂直"两类磁体构型的分工。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF p. 40：选钴作磁体材料的理由、先饱和磁化再降场以利用磁滞回线（100 mT 工作区对应磁化强度 0.4 T），以及 RADIA 与 OOMMF 两种仿真软件的分工。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 42–44：仿真几何设置；$\Delta B_z$、$b_{\mathrm{deph}}$、$b_{\mathrm{coup}}$ 的定义（式 4.1–4.3）；$1/T_\pi\propto b_{\mathrm{coup}}\propto\Delta B_z$、$T_2^{*}$ 与 $b_{\mathrm{deph}}\sigma$ 的关系（式 4.4–4.5）、品质因子 $Q$ 与目标函数 $R=(b_{\mathrm{deph}}+C)/\Delta B_z$ 的定义，以及 10 nm 网格、0.9999 阈值的迭代算法。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 45–46：不同 $C$ 值下迭代收敛过程与最优间隙（180/220/400 nm）、$b_{\mathrm{coup}}$ 与 $b_{\mathrm{deph}}$ 不可兼得的矛盾，以及数百个随机初始形状收敛到同一结构的全局最优性检验。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 49–52：单层胶工艺实现多边形边界；OOMMF 揭示的矩形/多边形磁化分布差异；与已有优化设计对比得 $b_{\mathrm{coup}}$ 由 0.465 提升到 0.606 mT/nm、$Q$ 提升约 30%，甜区尺寸减半的代价；多边形 $Q$ 比矩形高 20%–30%。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 55–57：同层工艺流程、预留空档与绝缘层安排、垂直距离缩短约 20 nm；Si/SiGe 中同层 $d\approx50$ nm 与多层 $d\approx70$ nm 的由来；同层最优长度 1000 nm、多层取 2000 nm。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 59、62：宽度优化（同层 600 nm、多层 340 nm 处 $b_{\mathrm{deph}}$ 出现尖锐极小及其斜率过零解释）与厚度优化（两种结构均在 200 nm 处最优）。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 65–67：四种器件结构的定义与最优间隔（400/380/400/380 nm）、$\Delta B_z$（25.05/28.24/35.23/38.91 mT）、$b_{\mathrm{deph}}$ 与目标函数值；同层工艺使 $Q$ 提升约 40%、再叠加多边形迭代提升约 60%；$\Delta B_z=38.91$ mT 满足自旋–光子强耦合、EDSR Rabi 频率约 6 MHz（位移振幅约 1 nm）。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 71–72：SSOC 与 ISOC 的定性差异（弛豫对磁场的 $B^5$ 与 $B^7$ 依赖）、含微磁体的单点哈密顿量（式 4.7）、一阶微扰基态（式 4.8）、翻转矩阵元（式 4.10）与 $\Omega_{\mathrm{EDSR}}\propto b_{sl}$（式 4.11）。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 75–76：条形 Ti/Co 微磁体的 Si-MOS 双点样品；拉莫尔频率随 $\theta_B$ 的 $180°$ 正弦调制与 $8.3°$ 相移；Rabi 频率的非正弦调制（2.38 MHz 与 0.58 MHz，相差 4.1 倍）；$Q_{\mathrm{rabi}}$ 由 $\sim100$ 降到 $\sim5$ 及仿真最优角度 $15°$、$130°$。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 78：斯塔克位移的各向异性，外磁场沿 X 时 240 MHz/V、沿 Y 时约 50 MHz/V 并可过零，以及 $T_2^{*}$ 未呈现同样周期性的讨论。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 79：用 Mathematica 的 Radia 包建模，假设均匀饱和磁化 $M=1.8$ T，条形磁体长 3.5 μm、宽 0.9 μm，量子点位于磁体下表面下方 20 nm。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 80–81：三个场分量的投影关系（式 4.12）；横向、纵向场梯度的矢量定义；面内与面外横向梯度的竞争及 100 nm 距离判据；品质因子 $Q$ 的仿真定义式与最优角度结论。
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 18–19：微磁体在操控、辅助读出（泡利自旋阻塞）、耦合三方面的作用；横向梯度既赋予 EDSR 能力又是主要噪声通道；静态、不可关断的杂散场对扩展的限制，以及基于自旋轨道力矩的可切换微磁体方案。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 43：$^{28}\mathrm{Si}$ 衬底 Si-MOS 器件中钴微磁体与其下方钛黏附层的结构与作用。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 106：翻转模式下含微磁体的 $4\times4$ 哈密顿量（式 5.4），$\delta E_z=g\mu_B b_z$ 与 $2t_{SO}=g\mu_B b_\perp$ 的定义及坐标轴选取。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 110：由 Rabi 频率随失谐的变化拟合得 $b_\perp\sim0.02$ mT、$f_{\mathrm{charge}}=2.36\pm0.12$ GHz；零失谐处 $Q\equiv2T_2^{\mathrm{rabi}}f_{\mathrm{rabi}}$ 提升一个数量级，噪声主因归结为纵向磁场梯度。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 34：EDSR 有效交流磁场 $B_{\mathrm{eff}}$ 的表达式（式 1.16）、$l_{\mathrm{orb}}$ 与 $\Delta_{\mathrm{orb}}$ 的定义、$b_{sl}=\partial B_x/\partial z$，以及该方案下 Rabi 频率可达 30 MHz、单比特门保真度超过 99.9%。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 59：微磁体尺寸形状差异导致比特频率预估精度仅约 1 GHz 而共振峰宽仅约 1 MHz，需用 chirp 波形高效寻峰。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF pp. 69–70：微磁体产生人工自旋轨道耦合的原理与 $\mathbf{B}_{\mathrm{tot}}=\mathbf{B}_{\mathrm{ext}}+\mathbf{B}_{M}$ 分解；由两块 250 nm 钴薄膜构成、与量子点连线成 $15°$ 夹角的磁体设计及其用于差异化调节比特频率的意图。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 80：由比特频率对外磁场的线性拟合得磁场衰减因子 $\alpha=0.32$ 与微磁体附加场 $B_M=95.7$ mT。
+- [[sources/ref-19|文献 19]]，PDF p. 22：EDSR 下 Rabi 频率与微磁体梯度 $b_{SL}$ 成正比的表达式（式 2.12）及形成因子、约束势长度、轨道能级间隔的定义。
+- [[sources/ref-19|文献 19]]，PDF pp. 31–32：高速自旋操控要求 $b_{SL}>0.58$ mT/nm，寻址条件 $\Delta f>f_{\mathrm{Rabi}}+1/T_2^{*}$ 与简化判据，$|g|=0.40$ 的 GaAs 量子点在 $f_{\mathrm{Rabi}}=50$ MHz 下需 $\Delta B_z>18$ mT；"平行"与"垂直"两类磁体构型的分工。
+- [[sources/ref-19|文献 19]]，PDF p. 40：选钴作磁体材料的理由、先饱和磁化再降场以利用磁滞回线（100 mT 工作区对应磁化强度 0.4 T），以及 RADIA 与 OOMMF 两种仿真软件的分工。
+- [[sources/ref-19|文献 19]]，PDF pp. 42–44：仿真几何设置；$\Delta B_z$、$b_{\mathrm{deph}}$、$b_{\mathrm{coup}}$ 的定义（式 4.1–4.3）；$1/T_\pi\propto b_{\mathrm{coup}}\propto\Delta B_z$、$T_2^{*}$ 与 $b_{\mathrm{deph}}\sigma$ 的关系（式 4.4–4.5）、品质因子 $Q$ 与目标函数 $R=(b_{\mathrm{deph}}+C)/\Delta B_z$ 的定义，以及 10 nm 网格、0.9999 阈值的迭代算法。
+- [[sources/ref-19|文献 19]]，PDF pp. 45–46：不同 $C$ 值下迭代收敛过程与最优间隙（180/220/400 nm）、$b_{\mathrm{coup}}$ 与 $b_{\mathrm{deph}}$ 不可兼得的矛盾，以及数百个随机初始形状收敛到同一结构的全局最优性检验。
+- [[sources/ref-19|文献 19]]，PDF pp. 49–52：单层胶工艺实现多边形边界；OOMMF 揭示的矩形/多边形磁化分布差异；与已有优化设计对比得 $b_{\mathrm{coup}}$ 由 0.465 提升到 0.606 mT/nm、$Q$ 提升约 30%，甜区尺寸减半的代价；多边形 $Q$ 比矩形高 20%–30%。
+- [[sources/ref-19|文献 19]]，PDF pp. 55–57：同层工艺流程、预留空档与绝缘层安排、垂直距离缩短约 20 nm；Si/SiGe 中同层 $d\approx50$ nm 与多层 $d\approx70$ nm 的由来；同层最优长度 1000 nm、多层取 2000 nm。
+- [[sources/ref-19|文献 19]]，PDF pp. 59、62：宽度优化（同层 600 nm、多层 340 nm 处 $b_{\mathrm{deph}}$ 出现尖锐极小及其斜率过零解释）与厚度优化（两种结构均在 200 nm 处最优）。
+- [[sources/ref-19|文献 19]]，PDF pp. 65–67：四种器件结构的定义与最优间隔（400/380/400/380 nm）、$\Delta B_z$（25.05/28.24/35.23/38.91 mT）、$b_{\mathrm{deph}}$ 与目标函数值；同层工艺使 $Q$ 提升约 40%、再叠加多边形迭代提升约 60%；$\Delta B_z=38.91$ mT 满足自旋–光子强耦合、EDSR Rabi 频率约 6 MHz（位移振幅约 1 nm）。
+- [[sources/ref-22|文献 22]]，PDF pp. 71–72：SSOC 与 ISOC 的定性差异（弛豫对磁场的 $B^5$ 与 $B^7$ 依赖）、含微磁体的单点哈密顿量（式 4.7）、一阶微扰基态（式 4.8）、翻转矩阵元（式 4.10）与 $\Omega_{\mathrm{EDSR}}\propto b_{sl}$（式 4.11）。
+- [[sources/ref-22|文献 22]]，PDF pp. 75–76：条形 Ti/Co 微磁体的 Si-MOS 双点样品；拉莫尔频率随 $\theta_B$ 的 $180°$ 正弦调制与 $8.3°$ 相移；Rabi 频率的非正弦调制（2.38 MHz 与 0.58 MHz，相差 4.1 倍）；$Q_{\mathrm{rabi}}$ 由 $\sim100$ 降到 $\sim5$ 及仿真最优角度 $15°$、$130°$。
+- [[sources/ref-22|文献 22]]，PDF p. 78：斯塔克位移的各向异性，外磁场沿 X 时 240 MHz/V、沿 Y 时约 50 MHz/V 并可过零，以及 $T_2^{*}$ 未呈现同样周期性的讨论。
+- [[sources/ref-22|文献 22]]，PDF p. 79：用 Mathematica 的 Radia 包建模，假设均匀饱和磁化 $M=1.8$ T，条形磁体长 3.5 μm、宽 0.9 μm，量子点位于磁体下表面下方 20 nm。
+- [[sources/ref-22|文献 22]]，PDF pp. 80–81：三个场分量的投影关系（式 4.12）；横向、纵向场梯度的矢量定义；面内与面外横向梯度的竞争及 100 nm 距离判据；品质因子 $Q$ 的仿真定义式与最优角度结论。
+- [[sources/ref-24|文献 24]]，PDF pp. 18–19：微磁体在操控、辅助读出（泡利自旋阻塞）、耦合三方面的作用；横向梯度既赋予 EDSR 能力又是主要噪声通道；静态、不可关断的杂散场对扩展的限制，以及基于自旋轨道力矩的可切换微磁体方案。
+- [[sources/ref-15|文献 15]]，PDF p. 43：$^{28}\mathrm{Si}$ 衬底 Si-MOS 器件中钴微磁体与其下方钛黏附层的结构与作用。
+- [[sources/ref-15|文献 15]]，PDF p. 106：翻转模式下含微磁体的 $4\times4$ 哈密顿量（式 5.4），$\delta E_z=g\mu_B b_z$ 与 $2t_{SO}=g\mu_B b_\perp$ 的定义及坐标轴选取。
+- [[sources/ref-15|文献 15]]，PDF p. 110：由 Rabi 频率随失谐的变化拟合得 $b_\perp\sim0.02$ mT、$f_{\mathrm{charge}}=2.36\pm0.12$ GHz；零失谐处 $Q\equiv2T_2^{\mathrm{rabi}}f_{\mathrm{rabi}}$ 提升一个数量级，噪声主因归结为纵向磁场梯度。
+- [[sources/ref-21|文献 21]]，PDF p. 34：EDSR 有效交流磁场 $B_{\mathrm{eff}}$ 的表达式（式 1.16）、$l_{\mathrm{orb}}$ 与 $\Delta_{\mathrm{orb}}$ 的定义、$b_{sl}=\partial B_x/\partial z$，以及该方案下 Rabi 频率可达 30 MHz、单比特门保真度超过 99.9%。
+- [[sources/ref-21|文献 21]]，PDF p. 59：微磁体尺寸形状差异导致比特频率预估精度仅约 1 GHz 而共振峰宽仅约 1 MHz，需用 chirp 波形高效寻峰。
+- [[sources/ref-20|文献 20]]，PDF pp. 69–70：微磁体产生人工自旋轨道耦合的原理与 $\mathbf{B}_{\mathrm{tot}}=\mathbf{B}_{\mathrm{ext}}+\mathbf{B}_{M}$ 分解；由两块 250 nm 钴薄膜构成、与量子点连线成 $15°$ 夹角的磁体设计及其用于差异化调节比特频率的意图。
+- [[sources/ref-20|文献 20]]，PDF p. 80：由比特频率对外磁场的线性拟合得磁场衰减因子 $\alpha=0.32$ 与微磁体附加场 $B_M=95.7$ mT。

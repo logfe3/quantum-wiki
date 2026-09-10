@@ -185,7 +185,7 @@ $$
 kf_d=\mu/h=\nu_r+k'f_d\quad(k\neq k'),
 $$
 
-对应驱动频率 $f_d=\nu_r/2,\,\nu_r/3,\ldots$ 时，干涉图样出现新现象：每个干涉条纹从中部被劈开，出现"月牙"形孔洞（crescent-shaped hole），孔洞中心腔反射信号被强烈抑制。物理解释是：在准能量免交叉附近 Floquet 态布居数重新分布，$p_0-p_1$ 接近 0，$\chi^{(0)}$ 与腔响应同步塌陷。该现象与光学烧孔类似，在 GaAs 双量子点–高阻抗 SQUID 阵列腔（$2t_c/h=6.2$ GHz、$\nu_r=6.51$ GHz、$f_d=3.3$ GHz）上被直接观测到（陈明博论文第 6 章）。
+对应驱动频率 $f_d=\nu_r/2,\,\nu_r/3,\ldots$ 时，干涉图样出现新现象：每个干涉条纹从中部被劈开，出现"月牙"形孔洞（crescent-shaped hole），孔洞中心腔反射信号被强烈抑制。物理解释是：在准能量免交叉附近 Floquet 态布居数重新分布，$p_0-p_1$ 接近 0，$\chi^{(0)}$ 与腔响应同步塌陷。该现象与光学烧孔类似，在 GaAs 双量子点–高阻抗 SQUID 阵列腔（$2t_c/h=6.2$ GHz、$\nu_r=6.51$ GHz、$f_d=3.3$ GHz）上被直接观测到（文献 13论文第 6 章）。
 
 ## 量子点体系的具体实现
 
@@ -203,11 +203,11 @@ $$
 \phi=\frac{1}{\hbar}\int\!\bigl[E_S(\varepsilon(t))-E_{T_+}(\varepsilon(t))\bigr]dt;
 $$
 - 第二次穿越再次经过反交叉并发生干涉。在 $P_\mathrm{LZ}=1/2$ 的理想工作点，每次穿越等效于一个 Hadamard 门，中间相位累积等效于绕 $z$ 轴旋转，二者合成普适单比特操作；
-- 同一反交叉的"绝热穿过、非绝热返回"循环每圈翻转一个核自旋，实现动态核自旋极化（DNP），在两点间建立稳定的磁场梯度（陈宝宝论文第 2.2.4 节）。
+- 同一反交叉的"绝热穿过、非绝热返回"循环每圈翻转一个核自旋，实现动态核自旋极化（DNP），在两点间建立稳定的磁场梯度（文献 6论文第 2.2.4 节）。
 
 ### 周期微波驱动与腔探测
 
-把微波以电极方式耦合到失谐 $\varepsilon(t)=\varepsilon_0+A_d\cos(2\pi\nu_d t)$ 时，每次驱动周期内两次穿越反交叉，相当于对 Stückelberg 相位 $\varphi_\mathrm{St}$ 做周期性扫描。在 GaAs 双量子点–SQUID 阵列高阻抗腔体系（陈明博论文第 6 章）中：
+把微波以电极方式耦合到失谐 $\varepsilon(t)=\varepsilon_0+A_d\cos(2\pi\nu_d t)$ 时，每次驱动周期内两次穿越反交叉，相当于对 Stückelberg 相位 $\varphi_\mathrm{St}$ 做周期性扫描。在 GaAs 双量子点–SQUID 阵列高阻抗腔体系（文献 13论文第 6 章）中：
 
 - 隧穿耦合速率 $2t_c/h=6.2$ GHz，谐振腔 $\nu_r=6.51$ GHz；
 - 耦合强度 $g_c/2\pi\approx 70$ MHz，超过退相干速率 $\gamma/2\pi\approx 50$ MHz 与腔耗散速率 $\kappa/2\pi\approx 65.2$ MHz，处于强耦合区；
@@ -219,16 +219,16 @@ $$
 
 | 量 | 典型值 | 体系 / 来源 |
 | --- | --- | --- |
-| 反交叉能隙 $2\Delta$ | $20.7\ \mu$eV（$\approx 5$ GHz，由拉比频率标定） | GaAs/AlGaAs 双量子点电荷比特（周诚 2013） |
+| 反交叉能隙 $2\Delta$ | $20.7\ \mu$eV（$\approx 5$ GHz，由拉比频率标定） | GaAs/AlGaAs 双量子点电荷比特（文献 1） |
 | 量子点几何尺寸 | $\approx 250$ nm；2DEG 位于表面下 95 nm | 同上 |
 | 2DEG 电子密度 / 迁移率 | $3.2\times10^{11}$ cm$^{-2}$ / $1.5\times10^5$ cm$^2$/V·s | 同上 |
 | 稀释制冷机温度 | $30$ mK（Oxford Triton 400） | 同上 |
 | 脉冲源 | Agilent 81134A + Anritsu K251 偏置 T | 同上 |
-| 微波驱动频率 | $15$ GHz（PAT/LZS 实验） | 尚汝南 2014 章节引用 |
-| $S$–$T_+$ LZS 工作磁场 | 数十至上百 mT | GaAs 自旋比特（陈宝宝 2017） |
-| 强耦合腔辅助 LZSM | $\nu_r=6.51$ GHz、$2t_c/h=6.2$ GHz、$g_c/2\pi\approx 70$ MHz | GaAs 双点–SQUID 阵列腔（陈明博 2021） |
+| 微波驱动频率 | $15$ GHz（PAT/LZS 实验） | 文献 2 章节引用 |
+| $S$–$T_+$ LZS 工作磁场 | 数十至上百 mT | GaAs 自旋比特（文献 6） |
+| 强耦合腔辅助 LZSM | $\nu_r=6.51$ GHz、$2t_c/h=6.2$ GHz、$g_c/2\pi\approx 70$ MHz | GaAs 双点–SQUID 阵列腔（文献 13） |
 | 双共振频率 | $f_d\approx\nu_r/2=3.3$ GHz | 同上 |
-| Bloch 球单比特门操作保真度 | $\sim 68\%$（振幅控制） | 双电荷比特 CNOT 中由 LZS 实现控制比特相位（余国栋 2016） |
+| Bloch 球单比特门操作保真度 | $\sim 68\%$（振幅控制） | 双电荷比特 CNOT 中由 LZS 实现控制比特相位（文献 5） |
 
 ## 实验特征与判据
 
@@ -240,9 +240,9 @@ $$
 
 控制——条纹位置随 $N$ 平方根压缩，与[[qubit-control/rabi-oscillation|拉比振荡]]的等周期条纹明显不同，是 LZSM 干涉的指纹特征。
 
-**可见度反推 $P_\mathrm{LZ}$**：理想情形下 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$；测出 $V$ 即可反推 $P_\mathrm{LZ}$，再独立检验 LZ 公式 $P_\mathrm{LZ}=e^{-2\pi\Delta^2/\hbar v}$。在周诚论文中这一关系被进一步用于模拟 Kibble–Zurek（KZ）机制中的拓扑缺陷密度。
+**可见度反推 $P_\mathrm{LZ}$**：理想情形下 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$；测出 $V$ 即可反推 $P_\mathrm{LZ}$，再独立检验 LZ 公式 $P_\mathrm{LZ}=e^{-2\pi\Delta^2/\hbar v}$。在文献 1论文中这一关系被进一步用于模拟 Kibble–Zurek（KZ）机制中的拓扑缺陷密度。
 
-**与 KZ 机制的对应**：LZSM 干涉与 KZ 机制存在一一对应——扫速倒数 $1/v$ ↔ 淬火时间 $\tau_Q$、能级间隔倒数 $1/E_\Delta$ ↔ 弛豫时间 $\tau$、LZ 跃迁概率 $P_\mathrm{LZ}$ ↔ 归一化拓扑缺陷密度 $\rho_d$。在电荷比特上固定脉冲宽度、连续改变脉冲幅度调节扫速 $v$，测出 $P_\mathrm{LZ}(v)$ 即可重现 KZ 预言的 $\rho_d(\tau_Q/\tau_0)$ 关系（周诚论文第 6 章）。这一对应把 LZSM 干涉的可见度直接连接到非平衡相变的标度律。
+**与 KZ 机制的对应**：LZSM 干涉与 KZ 机制存在一一对应——扫速倒数 $1/v$ ↔ 淬火时间 $\tau_Q$、能级间隔倒数 $1/E_\Delta$ ↔ 弛豫时间 $\tau$、LZ 跃迁概率 $P_\mathrm{LZ}$ ↔ 归一化拓扑缺陷密度 $\rho_d$。在电荷比特上固定脉冲宽度、连续改变脉冲幅度调节扫速 $v$，测出 $P_\mathrm{LZ}(v)$ 即可重现 KZ 预言的 $\rho_d(\tau_Q/\tau_0)$ 关系（文献 1论文第 6 章）。这一对应把 LZSM 干涉的可见度直接连接到非平衡相变的标度律。
 
 **退相干的作用**：退相干不改变条纹的周期结构，只压低条纹幅度，且高阶条纹衰减更快。把条纹可见度按阶数展开做 Fourier 变换可同时提取 $T_2^*$（高斯衰减）和 $T_2$（指数衰减）：
 
@@ -252,7 +252,7 @@ $$
 
 使 LZSM 干涉成为[[materials-devices/charge-noise|电荷噪声]]谱学的内建工具。
 
-**双共振驱动的"月牙"孔洞**：在双量子点–高阻抗腔杂化系统中，固定 $f_d\approx\nu_r/2$ 扫描失谐与驱动功率，干涉条纹中部被劈开为月牙形孔洞，孔洞中心腔反射信号被强烈抑制；这是 Floquet 态布居在准能量免交叉附近重分布的实验特征（陈明博论文第 6 章）。
+**双共振驱动的"月牙"孔洞**：在双量子点–高阻抗腔杂化系统中，固定 $f_d\approx\nu_r/2$ 扫描失谐与驱动功率，干涉条纹中部被劈开为月牙形孔洞，孔洞中心腔反射信号被强烈抑制；这是 Floquet 态布居在准能量免交叉附近重分布的实验特征（文献 13论文第 6 章）。
 
 **读出方式**：在电荷比特中，末态 $|L\rangle$/$|R\rangle$ 直接由 QPC 传感；在自旋比特中先经泡利自旋阻塞做自旋–电荷转换；在腔杂化系统中则由谐振腔透射或反射信号 $|S_{11}|$ 成像整个干涉相图（见[[readout-measurement/dispersive-readout|色散读出]]）。
 
@@ -264,7 +264,7 @@ $$
 - 在[[qubit-control/charge-qubit|电荷量子比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/single-spin-qubit|单自旋量子比特]]中分别对应失谐反交叉、$S$–$T_+$ 反交叉与自旋翻转避免交叉的扫越操控。
 - 强微波驱动下与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]共享同一实验条件；周期驱动情形的系统化处理见[[circuit-qed/floquet-dynamics|Floquet 动力学]]；与[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]结合可由[[readout-measurement/dispersive-readout|色散读出]]直接成相图（见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]）。
 - 条纹对比度受[[materials-devices/charge-noise|电荷噪声]]限制；可见度与 LZ 概率的对应关系使其成为系统参数谱学探针。
-- LZ 跃迁概率与 KZ 机制中拓扑缺陷密度的对应，使 LZSM 干涉成为非平衡相变量子模拟的可控平台（见周诚论文第 6 章）。
+- LZ 跃迁概率与 KZ 机制中拓扑缺陷密度的对应，使 LZSM 干涉成为非平衡相变量子模拟的可控平台（见文献 1论文第 6 章）。
 
 ## 延伸阅读
 
@@ -275,17 +275,17 @@ $$
 
 ## 论文依据
 
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 103–105：二能级哈密顿量 $H=\varepsilon\sigma_z/2+\Delta\sigma_x$、瞬时本征值、绝热–脉冲模型、Landau–Zener 公式 $P_\mathrm{LZ}=\exp(-2\pi\Delta^2/\hbar v)$、跃迁矩阵 $U_\mathrm{LZ}$、斯托克斯相位 $\varphi_S=\pi/4+\arg\Gamma(1-i\delta)+\delta(\ln\delta-1)$。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 106–107：绝热演化相位 $\phi=\frac{1}{\hbar}\int\!\sqrt{\varepsilon^2+4\Delta^2}\,dt$、两次穿越总演化算符 $U=e^{-i\phi_1\sigma_z/2}U_\mathrm{LZ}e^{-i\phi_2\sigma_z/2}U_\mathrm{LZ}$、干涉概率 $P_+=2P_\mathrm{LZ}(1-P_\mathrm{LZ})[1+\cos(\phi_2-2\varphi_\mathrm{LZ})]$、Stückelberg 相位与 Mach–Zehnder 类比。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 107–108：GaAs/AlGaAs 双量子点电荷比特样品（电极几何约 250 nm、2DEG 表面下 95 nm、密度 $3.2\times10^{11}$ cm$^{-2}$、迁移率 $1.5\times10^5$ cm$^2$/V·s、Triton 400 稀释制冷机 30 mK、Agilent 81134A + Anritsu K251 偏置 T），反交叉能隙 $2\Delta=20.7\ \mu$eV（$\approx 5$ GHz，由拉比频率标定）。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 110–113：尖脉冲极限下相位 $\phi_i=(A-\varepsilon_0)^2 t_r/(A\hbar)$ 的推导、生成性干涉条纹位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$、总旋转角 $\varphi=(A-\varepsilon_0)^2 t_r/(A\hbar)$、$\theta=4\sin^{-1}\exp(-2\pi\Delta^2 t_r/(\hbar A))$、Bloch 球任意角度旋转。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 121–126：LZ 跃迁与 Kibble–Zurek 机制的对应（$\tau_Q\leftrightarrow 1/v$、$\tau\leftrightarrow 1/E_\Delta$、$\rho_d\leftrightarrow P_\mathrm{LZ}$）、由条纹可见度 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$ 反推 $P_\mathrm{LZ}$、固定脉冲宽度连续改变幅度扫速 $v$ 模拟 KZ 机制中拓扑缺陷密度 $\rho_d(\tau_Q/\tau_0)$ 的实验结果。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 67–68：LZSM 在双量子点电荷比特中作为操控手段（与分束器类比）、布洛赫球上 LZS 四步演化分解 $U=R_z(-\varphi_\mathrm{LZ})R_x(\theta_\mathrm{LZ})R_z(-\varphi_\mathrm{LZ})R_z(\phi_i)R_z(-\varphi_\mathrm{LZ})R_x(\theta_\mathrm{LZ})R_z(-\varphi_\mathrm{LZ})$。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 69–70：尖脉冲相位累计 $\varphi=2(A-\varepsilon_0)^2 t_r/A$、总旋转角 $\theta=4\sin^{-1}\exp(-2\pi\Delta^2 t_r/(\hbar A))$、生成性条纹位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$、Fourier 变换提取 $T_2^*$（高斯衰减）与 $T_2$（指数衰减）的可见度分析方法。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF p. 113：把 LZS 操控推广到多比特体系实现 CNOT 等受控相位门，并指出精确相位控制仍需结合绝热微波操控。
-- [[sources/chen-baobao-2017|陈宝宝 2017]]，PDF pp. 39–40：$S$–$T_+$ 反交叉的 LZSM 干涉、停留在 $S$ 的概率 $|A_S|^2=P_\mathrm{LZ}=e^{-2\pi\Delta^2/\hbar v}$、相位累积 $\phi=\frac{1}{\hbar}\int[E_S-E_{T_+}]dt$、$P_\mathrm{LZ}=1/2$ 时穿越等效 Hadamard 门、"绝热穿过–非绝热返回"循环实现动态核自旋极化。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 97–101：周期驱动二能级系统的 Floquet 理论、Sambe 空间本征值问题 $H_F|\phi\rangle=\mu|\phi\rangle$、电荷比特 Floquet 矩阵构造（$\varepsilon(t)=\varepsilon+A_d\cos\omega_d t$、矩阵元公式 6.17）、准能量在零阶布里渊区内的免交叉。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 101–102：GaAs 双量子点–$\lambda/4$ SQUID 阵列腔样品（$Z_r\approx 1$ kΩ、$\nu_r=6.51$ GHz、$(\kappa_i,\kappa_e,\kappa)/2\pi=(31.0,34.2,65.2)$ MHz、$2t_c/h=6.2$ GHz、$g_c/2\pi\approx 70$ MHz，强耦合）。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 102–104：双量子点 LZSM 干涉理论（Floquet 准能量差 $\mu=\mu_1-\mu_0$、跃迁共振条件 $\mu/h=kf_d$）、相位平均磁化系数 $\chi^{(0)}(\nu)$、腔反射 $S_{11}$ 公式（输入–输出理论）、腔辅助条件 $\mu/h=\nu_r+k'f_d$。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 104–107：双共振条件 $kf_d=\mu/h=\nu_r+k'f_d$（$k\neq k'$，对应 $f_d=\nu_r/2,\nu_r/3,\ldots$）、腔辅助 LZSM 干涉图中"月牙"孔洞的形成（Floquet 态布居在免交叉附近 $p_0\approx p_1\approx 1/2$ 引起 $\chi^{(0)}$ 抑制）、月牙随 $f_d$ 增加向外演化的实验与模拟对比（$f_d=3.2$–3.5 GHz，$P=-36$ dBm，$2t_c/h=6.2$ GHz）。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 109–110：通过 SQUID 阵列腔频率可调（$I_\mathrm{coil}$ 从最大 6.5 GHz 调至 5.2 GHz 以下）系统研究腔频、驱动频率等参数对 LZSM 干涉谱的影响，预言并观测三分之一谐振频率 $f_d\approx\nu_r/3$（如 $f_d=2.27$ GHz）下月牙变窄的现象。
+- [[sources/ref-01|文献 1]]，PDF pp. 103–105：二能级哈密顿量 $H=\varepsilon\sigma_z/2+\Delta\sigma_x$、瞬时本征值、绝热–脉冲模型、Landau–Zener 公式 $P_\mathrm{LZ}=\exp(-2\pi\Delta^2/\hbar v)$、跃迁矩阵 $U_\mathrm{LZ}$、斯托克斯相位 $\varphi_S=\pi/4+\arg\Gamma(1-i\delta)+\delta(\ln\delta-1)$。
+- [[sources/ref-01|文献 1]]，PDF pp. 106–107：绝热演化相位 $\phi=\frac{1}{\hbar}\int\!\sqrt{\varepsilon^2+4\Delta^2}\,dt$、两次穿越总演化算符 $U=e^{-i\phi_1\sigma_z/2}U_\mathrm{LZ}e^{-i\phi_2\sigma_z/2}U_\mathrm{LZ}$、干涉概率 $P_+=2P_\mathrm{LZ}(1-P_\mathrm{LZ})[1+\cos(\phi_2-2\varphi_\mathrm{LZ})]$、Stückelberg 相位与 Mach–Zehnder 类比。
+- [[sources/ref-01|文献 1]]，PDF pp. 107–108：GaAs/AlGaAs 双量子点电荷比特样品（电极几何约 250 nm、2DEG 表面下 95 nm、密度 $3.2\times10^{11}$ cm$^{-2}$、迁移率 $1.5\times10^5$ cm$^2$/V·s、Triton 400 稀释制冷机 30 mK、Agilent 81134A + Anritsu K251 偏置 T），反交叉能隙 $2\Delta=20.7\ \mu$eV（$\approx 5$ GHz，由拉比频率标定）。
+- [[sources/ref-01|文献 1]]，PDF pp. 110–113：尖脉冲极限下相位 $\phi_i=(A-\varepsilon_0)^2 t_r/(A\hbar)$ 的推导、生成性干涉条纹位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$、总旋转角 $\varphi=(A-\varepsilon_0)^2 t_r/(A\hbar)$、$\theta=4\sin^{-1}\exp(-2\pi\Delta^2 t_r/(\hbar A))$、Bloch 球任意角度旋转。
+- [[sources/ref-01|文献 1]]，PDF pp. 121–126：LZ 跃迁与 Kibble–Zurek 机制的对应（$\tau_Q\leftrightarrow 1/v$、$\tau\leftrightarrow 1/E_\Delta$、$\rho_d\leftrightarrow P_\mathrm{LZ}$）、由条纹可见度 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$ 反推 $P_\mathrm{LZ}$、固定脉冲宽度连续改变幅度扫速 $v$ 模拟 KZ 机制中拓扑缺陷密度 $\rho_d(\tau_Q/\tau_0)$ 的实验结果。
+- [[sources/ref-05|文献 5]]，PDF pp. 67–68：LZSM 在双量子点电荷比特中作为操控手段（与分束器类比）、布洛赫球上 LZS 四步演化分解 $U=R_z(-\varphi_\mathrm{LZ})R_x(\theta_\mathrm{LZ})R_z(-\varphi_\mathrm{LZ})R_z(\phi_i)R_z(-\varphi_\mathrm{LZ})R_x(\theta_\mathrm{LZ})R_z(-\varphi_\mathrm{LZ})$。
+- [[sources/ref-05|文献 5]]，PDF pp. 69–70：尖脉冲相位累计 $\varphi=2(A-\varepsilon_0)^2 t_r/A$、总旋转角 $\theta=4\sin^{-1}\exp(-2\pi\Delta^2 t_r/(\hbar A))$、生成性条纹位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$、Fourier 变换提取 $T_2^*$（高斯衰减）与 $T_2$（指数衰减）的可见度分析方法。
+- [[sources/ref-05|文献 5]]，PDF p. 113：把 LZS 操控推广到多比特体系实现 CNOT 等受控相位门，并指出精确相位控制仍需结合绝热微波操控。
+- [[sources/ref-06|文献 6]]，PDF pp. 39–40：$S$–$T_+$ 反交叉的 LZSM 干涉、停留在 $S$ 的概率 $|A_S|^2=P_\mathrm{LZ}=e^{-2\pi\Delta^2/\hbar v}$、相位累积 $\phi=\frac{1}{\hbar}\int[E_S-E_{T_+}]dt$、$P_\mathrm{LZ}=1/2$ 时穿越等效 Hadamard 门、"绝热穿过–非绝热返回"循环实现动态核自旋极化。
+- [[sources/ref-13|文献 13]]，PDF pp. 97–101：周期驱动二能级系统的 Floquet 理论、Sambe 空间本征值问题 $H_F|\phi\rangle=\mu|\phi\rangle$、电荷比特 Floquet 矩阵构造（$\varepsilon(t)=\varepsilon+A_d\cos\omega_d t$、矩阵元公式 6.17）、准能量在零阶布里渊区内的免交叉。
+- [[sources/ref-13|文献 13]]，PDF pp. 101–102：GaAs 双量子点–$\lambda/4$ SQUID 阵列腔样品（$Z_r\approx 1$ kΩ、$\nu_r=6.51$ GHz、$(\kappa_i,\kappa_e,\kappa)/2\pi=(31.0,34.2,65.2)$ MHz、$2t_c/h=6.2$ GHz、$g_c/2\pi\approx 70$ MHz，强耦合）。
+- [[sources/ref-13|文献 13]]，PDF pp. 102–104：双量子点 LZSM 干涉理论（Floquet 准能量差 $\mu=\mu_1-\mu_0$、跃迁共振条件 $\mu/h=kf_d$）、相位平均磁化系数 $\chi^{(0)}(\nu)$、腔反射 $S_{11}$ 公式（输入–输出理论）、腔辅助条件 $\mu/h=\nu_r+k'f_d$。
+- [[sources/ref-13|文献 13]]，PDF pp. 104–107：双共振条件 $kf_d=\mu/h=\nu_r+k'f_d$（$k\neq k'$，对应 $f_d=\nu_r/2,\nu_r/3,\ldots$）、腔辅助 LZSM 干涉图中"月牙"孔洞的形成（Floquet 态布居在免交叉附近 $p_0\approx p_1\approx 1/2$ 引起 $\chi^{(0)}$ 抑制）、月牙随 $f_d$ 增加向外演化的实验与模拟对比（$f_d=3.2$–3.5 GHz，$P=-36$ dBm，$2t_c/h=6.2$ GHz）。
+- [[sources/ref-13|文献 13]]，PDF pp. 109–110：通过 SQUID 阵列腔频率可调（$I_\mathrm{coil}$ 从最大 6.5 GHz 调至 5.2 GHz 以下）系统研究腔频、驱动频率等参数对 LZSM 干涉谱的影响，预言并观测三分之一谐振频率 $f_d\approx\nu_r/3$（如 $f_d=2.27$ GHz）下月牙变窄的现象。

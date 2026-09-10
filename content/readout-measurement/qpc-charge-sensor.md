@@ -22,9 +22,9 @@ $$
 G_\mathrm{QPC}=N\,\frac{e^2}{h},\qquad N=1,2,3,\dots,
 $$
 
-直到完全夹断（pinch-off）。在最低一阶平台与夹断之间的过渡区，电导–栅压曲线斜率最大、对外局域静电势的响应最灵敏（[尤杰 2016]([[sources/you-jie-2016]])，PDF pp. 19–20），此处通常对应 $G_\mathrm{QPC}\approx e^2/h$。把被测[[fundamentals/semiconductor-quantum-dot|半导体量子点]]放在 QPC 旁边，二者之间只通过电容耦合，量子点电荷改变一个电子 $e$ 时，QPC 通道内的势垒高度微微抬高或降低，电导发生一个台阶式跳变——这正是 QPC 作为"邻位电荷传感器"的物理图像。
+直到完全夹断（pinch-off）。在最低一阶平台与夹断之间的过渡区，电导–栅压曲线斜率最大、对外局域静电势的响应最灵敏（[文献 4]([[sources/you-jie-2016]])，PDF pp. 19–20），此处通常对应 $G_\mathrm{QPC}\approx e^2/h$。把被测[[fundamentals/semiconductor-quantum-dot|半导体量子点]]放在 QPC 旁边，二者之间只通过电容耦合，量子点电荷改变一个电子 $e$ 时，QPC 通道内的势垒高度微微抬高或降低，电导发生一个台阶式跳变——这正是 QPC 作为"邻位电荷传感器"的物理图像。
 
-QPC 之所以成为少电子量子点实验中不可替代的读出器件，是因为它只需要一条**与被测点并联而不串联**的探测通道：被测点的源漏可以完全关断（少电子极限下隧穿电流已无法测量），只要 QPC 仍保持有限电导，电荷态跳变就能被检测到（[尚汝南 2014]([[sources/shang-runan-2014]])，PDF p. 52）。
+QPC 之所以成为少电子量子点实验中不可替代的读出器件，是因为它只需要一条**与被测点并联而不串联**的探测通道：被测点的源漏可以完全关断（少电子极限下隧穿电流已无法测量），只要 QPC 仍保持有限电导，电荷态跳变就能被检测到（[文献 2]([[sources/shang-runan-2014]])，PDF p. 52）。
 
 <!-- FIGURE: 量子点与 QPC 相对位置示意图：被测 QD 由源漏电极之间的势垒包围，QPC 通道由另一对栅极定义在 QD 一侧，二者通过电容 C_c 耦合；标注 QPC 夹断偏置点、工作点 G≈e²/h 与少电子极限下 QD 源漏关断 -->
 
@@ -36,9 +36,9 @@ $$
 G_\mathrm{QPC}\lesssim \frac{e^2}{h},\qquad R_\mathrm{QPC}\gtrsim \frac{h}{e^2}\approx 25.8\ \mathrm{k}\Omega.
 $$
 
-[韩天一 2017]([[sources/han-tianyi-2017]])（PDF p. 40）进一步指出更严格的判据：当 $G_\mathrm{QPC}<0.5\,e^2/h$（即 $R_\mathrm{QPC}>50\ \mathrm{k}\Omega$）时 QPC 对量子点电荷变化的电导响应灵敏度最大。物理上，这个区域通道仅剩一两个亚带，势垒顶端轻微静电势改变就能显著调制透射系数。实际器件中 QPC 通道常不能形成理想单调量子化平台，而是在邻近栅极作用下自身演化为单量子点结构并出现库仑阻塞，此时把工作点改设在库仑峰两侧斜率最大处同样可获得最佳灵敏度（[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 75）。
+[文献 7]([[sources/han-tianyi-2017]])（PDF p. 40）进一步指出更严格的判据：当 $G_\mathrm{QPC}<0.5\,e^2/h$（即 $R_\mathrm{QPC}>50\ \mathrm{k}\Omega$）时 QPC 对量子点电荷变化的电导响应灵敏度最大。物理上，这个区域通道仅剩一两个亚带，势垒顶端轻微静电势改变就能显著调制透射系数。实际器件中 QPC 通道常不能形成理想单调量子化平台，而是在邻近栅极作用下自身演化为单量子点结构并出现库仑阻塞，此时把工作点改设在库仑峰两侧斜率最大处同样可获得最佳灵敏度（[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 75）。
 
-工作点的稳定性也至关重要：栅压 $V_Q$ 的漂移会把工作点滑出灵敏区，造成信号丢失；这也是[韩天一 2017]([[sources/han-tianyi-2017]])（PDF p. 7）提到的阻抗匹配困难与工作点漂移问题，需要周期性重新标定。
+工作点的稳定性也至关重要：栅压 $V_Q$ 的漂移会把工作点滑出灵敏区，造成信号丢失；这也是[文献 7]([[sources/han-tianyi-2017]])（PDF p. 7）提到的阻抗匹配困难与工作点漂移问题，需要周期性重新标定。
 
 <!-- FIGURE: QPC 电导随夹断栅压 V_Q 的曲线，标注量子化平台 N=1,2,3…、最佳传感区（最后一个平台底，十字位置）和灵敏度对比：单平台过渡区灵敏度 > 库仑峰两侧 > 平台顶部 -->
 
@@ -59,23 +59,23 @@ $$
 
 其中 $\omega_y$ 是横向限制频率；夹断区 $E_F\lesssim U$ 时电导对 $U$ 的导数最大，于是工作点天然落在夹断附近。这一指数灵敏度解释了为什么"夹断前一两个平台底部"是 QPC 传感器的最佳工作点。
 
-灵敏度也可以用"杠杆臂" $\alpha_\mathrm{c}=C_\mathrm{c}/C_\mathrm{QPC,\Sigma}$ 量化：$\alpha_\mathrm{c}$ 越大，一个电子引起的 QPC 静电势改变越显著，电导跳变越容易被检测到。耦合强弱由两点的几何距离与中间栅极决定，实验中通常通过在 QPC 与 QD 之间插入细长的绝缘电极（[尤杰 2016]([[sources/you-jie-2016]])，PDF p. 19，VUL/VRL 介绍）来微调。
+灵敏度也可以用"杠杆臂" $\alpha_\mathrm{c}=C_\mathrm{c}/C_\mathrm{QPC,\Sigma}$ 量化：$\alpha_\mathrm{c}$ 越大，一个电子引起的 QPC 静电势改变越显著，电导跳变越容易被检测到。耦合强弱由两点的几何距离与中间栅极决定，实验中通常通过在 QPC 与 QD 之间插入细长的绝缘电极（[文献 4]([[sources/you-jie-2016]])，PDF p. 19，VUL/VRL 介绍）来微调。
 
 ## 三种直流读出方式
 
 按 QPC 端电流是否经外加调制解调，QPC 电荷传感可分三种实现：
 
-1. **QPC 直流输运**：QPC 源漏两端加微伏量级交流激励与几百 $\mu\mathrm{V}$ 直流偏压（[尤杰 2016]([[sources/you-jie-2016]])，PDF p. 20），用锁相放大器读取电导。QD 电荷跳变时 QPC 电导出现台阶。
+1. **QPC 直流输运**：QPC 源漏两端加微伏量级交流激励与几百 $\mu\mathrm{V}$ 直流偏压（[文献 4]([[sources/you-jie-2016]])，PDF p. 20），用锁相放大器读取电导。QD 电荷跳变时 QPC 电导出现台阶。
 2. **QPC 交流输运**：与直流输运原理相同，只是交流频率更高（如锁相 SR830 的几十 kHz 量级），抗干扰能力增强；但交流信号可能在 QD 中感应附加噪声。
-3. **QPC modulation**：在 QD 的某个 plunger 电极上叠加 2–3 mV 的小幅交流调制（约几十 Hz 到几 MHz），同时在 QPC 源漏加几百 $\muV$ 直流偏压，读取的解调电流正比于 $\partial G_\mathrm{QPC}/\partial V_\mathrm{gate}$，相当于 QPC 输运信号的物理微分信号（[尤杰 2016]([[sources/you-jie-2016]])，PDF pp. 20–21）。这一信号在少电子区比 QPC transport 更清晰，因为调制只放大电荷跳变处的边缘，背景被滤掉。
+3. **QPC modulation**：在 QD 的某个 plunger 电极上叠加 2–3 mV 的小幅交流调制（约几十 Hz 到几 MHz），同时在 QPC 源漏加几百 $\muV$ 直流偏压，读取的解调电流正比于 $\partial G_\mathrm{QPC}/\partial V_\mathrm{gate}$，相当于 QPC 输运信号的物理微分信号（[文献 4]([[sources/you-jie-2016]])，PDF pp. 20–21）。这一信号在少电子区比 QPC transport 更清晰，因为调制只放大电荷跳变处的边缘，背景被滤掉。
 
-三种方法给出的电荷跳变位置完全一致（图见[尚汝南 2014]([[sources/shang-runan-2014]])，PDF p. 53），差别在灵敏度与抗干扰：直流输运绝对幅度最大、QPC modulation 对比度最高、AC 输运抗工频干扰能力最强。
+三种方法给出的电荷跳变位置完全一致（图见[文献 2]([[sources/shang-runan-2014]])，PDF p. 53），差别在灵敏度与抗干扰：直流输运绝对幅度最大、QPC modulation 对比度最高、AC 输运抗工频干扰能力最强。
 
 <!-- FIGURE: 三种 QPC 测量方法对比图（QD transport vs QPC transport vs QPC modulation），显示相同扫描栅压下电荷跳变位置一致，调制信号对比度最高 -->
 
 ## 从直流到射频：RF-QPC
 
-直流 QPC 测量的带宽受直流线缆寄生电容与锁相积分时间限制，通常只在数十 kHz 量级（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 38；[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 82），不足以追踪单次隧穿事件或与脉冲操控同步。把 QPC 接入阻抗匹配谐振电路，再以射频反射方式读出，构成的 RF-QPC 把带宽推到 MHz–百 MHz 量级（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF pp. 7、38；[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 82）。
+直流 QPC 测量的带宽受直流线缆寄生电容与锁相积分时间限制，通常只在数十 kHz 量级（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 38；[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 82），不足以追踪单次隧穿事件或与脉冲操控同步。把 QPC 接入阻抗匹配谐振电路，再以射频反射方式读出，构成的 RF-QPC 把带宽推到 MHz–百 MHz 量级（[文献 7]([[sources/han-tianyi-2017]])，PDF pp. 7、38；[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 82）。
 
 ### 阻抗匹配与谐振电路
 
@@ -91,9 +91,9 @@ $$
 f_R=\frac{1}{2\pi\sqrt{L\,C_p}},
 $$
 
-其中 $C_p$ 是 QPC 源漏对地的寄生电容（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF pp. 40、56）。砷化镓样品 $C_p\approx 0.3$–$1\ \mathrm{pF}$，石墨烯样品因二维材料覆盖面积大而 $C_p\approx 4$–$6\ \mathrm{pF}$，极端情形可达 $30\ \mathrm{pF}$ 以上（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 56），寄生电容越大带宽越窄。实验常用 $L=820\ \mathrm{nH}$、$C_p\approx 0.82\ \mathrm{pF}$ 给出 $f_R=193.8\ \mathrm{MHz}$（[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 91）。
+其中 $C_p$ 是 QPC 源漏对地的寄生电容（[文献 7]([[sources/han-tianyi-2017]])，PDF pp. 40、56）。砷化镓样品 $C_p\approx 0.3$–$1\ \mathrm{pF}$，石墨烯样品因二维材料覆盖面积大而 $C_p\approx 4$–$6\ \mathrm{pF}$，极端情形可达 $30\ \mathrm{pF}$ 以上（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 56），寄生电容越大带宽越窄。实验常用 $L=820\ \mathrm{nH}$、$C_p\approx 0.82\ \mathrm{pF}$ 给出 $f_R=193.8\ \mathrm{MHz}$（[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 91）。
 
-谐振电路的有载品质因子由 QPC 阻抗、$L$、$C_p$ 共同决定。当 $R_\mathrm{eff}=L/(R_\mathrm{QPC}\,C_p)>Z_0$ 时电路工作在欠耦合区，带宽由 $R_\mathrm{QPC}$ 决定，但 QPC 工作点在 $R_\mathrm{QPC}>50\ \mathrm{k}\Omega$ 时难以进入欠耦合区；当 $R_\mathrm{eff}<Z_0$ 时为过耦合区，带宽由特征阻抗 $Z_0$ 决定（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 40）。RF-QPC 一般工作在过耦合区。
+谐振电路的有载品质因子由 QPC 阻抗、$L$、$C_p$ 共同决定。当 $R_\mathrm{eff}=L/(R_\mathrm{QPC}\,C_p)>Z_0$ 时电路工作在欠耦合区，带宽由 $R_\mathrm{QPC}$ 决定，但 QPC 工作点在 $R_\mathrm{QPC}>50\ \mathrm{k}\Omega$ 时难以进入欠耦合区；当 $R_\mathrm{eff}<Z_0$ 时为过耦合区，带宽由特征阻抗 $Z_0$ 决定（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 40）。RF-QPC 一般工作在过耦合区。
 
 ### 灵敏度公式
 
@@ -103,19 +103,19 @@ $$
 \delta G_\mathrm{QPC}=\frac{1}{\sqrt{2}}\,\Delta G_\mathrm{QPC}\cdot 10^{-\mathrm{SNR}/20}\,\Delta f^{-1/2},
 $$
 
-其中 $\Delta f$ 为频谱仪分辨率带宽（[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 93；[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 41）。$1/\sqrt{2}$ 因子来自上下两个边带，最终解调后只保留上边带能量。已知 $\Delta G_\mathrm{QPC}/\Delta q$（杠杆臂系数 $\alpha_\mathrm{c}$ 与一个电子电荷的乘积），即可得电荷灵敏度
+其中 $\Delta f$ 为频谱仪分辨率带宽（[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 93；[文献 7]([[sources/han-tianyi-2017]])，PDF p. 41）。$1/\sqrt{2}$ 因子来自上下两个边带，最终解调后只保留上边带能量。已知 $\Delta G_\mathrm{QPC}/\Delta q$（杠杆臂系数 $\alpha_\mathrm{c}$ 与一个电子电荷的乘积），即可得电荷灵敏度
 
 $$
 \delta q=\frac{\delta G_\mathrm{QPC}}{\Delta G_\mathrm{QPC}/\Delta q}.
 $$
 
-实测砷化镓 RF-QPC：$\Delta G_\mathrm{QPC}\sim 0.05\,e^2/h$、$\mathrm{SNR}=26\ \mathrm{dB}$、$\Delta f=10\ \mathrm{kHz}$，得电导灵敏度 $\delta G_\mathrm{QPC}\approx 1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$，电荷灵敏度 $\delta q\approx 4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 48；[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 93）。工作在 -90 dBm 射频功率下，扫描边带 SNR 与功率成正比；更高功率下 SNR 改善，但辐射反作用（back-action）增强，会向量子点注入散粒噪声。
+实测砷化镓 RF-QPC：$\Delta G_\mathrm{QPC}\sim 0.05\,e^2/h$、$\mathrm{SNR}=26\ \mathrm{dB}$、$\Delta f=10\ \mathrm{kHz}$，得电导灵敏度 $\delta G_\mathrm{QPC}\approx 1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$，电荷灵敏度 $\delta q\approx 4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 48；[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 93）。工作在 -90 dBm 射频功率下，扫描边带 SNR 与功率成正比；更高功率下 SNR 改善，但辐射反作用（back-action）增强，会向量子点注入散粒噪声。
 
 ### 带宽与速度
 
-带宽定义为扫描调制频率时上边带 SNR 跌落到 -3 dB 的频率。砷化镓 RF-QPC 典型带宽 1–10 MHz 量级（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 85，附录 B 给出经典实验对比表）。带宽使得 RF-QPC 可以追踪单次隧穿事件——对 $1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$ 的灵敏度，2 MHz 带宽对应的最小可探测电荷 $\delta q_{\min}=\delta q\cdot\sqrt{2\,\mathrm{BW}}\sim 10^{-4}\,e$ 量级，可分辨一个电子 $e$ 所需积分时间约 $10\ \mu\mathrm{s}$（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 41）。
+带宽定义为扫描调制频率时上边带 SNR 跌落到 -3 dB 的频率。砷化镓 RF-QPC 典型带宽 1–10 MHz 量级（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 85，附录 B 给出经典实验对比表）。带宽使得 RF-QPC 可以追踪单次隧穿事件——对 $1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$ 的灵敏度，2 MHz 带宽对应的最小可探测电荷 $\delta q_{\min}=\delta q\cdot\sqrt{2\,\mathrm{BW}}\sim 10^{-4}\,e$ 量级，可分辨一个电子 $e$ 所需积分时间约 $10\ \mu\mathrm{s}$（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 41）。
 
-更高速度要求更高带宽——把 RF-QPC 与快速锯齿波扫描结合，可在数十秒内完成传统方法数十分钟的相图采集，测量速度提升约两个量级（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 64）。多路复用（multiplex readout）则借助不同载波频率在同一根射频线上同时读出多个 QPC，每个 QPC 用一个独立解调通道（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 65）。
+更高速度要求更高带宽——把 RF-QPC 与快速锯齿波扫描结合，可在数十秒内完成传统方法数十分钟的相图采集，测量速度提升约两个量级（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 64）。多路复用（multiplex readout）则借助不同载波频率在同一根射频线上同时读出多个 QPC，每个 QPC 用一个独立解调通道（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 65）。
 
 <!-- FIGURE: 射频反射式 QPC 测量电路示意图：射频源经定向耦合器、低温衰减器进入样品盒，电感 L 与 QPC 电阻 R_QPC 及寄生电容 C_p 构成谐振电路；反射信号经环形器、低温放大器、室温放大器后由 IQ 混频器解调 -->
 
@@ -123,36 +123,36 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 工作点电导 $G_\mathrm{QPC}$ | 约 $e^2/h$（最佳灵敏区） | 尤杰 2016；周诚 2013 |
-| 工作点电导上限 | $G_\mathrm{QPC}<0.5\,e^2/h$（$R_\mathrm{QPC}>50\ \mathrm{k}\Omega$） | 韩天一 2017 |
-| 调制信号幅度 | $2$–$3\ \mathrm{mV}$（QPC modulation） | 尤杰 2016 |
-| 直流偏压（QPC 端） | 几百 $\mu\mathrm{V}$ | 尤杰 2016；韩天一 2017 |
-| 锁相交流激励 | $20\ \mu\mathrm{V}$（SR830） | 尤杰 2016；韩天一 2017 |
-| RF-QPC 谐振频率 | $193.8\ \mathrm{MHz}$（GaAs，$L=820\ \mathrm{nH}$，$C_p=0.82\ \mathrm{pF}$） | 周诚 2013 |
-| 寄生电容 $C_p$ | $0.3$–$1\ \mathrm{pF}$（GaAs）；$4$–$6\ \mathrm{pF}$（石墨烯） | 韩天一 2017 |
-| 电导灵敏度 $\delta G$ | $1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$ | 韩天一 2017；周诚 2013 |
-| 电荷灵敏度 $\delta q$ | $4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；$1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（反射式超导腔） | 韩天一 2017 |
-| RF-QPC 带宽 | $2.5\ \mathrm{MHz}$（GaAs）；$1$–$20\ \mathrm{MHz}$（综合文献） | 韩天一 2017；周诚 2013 |
-| QPC 器件尺寸 | 通道长度 $\sim 250\ \mathrm{nm}$（GaAs，2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$） | 韩天一 2017 |
+| 工作点电导 $G_\mathrm{QPC}$ | 约 $e^2/h$（最佳灵敏区） | 文献 4；文献 1 |
+| 工作点电导上限 | $G_\mathrm{QPC}<0.5\,e^2/h$（$R_\mathrm{QPC}>50\ \mathrm{k}\Omega$） | 文献 7 |
+| 调制信号幅度 | $2$–$3\ \mathrm{mV}$（QPC modulation） | 文献 4 |
+| 直流偏压（QPC 端） | 几百 $\mu\mathrm{V}$ | 文献 4；文献 7 |
+| 锁相交流激励 | $20\ \mu\mathrm{V}$（SR830） | 文献 4；文献 7 |
+| RF-QPC 谐振频率 | $193.8\ \mathrm{MHz}$（GaAs，$L=820\ \mathrm{nH}$，$C_p=0.82\ \mathrm{pF}$） | 文献 1 |
+| 寄生电容 $C_p$ | $0.3$–$1\ \mathrm{pF}$（GaAs）；$4$–$6\ \mathrm{pF}$（石墨烯） | 文献 7 |
+| 电导灵敏度 $\delta G$ | $1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$ | 文献 7；文献 1 |
+| 电荷灵敏度 $\delta q$ | $4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；$1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（反射式超导腔） | 文献 7 |
+| RF-QPC 带宽 | $2.5\ \mathrm{MHz}$（GaAs）；$1$–$20\ \mathrm{MHz}$（综合文献） | 文献 7；文献 1 |
+| QPC 器件尺寸 | 通道长度 $\sim 250\ \mathrm{nm}$（GaAs，2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$） | 文献 7 |
 
 ## 实验特征与典型应用
 
-**逐个数电子。** QPC 与被测 QD 之间的电容耦合不要求电流流过 QD 本身，因此可以在 QD 与源漏完全电隔离的少电子区工作。逐个减小 plunger 栅压，QD 中的电子逐个排出，每排出一个电子 QPC 电导跳一次台阶，由此可以精确标定 QD 的绝对电子数（[尤杰 2016]([[sources/you-jie-2016]])，PDF pp. 19–21；[尚汝南 2014]([[sources/shang-runan-2014]])，PDF p. 25）。这一方法适用于库仑阻塞区电子数严格为整数的特点，是少电子量子点实验的标准初始化手段。
+**逐个数电子。** QPC 与被测 QD 之间的电容耦合不要求电流流过 QD 本身，因此可以在 QD 与源漏完全电隔离的少电子区工作。逐个减小 plunger 栅压，QD 中的电子逐个排出，每排出一个电子 QPC 电导跳一次台阶，由此可以精确标定 QD 的绝对电子数（[文献 4]([[sources/you-jie-2016]])，PDF pp. 19–21；[文献 2]([[sources/shang-runan-2014]])，PDF p. 25）。这一方法适用于库仑阻塞区电子数严格为整数的特点，是少电子量子点实验的标准初始化手段。
 
-**电荷稳定图与偏压三角。** QPC 可以逐栅压扫描绘制 QD 内电子数分布（即[[fundamentals/charge-stability-diagram|电荷稳定图]]），也可与 QD 源漏偏压同步扫描得到蜂窝图或偏压三角形。由于 QPC modulation 的微分信号对比度高，常用此方法获取双量子点完整相图（[尚汝南 2014]([[sources/shang-runan-2014]])，PDF p. 53）。
+**电荷稳定图与偏压三角。** QPC 可以逐栅压扫描绘制 QD 内电子数分布（即[[fundamentals/charge-stability-diagram|电荷稳定图]]），也可与 QD 源漏偏压同步扫描得到蜂窝图或偏压三角形。由于 QPC modulation 的微分信号对比度高，常用此方法获取双量子点完整相图（[文献 2]([[sources/shang-runan-2014]])，PDF p. 53）。
 
-**自旋–电荷转换。** QPC 本身只测电荷，要读自旋需要先把自旋态映射到电荷分布。典型机制是泡利自旋阻塞（Pauli spin blockade）：双量子点中 $(1,1)\to(0,2)$ 单态隧穿被允许、三态隧穿被禁止，隧穿后电荷态不同，再由 QPC 读取（[尚汝南 2014]([[sources/shang-runan-2014]])，PDF p. 26）。这构成了[[readout-measurement/single-shot-readout|单发自旋读出]]的基础：2004 年 Elzerman 等人在 GaAs 双量子点上首次实现 QPC 单发电荷读出，进而完成单电子自旋读出。
+**自旋–电荷转换。** QPC 本身只测电荷，要读自旋需要先把自旋态映射到电荷分布。典型机制是泡利自旋阻塞（Pauli spin blockade）：双量子点中 $(1,1)\to(0,2)$ 单态隧穿被允许、三态隧穿被禁止，隧穿后电荷态不同，再由 QPC 读取（[文献 2]([[sources/shang-runan-2014]])，PDF p. 26）。这构成了[[readout-measurement/single-shot-readout|单发自旋读出]]的基础：2004 年 Elzerman 等人在 GaAs 双量子点上首次实现 QPC 单发电荷读出，进而完成单电子自旋读出。
 
-**单发读出与隧穿动力学。** 射频 QPC 的微秒级积分时间已经短于单次隧穿事件的平均间隔，可用阈值判定方法读取单次隧穿（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 41）。这也使得 QPC 可以作为时间分辨工具研究隧穿动力学、朗道–齐纳过程与电荷噪声谱。
+**单发读出与隧穿动力学。** 射频 QPC 的微秒级积分时间已经短于单次隧穿事件的平均间隔，可用阈值判定方法读取单次隧穿（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 41）。这也使得 QPC 可以作为时间分辨工具研究隧穿动力学、朗道–齐纳过程与电荷噪声谱。
 
-**电荷噪声谱学。** QPC 把 QD 内电荷的微弱涨落放大为电导信号，因此即使在 QD 库仑阻塞区（直流电流为零），仍可经 QPC 通道读取低频 $1/f$ 噪声，是表征[[materials-devices/charge-noise|电荷噪声]]环境的常用手段（[尤杰 2016]([[sources/you-jie-2016]])，PDF p. 4 工作内容）。
+**电荷噪声谱学。** QPC 把 QD 内电荷的微弱涨落放大为电导信号，因此即使在 QD 库仑阻塞区（直流电流为零），仍可经 QPC 通道读取低频 $1/f$ 噪声，是表征[[materials-devices/charge-noise|电荷噪声]]环境的常用手段（[文献 4]([[sources/you-jie-2016]])，PDF p. 4 工作内容）。
 
 ## 局限与替代方案
 
-- **工作点漂移**：随栅压、磁场、温度变化，QPC 工作点会漂移出灵敏区，需要周期性重新标定（[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 7）。
+- **工作点漂移**：随栅压、磁场、温度变化，QPC 工作点会漂移出灵敏区，需要周期性重新标定（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 7）。
 - **电荷–自旋分离**：QPC 不直接读自旋，所有自旋测量都要先经自旋–电荷转换；直接读自旋需要[[readout-measurement/gate-based-sensing|栅极色散读出]]或[[readout-measurement/dispersive-readout|色散腔读出]]等其它机制。
-- **射频反作用**：过高的射频功率会向量子点注入散粒噪声与热激发，破坏被测态，需要折中灵敏度与反作用（[周诚 2013]([[sources/zhou-cheng-2013]])，PDF p. 94；[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 7）。
-- **寄生电容受限**：在石墨烯或大面积 2DEG 样品中寄生电容过大，谐振频率过低、带宽显著变窄，需要重新设计谐振电路（如引入可调电容；[韩天一 2017]([[sources/han-tianyi-2017]])，PDF p. 59）。
+- **射频反作用**：过高的射频功率会向量子点注入散粒噪声与热激发，破坏被测态，需要折中灵敏度与反作用（[文献 1]([[sources/zhou-cheng-2013]])，PDF p. 94；[文献 7]([[sources/han-tianyi-2017]])，PDF p. 7）。
+- **寄生电容受限**：在石墨烯或大面积 2DEG 样品中寄生电容过大，谐振频率过低、带宽显著变窄，需要重新设计谐振电路（如引入可调电容；[文献 7]([[sources/han-tianyi-2017]])，PDF p. 59）。
 
 ## 与其他概念的关系
 
@@ -174,29 +174,29 @@ $$
 
 ## 论文依据
 
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 4：摘要列出 QPC 作为感应探测器的总体思路。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 19–20：1.4.3 节系统给出 QPC 作为电荷探测器的物理图像（夹断区工作点 $G_\mathrm{QPC}\approx e^2/h$、VUL/VRL 隔离电极、QPC modulation 微分信号灵敏度最高）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 20–21：QPC 直流输运、交流输运、QPC modulation 三种实现方式的电路与信号特征；图 1.7 给出 QPC 电导随 $V_Q$ 的量子化台阶与最佳工作点十字位置。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 22：图 1.8 四种量子点测量方式对比（QD transport、QPC 直流、QPC 交流、QPC modulation）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 46：GaAs 双量子点与左右各一个 QPC 通道的 SEM 纳米电极结构（EBL 完成的纳米尺度电极，最小电极宽度 30 nm）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 95：第 7 章总结强调"在量子点旁边增加几个金属电极形成 QPC 作为电荷探测器"是研究少电子区域与多量子点隔离电子操控的关键。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 7：摘要列出 RF-QPC 与 RF-DGS 两种射频反射式电荷探测器。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 31–32：2.2 节分类 QD transport、QPC transport、QPC modulation 三种常用测量方式；指出"非破坏性、灵敏度高、易设计"是 QPC 传感的优势。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 33–34：图 2.7 给出石墨烯量子点上三种测量方式的对比，凸显 QPC 在 QD 信号微弱时仍能给出强信号。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 38–40：3.1.2 节射频反射式测量原理与阻抗匹配；提出 QPC 在 $G<0.5\,e^2/h$（$R>50\ \mathrm{k}\Omega$）时最灵敏、带宽与灵敏度对电感 $L$ 的折中要求。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 41：式 3.17、3.18 给出 RF-QPC 电导灵敏度与电荷灵敏度计算公式。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 45：GaAs/AlGaAs 量子点 2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$、迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$、量子点尺度约 250 nm、稀释制冷机最低温度 26 mK。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 48：实测 RF-QPC 灵敏度 $\delta G_\mathrm{QPC}=1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$、$\delta q=4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$、带宽 2.5 MHz。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 56：寄生电容 $C_p$ 在 GaAs $0.3$–$1\ \mathrm{pF}$、石墨烯 $4$–$6\ \mathrm{pF}$ 的对比，及其对反射系数的影响。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 67：反射式超导谐振腔探测石墨烯双量子点的 $\delta q\approx 1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$，可与最佳 RF-QPC 灵敏度相当。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 85：附录 B 经典射频反射式实验参数对比（RF-SET、RF-QPC、RF-单量子点、RF-Gate Sensor 共 13 组）。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 63–65：第 4 章快速测量与多路复用（multiplex readout）应用。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 34：1.6 节明确 SET 或 QPC 作为量子比特读出器件的两种基本选项。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 75：3.7 节给出 QPC 作为电荷探测器的两种实现——理想量子化平台工作区 $G_\mathrm{QPC}\sim e^2/h$ 与实际库仑阻塞工作区；引用 Field et al. 1993、Sprinzak et al. 2002、Fujisawa et al. 2004、Wang et al. 2010。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 82：4.1.2 节综述射频反射式测量发展史：Schoelkopf 1998 提出 RF-SET，Cassidy/Müller/Reilly 2007 把技术移植到 RF-QPC。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 88–91：图 4.4–4.7 给出射频反射式测量完整电路图（射频源、定向耦合器、低温衰减器、T 型偏置器、谐振电感、QPC 寄生电容、IQ 混频器）与谐振频率 193.8 MHz 的实测谱。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 93–94：式 4.20–4.21 给出电导灵敏度与电荷灵敏度的换算；实测 GaAs RF-QPC $\delta G_\mathrm{QPC}=1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$、$\delta q=4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$；图 4.11 给出 SNR 与射频功率的反作用折中。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 18：图 1.3 给出单量子点 SEM 照片与"两个平行方向的电极把量子点和用来测量的 QPC 通道部分断开"的结构示意。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 25：1.4.3 节明确"QPC 通道测量电子的电荷态"是电荷量子比特读出的标准方法，原理为库伦相互作用调制 QPC 电流。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 52：3.1.3 节 QD transport 的局限性（隧穿几率太小电流无法测量、少电子区需要不依赖源漏耦合的 QPC 测量）；定义 QPC transport 与 QPC modulation 两种实现。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 53：图 3.6 三种测量方式直接对比，说明跳变位置完全一致、调制信号对比度最高。
+- [[sources/ref-04|文献 4]]，PDF p. 4：摘要列出 QPC 作为感应探测器的总体思路。
+- [[sources/ref-04|文献 4]]，PDF pp. 19–20：1.4.3 节系统给出 QPC 作为电荷探测器的物理图像（夹断区工作点 $G_\mathrm{QPC}\approx e^2/h$、VUL/VRL 隔离电极、QPC modulation 微分信号灵敏度最高）。
+- [[sources/ref-04|文献 4]]，PDF pp. 20–21：QPC 直流输运、交流输运、QPC modulation 三种实现方式的电路与信号特征；图 1.7 给出 QPC 电导随 $V_Q$ 的量子化台阶与最佳工作点十字位置。
+- [[sources/ref-04|文献 4]]，PDF p. 22：图 1.8 四种量子点测量方式对比（QD transport、QPC 直流、QPC 交流、QPC modulation）。
+- [[sources/ref-04|文献 4]]，PDF p. 46：GaAs 双量子点与左右各一个 QPC 通道的 SEM 纳米电极结构（EBL 完成的纳米尺度电极，最小电极宽度 30 nm）。
+- [[sources/ref-04|文献 4]]，PDF p. 95：第 7 章总结强调"在量子点旁边增加几个金属电极形成 QPC 作为电荷探测器"是研究少电子区域与多量子点隔离电子操控的关键。
+- [[sources/ref-07|文献 7]]，PDF p. 7：摘要列出 RF-QPC 与 RF-DGS 两种射频反射式电荷探测器。
+- [[sources/ref-07|文献 7]]，PDF pp. 31–32：2.2 节分类 QD transport、QPC transport、QPC modulation 三种常用测量方式；指出"非破坏性、灵敏度高、易设计"是 QPC 传感的优势。
+- [[sources/ref-07|文献 7]]，PDF pp. 33–34：图 2.7 给出石墨烯量子点上三种测量方式的对比，凸显 QPC 在 QD 信号微弱时仍能给出强信号。
+- [[sources/ref-07|文献 7]]，PDF pp. 38–40：3.1.2 节射频反射式测量原理与阻抗匹配；提出 QPC 在 $G<0.5\,e^2/h$（$R>50\ \mathrm{k}\Omega$）时最灵敏、带宽与灵敏度对电感 $L$ 的折中要求。
+- [[sources/ref-07|文献 7]]，PDF p. 41：式 3.17、3.18 给出 RF-QPC 电导灵敏度与电荷灵敏度计算公式。
+- [[sources/ref-07|文献 7]]，PDF p. 45：GaAs/AlGaAs 量子点 2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$、迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$、量子点尺度约 250 nm、稀释制冷机最低温度 26 mK。
+- [[sources/ref-07|文献 7]]，PDF p. 48：实测 RF-QPC 灵敏度 $\delta G_\mathrm{QPC}=1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$、$\delta q=4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$、带宽 2.5 MHz。
+- [[sources/ref-07|文献 7]]，PDF p. 56：寄生电容 $C_p$ 在 GaAs $0.3$–$1\ \mathrm{pF}$、石墨烯 $4$–$6\ \mathrm{pF}$ 的对比，及其对反射系数的影响。
+- [[sources/ref-07|文献 7]]，PDF p. 67：反射式超导谐振腔探测石墨烯双量子点的 $\delta q\approx 1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$，可与最佳 RF-QPC 灵敏度相当。
+- [[sources/ref-07|文献 7]]，PDF p. 85：附录 B 经典射频反射式实验参数对比（RF-SET、RF-QPC、RF-单量子点、RF-Gate Sensor 共 13 组）。
+- [[sources/ref-07|文献 7]]，PDF pp. 63–65：第 4 章快速测量与多路复用（multiplex readout）应用。
+- [[sources/ref-01|文献 1]]，PDF p. 34：1.6 节明确 SET 或 QPC 作为量子比特读出器件的两种基本选项。
+- [[sources/ref-01|文献 1]]，PDF p. 75：3.7 节给出 QPC 作为电荷探测器的两种实现——理想量子化平台工作区 $G_\mathrm{QPC}\sim e^2/h$ 与实际库仑阻塞工作区；引用 Field et al. 1993、Sprinzak et al. 2002、Fujisawa et al. 2004、Wang et al. 2010。
+- [[sources/ref-01|文献 1]]，PDF p. 82：4.1.2 节综述射频反射式测量发展史：Schoelkopf 1998 提出 RF-SET，Cassidy/Müller/Reilly 2007 把技术移植到 RF-QPC。
+- [[sources/ref-01|文献 1]]，PDF pp. 88–91：图 4.4–4.7 给出射频反射式测量完整电路图（射频源、定向耦合器、低温衰减器、T 型偏置器、谐振电感、QPC 寄生电容、IQ 混频器）与谐振频率 193.8 MHz 的实测谱。
+- [[sources/ref-01|文献 1]]，PDF pp. 93–94：式 4.20–4.21 给出电导灵敏度与电荷灵敏度的换算；实测 GaAs RF-QPC $\delta G_\mathrm{QPC}=1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$、$\delta q=4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$；图 4.11 给出 SNR 与射频功率的反作用折中。
+- [[sources/ref-02|文献 2]]，PDF p. 18：图 1.3 给出单量子点 SEM 照片与"两个平行方向的电极把量子点和用来测量的 QPC 通道部分断开"的结构示意。
+- [[sources/ref-02|文献 2]]，PDF p. 25：1.4.3 节明确"QPC 通道测量电子的电荷态"是电荷量子比特读出的标准方法，原理为库伦相互作用调制 QPC 电流。
+- [[sources/ref-02|文献 2]]，PDF p. 52：3.1.3 节 QD transport 的局限性（隧穿几率太小电流无法测量、少电子区需要不依赖源漏耦合的 QPC 测量）；定义 QPC transport 与 QPC modulation 两种实现。
+- [[sources/ref-02|文献 2]]，PDF p. 53：图 3.6 三种测量方式直接对比，说明跳变位置完全一致、调制信号对比度最高。

@@ -116,7 +116,7 @@ $V^R(t_r,x_t)$ 的相图需要知道每条轨迹最大值在两个态下的分�
 
 ## 参数与量级
 
-以下数值取自硅量子点单自旋器件（四层重叠铝电极）在 $B_\mathrm{ext}=1.5\ \mathrm{T}$ 下的实测与模拟（胡睿梓 2022，第 3 章）：
+以下数值取自硅量子点单自旋器件（四层重叠铝电极）在 $B_\mathrm{ext}=1.5\ \mathrm{T}$ 下的实测与模拟（文献 15，第 3 章）：
 
 | 量 | 数值 | 说明 |
 | --- | --- | --- |
@@ -150,7 +150,7 @@ $$
 \epsilon=-k_\mathrm{B}T_e\ln\frac{1-R_G}{R_G\,e^{-E_z/2k_\mathrm{B}T_e}-e^{E_z/2k_\mathrm{B}T_e}},
 $$
 
-进而求出裸速率 $\Gamma^\mathrm{out},\Gamma^\mathrm{in}$；假设它们与温度无关，即可外推任意 $T_e$ 下的读出表现。结论是：阈值无关方法的 $A_\mathrm{eff}$ 随温度升高而缩小，在 $B=1.5\ \mathrm{T}$ 下约 $0.7\ \mathrm{K}$ 处与传统方法持平——传统阈值法因 $E_z/T_e>13$ 的要求在 $100\ \mathrm{mK}$ 以上就难以工作，而阈值无关方法把可用的温度上限提高了近一个量级。作为参照，Si-MOS 实验中 $150\ \mathrm{mK}$ 的电子温度已把自旋单发读出可见度压到约 0.7，成为自旋–电荷转换保真度的主要瓶颈（楚凝 2025）。
+进而求出裸速率 $\Gamma^\mathrm{out},\Gamma^\mathrm{in}$；假设它们与温度无关，即可外推任意 $T_e$ 下的读出表现。结论是：阈值无关方法的 $A_\mathrm{eff}$ 随温度升高而缩小，在 $B=1.5\ \mathrm{T}$ 下约 $0.7\ \mathrm{K}$ 处与传统方法持平——传统阈值法因 $E_z/T_e>13$ 的要求在 $100\ \mathrm{mK}$ 以上就难以工作，而阈值无关方法把可用的温度上限提高了近一个量级。作为参照，Si-MOS 实验中 $150\ \mathrm{mK}$ 的电子温度已把自旋单发读出可见度压到约 0.7，成为自旋–电荷转换保真度的主要瓶颈（文献 22）。
 
 **适用边界。** 该框架针对"两态差异表现为一个时间隧穿事件"的能量选择读出；它不能修复映射阶段本身的缺陷——自旋弛豫 $W$ 和热激发已包含在速率方程中，会直接吃掉可见度。方法也不是"零超参数"：仍需标定隧穿速率、噪声、滤波响应，并选择离散化区间与合格误差标准。对于以静态电平差异为主的读出（如[[readout-measurement/rf-reflectometry|射频反射测量]]的双峰直方图），阈值判决本身已足够稳健；而在更高温区，基于泡利自旋阻塞的读出因可隔离电子库而更有优势。
 
@@ -170,16 +170,16 @@ $$
 
 ## 论文依据
 
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 62：读取可见度定义 $V^R=F_\uparrow^R+F_\downarrow^R-1$、保真度的阈值积分表达与 Monte-Carlo 模拟的必要性。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 63–64：高斯混合模型、速率方程拟合、最大值分布拟合三步参数提取流程，以及 8 阶贝塞尔低通的数字模拟。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 65–66：转移矩阵 $Q$、$\mathbf{P}(t)=\exp(Qt)\mathbf{P}(0)$ 与 $P_0(t)$ 解析式（式 3.3–3.4）。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 66–67：自旋–电荷转换可见度 $V^{STC}(t)$ 解析解与最佳时间窗口 $t_\mathrm{opt}^{STC}$ 公式（式 3.5–3.8）。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 68：因子化关系 $V^R=V^{STC}\times V^E$ 的完整推导（式 3.10）。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 70：高读取可见度条件 $E_z/T_e>13$、$T_1\Gamma_\uparrow^\mathrm{out}>100$、$\Gamma_s/\Gamma_\downarrow^\mathrm{in}>12$ 与全部实验参数（$\Gamma_\uparrow^\mathrm{out}=6.0\ \mathrm{kHz}$ 等）、$t_\mathrm{opt}^{STC}=0.84\ \mathrm{ms}$ 与 $V^{STC}=97.15\%$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 71：线性关联 $P_M^\uparrow=P_I^\uparrow\times V^R+\alpha$ 的推导（式 3.11–3.13）。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 72：反推公式 $P_E^\uparrow=(P_M^\uparrow-\alpha)/V^R$（式 3.14）、最大值双峰分布低谷处误差最小、$A_\mathrm{eff}$ 提升 60 倍。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 73：拟合误差分析——离散化区间边界选择（$1\ \mathrm{mV}$ 偏移）与累积误差在双峰间归零。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 74–75：费米–狄拉克调制的隧穿速率（式 3.15）、由 $R_G$ 反解 $\epsilon$（式 3.16）与 $0.7\ \mathrm{K}$ @ $1.5\ \mathrm{T}$ 的温度边界；本章小结。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 38：Elzerman 读出原理——源漏费米面置于两自旋能级之间，要求费米面热展宽小于塞曼劈裂。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 138：传统阈值法选取 $V_0$ 最大化电荷态读出保真度，$F_\mathrm{charge}=99.8\%$、$140\ \mathrm{ns}$ 积分下信噪比 5.72。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 143：$150\ \mathrm{mK}$ 电子温度下自旋单发读出可见度仅约 0.7，成为读出保真度瓶颈；PSB 读出对高温工作的优势。
+- [[sources/ref-15|文献 15]]，PDF p. 62：读取可见度定义 $V^R=F_\uparrow^R+F_\downarrow^R-1$、保真度的阈值积分表达与 Monte-Carlo 模拟的必要性。
+- [[sources/ref-15|文献 15]]，PDF pp. 63–64：高斯混合模型、速率方程拟合、最大值分布拟合三步参数提取流程，以及 8 阶贝塞尔低通的数字模拟。
+- [[sources/ref-15|文献 15]]，PDF pp. 65–66：转移矩阵 $Q$、$\mathbf{P}(t)=\exp(Qt)\mathbf{P}(0)$ 与 $P_0(t)$ 解析式（式 3.3–3.4）。
+- [[sources/ref-15|文献 15]]，PDF pp. 66–67：自旋–电荷转换可见度 $V^{STC}(t)$ 解析解与最佳时间窗口 $t_\mathrm{opt}^{STC}$ 公式（式 3.5–3.8）。
+- [[sources/ref-15|文献 15]]，PDF p. 68：因子化关系 $V^R=V^{STC}\times V^E$ 的完整推导（式 3.10）。
+- [[sources/ref-15|文献 15]]，PDF p. 70：高读取可见度条件 $E_z/T_e>13$、$T_1\Gamma_\uparrow^\mathrm{out}>100$、$\Gamma_s/\Gamma_\downarrow^\mathrm{in}>12$ 与全部实验参数（$\Gamma_\uparrow^\mathrm{out}=6.0\ \mathrm{kHz}$ 等）、$t_\mathrm{opt}^{STC}=0.84\ \mathrm{ms}$ 与 $V^{STC}=97.15\%$。
+- [[sources/ref-15|文献 15]]，PDF p. 71：线性关联 $P_M^\uparrow=P_I^\uparrow\times V^R+\alpha$ 的推导（式 3.11–3.13）。
+- [[sources/ref-15|文献 15]]，PDF p. 72：反推公式 $P_E^\uparrow=(P_M^\uparrow-\alpha)/V^R$（式 3.14）、最大值双峰分布低谷处误差最小、$A_\mathrm{eff}$ 提升 60 倍。
+- [[sources/ref-15|文献 15]]，PDF p. 73：拟合误差分析——离散化区间边界选择（$1\ \mathrm{mV}$ 偏移）与累积误差在双峰间归零。
+- [[sources/ref-15|文献 15]]，PDF pp. 74–75：费米–狄拉克调制的隧穿速率（式 3.15）、由 $R_G$ 反解 $\epsilon$（式 3.16）与 $0.7\ \mathrm{K}$ @ $1.5\ \mathrm{T}$ 的温度边界；本章小结。
+- [[sources/ref-22|文献 22]]，PDF p. 38：Elzerman 读出原理——源漏费米面置于两自旋能级之间，要求费米面热展宽小于塞曼劈裂。
+- [[sources/ref-22|文献 22]]，PDF p. 138：传统阈值法选取 $V_0$ 最大化电荷态读出保真度，$F_\mathrm{charge}=99.8\%$、$140\ \mathrm{ns}$ 积分下信噪比 5.72。
+- [[sources/ref-22|文献 22]]，PDF p. 143：$150\ \mathrm{mK}$ 电子温度下自旋单发读出可见度仅约 0.7，成为读出保真度瓶颈；PSB 读出对高温工作的优势。

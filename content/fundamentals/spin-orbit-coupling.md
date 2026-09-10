@@ -23,7 +23,7 @@ $$
 \mathbf{B}_{\text{SO}}=\frac{1}{m c\,e}\,\mathbf{p}\times\mathbf{E},
 $$
 
-它直接进入自旋的进动方程，从而把轨道运动耦合到自旋自由度。徐刚 2020 在 1.2.2 节明确写出这一定义："在势场内运动的粒子的自旋和其动量相互作用，并通过电场耦合粒子的轨道动量和自旋自由度，这一效应被称为自旋轨道耦合……自旋轨道耦合又可以理解为一种有效的塞曼劈裂能，它可以将相反自旋的态混合到一起，从而导致自旋弛豫"。周雨晨 2026 用同一物理图像把它写成泡利形式（4.17 式）
+它直接进入自旋的进动方程，从而把轨道运动耦合到自旋自由度。文献 12 在 1.2.2 节明确写出这一定义："在势场内运动的粒子的自旋和其动量相互作用，并通过电场耦合粒子的轨道动量和自旋自由度，这一效应被称为自旋轨道耦合……自旋轨道耦合又可以理解为一种有效的塞曼劈裂能，它可以将相反自旋的态混合到一起，从而导致自旋弛豫"。文献 25 用同一物理图像把它写成泡利形式（4.17 式）
 
 $$
 H_{\text{SO}}=\frac{\hbar}{4m_0^{2}c^{2}}\,\boldsymbol{\sigma}\cdot(\mathbf{p}\times\nabla V_{0}),
@@ -95,7 +95,7 @@ $$
 l_{\text{SO}}=\frac{\hbar}{m^{*}\sqrt{\alpha^{2}+\beta^{2}}},
 $$
 
-把 SOC 强度归一化为单一量纲（Zhou Yuchen 2026 式 4.22；徐刚 2020 式 3.3.2 也独立给出同一形式）。徐刚 2020 通过测量 PSB 漏电流在零磁场附近的"双峰谷"结构拟合出 $t_{\text{SO}}$、再除以量子点尺寸 $l_{\text{dot}}$，得到
+把 SOC 强度归一化为单一量纲（Zhou Yuchen 2026 式 4.22；文献 12 式 3.3.2 也独立给出同一形式）。文献 12 通过测量 PSB 漏电流在零磁场附近的"双峰谷"结构拟合出 $t_{\text{SO}}$、再除以量子点尺寸 $l_{\text{dot}}$，得到
 
 $$
 \frac{t_{\text{SO}}}{t}\sim \frac{l_{\text{dot}}}{l_{\text{SO}}}\quad\Longrightarrow\quad l_{\text{SO}}\sim\frac{\hbar}{\sqrt{m^{*}\Delta_{ST}}}\sim 40\text{–}100\,\mathrm{nm},
@@ -105,13 +105,13 @@ $$
 
 ### EDSR 等效磁场
 
-SOC 把载流子的轨道位移翻译为自旋感受到的有效磁场，这是 EDSR 的核心。陈宝宝 2017 在 2.1.3 节明确给出
+SOC 把载流子的轨道位移翻译为自旋感受到的有效磁场，这是 EDSR 的核心。文献 6 在 2.1.3 节明确给出
 
 $$
 B_{\text{eff}}=\frac{l_{\text{dot}}}{l_{\text{SO}}}\frac{eE(t)}{\Delta}\,B_{\text{ext}},
 $$
 
-其中 $l_{\text{dot}}$ 为量子点尺寸、$\Delta$ 为量子点能级间隔、$B_{\text{ext}}$ 为外加静磁场（式 2.8）。周雨晨 2026 在 2.4.1 节把它写成同一形式（式 2.6）
+其中 $l_{\text{dot}}$ 为量子点尺寸、$\Delta$ 为量子点能级间隔、$B_{\text{ext}}$ 为外加静磁场（式 2.8）。文献 25 在 2.4.1 节把它写成同一形式（式 2.6）
 
 $$
 B_{\text{eff}}=B_{z}\frac{l_{\text{dot}}}{l_{\text{SO}}}\frac{eE(t)}{\Delta},
@@ -119,7 +119,7 @@ $$
 
 并指出"对于平面应变锗量子点体系而言，价带空穴具有显著增强的 Rashba 与 Dresselhaus 型自旋–轨道耦合，使得 EDSR 能够在完全不依赖微磁体的情况下实现高效的全电学自旋操控"。
 
-王宁 2025 在 1.3.3 节给出由微磁体横向梯度 $b_{\perp}=\partial B_{x}/\partial z$ 引入的另一种 EDSR 等效磁场（式 1.16）
+文献 21 在 1.3.3 节给出由微磁体横向梯度 $b_{\perp}=\partial B_{x}/\partial z$ 引入的另一种 EDSR 等效磁场（式 1.16）
 
 $$
 B_{\text{eff}}^{\text{(SSOC)}}=\frac{eE_{\text{ac}}\,\ell_{\text{orb}}\,|b_{\perp}|}{\Delta_{\text{orb}}^{2}}\propto \frac{eE_{\text{ac}}\,|b_{\perp}|}{\Delta_{\text{orb}}^{2}},
@@ -143,7 +143,7 @@ $$
 
 其中 $\xi=(g_L-g_R)/(g_L+g_R)$ 描述左右点之间的 $g$ 因子差异、$t_c$ 为双点隧穿耦合。当 $B\to 0$ 时基态为 $S_{02}$ 与最大混合三重态的等幅叠加（式 4.27），漏电流谷深由自旋弛豫速率 $\Gamma_{\text{rel}}$ 决定；当 $B\to\infty$ 时基态变为纯 $T_+$，漏电流升至饱和 $I_{\text{max}}=4\Gamma_{\text{rel}}$。把 SOC 与 $g$ 因子差异共同代入主方程求解并对实验漏电流谱进行拟合，可同时提取 $t_{\text{SO}}$、$t_c$、$\xi$、$\Gamma_{\text{rel}}$ 等多个物理参数。这是当前定量提取 SOC 强度的标准方法。
 
-徐刚 2020 在 3.3.1 节给出同一物理的另一种拟合公式（式 3.1）
+文献 12 在 3.3.1 节给出同一物理的另一种拟合公式（式 3.1）
 
 $$
 I(B)=\Gamma_{\text{rel}}\,\frac{(\omega-B^{2}+\tau^{2})[\omega(1+4\gamma)+B^{2}-\tau^{2}]}{6\gamma\omega^{2}+2B^{2}\eta^{2}t^{2}},
@@ -157,26 +157,26 @@ $$
 
 | 量 | 典型值 | 实验体系 / 备注 | 来源 |
 | --- | --- | --- | --- |
-| 自旋轨道长度 $l_{\text{SO}}$ | $\gtrsim 1\ \mu\mathrm{m}$ | GaAs/AlGaAs 2DEG | 周雨晨 2026 |
-| 自旋轨道长度 $l_{\text{SO}}$ | $40\text{–}100\,\mathrm{nm}$ | 锗棚顶纳米线空穴点 | 徐刚 2020 |
-| 自旋轨道长度 $l_{\text{SO}}$ | $1.5\text{–}35.4\,\mathrm{nm}$（可调） | 锗棚顶纳米线（栅压调） | 周雨晨 2026 引文 |
-| 自旋轨道长度 $l_{\text{SO}}$ | 低至 $0.5\,\mathrm{nm}$ | Ge/Si 纳米线 Rabi $>1\,\mathrm{GHz}$ | 周雨晨 2026 引文 |
-| 自旋轨道长度 $\lambda_{\text{SO}}$ | $28\text{–}57\,\mathrm{nm}$ | 锗硅自组织纳米线 | 李炎 2018 |
-| SOC 强度 $t_{\text{SO}}$ | $38\pm 4\ \mu\mathrm{eV}$ | Ge 纳米线双点 PSB 拟合 | 徐刚 2020 |
-| SOC 强度 $t_{\text{SO}}$ | $15\text{–}21\ \mu\mathrm{eV}$（可调） | 平面应变锗双点 | 周雨晨 2026 |
-| SOC 强度 $\Delta_{\text{SO}}$ | $34\ \mu\mathrm{eV}$（平行）、$42\ \mu\mathrm{eV}$（垂直） | 锗硅自组织纳米线理论 | 李炎 2018 |
-| SOC 强度 $\Delta_{\text{SO}}$ | $35\text{–}50\ \mu\mathrm{eV}$（电偶极实验） | 锗硅自组织纳米线 | 李炎 2018 |
-| SOC 强度 | 理论 $\gtrsim 1\,\mathrm{meV}$ | Ge/Si 核壳纳米线 | 李炎 2018 引文 |
-| SOC 强度 | $\sim 6\,\mathrm{meV}$ | Ge/Si 核壳纳米线实验 | 徐刚 2020 引文 |
-| 横向梯度 $b_\perp$ | $\sim 0.02\,\mathrm{mT}$ | 翻转模式拟合 | 胡睿梓 2022 |
-| 横向梯度 $b_\perp$ | $0.2\,\mathrm{mT/nm}$ | 微磁体设计 | 杨杰诚 2023 |
-| 纵向梯度 $b_z$ | $0.4\text{–}0.98\,\mathrm{mT/nm}$ | 微磁体设计 | 杨杰诚 2023 |
-| Rabi 频率（锗空穴，平面应变） | $11.61\,\mathrm{MHz}$，最大 $19\,\mathrm{MHz}$ | 本征 SOC | 周雨晨 2026 |
-| Rabi 频率（锗空穴，纳米线） | $542\pm 2\,\mathrm{MHz}$（@9 dBm），最快 $698\pm 2\,\mathrm{MHz}$ | 本征 SOC | 徐刚 2020 |
-| Rabi 频率（硅电子，Si/SiGe） | $10\text{–}30\,\mathrm{MHz}$ | 微磁体合成 SOC | 王宁 2025 |
-| Rabi 频率（硅电子，Si-MOS） | $0.04\text{–}2.5\,\mathrm{MHz}$ | 微磁体合成 SOC | 楚凝 2025 |
-| 自旋–光子耦合 $g_s/2\pi$ | $2\text{–}4\,\mathrm{MHz}$ | 锗硅自组织纳米线评估 | 李炎 2018 |
-| 自旋–光子耦合 $g_s/2\pi$ | $13.8\text{–}21.8\,\mathrm{MHz}$ | Si/SiGe 三量子点翻转模式 | 江顺利 2025 |
+| 自旋轨道长度 $l_{\text{SO}}$ | $\gtrsim 1\ \mu\mathrm{m}$ | GaAs/AlGaAs 2DEG | 文献 25 |
+| 自旋轨道长度 $l_{\text{SO}}$ | $40\text{–}100\,\mathrm{nm}$ | 锗棚顶纳米线空穴点 | 文献 12 |
+| 自旋轨道长度 $l_{\text{SO}}$ | $1.5\text{–}35.4\,\mathrm{nm}$（可调） | 锗棚顶纳米线（栅压调） | 文献 25 引文 |
+| 自旋轨道长度 $l_{\text{SO}}$ | 低至 $0.5\,\mathrm{nm}$ | Ge/Si 纳米线 Rabi $>1\,\mathrm{GHz}$ | 文献 25 引文 |
+| 自旋轨道长度 $\lambda_{\text{SO}}$ | $28\text{–}57\,\mathrm{nm}$ | 锗硅自组织纳米线 | 文献 10 |
+| SOC 强度 $t_{\text{SO}}$ | $38\pm 4\ \mu\mathrm{eV}$ | Ge 纳米线双点 PSB 拟合 | 文献 12 |
+| SOC 强度 $t_{\text{SO}}$ | $15\text{–}21\ \mu\mathrm{eV}$（可调） | 平面应变锗双点 | 文献 25 |
+| SOC 强度 $\Delta_{\text{SO}}$ | $34\ \mu\mathrm{eV}$（平行）、$42\ \mu\mathrm{eV}$（垂直） | 锗硅自组织纳米线理论 | 文献 10 |
+| SOC 强度 $\Delta_{\text{SO}}$ | $35\text{–}50\ \mu\mathrm{eV}$（电偶极实验） | 锗硅自组织纳米线 | 文献 10 |
+| SOC 强度 | 理论 $\gtrsim 1\,\mathrm{meV}$ | Ge/Si 核壳纳米线 | 文献 10 引文 |
+| SOC 强度 | $\sim 6\,\mathrm{meV}$ | Ge/Si 核壳纳米线实验 | 文献 12 引文 |
+| 横向梯度 $b_\perp$ | $\sim 0.02\,\mathrm{mT}$ | 翻转模式拟合 | 文献 15 |
+| 横向梯度 $b_\perp$ | $0.2\,\mathrm{mT/nm}$ | 微磁体设计 | 文献 19 |
+| 纵向梯度 $b_z$ | $0.4\text{–}0.98\,\mathrm{mT/nm}$ | 微磁体设计 | 文献 19 |
+| Rabi 频率（锗空穴，平面应变） | $11.61\,\mathrm{MHz}$，最大 $19\,\mathrm{MHz}$ | 本征 SOC | 文献 25 |
+| Rabi 频率（锗空穴，纳米线） | $542\pm 2\,\mathrm{MHz}$（@9 dBm），最快 $698\pm 2\,\mathrm{MHz}$ | 本征 SOC | 文献 12 |
+| Rabi 频率（硅电子，Si/SiGe） | $10\text{–}30\,\mathrm{MHz}$ | 微磁体合成 SOC | 文献 21 |
+| Rabi 频率（硅电子，Si-MOS） | $0.04\text{–}2.5\,\mathrm{MHz}$ | 微磁体合成 SOC | 文献 22 |
+| 自旋–光子耦合 $g_s/2\pi$ | $2\text{–}4\,\mathrm{MHz}$ | 锗硅自组织纳米线评估 | 文献 10 |
+| 自旋–光子耦合 $g_s/2\pi$ | $13.8\text{–}21.8\,\mathrm{MHz}$ | Si/SiGe 三量子点翻转模式 | 文献 20 |
 
 <!-- FIGURE: 各材料体系 SOC 强度与自旋轨道长度对比：GaAs、Si/SiGe、Si-MOS、Ge/SiGe 平面异质结、Ge/Si 核壳纳米线、Ge 棚顶纳米线 -->
 
@@ -184,23 +184,23 @@ $$
 
 ### 泡利自旋阻塞漏电流谱
 
-最直接的 SOC 指纹出现在 PSB 区域的漏电流 $I(B)$ 上。零磁场附近 SOC 引起的漏电流呈"零磁场为谷的双峰"结构（徐刚 2020 图 3.5(c)、周雨晨 2026 图 4.8）：谷的半高宽正比于 $t_{\text{SO}}/t$，谷深由自旋弛豫速率 $\Gamma_{\text{rel}}$ 决定。当磁场超过 $B_{\text{dip}}\sim t\sqrt{\Gamma_{\text{rel}}/\Gamma}/\alpha$ 后漏电流上升到饱和，形成完整双峰结构。周雨晨 2026 在平面锗异质结上沿 $x,y,z$ 三个正交方向分别拟合漏电流谱，得到表 4.1 中各方向的 $t_{\text{SO}}$ 数值：$B_x$ 方向 $t_{\text{SO}}=14\ \mu\mathrm{eV}$、$B_y$ 方向 $t_{\text{SO}}=8\ \mu\mathrm{eV}$、$B_z$ 方向 $t_{\text{SO}}=3\ \mu\mathrm{eV}$，定量体现 SOC 场的各向异性。
+最直接的 SOC 指纹出现在 PSB 区域的漏电流 $I(B)$ 上。零磁场附近 SOC 引起的漏电流呈"零磁场为谷的双峰"结构（文献 12 图 3.5(c)、文献 25 图 4.8）：谷的半高宽正比于 $t_{\text{SO}}/t$，谷深由自旋弛豫速率 $\Gamma_{\text{rel}}$ 决定。当磁场超过 $B_{\text{dip}}\sim t\sqrt{\Gamma_{\text{rel}}/\Gamma}/\alpha$ 后漏电流上升到饱和，形成完整双峰结构。文献 25 在平面锗异质结上沿 $x,y,z$ 三个正交方向分别拟合漏电流谱，得到表 4.1 中各方向的 $t_{\text{SO}}$ 数值：$B_x$ 方向 $t_{\text{SO}}=14\ \mu\mathrm{eV}$、$B_y$ 方向 $t_{\text{SO}}=8\ \mu\mathrm{eV}$、$B_z$ 方向 $t_{\text{SO}}=3\ \mu\mathrm{eV}$，定量体现 SOC 场的各向异性。
 
 ### SOC 场的方向性
 
-把外加磁场在三个正交平面内连续旋转，可以在恒定磁场幅度下测得漏电流的角分布，从而反推 SOC 矢量 $\mathbf{t}_{\text{SO}}$ 的指向。周雨晨 2026 4.4.2 节给出这一方法的具体步骤：分别在 $x y$、$x z$、$y z$ 平面旋转磁场，把 $I(B,\theta)$ 拟合为 $A\sin(b\theta+\psi)+I_0$ 后，三个平面的相位 $\psi$ 分别为 $89\pm 2^\circ$、$94\pm 6^\circ$、$110\pm 7^\circ$，由此判定 SOC 场主要指向面外方向、与面外 $x$ 轴之间夹角约 $4\pm 6^\circ$。面内两个方向上的各向同性漏电流表明量子点面内 SOC 强度近似相等；与面外方向的显著差异则来自轻重空穴混合通道对 Rashba 项的贡献。
+把外加磁场在三个正交平面内连续旋转，可以在恒定磁场幅度下测得漏电流的角分布，从而反推 SOC 矢量 $\mathbf{t}_{\text{SO}}$ 的指向。文献 25 4.4.2 节给出这一方法的具体步骤：分别在 $x y$、$x z$、$y z$ 平面旋转磁场，把 $I(B,\theta)$ 拟合为 $A\sin(b\theta+\psi)+I_0$ 后，三个平面的相位 $\psi$ 分别为 $89\pm 2^\circ$、$94\pm 6^\circ$、$110\pm 7^\circ$，由此判定 SOC 场主要指向面外方向、与面外 $x$ 轴之间夹角约 $4\pm 6^\circ$。面内两个方向上的各向同性漏电流表明量子点面内 SOC 强度近似相等；与面外方向的显著差异则来自轻重空穴混合通道对 Rashba 项的贡献。
 
 ### 电极可调的 SOC
 
-通过改变势垒栅极电压 $V_{B2}$，可以同时调控点间隧穿耦合 $t_c$ 与 SOC 强度 $t_{\text{SO}}$。周雨晨 2026 表 4.2 给出三组数据：$\Delta V_{B2}=0\ \mathrm{mV}$ 时 $t_{\text{SO}}=15\ \mu\mathrm{eV}$、$\Delta V_{B2}=50\ \mathrm{mV}$ 时 $t_{\text{SO}}=18\ \mu\mathrm{eV}$、$\Delta V_{B2}=175\ \mathrm{mV}$ 时 $t_{\text{SO}}=21\ \mu\mathrm{eV}$，$l_{\text{SO}}$ 同步从 $57\ \mathrm{nm}$ 变到 $65\ \mathrm{nm}$。这意味着在规模化量子比特阵列中可以分区域设定 SOC 强度——存储区用弱 SOC 拉长相干时间、操控区用强 SOC 提升 Rabi 频率。
+通过改变势垒栅极电压 $V_{B2}$，可以同时调控点间隧穿耦合 $t_c$ 与 SOC 强度 $t_{\text{SO}}$。文献 25 表 4.2 给出三组数据：$\Delta V_{B2}=0\ \mathrm{mV}$ 时 $t_{\text{SO}}=15\ \mu\mathrm{eV}$、$\Delta V_{B2}=50\ \mathrm{mV}$ 时 $t_{\text{SO}}=18\ \mu\mathrm{eV}$、$\Delta V_{B2}=175\ \mathrm{mV}$ 时 $t_{\text{SO}}=21\ \mu\mathrm{eV}$，$l_{\text{SO}}$ 同步从 $57\ \mathrm{nm}$ 变到 $65\ \mathrm{nm}$。这意味着在规模化量子比特阵列中可以分区域设定 SOC 强度——存储区用弱 SOC 拉长相干时间、操控区用强 SOC 提升 Rabi 频率。
 
 ### 多模式 EDSR 谱线
 
-当量子点间隧穿耦合足够大时，$T_+(1,1)$ 与 $S$ 态在 SOC 作用下发生反交叉。徐刚 2020 在 Ge 纳米线双点上通过调谐中间栅压 $V_{G3}$，在 EDSR 谱上同时观测到四条线：来自 $T_-(1,1)\to S$（红虚线）和 $T_0\to T_+$（黑虚线）；减小 $t_c$ 后变为 $T_-(1,1)\to T_0$（棕虚线）和 $S\to T_+$（绿虚线）。各模式的相对强度直接由 $\Delta_{\text{SO}}^{DD}/t$ 控制，反交叉的能量宽度 $2t_{\text{SO}}$ 就是 SOC 强度的直接读数。
+当量子点间隧穿耦合足够大时，$T_+(1,1)$ 与 $S$ 态在 SOC 作用下发生反交叉。文献 12 在 Ge 纳米线双点上通过调谐中间栅压 $V_{G3}$，在 EDSR 谱上同时观测到四条线：来自 $T_-(1,1)\to S$（红虚线）和 $T_0\to T_+$（黑虚线）；减小 $t_c$ 后变为 $T_-(1,1)\to T_0$（棕虚线）和 $S\to T_+$（绿虚线）。各模式的相对强度直接由 $\Delta_{\text{SO}}^{DD}/t$ 控制，反交叉的能量宽度 $2t_{\text{SO}}$ 就是 SOC 强度的直接读数。
 
 ### 弛豫热点
 
-胡睿梓 2022 1.3.3 节指出，双量子点零失谐附近 $T_1$ 显著下降，形成"弛豫热点"（hotspot），物理来源正是 SOC（或自旋–谷–轨道混合）把 $|S\rangle$ 与 $|T_\pm\rangle$ 在失谐为零处杂化。这一现象同时是双点初始化与电荷态–自旋态混合读取的物理基础，也是"零失谐处比特频率受失谐噪声影响最大"的根源。
+文献 15 1.3.3 节指出，双量子点零失谐附近 $T_1$ 显著下降，形成"弛豫热点"（hotspot），物理来源正是 SOC（或自旋–谷–轨道混合）把 $|S\rangle$ 与 $|T_\pm\rangle$ 在失谐为零处杂化。这一现象同时是双点初始化与电荷态–自旋态混合读取的物理基础，也是"零失谐处比特频率受失谐噪声影响最大"的根源。
 
 ## 本征 SOC 与合成 SOC
 
@@ -238,23 +238,23 @@ $$
 
 ## 论文依据
 
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 16：1.2.2 节 SOC 物理定义、H_SO 泡利形式（式 1.5）以及 Dresselhaus/Rashba 二分的原始描述；同一页给出 $H_{\text{SO}}=\lambda \mathbf{L}\cdot\mathbf{S}$ 的原子物理对应（式 1.6）。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 15：1.2.1 节泡利自旋阻塞机制及"在非零磁场情况下，随着磁场增大，自旋轨道耦合机制便开始影响漏电流的产生"，把 SOC 引入自旋比特读出的物理动机讲清楚。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 17：3.4 节 EDSR 一维化推导 $H_{\text{SO}}=\alpha_R \kappa_y\sigma_x$（式 1.7）以及与塞曼项相加后的总哈密顿量（式 1.10）。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 57：3.3.1 节 PSB 漏电流拟合公式（式 3.1），给出从零磁场双峰谷结构提取 $t_{\text{SO}}$、$t$ 的具体步骤；同一页实验测得 $t_{\text{SO}}\sim 27\pm 3\ \mu\mathrm{eV}$ 与 $t\sim 45\pm 5\ \mu\mathrm{eV}$。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 59：3.3.2 节自旋轨道长度评估公式 $t_{\text{SO}}/t\sim l/l_{\text{SO}}$ 与 Ge 纳米线 $l_{\text{SO}}\sim 40\text{–}100\,\mathrm{nm}$ 的来源；与 InAs、InSb、Ge/Si 核壳纳米线的对比凸显锗棚顶纳米线的优势。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF pp. 61–62：3.5 节多模式 EDSR 谱线测量与两空穴自旋低能级模型（式 3.2–3.5），给出 $T_+$、$S$ 态反交叉能量宽度 $2t_{\text{SO}}$ 的直接读数。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 87：4.2.2.3 节 SOC 的泡利形式（式 4.17），由 Dirac 方程非相对论近似导出，作为 SOC 章节的总哈密顿量起点。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 88：4.2.2.3 节 Dresselhaus 体反演不对称三维形式（式 4.18）及其在二维限域下分解为线性项（式 4.19）与三次项（式 4.20）；同一页给出 $j=3/2$ 价带在应力或缺陷下进一步劈裂为重空穴与轻空穴带的物理图像。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 89：4.2.2.3 节 Rashba 结构反演不对称项（式 4.21），并首次给出统一的等效自旋轨道长度定义（式 4.22）以及 GaAs、Ge 棚顶纳米线、Ge/Si 核壳纳米线 $l_{\text{SO}}$ 的对比。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 92–93：4.3.1 节 PSB 漏电流理论模型 $5\times5$ 哈密顿量（式 4.25）以及本征基下密度矩阵主方程（式 4.26），给出 $I(B)$ 双峰–谷结构的解析公式（式 4.28–4.35）。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 99：4.5 节电极可调 SOC 实验数据表 4.2，$\Delta V_{B2}$ 从 $0$ 变到 $175\,\mathrm{mV}$ 时 $t_{\text{SO}}$ 从 $15\ \mu\mathrm{eV}$ 调到 $21\ \mu\mathrm{eV}$、$l_{\text{SO}}$ 从 $57\,\mathrm{nm}$ 调到 $65\,\mathrm{nm}$。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 90–92：4.3 节沿 $B_x,B_y,B_z$ 三个正交方向的漏电流谱，表 4.1 给出不同方向下拟合参数 $g$、$\xi$、$\Gamma_{\text{rel}}$、$t_c$、$t_{\text{SO}}$ 的具体数值。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 95–96：4.4.2 节 SOC 场方向性测量，三个正交平面内磁场旋转漏电流拟合的相位角 $\psi$ 与 SOC 矢量指向（约 $4\pm 6^\circ$ 偏离面外 $x$ 方向）。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 41：2.4.1 节 EDSR 等效磁场（式 2.6）与 $l_{\text{SO}}$ 的等价定义（式 2.7），作为本征 SOC 路线 EDSR 公式的总入口。
-- [[sources/chen-baobao-2017|陈宝宝 2017]]，PDF p. 29：2.1 节讨论用交流电场替代交流磁场驱动电子自旋，SOC-诱导有效磁场 $B_{\text{eff}}=(l_{\text{dot}}/l_{\text{SO}})\,eE(t)/\Delta\,B_{\text{ext}}$（式 2.8），给出 EDSR 的早期描述与适用范围。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 35：1.3.3–1.3.4 节弛豫热点处 SOC 主导 $T_1$ 的物理图像与 EDSR 两条路线对照——硅电子需要微磁体合成 SOC、锗空穴可借助本征 SOC。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 34：1.3.3 节微磁体诱导的合成 SOC EDSR 等效磁场（式 1.16），$\ell_{\text{orb}}$、$\Delta_{\text{orb}}$ 与量子点尺寸的关系；该页同时指出"自旋量子比特的拉比频率可高达 30 MHz，单比特门保真度超过 99.9%"的实验现状。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 66–67：4.1.1 节从点群对称性出发讲 ISOC：$O_h\to D_{2d}\to C_{2v}$ 的对称性下降序列对应从无 Dresselhaus 项到出现 IIA 项（式 4.2）再到出现 SIA 项（式 4.3）。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 68–69：4.1.2 节合成 SOC（SSOC）理论推导：微扰展开得到 $\Omega_{\text{EDSR}}\propto b_{sl}$（式 4.11），并指出 SSOC 与 ISOC 在自旋弛豫上分别呈 $B^5$ 与 $B^7$ 依赖。
-- [[sources/li-yan-2018|李炎 2018]]，PDF p. 78：4.7 节自旋轨道耦合长度 $\lambda_{\text{SO}}=\hbar/\sqrt{2m^{*}\Delta_{\text{SO}}}$ 在锗硅自组织纳米线中评估为 $28\text{–}57\,\mathrm{nm}$；同一页给出基于 $\lambda_{\text{SO}}$（式 4-25）估算自旋–腔耦合强度 $g_s/2\pi=2\text{–}4\,\mathrm{MHz}$。
+- [[sources/ref-12|文献 12]]，PDF p. 16：1.2.2 节 SOC 物理定义、H_SO 泡利形式（式 1.5）以及 Dresselhaus/Rashba 二分的原始描述；同一页给出 $H_{\text{SO}}=\lambda \mathbf{L}\cdot\mathbf{S}$ 的原子物理对应（式 1.6）。
+- [[sources/ref-12|文献 12]]，PDF p. 15：1.2.1 节泡利自旋阻塞机制及"在非零磁场情况下，随着磁场增大，自旋轨道耦合机制便开始影响漏电流的产生"，把 SOC 引入自旋比特读出的物理动机讲清楚。
+- [[sources/ref-12|文献 12]]，PDF p. 17：3.4 节 EDSR 一维化推导 $H_{\text{SO}}=\alpha_R \kappa_y\sigma_x$（式 1.7）以及与塞曼项相加后的总哈密顿量（式 1.10）。
+- [[sources/ref-12|文献 12]]，PDF p. 57：3.3.1 节 PSB 漏电流拟合公式（式 3.1），给出从零磁场双峰谷结构提取 $t_{\text{SO}}$、$t$ 的具体步骤；同一页实验测得 $t_{\text{SO}}\sim 27\pm 3\ \mu\mathrm{eV}$ 与 $t\sim 45\pm 5\ \mu\mathrm{eV}$。
+- [[sources/ref-12|文献 12]]，PDF p. 59：3.3.2 节自旋轨道长度评估公式 $t_{\text{SO}}/t\sim l/l_{\text{SO}}$ 与 Ge 纳米线 $l_{\text{SO}}\sim 40\text{–}100\,\mathrm{nm}$ 的来源；与 InAs、InSb、Ge/Si 核壳纳米线的对比凸显锗棚顶纳米线的优势。
+- [[sources/ref-12|文献 12]]，PDF pp. 61–62：3.5 节多模式 EDSR 谱线测量与两空穴自旋低能级模型（式 3.2–3.5），给出 $T_+$、$S$ 态反交叉能量宽度 $2t_{\text{SO}}$ 的直接读数。
+- [[sources/ref-25|文献 25]]，PDF p. 87：4.2.2.3 节 SOC 的泡利形式（式 4.17），由 Dirac 方程非相对论近似导出，作为 SOC 章节的总哈密顿量起点。
+- [[sources/ref-25|文献 25]]，PDF p. 88：4.2.2.3 节 Dresselhaus 体反演不对称三维形式（式 4.18）及其在二维限域下分解为线性项（式 4.19）与三次项（式 4.20）；同一页给出 $j=3/2$ 价带在应力或缺陷下进一步劈裂为重空穴与轻空穴带的物理图像。
+- [[sources/ref-25|文献 25]]，PDF p. 89：4.2.2.3 节 Rashba 结构反演不对称项（式 4.21），并首次给出统一的等效自旋轨道长度定义（式 4.22）以及 GaAs、Ge 棚顶纳米线、Ge/Si 核壳纳米线 $l_{\text{SO}}$ 的对比。
+- [[sources/ref-25|文献 25]]，PDF pp. 92–93：4.3.1 节 PSB 漏电流理论模型 $5\times5$ 哈密顿量（式 4.25）以及本征基下密度矩阵主方程（式 4.26），给出 $I(B)$ 双峰–谷结构的解析公式（式 4.28–4.35）。
+- [[sources/ref-25|文献 25]]，PDF p. 99：4.5 节电极可调 SOC 实验数据表 4.2，$\Delta V_{B2}$ 从 $0$ 变到 $175\,\mathrm{mV}$ 时 $t_{\text{SO}}$ 从 $15\ \mu\mathrm{eV}$ 调到 $21\ \mu\mathrm{eV}$、$l_{\text{SO}}$ 从 $57\,\mathrm{nm}$ 调到 $65\,\mathrm{nm}$。
+- [[sources/ref-25|文献 25]]，PDF pp. 90–92：4.3 节沿 $B_x,B_y,B_z$ 三个正交方向的漏电流谱，表 4.1 给出不同方向下拟合参数 $g$、$\xi$、$\Gamma_{\text{rel}}$、$t_c$、$t_{\text{SO}}$ 的具体数值。
+- [[sources/ref-25|文献 25]]，PDF pp. 95–96：4.4.2 节 SOC 场方向性测量，三个正交平面内磁场旋转漏电流拟合的相位角 $\psi$ 与 SOC 矢量指向（约 $4\pm 6^\circ$ 偏离面外 $x$ 方向）。
+- [[sources/ref-25|文献 25]]，PDF p. 41：2.4.1 节 EDSR 等效磁场（式 2.6）与 $l_{\text{SO}}$ 的等价定义（式 2.7），作为本征 SOC 路线 EDSR 公式的总入口。
+- [[sources/ref-06|文献 6]]，PDF p. 29：2.1 节讨论用交流电场替代交流磁场驱动电子自旋，SOC-诱导有效磁场 $B_{\text{eff}}=(l_{\text{dot}}/l_{\text{SO}})\,eE(t)/\Delta\,B_{\text{ext}}$（式 2.8），给出 EDSR 的早期描述与适用范围。
+- [[sources/ref-15|文献 15]]，PDF p. 35：1.3.3–1.3.4 节弛豫热点处 SOC 主导 $T_1$ 的物理图像与 EDSR 两条路线对照——硅电子需要微磁体合成 SOC、锗空穴可借助本征 SOC。
+- [[sources/ref-21|文献 21]]，PDF p. 34：1.3.3 节微磁体诱导的合成 SOC EDSR 等效磁场（式 1.16），$\ell_{\text{orb}}$、$\Delta_{\text{orb}}$ 与量子点尺寸的关系；该页同时指出"自旋量子比特的拉比频率可高达 30 MHz，单比特门保真度超过 99.9%"的实验现状。
+- [[sources/ref-22|文献 22]]，PDF pp. 66–67：4.1.1 节从点群对称性出发讲 ISOC：$O_h\to D_{2d}\to C_{2v}$ 的对称性下降序列对应从无 Dresselhaus 项到出现 IIA 项（式 4.2）再到出现 SIA 项（式 4.3）。
+- [[sources/ref-22|文献 22]]，PDF pp. 68–69：4.1.2 节合成 SOC（SSOC）理论推导：微扰展开得到 $\Omega_{\text{EDSR}}\propto b_{sl}$（式 4.11），并指出 SSOC 与 ISOC 在自旋弛豫上分别呈 $B^5$ 与 $B^7$ 依赖。
+- [[sources/ref-10|文献 10]]，PDF p. 78：4.7 节自旋轨道耦合长度 $\lambda_{\text{SO}}=\hbar/\sqrt{2m^{*}\Delta_{\text{SO}}}$ 在锗硅自组织纳米线中评估为 $28\text{–}57\,\mathrm{nm}$；同一页给出基于 $\lambda_{\text{SO}}$（式 4-25）估算自旋–腔耦合强度 $g_s/2\pi=2\text{–}4\,\mathrm{MHz}$。

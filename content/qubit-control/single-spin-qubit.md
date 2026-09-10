@@ -48,7 +48,7 @@ $$
 H_{\mathrm{lab}}=-\hbar\omega_0 S_z+2h\gamma B_1 S_x\cos(\omega_{\mathrm{drive}}t+\phi),
 $$
 
-其中 $B_1$ 为驱动磁场幅值，$\phi$ 为其相位，$S_i=\sigma_i$ 取泡利矩阵（胡睿梓论文的约定）。把线性振荡场分解为两个反向旋转的分量：与拉莫尔进动同向的分量在旋转坐标系 $R(t)=\exp(-i\omega S_z t/\hbar)$ 中近似为常数，反向分量以 $2\omega_0$ 快速振荡，在旋转波近似（rotating wave approximation，RWA）下舍去，得到旋转系中的有效哈密顿量
+其中 $B_1$ 为驱动磁场幅值，$\phi$ 为其相位，$S_i=\sigma_i$ 取泡利矩阵（文献 15论文的约定）。把线性振荡场分解为两个反向旋转的分量：与拉莫尔进动同向的分量在旋转坐标系 $R(t)=\exp(-i\omega S_z t/\hbar)$ 中近似为常数，反向分量以 $2\omega_0$ 快速振荡，在旋转波近似（rotating wave approximation，RWA）下舍去，得到旋转系中的有效哈密顿量
 
 $$
 H_{\mathrm{rot}}=\hbar(\omega_{\mathrm{drive}}-\omega_0)S_z+h\gamma B_1\left(S_x\cos\phi-S_y\sin\phi\right).
@@ -66,7 +66,7 @@ $$
 
 直接驱动磁场需要片上天线，电流加热限制了操控速率（通常小于 1 MHz）。[[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]（EDSR）改为用栅极上的微波电场晃动电子，借助空间梯度磁场（[[materials-devices/micromagnet|微磁体]]提供）或材料内禀自旋轨道耦合，把电荷的振荡转换成自旋感受到的等效振荡磁场，操控速率正比于梯度，典型可达 10–30 MHz。横向梯度 $\delta B_x$ 用于驱动，纵向梯度 $\delta B_z$ 则把不同量子点的 $f_0$ 错开以实现寻址。
 
-把电子放进失谐为 $\varepsilon$、隧穿耦合为 $2t_c$ 的[[fundamentals/double-quantum-dot|双量子点]]中，可进一步放大电偶极矩，即"翻转模式"（flopping-mode）单自旋比特。在基矢 $(|L,\downarrow\rangle,|L,\uparrow\rangle,|R,\downarrow\rangle,|R,\uparrow\rangle)$ 下，胡睿梓论文给出的哈密顿量为
+把电子放进失谐为 $\varepsilon$、隧穿耦合为 $2t_c$ 的[[fundamentals/double-quantum-dot|双量子点]]中，可进一步放大电偶极矩，即"翻转模式"（flopping-mode）单自旋比特。在基矢 $(|L,\downarrow\rangle,|L,\uparrow\rangle,|R,\downarrow\rangle,|R,\uparrow\rangle)$ 下，文献 15论文给出的哈密顿量为
 
 $$
 H_{\mathrm{fm}}=\frac{1}{2}
@@ -84,7 +84,7 @@ $$
 f_{\mathrm{spin}}(0)=\frac{4t_c\,t_{\mathrm{SO}}\,f_{\mathrm{charge}}}{|4t_c^2-E_z^2|},\qquad h f_{\mathrm{charge}}=e\,d\,E_{\mathrm{ac}},
 $$
 
-$d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电偶极矩与等效自旋轨道耦合同时减弱，$f_{\mathrm{spin}}$ 下降。纵向梯度 $\delta E_z$ 还会使比特频率随失谐漂移，$E_s\simeq E_z-\dfrac{E_z^2-\varepsilon^2}{2E_z(\Omega^2-E_z^2)}(2t_{\mathrm{SO}})^2-\dfrac{\varepsilon}{\Omega}\delta E_z$（$\Omega=\sqrt{\varepsilon^2+4t_c^2}$），这把电荷噪声直接耦合进比特频率——翻转模式用相干时间换取了速度，胡睿梓论文中零失谐处的 Rabi 频率比大失谐处提高了一个数量级。
+$d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电偶极矩与等效自旋轨道耦合同时减弱，$f_{\mathrm{spin}}$ 下降。纵向梯度 $\delta E_z$ 还会使比特频率随失谐漂移，$E_s\simeq E_z-\dfrac{E_z^2-\varepsilon^2}{2E_z(\Omega^2-E_z^2)}(2t_{\mathrm{SO}})^2-\dfrac{\varepsilon}{\Omega}\delta E_z$（$\Omega=\sqrt{\varepsilon^2+4t_c^2}$），这把电荷噪声直接耦合进比特频率——翻转模式用相干时间换取了速度，文献 15论文中零失谐处的 Rabi 频率比大失谐处提高了一个数量级。
 
 ## 初始化与读出
 
@@ -94,7 +94,7 @@ $d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电�
 
 **[[fundamentals/coulomb-blockade|泡利自旋阻塞]]读出**：在双量子点 $(1,1)$–$(0,2)$ 反交叉附近，单态可以进入 $S(0,2)$ 而三重态被泡利不相容原理阻塞在 $(1,1)$，两种自旋构型映射为两种电荷构型。由于区分依据是 $(0,2)$ 单态–三重态能级差（轨道能级量级，远大于塞曼能），读出窗口大得多，可在约 1 K 的较高温度下工作——但硅中的谷能级可能压缩这一窗口。该路线也是[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]的读出基础。
 
-读出质量的定量条件由隧穿速率给出：胡睿梓论文中实现 $>99\%$ 电荷–自旋转换可见度要求 $E_Z/T_e>13$、$T_1\cdot\Gamma_\uparrow^{\mathrm{out}}>100$、$\Gamma_s/\Gamma_\downarrow^{\mathrm{in}}>12$（$\Gamma_s$ 为采样率）；实验样品在 $B=1.5\,$T、$T_e\approx180\,$mK 下测得 $\Gamma_\uparrow^{\mathrm{out}}=6.0\,$kHz、$\Gamma_\downarrow^{\mathrm{out}}=27\,$Hz、$1/T_1=112\pm6\,$s$^{-1}$，限制因素为 $E_Z/T_e\approx11.2<13$。在此基础上发展出的[[readout-measurement/threshold-independent-readout|阈值无关单发读出]]利用多次测量概率间的关联，放宽了对电压阈值与时间窗口的要求。
+读出质量的定量条件由隧穿速率给出：文献 15论文中实现 $>99\%$ 电荷–自旋转换可见度要求 $E_Z/T_e>13$、$T_1\cdot\Gamma_\uparrow^{\mathrm{out}}>100$、$\Gamma_s/\Gamma_\downarrow^{\mathrm{in}}>12$（$\Gamma_s$ 为采样率）；实验样品在 $B=1.5\,$T、$T_e\approx180\,$mK 下测得 $\Gamma_\uparrow^{\mathrm{out}}=6.0\,$kHz、$\Gamma_\downarrow^{\mathrm{out}}=27\,$Hz、$1/T_1=112\pm6\,$s$^{-1}$，限制因素为 $E_Z/T_e\approx11.2<13$。在此基础上发展出的[[readout-measurement/threshold-independent-readout|阈值无关单发读出]]利用多次测量概率间的关联，放宽了对电压阈值与时间窗口的要求。
 
 ## 参数与量级
 
@@ -114,19 +114,19 @@ $d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电�
 
 ## 实验特征
 
-**谷能级标定**：硅导带六重简并在界面处劈裂，剩余二重简并再被界面电势劈裂出谷能级劈裂 $E_{\mathrm{VS}}$。磁输运测量中，第二个电子的隧穿线随磁场先升后降，拐点处 $g\mu_B B_{\mathrm{kink}}=E_{\mathrm{VS}}$——胡睿梓论文由此定出 $E_{\mathrm{VS}}=170\,\mu$eV。当 $E_Z$ 与 $E_{\mathrm{VS}}$ 接近时自旋–谷混合会使 $T_1$ 骤降，是硅自旋比特特有的失效通道。
+**谷能级标定**：硅导带六重简并在界面处劈裂，剩余二重简并再被界面电势劈裂出谷能级劈裂 $E_{\mathrm{VS}}$。磁输运测量中，第二个电子的隧穿线随磁场先升后降，拐点处 $g\mu_B B_{\mathrm{kink}}=E_{\mathrm{VS}}$——文献 15论文由此定出 $E_{\mathrm{VS}}=170\,\mu$eV。当 $E_Z$ 与 $E_{\mathrm{VS}}$ 接近时自旋–谷混合会使 $T_1$ 骤降，是硅自旋比特特有的失效通道。
 
 **快速绝热通道寻峰**：谐振峰等效宽度往往只有 MHz 量级（对应约 0.036 mT），盲目扫频效率极低。改用频率随时间线性增加的啁啾脉冲 $B_{\mathrm{drive}}'=B_1\cos\big[2\pi(f_{\mathrm{drive}}+ct)t+\phi\big]$，在旋转系中等价于让失谐缓慢扫过零点；当扫频速率满足 $\frac{\partial(\Delta f)}{\partial t}\ll f_{\mathrm{rabi}}^2$ 时发生[[qubit-control/landau-zener-transition|绝热 Landau–Zener 转移]]，自旋被确定性地翻转到激发态，峰高与带宽同时提升，可先把共振位置框定在数 MHz 内再用单频微波精标。
 
 **Rabi 振荡与品质因子**：共振处改变脉冲时长 $t_{\mathrm{wait}}$，自旋向上概率呈阻尼正弦 $P(t)=A\,e^{-t/T_2^{\mathrm{rabi}}}\sin(2\pi f_{\mathrm{rabi}}t)$；扫失谐则给出前述 V 形条纹。常用品质因子 $Q=2T_2^{\mathrm{rabi}}f_{\mathrm{rabi}}=T_2^{\mathrm{rabi}}/t_\pi$ 衡量相干时间内可完成的 $\pi$ 操作数（锗空穴论文实测 $Q\approx41$），并可粗略估计保真度 $F=\frac{1}{2}\big(1+e^{-Q/2}\big)$；严格表征则用随机基准测试（RB）与门集层析（GST）。
 
-**相干时间谱系**：[[qubit-control/ramsey-interferometry|Ramsey 序列]]给出 $T_2^*$，Hahn 回波抑制准静态噪声给出 $T_2^{\mathrm{echo}}$，多脉冲 [[qubit-control/dynamical-decoupling|CPMG 动力学解耦]]进一步滤除低频噪声。周雨晨论文的锗空穴比特上三者分别为 136 ns、401 ns 与 6.75 μs（$N_\pi=230$，约为 $T_2^*$ 的 50 倍），且 $T_2^{\mathrm{CPMG}}$ 随 $N_\pi$ 线性增长，指示低频噪声主导。
+**相干时间谱系**：[[qubit-control/ramsey-interferometry|Ramsey 序列]]给出 $T_2^*$，Hahn 回波抑制准静态噪声给出 $T_2^{\mathrm{echo}}$，多脉冲 [[qubit-control/dynamical-decoupling|CPMG 动力学解耦]]进一步滤除低频噪声。文献 25论文的锗空穴比特上三者分别为 136 ns、401 ns 与 6.75 μs（$N_\pi=230$，约为 $T_2^*$ 的 50 倍），且 $T_2^{\mathrm{CPMG}}$ 随 $N_\pi$ 线性增长，指示低频噪声主导。
 
 ## 材料体系差异
 
-- **硅（[[materials-devices/silicon-sige|Si/SiGe]] 与 [[materials-devices/silicon-mos|Si-MOS]]）**：自旋轨道耦合弱、可同位素纯化 $^{28}$Si 消除核自旋噪声，$T_2^*$ 比 GaAs 长约三个数量级，是长相干路线的首选；代价是 EDSR 必须依赖微磁体。Si-MOS 中单比特平均保真度已达 99.5%，射频读取保真度达 99.86%（楚凝论文）。
+- **硅（[[materials-devices/silicon-sige|Si/SiGe]] 与 [[materials-devices/silicon-mos|Si-MOS]]）**：自旋轨道耦合弱、可同位素纯化 $^{28}$Si 消除核自旋噪声，$T_2^*$ 比 GaAs 长约三个数量级，是长相干路线的首选；代价是 EDSR 必须依赖微磁体。Si-MOS 中单比特平均保真度已达 99.5%，射频读取保真度达 99.86%（文献 22论文）。
 - **锗空穴（[[materials-devices/strained-germanium|应变锗]]）**：重空穴有效 $g$ 因子强各向异性且自旋轨道耦合强，无需微磁体即可全电驱动，Rabi 频率轻松超过 10 MHz；代价是同样的耦合把电荷噪声引入自旋通道，$T_2^*$ 较短。详见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]。
-- **GaAs（[[materials-devices/gaas-algaas|GaAs/AlGaAs]]）**：器件成熟、自旋阻塞读出窗口大，但约 $10^6$ 个核自旋的超精细噪声把 $T_2^*$ 压到约 10 ns，历史上更多用于确立自旋阻塞、交换振荡等基础物理（陈宝宝、王保传论文）。
+- **GaAs（[[materials-devices/gaas-algaas|GaAs/AlGaAs]]）**：器件成熟、自旋阻塞读出窗口大，但约 $10^6$ 个核自旋的超精细噪声把 $T_2^*$ 压到约 10 ns，历史上更多用于确立自旋阻塞、交换振荡等基础物理（文献 6、文献 8论文）。
 
 ## 与其他概念的关系
 
@@ -141,11 +141,11 @@ $d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电�
 
 ## 论文依据
 
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 23–26：塞曼劈裂 $E_Z=g\mu_BB$、硅中 $g\approx2$ 与 $\gamma\approx28\,$GHz/T、$T_1$/$T_2^*$ 退相干机制、ESR 实验室系与旋转系哈密顿量（式 1.1–1.2）、旋波近似与虚拟 $z$ 门。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 34–36：Elzerman 能量选择隧穿读出与泡利自旋阻塞读出的对比、E–W–R 脉冲、初始化三种方式、EDSR 原理及 10–30 MHz 操控速率。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 70：单发读出可见度 $>99\%$ 的定量条件（$E_Z/T_e>13$ 等）与实测隧穿速率、$1/T_1=112\pm6\,$s$^{-1}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 81–82、p. 92：硅谷能级劈裂的磁输运标定（$B_{\mathrm{kink}}$ 拐点法），样品 $E_{\mathrm{VS}}=170\,\mu$eV。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 89–92：快速绝热通道（啁啾脉冲）标定谐振峰、共振频率 19.787 GHz、Rabi 振荡拟合 $f_{\mathrm{rabi}}=1.256\pm0.003\,$MHz、$T_2^{\mathrm{rabi}}=5.4\pm0.4\,\mu$s。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 106–108：翻转模式单自旋比特的四态哈密顿量（式 5.4–5.6）、$f_{\mathrm{spin}}(0)$ 公式（式 5.7）及纵向梯度修正（式 5.10–5.11）。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 115–119：锗空穴自旋比特 Rabi 振荡 V 形图样、$f_{\mathrm{Rabi}}=11.61\,$MHz、$T_2^{\mathrm{Rabi}}=1.77\,\mu$s、品质因子 $Q=41.1$ 与保真度估计式；Ramsey/Hahn echo/CPMG 测得 $T_2^*=136\,$ns、$T_2^{\mathrm{Echo}}=401\,$ns、$T_2^{\mathrm{CPMG}}=6.75\,\mu$s；RB 门保真度 99.21–99.63%。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 7：Si-MOS 单量子比特门平均保真度 99.5%、射频读取保真度 99.86%（摘要）。
+- [[sources/ref-15|文献 15]]，PDF pp. 23–26：塞曼劈裂 $E_Z=g\mu_BB$、硅中 $g\approx2$ 与 $\gamma\approx28\,$GHz/T、$T_1$/$T_2^*$ 退相干机制、ESR 实验室系与旋转系哈密顿量（式 1.1–1.2）、旋波近似与虚拟 $z$ 门。
+- [[sources/ref-15|文献 15]]，PDF pp. 34–36：Elzerman 能量选择隧穿读出与泡利自旋阻塞读出的对比、E–W–R 脉冲、初始化三种方式、EDSR 原理及 10–30 MHz 操控速率。
+- [[sources/ref-15|文献 15]]，PDF p. 70：单发读出可见度 $>99\%$ 的定量条件（$E_Z/T_e>13$ 等）与实测隧穿速率、$1/T_1=112\pm6\,$s$^{-1}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 81–82、p. 92：硅谷能级劈裂的磁输运标定（$B_{\mathrm{kink}}$ 拐点法），样品 $E_{\mathrm{VS}}=170\,\mu$eV。
+- [[sources/ref-15|文献 15]]，PDF pp. 89–92：快速绝热通道（啁啾脉冲）标定谐振峰、共振频率 19.787 GHz、Rabi 振荡拟合 $f_{\mathrm{rabi}}=1.256\pm0.003\,$MHz、$T_2^{\mathrm{rabi}}=5.4\pm0.4\,\mu$s。
+- [[sources/ref-15|文献 15]]，PDF pp. 106–108：翻转模式单自旋比特的四态哈密顿量（式 5.4–5.6）、$f_{\mathrm{spin}}(0)$ 公式（式 5.7）及纵向梯度修正（式 5.10–5.11）。
+- [[sources/ref-25|文献 25]]，PDF pp. 115–119：锗空穴自旋比特 Rabi 振荡 V 形图样、$f_{\mathrm{Rabi}}=11.61\,$MHz、$T_2^{\mathrm{Rabi}}=1.77\,\mu$s、品质因子 $Q=41.1$ 与保真度估计式；Ramsey/Hahn echo/CPMG 测得 $T_2^*=136\,$ns、$T_2^{\mathrm{Echo}}=401\,$ns、$T_2^{\mathrm{CPMG}}=6.75\,\mu$s；RB 门保真度 99.21–99.63%。
+- [[sources/ref-22|文献 22]]，PDF p. 7：Si-MOS 单量子比特门平均保真度 99.5%、射频读取保真度 99.86%（摘要）。

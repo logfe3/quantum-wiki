@@ -215,29 +215,29 @@ two-tone 谱用一路探测微波（$\omega_p=\omega_r$）和一路驱动微波�
 
 ## 论文依据
 
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 7：摘要层结论——"高阻抗腔使半导体量子点与超导腔的耦合强度大幅提升，并实现了双量子点电荷比特与腔的强耦合"。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 43：§2.4 推导了相互作用 $H_{\rm int}=e\,c_c\,\tau_z V^\dagger$、腔电压算符表达式与全局耦合 $g_0=\omega_r c_c 2Z_r/\sqrt{R_Q}$，明确双量子点电极间距 $\sim 100\ \mathrm{nm}$ 决定电偶极矩大小。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 33：混合角 $\theta=\arctan(2t_c/\varepsilon)$、$\sin\theta=2t_c/(\hbar\omega_a)$ 的定义与有效耦合 $g_c=g_0\sin\theta$ 的物理图像。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 31：透射系数 $S_{21}$、磁化率 $\chi$、腔频移与展宽的实部/虚部公式。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 38：阻抗 $Z_r=\sqrt{L/C}$ 与零点电压（电流）涨落的关系：提高 $Z_r$ 即放大真空涨落电场。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 45：耦合电容 $C_L-C_R$ 可调，最大电荷比特–腔耦合 $g_c/2\pi\approx 619\ \mathrm{MHz}$，$g_c/\omega_r\sim 0.11$，实现超强耦合。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 51：光子辅助隧穿提取 lever arm 的方法（驱动 $f_d=10\ \mathrm{GHz}$、边带间距对应 $h f_d$）。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 53：two-tone 谱给出抛物线型色散 $\hbar\omega_a=\sqrt{\varepsilon^2+(2t_c)^2}$ 与 lever arm。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 65、68：利用库仑菱形与可调腔提取 $2t_c$ 与 lever arm 的多种校验方法。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 57–58、73–75：GaAs 双量子点–SQUID 阵列腔的源漏泵浦发光，最大腔增益 $|S_{21}|\approx 1.13$ 在 $\nu_d=3.6\ \mathrm{GHz}$ 处获得。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 87：SQUID 阵列腔参数——$(\kappa,\kappa_i,\kappa_e)/2\pi=(58.9,36.9,22.0)\ \mathrm{MHz}$、$Z_r\approx 1\ \mathrm{k\Omega}$、$g_0/2\pi\approx 57\ \mathrm{MHz}$。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 116：超强耦合区 RWA 失效的讨论（$g_c/\omega_r\sim 0.1$）。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 7：摘要——"高阻抗腔的引入使量子点与腔的耦合强度大幅提升，并实现了量子点发光、腔增益与 Floquet 响应"。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 21：量子点电偶极矩 $d=e\sum_j x_j n_j$ 与电偶极近似的形式。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 47：三量子点–腔相互作用的电偶极起源，"电子状态变化即在腔侧表现为电偶极矩的变化"。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 63：有效转变电偶极矩阵元 $d_{mn}$，三量子点 lever arm $a_i=C_{c,i}/C_\Sigma$ 的定义。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 85：受驱动 GaAs 双量子点的最大腔增益 $|S_{21}|\approx 1.13$ 在 $\nu_d=3.6\ \mathrm{GHz}$ 处出现。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 7：摘要——"实现了硅/硅锗三量子点中电荷量子比特与高阻抗谐振腔的强耦合"。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 21：指出半导体电荷量子比特电偶极矩相对超导比特偏小，"借助高阻抗腔耦合强度与阻抗的开方成正比，是提升耦合强度的关键"。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 34：双量子点不同电荷态对应不同电偶极矩，是双量子点适合与腔耦合的根本原因。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 41：库仑菱形提取 lever arm 的公式 $\alpha=E_{\rm add}/|e|\Delta V_G$，在 Si/SiGe 三量子点上测得 $\alpha=126\ \mathrm{meV/V}$。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 42：电子温度 $T_e=282\ \mathrm{mK}$ 由库仑峰半高宽的温度依赖提取。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 55：高阻抗腔估算 $Z_r\approx 3.5\ \mathrm{k\Omega}$，对比 $50\ \Omega$ 标准共面波导的提升比例。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 69：另一组腔参数 $\kappa/2\pi=5.13\ \mathrm{MHz}$、$Z_r=2.5\ \mathrm{k\Omega}$。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 52：三量子点双量子点与 TiN 高阻抗腔的全局耦合强度 $g_0/(2\pi)=175\ \mathrm{MHz}$，$2g_0/(2\pi)\approx 43.5\ \mathrm{MHz}$ 的自旋劈裂与之对比。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 8：电荷噪声为硅基量子比特退相干主导来源，与声子贡献对比可忽略。
+- [[sources/ref-13|文献 13]]，PDF p. 7：摘要层结论——"高阻抗腔使半导体量子点与超导腔的耦合强度大幅提升，并实现了双量子点电荷比特与腔的强耦合"。
+- [[sources/ref-13|文献 13]]，PDF p. 43：§2.4 推导了相互作用 $H_{\rm int}=e\,c_c\,\tau_z V^\dagger$、腔电压算符表达式与全局耦合 $g_0=\omega_r c_c 2Z_r/\sqrt{R_Q}$，明确双量子点电极间距 $\sim 100\ \mathrm{nm}$ 决定电偶极矩大小。
+- [[sources/ref-13|文献 13]]，PDF p. 33：混合角 $\theta=\arctan(2t_c/\varepsilon)$、$\sin\theta=2t_c/(\hbar\omega_a)$ 的定义与有效耦合 $g_c=g_0\sin\theta$ 的物理图像。
+- [[sources/ref-13|文献 13]]，PDF p. 31：透射系数 $S_{21}$、磁化率 $\chi$、腔频移与展宽的实部/虚部公式。
+- [[sources/ref-13|文献 13]]，PDF p. 38：阻抗 $Z_r=\sqrt{L/C}$ 与零点电压（电流）涨落的关系：提高 $Z_r$ 即放大真空涨落电场。
+- [[sources/ref-13|文献 13]]，PDF p. 45：耦合电容 $C_L-C_R$ 可调，最大电荷比特–腔耦合 $g_c/2\pi\approx 619\ \mathrm{MHz}$，$g_c/\omega_r\sim 0.11$，实现超强耦合。
+- [[sources/ref-13|文献 13]]，PDF p. 51：光子辅助隧穿提取 lever arm 的方法（驱动 $f_d=10\ \mathrm{GHz}$、边带间距对应 $h f_d$）。
+- [[sources/ref-13|文献 13]]，PDF p. 53：two-tone 谱给出抛物线型色散 $\hbar\omega_a=\sqrt{\varepsilon^2+(2t_c)^2}$ 与 lever arm。
+- [[sources/ref-13|文献 13]]，PDF pp. 65、68：利用库仑菱形与可调腔提取 $2t_c$ 与 lever arm 的多种校验方法。
+- [[sources/ref-13|文献 13]]，PDF pp. 57–58、73–75：GaAs 双量子点–SQUID 阵列腔的源漏泵浦发光，最大腔增益 $|S_{21}|\approx 1.13$ 在 $\nu_d=3.6\ \mathrm{GHz}$ 处获得。
+- [[sources/ref-13|文献 13]]，PDF p. 87：SQUID 阵列腔参数——$(\kappa,\kappa_i,\kappa_e)/2\pi=(58.9,36.9,22.0)\ \mathrm{MHz}$、$Z_r\approx 1\ \mathrm{k\Omega}$、$g_0/2\pi\approx 57\ \mathrm{MHz}$。
+- [[sources/ref-13|文献 13]]，PDF p. 116：超强耦合区 RWA 失效的讨论（$g_c/\omega_r\sim 0.1$）。
+- [[sources/ref-18|文献 18]]，PDF p. 7：摘要——"高阻抗腔的引入使量子点与腔的耦合强度大幅提升，并实现了量子点发光、腔增益与 Floquet 响应"。
+- [[sources/ref-18|文献 18]]，PDF p. 21：量子点电偶极矩 $d=e\sum_j x_j n_j$ 与电偶极近似的形式。
+- [[sources/ref-18|文献 18]]，PDF p. 47：三量子点–腔相互作用的电偶极起源，"电子状态变化即在腔侧表现为电偶极矩的变化"。
+- [[sources/ref-18|文献 18]]，PDF p. 63：有效转变电偶极矩阵元 $d_{mn}$，三量子点 lever arm $a_i=C_{c,i}/C_\Sigma$ 的定义。
+- [[sources/ref-18|文献 18]]，PDF p. 85：受驱动 GaAs 双量子点的最大腔增益 $|S_{21}|\approx 1.13$ 在 $\nu_d=3.6\ \mathrm{GHz}$ 处出现。
+- [[sources/ref-20|文献 20]]，PDF p. 7：摘要——"实现了硅/硅锗三量子点中电荷量子比特与高阻抗谐振腔的强耦合"。
+- [[sources/ref-20|文献 20]]，PDF p. 21：指出半导体电荷量子比特电偶极矩相对超导比特偏小，"借助高阻抗腔耦合强度与阻抗的开方成正比，是提升耦合强度的关键"。
+- [[sources/ref-20|文献 20]]，PDF p. 34：双量子点不同电荷态对应不同电偶极矩，是双量子点适合与腔耦合的根本原因。
+- [[sources/ref-20|文献 20]]，PDF p. 41：库仑菱形提取 lever arm 的公式 $\alpha=E_{\rm add}/|e|\Delta V_G$，在 Si/SiGe 三量子点上测得 $\alpha=126\ \mathrm{meV/V}$。
+- [[sources/ref-20|文献 20]]，PDF p. 42：电子温度 $T_e=282\ \mathrm{mK}$ 由库仑峰半高宽的温度依赖提取。
+- [[sources/ref-20|文献 20]]，PDF p. 55：高阻抗腔估算 $Z_r\approx 3.5\ \mathrm{k\Omega}$，对比 $50\ \Omega$ 标准共面波导的提升比例。
+- [[sources/ref-20|文献 20]]，PDF p. 69：另一组腔参数 $\kappa/2\pi=5.13\ \mathrm{MHz}$、$Z_r=2.5\ \mathrm{k\Omega}$。
+- [[sources/ref-20|文献 20]]，PDF p. 52：三量子点双量子点与 TiN 高阻抗腔的全局耦合强度 $g_0/(2\pi)=175\ \mathrm{MHz}$，$2g_0/(2\pi)\approx 43.5\ \mathrm{MHz}$ 的自旋劈裂与之对比。
+- [[sources/ref-20|文献 20]]，PDF p. 8：电荷噪声为硅基量子比特退相干主导来源，与声子贡献对比可忽略。

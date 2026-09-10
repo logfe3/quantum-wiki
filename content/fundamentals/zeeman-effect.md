@@ -25,7 +25,7 @@ $$
 
 其中 $\mu_B = e\hbar/(2m_e)\approx 57.884\,\mu\mathrm{eV/T}$ 是玻尔磁子，$g$ 是无量纲的朗德（Landé）$g$ 因子，由材料能带结构与波函数细节共同决定。对自由电子 $g_s\approx 2.0023$，GaAs、Si、Ge 等常见半导体中导带电子的有效 $g$ 因子受自旋轨道耦合与晶格修正而偏离该值；价带空穴则因强自旋–轨道耦合而呈现强烈各向异性，常被处理为 $g$ 张量。
 
-每个量子点中只装一个载流子时，两个 Zeeman 态 $|\!\downarrow\rangle$、$|\!\uparrow\rangle$ 是泄漏为零的理想二能级系统——这正是 1998 年 Loss 与 DiVincenzo 提出以量子点电子自旋编码量子比特（即 [[qubit-control/single-spin-qubit|单自旋量子比特]]）的物理起点。当一个点装两个电子时，自旋单态 $S$ 与三重态 $T_{-,0,+}$ 在外磁场下以 Zeeman 能 $E_Z$ 为单位进一步劈裂，构成 [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]] 的工作基础；当三个电子占据（1,1,1）配置、形成（1,1,1）–（2,0,1）反交叉时，$T_+$ 与 $S$ 在失谐 $\varepsilon$ 处满足 $J(\varepsilon)=g\mu_BB_\mathrm{ext}$ 即发生交叉，可以用来演示 [[qubit-control/lzsm-interference|LZSM 干涉]] 与交换振荡（陈宝宝 2017，PDF p. 30）。
+每个量子点中只装一个载流子时，两个 Zeeman 态 $|\!\downarrow\rangle$、$|\!\uparrow\rangle$ 是泄漏为零的理想二能级系统——这正是 1998 年 Loss 与 DiVincenzo 提出以量子点电子自旋编码量子比特（即 [[qubit-control/single-spin-qubit|单自旋量子比特]]）的物理起点。当一个点装两个电子时，自旋单态 $S$ 与三重态 $T_{-,0,+}$ 在外磁场下以 Zeeman 能 $E_Z$ 为单位进一步劈裂，构成 [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]] 的工作基础；当三个电子占据（1,1,1）配置、形成（1,1,1）–（2,0,1）反交叉时，$T_+$ 与 $S$ 在失谐 $\varepsilon$ 处满足 $J(\varepsilon)=g\mu_BB_\mathrm{ext}$ 即发生交叉，可以用来演示 [[qubit-control/lzsm-interference|LZSM 干涉]] 与交换振荡（文献 6，PDF p. 30）。
 
 <!-- FIGURE: 外磁场 B 下单电子 Zeeman 劈裂能级图：|↓⟩、|↑⟩ 与 E_Z=gμB B 的标注，旁侧 |↑↓⟩ 与 |↑↑⟩ 等多电子组态的进一步劈裂示意 -->
 
@@ -176,21 +176,21 @@ Si 量子点具有谷能级（valley）自由度。当 $E_Z < E_\mathrm{VS}$ 时
 
 ## 论文依据
 
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 23：Zeeman 劈裂公式 $\Delta E=g\mu_BB$、朗德 g 因子定义、Si 中 $g\approx 2$、旋磁比 $\gamma\approx 28\,\mathrm{GHz/T}$；单比特哈密顿量与 ESR 实验室系–旋转系变换（式 1.1–1.2）。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 33：Zeeman 能约 $100\,\mu\mathrm{eV}$，要求实验温度约 $100\,\mathrm{mK}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 34–36：自旋选择性隧穿与泡利自旋阻塞读出窗口与 $E_Z$ 的关系；硅中谷能级可能限制 Pauli 读出窗口。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 70：能量选择读出达到 99% 可见度的定量条件 $E_Z/T_e>13$ 等，$B=1.5\,\mathrm{T}$、$T_e=180.5\pm 8.1\,\mathrm{mK}$、$1/T_1=112\pm 6\,\mathrm{s^{-1}}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 81–82、p. 92：硅量子点谷能级劈裂的磁输运标定——$g\mu_BB_\mathrm{kink}=E_\mathrm{VS}$、$E_\mathrm{VS}=170\,\mu\mathrm{eV}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 89–92：硅中 $E_Z$ 与 $E_\mathrm{VS}$ 接近时 $T_1$ 骤降的失效通道；Rabi 振荡拟合 $f_\mathrm{rabi}=1.256\,\mathrm{MHz}$、$T_2^\mathrm{rabi}=5.4\,\mu\mathrm{s}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 106–108：翻转模式四态哈密顿量（式 5.4–5.6），定义 $\bar{E}_z$、$\delta E_z=g\mu_Bb_z$、$2t_\mathrm{SO}=g\mu_Bb_\perp$，并推导 $f_\mathrm{spin}(0)$ 公式。
-- [[sources/chen-baobao-2017|陈宝宝 2017]]，PDF p. 30：双电子哈密顿量 $H=g\mu_B[\cdots]-J(\varepsilon)\mathbf{S}_l\cdot\mathbf{S}_r$，$S$–$T_+$ 交叉条件 $J(\varepsilon)=g\mu_BB_\mathrm{ext}$，以及 $B_Z\gg B_\mathrm{nuc}$ 时简化的 $S$–$T_0$ 有效二能级哈密顿量。
-- [[sources/chen-baobao-2017|陈宝宝 2017]]，PDF p. 48：多电子多重态 Zeeman 劈裂 $E_Z=g\mu_BB$，$g$ 为回磁比、$\mu_B$ 为玻尔磁子。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 21：Ge/SiGe 平面异质结 $g_\mathrm{in}\sim 0.2$–$0.3$、$g_\mathrm{out}/g_\mathrm{in}\sim 18$；Ge/Si 核壳纳米线 $g\sim 2$、$g_\mathrm{max}/g_\mathrm{min}\sim 13$；棚顶型 Ge 纳米线 $g_\mathrm{max}/g_\mathrm{min}\sim 18$。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 56：泡利自旋阻塞 $\Delta_{ST}(B)=\Delta_{ST}(0)-g\mu_BB$ 拟合 $g=3.4\pm 0.2$。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF pp. 59–60：EDSR 共振条件 $f_0=g\mu_BB/h$，拟合得到 $g\approx 3.5$。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 61：双点 g 因子分别 $g_L\sim 3.9$、$g_R\sim 3.7$；两点几何差异导致 g 因子差异。
-- [[sources/xu-gang-2020|徐刚 2020]]，PDF p. 62：$g_L$、$g_R$ 进入 $T_\pm$–$S(2,0)$ 隧穿矩阵元；Ge 纳米线超精细相互作用小可忽略。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 81–82、p. 86：双点 g 因子差异引起的 Zeeman 能差 $\delta E_z$ 与漏电流；$\Delta E_Z$ 在 Pauli 阻塞漏电流中的作用。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 92：面内与面外磁场条件下 g 因子各向异性 $g_x\gg g_y\approx g_z$，决定漏电流谱拟合参数的主要变化。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 94：纯重空穴 Zeeman 张量极限各向异性 $g_\perp=6\kappa$、$g_\parallel=0$，HH–LH 混合使其偏离极限。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 98：面外磁场下 $T_+(1,1)$–$T_-(2,0)$ 隧穿位置 $E_{ST}\pm 2\Delta E_Z$、$T_0(1,1)$–$T_-(2,0)$ 位置 $E_{ST}-\Delta E_Z$，拟合得到面外 $g_\perp\sim 8$。
+- [[sources/ref-15|文献 15]]，PDF p. 23：Zeeman 劈裂公式 $\Delta E=g\mu_BB$、朗德 g 因子定义、Si 中 $g\approx 2$、旋磁比 $\gamma\approx 28\,\mathrm{GHz/T}$；单比特哈密顿量与 ESR 实验室系–旋转系变换（式 1.1–1.2）。
+- [[sources/ref-15|文献 15]]，PDF p. 33：Zeeman 能约 $100\,\mu\mathrm{eV}$，要求实验温度约 $100\,\mathrm{mK}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 34–36：自旋选择性隧穿与泡利自旋阻塞读出窗口与 $E_Z$ 的关系；硅中谷能级可能限制 Pauli 读出窗口。
+- [[sources/ref-15|文献 15]]，PDF p. 70：能量选择读出达到 99% 可见度的定量条件 $E_Z/T_e>13$ 等，$B=1.5\,\mathrm{T}$、$T_e=180.5\pm 8.1\,\mathrm{mK}$、$1/T_1=112\pm 6\,\mathrm{s^{-1}}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 81–82、p. 92：硅量子点谷能级劈裂的磁输运标定——$g\mu_BB_\mathrm{kink}=E_\mathrm{VS}$、$E_\mathrm{VS}=170\,\mu\mathrm{eV}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 89–92：硅中 $E_Z$ 与 $E_\mathrm{VS}$ 接近时 $T_1$ 骤降的失效通道；Rabi 振荡拟合 $f_\mathrm{rabi}=1.256\,\mathrm{MHz}$、$T_2^\mathrm{rabi}=5.4\,\mu\mathrm{s}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 106–108：翻转模式四态哈密顿量（式 5.4–5.6），定义 $\bar{E}_z$、$\delta E_z=g\mu_Bb_z$、$2t_\mathrm{SO}=g\mu_Bb_\perp$，并推导 $f_\mathrm{spin}(0)$ 公式。
+- [[sources/ref-06|文献 6]]，PDF p. 30：双电子哈密顿量 $H=g\mu_B[\cdots]-J(\varepsilon)\mathbf{S}_l\cdot\mathbf{S}_r$，$S$–$T_+$ 交叉条件 $J(\varepsilon)=g\mu_BB_\mathrm{ext}$，以及 $B_Z\gg B_\mathrm{nuc}$ 时简化的 $S$–$T_0$ 有效二能级哈密顿量。
+- [[sources/ref-06|文献 6]]，PDF p. 48：多电子多重态 Zeeman 劈裂 $E_Z=g\mu_BB$，$g$ 为回磁比、$\mu_B$ 为玻尔磁子。
+- [[sources/ref-12|文献 12]]，PDF p. 21：Ge/SiGe 平面异质结 $g_\mathrm{in}\sim 0.2$–$0.3$、$g_\mathrm{out}/g_\mathrm{in}\sim 18$；Ge/Si 核壳纳米线 $g\sim 2$、$g_\mathrm{max}/g_\mathrm{min}\sim 13$；棚顶型 Ge 纳米线 $g_\mathrm{max}/g_\mathrm{min}\sim 18$。
+- [[sources/ref-12|文献 12]]，PDF p. 56：泡利自旋阻塞 $\Delta_{ST}(B)=\Delta_{ST}(0)-g\mu_BB$ 拟合 $g=3.4\pm 0.2$。
+- [[sources/ref-12|文献 12]]，PDF pp. 59–60：EDSR 共振条件 $f_0=g\mu_BB/h$，拟合得到 $g\approx 3.5$。
+- [[sources/ref-12|文献 12]]，PDF p. 61：双点 g 因子分别 $g_L\sim 3.9$、$g_R\sim 3.7$；两点几何差异导致 g 因子差异。
+- [[sources/ref-12|文献 12]]，PDF p. 62：$g_L$、$g_R$ 进入 $T_\pm$–$S(2,0)$ 隧穿矩阵元；Ge 纳米线超精细相互作用小可忽略。
+- [[sources/ref-25|文献 25]]，PDF pp. 81–82、p. 86：双点 g 因子差异引起的 Zeeman 能差 $\delta E_z$ 与漏电流；$\Delta E_Z$ 在 Pauli 阻塞漏电流中的作用。
+- [[sources/ref-25|文献 25]]，PDF p. 92：面内与面外磁场条件下 g 因子各向异性 $g_x\gg g_y\approx g_z$，决定漏电流谱拟合参数的主要变化。
+- [[sources/ref-25|文献 25]]，PDF p. 94：纯重空穴 Zeeman 张量极限各向异性 $g_\perp=6\kappa$、$g_\parallel=0$，HH–LH 混合使其偏离极限。
+- [[sources/ref-25|文献 25]]，PDF p. 98：面外磁场下 $T_+(1,1)$–$T_-(2,0)$ 隧穿位置 $E_{ST}\pm 2\Delta E_Z$、$T_0(1,1)$–$T_-(2,0)$ 位置 $E_{ST}-\Delta E_Z$，拟合得到面外 $g_\perp\sim 8$。

@@ -45,7 +45,7 @@ $$
 
 ## 理论模型：三电荷比特哈密顿量
 
-余国栋论文把[[qubit-control/charge-qubit|电荷量子比特]]的耦合结构从两个推广到三个：每个比特是一个[[fundamentals/double-quantum-dot|双量子点]]，编码约定为——比特 1 中电子在左点为 $|0\rangle$、在右点为 $|1\rangle$；比特 2、3 则相反（右点为 $|0\rangle$、左点为 $|1\rangle$）。每个比特自身的哈密顿量为
+文献 5论文把[[qubit-control/charge-qubit|电荷量子比特]]的耦合结构从两个推广到三个：每个比特是一个[[fundamentals/double-quantum-dot|双量子点]]，编码约定为——比特 1 中电子在左点为 $|0\rangle$、在右点为 $|1\rangle$；比特 2、3 则相反（右点为 $|0\rangle$、左点为 $|1\rangle$）。每个比特自身的哈密顿量为
 
 $$
 H_q=\frac{\varepsilon\,\sigma_z+\Delta\,\sigma_x}{2},
@@ -98,7 +98,7 @@ $$
 
 ## 参数与量级
 
-以下数值均取自余国栋论文的 GaAs/AlGaAs 样品（二维电子气位于表面下约 $90\ \mathrm{nm}$，$250\ \mathrm{mK}$ 下迁移率 $1.5\times10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$、密度 $2.3\times10^{11}\ \mathrm{cm^{-2}}$；稀释制冷机最低温度约 $30\ \mathrm{mK}$）。论文把耦合能同时用 $\mu\mathrm{eV}$ 与频率 $J/\hbar$ 表示（换算惯例为 $119\ \mu\mathrm{eV}\leftrightarrow 29\ \mathrm{GHz}$）。
+以下数值均取自文献 5论文的 GaAs/AlGaAs 样品（二维电子气位于表面下约 $90\ \mathrm{nm}$，$250\ \mathrm{mK}$ 下迁移率 $1.5\times10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$、密度 $2.3\times10^{11}\ \mathrm{cm^{-2}}$；稀释制冷机最低温度约 $30\ \mathrm{mK}$）。论文把耦合能同时用 $\mu\mathrm{eV}$ 与频率 $J/\hbar$ 表示（换算惯例为 $119\ \mu\mathrm{eV}\leftrightarrow 29\ \mathrm{GHz}$）。
 
 | 量 | 数值 | 说明 |
 | --- | --- | --- |
@@ -124,7 +124,7 @@ $$
 ## 与其他概念的关系
 
 - [[qubit-control/cnot-gate|CNOT 门]]：Toffoli 是 CNOT 的三比特推广，本词条的条件频移机理与双比特受控门完全同源；反过来 Toffoli 也可分解为 CNOT 与单比特门的序列，但门步数大幅增加。
-- [[qubit-control/charge-qubit|电荷量子比特]]：本词条内容全部基于电荷编码——比特态即电子在双点中的位置，耦合是偶极–偶极（电容）相互作用。在自旋编码中，Toffoli 类多比特受控旋转通常经由交换耦合的 CNOT 序列构造（楚凝论文即把 $J$ 常开下的 CNOT 视为迈向 Toffoli 等多比特受控旋转的基础）。
+- [[qubit-control/charge-qubit|电荷量子比特]]：本词条内容全部基于电荷编码——比特态即电子在双点中的位置，耦合是偶极–偶极（电容）相互作用。在自旋编码中，Toffoli 类多比特受控旋转通常经由交换耦合的 CNOT 序列构造（文献 22论文即把 $J$ 常开下的 CNOT 视为迈向 Toffoli 等多比特受控旋转的基础）。
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]与[[fundamentals/coulomb-blockade|库仑阻塞]]：比特初始化、工作点选取与耦合能读取都在蜂窝图框架内完成；电容耦合能 $J$ 本质上是常相互作用模型中点间耦合静电能的推广。
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]：全部状态读取经由 QPC 电导完成，QPC 通道质量直接决定了三比特方案（尤其被放弃的对称结构）的可行性。
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs 材料平台]]：核自旋噪声导致的短 $T_2^*$ 是门保真度的主要瓶颈，也是后续转向硅基平台的动机之一。
@@ -139,10 +139,10 @@ $$
 
 ## 论文依据
 
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 99–102：三电荷比特两轮结构设计（$120^\circ$ 旋转对称结构的三大困难与非对称两排方案的扩展性优势），比特 2、3 间耦合 $J_{23}$ 很小的结构依据。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 102–104：三比特哈密顿量（式 5.1–5.6）、忽略 $J_{23}$ 的简化、Toffoli 矩阵（式 5.7）与条件拉莫振荡抑制的实现思路。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 104–107：$J_{12}=95\ \mu\mathrm{eV}$、$J_{13}=140\ \mu\mathrm{eV}$ 的测量，静态 Toffoli 演示（仅 $|{\ast}11\rangle$ 出现振荡）与动态操作的困难。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 81–82：杠杆臂 $\alpha=54.6\ \mu\mathrm{eV/mV}$，$J/\hbar$ 随 $V_H$ 约 $100\ \mathrm{mV}$ 内从 0 连续调到 $29.5\ \mathrm{GHz}$。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 85–87：$J/\hbar=5/30\ \mathrm{GHz}$ 下拉莫振荡抑制率 $53.3\%/97.3\%$、理想保真度 $97.3\%$ 与 $T_2^*=0.3\ \mathrm{ns}$ 下 $88.7\%$ 的模拟，双比特实验 $J=119\ \mu\mathrm{eV}$（$29\ \mathrm{GHz}$）。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 89–91：双电荷比特 CNOT 真值表测量与 $68\%$ 实验保真度，$3\pi$ 脉冲取 $360\ \mathrm{ps}$。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 89：Si-MOS 中 $J$ 常开方案的 CNOT 是更多比特受控旋转（如 Toffoli 门）的基础。
+- [[sources/ref-05|文献 5]]，PDF pp. 99–102：三电荷比特两轮结构设计（$120^\circ$ 旋转对称结构的三大困难与非对称两排方案的扩展性优势），比特 2、3 间耦合 $J_{23}$ 很小的结构依据。
+- [[sources/ref-05|文献 5]]，PDF pp. 102–104：三比特哈密顿量（式 5.1–5.6）、忽略 $J_{23}$ 的简化、Toffoli 矩阵（式 5.7）与条件拉莫振荡抑制的实现思路。
+- [[sources/ref-05|文献 5]]，PDF pp. 104–107：$J_{12}=95\ \mu\mathrm{eV}$、$J_{13}=140\ \mu\mathrm{eV}$ 的测量，静态 Toffoli 演示（仅 $|{\ast}11\rangle$ 出现振荡）与动态操作的困难。
+- [[sources/ref-05|文献 5]]，PDF pp. 81–82：杠杆臂 $\alpha=54.6\ \mu\mathrm{eV/mV}$，$J/\hbar$ 随 $V_H$ 约 $100\ \mathrm{mV}$ 内从 0 连续调到 $29.5\ \mathrm{GHz}$。
+- [[sources/ref-05|文献 5]]，PDF pp. 85–87：$J/\hbar=5/30\ \mathrm{GHz}$ 下拉莫振荡抑制率 $53.3\%/97.3\%$、理想保真度 $97.3\%$ 与 $T_2^*=0.3\ \mathrm{ns}$ 下 $88.7\%$ 的模拟，双比特实验 $J=119\ \mu\mathrm{eV}$（$29\ \mathrm{GHz}$）。
+- [[sources/ref-05|文献 5]]，PDF pp. 89–91：双电荷比特 CNOT 真值表测量与 $68\%$ 实验保真度，$3\pi$ 脉冲取 $360\ \mathrm{ps}$。
+- [[sources/ref-22|文献 22]]，PDF p. 89：Si-MOS 中 $J$ 常开方案的 CNOT 是更多比特受控旋转（如 Toffoli 门）的基础。

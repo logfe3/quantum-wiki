@@ -160,24 +160,24 @@ SOT 单元的尺寸与材料参数（取自本站论文依据所列工作）：
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 重金属自旋霍尔角 $\theta_\mathrm{SH}$ | $0.1$–$0.5$（Pt、Ta、W），拓扑绝缘体 $\geq 1$ | 刘铮 2026，p. 38 |
-| Ta 层电阻率 | $100$–$200\,\mu\Omega\cdot\mathrm{cm}$ | 刘铮 2026，p. 39 |
-| 多层膜结构 | Ta(8)–CoFeB($t$)–MgO(1)–Ta(3)，$t=1\,\mathrm{nm}$ 面外、$t=3$–$5\,\mathrm{nm}$ 面内 | 刘铮 2026，p. 41–42 |
-| SOT 单元几何 | $l=200\,\mathrm{nm}$，$w=100\,\mathrm{nm}$；磁体中心到量子点水平距离 $d=80\,\mathrm{nm}$，垂直高度 $h=40\,\mathrm{nm}$ | 刘铮 2026，p. 26 |
-| CoFeB 饱和磁化强度 | $M_s=1.6\times 10^6\,\mathrm{A/m}$ | 刘铮 2026，p. 26 |
-| 面内磁化构型翻转前/后磁场 | $\approx 18.77\,\mathrm{mT}$（沿 $x$）/$\approx 10.34\,\mathrm{mT}$（沿 $z$） | 刘铮 2026，p. 28 |
-| 面外磁化构型磁场（平行态） | $\approx 2.5\,\mathrm{mT}$（沿 $z$） | 刘铮 2026，p. 28 |
-| 磁体间距 $D$ | $\approx 360\,\mathrm{nm}$ | 刘铮 2026，p. 34 |
-| 面外器件矫顽场 $H_c$ | $\approx 19\,\mathrm{mT}$ | 刘铮 2026，p. 53 |
-| 交换偏置场 $H_\mathrm{EB}$ | $\approx 9\,\mathrm{mT}$ | 刘铮 2026，p. 53 |
-| 翻转电流阈值 $I_c$ | $\approx 20\,\mathrm{mA}$（20 mK 下，$H_x=40\,\mathrm{mT}$，$t_\mathrm{pulse}=20\,\mathrm{ms}$，$t_\mathrm{delay}=20\,\mathrm{s}$） | 刘铮 2026，p. 55 |
-| 翻转时间（已实现） | ms–百 $\mu\mathrm{s}$ 量级 | 刘铮 2026，p. 69 |
-| 翻转时间（路线目标） | $\lesssim 1\,\mu\mathrm{s}$ | 刘铮 2026，p. 69 |
-| 翻转时间（路线上限） | 百 ps | 刘铮 2026，p. 39 |
-| 写入电流引起的温升 | 长脉冲可达约 1 K；短脉冲约 50 mK | 刘铮 2026，p. 61 |
-| 整体器件电阻 | $\approx 100\,\Omega$（优化扇出电极后），未优化 $1$–$2\,\mathrm{k}\Omega$ | 刘铮 2026，p. 48 |
-| 刻蚀侧壁斜坡 | $\approx 48.37^\circ$，对 30 nm 氧化铝衬底损伤 $\leq 1\,\mathrm{nm}$ | 刘铮 2026，p. 48 |
-| 刻蚀后表面粗糙度 $R_a$ | $0.402\,\mathrm{nm}$（IBE），刻蚀前 $0.201\,\mathrm{nm}$ | 刘铮 2026，p. 47 |
+| 重金属自旋霍尔角 $\theta_\mathrm{SH}$ | $0.1$–$0.5$（Pt、Ta、W），拓扑绝缘体 $\geq 1$ | 文献 24，p. 38 |
+| Ta 层电阻率 | $100$–$200\,\mu\Omega\cdot\mathrm{cm}$ | 文献 24，p. 39 |
+| 多层膜结构 | Ta(8)–CoFeB($t$)–MgO(1)–Ta(3)，$t=1\,\mathrm{nm}$ 面外、$t=3$–$5\,\mathrm{nm}$ 面内 | 文献 24，p. 41–42 |
+| SOT 单元几何 | $l=200\,\mathrm{nm}$，$w=100\,\mathrm{nm}$；磁体中心到量子点水平距离 $d=80\,\mathrm{nm}$，垂直高度 $h=40\,\mathrm{nm}$ | 文献 24，p. 26 |
+| CoFeB 饱和磁化强度 | $M_s=1.6\times 10^6\,\mathrm{A/m}$ | 文献 24，p. 26 |
+| 面内磁化构型翻转前/后磁场 | $\approx 18.77\,\mathrm{mT}$（沿 $x$）/$\approx 10.34\,\mathrm{mT}$（沿 $z$） | 文献 24，p. 28 |
+| 面外磁化构型磁场（平行态） | $\approx 2.5\,\mathrm{mT}$（沿 $z$） | 文献 24，p. 28 |
+| 磁体间距 $D$ | $\approx 360\,\mathrm{nm}$ | 文献 24，p. 34 |
+| 面外器件矫顽场 $H_c$ | $\approx 19\,\mathrm{mT}$ | 文献 24，p. 53 |
+| 交换偏置场 $H_\mathrm{EB}$ | $\approx 9\,\mathrm{mT}$ | 文献 24，p. 53 |
+| 翻转电流阈值 $I_c$ | $\approx 20\,\mathrm{mA}$（20 mK 下，$H_x=40\,\mathrm{mT}$，$t_\mathrm{pulse}=20\,\mathrm{ms}$，$t_\mathrm{delay}=20\,\mathrm{s}$） | 文献 24，p. 55 |
+| 翻转时间（已实现） | ms–百 $\mu\mathrm{s}$ 量级 | 文献 24，p. 69 |
+| 翻转时间（路线目标） | $\lesssim 1\,\mu\mathrm{s}$ | 文献 24，p. 69 |
+| 翻转时间（路线上限） | 百 ps | 文献 24，p. 39 |
+| 写入电流引起的温升 | 长脉冲可达约 1 K；短脉冲约 50 mK | 文献 24，p. 61 |
+| 整体器件电阻 | $\approx 100\,\Omega$（优化扇出电极后），未优化 $1$–$2\,\mathrm{k}\Omega$ | 文献 24，p. 48 |
+| 刻蚀侧壁斜坡 | $\approx 48.37^\circ$，对 30 nm 氧化铝衬底损伤 $\leq 1\,\mathrm{nm}$ | 文献 24，p. 48 |
+| 刻蚀后表面粗糙度 $R_a$ | $0.402\,\mathrm{nm}$（IBE），刻蚀前 $0.201\,\mathrm{nm}$ | 文献 24，p. 47 |
 
 ## 实验特征与测量
 
@@ -251,25 +251,25 @@ $$
 
 ## 论文依据
 
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF p. 19：传统微磁体的局限与李方阁等提出的可切换微磁体方案；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 17–19：Loss–DiVincenzo 单自旋比特、硅基阵列规模、6 量子比特阵列与微磁体集成；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 30–32：自旋霍尔效应、Rashba–Edelstein 效应、SOT 与 STT 的差异；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 32–33：SOT 器件按易磁化轴的 $x$/$y$/$z$ 三型分类与翻转对称性；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 37–38：基于 SOT 的原位基带操控方案的五步操作序列；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 40–41：面内磁化 SOT 器件构型与仿真磁场 $\boldsymbol{B}_1$、$\boldsymbol{B}_2$；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 42–43：面外磁化器件与外场辅助下的角度调节；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 44–49：门保真度公式与有限翻转时间、翻转非理想、位置偏移、磁场偏差、奥斯特场各项噪声；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF p. 50：典型参数下 $\mathcal{F}_\mathrm{total}\approx 0.9957$（99.57%）；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF p. 51：SOT 单比特门与交换耦合构造 CNOT 的分解；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 52–53：重金属与磁性层材料选择（Ta、CoFeB、MgO）与自旋霍尔角量级；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 55–57：磁控溅射多层膜与 CoFeB/MgO 退火诱导 PMA；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 57–60：MOKE 测量原理、反对称化处理、面内器件磁性表征；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 60–62：RIE/ICP/IBE 刻蚀对比、AFM 粗糙度数据与 IBE 工艺最终选择；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 63–65：低电阻扇出电极（$\sim 100\,\Omega$）与刻蚀侧壁斜坡 $\approx 48.37^\circ$；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 64–67：AMR、PHE、AHE 读出面内/面外磁化的原理与适用边界；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 69–70：20 mK 下面外器件首次 SOT 翻转（$I_c\approx 20\,\mathrm{mA}$）与极低温下的热信号特征；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 70–72：交换偏置 $H_\mathrm{EB}\approx 9\,\mathrm{mT}$、来源分析（$\alpha$-$\mathrm{Fe}_2\mathrm{O}_3$）与无场翻转潜力；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 72–75：反常能斯特效应（ANE）解释与变温磁性测试的温升估计（约 1 K 长脉冲，约 50 mK 短脉冲）；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF pp. 76–80：USMR 与差分平面霍尔效应读出面内磁化、面内 SOT 翻转困难分析；
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF p. 83：未来路线（$\tau_\mathrm{sw}\lesssim 1\,\mu\mathrm{s}$、Bias Tee、深硅刻蚀、轨道霍尔效应材料、"高温比特"、可切换几何门）；
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF p. 4：作为对照的静态微磁体设计与迭代优化。
+- [[sources/ref-24|文献 24]]，PDF p. 19：传统微磁体的局限与李方阁等提出的可切换微磁体方案；
+- [[sources/ref-24|文献 24]]，PDF pp. 17–19：Loss–DiVincenzo 单自旋比特、硅基阵列规模、6 量子比特阵列与微磁体集成；
+- [[sources/ref-24|文献 24]]，PDF pp. 30–32：自旋霍尔效应、Rashba–Edelstein 效应、SOT 与 STT 的差异；
+- [[sources/ref-24|文献 24]]，PDF pp. 32–33：SOT 器件按易磁化轴的 $x$/$y$/$z$ 三型分类与翻转对称性；
+- [[sources/ref-24|文献 24]]，PDF pp. 37–38：基于 SOT 的原位基带操控方案的五步操作序列；
+- [[sources/ref-24|文献 24]]，PDF pp. 40–41：面内磁化 SOT 器件构型与仿真磁场 $\boldsymbol{B}_1$、$\boldsymbol{B}_2$；
+- [[sources/ref-24|文献 24]]，PDF pp. 42–43：面外磁化器件与外场辅助下的角度调节；
+- [[sources/ref-24|文献 24]]，PDF pp. 44–49：门保真度公式与有限翻转时间、翻转非理想、位置偏移、磁场偏差、奥斯特场各项噪声；
+- [[sources/ref-24|文献 24]]，PDF p. 50：典型参数下 $\mathcal{F}_\mathrm{total}\approx 0.9957$（99.57%）；
+- [[sources/ref-24|文献 24]]，PDF p. 51：SOT 单比特门与交换耦合构造 CNOT 的分解；
+- [[sources/ref-24|文献 24]]，PDF pp. 52–53：重金属与磁性层材料选择（Ta、CoFeB、MgO）与自旋霍尔角量级；
+- [[sources/ref-24|文献 24]]，PDF pp. 55–57：磁控溅射多层膜与 CoFeB/MgO 退火诱导 PMA；
+- [[sources/ref-24|文献 24]]，PDF pp. 57–60：MOKE 测量原理、反对称化处理、面内器件磁性表征；
+- [[sources/ref-24|文献 24]]，PDF pp. 60–62：RIE/ICP/IBE 刻蚀对比、AFM 粗糙度数据与 IBE 工艺最终选择；
+- [[sources/ref-24|文献 24]]，PDF pp. 63–65：低电阻扇出电极（$\sim 100\,\Omega$）与刻蚀侧壁斜坡 $\approx 48.37^\circ$；
+- [[sources/ref-24|文献 24]]，PDF pp. 64–67：AMR、PHE、AHE 读出面内/面外磁化的原理与适用边界；
+- [[sources/ref-24|文献 24]]，PDF pp. 69–70：20 mK 下面外器件首次 SOT 翻转（$I_c\approx 20\,\mathrm{mA}$）与极低温下的热信号特征；
+- [[sources/ref-24|文献 24]]，PDF pp. 70–72：交换偏置 $H_\mathrm{EB}\approx 9\,\mathrm{mT}$、来源分析（$\alpha$-$\mathrm{Fe}_2\mathrm{O}_3$）与无场翻转潜力；
+- [[sources/ref-24|文献 24]]，PDF pp. 72–75：反常能斯特效应（ANE）解释与变温磁性测试的温升估计（约 1 K 长脉冲，约 50 mK 短脉冲）；
+- [[sources/ref-24|文献 24]]，PDF pp. 76–80：USMR 与差分平面霍尔效应读出面内磁化、面内 SOT 翻转困难分析；
+- [[sources/ref-24|文献 24]]，PDF p. 83：未来路线（$\tau_\mathrm{sw}\lesssim 1\,\mu\mathrm{s}$、Bias Tee、深硅刻蚀、轨道霍尔效应材料、"高温比特"、可切换几何门）；
+- [[sources/ref-19|文献 19]]，PDF p. 4：作为对照的静态微磁体设计与迭代优化。

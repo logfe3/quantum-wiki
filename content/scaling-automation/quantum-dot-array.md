@@ -57,7 +57,7 @@ $$
 
 ## 参数与量级
 
-以下数值取自 Si/SiGe 2×2 阵列（王宁 2025）与 Si/SiGe 三点–腔器件（江顺利 2025）的实测：
+以下数值取自 Si/SiGe 2×2 阵列（文献 21）与 Si/SiGe 三点–腔器件（文献 20）的实测：
 
 | 量 | 典型值 | 说明 |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ $$
 
 三维相图中的四相点在二维截面里通常不可见，需要精确调节多个电极才能让两个三相点合并成四相点；因此能在二维图中找到四相点本身就是阵列可调性好的判据。三点体系还特有量子元胞自动机（quantum cellular automata, QCA）过程：如 $(1,5,3)\leftrightarrow(2,4,4)$ 的跃迁涉及两个电子在三个点与源漏之间的协同移动，是高阶隧穿过程。
 
-阵列与谐振腔杂化后，相图本身也可由腔的[[readout-measurement/dispersive-readout|色散读出]]成像：江顺利论文用高阻抗谐振腔的相位响应直接测出三点电荷稳定图与四相点，并用 Hubbard 模型结合输入–输出理论再现了四相点附近的腔相位响应。
+阵列与谐振腔杂化后，相图本身也可由腔的[[readout-measurement/dispersive-readout|色散读出]]成像：文献 20论文用高阻抗谐振腔的相位响应直接测出三点电荷稳定图与四相点，并用 Hubbard 模型结合输入–输出理论再现了四相点附近的腔相位响应。
 
 ### 虚拟电极与同步扫描
 
@@ -111,7 +111,7 @@ $$
 
 ## 阵列能做什么
 
-- **多比特处理器**：一维阵列已实现 GaAs 8 点、Si/SiGe 6、9 乃至 12 点；二维方向已演示 2×2、3×3 乃至 10 点器件（Ge/SiGe 与掺杂磷体系）。基于一维 Si/SiGe 四点阵列，王宁论文实现了单比特门保真度超过 99.9%、两比特门超过 99% 的通用门操控与贝尔态制备；三个点还可直接编码全电学的[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]。
+- **多比特处理器**：一维阵列已实现 GaAs 8 点、Si/SiGe 6、9 乃至 12 点；二维方向已演示 2×2、3×3 乃至 10 点器件（Ge/SiGe 与掺杂磷体系）。基于一维 Si/SiGe 四点阵列，文献 21论文实现了单比特门保真度超过 99.9%、两比特门超过 99% 的通用门操控与贝尔态制备；三个点还可直接编码全电学的[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]。
 - **量子模拟器**：除上述 CCB/莫特转变实验外，同类 2×2 阵列还观察过 Nagaoka 铁磁性；引入可控次近邻耦合 $t'$ 后，可模拟阻挫磁体、自旋液体乃至与高温超导相关的强关联相——这正是二维阵列相对一维链的独特价值。
 - **长程耦合总线的最小单元**：三量子点加[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]是"比特阵列 × 光子总线"的最小构型：两个点各编码一个比特、第三点作耦合中介，即可验证阵列经腔模实现长程[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]的原理。
 
@@ -132,20 +132,20 @@ $$
 
 ## 论文依据
 
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 30：Hubbard 模型哈密顿量（式 1.10）、扩展 Fermi–Hubbard 模型（式 1.11）、一维 Bethe 拟设可解而二维无解析解、Stafford 与 Das Sarma 1994 年提出量子点阵列模拟 Hubbard 模型。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 36：Hubbard 极限下交换相互作用 $J=\frac{2t^2}{U-\varepsilon-\Delta E_z}+\frac{2t^2}{U-\varepsilon+\Delta E_z}$ 及其 $4t^2/U$ 近似。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 22：一维阵列规模（GaAs 8 点、Si/SiGe 6/9/12 点）与二维阵列（Nagaoka 铁磁、3×3 等）研究现状。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 78：2×2 阵列器件结构——四层铝栅（35/50/55/70 nm）、能级栅 70 nm × 90 nm 与 45 nm 间距、中心势垒 CB 控制次近邻耦合。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 80：表 4.1 四点杠杆臂平均 $\alpha\approx 0.12\ \mathrm{eV/V}$、单点模式充电能 2.7–3.7 meV。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF pp. 86–87：阵列模式充电能 2.83/5.02/3.05/4.63 meV、虚拟栅极 $\mathbf{vG}=M\mathbf{G}$、按 $k_i=U_i/U_0$ 设定扫描系数实现均匀填充；Hubbard 模拟参数（平均充电能 3 meV，最近邻 $t=0.1$ meV、$V=0.2$ meV，次近邻 $V=0.05$ meV）。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 89：以 $t_{\mathrm{ref}}=60\ \mu\mathrm{eV}$ 为参考调节最近邻隧穿耦合。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 97：次近邻隧穿耦合三档 30/130/280 $\mu\mathrm{eV}$。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF pp. 102–103：虚拟势垒栅极独立调节点间隧穿耦合；耦合增强后虚拟栅极有效性降低，需重新测量并更新串扰矩阵。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF p. 99：Hubbard 带宽 $W=4dt$、莫特间隙与 $U_c=W$ 的物理图像。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF pp. 98, 102, 105–106：集体库仑阻塞随耦合增强出现再消失，对应莫特绝缘体–金属转变的有限尺寸类比；强耦合下大量子点充电能 1.05 meV。
-- [[sources/liu-hanwei-2022|刘汉伟 2022]]，PDF p. 89：虚拟电极是物理栅极的线性变换，可独立调节单点电化学势或势垒。
-- [[sources/liu-hanwei-2022|刘汉伟 2022]]，PDF pp. 94–95：量子点遍历方法——多点系统划分为双点重复单元，按 QD1→QD4 顺序逐点调控并以虚拟电极保护已调好的点。
-- [[sources/liu-hanwei-2022|刘汉伟 2022]]，PDF p. 80：双点自动调控（少电子区定位与耦合判定）准确度约 90%，CNN 单次判定不到半分钟。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF pp. 22–23：三量子点–谐振腔系统是量子比特阵列与腔耦合的最小单元。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 58：库仑菱形标定电极 lever arm 为 126 meV/V。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF pp. 65–66：用谐振腔相位响应测得三点电荷稳定图与四相点（四电荷态简并），观测到量子元胞自动机（QCA）高阶隧穿过程，并以 Hubbard 模型结合输入–输出理论模拟四相点附近的腔响应。
+- [[sources/ref-21|文献 21]]，PDF p. 30：Hubbard 模型哈密顿量（式 1.10）、扩展 Fermi–Hubbard 模型（式 1.11）、一维 Bethe 拟设可解而二维无解析解、Stafford 与 Das Sarma 1994 年提出量子点阵列模拟 Hubbard 模型。
+- [[sources/ref-21|文献 21]]，PDF p. 36：Hubbard 极限下交换相互作用 $J=\frac{2t^2}{U-\varepsilon-\Delta E_z}+\frac{2t^2}{U-\varepsilon+\Delta E_z}$ 及其 $4t^2/U$ 近似。
+- [[sources/ref-21|文献 21]]，PDF p. 22：一维阵列规模（GaAs 8 点、Si/SiGe 6/9/12 点）与二维阵列（Nagaoka 铁磁、3×3 等）研究现状。
+- [[sources/ref-21|文献 21]]，PDF p. 78：2×2 阵列器件结构——四层铝栅（35/50/55/70 nm）、能级栅 70 nm × 90 nm 与 45 nm 间距、中心势垒 CB 控制次近邻耦合。
+- [[sources/ref-21|文献 21]]，PDF p. 80：表 4.1 四点杠杆臂平均 $\alpha\approx 0.12\ \mathrm{eV/V}$、单点模式充电能 2.7–3.7 meV。
+- [[sources/ref-21|文献 21]]，PDF pp. 86–87：阵列模式充电能 2.83/5.02/3.05/4.63 meV、虚拟栅极 $\mathbf{vG}=M\mathbf{G}$、按 $k_i=U_i/U_0$ 设定扫描系数实现均匀填充；Hubbard 模拟参数（平均充电能 3 meV，最近邻 $t=0.1$ meV、$V=0.2$ meV，次近邻 $V=0.05$ meV）。
+- [[sources/ref-21|文献 21]]，PDF p. 89：以 $t_{\mathrm{ref}}=60\ \mu\mathrm{eV}$ 为参考调节最近邻隧穿耦合。
+- [[sources/ref-21|文献 21]]，PDF p. 97：次近邻隧穿耦合三档 30/130/280 $\mu\mathrm{eV}$。
+- [[sources/ref-21|文献 21]]，PDF pp. 102–103：虚拟势垒栅极独立调节点间隧穿耦合；耦合增强后虚拟栅极有效性降低，需重新测量并更新串扰矩阵。
+- [[sources/ref-21|文献 21]]，PDF p. 99：Hubbard 带宽 $W=4dt$、莫特间隙与 $U_c=W$ 的物理图像。
+- [[sources/ref-21|文献 21]]，PDF pp. 98, 102, 105–106：集体库仑阻塞随耦合增强出现再消失，对应莫特绝缘体–金属转变的有限尺寸类比；强耦合下大量子点充电能 1.05 meV。
+- [[sources/ref-16|文献 16]]，PDF p. 89：虚拟电极是物理栅极的线性变换，可独立调节单点电化学势或势垒。
+- [[sources/ref-16|文献 16]]，PDF pp. 94–95：量子点遍历方法——多点系统划分为双点重复单元，按 QD1→QD4 顺序逐点调控并以虚拟电极保护已调好的点。
+- [[sources/ref-16|文献 16]]，PDF p. 80：双点自动调控（少电子区定位与耦合判定）准确度约 90%，CNN 单次判定不到半分钟。
+- [[sources/ref-20|文献 20]]，PDF pp. 22–23：三量子点–谐振腔系统是量子比特阵列与腔耦合的最小单元。
+- [[sources/ref-20|文献 20]]，PDF p. 58：库仑菱形标定电极 lever arm 为 126 meV/V。
+- [[sources/ref-20|文献 20]]，PDF pp. 65–66：用谐振腔相位响应测得三点电荷稳定图与四相点（四电荷态简并），观测到量子元胞自动机（QCA）高阶隧穿过程，并以 Hubbard 模型结合输入–输出理论模拟四相点附近的腔响应。

@@ -175,7 +175,7 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 
 ## 论文依据
 
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 15：里德堡原子 CQED 实验中首次观测真空 Rabi 振荡；pp. 17–18：cQED 的命名与定位、2004 年 Schoelkopf 组开创性工作、半导体 cQED 先驱实验参数表（表 1.1）与弱耦合瓶颈分析、2016 年高阻抗腔转折；pp. 28–30：Rabi/JC 哈密顿量、缀饰态、色散极限、强耦合判据与 $\Gamma_{\mathrm{eff}}=(\kappa+\gamma)/2$；p. 45：最强电荷比特耦合 619 MHz（$g_c/\omega_r\sim0.11$）；p. 116：微磁体梯度磁场产生人造自旋轨道耦合的机制。
-- [[sources/lin-ting-2022|林霆 2022]]，PDF pp. 27–28：LC 谐振电路的正则量子化与 $\hat{H}_r=\hbar\omega_r a^\dagger a$；pp. 28–30：共面波导谐振腔的几何电容/电感、透射腔与反射腔模式频率、特征阻抗 $Z_r=\sqrt{L_r/C_r}$ 与 $50\ \Omega$ 匹配惯例；p. 30：腔损耗分解 $\kappa=\kappa_i+\kappa_e$。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 40：偶极近似下耦合强度推导，$g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 与 $g_{\mathrm{eff}}=g_0\sin\theta$（式 2.49–2.56）、高阻抗与杠杆臂两条增强途径；pp. 76–77：微磁体方案的有效自旋–光子耦合公式（式 5.15–5.16）、$\gamma_s/\gamma_c$ 的二次方标度（式 5.17–5.18）与"强电荷耦合非必要条件"的讨论；p. 78：$2g_s/2\pi=43.5\ \mathrm{MHz}$ 自旋真空 Rabi 劈裂与强耦合判据 $g_s>\kappa^*,\gamma_s$。
-- [[sources/zhang-miaolei-2014|张苗磊 2014]]，PDF pp. 82–84：色散区哈密顿量与 QND 测量性质、按 $g/\gamma$ 与 $\Delta/\gamma$ 划分的耦合相图及各区间用途（图 6.3）；pp. 84–85：双量子点作为人工二能级原子与腔的电容耦合模型（式 6.12–6.14）；pp. 89–90：点间跃迁线与共隧穿线对腔响应的选择性、主方程拟合提取 $g\sim 6.5$–$20\ \mathrm{MHz}$ 与退相干 $0.4$–$1.1\ \mathrm{GHz}$。
+- [[sources/ref-13|文献 13]]，PDF p. 15：里德堡原子 CQED 实验中首次观测真空 Rabi 振荡；pp. 17–18：cQED 的命名与定位、2004 年 Schoelkopf 组开创性工作、半导体 cQED 先驱实验参数表（表 1.1）与弱耦合瓶颈分析、2016 年高阻抗腔转折；pp. 28–30：Rabi/JC 哈密顿量、缀饰态、色散极限、强耦合判据与 $\Gamma_{\mathrm{eff}}=(\kappa+\gamma)/2$；p. 45：最强电荷比特耦合 619 MHz（$g_c/\omega_r\sim0.11$）；p. 116：微磁体梯度磁场产生人造自旋轨道耦合的机制。
+- [[sources/ref-17|文献 17]]，PDF pp. 27–28：LC 谐振电路的正则量子化与 $\hat{H}_r=\hbar\omega_r a^\dagger a$；pp. 28–30：共面波导谐振腔的几何电容/电感、透射腔与反射腔模式频率、特征阻抗 $Z_r=\sqrt{L_r/C_r}$ 与 $50\ \Omega$ 匹配惯例；p. 30：腔损耗分解 $\kappa=\kappa_i+\kappa_e$。
+- [[sources/ref-20|文献 20]]，PDF p. 40：偶极近似下耦合强度推导，$g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 与 $g_{\mathrm{eff}}=g_0\sin\theta$（式 2.49–2.56）、高阻抗与杠杆臂两条增强途径；pp. 76–77：微磁体方案的有效自旋–光子耦合公式（式 5.15–5.16）、$\gamma_s/\gamma_c$ 的二次方标度（式 5.17–5.18）与"强电荷耦合非必要条件"的讨论；p. 78：$2g_s/2\pi=43.5\ \mathrm{MHz}$ 自旋真空 Rabi 劈裂与强耦合判据 $g_s>\kappa^*,\gamma_s$。
+- [[sources/ref-03|文献 3]]，PDF pp. 82–84：色散区哈密顿量与 QND 测量性质、按 $g/\gamma$ 与 $\Delta/\gamma$ 划分的耦合相图及各区间用途（图 6.3）；pp. 84–85：双量子点作为人工二能级原子与腔的电容耦合模型（式 6.12–6.14）；pp. 89–90：点间跃迁线与共隧穿线对腔响应的选择性、主方程拟合提取 $g\sim 6.5$–$20\ \mathrm{MHz}$ 与退相干 $0.4$–$1.1\ \mathrm{GHz}$。

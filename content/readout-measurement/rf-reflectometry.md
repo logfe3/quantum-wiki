@@ -145,18 +145,18 @@ $$
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
 | 传输线特性阻抗 $Z_0$ | $50\ \Omega$ | 射频标准 |
-| 传感器灵敏区电阻 | $R_{\mathrm{QPC}}\gtrsim 50\ \mathrm{k\Omega}$（$G<0.5\,e^2/h$）；量子点电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$；Si-MOS SET 可达数百 k$\Omega$–M$\Omega$ | 韩天一 2017；楚凝 2025 |
-| 直流引线电容 | $\sim 100$–$600\ \mathrm{pF}$（$174\ \mathrm{pF/m}$ 同轴线） | 周诚 2013；韩天一 2017 |
-| 直流测量带宽 $f_{RC}$ | $\sim 30\ \mathrm{kHz}$ | 周诚 2013；韩天一 2017 |
-| 片上寄生电容 $C_p$ | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$） | 韩天一 2017 |
-| 贴片电感 $L$ | $500$–$1000\ \mathrm{nH}$（常用 $820\ \mathrm{nH}$） | 韩天一 2017 |
-| 谐振频率 $f_R$ | $70$–$400\ \mathrm{MHz}$（GaAs 实测 $193.8\ \mathrm{MHz}$） | 韩天一 2017 |
-| 探测带宽 | 数 MHz（GaAs RF-QPC $2.5\ \mathrm{MHz}$；石墨烯 $7.5\ \mathrm{MHz}$；RF-DGS $1.5\ \mathrm{MHz}$） | 韩天一 2017 |
-| 电导灵敏度 | $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC） | 韩天一 2017 |
-| 电荷灵敏度 | $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；经典实验范围 $10^{-6}$–$10^{-3}\ e/\sqrt{\mathrm{Hz}}$ | 韩天一 2017 |
-| 读出保真度 | $99.86\%$（积分 $140\ \mathrm{ns}$，带宽 $>2\ \mathrm{MHz}$，Si-MOS 劈裂栅） | 楚凝 2025 |
+| 传感器灵敏区电阻 | $R_{\mathrm{QPC}}\gtrsim 50\ \mathrm{k\Omega}$（$G<0.5\,e^2/h$）；量子点电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$；Si-MOS SET 可达数百 k$\Omega$–M$\Omega$ | 文献 7；文献 22 |
+| 直流引线电容 | $\sim 100$–$600\ \mathrm{pF}$（$174\ \mathrm{pF/m}$ 同轴线） | 文献 1；文献 7 |
+| 直流测量带宽 $f_{RC}$ | $\sim 30\ \mathrm{kHz}$ | 文献 1；文献 7 |
+| 片上寄生电容 $C_p$ | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$） | 文献 7 |
+| 贴片电感 $L$ | $500$–$1000\ \mathrm{nH}$（常用 $820\ \mathrm{nH}$） | 文献 7 |
+| 谐振频率 $f_R$ | $70$–$400\ \mathrm{MHz}$（GaAs 实测 $193.8\ \mathrm{MHz}$） | 文献 7 |
+| 探测带宽 | 数 MHz（GaAs RF-QPC $2.5\ \mathrm{MHz}$；石墨烯 $7.5\ \mathrm{MHz}$；RF-DGS $1.5\ \mathrm{MHz}$） | 文献 7 |
+| 电导灵敏度 | $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC） | 文献 7 |
+| 电荷灵敏度 | $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；经典实验范围 $10^{-6}$–$10^{-3}\ e/\sqrt{\mathrm{Hz}}$ | 文献 7 |
+| 读出保真度 | $99.86\%$（积分 $140\ \mathrm{ns}$，带宽 $>2\ \mathrm{MHz}$，Si-MOS 劈裂栅） | 文献 22 |
 
-韩天一 2017 附录 B 汇总了经典射频反射实验的参数对比：谐振频率从 $205\ \mathrm{MHz}$（RF-QPC）到 $1091\ \mathrm{MHz}$（RF-SET），带宽 $1$–$20\ \mathrm{MHz}$，最优电荷灵敏度 $3.2\times10^{-6}\ e/\sqrt{\mathrm{Hz}}$（Schoelkopf 的 RF-SET）。
+文献 7 附录 B 汇总了经典射频反射实验的参数对比：谐振频率从 $205\ \mathrm{MHz}$（RF-QPC）到 $1091\ \mathrm{MHz}$（RF-SET），带宽 $1$–$20\ \mathrm{MHz}$，最优电荷灵敏度 $3.2\times10^{-6}\ e/\sqrt{\mathrm{Hz}}$（Schoelkopf 的 RF-SET）。
 
 ## 实验实现与特征
 
@@ -201,23 +201,23 @@ $$
 
 ## 论文依据
 
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 81：传统直流测量的带宽极限 $f_{RC}=1/(2\pi R_{\mathrm{QPC}}C)\sim 30\ \mathrm{kHz}$，引线电容 $173.9\ \mathrm{pF/m}$。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 82：电压反射系数 $\Gamma=(Z-Z_0)/(Z+Z_0)$、$P_{\mathrm{ref}}=|\Gamma|^2P_{\mathrm{in}}$ 与 $S_{11}$ 的关系。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 83–84：储能电路输入阻抗、谐振条件 $\omega_R$ 与匹配阻抗 $L/(RC_p)$，$L=820\ \mathrm{nH}$、$C_p=0.8\ \mathrm{pF}$ 下的 $|\Gamma|$–$R_{\mathrm{QPC}}$ 依赖。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 37–38：RC 带宽极限与 $1/f$ 噪声问题，1998 年 Schoelkopf 首次实现 RF-SET、带宽约百 MHz。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 40：等效串联电阻 $R_{\mathrm{eff}}=L/(RC_p)$、无载/外部/有载品质因子与相对带宽公式，欠耦合与过耦合区的划分。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 40–41：电导灵敏度与电荷灵敏度公式，单个电子隧穿可在微秒量级被探测。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 41–42：零拍测量的调制解调推导，解调输出 $V_d=\frac{1}{2}V_{\mathrm{in}}\Delta\Gamma\cos\omega_m t$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 43–44：Triton 400 稀释制冷机中的完整反射链路（定向耦合器、36 dB 衰减、低温/室温放大器、混频解调、SR560），低温放大器功耗抬高冷盘温度约 1 K。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 46：GaAs RF-QPC 谐振频率 $193.8\ \mathrm{MHz}$，$L=820\ \mathrm{nH}$ 反推 $C_p=0.82\ \mathrm{pF}$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 48：边带信噪比 $26\ \mathrm{dB}$，电导灵敏度 $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$，电荷灵敏度 $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$，带宽约 $2.5\ \mathrm{MHz}$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 49、51：石墨烯量子点 $L=100\ \mathrm{nH}$、$f_R=195.75\ \mathrm{MHz}$、$C_p=31.9\ \mathrm{pF}$，带宽 $7.5\ \mathrm{MHz}$ 受直流调制线限制。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 53–54：RF-DGS 电极探测器，$L=680\ \mathrm{nH}$ 加变容二极管调谐谐振频率，带宽约 $1.5\ \mathrm{MHz}$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 56–57：电路模拟给出 $53\ \mathrm{k\Omega}$ 附近的最佳匹配灵敏点，GaAs 寄生电容 $0.3$–$1\ \mathrm{pF}$、石墨烯 $4$–$6\ \mathrm{pF}$，电感常取 $500$–$1000\ \mathrm{nH}$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 65：结合调制解调与波分复用（WDM）实现多通道同时读取。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 85：附录 B 经典射频反射实验参数对比表（$f_0$、$C_p$、$L$、带宽、$Q$、电荷灵敏度）。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 119：反射系数定义、$Z_0=\sqrt{L'/C'}$ 的含义、量子器件电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$ 与储能电路的作用。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 120：$Q_{\mathrm{int}}/Q_{\mathrm{ext}}$ 与 $\mathrm{BW}\times Q=f_r$ 的制约关系，$-3\ \mathrm{dB}$ 带宽定义，电阻感应与电容（色散）感应在反射谱上的不同表现。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 121–122：施密特圆分析欠耦合/匹配/过耦合三态，Si-MOS 高 SET 电阻导致过耦合，Sisyphus 电阻与 $T_1$ 缩短。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 123：Si-MOS 增强型器件的射频泄漏机理与劈裂栅结构，离子注入区距 SET 中心 $150\ \mu\mathrm{m}$，$140\ \mathrm{ns}$ 积分实现 $>99.8\%$ 保真度与 $>2\ \mathrm{MHz}$ 带宽。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 129：最短积分时间 $140\ \mathrm{ns}$ 下信噪比 $5.72$，电荷读出保真度 $99.86\%$。
+- [[sources/ref-01|文献 1]]，PDF p. 81：传统直流测量的带宽极限 $f_{RC}=1/(2\pi R_{\mathrm{QPC}}C)\sim 30\ \mathrm{kHz}$，引线电容 $173.9\ \mathrm{pF/m}$。
+- [[sources/ref-01|文献 1]]，PDF p. 82：电压反射系数 $\Gamma=(Z-Z_0)/(Z+Z_0)$、$P_{\mathrm{ref}}=|\Gamma|^2P_{\mathrm{in}}$ 与 $S_{11}$ 的关系。
+- [[sources/ref-01|文献 1]]，PDF pp. 83–84：储能电路输入阻抗、谐振条件 $\omega_R$ 与匹配阻抗 $L/(RC_p)$，$L=820\ \mathrm{nH}$、$C_p=0.8\ \mathrm{pF}$ 下的 $|\Gamma|$–$R_{\mathrm{QPC}}$ 依赖。
+- [[sources/ref-07|文献 7]]，PDF pp. 37–38：RC 带宽极限与 $1/f$ 噪声问题，1998 年 Schoelkopf 首次实现 RF-SET、带宽约百 MHz。
+- [[sources/ref-07|文献 7]]，PDF p. 40：等效串联电阻 $R_{\mathrm{eff}}=L/(RC_p)$、无载/外部/有载品质因子与相对带宽公式，欠耦合与过耦合区的划分。
+- [[sources/ref-07|文献 7]]，PDF pp. 40–41：电导灵敏度与电荷灵敏度公式，单个电子隧穿可在微秒量级被探测。
+- [[sources/ref-07|文献 7]]，PDF pp. 41–42：零拍测量的调制解调推导，解调输出 $V_d=\frac{1}{2}V_{\mathrm{in}}\Delta\Gamma\cos\omega_m t$。
+- [[sources/ref-07|文献 7]]，PDF pp. 43–44：Triton 400 稀释制冷机中的完整反射链路（定向耦合器、36 dB 衰减、低温/室温放大器、混频解调、SR560），低温放大器功耗抬高冷盘温度约 1 K。
+- [[sources/ref-07|文献 7]]，PDF p. 46：GaAs RF-QPC 谐振频率 $193.8\ \mathrm{MHz}$，$L=820\ \mathrm{nH}$ 反推 $C_p=0.82\ \mathrm{pF}$。
+- [[sources/ref-07|文献 7]]，PDF p. 48：边带信噪比 $26\ \mathrm{dB}$，电导灵敏度 $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$，电荷灵敏度 $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$，带宽约 $2.5\ \mathrm{MHz}$。
+- [[sources/ref-07|文献 7]]，PDF pp. 49、51：石墨烯量子点 $L=100\ \mathrm{nH}$、$f_R=195.75\ \mathrm{MHz}$、$C_p=31.9\ \mathrm{pF}$，带宽 $7.5\ \mathrm{MHz}$ 受直流调制线限制。
+- [[sources/ref-07|文献 7]]，PDF pp. 53–54：RF-DGS 电极探测器，$L=680\ \mathrm{nH}$ 加变容二极管调谐谐振频率，带宽约 $1.5\ \mathrm{MHz}$。
+- [[sources/ref-07|文献 7]]，PDF pp. 56–57：电路模拟给出 $53\ \mathrm{k\Omega}$ 附近的最佳匹配灵敏点，GaAs 寄生电容 $0.3$–$1\ \mathrm{pF}$、石墨烯 $4$–$6\ \mathrm{pF}$，电感常取 $500$–$1000\ \mathrm{nH}$。
+- [[sources/ref-07|文献 7]]，PDF p. 65：结合调制解调与波分复用（WDM）实现多通道同时读取。
+- [[sources/ref-07|文献 7]]，PDF p. 85：附录 B 经典射频反射实验参数对比表（$f_0$、$C_p$、$L$、带宽、$Q$、电荷灵敏度）。
+- [[sources/ref-22|文献 22]]，PDF p. 119：反射系数定义、$Z_0=\sqrt{L'/C'}$ 的含义、量子器件电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$ 与储能电路的作用。
+- [[sources/ref-22|文献 22]]，PDF p. 120：$Q_{\mathrm{int}}/Q_{\mathrm{ext}}$ 与 $\mathrm{BW}\times Q=f_r$ 的制约关系，$-3\ \mathrm{dB}$ 带宽定义，电阻感应与电容（色散）感应在反射谱上的不同表现。
+- [[sources/ref-22|文献 22]]，PDF pp. 121–122：施密特圆分析欠耦合/匹配/过耦合三态，Si-MOS 高 SET 电阻导致过耦合，Sisyphus 电阻与 $T_1$ 缩短。
+- [[sources/ref-22|文献 22]]，PDF p. 123：Si-MOS 增强型器件的射频泄漏机理与劈裂栅结构，离子注入区距 SET 中心 $150\ \mu\mathrm{m}$，$140\ \mathrm{ns}$ 积分实现 $>99.8\%$ 保真度与 $>2\ \mathrm{MHz}$ 带宽。
+- [[sources/ref-22|文献 22]]，PDF p. 129：最短积分时间 $140\ \mathrm{ns}$ 下信噪比 $5.72$，电荷读出保真度 $99.86\%$。

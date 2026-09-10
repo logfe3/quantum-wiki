@@ -21,7 +21,7 @@ date: 2026-09-08
 
 ![[assets/figures/qubit-control/wang-ke-2020-fig1-6-bloch-sphere.jpg]]
 
-*布洛赫球：|0⟩/|1⟩ 位于南北极，球面上任一点对应一个量子比特的纯态（[王柯 2020]([[sources/wang-ke]])，图 1.6）*
+*布洛赫球：|0⟩/|1⟩ 位于南北极，球面上任一点对应一个量子比特的纯态（[文献 11]([[sources/wang-ke]])，图 1.6）*
 
 <!-- 原始占位：布洛赫球上 Rabi 振荡示意图：南北极为 |0⟩/|1⟩，共振驱动下态矢量绕 x 轴进动，转过 π 角即实现 π 脉冲 -->
 
@@ -102,14 +102,14 @@ $Q$ 越高意味着在相干时间内可完成越多的旋转循环；$Q\gtrsim 
 
 | 体系与实现 | $f_\text{Rabi}$ | $T_{2}^\text{Rabi}$ | $Q$ | 工作点 / 备注 | 来源 |
 | --- | --- | --- | --- | --- | --- |
-| Si/SiGe 双量子点电荷比特（微波驱动） | $\sim 1\ \mathrm{GHz}$（振荡周期） | $T_2^*\approx 1.5\ \mathrm{ns}$ | 约 9（按 $2T_2^*f_\text{Rabi}$ 计） | Eriksson 小组数据 | 余国栋 2016 |
-| Si 单电子自旋比特（ESR / EDSR） | $1.256\ \mathrm{MHz}$ | $5.4\ \mu\mathrm{s}$ | 约 13.5 | $f_0=19.787\ \mathrm{GHz}$ | 胡睿梓 2022 |
-| Si 翻转模式单自旋比特 | $1.2620\ \mathrm{MHz}$ | $6.46\ \mu\mathrm{s}$ | 约 16.3 | $\varepsilon=0$（对称点） | 胡睿梓 2022 |
-| Si 翻转模式单自旋比特 | $0.135\ \mathrm{MHz}$ | $7.01\ \mu\mathrm{s}$ | 约 1.9 | $\varepsilon=3\ \mathrm{meV}$（远离对称点） | 胡睿梓 2022 |
-| Si/SiGe 一维阵列 EDSR | 最大约 $10\ \mathrm{MHz}$ | 与 $A_\text{MW}$ 相关 | 最大 $>300$ | 最佳 $A_\text{MW}\approx 7\ \mathrm{mV}$ | 王宁 2025 |
-| Si-MOS 自旋比特（条形微磁体） | $0.58$–$2.38\ \mathrm{MHz}$ | — | $5$–$100$ | $\theta_B$ 在 90°–340° 间扫描 | 楚凝 2025 |
-| 应变 Ge 空穴自旋比特 | 与驱动功率呈线性，最大达百 MHz 量级 | — | — | 翻转模式 + 内禀自旋轨道耦合 | 周雨晨 2026 |
-| 单电子自旋比特 ESR（GaAs） | 最大 $3.3\ \mathrm{MHz}$，$t_{\pi/2}\approx 75\ \mathrm{ns}$ | — | — | 经典早期实验 | 王保传 2017 |
+| Si/SiGe 双量子点电荷比特（微波驱动） | $\sim 1\ \mathrm{GHz}$（振荡周期） | $T_2^*\approx 1.5\ \mathrm{ns}$ | 约 9（按 $2T_2^*f_\text{Rabi}$ 计） | Eriksson 小组数据 | 文献 5 |
+| Si 单电子自旋比特（ESR / EDSR） | $1.256\ \mathrm{MHz}$ | $5.4\ \mu\mathrm{s}$ | 约 13.5 | $f_0=19.787\ \mathrm{GHz}$ | 文献 15 |
+| Si 翻转模式单自旋比特 | $1.2620\ \mathrm{MHz}$ | $6.46\ \mu\mathrm{s}$ | 约 16.3 | $\varepsilon=0$（对称点） | 文献 15 |
+| Si 翻转模式单自旋比特 | $0.135\ \mathrm{MHz}$ | $7.01\ \mu\mathrm{s}$ | 约 1.9 | $\varepsilon=3\ \mathrm{meV}$（远离对称点） | 文献 15 |
+| Si/SiGe 一维阵列 EDSR | 最大约 $10\ \mathrm{MHz}$ | 与 $A_\text{MW}$ 相关 | 最大 $>300$ | 最佳 $A_\text{MW}\approx 7\ \mathrm{mV}$ | 文献 21 |
+| Si-MOS 自旋比特（条形微磁体） | $0.58$–$2.38\ \mathrm{MHz}$ | — | $5$–$100$ | $\theta_B$ 在 90°–340° 间扫描 | 文献 22 |
+| 应变 Ge 空穴自旋比特 | 与驱动功率呈线性，最大达百 MHz 量级 | — | — | 翻转模式 + 内禀自旋轨道耦合 | 文献 25 |
+| 单电子自旋比特 ESR（GaAs） | 最大 $3.3\ \mathrm{MHz}$，$t_{\pi/2}\approx 75\ \mathrm{ns}$ | — | — | 经典早期实验 | 文献 8 |
 
 几个值得记住的量级：
 
@@ -161,26 +161,26 @@ $Q$ 越高意味着在相干时间内可完成越多的旋转循环；$Q\gtrsim 
 
 ## 论文依据
 
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 63–65：双量子点单电荷比特的微波驱动 Rabi 振荡与 Ramsey 操作综述（第 3 章导言），以及 Si/SiGe 电荷比特 Rabi 振荡实测数据。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF p. 7：论文摘要列出"微波驱动的拉比振荡以及 Ramsey 操作"作为单比特操控方法之一。
-- [[sources/yu-guodong-2016|余国栋 2016]]，PDF pp. 69–71：图 3.7 Eriksson 小组 Si/SiGe 电荷比特 Rabi 振荡，振荡周期约 1 GHz、$T_2^*=1.5\ \mathrm{ns}$；以及布洛赫球面上 Rabi 旋转与 Ramsey、Hahn-echo 的几何解释。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 4–5：摘要明确"成功观测到 Rabi 振荡"以及翻转模式"比特 Rabi 振荡频率和质量因子提高了一个数量级"。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 25–26：式 (1.1)–(1.2) 给出实验室系与旋转系哈密顿量，旋波近似下的 $H_\text{rot}=\hbar(\omega_\text{drive}-\omega_0)S_z+\hbar\gamma B_1(S_x\cos\varphi-S_y\sin\varphi)$，以及 Rabi 频率 $f_\text{Rabi}=\gamma B_1$ 的定义。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 91–92：式 (4.7) $P(t)=A\exp(-t/T_{2}^\text{Rabi})\sin(f_\text{Rabi} t)$ 拟合单自旋 Rabi 振荡，给出 $f_\text{Rabi}=1.256\pm 0.003\ \mathrm{MHz}$、$T_{2}^\text{Rabi}=5.4\pm 0.4\ \mu\mathrm{s}$。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF pp. 109–110：翻转模式自旋比特 Rabi 振荡的 V 形条纹与失谐依赖，在 $\varepsilon=0$ 处 $f_\text{Rabi}=1.2620\pm 0.002\ \mathrm{MHz}$、$T_{2}^\text{Rabi}=6.46\pm 0.39\ \mu\mathrm{s}$，$\varepsilon=3\ \mathrm{meV}$ 处降至 $0.135\ \mathrm{MHz}$；式 $Q=2T_{2}^\text{Rabi}f_\text{Rabi}$ 的定义。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 7：几何相位单比特门"在较宽的拉比频率范围内均可实现超过 99% 的操控保真度"，与传统动力学门对比验证噪声鲁棒性。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 14：5.3.3 节"空穴自旋比特的拉比振荡与品质因子"作为系统表征的一环。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 18：图 5.7 给出"量子比特的共振频率以及拉比振荡"。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 24：早期砷化镓量子点 Rabi 操控"本征相干时间 $T_2^*$ 仅约为 10 ns，通过引入动力学解耦序列相干时间可延长至毫秒量级，并在此基础上实现最高约 99.5% 的单比特操控保真度"。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF p. 24：单电子自旋比特 Rabi 振荡原理，ESR 共振条件 $h\nu=g_e\mu_B B_\text{ac}$，"翻转的快慢，即拉比振荡频率，取决于 $B_\text{ac}$ 的振幅（或者说功率）"。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF p. 25：实验上 Rabi 振荡曲线示例，最大 $f_\text{Rabi}=3.3\ \mathrm{MHz}$，对应 $t_{\pi/2}\approx 75\ \mathrm{ns}$。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 23–24：图 1.7 给出 Rabi 振荡在布洛赫球上的三个时间阶段示意，以及把 Rabi 振荡作为 $|0\rangle\leftrightarrow|1\rangle$ 反转基本操作。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 68：通过 Rabi 振荡构造 $|LL\rangle$ 与 $|RL\rangle$ 之间的可调耦合 $J$。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 108、125：通过电荷量子比特的相干振荡（coherent oscillation）测得 Rabi 频率，从而得到失谐势垒隧穿率与能级反交叉参数。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF pp. 33–34：式 (1.14)–(1.15) 给出实验室系与旋转系哈密顿量、$\Omega_R=g\mu_B B_\text{ac}/\hbar$ 的 Rabi 频率定义，以及"当 $\varphi=0$ 时，电子自旋将绕 $x$ 轴在 $|0\rangle$ 态和 $|1\rangle$ 态旋转，称为拉比振荡"的布洛赫球图像。
-- [[sources/wang-ning-2025|王宁 2025]]，PDF pp. 60、63–64：双轴操控的 Rabi 振荡条纹（图 3.4a）以及式 (3.4)–(3.5) $Q=T_{2}^\text{Rabi}/T_\pi$，$Q>300$ 时对应单比特门保真度超过 99.6%；最佳工作点在 $A_\text{MW}\approx 7\ \mathrm{mV}$ 附近。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 7：Si-MOS 量子点中通过 Rabi 振荡表征合成自旋轨道耦合各向异性，发现"比特操控最优位置由微磁体结构决定的合成自旋轨道耦合场分布决定"。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF p. 41：式 (2.6) 给出失谐情形下的 Rabi 振荡概率公式 $P_{\uparrow\downarrow}=\frac{1}{2}\big[1-2\Omega_R^2/(\Omega_R^2+\Delta^2)\cos(\sqrt{\Omega_R^2+\Delta^2}\,t)\big]$。
-- [[sources/chu-ning-2025|楚凝 2025]]，PDF pp. 75–77：拉比频率各向异性在 $\theta_B=90°$ 时 $f_\text{Rabi}=2.38\ \mathrm{MHz}$、$\theta_B=340°$ 时 $0.58\ \mathrm{MHz}$（相差 4.1 倍）；品质因子 $Q$ 在 270° 附近达到极大值约 100，在 340° 附近降至约 5；以及品质因子定义 $Q=(d\mathbf{B}_\text{tr}^\text{tot}/dy)/\sqrt{(dB_\text{long}/dy)^2+(dB_\text{long}/dx)^2}$。
-- [[sources/liu-zheng-2026|刘铮 2026]]，PDF p. 27：SOT 操控方案中的 Rabi 频率公式 $\Omega=g\mu_B B_1/(2\hbar)$，与驱动场相位 $\varphi$ 共同决定旋转轴。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 18、19：图 5.7 与表 5.1（不同 $f_\text{Rabi}$ 下的单比特几何门保真度）作为 Rabi 振荡与门性能的直接对照。
+- [[sources/ref-05|文献 5]]，PDF pp. 63–65：双量子点单电荷比特的微波驱动 Rabi 振荡与 Ramsey 操作综述（第 3 章导言），以及 Si/SiGe 电荷比特 Rabi 振荡实测数据。
+- [[sources/ref-05|文献 5]]，PDF p. 7：论文摘要列出"微波驱动的拉比振荡以及 Ramsey 操作"作为单比特操控方法之一。
+- [[sources/ref-05|文献 5]]，PDF pp. 69–71：图 3.7 Eriksson 小组 Si/SiGe 电荷比特 Rabi 振荡，振荡周期约 1 GHz、$T_2^*=1.5\ \mathrm{ns}$；以及布洛赫球面上 Rabi 旋转与 Ramsey、Hahn-echo 的几何解释。
+- [[sources/ref-15|文献 15]]，PDF pp. 4–5：摘要明确"成功观测到 Rabi 振荡"以及翻转模式"比特 Rabi 振荡频率和质量因子提高了一个数量级"。
+- [[sources/ref-15|文献 15]]，PDF pp. 25–26：式 (1.1)–(1.2) 给出实验室系与旋转系哈密顿量，旋波近似下的 $H_\text{rot}=\hbar(\omega_\text{drive}-\omega_0)S_z+\hbar\gamma B_1(S_x\cos\varphi-S_y\sin\varphi)$，以及 Rabi 频率 $f_\text{Rabi}=\gamma B_1$ 的定义。
+- [[sources/ref-15|文献 15]]，PDF pp. 91–92：式 (4.7) $P(t)=A\exp(-t/T_{2}^\text{Rabi})\sin(f_\text{Rabi} t)$ 拟合单自旋 Rabi 振荡，给出 $f_\text{Rabi}=1.256\pm 0.003\ \mathrm{MHz}$、$T_{2}^\text{Rabi}=5.4\pm 0.4\ \mu\mathrm{s}$。
+- [[sources/ref-15|文献 15]]，PDF pp. 109–110：翻转模式自旋比特 Rabi 振荡的 V 形条纹与失谐依赖，在 $\varepsilon=0$ 处 $f_\text{Rabi}=1.2620\pm 0.002\ \mathrm{MHz}$、$T_{2}^\text{Rabi}=6.46\pm 0.39\ \mu\mathrm{s}$，$\varepsilon=3\ \mathrm{meV}$ 处降至 $0.135\ \mathrm{MHz}$；式 $Q=2T_{2}^\text{Rabi}f_\text{Rabi}$ 的定义。
+- [[sources/ref-25|文献 25]]，PDF p. 7：几何相位单比特门"在较宽的拉比频率范围内均可实现超过 99% 的操控保真度"，与传统动力学门对比验证噪声鲁棒性。
+- [[sources/ref-25|文献 25]]，PDF p. 14：5.3.3 节"空穴自旋比特的拉比振荡与品质因子"作为系统表征的一环。
+- [[sources/ref-25|文献 25]]，PDF p. 18：图 5.7 给出"量子比特的共振频率以及拉比振荡"。
+- [[sources/ref-25|文献 25]]，PDF p. 24：早期砷化镓量子点 Rabi 操控"本征相干时间 $T_2^*$ 仅约为 10 ns，通过引入动力学解耦序列相干时间可延长至毫秒量级，并在此基础上实现最高约 99.5% 的单比特操控保真度"。
+- [[sources/ref-08|文献 8]]，PDF p. 24：单电子自旋比特 Rabi 振荡原理，ESR 共振条件 $h\nu=g_e\mu_B B_\text{ac}$，"翻转的快慢，即拉比振荡频率，取决于 $B_\text{ac}$ 的振幅（或者说功率）"。
+- [[sources/ref-08|文献 8]]，PDF p. 25：实验上 Rabi 振荡曲线示例，最大 $f_\text{Rabi}=3.3\ \mathrm{MHz}$，对应 $t_{\pi/2}\approx 75\ \mathrm{ns}$。
+- [[sources/ref-02|文献 2]]，PDF pp. 23–24：图 1.7 给出 Rabi 振荡在布洛赫球上的三个时间阶段示意，以及把 Rabi 振荡作为 $|0\rangle\leftrightarrow|1\rangle$ 反转基本操作。
+- [[sources/ref-02|文献 2]]，PDF p. 68：通过 Rabi 振荡构造 $|LL\rangle$ 与 $|RL\rangle$ 之间的可调耦合 $J$。
+- [[sources/ref-01|文献 1]]，PDF pp. 108、125：通过电荷量子比特的相干振荡（coherent oscillation）测得 Rabi 频率，从而得到失谐势垒隧穿率与能级反交叉参数。
+- [[sources/ref-21|文献 21]]，PDF pp. 33–34：式 (1.14)–(1.15) 给出实验室系与旋转系哈密顿量、$\Omega_R=g\mu_B B_\text{ac}/\hbar$ 的 Rabi 频率定义，以及"当 $\varphi=0$ 时，电子自旋将绕 $x$ 轴在 $|0\rangle$ 态和 $|1\rangle$ 态旋转，称为拉比振荡"的布洛赫球图像。
+- [[sources/ref-21|文献 21]]，PDF pp. 60、63–64：双轴操控的 Rabi 振荡条纹（图 3.4a）以及式 (3.4)–(3.5) $Q=T_{2}^\text{Rabi}/T_\pi$，$Q>300$ 时对应单比特门保真度超过 99.6%；最佳工作点在 $A_\text{MW}\approx 7\ \mathrm{mV}$ 附近。
+- [[sources/ref-22|文献 22]]，PDF p. 7：Si-MOS 量子点中通过 Rabi 振荡表征合成自旋轨道耦合各向异性，发现"比特操控最优位置由微磁体结构决定的合成自旋轨道耦合场分布决定"。
+- [[sources/ref-22|文献 22]]，PDF p. 41：式 (2.6) 给出失谐情形下的 Rabi 振荡概率公式 $P_{\uparrow\downarrow}=\frac{1}{2}\big[1-2\Omega_R^2/(\Omega_R^2+\Delta^2)\cos(\sqrt{\Omega_R^2+\Delta^2}\,t)\big]$。
+- [[sources/ref-22|文献 22]]，PDF pp. 75–77：拉比频率各向异性在 $\theta_B=90°$ 时 $f_\text{Rabi}=2.38\ \mathrm{MHz}$、$\theta_B=340°$ 时 $0.58\ \mathrm{MHz}$（相差 4.1 倍）；品质因子 $Q$ 在 270° 附近达到极大值约 100，在 340° 附近降至约 5；以及品质因子定义 $Q=(d\mathbf{B}_\text{tr}^\text{tot}/dy)/\sqrt{(dB_\text{long}/dy)^2+(dB_\text{long}/dx)^2}$。
+- [[sources/ref-24|文献 24]]，PDF p. 27：SOT 操控方案中的 Rabi 频率公式 $\Omega=g\mu_B B_1/(2\hbar)$，与驱动场相位 $\varphi$ 共同决定旋转轴。
+- [[sources/ref-25|文献 25]]，PDF pp. 18、19：图 5.7 与表 5.1（不同 $f_\text{Rabi}$ 下的单比特几何门保真度）作为 Rabi 振荡与门性能的直接对照。

@@ -84,20 +84,20 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 微波频率 $f$ | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点） | 尚汝南 2014 |
-| 驱动功率 | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动） | 尚汝南 2014 |
-| 最高观测 PAT 阶数 | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs） | 尚汝南 2014 |
-| 微波衰减 | $-22\ \mathrm{dBm}$（设备至样品实测） | 尤杰 2016 |
-| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$） | 尤杰 2016 |
-| 杠杆臂 $\alpha$ | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点） | 尤杰 2016 |
-| 电子温度 $T_e$ | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） | 尤杰 2016 |
-| 电荷弛豫时间 $T_1$ | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度） | 尚汝南 2014 |
-| 电荷弛豫时间 $T_1$ | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs） | 尤杰 2016 |
-| 退相干时间 $T_2^*$ | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs） | 尤杰 2016 |
-| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率） | 尤杰 2016 |
-| PAT 提取的耦合能 | $7\ \mathrm{GHz}$（GaAs 串联双点） | 尚汝南 2014 |
-| 中间电极调谐范围 | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合） | 尤杰 2016 |
-| 斩波混频器 | Marki M80420MS 1120 | 尚汝南 2014、尤杰 2016 |
+| 微波频率 $f$ | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点） | 文献 2 |
+| 驱动功率 | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动） | 文献 2 |
+| 最高观测 PAT 阶数 | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs） | 文献 2 |
+| 微波衰减 | $-22\ \mathrm{dBm}$（设备至样品实测） | 文献 4 |
+| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$） | 文献 4 |
+| 杠杆臂 $\alpha$ | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点） | 文献 4 |
+| 电子温度 $T_e$ | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） | 文献 4 |
+| 电荷弛豫时间 $T_1$ | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度） | 文献 2 |
+| 电荷弛豫时间 $T_1$ | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs） | 文献 4 |
+| 退相干时间 $T_2^*$ | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs） | 文献 4 |
+| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率） | 文献 4 |
+| PAT 提取的耦合能 | $7\ \mathrm{GHz}$（GaAs 串联双点） | 文献 2 |
+| 中间电极调谐范围 | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合） | 文献 4 |
+| 斩波混频器 | Marki M80420MS 1120 | 文献 2、文献 4 |
 | 信号源 | Agilent E8257D（GaAs） / HP 86732B（三量子点） / Agilent 8253D | 三篇论文 |
 
 ## 实验特征
@@ -168,18 +168,18 @@ PAT 用连续微波驱动、把电荷转移过程"打开"为电流；而[[readou
 
 ## 论文依据
 
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 9–10：摘要阐述 GaAs 串联双量子点上的光子辅助隧穿过程、最高 14 阶 PAT 与 LZSM 干涉图样。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 56–57：3.2 节给出 PAT 定义、Tien–Gordon 型隧穿率 $\tilde\Gamma(E)=\sum_n J_n^2(\alpha)\Gamma(E+n h f)$、约化参数 $\alpha=e V_{ac}/h f$ 与 $J_n^2(\alpha)$ 劈裂原能级为 $E+n h f$ 的物理图景。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 57–60：3.3 节高频微波（$12$–$30\ \mathrm{GHz}$、$-5$–$10\ \mathrm{dBm}$）驱动下观察 PAT 共振隧穿条纹与功率依赖。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 60–62：脉冲斩波（Marki M80420MS 1120 + Agilent E8257D）测量 $M(\tau)$，拟合得 $T_1\approx 8\ \mathrm{ns}$。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 63：电子温度高于 $2\ \mathrm{K}$ 时观察到 14 阶 PAT 过程并证明存在 LZSM 干涉。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 84：由 PAT 技术提取 GaAs 串联双点隧穿耦合能 $7\ \mathrm{GHz}$（与六边形几何给出的电容耦合能 $16\ \mathrm{GHz}$ 互补）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 4–5：摘要概述非掺杂 GaAs 双量子点上首次 PAT 实验、最高 6 阶 PAT 与弛豫/退相干时间测量。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 86–87：6.1–6.2 节 PAT 实验设置（无液氦稀释制冷机 $10\ \mathrm{mK}$、$20$–$100$ 次平均、$\alpha=6\%$、$T_e\approx 80\ \mathrm{mK}$）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 87–88：非掺杂双点耦合强度 $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$ 的指数拟合（不同 $V_m$）。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 89–90：$14\ \mathrm{GHz}$ 微波、$-5$ 至 $3\ \mathrm{dBm}$ 驱动下观察到 6 阶 PAT；指纹方程 $\alpha\varepsilon=\sqrt{(h f)^2-(2t_c)^2}$ 拟合给出 $2t_c=2.7$、$6.8$、$11\ \mathrm{GHz}$。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 90–91：Marki M80420MS 1120 + AWG7082C 斩波，$M(\tau)$ 拟合得 $T_1\approx 15\ \mathrm{ns}$；$28\ \mathrm{GHz}$ 饱和一阶 PAT 峰 FWHM $\approx 0.42\ \mathrm{mV}$，$\alpha=0.06\ \mathrm{meV/mV}$ 给出 $T_2^*\approx 330\ \mathrm{ps}$；微波加热使 $T_e$ 升至 $280\ \mathrm{mK}$。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF pp. 5–6：摘要概述线性耦合三量子点样品上利用 PAT 探究各量子点间相互关系。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF pp. 71–72：5.2 节 PAT 表征原理（双量子点示意图、PAC 共振条件 $\Delta E=n h f$、多光子过程随功率增加而出现）。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF pp. 73–75：5.3 节线性耦合三量子点中三个交叉区域（区域 1/2/3）的 PAT 边带峰——区域 3 出现对称双量子点 PAT 边带峰；区域 2 因 L 与 R 无直接隧穿耦合，边带峰仅出现在一侧，由中间点 C 的虚跃迁参与。
-- [[sources/wang-baochuan-2017|王保传 2017]]，PDF pp. 75–77：PAT 边带峰的对称与单侧分布对应不同的能级图景（(1,1,1)↔(0,2,1) 直接耦合 vs (1,1,0)↔(0,1,1) 经虚电子态 (0,2,0) 间接路径）。
+- [[sources/ref-02|文献 2]]，PDF pp. 9–10：摘要阐述 GaAs 串联双量子点上的光子辅助隧穿过程、最高 14 阶 PAT 与 LZSM 干涉图样。
+- [[sources/ref-02|文献 2]]，PDF pp. 56–57：3.2 节给出 PAT 定义、Tien–Gordon 型隧穿率 $\tilde\Gamma(E)=\sum_n J_n^2(\alpha)\Gamma(E+n h f)$、约化参数 $\alpha=e V_{ac}/h f$ 与 $J_n^2(\alpha)$ 劈裂原能级为 $E+n h f$ 的物理图景。
+- [[sources/ref-02|文献 2]]，PDF pp. 57–60：3.3 节高频微波（$12$–$30\ \mathrm{GHz}$、$-5$–$10\ \mathrm{dBm}$）驱动下观察 PAT 共振隧穿条纹与功率依赖。
+- [[sources/ref-02|文献 2]]，PDF pp. 60–62：脉冲斩波（Marki M80420MS 1120 + Agilent E8257D）测量 $M(\tau)$，拟合得 $T_1\approx 8\ \mathrm{ns}$。
+- [[sources/ref-02|文献 2]]，PDF p. 63：电子温度高于 $2\ \mathrm{K}$ 时观察到 14 阶 PAT 过程并证明存在 LZSM 干涉。
+- [[sources/ref-02|文献 2]]，PDF p. 84：由 PAT 技术提取 GaAs 串联双点隧穿耦合能 $7\ \mathrm{GHz}$（与六边形几何给出的电容耦合能 $16\ \mathrm{GHz}$ 互补）。
+- [[sources/ref-04|文献 4]]，PDF pp. 4–5：摘要概述非掺杂 GaAs 双量子点上首次 PAT 实验、最高 6 阶 PAT 与弛豫/退相干时间测量。
+- [[sources/ref-04|文献 4]]，PDF pp. 86–87：6.1–6.2 节 PAT 实验设置（无液氦稀释制冷机 $10\ \mathrm{mK}$、$20$–$100$ 次平均、$\alpha=6\%$、$T_e\approx 80\ \mathrm{mK}$）。
+- [[sources/ref-04|文献 4]]，PDF pp. 87–88：非掺杂双点耦合强度 $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$ 的指数拟合（不同 $V_m$）。
+- [[sources/ref-04|文献 4]]，PDF pp. 89–90：$14\ \mathrm{GHz}$ 微波、$-5$ 至 $3\ \mathrm{dBm}$ 驱动下观察到 6 阶 PAT；指纹方程 $\alpha\varepsilon=\sqrt{(h f)^2-(2t_c)^2}$ 拟合给出 $2t_c=2.7$、$6.8$、$11\ \mathrm{GHz}$。
+- [[sources/ref-04|文献 4]]，PDF pp. 90–91：Marki M80420MS 1120 + AWG7082C 斩波，$M(\tau)$ 拟合得 $T_1\approx 15\ \mathrm{ns}$；$28\ \mathrm{GHz}$ 饱和一阶 PAT 峰 FWHM $\approx 0.42\ \mathrm{mV}$，$\alpha=0.06\ \mathrm{meV/mV}$ 给出 $T_2^*\approx 330\ \mathrm{ps}$；微波加热使 $T_e$ 升至 $280\ \mathrm{mK}$。
+- [[sources/ref-08|文献 8]]，PDF pp. 5–6：摘要概述线性耦合三量子点样品上利用 PAT 探究各量子点间相互关系。
+- [[sources/ref-08|文献 8]]，PDF pp. 71–72：5.2 节 PAT 表征原理（双量子点示意图、PAC 共振条件 $\Delta E=n h f$、多光子过程随功率增加而出现）。
+- [[sources/ref-08|文献 8]]，PDF pp. 73–75：5.3 节线性耦合三量子点中三个交叉区域（区域 1/2/3）的 PAT 边带峰——区域 3 出现对称双量子点 PAT 边带峰；区域 2 因 L 与 R 无直接隧穿耦合，边带峰仅出现在一侧，由中间点 C 的虚跃迁参与。
+- [[sources/ref-08|文献 8]]，PDF pp. 75–77：PAT 边带峰的对称与单侧分布对应不同的能级图景（(1,1,1)↔(0,2,1) 直接耦合 vs (1,1,0)↔(0,1,1) 经虚电子态 (0,2,0) 间接路径）。

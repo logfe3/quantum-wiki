@@ -22,7 +22,7 @@ date: 2026-09-08
 
 ![[assets/figures/circuit-qed/gu-2023-fig1-8-vacuum-rabi-comparison.jpg]]
 
-*早期量子点–腔真空 Rabi 劈裂实验汇总（Petta 组 SQUID 阵列腔、Wallraff 组 NbTiN 反射腔、Vandersypen 组两自旋比特虚光子耦合，引自 [顾思思 2023]([[sources/gu-sisi-2023]])，图 1.8）*
+*早期量子点–腔真空 Rabi 劈裂实验汇总（Petta 组 SQUID 阵列腔、Wallraff 组 NbTiN 反射腔、Vandersypen 组两自旋比特虚光子耦合，引自 [文献 18]([[sources/gu-sisi-2023]])，图 1.8）*
 
 <!-- 原始占位：高阻抗 CPW 腔示意图：窄中心导体、电压驻波分布与波腹处的量子点耦合电极 -->
 
@@ -61,7 +61,7 @@ $$
 g_0=\omega_r\,c_c\sqrt{\frac{2Z_r}{R_Q}},
 $$
 
-$c_c$ 为耦合电极到量子点的杠杆臂（lever arm）。两种写法都给出 $g_0\propto\sqrt{Z_r}$：腔频必须锚定在比特频段，阻抗就成为唯一可工程化放大的因子。量子点本征基下的有效横向耦合还要乘以混合角因子，$g_\mathrm{eff}=g_0\sin\theta=2t_c g_0/(\hbar\omega_q)$（见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]）。作为量级估计，$Z_r$ 从 50 Ω 提高到 1 kΩ 带来约 $\sqrt{20}\approx4.5$ 倍的耦合增强；江顺利论文中 $Z_r\approx3.5$ kΩ 的 TiN 腔相对 50 Ω 腔理论上可提升约 8.4 倍。
+$c_c$ 为耦合电极到量子点的杠杆臂（lever arm）。两种写法都给出 $g_0\propto\sqrt{Z_r}$：腔频必须锚定在比特频段，阻抗就成为唯一可工程化放大的因子。量子点本征基下的有效横向耦合还要乘以混合角因子，$g_\mathrm{eff}=g_0\sin\theta=2t_c g_0/(\hbar\omega_q)$（见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]）。作为量级估计，$Z_r$ 从 50 Ω 提高到 1 kΩ 带来约 $\sqrt{20}\approx4.5$ 倍的耦合增强；文献 20论文中 $Z_r\approx3.5$ kΩ 的 TiN 腔相对 50 Ω 腔理论上可提升约 8.4 倍。
 
 ## 两条实现路线
 
@@ -108,11 +108,11 @@ $n_s$ 为库珀对密度。单位面积动态电感（方块电感，sheet induc
 | 腔型 | $Z_r$ | $\omega_r/2\pi$ | $\kappa/2\pi$ | 关键工艺参数 | 来源 |
 | --- | --- | --- | --- | --- | --- |
 | 常规 50 Ω CPW 腔（参照） | 50 Ω | 4–8 GHz | 视耦合设计而定 | 标准阻抗匹配 | — |
-| SQUID 阵列反射腔 | 约 1 kΩ | 磁通可调 | 约 30–60 MHz | 38 个 SQUID 串联，Al/AlO$_x$/Al 双角度斜蒸发 | 顾思思 2023 |
-| NbTiN 透射腔 | 约 2 kΩ | GHz 量级 | 约 11 MHz | 11 nm 膜，中心导体 $w\approx0.32$ µm，距地 20 µm | 顾思思 2023 |
-| TiN $\lambda/2$ 腔 | 约 3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，$T_c\approx3.5$ K，$L_k=265.9$ pH/□ | 江顺利 2025 |
+| SQUID 阵列反射腔 | 约 1 kΩ | 磁通可调 | 约 30–60 MHz | 38 个 SQUID 串联，Al/AlO$_x$/Al 双角度斜蒸发 | 文献 18 |
+| NbTiN 透射腔 | 约 2 kΩ | GHz 量级 | 约 11 MHz | 11 nm 膜，中心导体 $w\approx0.32$ µm，距地 20 µm | 文献 18 |
+| TiN $\lambda/2$ 腔 | 约 3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，$T_c\approx3.5$ K，$L_k=265.9$ pH/□ | 文献 20 |
 
-耦合强度的实际收益：2017 年 Wallraff 组用 SQUID 阵列腔把 GaAs 双量子点的耦合从早期 $g/2\pi\approx6.7$ MHz 提升到 $g/2\pi\approx119$ MHz 并首次实现门控量子点的[[circuit-qed/strong-coupling|强耦合]]；陈明博论文的 NbTiN 高阻抗反射腔上测得两个电荷比特的 $2g_0/2\pi$ 分别为 74 MHz 与 119 MHz；江顺利论文的 3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175$ MHz 的电荷比特强耦合。半导体 cQED 对腔阻抗的典型设计目标为 $1\sim2$ kΩ。
+耦合强度的实际收益：2017 年 Wallraff 组用 SQUID 阵列腔把 GaAs 双量子点的耦合从早期 $g/2\pi\approx6.7$ MHz 提升到 $g/2\pi\approx119$ MHz 并首次实现门控量子点的[[circuit-qed/strong-coupling|强耦合]]；文献 13论文的 NbTiN 高阻抗反射腔上测得两个电荷比特的 $2g_0/2\pi$ 分别为 74 MHz 与 119 MHz；文献 20论文的 3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175$ MHz 的电荷比特强耦合。半导体 cQED 对腔阻抗的典型设计目标为 $1\sim2$ kΩ。
 
 ## 耗散与实验特征
 
@@ -154,7 +154,7 @@ $$
 
 ## 论文依据
 
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF p. 22：耦合强度 $g\propto\sqrt{Z_r}$ 的推导（式 1.15–1.16）；p. 23：SQUID 阵列腔实现 $g/2\pi\approx119$ MHz 强耦合的国际进展综述；p. 35：约瑟夫森结与 SQUID 的电感公式（式 2.1–2.5）；pp. 36–37：SQUID 阵列腔拉格朗日量、模式频率（式 2.6–2.10）与磁通调频；p. 37：方块电感与动态电感公式（式 2.12–2.14）；pp. 38–39：腔耗散分解 $\kappa=\kappa_\mathrm{ext}+\kappa_\mathrm{int}$ 与外耗散公式（式 2.15–2.16）；p. 39：输入输出理论与 $S_{11}$、$S_{21}$（式 2.22–2.23）；p. 41：SQUID 阵列腔阻抗约 1 kΩ、$\kappa/2\pi\approx30\sim60$ MHz；p. 42：NbTiN 腔阻抗约 2 kΩ、$\kappa/2\pi\approx11$ MHz、$w\approx0.32$ µm。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 24：各类微波谐振腔比较与 SQUID 阵列腔磁场敏感问题；p. 25：CPW 保角映射几何电容电感（式 2.1–2.2）；pp. 29–30：Fano 线型修正；pp. 30–31：动态电感物理图像与动态电感分数 $\alpha>90\%$（式 2.26–2.28）；p. 40：耦合强度公式 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$（式 2.55）；p. 55：TiN 腔 $L_k=265.9$ pH/□、$f_r=4.993$ GHz、$\kappa/2\pi=2.2$ MHz、$Z_r\approx3.5$ kΩ 与 8.4 倍耦合提升估计。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 38：提高阻抗增强零点电压涨落的动机与 NbN/TiN/NbTiN 选材；p. 39：动态电感的动能起源、温度依赖与磁穿透深度表达（式 2.30–2.34）；p. 44：$g_0=\omega_r c_c\sqrt{2Z_r/R_Q}$（式 2.53–2.56）；p. 63：两个电荷比特 $2g_0/2\pi=74$、119 MHz 的提取。
-- [[sources/lin-ting-2022|林霆 2022]]，PDF p. 32：半导体量子比特实验对 $1\sim2$ kΩ 腔阻抗的需求与 $g\propto\sqrt{Z_r}$；pp. 33–35：SQUID 阵列腔工作原理、拉格朗日量与模式频率（式 2.23–2.36）。
+- [[sources/ref-18|文献 18]]，PDF p. 22：耦合强度 $g\propto\sqrt{Z_r}$ 的推导（式 1.15–1.16）；p. 23：SQUID 阵列腔实现 $g/2\pi\approx119$ MHz 强耦合的国际进展综述；p. 35：约瑟夫森结与 SQUID 的电感公式（式 2.1–2.5）；pp. 36–37：SQUID 阵列腔拉格朗日量、模式频率（式 2.6–2.10）与磁通调频；p. 37：方块电感与动态电感公式（式 2.12–2.14）；pp. 38–39：腔耗散分解 $\kappa=\kappa_\mathrm{ext}+\kappa_\mathrm{int}$ 与外耗散公式（式 2.15–2.16）；p. 39：输入输出理论与 $S_{11}$、$S_{21}$（式 2.22–2.23）；p. 41：SQUID 阵列腔阻抗约 1 kΩ、$\kappa/2\pi\approx30\sim60$ MHz；p. 42：NbTiN 腔阻抗约 2 kΩ、$\kappa/2\pi\approx11$ MHz、$w\approx0.32$ µm。
+- [[sources/ref-20|文献 20]]，PDF p. 24：各类微波谐振腔比较与 SQUID 阵列腔磁场敏感问题；p. 25：CPW 保角映射几何电容电感（式 2.1–2.2）；pp. 29–30：Fano 线型修正；pp. 30–31：动态电感物理图像与动态电感分数 $\alpha>90\%$（式 2.26–2.28）；p. 40：耦合强度公式 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$（式 2.55）；p. 55：TiN 腔 $L_k=265.9$ pH/□、$f_r=4.993$ GHz、$\kappa/2\pi=2.2$ MHz、$Z_r\approx3.5$ kΩ 与 8.4 倍耦合提升估计。
+- [[sources/ref-13|文献 13]]，PDF p. 38：提高阻抗增强零点电压涨落的动机与 NbN/TiN/NbTiN 选材；p. 39：动态电感的动能起源、温度依赖与磁穿透深度表达（式 2.30–2.34）；p. 44：$g_0=\omega_r c_c\sqrt{2Z_r/R_Q}$（式 2.53–2.56）；p. 63：两个电荷比特 $2g_0/2\pi=74$、119 MHz 的提取。
+- [[sources/ref-17|文献 17]]，PDF p. 32：半导体量子比特实验对 $1\sim2$ kΩ 腔阻抗的需求与 $g\propto\sqrt{Z_r}$；pp. 33–35：SQUID 阵列腔工作原理、拉格朗日量与模式频率（式 2.23–2.36）。

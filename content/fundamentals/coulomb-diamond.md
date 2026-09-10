@@ -21,7 +21,7 @@ date: 2026-09-08
 
 ![[assets/figures/fundamentals/shang-2014-fig1-4-coulomb-diamond.jpg]]
 
-*源漏偏压非对称时量子点输运与典型库仑菱形图（[尚汝南 2014]([[sources/shang-runan-2014]])，图 1.4）*
+*源漏偏压非对称时量子点输运与典型库仑菱形图（[文献 2]([[sources/shang-runan-2014]])，图 1.4）*
 
 <!-- 原始占位：微分电导随栅压与源漏偏压变化的库仑菱形示意图，标注充电能 E_C、能级间隔 ΔE、两条边的斜率 k1、k2 以及菱形外的激发态平行线 -->
 
@@ -103,15 +103,15 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 尤杰 2016 |
-| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 尤杰 2016 |
-| 栅–点电容 | $C_{RP}=3.1\ \mathrm{aF}$，$\alpha_{RP}=0.027\ \mathrm{meV/mV}$ | 尤杰 2016 |
-| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（GaAs，不同电极与器件） | 尤杰 2016 |
-| 杠杆臂参考值 | plunger gate $\sim 0.05$，barrier gate $\sim 0.1$（GaAs） | 尚汝南 2014 |
-| 充电能 $E_C$ | $4$–$6\ \mathrm{meV}$（锗硅纳米线空穴点，腔读出） | 李炎 2018 |
-| 杠杆臂 $\alpha$ | $0.20$–$0.25\ \mathrm{eV/V}$（同器件，纳米线点更小） | 李炎 2018 |
-| 隧穿展宽 $\hbar\Gamma$ | $\Gamma\approx 1.5\ \mathrm{meV}$，$U\approx 5\ \mathrm{meV}$ | 李炎 2018 |
-| 交流激励 | $20\ \mu\mathrm{V}$、$37.1\ \mathrm{Hz}$（锁相 SR830） | 尤杰 2016 |
+| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 文献 4 |
+| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 文献 4 |
+| 栅–点电容 | $C_{RP}=3.1\ \mathrm{aF}$，$\alpha_{RP}=0.027\ \mathrm{meV/mV}$ | 文献 4 |
+| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（GaAs，不同电极与器件） | 文献 4 |
+| 杠杆臂参考值 | plunger gate $\sim 0.05$，barrier gate $\sim 0.1$（GaAs） | 文献 2 |
+| 充电能 $E_C$ | $4$–$6\ \mathrm{meV}$（锗硅纳米线空穴点，腔读出） | 文献 10 |
+| 杠杆臂 $\alpha$ | $0.20$–$0.25\ \mathrm{eV/V}$（同器件，纳米线点更小） | 文献 10 |
+| 隧穿展宽 $\hbar\Gamma$ | $\Gamma\approx 1.5\ \mathrm{meV}$，$U\approx 5\ \mathrm{meV}$ | 文献 10 |
+| 交流激励 | $20\ \mu\mathrm{V}$、$37.1\ \mathrm{Hz}$（锁相 SR830） | 文献 4 |
 
 ## 实验特征与测量
 
@@ -141,15 +141,15 @@ $$
 
 ## 论文依据
 
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 16–19：1.4.2 节系统给出库仑菱形的测量方案（$20\ \mu\mathrm{V}$ 锁相交流激励叠加直流偏压扫描）与参数提取方法：$C_G=e/\Delta V$、菱形半高对应 $E_C$、$\alpha=1/(1/k_1+1/k_2)$、由激发态线间距求 $\Delta E$。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 68：浅刻蚀 GaAs 量子点实测库仑菱形（$37.1\ \mathrm{Hz}$、$20\ \mu\mathrm{V}$ 激励），提取 $\alpha=0.05\ \mathrm{meV/mV}$。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 80：非掺杂 GaAs 大单点菱形图给出 $C_\Sigma=113\ \mathrm{aF}$、$E_C=1.5\ \mathrm{meV}$、$C_{RP}=3.1\ \mathrm{aF}$、$\alpha_{RP}=0.027\ \mathrm{meV/mV}$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 20：偏压窗口图像下库仑菱形的形成，$E_C=e|V_{SD}|$（顶点）与零偏压标定 $\alpha=|V_{SD}|/\Delta V_g$。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF p. 52：传统直流输运与网络分析仪定频扫功率两种方案测得的库仑菱形对比。
-- [[sources/li-yan-2018|李炎 2018]]，PDF pp. 58–59：锗硅纳米线空穴点的库仑菱形测量流程与参数提取（$C_\Sigma=C_S+C_D+C_G$、$C_G=e/\Delta V$、$\alpha=E_C/\Delta V=1/(1/k_1+1/k_2)$），正斜率边对应源极隧穿、负斜率边对应漏极隧穿。
-- [[sources/li-yan-2018|李炎 2018]]，PDF pp. 59–60：磁场下库仑菱形中基态与激发态的塞曼劈裂区分奇偶空穴数，并由 $E_Z=g\mu_B B$ 线性拟合提取朗德 g 因子。
-- [[sources/li-yan-2018|李炎 2018]]，PDF p. 70：微波谐振腔幅值/相位信号复现库仑菱形，$E_C=4$–$6\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$，直流微弱区域腔信号仍清晰。
-- [[sources/li-yan-2018|李炎 2018]]，PDF p. 75：由实测库仑菱形提取 $\Gamma=1.5\ \mathrm{meV}$、$U=5\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 19：库仑菱形作为化学势差–栅压图样的定义，以及借助菱形逐个读出量子点电子数。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 54：用库仑菱形测量杠杆臂（level-arm）的方法，GaAs 量子点参考值 plunger gate $0.05$、barrier gate $0.1$。
-- [[sources/zhang-miaolei-2014|张苗磊 2014]]，PDF p. 16：图 1.5 给出库仑菱形的理论与实验对照。
+- [[sources/ref-04|文献 4]]，PDF pp. 16–19：1.4.2 节系统给出库仑菱形的测量方案（$20\ \mu\mathrm{V}$ 锁相交流激励叠加直流偏压扫描）与参数提取方法：$C_G=e/\Delta V$、菱形半高对应 $E_C$、$\alpha=1/(1/k_1+1/k_2)$、由激发态线间距求 $\Delta E$。
+- [[sources/ref-04|文献 4]]，PDF p. 68：浅刻蚀 GaAs 量子点实测库仑菱形（$37.1\ \mathrm{Hz}$、$20\ \mu\mathrm{V}$ 激励），提取 $\alpha=0.05\ \mathrm{meV/mV}$。
+- [[sources/ref-04|文献 4]]，PDF p. 80：非掺杂 GaAs 大单点菱形图给出 $C_\Sigma=113\ \mathrm{aF}$、$E_C=1.5\ \mathrm{meV}$、$C_{RP}=3.1\ \mathrm{aF}$、$\alpha_{RP}=0.027\ \mathrm{meV/mV}$。
+- [[sources/ref-07|文献 7]]，PDF p. 20：偏压窗口图像下库仑菱形的形成，$E_C=e|V_{SD}|$（顶点）与零偏压标定 $\alpha=|V_{SD}|/\Delta V_g$。
+- [[sources/ref-07|文献 7]]，PDF p. 52：传统直流输运与网络分析仪定频扫功率两种方案测得的库仑菱形对比。
+- [[sources/ref-10|文献 10]]，PDF pp. 58–59：锗硅纳米线空穴点的库仑菱形测量流程与参数提取（$C_\Sigma=C_S+C_D+C_G$、$C_G=e/\Delta V$、$\alpha=E_C/\Delta V=1/(1/k_1+1/k_2)$），正斜率边对应源极隧穿、负斜率边对应漏极隧穿。
+- [[sources/ref-10|文献 10]]，PDF pp. 59–60：磁场下库仑菱形中基态与激发态的塞曼劈裂区分奇偶空穴数，并由 $E_Z=g\mu_B B$ 线性拟合提取朗德 g 因子。
+- [[sources/ref-10|文献 10]]，PDF p. 70：微波谐振腔幅值/相位信号复现库仑菱形，$E_C=4$–$6\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$，直流微弱区域腔信号仍清晰。
+- [[sources/ref-10|文献 10]]，PDF p. 75：由实测库仑菱形提取 $\Gamma=1.5\ \mathrm{meV}$、$U=5\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$。
+- [[sources/ref-02|文献 2]]，PDF p. 19：库仑菱形作为化学势差–栅压图样的定义，以及借助菱形逐个读出量子点电子数。
+- [[sources/ref-02|文献 2]]，PDF p. 54：用库仑菱形测量杠杆臂（level-arm）的方法，GaAs 量子点参考值 plunger gate $0.05$、barrier gate $0.1$。
+- [[sources/ref-03|文献 3]]，PDF p. 16：图 1.5 给出库仑菱形的理论与实验对照。

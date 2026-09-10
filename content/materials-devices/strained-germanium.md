@@ -120,29 +120,29 @@ S-P 求解与三种隧穿电流叠加构成"界面态填充–缺陷密度提取
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 应变锗量子阱厚度 $t_{\mathrm{Ge}}$ | $16\ \mathrm{nm}$（实验所用基片） | 马璟睿 2026 |
-| 顶部 SiGe 势垒层厚度 $t_{\mathrm{SiGe}}$ | $32\ \mathrm{nm}$ 或 $47\ \mathrm{nm}$（不同基片） | 周雨晨 2026；马璟睿 2026 |
-| 衬底 | 8 英寸硅，[[materials-devices/silicon-sige\|Si/SiGe]] 虚衬底上外延 Ge | 周雨晨 2026 |
-| 外延方法 | 减压化学气相沉积 RPCVD | 周雨晨 2026 |
-| 2DHG 迁移率 | 高达 $2\times 10^{6}\ \mathrm{cm^{2}V^{-1}s^{-1}}$ | 马璟睿 2026 |
-| 界面氧化层 SiO<sub>x</sub> 厚度 | $\approx 1.5\ \mathrm{nm}$ | 马璟睿 2026 |
-| 栅氧 Al<sub>2</sub>O<sub>3</sub> 厚度 | $30\ \mathrm{nm}$，干法（O<sub>3</sub>）生长 $100\,^\circ\mathrm{C}$ | 马璟睿 2026 |
-| Luttinger 参数（Ge） | $\gamma_1\approx 13,\ \gamma_s\approx 5$ | 马璟睿 2026 |
-| 面内 HH 有效质量 | $\sim 0.05\,m_0$ | 马璟睿 2026 |
-| 量子点柱塞电极宽度 | $100$–$120\ \mathrm{nm}$ | 周雨晨 2026 |
-| 限制电极 C2 宽度 | $\sim 90\ \mathrm{nm}$ | 周雨晨 2026 |
-| 栅间 Al 原位氧化层 | $\approx 4\ \mathrm{nm}$ | 周雨晨 2026 |
-| 自旋轨道耦合强度 | $15$–$21\ \mu\mathrm{eV}$（栅压可调） | 周雨晨 2026 |
-| 自旋轨道场方向 | 与面外方向夹角 $4\pm 6^\circ$ | 周雨晨 2026 |
-| 硼注入剂量 / 能量 | $1\times 10^{13}\ \mathrm{cm^{-2}}$、$13\ \mathrm{keV}$（47 nm 量子阱） | 周雨晨 2026 |
-| Rabi 频率 $f_{\mathrm{Rabi}}$ | $8$–$19\ \mathrm{MHz}$，共振点 $11.61\ \mathrm{MHz}$ | 周雨晨 2026 |
-| 相干时间 | $T_2^*=120\ \mu\mathrm{s}$（Ramsey），$T_2^H=1.2\ \mathrm{ms}$（Hahn echo，引用值） | 周雨晨 2026 |
-| 最优工作点相干时间 | $T_2^*=17.6\ \mu\mathrm{s}$（低磁场 + 优化方向） | 周雨晨 2026 |
-| 单比特门保真度 | 几何门 $>99.9\%$；动力学门最高 $99.82\%$（最优工作点） | 周雨晨 2026 |
-| 基温 | $\approx 15\ \mathrm{mK}$（稀释制冷机） | 周雨晨 2026 |
-| 未处理界面态密度 | $\sim 6\times 10^{12}\ \mathrm{cm^{-2}eV^{-1}}$（过氧化氢处理后参考值） | 马璟睿 2026 |
-| 臭氧钝化后总界面态 | $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$ | 马璟睿 2026 |
-| 势垒层位错密度 | $10^{6\sim 8}\ \mathrm{cm^{-2}}$ | 马璟睿 2026 |
+| 应变锗量子阱厚度 $t_{\mathrm{Ge}}$ | $16\ \mathrm{nm}$（实验所用基片） | 文献 23 |
+| 顶部 SiGe 势垒层厚度 $t_{\mathrm{SiGe}}$ | $32\ \mathrm{nm}$ 或 $47\ \mathrm{nm}$（不同基片） | 文献 25；文献 23 |
+| 衬底 | 8 英寸硅，[[materials-devices/silicon-sige\|Si/SiGe]] 虚衬底上外延 Ge | 文献 25 |
+| 外延方法 | 减压化学气相沉积 RPCVD | 文献 25 |
+| 2DHG 迁移率 | 高达 $2\times 10^{6}\ \mathrm{cm^{2}V^{-1}s^{-1}}$ | 文献 23 |
+| 界面氧化层 SiO<sub>x</sub> 厚度 | $\approx 1.5\ \mathrm{nm}$ | 文献 23 |
+| 栅氧 Al<sub>2</sub>O<sub>3</sub> 厚度 | $30\ \mathrm{nm}$，干法（O<sub>3</sub>）生长 $100\,^\circ\mathrm{C}$ | 文献 23 |
+| Luttinger 参数（Ge） | $\gamma_1\approx 13,\ \gamma_s\approx 5$ | 文献 23 |
+| 面内 HH 有效质量 | $\sim 0.05\,m_0$ | 文献 23 |
+| 量子点柱塞电极宽度 | $100$–$120\ \mathrm{nm}$ | 文献 25 |
+| 限制电极 C2 宽度 | $\sim 90\ \mathrm{nm}$ | 文献 25 |
+| 栅间 Al 原位氧化层 | $\approx 4\ \mathrm{nm}$ | 文献 25 |
+| 自旋轨道耦合强度 | $15$–$21\ \mu\mathrm{eV}$（栅压可调） | 文献 25 |
+| 自旋轨道场方向 | 与面外方向夹角 $4\pm 6^\circ$ | 文献 25 |
+| 硼注入剂量 / 能量 | $1\times 10^{13}\ \mathrm{cm^{-2}}$、$13\ \mathrm{keV}$（47 nm 量子阱） | 文献 25 |
+| Rabi 频率 $f_{\mathrm{Rabi}}$ | $8$–$19\ \mathrm{MHz}$，共振点 $11.61\ \mathrm{MHz}$ | 文献 25 |
+| 相干时间 | $T_2^*=120\ \mu\mathrm{s}$（Ramsey），$T_2^H=1.2\ \mathrm{ms}$（Hahn echo，引用值） | 文献 25 |
+| 最优工作点相干时间 | $T_2^*=17.6\ \mu\mathrm{s}$（低磁场 + 优化方向） | 文献 25 |
+| 单比特门保真度 | 几何门 $>99.9\%$；动力学门最高 $99.82\%$（最优工作点） | 文献 25 |
+| 基温 | $\approx 15\ \mathrm{mK}$（稀释制冷机） | 文献 25 |
+| 未处理界面态密度 | $\sim 6\times 10^{12}\ \mathrm{cm^{-2}eV^{-1}}$（过氧化氢处理后参考值） | 文献 23 |
+| 臭氧钝化后总界面态 | $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$ | 文献 23 |
+| 势垒层位错密度 | $10^{6\sim 8}\ \mathrm{cm^{-2}}$ | 文献 23 |
 
 ## 实验特征与测量方法
 
@@ -204,20 +204,20 @@ $$
 
 ## 论文依据
 
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 7–9：创新性说明与摘要——自旋轨道场性质、几何门、最优磁场工作点三个层面的系统研究框架。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 61–62：3.1.3 节微纳加工——硼注入 SRIM 模拟，剂量 $1\times 10^{13}\ \mathrm{cm^{-2}}$、能量 $13\ \mathrm{keV}$，对应 47 nm 量子阱深度。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 53–54：3.1.1 节 Ge/SiGe 异质结构——RPCVD 在 8 英寸硅衬底上外延量子阱结构，15–40 nm Si<sub>1-x</sub>Ge<sub>x</sub> 势垒层。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 78：4.1 节研究背景——应变锗空穴有效质量较小且可被量子限域与应变工程灵活调控；空穴主要来源于 $p$ 轨道，超精细相互作用较弱。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 80, 99：4.2 节——泡利自旋阻塞漏电流反推出的自旋轨道耦合强度在 $15$–$21\ \mu\mathrm{eV}$ 区间连续可调；自旋轨道场与面外方向夹角约 $4\pm 6^\circ$。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 115–117：5.3 节——量子比特共振点 $f_{\mathrm{Rabi}}=11.61\ \mathrm{MHz}$，$T_2^*=136\ \mathrm{ns}$、$T_2^{\mathrm{Echo}}=401\ \mathrm{ns}$。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 124–128：5.4 节几何相位门 Path1/Path2——分别在 $f_{\mathrm{Rabi}}=8$–$19\ \mathrm{MHz}$ 范围内实现 $>99\%$ 操控保真度并对 $\Delta f$、$\delta f_{\mathrm{Rabi}}$ 抖动具有强抗噪性。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 131, 138：6 章最优工作点——磁场方向优化使相干时间拉长到 $17.6\ \mu\mathrm{s}$，Hahn echo 在该方向下 $T_2^H$ 提升至 $88\ \mu\mathrm{s}$，动力学门保真度最高 $99.82\%$。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 7–8：摘要——臭氧表面钝化、含界面态的自洽 S-P 求解与隧穿模型、减弱缺陷参与的镂空谐振腔设计。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 25–27：2.1.1 节应变锗外延异质结——Luttinger–Kohn 哈密顿量（公式 2.1）与应变修正（公式 2.4–2.5），面内 HH 有效质量可低至 $0.05\,m_0$；塞曼劈裂 $E_Z=g\mu_B B$ 与电场可调 $g(V)$。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 27–30：2.1.2–2.1.3 节共面波导谐振腔与 JC 哈密顿量——谐振腔结构、$Q=f_0/\delta f$ 的定义；Jaynes–Cummings 哈密顿量（公式 2.9）与 $g\propto \sqrt{Z_r}$ 的耦合强度依赖。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 33–38：2.3–2.4 节界面态提取与现有研究——传统 C-V/G-V/CP 方法在应变锗器件中不适用的三条原因（能带结构不同、低温下陷阱无法充放电、价带弯曲使空穴只能单向进入缺陷）以及 Hutchins-Delgado 等的过氧化氢/硝酸钝化结果对比。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 39–43：3.1.1 节薄膜生长——TMA+臭氧干法在 100 °C 下沉积 30 nm Al<sub>2</sub>O<sub>3</sub>，避免 GeO<sub>2</sub> 在常规 TMA+水 ALD 中溶水带来的薄膜质量问题；变温 AFM 表征给出实际厚度与目标厚度的对比。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 47–48：3.2–3.3 节循环扫描阈值电压与臭氧钝化——提取臭氧钝化后总界面态 $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$（公式 3.3），并与过氧化氢/硝酸/氢氟酸钝化结果对比。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 50–55：4.2 节自洽 S-P 求解器与"逆向 S-P"反推界面态密度的数值方法。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 63–67：5 章界面缺陷捕获的隧穿机制——直接、Fowler–Nordheim 与陷阱辅助三种隧穿机制的电流密度公式及其在不同电场区间的相对贡献；势垒层位错密度约 $10^{6\sim 8}\ \mathrm{cm^{-2}}$。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 76–80：6 章镂空谐振腔设计——基于湿法刻蚀的悬空 CPW 谐振腔结构与电磁学仿真；按 $g\propto\sqrt{Z_r}\propto\sqrt{1/C_l}$ 提高耦合强度（公式 6.1）；空间隔离降低 TLS 对 $Q$ 的耗散（公式 6.2–6.3）。
+- [[sources/ref-25|文献 25]]，PDF pp. 7–9：创新性说明与摘要——自旋轨道场性质、几何门、最优磁场工作点三个层面的系统研究框架。
+- [[sources/ref-25|文献 25]]，PDF pp. 61–62：3.1.3 节微纳加工——硼注入 SRIM 模拟，剂量 $1\times 10^{13}\ \mathrm{cm^{-2}}$、能量 $13\ \mathrm{keV}$，对应 47 nm 量子阱深度。
+- [[sources/ref-25|文献 25]]，PDF pp. 53–54：3.1.1 节 Ge/SiGe 异质结构——RPCVD 在 8 英寸硅衬底上外延量子阱结构，15–40 nm Si<sub>1-x</sub>Ge<sub>x</sub> 势垒层。
+- [[sources/ref-25|文献 25]]，PDF p. 78：4.1 节研究背景——应变锗空穴有效质量较小且可被量子限域与应变工程灵活调控；空穴主要来源于 $p$ 轨道，超精细相互作用较弱。
+- [[sources/ref-25|文献 25]]，PDF pp. 80, 99：4.2 节——泡利自旋阻塞漏电流反推出的自旋轨道耦合强度在 $15$–$21\ \mu\mathrm{eV}$ 区间连续可调；自旋轨道场与面外方向夹角约 $4\pm 6^\circ$。
+- [[sources/ref-25|文献 25]]，PDF pp. 115–117：5.3 节——量子比特共振点 $f_{\mathrm{Rabi}}=11.61\ \mathrm{MHz}$，$T_2^*=136\ \mathrm{ns}$、$T_2^{\mathrm{Echo}}=401\ \mathrm{ns}$。
+- [[sources/ref-25|文献 25]]，PDF pp. 124–128：5.4 节几何相位门 Path1/Path2——分别在 $f_{\mathrm{Rabi}}=8$–$19\ \mathrm{MHz}$ 范围内实现 $>99\%$ 操控保真度并对 $\Delta f$、$\delta f_{\mathrm{Rabi}}$ 抖动具有强抗噪性。
+- [[sources/ref-25|文献 25]]，PDF pp. 131, 138：6 章最优工作点——磁场方向优化使相干时间拉长到 $17.6\ \mu\mathrm{s}$，Hahn echo 在该方向下 $T_2^H$ 提升至 $88\ \mu\mathrm{s}$，动力学门保真度最高 $99.82\%$。
+- [[sources/ref-23|文献 23]]，PDF pp. 7–8：摘要——臭氧表面钝化、含界面态的自洽 S-P 求解与隧穿模型、减弱缺陷参与的镂空谐振腔设计。
+- [[sources/ref-23|文献 23]]，PDF pp. 25–27：2.1.1 节应变锗外延异质结——Luttinger–Kohn 哈密顿量（公式 2.1）与应变修正（公式 2.4–2.5），面内 HH 有效质量可低至 $0.05\,m_0$；塞曼劈裂 $E_Z=g\mu_B B$ 与电场可调 $g(V)$。
+- [[sources/ref-23|文献 23]]，PDF pp. 27–30：2.1.2–2.1.3 节共面波导谐振腔与 JC 哈密顿量——谐振腔结构、$Q=f_0/\delta f$ 的定义；Jaynes–Cummings 哈密顿量（公式 2.9）与 $g\propto \sqrt{Z_r}$ 的耦合强度依赖。
+- [[sources/ref-23|文献 23]]，PDF pp. 33–38：2.3–2.4 节界面态提取与现有研究——传统 C-V/G-V/CP 方法在应变锗器件中不适用的三条原因（能带结构不同、低温下陷阱无法充放电、价带弯曲使空穴只能单向进入缺陷）以及 Hutchins-Delgado 等的过氧化氢/硝酸钝化结果对比。
+- [[sources/ref-23|文献 23]]，PDF pp. 39–43：3.1.1 节薄膜生长——TMA+臭氧干法在 100 °C 下沉积 30 nm Al<sub>2</sub>O<sub>3</sub>，避免 GeO<sub>2</sub> 在常规 TMA+水 ALD 中溶水带来的薄膜质量问题；变温 AFM 表征给出实际厚度与目标厚度的对比。
+- [[sources/ref-23|文献 23]]，PDF pp. 47–48：3.2–3.3 节循环扫描阈值电压与臭氧钝化——提取臭氧钝化后总界面态 $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$（公式 3.3），并与过氧化氢/硝酸/氢氟酸钝化结果对比。
+- [[sources/ref-23|文献 23]]，PDF pp. 50–55：4.2 节自洽 S-P 求解器与"逆向 S-P"反推界面态密度的数值方法。
+- [[sources/ref-23|文献 23]]，PDF pp. 63–67：5 章界面缺陷捕获的隧穿机制——直接、Fowler–Nordheim 与陷阱辅助三种隧穿机制的电流密度公式及其在不同电场区间的相对贡献；势垒层位错密度约 $10^{6\sim 8}\ \mathrm{cm^{-2}}$。
+- [[sources/ref-23|文献 23]]，PDF pp. 76–80：6 章镂空谐振腔设计——基于湿法刻蚀的悬空 CPW 谐振腔结构与电磁学仿真；按 $g\propto\sqrt{Z_r}\propto\sqrt{1/C_l}$ 提高耦合强度（公式 6.1）；空间隔离降低 TLS 对 $Q$ 的耗散（公式 6.2–6.3）。

@@ -19,7 +19,7 @@ date: 2026-09-08
 量子态沿参数空间闭合路径演化回到起点时，所累积的总相位分成两部分：一部分由 [[materials-devices/charge-noise|电荷噪声]]与系统哈密顿量演化共同决定，称为动力学相位 $\phi_\mathrm{dyn}=-\int_0^\tau E(t)/\hbar\,dt$，其大小依赖于演化时间与瞬时能量；另一部分只取决于路径在参数空间中所围的几何面积，称为 Berry 相位（Berry phase）或几何相位 $\phi_\mathrm{g}$。在 1984 年由 M. V. Berry 系统给出数学形式之后，演化算符可写为
 
 $$
-U(\tau)=e^{i\phi_\mathrm{dyn}}\,e^{i\phi_\mathrm{g}}\,,
+U(\tau)=e^{i\phi_\mathrm{dyn}}\,e^{i\phi_\mathrm{g}}\，
 $$
 
 其中 $\phi_\mathrm{g}=\oint \mathcal{A}\cdot d\mathcal{R}=\int \mathcal{F}\,d^2\mathcal{R}$，$\mathcal{A}$ 是参数空间的矢势（Berry 联络），$\mathcal{F}=\nabla\times\mathcal{A}$ 是对应的曲率（Berry 强度）。
@@ -204,15 +204,15 @@ $$
 
 ## 论文依据
 
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 7：首次在平面锗空穴自旋量子比特中实验实现基于几何相位的单量子比特门，并以几何相位门提升操控的噪声鲁棒性。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 82–83：几何量子门引入动机（噪声鲁棒性、高一致性、高保真度）；典型的低频电荷噪声主导下传统动力学门的局限。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 85：Berry 1984 年几何相位工作、Wang/Zanardi 1999–2001 年非绝热几何计算方案、阿贝尔/非阿贝尔分类及空穴自旋比特作为非绝热几何计算平台的定位。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 102–103：双段驱动哈密顿量（式 5.5）与 Path1/Path2 三段式相位设计（式 5.6），等效演化算符 $U(\theta,\gamma,\phi)=\exp(i\gamma\,\mathbf{n}\cdot\boldsymbol{\sigma})$（式 5.7）及几何 $I$ 门特例 $\theta=\pi/2,\phi=\pi/2,\gamma=0$。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 104–105：图 5.13 给出 Path1 与 Path2 在布洛赫球上的演化路径、表 5.1 给出 $f_\mathrm{Rabi}=8.23\text{–}18.97\,\mathrm{MHz}$ 下 Path2 几何 $I,X/2,Y/2$ 门保真度最高 99.98%、99.80%、99.97%。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 106：Path2 vs Path3$\pi$ 保真度对比（5.4.2 节），Path3$\pi$ 因约 $6$ 倍动力学门操作时间而被拖低。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 107：Path2 在 $\Delta f=\pm 2.5\,\mathrm{MHz}$（$X/2,Y/2$）、$\Delta f=\pm 1.2\,\mathrm{MHz}$（$I$）下保持 $>99\%$ 保真度；55 h 内比特共振频率漂移标准差 $0.794\,\mathrm{MHz}$，完全落在 Path2 容差之内。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 108：含 $\delta f_\mathrm{Larmor}$、$\delta f_\mathrm{Rabi}$ 的有限哈密顿量（式 5.8）及两类噪声的时间更新假设；拟合得到 $\delta f_\mathrm{Larmor}=1.80\,\mathrm{MHz}$、$\delta f_\mathrm{Rabi}=58.48\,\mathrm{kHz}$、$M=24$。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 109–110：Path1 对系统性噪声 $\delta$ 的鲁棒性实验（$\delta\approx \pm 0.2$ 时反超动力学门）以及 Path1 对失谐噪声 $\Delta f$ 几乎无抵抗的对比（图 5.18、5.19），明确"几何门只对目标噪声占主导时展现优势"。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF p. 111：更长 $T_2^*$ 与更小 $\delta f_\mathrm{Larmor}$（如 17.6 $\mu$s 对应 0.012 MHz）下的数值模拟，验证几何门在低噪声极限下仍稳定优于动力学门。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 112–113：双比特几何门理论方案（式 5.9–5.11）、三段式闭合路径（式 5.12–5.14）与两比特等效演化算符（式 5.15），取 $\phi=0,\upsilon=\xi=\pi/2$ 即得 iSWAP；iSWAP×2 配合单比特操作合成 CNOT。
-- [[sources/zhou-yuchen-2026|周雨晨 2026]]，PDF pp. 113–114：5.4.8 节讨论最优方案选择、最优操控点（sweet spot）与几何门操作时间之间的权衡，指出非循环、非绝热方案可在缩短演化时间的同时保留几何鲁棒性。
+- [[sources/ref-25|文献 25]]，PDF p. 7：首次在平面锗空穴自旋量子比特中实验实现基于几何相位的单量子比特门，并以几何相位门提升操控的噪声鲁棒性。
+- [[sources/ref-25|文献 25]]，PDF pp. 82–83：几何量子门引入动机（噪声鲁棒性、高一致性、高保真度）；典型的低频电荷噪声主导下传统动力学门的局限。
+- [[sources/ref-25|文献 25]]，PDF p. 85：Berry 1984 年几何相位工作、Wang/Zanardi 1999–2001 年非绝热几何计算方案、阿贝尔/非阿贝尔分类及空穴自旋比特作为非绝热几何计算平台的定位。
+- [[sources/ref-25|文献 25]]，PDF pp. 102–103：双段驱动哈密顿量（式 5.5）与 Path1/Path2 三段式相位设计（式 5.6），等效演化算符 $U(\theta,\gamma,\phi)=\exp(i\gamma\,\mathbf{n}\cdot\boldsymbol{\sigma})$（式 5.7）及几何 $I$ 门特例 $\theta=\pi/2,\phi=\pi/2,\gamma=0$。
+- [[sources/ref-25|文献 25]]，PDF pp. 104–105：图 5.13 给出 Path1 与 Path2 在布洛赫球上的演化路径、表 5.1 给出 $f_\mathrm{Rabi}=8.23\text{–}18.97\,\mathrm{MHz}$ 下 Path2 几何 $I,X/2,Y/2$ 门保真度最高 99.98%、99.80%、99.97%。
+- [[sources/ref-25|文献 25]]，PDF p. 106：Path2 vs Path3$\pi$ 保真度对比（5.4.2 节），Path3$\pi$ 因约 $6$ 倍动力学门操作时间而被拖低。
+- [[sources/ref-25|文献 25]]，PDF p. 107：Path2 在 $\Delta f=\pm 2.5\,\mathrm{MHz}$（$X/2,Y/2$）、$\Delta f=\pm 1.2\,\mathrm{MHz}$（$I$）下保持 $>99\%$ 保真度；55 h 内比特共振频率漂移标准差 $0.794\,\mathrm{MHz}$，完全落在 Path2 容差之内。
+- [[sources/ref-25|文献 25]]，PDF p. 108：含 $\delta f_\mathrm{Larmor}$、$\delta f_\mathrm{Rabi}$ 的有限哈密顿量（式 5.8）及两类噪声的时间更新假设；拟合得到 $\delta f_\mathrm{Larmor}=1.80\,\mathrm{MHz}$、$\delta f_\mathrm{Rabi}=58.48\,\mathrm{kHz}$、$M=24$。
+- [[sources/ref-25|文献 25]]，PDF pp. 109–110：Path1 对系统性噪声 $\delta$ 的鲁棒性实验（$\delta\approx \pm 0.2$ 时反超动力学门）以及 Path1 对失谐噪声 $\Delta f$ 几乎无抵抗的对比（图 5.18、5.19），明确"几何门只对目标噪声占主导时展现优势"。
+- [[sources/ref-25|文献 25]]，PDF p. 111：更长 $T_2^*$ 与更小 $\delta f_\mathrm{Larmor}$（如 17.6 $\mu$s 对应 0.012 MHz）下的数值模拟，验证几何门在低噪声极限下仍稳定优于动力学门。
+- [[sources/ref-25|文献 25]]，PDF pp. 112–113：双比特几何门理论方案（式 5.9–5.11）、三段式闭合路径（式 5.12–5.14）与两比特等效演化算符（式 5.15），取 $\phi=0,\upsilon=\xi=\pi/2$ 即得 iSWAP；iSWAP×2 配合单比特操作合成 CNOT。
+- [[sources/ref-25|文献 25]]，PDF pp. 113–114：5.4.8 节讨论最优方案选择、最优操控点（sweet spot）与几何门操作时间之间的权衡，指出非循环、非绝热方案可在缩短演化时间的同时保留几何鲁棒性。

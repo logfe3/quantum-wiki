@@ -111,24 +111,24 @@ $$
 
 | 量 | 典型值 | 说明 |
 | --- | --- | --- |
-| 读出腔频率 $\omega_r/2\pi$ | 约 7 GHz（如 7.316 GHz） | 段鹏 2022 仿真设计 |
+| 读出腔频率 $\omega_r/2\pi$ | 约 7 GHz（如 7.316 GHz） | 文献 14 仿真设计 |
 | 比特频率 $\omega_q/2\pi$ | 4–5 GHz（如 4.6 GHz） | 与滤波器中心频率 4.65 GHz 对准 |
 | 腔耦合电容 $C_k$ | 约 10 fF（仿真取 12.9 fF） | 对应腔耗散率数 MHz；拟合 $Q_C\approx2275$ |
-| 比特–腔耦合电容 $C_g$ | 约 12 fF | 段鹏 2022 仿真参数 |
-| Purcell 弛豫率 $\gamma_\kappa$ | $\sim2\pi\times10\ \mathrm{kHz}$（$\kappa(g/\Delta)^2$ 量级） | 孔伟成 2018 对 transmon 的估计 |
-| 保护带宽 $\Gamma_{100}$ | 400 MHz（$\omega_F/2\pi=5$ GHz 设计）；毫秒级 $T_1$ 保护带宽可达 1 GHz | 段鹏 2022 |
-| 隔离度 | $>20\ \mathrm{dB}$（带宽 $>1$ GHz，段鹏）；30 dB（阻抗变换线式，孔伟成） | 实测 |
-| 插入损耗 | 带通腔式 $<0.002\ \mathrm{dB}$（仿真）；阻抗变换线式 $<3\ \mathrm{dB}$（实测，最好近似无损） | 孔伟成 2018 |
+| 比特–腔耦合电容 $C_g$ | 约 12 fF | 文献 14 仿真参数 |
+| Purcell 弛豫率 $\gamma_\kappa$ | $\sim2\pi\times10\ \mathrm{kHz}$（$\kappa(g/\Delta)^2$ 量级） | 文献 9 对 transmon 的估计 |
+| 保护带宽 $\Gamma_{100}$ | 400 MHz（$\omega_F/2\pi=5$ GHz 设计）；毫秒级 $T_1$ 保护带宽可达 1 GHz | 文献 14 |
+| 隔离度 | $>20\ \mathrm{dB}$（带宽 $>1$ GHz，文献 14）；30 dB（阻抗变换线式，文献 9） | 实测 |
+| 插入损耗 | 带通腔式 $<0.002\ \mathrm{dB}$（仿真）；阻抗变换线式 $<3\ \mathrm{dB}$（实测，最好近似无损） | 文献 9 |
 
 ## 实验特征与验证
 
-Purcell 滤波器的仿真验证不能只算 $S$ 参数：段鹏 2022 的做法是在电磁仿真中给比特节点设一个虚拟端口，断开后由该端口的反射系数 $S_{33}$ 提取比特看向环境的输入阻抗，代入 $T_1=1/\gamma^{\mathrm{Purcell}}$ 直接得到"仅考虑 Purcell 耗散"的比特寿命谱，从而把保护效果量化为 $T_1$ 上限随频率的曲线。仿真中发现两个需要规避的效应：滤波器与读出总线交点处特征阻抗失配会产生驻波，在 $S_{21}$ 谱上形成透射峰，若落在比特频段反而会增强 Purcell 效应，需通过选择节点间距（如 5.6–7.6 mm）把这些峰移出比特频段；滤波器中央导带线宽 $W$ 增大则保护带宽增大，$W=20\ \mu\mathrm{m}$、两滤波器长度差 $\delta l=0.5\ \mathrm{mm}$ 时毫秒保护带宽达 1 GHz，但 $|\delta l|$ 过大会显著降低 $T_1$ 峰值，故实用设计常取 $\delta l=0$。
+Purcell 滤波器的仿真验证不能只算 $S$ 参数：文献 14 的做法是在电磁仿真中给比特节点设一个虚拟端口，断开后由该端口的反射系数 $S_{33}$ 提取比特看向环境的输入阻抗，代入 $T_1=1/\gamma^{\mathrm{Purcell}}$ 直接得到"仅考虑 Purcell 耗散"的比特寿命谱，从而把保护效果量化为 $T_1$ 上限随频率的曲线。仿真中发现两个需要规避的效应：滤波器与读出总线交点处特征阻抗失配会产生驻波，在 $S_{21}$ 谱上形成透射峰，若落在比特频段反而会增强 Purcell 效应，需通过选择节点间距（如 5.6–7.6 mm）把这些峰移出比特频段；滤波器中央导带线宽 $W$ 增大则保护带宽增大，$W=20\ \mu\mathrm{m}$、两滤波器长度差 $\delta l=0.5\ \mathrm{mm}$ 时毫秒保护带宽达 1 GHz，但 $|\delta l|$ 过大会显著降低 $T_1$ 峰值，故实用设计常取 $\delta l=0$。
 
-实测方面，段鹏 2022 的开路 $\lambda/4$ 带阻滤波器芯片（一条滤波器供线耦合 5 个读取谐振腔）第一轮测试 $S_{21}$ 谱紊乱，归因于滤波器与总线交点处电流大、磁场能量密度高，在地平面引起局域环流串扰；在附近地平面做密集跨结构引线键合（wire-bonding）后，测得比特频段与腔频段之间隔离度大于 20 dB 的带宽超过 1 GHz，与仿真相符。孔伟成 2018 给出了两种替代实现：五段式阻抗变换线滤波器，单独成芯片接在量子芯片各信号通道入口，实测 5.8–6.8 GHz 导通带（放读取腔频率）与以 4.2 GHz 为中心隔离带之间隔离度达 30 dB、插损 $<3$ dB 且直流直通（可兼作 flux 控制线的低通滤波）；以及可与比特共芯片集成的半波长谐振腔式滤波器，实现 6.58 GHz 导通带、400 MHz 的 3 dB 带宽、5–6 GHz 内隔离度 $>20$ dB。配合屏蔽与滤波环境改造，transmon 平均 $T_1$ 从约 $0.6\ \mu\mathrm{s}$ 提高到 $5\ \mu\mathrm{s}$。此外，为每个读取腔配置独立的 Purcell 滤波器还能抑制多比特频分复用读取中的[[readout-measurement/readout-crosstalk|读取串扰]]。
+实测方面，文献 14 的开路 $\lambda/4$ 带阻滤波器芯片（一条滤波器供线耦合 5 个读取谐振腔）第一轮测试 $S_{21}$ 谱紊乱，归因于滤波器与总线交点处电流大、磁场能量密度高，在地平面引起局域环流串扰；在附近地平面做密集跨结构引线键合（wire-bonding）后，测得比特频段与腔频段之间隔离度大于 20 dB 的带宽超过 1 GHz，与仿真相符。文献 9 给出了两种替代实现：五段式阻抗变换线滤波器，单独成芯片接在量子芯片各信号通道入口，实测 5.8–6.8 GHz 导通带（放读取腔频率）与以 4.2 GHz 为中心隔离带之间隔离度达 30 dB、插损 $<3$ dB 且直流直通（可兼作 flux 控制线的低通滤波）；以及可与比特共芯片集成的半波长谐振腔式滤波器，实现 6.58 GHz 导通带、400 MHz 的 3 dB 带宽、5–6 GHz 内隔离度 $>20$ dB。配合屏蔽与滤波环境改造，transmon 平均 $T_1$ 从约 $0.6\ \mu\mathrm{s}$ 提高到 $5\ \mu\mathrm{s}$。此外，为每个读取腔配置独立的 Purcell 滤波器还能抑制多比特频分复用读取中的[[readout-measurement/readout-crosstalk|读取串扰]]。
 
 ## 带通与带阻的比较
 
-文献中的 Purcell 滤波器多属带通型（短路 $\lambda/4$ 或 $\lambda/2$ 谐振器作为通带）：对比特频率的保护范围更大，但腔频附近通带一般只有约 200 MHz，限制了可频分复用挂载的读取腔数目；且输入端的串联电容使腔泄漏的信号 99.9% 从输出端流出（对称结构则有一半信号流回输入端而损失，降低测量量子效率）。段鹏 2022 提出的开路 $\lambda/4$ 带阻型方案对比特的保护范围相对较小，但腔频通带很宽、阻带内 Purcell 耗散率更低，适合比特频率调节范围有限（固定耦合样品约 1 GHz 以内、可调耦合样品仅数百 MHz）而需要大复用规模的架构；在该论文比较分析的 8 种等效电路设计中，还可以在带通方案的基础上于输入/输出端叠加带阻枝节，或在带阻方案上并联多个滤波器，以兼顾保护带宽、通带宽度与信号方向性。
+文献中的 Purcell 滤波器多属带通型（短路 $\lambda/4$ 或 $\lambda/2$ 谐振器作为通带）：对比特频率的保护范围更大，但腔频附近通带一般只有约 200 MHz，限制了可频分复用挂载的读取腔数目；且输入端的串联电容使腔泄漏的信号 99.9% 从输出端流出（对称结构则有一半信号流回输入端而损失，降低测量量子效率）。文献 14 提出的开路 $\lambda/4$ 带阻型方案对比特的保护范围相对较小，但腔频通带很宽、阻带内 Purcell 耗散率更低，适合比特频率调节范围有限（固定耦合样品约 1 GHz 以内、可调耦合样品仅数百 MHz）而需要大复用规模的架构；在该论文比较分析的 8 种等效电路设计中，还可以在带通方案的基础上于输入/输出端叠加带阻枝节，或在带阻方案上并联多个滤波器，以兼顾保护带宽、通带宽度与信号方向性。
 
 ## 与其他概念的关系
 
@@ -147,17 +147,17 @@ Purcell 滤波器的仿真验证不能只算 $S$ 参数：段鹏 2022 的做法�
 
 ## 论文依据
 
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 7–8：设计新型 Purcell 带阻滤波器以提高比特寿命上限并支持快速读出（论文创新点摘要）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 66–67：Purcell 效应对读出参数的约束 $T_1^{\mathrm{Purcell}}=2\pi\Delta^2/\kappa g^2\simeq2\pi\alpha/\kappa\chi$ 与 Purcell 极限 $\kappa|\chi|\leqslant\pi|\alpha|/T_1$（式 2.52），滤波器使该限制不复存在。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 76：Purcell 效应的提出（1946）、Purcell 速率定义及引入滤波电路的动机。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 78–81：串并联 $RLC$ 与开路/短路 $\lambda/4$ 传输线的等效电路、读取腔外部耗散率 $\kappa_r=\omega_r^3C_k^2R_LZ_r$（7 GHz、10 fF 对应约 3.4 MHz）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 81–83：缀饰态图像与 Purcell 耗散率 $\gamma\simeq\kappa_r g^2/\Delta^2$（式 3.27）、电路表述 $\gamma=2\pi\mathrm{Re}[Y_q(\omega_q)]/C_q$（式 3.28）、阻抗比公式（式 3.29）、开路 $\lambda/4$ 滤波器的抑制比 $\Delta_r^2/\Delta_q^2$（式 3.33）与保护带宽 $\Gamma_{100}=\Delta_r/5$（式 3.34，400 MHz 算例）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 83–84：滤波器对读取腔等效耦合 $Q$ 值的影响，$Q_{\mathrm{eff}}$ 公式（式 3.38）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 85–87：仿真电路与参数表（$\omega_r/2\pi=7.316$ GHz、$\omega_q/2\pi=4.6$ GHz、$\omega_F/2\pi=4.65$ GHz、$Q_C\approx2275$）、虚拟端口 $S_{33}$ 提取 $T_1$ 的方法、线宽 $W$ 与长度差 $\delta l$ 的优化、毫秒保护带宽 1 GHz；实验测得 20 dB 隔离度带宽超过 1 GHz 及引线键合消除地平面环流串扰。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 88–89：8 种滤波器等效电路的比较，带通型约 200 MHz 通带限制、带阻型特点与 99.9% 输出方向性分析。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 133：每个读取腔设置独立 Purcell 滤波器可有效抑制读取串扰。
-- [[sources/kong-weicheng-2018|孔伟成 2018]]，PDF p. 54：Purcell 效应限制 $\gamma_\kappa=\kappa(g/\Delta_{01})^2\sim2\pi\times10\ \mathrm{kHz}$ 与电路模型 $T_1=C_q/\mathrm{Re}[Y(\omega_q)]$。
-- [[sources/kong-weicheng-2018|孔伟成 2018]]，PDF pp. 78–80：Purcell filter 作为量子功能芯片的定位、带通滤波器下腔有效线宽公式（式 3.4.1，$\kappa_{\mathrm{ext}}$ 由 $2\pi\times3$ MHz 提升至 $2\pi\times30$ MHz）、五段式阻抗变换线滤波器实测 30 dB 隔离度与直流直通特性。
-- [[sources/kong-weicheng-2018|孔伟成 2018]]，PDF pp. 80–83：半波长谐振腔式滤波器设计（6.58 GHz 导通带、400 MHz 的 3 dB 带宽、插损 $<0.002$ dB、5–6 GHz 隔离度 $>20$ dB）及对端口阻抗波动的鲁棒性仿真。
-- [[sources/kong-weicheng-2018|孔伟成 2018]]，PDF p. 7：引入 Purcell filter 与 J-Amp 后 transmon 平均 $T_1$ 由约 $0.6\ \mu\mathrm{s}$ 提高至 $5\ \mu\mathrm{s}$（摘要）。
-- [[sources/lin-ting-2022|林霆 2022]]，PDF p. 60：半导体量子点–腔弱杂化区的谱线展宽即 Purcell 效应。
+- [[sources/ref-14|文献 14]]，PDF pp. 7–8：设计新型 Purcell 带阻滤波器以提高比特寿命上限并支持快速读出（论文创新点摘要）。
+- [[sources/ref-14|文献 14]]，PDF pp. 66–67：Purcell 效应对读出参数的约束 $T_1^{\mathrm{Purcell}}=2\pi\Delta^2/\kappa g^2\simeq2\pi\alpha/\kappa\chi$ 与 Purcell 极限 $\kappa|\chi|\leqslant\pi|\alpha|/T_1$（式 2.52），滤波器使该限制不复存在。
+- [[sources/ref-14|文献 14]]，PDF p. 76：Purcell 效应的提出（1946）、Purcell 速率定义及引入滤波电路的动机。
+- [[sources/ref-14|文献 14]]，PDF pp. 78–81：串并联 $RLC$ 与开路/短路 $\lambda/4$ 传输线的等效电路、读取腔外部耗散率 $\kappa_r=\omega_r^3C_k^2R_LZ_r$（7 GHz、10 fF 对应约 3.4 MHz）。
+- [[sources/ref-14|文献 14]]，PDF pp. 81–83：缀饰态图像与 Purcell 耗散率 $\gamma\simeq\kappa_r g^2/\Delta^2$（式 3.27）、电路表述 $\gamma=2\pi\mathrm{Re}[Y_q(\omega_q)]/C_q$（式 3.28）、阻抗比公式（式 3.29）、开路 $\lambda/4$ 滤波器的抑制比 $\Delta_r^2/\Delta_q^2$（式 3.33）与保护带宽 $\Gamma_{100}=\Delta_r/5$（式 3.34，400 MHz 算例）。
+- [[sources/ref-14|文献 14]]，PDF pp. 83–84：滤波器对读取腔等效耦合 $Q$ 值的影响，$Q_{\mathrm{eff}}$ 公式（式 3.38）。
+- [[sources/ref-14|文献 14]]，PDF pp. 85–87：仿真电路与参数表（$\omega_r/2\pi=7.316$ GHz、$\omega_q/2\pi=4.6$ GHz、$\omega_F/2\pi=4.65$ GHz、$Q_C\approx2275$）、虚拟端口 $S_{33}$ 提取 $T_1$ 的方法、线宽 $W$ 与长度差 $\delta l$ 的优化、毫秒保护带宽 1 GHz；实验测得 20 dB 隔离度带宽超过 1 GHz 及引线键合消除地平面环流串扰。
+- [[sources/ref-14|文献 14]]，PDF pp. 88–89：8 种滤波器等效电路的比较，带通型约 200 MHz 通带限制、带阻型特点与 99.9% 输出方向性分析。
+- [[sources/ref-14|文献 14]]，PDF p. 133：每个读取腔设置独立 Purcell 滤波器可有效抑制读取串扰。
+- [[sources/ref-09|文献 9]]，PDF p. 54：Purcell 效应限制 $\gamma_\kappa=\kappa(g/\Delta_{01})^2\sim2\pi\times10\ \mathrm{kHz}$ 与电路模型 $T_1=C_q/\mathrm{Re}[Y(\omega_q)]$。
+- [[sources/ref-09|文献 9]]，PDF pp. 78–80：Purcell filter 作为量子功能芯片的定位、带通滤波器下腔有效线宽公式（式 3.4.1，$\kappa_{\mathrm{ext}}$ 由 $2\pi\times3$ MHz 提升至 $2\pi\times30$ MHz）、五段式阻抗变换线滤波器实测 30 dB 隔离度与直流直通特性。
+- [[sources/ref-09|文献 9]]，PDF pp. 80–83：半波长谐振腔式滤波器设计（6.58 GHz 导通带、400 MHz 的 3 dB 带宽、插损 $<0.002$ dB、5–6 GHz 隔离度 $>20$ dB）及对端口阻抗波动的鲁棒性仿真。
+- [[sources/ref-09|文献 9]]，PDF p. 7：引入 Purcell filter 与 J-Amp 后 transmon 平均 $T_1$ 由约 $0.6\ \mu\mathrm{s}$ 提高至 $5\ \mu\mathrm{s}$（摘要）。
+- [[sources/ref-17|文献 17]]，PDF p. 60：半导体量子点–腔弱杂化区的谱线展宽即 Purcell 效应。

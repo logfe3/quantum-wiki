@@ -27,7 +27,7 @@ $$
 
 其中 $T_J$、$T_H$、$T_R$ 分别为参量放大器、低温 HEMT、室温放大器的等效噪声温度，$G_J$、$G_H$ 为各级增益。当 $G_J \gtrsim 15\ \mathrm{dB}$、$T_J \approx 150\ \mathrm{mK}$ 时，链路噪声主要被首级参量放大器自身决定，这是为什么读出实验要花大力气优化 JPA / IMPA 的原因。
 
-按"是否同时放大两个正交分量"，参量放大器分为**保相（phase-preserving）**与**相敏（phase-sensitive）**两类；按"使用一个还是两个非线性元件"，又有 SQUID 或 SQUID 阵列构成的**谐振式参量放大器（JPA / IMPA）**与非线性传输线构成的**行波参量放大器（JTWPA / KIPA）**两类。本文重点放在超导量子比特读出中最常见的前者，并以段鹏 2022 论文第四章的工作作为主线。
+按"是否同时放大两个正交分量"，参量放大器分为**保相（phase-preserving）**与**相敏（phase-sensitive）**两类；按"使用一个还是两个非线性元件"，又有 SQUID 或 SQUID 阵列构成的**谐振式参量放大器（JPA / IMPA）**与非线性传输线构成的**行波参量放大器（JTWPA / KIPA）**两类。本文重点放在超导量子比特读出中最常见的前者，并以文献 14 论文第四章的工作作为主线。
 
 <!-- FIGURE: 典型低温读出链路：比特腔反射 → 20 mK 冷盘定向耦合器 → 20 mK JPA/IMPA → 4 K HEMT → 室温放大器；标出每级温度、增益与噪声贡献 -->
 
@@ -151,7 +151,7 @@ $$
 \eta = \eta_{\mathrm{col}} \eta_{\mathrm{amp}},\qquad \eta_{\mathrm{amp}} = \frac{1}{N_a + 1},
 $$
 
-其中 $\eta_{\mathrm{col}}$ 是腔光子经衰减、损耗后到达放大器输入端口的比例，$\eta_{\mathrm{amp}}$ 只取决于放大器的附加噪声光子数。保相参量放大器 $N_a = 0.5$ 给出 $\eta_{\mathrm{amp}} = 2/3$，相敏参量放大器则可达到 $\eta_{\mathrm{amp}} = 1$。段鹏 2022 论文第二章 §2.2.4 进一步指出，量子效率也可以从信息论角度解读为
+其中 $\eta_{\mathrm{col}}$ 是腔光子经衰减、损耗后到达放大器输入端口的比例，$\eta_{\mathrm{amp}}$ 只取决于放大器的附加噪声光子数。保相参量放大器 $N_a = 0.5$ 给出 $\eta_{\mathrm{amp}} = 2/3$，相敏参量放大器则可达到 $\eta_{\mathrm{amp}} = 1$。文献 14 论文第二章 §2.2.4 进一步指出，量子效率也可以从信息论角度解读为
 
 $$
 \lim_{t \to \infty} \frac{\Gamma_m}{2\Gamma_d} = \eta,
@@ -219,7 +219,7 @@ $$
 
 ### 窄带宽 JPA 的实测特性
 
-段鹏 2022 论文 §4.3 给出的代表器件参数：电容 $C = 3.4\ \mathrm{pF}$、SQUID 临界电感 $L_J = 80\ \mathrm{pH}$、SQUID 几何电感 $L_S \approx 15\ \mathrm{pH}$，对应最大谐振频率 $f_{\max} = 1/[2\pi\sqrt{(L_J + L_S)C}] \approx 8.85\ \mathrm{GHz}$。芯片工艺采用光刻剥离工艺的 4 层结构（地平面 / $\mathrm{SiO}_2$ 介质 / 电容上极板 / 双角度斜蒸发 SQUID），相对简单。带宽按 $\Gamma_{\mathrm{BW}} \propto \kappa \propto 1/C$ 估算在几十 MHz 量级。
+文献 14 论文 §4.3 给出的代表器件参数：电容 $C = 3.4\ \mathrm{pF}$、SQUID 临界电感 $L_J = 80\ \mathrm{pH}$、SQUID 几何电感 $L_S \approx 15\ \mathrm{pH}$，对应最大谐振频率 $f_{\max} = 1/[2\pi\sqrt{(L_J + L_S)C}] \approx 8.85\ \mathrm{GHz}$。芯片工艺采用光刻剥离工艺的 4 层结构（地平面 / $\mathrm{SiO}_2$ 介质 / 电容上极板 / 双角度斜蒸发 SQUID），相对简单。带宽按 $\Gamma_{\mathrm{BW}} \propto \kappa \propto 1/C$ 估算在几十 MHz 量级。
 
 低温测试时两级环形器隔离输入/反射信号，反射信号经 4 K HEMT（约 40 dB）和室温放大器（约 55 dB）两级放大后到频谱仪或网络分析仪。完整测量流程为：(1) 测调制谱确认样品正常、(2) 粗扫工作参数（信号频率、磁通偏置、泵浦频率/功率）、(3) 精细调参提取带宽、(4) 测饱和功率、(5) 用 $\Delta\mathrm{SNR}$ 法推算噪声温度。定义"增益工作带宽"为**增益不小于 $15\ \mathrm{dB}$ 的最大连续频率范围**（有别于峰值半高宽定义），以实用为导向。论文报告该 JPA 工作带宽约 $50\ \mathrm{MHz}$、饱和信号输入功率约 $-20\ \mathrm{dBm}$（算上 $-101\ \mathrm{dB}$ 线路衰减后总饱和输入 $-121\ \mathrm{dBm}$）、工作带宽范围内噪声接近量子极限。
 
@@ -280,7 +280,7 @@ $$
 工程实现上有两条路：
 
 - **片外 PCB 板方案**：把阻抗变换器印刷在 PCB 上，用约 $10\ \mathrm{cm}$ 长低温同轴线与样品相连。优点是 JPA 与阻抗变换器可独立筛选、商业 PCB 工艺成熟；缺点是商用 PCB 板导带线宽在毫米量级，与高频波长相当，一维传输线模型可能失效、并激发杂散模。基底介电常数大的板材时域阻抗测量更清晰（高 $\varepsilon_r$ 可减小中央导带线宽比）。
-- **片上集成方案**：把阻抗变换器与 JPA 集成在同一芯片上（用第一层大结构工艺即可制备），规避了上述问题。但**引线键合（wire bonding）的等效电感**对片上方案影响很大——$1\ \mathrm{mm}$ 长铝线电感约 $1\ \mathrm{nH}$，对片上方案而言相当于把 $R_L$ 替换为 $R_L + i(\omega+\Omega_p/2)L_{\mathrm{wb}}$，使实部虚部都偏离设计值；片外方案因为引线电感位于 JPA 与 $\lambda/2$ 段之间，相当于在 $Z_{\mathrm{in}}$ 上加 $i\omega L_{\mathrm{wb}}$，影响相对小。段鹏 2022 仿真显示片上方案 $L_{\mathrm{wb}} = 1\ \mathrm{nH}$ 时 6–7 GHz 范围内都不能达到设计目标，$L_{\mathrm{wb}} = 0.4\ \mathrm{nH}$ 时才接近理想情况，因此实验上必须优化封装体设计、缩短引线并多线并联以减小总电感。
+- **片上集成方案**：把阻抗变换器与 JPA 集成在同一芯片上（用第一层大结构工艺即可制备），规避了上述问题。但**引线键合（wire bonding）的等效电感**对片上方案影响很大——$1\ \mathrm{mm}$ 长铝线电感约 $1\ \mathrm{nH}$，对片上方案而言相当于把 $R_L$ 替换为 $R_L + i(\omega+\Omega_p/2)L_{\mathrm{wb}}$，使实部虚部都偏离设计值；片外方案因为引线电感位于 JPA 与 $\lambda/2$ 段之间，相当于在 $Z_{\mathrm{in}}$ 上加 $i\omega L_{\mathrm{wb}}$，影响相对小。文献 14 仿真显示片上方案 $L_{\mathrm{wb}} = 1\ \mathrm{nH}$ 时 6–7 GHz 范围内都不能达到设计目标，$L_{\mathrm{wb}} = 0.4\ \mathrm{nH}$ 时才接近理想情况，因此实验上必须优化封装体设计、缩短引线并多线并联以减小总电感。
 
 ### 测量线路的实际影响
 
@@ -290,20 +290,20 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 设计电容 $C$ | $3.4\ \mathrm{pF}$（JPA）；$3\ \mathrm{pF}$（IMPA 设计基准） | 段鹏 2022 |
-| SQUID 临界电感 $L_J$ | $80\ \mathrm{pH}$ | 段鹏 2022 |
-| SQUID 几何电感 $L_S$ | $\approx 15\ \mathrm{pH}$ | 段鹏 2022 |
-| 最大谐振频率 $f_{\max}$ | $8.85\ \mathrm{GHz}$ | 段鹏 2022 |
-| 阻抗变换器频率 $f_t$ | $6.8\ \mathrm{GHz}$ | 段鹏 2022 |
-| 阻抗变换器特征阻抗 $Z_{\lambda/4}$、$Z_{\lambda/2}$ | $33\ \Omega$、$60\ \Omega$（理论设计基准） | 段鹏 2022 |
-| 阻抗匹配线性虚部系数 $\alpha$ | 由 $\omega_t$、$C$、$Z_{\lambda/2}$、$Z_{\lambda/4}$ 决定（公式 4.57） | 段鹏 2022 |
-| 增益工作带宽定义 | $G \geqslant 15\ \mathrm{dB}$ 的最大连续频率范围 | 段鹏 2022 |
-| JPA 工作带宽 | $\sim 50\ \mathrm{MHz}$（$\kappa$ 几十 MHz） | 段鹏 2022 |
-| JPA 饱和信号输入功率 | $-20\ \mathrm{dBm}$（片上）；$-121\ \mathrm{dBm}$（含 $-101\ \mathrm{dB}$ 线缆衰减） | 段鹏 2022 |
-| IMPA 实测带宽 | $> 600\ \mathrm{MHz}$（15 dB 增益下） | 段鹏 2022 |
-| IMPA 饱和信号输入功率 | $\sim -110\ \mathrm{dBm}$ | 段鹏 2022 |
-| 等效噪声温度 $T_J$ | $\sim 150\ \mathrm{mK}$（量子极限 $\hbar\omega/2 k_B$ 量级） | 段鹏 2022 |
-| 链路等效输入温度 | $T_{\mathrm{eff}} = T_J + T_H/G_J + \cdots$ | 段鹏 2022 |
+| 设计电容 $C$ | $3.4\ \mathrm{pF}$（JPA）；$3\ \mathrm{pF}$（IMPA 设计基准） | 文献 14 |
+| SQUID 临界电感 $L_J$ | $80\ \mathrm{pH}$ | 文献 14 |
+| SQUID 几何电感 $L_S$ | $\approx 15\ \mathrm{pH}$ | 文献 14 |
+| 最大谐振频率 $f_{\max}$ | $8.85\ \mathrm{GHz}$ | 文献 14 |
+| 阻抗变换器频率 $f_t$ | $6.8\ \mathrm{GHz}$ | 文献 14 |
+| 阻抗变换器特征阻抗 $Z_{\lambda/4}$、$Z_{\lambda/2}$ | $33\ \Omega$、$60\ \Omega$（理论设计基准） | 文献 14 |
+| 阻抗匹配线性虚部系数 $\alpha$ | 由 $\omega_t$、$C$、$Z_{\lambda/2}$、$Z_{\lambda/4}$ 决定（公式 4.57） | 文献 14 |
+| 增益工作带宽定义 | $G \geqslant 15\ \mathrm{dB}$ 的最大连续频率范围 | 文献 14 |
+| JPA 工作带宽 | $\sim 50\ \mathrm{MHz}$（$\kappa$ 几十 MHz） | 文献 14 |
+| JPA 饱和信号输入功率 | $-20\ \mathrm{dBm}$（片上）；$-121\ \mathrm{dBm}$（含 $-101\ \mathrm{dB}$ 线缆衰减） | 文献 14 |
+| IMPA 实测带宽 | $> 600\ \mathrm{MHz}$（15 dB 增益下） | 文献 14 |
+| IMPA 饱和信号输入功率 | $\sim -110\ \mathrm{dBm}$ | 文献 14 |
+| 等效噪声温度 $T_J$ | $\sim 150\ \mathrm{mK}$（量子极限 $\hbar\omega/2 k_B$ 量级） | 文献 14 |
+| 链路等效输入温度 | $T_{\mathrm{eff}} = T_J + T_H/G_J + \cdots$ | 文献 14 |
 | JTWPA 饱和信号输入功率 | 足以同时读取约 20 个超导量子比特（一般综述） | Macklin 2015 等 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
@@ -333,7 +333,7 @@ $$
 
 读出链路把多个比特腔频分复用（frequency-division multiplexing, FDM）到同一条数据总线：每比特分配一个独立的腔频率 $f_i$，微波源产生的载波经任意波形发生器（AWG）给出的中频（IF）信号调制后通过混频器下变频到比特腔频率；反射信号经同一总线取出，再用同一本振混频上变频为 IF，由 ADC 采集后做数字正交 $IQ$ 解调、低通 FIR 滤波、匹配滤波（权重取 $|0\rangle$、$|1\rangle$ 两态均值的差）后给出最终 $I$、$Q$。整个链路对 IMPA 提出的要求就是：**足够宽的工作带宽**（覆盖所有比特腔）、**足够高的饱和功率**（不被最强比特饱和）、**足够低的附加噪声**（让所有比特 $\eta_{\mathrm{amp}} \to 1$）。
 
-段鹏 2022 §4.4.4 报告在六比特超导量子芯片上，使用 IMPA 后 $|\,0\rangle$ 态读取保真度最高可达 $99.52\%$、$|\,1\rangle$ 态最高 $97\%$，平均读取保真度最高 $98.14\%$，单次读取时间 $300$–$500\ \mathrm{ns}$。各比特的态分离错误率均在 $1\%$ 以内（除 Q6 因腔频位于 IMPA 增益带边、信噪比仅 $3.01$ 而态分离错误率达 $3.33\%$），分离错误率占总错误的比重大，说明首要瓶颈是信噪比而非态制备或弛豫。
+文献 14 §4.4.4 报告在六比特超导量子芯片上，使用 IMPA 后 $|\,0\rangle$ 态读取保真度最高可达 $99.52\%$、$|\,1\rangle$ 态最高 $97\%$，平均读取保真度最高 $98.14\%$，单次读取时间 $300$–$500\ \mathrm{ns}$。各比特的态分离错误率均在 $1\%$ 以内（除 Q6 因腔频位于 IMPA 增益带边、信噪比仅 $3.01$ 而态分离错误率达 $3.33\%$），分离错误率占总错误的比重大，说明首要瓶颈是信噪比而非态制备或弛豫。
 
 <!-- FIGURE: 六比特读取结果图：六个 IQ 圆斑分别对应 Q1–Q6 状态聚类，标注 SNR、态分离错误率 E_sep 与总错误率 E -->
 
@@ -346,7 +346,7 @@ $$
 - **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；
 - **Floquet 模式 TWPA**：把泵浦分解为周期调制的"模式"，可在更低泵浦功率下获得高增益。
 
-对段鹏 2022 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
+对文献 14 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
 
 ## 与其他概念的关系
 
@@ -367,26 +367,26 @@ $$
 
 ## 论文依据
 
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 7–8：基于共面波导阻抗变换器的三波混频宽带参量放大器（IMPA）实现 15 dB 以上增益与 600 MHz 带宽，用于多比特高保真读出（论文创新点摘要）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 64–65：量子效率 $\eta = \eta_{\mathrm{col}} \eta_{\mathrm{amp}}$ 的分解（相敏 $\eta_{\mathrm{amp}} = 1/(N_a + 1)$，保相 $\eta_{\mathrm{amp}} = 2/(2 N_a + 1)$）与信息论解读 $\lim_{t\to\infty}\Gamma_m/(2\Gamma_d) = \eta$（公式 2.50）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 93：第 4 章导论，参量放大器的量子极限噪声决定量子效率、保相 $N_a = 0.5$、相敏 $N_a = 0$，JPA 增益带宽一般仅几十 MHz 不满足多比特联合读取，需要阻抗工程技术实现数百 MHz 带宽。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 94–95：含时二次哈密顿量（公式 4.1）、旋转表象下有效哈密顿量（公式 4.2）、量子朗之万方程（公式 4.3–4.4）与量子输入输出关系，导出非简并模式信号增益公式 $G_S(\omega)$（公式 4.13）、峰值 $G_{\max}$（公式 4.14）与 $-3\ \mathrm{dB}$ 带宽 $\Gamma_{\mathrm{BW}} \approx \kappa/(2\sqrt{G_{\max}})$（公式 4.15）——谐振式参量放大器增益–带宽乘积极限的来源。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 96–97：简并模式（$\Delta = 0$）光场算符分解为两个正交分量（公式 4.16），增益 $G_\parallel G_\perp = 1$（公式 4.19），单模光场压缩态原理，与相敏/保相放大的对应关系。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 97：量子极限噪声的两种来源——保相放大器对应海森堡不确定性原理（同时放大两个不对易正交分量必须引入额外噪声），相敏放大器 $N_a = 0$，Caves 1982 量子极限证明。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 97–98：磁通泵浦 JPA 等效电路、SQUID 调制 $E_J(\Phi_{\mathrm{ext}}) = E_J^\Sigma|\cos(\pi\Phi_{\mathrm{ext}}/\Phi_0)|$、$\hat{H} = 4E_C \hat{n}^2 - E_J \cos\hat{\varphi}$，外磁通驱动展开到一阶后有效泵浦 $\lambda_f = \omega_a \varphi_{\mathrm{AC}} \tan\varphi_{\mathrm{DC}}/4$（公式 4.27），泵浦频率等于系统谐振频率两倍——三波混频条件 $\omega_S + \omega_I = \Omega_p$（实验室系）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 98–99：直接泵浦 JPA transmon 类哈密顿量 $\hat{H} = \hbar\tilde{\omega}_a \hat{a}^\dagger \hat{a} + \hbar (K/2) \hat{a}^\dagger \hat{a}^\dagger \hat{a}\hat{a}$（公式 4.28），自科尔系数 $K = -E_C/\hbar$；稳态三次方程 $\xi^2 n^3 + 2\nu\xi n^2 + (\nu^2 + 1/4)n = 1$（公式 4.33）以及临界驱动 $\xi_{\mathrm{crit}} = 1/(3\sqrt{3})$、$\nu_{\mathrm{crit}} = \sqrt{3}/2$，有效泵浦 $\lambda_d = -K|\alpha|^2$、$\Delta_d = \Delta - 2\lambda_d$（公式 4.37）——四波混频条件 $\omega_S + \omega_I = 2\Omega_p$；反射泵浦需用定向耦合器加反相信号抵消。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 100：饱和信号输入功率的物理来源——磁通泵浦高阶项使等效泵浦失谐随信号光子数变化、直接泵浦信号项 $-K\langle\delta\hat{a}^\dagger \delta\hat{a}\rangle$ 也使失谐偏移，以及从能量角度看的泵浦耗散（pump depletion）；减小自科尔系数绝对值是提升饱和功率的常用手段。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 101–102：窄带宽 JPA 设计参数 $C = 3.4\ \mathrm{pF}$、$L_J = 80\ \mathrm{pH}$、$L_S \approx 15\ \mathrm{pF}$、$f_{\max} = 8.85\ \mathrm{GHz}$，4 层光刻剥离工艺，常温隧穿电压 $V_g \approx 0.316\ \mathrm{mV}$、常态电阻 $R_n \approx 60\ \Omega$ 筛选标准；增益带宽–饱和功率三角约束。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 103：低温测量链路（JPA + 两级环形器 + 4 K HEMT + 室温放大器）、链路等效输入温度 $T_{\mathrm{eff}}$（公式 4.39）、$G_J \geqslant 15\ \mathrm{dB}$ 时链路噪声由 JPA 自身决定的"增益工作带宽"实用定义。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 103–104：单端口反射谱 $S_{21}$（公式 4.41），内部损耗率 $\gamma$ 与端口耦合耗散率 $\kappa$ 的区分，调制谱扫磁通偏置确认样品可调性（$f_a$ 随 $\varphi_{\mathrm{DC}}$ 周期性变化，可调范围 $>4$–$8\ \mathrm{GHz}$）。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 104–105：噪声温度 $\Delta\mathrm{SNR}$ 法（公式 4.42）、系统输入温度 $T_{\mathrm{sys}}$（公式 4.43）；典型实测：JPA 工作带宽约 $50\ \mathrm{MHz}$、$15\ \mathrm{dB}$ 工作带宽内噪声接近量子极限。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 106–107：基于阻抗变换的宽带放大器（IMPA）必要性——JPA 仅几十 MHz 带宽与较低饱和功率无法满足多比特联合读取；JTWPA 需制备上千个近一致约瑟夫森结模块（工艺门槛高），IMPA 是更具普适性的替代方案。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 107–108：非马尔科夫量子朗之万方程、自能修正后的磁化率矩阵 $\chi^{-1}(\omega)$（公式 4.44–4.45），增益公式 $G(\omega) = |1 - \kappa_1 \chi_{11}(\omega)|^2$（公式 4.46）；环境阻抗 $Z_{\mathrm{in}}(\omega) = R + i\alpha\omega$ 抵消频率相关项使增益平坦。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 108–110：阻抗匹配条件 $\alpha^2 C (\Delta_f^2 - \lambda_f^2) + \alpha - C R^2 = 0$（公式 4.51）及解 $\alpha_{\mathrm{opt}}$（公式 4.52）；满足条件时带宽 $\Gamma_{\mathrm{BW}} \approx \kappa_0 G_0^{-1/4}$（公式 4.54）。共面波导阻抗变换器结构（$\lambda/4 + \lambda/2$）与变换公式（公式 4.55–4.57）；筛选排除法设计参数组合 $C$、$Z_{\lambda/2}$、$Z_{\lambda/4}$，目标 $G_{\min} = 18\ \mathrm{dB}$、$\Gamma_{\min} = 400\ \mathrm{MHz}$ 算例给出 $G_0 = 22.7\ \mathrm{dB}$、$\Gamma_{\mathrm{BW}}/2\pi = 600\ \mathrm{MHz}$。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 110–112：参数误差容忍度分析（$Z_{\lambda/4}$ 降到 $32\ \Omega$ 以内可使电容误差容忍度从 $0.5\ \mathrm{pF}$ 提升到 $1\ \mathrm{pF}$ 以上），以及工作点策略 $\lambda_f = \max(\lambda_{\min}, \sqrt{\beta})$——选择最小值可在达到设计目标的同时获得最大带宽并降低泵浦噪声。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 113：片外与片上阻抗变换方案设计——片外方案 JPA 与阻抗变换器可独立筛选、PCB 工艺成熟但毫米级线宽与高频波长相当可能激发杂散模；片上方案集成度高、与 JPA 工艺完全兼容但引线键合电感（$1\ \mathrm{mm} \approx 1\ \mathrm{nH}$）对片上方案影响极大：仿真显示 $L_{\mathrm{wb}} = 0.4\ \mathrm{nH}$ 才接近理想情况。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 113–115：实际测量线路环境阻抗的影响——环形器端口阻抗存在明显感抗振荡、连接线缆长度改变驻波周期，必须对环形器逐端口筛选、微调泵浦频率避开振荡峰；阻抗随频率小波纹反映到增益曲线中会出现振荡。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 117–118：IMPA 低温表征流程（与 JPA 类似，但第二步 $\delta$ 步长更大、$10\to 50\to 100\to 150\ \mathrm{MHz}$）、片上方案实测结果：以 $6.85\ \mathrm{GHz}$ 为中心、$15\ \mathrm{dB}$ 工作带宽超过 $600\ \mathrm{MHz}$、饱和输入功率约 $-110\ \mathrm{dBm}$、工作带宽内噪声达到量子极限。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 119：IMPA 工作频率可调性——样品 A（片上）与 B（片外）工作频率可在几百 MHz 范围内调节，加上宽带宽特性，IMPA 增益频段实际覆盖宽度可达 GHz 量级。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF pp. 119–120：多比特读取实验结果——IMPA 用于六比特超导量子芯片，读取时间 $300$–$500\ \mathrm{ns}$，$|\,0\rangle$ 态保真度最高 $99.52\%$、$|\,1\rangle$ 态最高 $97\%$，各比特态分离错误率多在 $1\%$ 以内（Q6 因腔频在带边为 $3.33\%$），平均读取错误率优于部分量子优越性实验。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 120：第 4 章小结——IMPA 实现 $>15\ \mathrm{dB}$ 增益、$>600\ \mathrm{MHz}$ 工作带宽、$\sim -110\ \mathrm{dBm}$ 饱和功率与量子极限噪声；六比特最高保真度 $98.14\%$、最低 $95.05\%$；JTWPA 在 GHz 量级带宽与更高饱和功率上有优势，但 IMPA 工艺门槛低、调试灵活，是实验室实现多比特读取的更现实路线。
+- [[sources/ref-14|文献 14]]，PDF pp. 7–8：基于共面波导阻抗变换器的三波混频宽带参量放大器（IMPA）实现 15 dB 以上增益与 600 MHz 带宽，用于多比特高保真读出（论文创新点摘要）。
+- [[sources/ref-14|文献 14]]，PDF pp. 64–65：量子效率 $\eta = \eta_{\mathrm{col}} \eta_{\mathrm{amp}}$ 的分解（相敏 $\eta_{\mathrm{amp}} = 1/(N_a + 1)$，保相 $\eta_{\mathrm{amp}} = 2/(2 N_a + 1)$）与信息论解读 $\lim_{t\to\infty}\Gamma_m/(2\Gamma_d) = \eta$（公式 2.50）。
+- [[sources/ref-14|文献 14]]，PDF p. 93：第 4 章导论，参量放大器的量子极限噪声决定量子效率、保相 $N_a = 0.5$、相敏 $N_a = 0$，JPA 增益带宽一般仅几十 MHz 不满足多比特联合读取，需要阻抗工程技术实现数百 MHz 带宽。
+- [[sources/ref-14|文献 14]]，PDF pp. 94–95：含时二次哈密顿量（公式 4.1）、旋转表象下有效哈密顿量（公式 4.2）、量子朗之万方程（公式 4.3–4.4）与量子输入输出关系，导出非简并模式信号增益公式 $G_S(\omega)$（公式 4.13）、峰值 $G_{\max}$（公式 4.14）与 $-3\ \mathrm{dB}$ 带宽 $\Gamma_{\mathrm{BW}} \approx \kappa/(2\sqrt{G_{\max}})$（公式 4.15）——谐振式参量放大器增益–带宽乘积极限的来源。
+- [[sources/ref-14|文献 14]]，PDF pp. 96–97：简并模式（$\Delta = 0$）光场算符分解为两个正交分量（公式 4.16），增益 $G_\parallel G_\perp = 1$（公式 4.19），单模光场压缩态原理，与相敏/保相放大的对应关系。
+- [[sources/ref-14|文献 14]]，PDF p. 97：量子极限噪声的两种来源——保相放大器对应海森堡不确定性原理（同时放大两个不对易正交分量必须引入额外噪声），相敏放大器 $N_a = 0$，Caves 1982 量子极限证明。
+- [[sources/ref-14|文献 14]]，PDF pp. 97–98：磁通泵浦 JPA 等效电路、SQUID 调制 $E_J(\Phi_{\mathrm{ext}}) = E_J^\Sigma|\cos(\pi\Phi_{\mathrm{ext}}/\Phi_0)|$、$\hat{H} = 4E_C \hat{n}^2 - E_J \cos\hat{\varphi}$，外磁通驱动展开到一阶后有效泵浦 $\lambda_f = \omega_a \varphi_{\mathrm{AC}} \tan\varphi_{\mathrm{DC}}/4$（公式 4.27），泵浦频率等于系统谐振频率两倍——三波混频条件 $\omega_S + \omega_I = \Omega_p$（实验室系）。
+- [[sources/ref-14|文献 14]]，PDF pp. 98–99：直接泵浦 JPA transmon 类哈密顿量 $\hat{H} = \hbar\tilde{\omega}_a \hat{a}^\dagger \hat{a} + \hbar (K/2) \hat{a}^\dagger \hat{a}^\dagger \hat{a}\hat{a}$（公式 4.28），自科尔系数 $K = -E_C/\hbar$；稳态三次方程 $\xi^2 n^3 + 2\nu\xi n^2 + (\nu^2 + 1/4)n = 1$（公式 4.33）以及临界驱动 $\xi_{\mathrm{crit}} = 1/(3\sqrt{3})$、$\nu_{\mathrm{crit}} = \sqrt{3}/2$，有效泵浦 $\lambda_d = -K|\alpha|^2$、$\Delta_d = \Delta - 2\lambda_d$（公式 4.37）——四波混频条件 $\omega_S + \omega_I = 2\Omega_p$；反射泵浦需用定向耦合器加反相信号抵消。
+- [[sources/ref-14|文献 14]]，PDF p. 100：饱和信号输入功率的物理来源——磁通泵浦高阶项使等效泵浦失谐随信号光子数变化、直接泵浦信号项 $-K\langle\delta\hat{a}^\dagger \delta\hat{a}\rangle$ 也使失谐偏移，以及从能量角度看的泵浦耗散（pump depletion）；减小自科尔系数绝对值是提升饱和功率的常用手段。
+- [[sources/ref-14|文献 14]]，PDF pp. 101–102：窄带宽 JPA 设计参数 $C = 3.4\ \mathrm{pF}$、$L_J = 80\ \mathrm{pH}$、$L_S \approx 15\ \mathrm{pF}$、$f_{\max} = 8.85\ \mathrm{GHz}$，4 层光刻剥离工艺，常温隧穿电压 $V_g \approx 0.316\ \mathrm{mV}$、常态电阻 $R_n \approx 60\ \Omega$ 筛选标准；增益带宽–饱和功率三角约束。
+- [[sources/ref-14|文献 14]]，PDF p. 103：低温测量链路（JPA + 两级环形器 + 4 K HEMT + 室温放大器）、链路等效输入温度 $T_{\mathrm{eff}}$（公式 4.39）、$G_J \geqslant 15\ \mathrm{dB}$ 时链路噪声由 JPA 自身决定的"增益工作带宽"实用定义。
+- [[sources/ref-14|文献 14]]，PDF pp. 103–104：单端口反射谱 $S_{21}$（公式 4.41），内部损耗率 $\gamma$ 与端口耦合耗散率 $\kappa$ 的区分，调制谱扫磁通偏置确认样品可调性（$f_a$ 随 $\varphi_{\mathrm{DC}}$ 周期性变化，可调范围 $>4$–$8\ \mathrm{GHz}$）。
+- [[sources/ref-14|文献 14]]，PDF pp. 104–105：噪声温度 $\Delta\mathrm{SNR}$ 法（公式 4.42）、系统输入温度 $T_{\mathrm{sys}}$（公式 4.43）；典型实测：JPA 工作带宽约 $50\ \mathrm{MHz}$、$15\ \mathrm{dB}$ 工作带宽内噪声接近量子极限。
+- [[sources/ref-14|文献 14]]，PDF pp. 106–107：基于阻抗变换的宽带放大器（IMPA）必要性——JPA 仅几十 MHz 带宽与较低饱和功率无法满足多比特联合读取；JTWPA 需制备上千个近一致约瑟夫森结模块（工艺门槛高），IMPA 是更具普适性的替代方案。
+- [[sources/ref-14|文献 14]]，PDF pp. 107–108：非马尔科夫量子朗之万方程、自能修正后的磁化率矩阵 $\chi^{-1}(\omega)$（公式 4.44–4.45），增益公式 $G(\omega) = |1 - \kappa_1 \chi_{11}(\omega)|^2$（公式 4.46）；环境阻抗 $Z_{\mathrm{in}}(\omega) = R + i\alpha\omega$ 抵消频率相关项使增益平坦。
+- [[sources/ref-14|文献 14]]，PDF pp. 108–110：阻抗匹配条件 $\alpha^2 C (\Delta_f^2 - \lambda_f^2) + \alpha - C R^2 = 0$（公式 4.51）及解 $\alpha_{\mathrm{opt}}$（公式 4.52）；满足条件时带宽 $\Gamma_{\mathrm{BW}} \approx \kappa_0 G_0^{-1/4}$（公式 4.54）。共面波导阻抗变换器结构（$\lambda/4 + \lambda/2$）与变换公式（公式 4.55–4.57）；筛选排除法设计参数组合 $C$、$Z_{\lambda/2}$、$Z_{\lambda/4}$，目标 $G_{\min} = 18\ \mathrm{dB}$、$\Gamma_{\min} = 400\ \mathrm{MHz}$ 算例给出 $G_0 = 22.7\ \mathrm{dB}$、$\Gamma_{\mathrm{BW}}/2\pi = 600\ \mathrm{MHz}$。
+- [[sources/ref-14|文献 14]]，PDF pp. 110–112：参数误差容忍度分析（$Z_{\lambda/4}$ 降到 $32\ \Omega$ 以内可使电容误差容忍度从 $0.5\ \mathrm{pF}$ 提升到 $1\ \mathrm{pF}$ 以上），以及工作点策略 $\lambda_f = \max(\lambda_{\min}, \sqrt{\beta})$——选择最小值可在达到设计目标的同时获得最大带宽并降低泵浦噪声。
+- [[sources/ref-14|文献 14]]，PDF p. 113：片外与片上阻抗变换方案设计——片外方案 JPA 与阻抗变换器可独立筛选、PCB 工艺成熟但毫米级线宽与高频波长相当可能激发杂散模；片上方案集成度高、与 JPA 工艺完全兼容但引线键合电感（$1\ \mathrm{mm} \approx 1\ \mathrm{nH}$）对片上方案影响极大：仿真显示 $L_{\mathrm{wb}} = 0.4\ \mathrm{nH}$ 才接近理想情况。
+- [[sources/ref-14|文献 14]]，PDF pp. 113–115：实际测量线路环境阻抗的影响——环形器端口阻抗存在明显感抗振荡、连接线缆长度改变驻波周期，必须对环形器逐端口筛选、微调泵浦频率避开振荡峰；阻抗随频率小波纹反映到增益曲线中会出现振荡。
+- [[sources/ref-14|文献 14]]，PDF pp. 117–118：IMPA 低温表征流程（与 JPA 类似，但第二步 $\delta$ 步长更大、$10\to 50\to 100\to 150\ \mathrm{MHz}$）、片上方案实测结果：以 $6.85\ \mathrm{GHz}$ 为中心、$15\ \mathrm{dB}$ 工作带宽超过 $600\ \mathrm{MHz}$、饱和输入功率约 $-110\ \mathrm{dBm}$、工作带宽内噪声达到量子极限。
+- [[sources/ref-14|文献 14]]，PDF p. 119：IMPA 工作频率可调性——样品 A（片上）与 B（片外）工作频率可在几百 MHz 范围内调节，加上宽带宽特性，IMPA 增益频段实际覆盖宽度可达 GHz 量级。
+- [[sources/ref-14|文献 14]]，PDF pp. 119–120：多比特读取实验结果——IMPA 用于六比特超导量子芯片，读取时间 $300$–$500\ \mathrm{ns}$，$|\,0\rangle$ 态保真度最高 $99.52\%$、$|\,1\rangle$ 态最高 $97\%$，各比特态分离错误率多在 $1\%$ 以内（Q6 因腔频在带边为 $3.33\%$），平均读取错误率优于部分量子优越性实验。
+- [[sources/ref-14|文献 14]]，PDF p. 120：第 4 章小结——IMPA 实现 $>15\ \mathrm{dB}$ 增益、$>600\ \mathrm{MHz}$ 工作带宽、$\sim -110\ \mathrm{dBm}$ 饱和功率与量子极限噪声；六比特最高保真度 $98.14\%$、最低 $95.05\%$；JTWPA 在 GHz 量级带宽与更高饱和功率上有优势，但 IMPA 工艺门槛低、调试灵活，是实验室实现多比特读取的更现实路线。

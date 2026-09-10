@@ -26,7 +26,7 @@ $$
 
 ![[assets/figures/fundamentals/shang-2014-fig1-3-sqd-blockade.jpg]]
 
-*单量子点器件与库仑阻塞输运示意图（[尚汝南 2014]([[sources/shang-runan-2014]])，图 1.3）*
+*单量子点器件与库仑阻塞输运示意图（[文献 2]([[sources/shang-runan-2014]])，图 1.3）*
 
 <!-- 原始占位：量子点双势垒输运能级示意图：(a) 阻塞情形 μ(N−1) < μD < μS < μ(N)；(b) 单电子隧穿情形 μD < μ(N) < μS -->
 
@@ -108,12 +108,12 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | 尚汝南 2014 |
-| 量子点尺度 | 百纳米量级，$E_C\gg\Delta E$，化学势近似等间距 | 尤杰 2016 |
-| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 尤杰 2016 |
-| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 尤杰 2016 |
-| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | 尤杰 2016 |
-| 输运电导 | $G\ll 2e^2/h$（阻塞 regime 前提） | 周诚 2013 |
+| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | 文献 2 |
+| 量子点尺度 | 百纳米量级，$E_C\gg\Delta E$，化学势近似等间距 | 文献 4 |
+| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 文献 4 |
+| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 文献 4 |
+| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | 文献 4 |
+| 输运电导 | $G\ll 2e^2/h$（阻塞 regime 前提） | 文献 1 |
 
 ## 实验特征与测量
 
@@ -153,14 +153,14 @@ $$T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gam
 
 ## 论文依据
 
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 25–26：常相互作用模型的两条假设、$U(N)$ 与 $\mu(N)$ 公式、库仑阻塞条件 $\mu(N-1)<\mu_D<\mu_S<\mu(N)$ 及 $G_{QPC}\ll 2e^2/h$ 前提。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF p. 67：环境热涨落大于充电能时库仑阻塞无法发生。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 16–19：库仑阻塞与库仑菱形的定义、锁相测量方案，以及从菱形提取 $C_G$、$E_C$、$\alpha$ 的方法。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 80：浅刻蚀 GaAs 量子点实测总电容 $113\ \mathrm{aF}$、充电能 $1.5\ \mathrm{meV}$。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 64–65：在库仑阻塞区测量低频 $1/f$ 噪声。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 20–21：偏压窗口、库仑振荡峰与库仑菱形，杠杆臂 $\alpha=|V_{SD}|/\Delta V_g$ 的标定。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 18：库仑阻塞的能级图像与逐个排空电子的实验思想。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 76–77：量子点 Kondo 问题的安德森模型哈密顿量与 Kondo 温度公式。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 84：阻塞谷中零偏压峰的实验观测。
-- [[sources/li-yan-2018|李炎 2018]]，PDF p. 57：空穴量子点中的库仑阻塞、库仑振荡与共隧穿。
-- [[sources/hu-ruizi-2022|胡睿梓 2022]]，PDF p. 74：费米黄金定则给出含费米–狄拉克占据因子的进、出隧穿速率。
+- [[sources/ref-01|文献 1]]，PDF pp. 25–26：常相互作用模型的两条假设、$U(N)$ 与 $\mu(N)$ 公式、库仑阻塞条件 $\mu(N-1)<\mu_D<\mu_S<\mu(N)$ 及 $G_{QPC}\ll 2e^2/h$ 前提。
+- [[sources/ref-01|文献 1]]，PDF p. 67：环境热涨落大于充电能时库仑阻塞无法发生。
+- [[sources/ref-04|文献 4]]，PDF pp. 16–19：库仑阻塞与库仑菱形的定义、锁相测量方案，以及从菱形提取 $C_G$、$E_C$、$\alpha$ 的方法。
+- [[sources/ref-04|文献 4]]，PDF p. 80：浅刻蚀 GaAs 量子点实测总电容 $113\ \mathrm{aF}$、充电能 $1.5\ \mathrm{meV}$。
+- [[sources/ref-04|文献 4]]，PDF pp. 64–65：在库仑阻塞区测量低频 $1/f$ 噪声。
+- [[sources/ref-07|文献 7]]，PDF pp. 20–21：偏压窗口、库仑振荡峰与库仑菱形，杠杆臂 $\alpha=|V_{SD}|/\Delta V_g$ 的标定。
+- [[sources/ref-02|文献 2]]，PDF p. 18：库仑阻塞的能级图像与逐个排空电子的实验思想。
+- [[sources/ref-02|文献 2]]，PDF pp. 76–77：量子点 Kondo 问题的安德森模型哈密顿量与 Kondo 温度公式。
+- [[sources/ref-02|文献 2]]，PDF p. 84：阻塞谷中零偏压峰的实验观测。
+- [[sources/ref-10|文献 10]]，PDF p. 57：空穴量子点中的库仑阻塞、库仑振荡与共隧穿。
+- [[sources/ref-15|文献 15]]，PDF p. 74：费米黄金定则给出含费米–狄拉克占据因子的进、出隧穿速率。

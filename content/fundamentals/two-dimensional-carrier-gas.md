@@ -28,21 +28,21 @@ date: 2026-09-08
 
 在 GaAs/AlGaAs 中，$\mathrm{Al_{0.3}Ga_{0.7}As}$ 的禁带宽度（$\sim 1.79\ \mathrm{eV}$）大于 GaAs（$\sim 1.42\ \mathrm{eV}$），两者在异质结界面形成导带错位。当 AlGaAs 中掺入 Si 施主（典型掺杂浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$），电离施主产生的内建电场把 GaAs 侧靠近界面的导带底向下弯至费米面以下，形成深度约几百 meV 的三角势阱。低温下电子只占据量子化基态子带，分布在界面下方约 $90$–$100\ \mathrm{nm}$ 处一个薄层内，平面内自由运动。GaAs 与 AlGaAs 晶格常数几乎相同（失配 $\sim 0.1\%$），加上分子束外延可形成原子级平整界面，使杂质散射极小，因此 4.2 K 下 GaAs/AlGaAs 的 2DEG 迁移率可达 $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，远高于其他体系。
 
-尤杰 2016 给出的本组调制掺杂 GaAs/AlGaAs 晶圆典型参数为（自表面向内）：$10\ \mathrm{nm}$ GaAs 盖帽层、$50\ \mathrm{nm}$ AlGaAs 隔离层、$20\ \mathrm{nm}$ 掺 Si 的 AlGaAs 重掺杂层（Si 浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$）、$15\ \mathrm{nm}$ AlGaAs 缓冲层、$500\ \mathrm{nm}$ GaAs 基底。该结构下 2DEG 形成在距表面约 $90\ \mathrm{nm}$ 的位置，通过 Ni/Ge/Au 合金退火形成的欧姆接触与外部读出电路相连。尚汝南 2014 给出的同类异质结自上而下依次为 $10\ \mathrm{nm}$ GaAs 盖帽层、$80\ \mathrm{nm}$ AlGaAs 层与 $500\ \mathrm{nm}$ GaAs 基底，Al 组分 30%，调制掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$，2DEG 深度同样约为 $90\ \mathrm{nm}$。
+文献 4 给出的本组调制掺杂 GaAs/AlGaAs 晶圆典型参数为（自表面向内）：$10\ \mathrm{nm}$ GaAs 盖帽层、$50\ \mathrm{nm}$ AlGaAs 隔离层、$20\ \mathrm{nm}$ 掺 Si 的 AlGaAs 重掺杂层（Si 浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$）、$15\ \mathrm{nm}$ AlGaAs 缓冲层、$500\ \mathrm{nm}$ GaAs 基底。该结构下 2DEG 形成在距表面约 $90\ \mathrm{nm}$ 的位置，通过 Ni/Ge/Au 合金退火形成的欧姆接触与外部读出电路相连。文献 2 给出的同类异质结自上而下依次为 $10\ \mathrm{nm}$ GaAs 盖帽层、$80\ \mathrm{nm}$ AlGaAs 层与 $500\ \mathrm{nm}$ GaAs 基底，Al 组分 30%，调制掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$，2DEG 深度同样约为 $90\ \mathrm{nm}$。
 
 ### Si/SiGe 与 Si-MOS：应变与积累
 
 在 Si/SiGe 异质结中，应变 Si 量子阱被夹在弛豫 SiGe 缓冲层之间，导带错位把电子束缚在 Si 层。Si 的多能谷结构使面内有六个等价能谷，应变会移除简并从而使有效质量平均化；同时晶格失配比 GaAs/AlGaAs 大，2DEG 迁移率较低。同位素纯化 $^{28}\mathrm{Si}$ 可大幅削弱核自旋噪声，使 Si/SiGe 的自旋相干时间提升到百微秒量级。Si-MOS 是另一类常见平台：电场把电子吸引到 Si/SiO$_2$ 界面，2DEG 距表面只有几纳米，因此栅极调节能力极强；但界面陷阱较多，电荷稳定性与迁移率都不及 Si/SiGe。
 
-杨杰诚 2023 在其绪论中汇总了主要体系 4.2 K 下的 2DEG 迁移率量级：Si-MOS 约为 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Si/SiGe 异质结可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Ge/SiGe 异质结载流子迁移率也已突破 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。杨杰诚 2023 强调选片原则："挑选势阱较深的基片，让 2DEG 层远离含较多杂质的表面氧化层，从而减少迁移电子受杂质中心散射的影响"——这是 2DEG 迁移率与界面无序度之间的直接联系。
+文献 19 在其绪论中汇总了主要体系 4.2 K 下的 2DEG 迁移率量级：Si-MOS 约为 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Si/SiGe 异质结可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Ge/SiGe 异质结载流子迁移率也已突破 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。文献 19 强调选片原则："挑选势阱较深的基片，让 2DEG 层远离含较多杂质的表面氧化层，从而减少迁移电子受杂质中心散射的影响"——这是 2DEG 迁移率与界面无序度之间的直接联系。
 
 ### 应变锗：2DHG 与强自旋轨道
 
-在 Ge/SiGe 应变锗异质结中，应变把重空穴有效质量在面内压到约 $0.05\,m_0$ 的量级，同时保留面外方向的大有效质量。这种面内轻、面外重的各向异性使得 2DHG 既适合做量子点（轻面内质量→波函数延展大、点间耦合强），又有较强的自旋轨道耦合，使全电场驱动[[qubit-control/electric-dipole-spin-resonance|EDSR]]成为可能。马璟睿 2026 综述了应变锗 2DHG 的关键参数：本征 Ge 价带空穴有效质量取 $m^{*}_{\mathrm{Ge}}=0.0728\,m_0$；Ge 与 $\mathrm{Si_{0.2}Ge_{0.8}}$ 之间的价带偏移 $\Delta E_V = 114\ \mathrm{meV}$；量子阱厚度 $t_{\mathrm{Ge}}=16\ \mathrm{nm}$，势垒层厚度 $t_{\mathrm{SiGe}}=32\ \mathrm{nm}$；界面氧化层厚度 $t_{\mathrm{SiO}_x}\approx 1.5\ \mathrm{nm}$。低温空穴迁移率在高质量样品中可达 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。锗空穴占据 $p$ 轨道，与 GaAs 中电子占据 $s$ 轨道相比超精细相互作用更弱，加以同位素纯化可进一步抑制核自旋噪声，使空穴自旋比特在长相干方面具有结构性优势。
+在 Ge/SiGe 应变锗异质结中，应变把重空穴有效质量在面内压到约 $0.05\,m_0$ 的量级，同时保留面外方向的大有效质量。这种面内轻、面外重的各向异性使得 2DHG 既适合做量子点（轻面内质量→波函数延展大、点间耦合强），又有较强的自旋轨道耦合，使全电场驱动[[qubit-control/electric-dipole-spin-resonance|EDSR]]成为可能。文献 23 综述了应变锗 2DHG 的关键参数：本征 Ge 价带空穴有效质量取 $m^{*}_{\mathrm{Ge}}=0.0728\,m_0$；Ge 与 $\mathrm{Si_{0.2}Ge_{0.8}}$ 之间的价带偏移 $\Delta E_V = 114\ \mathrm{meV}$；量子阱厚度 $t_{\mathrm{Ge}}=16\ \mathrm{nm}$，势垒层厚度 $t_{\mathrm{SiGe}}=32\ \mathrm{nm}$；界面氧化层厚度 $t_{\mathrm{SiO}_x}\approx 1.5\ \mathrm{nm}$。低温空穴迁移率在高质量样品中可达 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。锗空穴占据 $p$ 轨道，与 GaAs 中电子占据 $s$ 轨道相比超精细相互作用更弱，加以同位素纯化可进一步抑制核自旋噪声，使空穴自旋比特在长相干方面具有结构性优势。
 
 ### 非掺杂 GaAs：积累型 2DEG
 
-传统调制掺杂 GaAs 量子点的退化时间 $T_2^{*}$ 通常不到 $1\ \mathrm{ns}$，主因之一是 AlGaAs 掺杂层引入的[[materials-devices/charge-noise|电荷噪声]]。尤杰 2016 提出的解决思路是去掉掺杂：先沉积 $100\ \mathrm{nm}$ 氧化铝作为栅氧层，再斜蒸发镀 $120\ \mathrm{nm}$ 铝作为顶栅；正栅压在 GaAs/AlGaAs 界面附近感应出 2DEG（约在表面下 $45\ \mathrm{nm}$），势垒由下层细栅调节，载流子完全不经 AlGaAs 掺杂层。这类积累型结构测得的 2DEG 面密度可达 $3.2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，与传统调制掺杂水平相当，但电荷噪声显著降低。
+传统调制掺杂 GaAs 量子点的退化时间 $T_2^{*}$ 通常不到 $1\ \mathrm{ns}$，主因之一是 AlGaAs 掺杂层引入的[[materials-devices/charge-noise|电荷噪声]]。文献 4 提出的解决思路是去掉掺杂：先沉积 $100\ \mathrm{nm}$ 氧化铝作为栅氧层，再斜蒸发镀 $120\ \mathrm{nm}$ 铝作为顶栅；正栅压在 GaAs/AlGaAs 界面附近感应出 2DEG（约在表面下 $45\ \mathrm{nm}$），势垒由下层细栅调节，载流子完全不经 AlGaAs 掺杂层。这类积累型结构测得的 2DEG 面密度可达 $3.2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，与传统调制掺杂水平相当，但电荷噪声显著降低。
 
 ## 量子阱与子带结构
 
@@ -54,7 +54,7 @@ $$
 
 面内色散近似为抛物线 $E_{n,\mathbf{k}_{\parallel}}=E_{n}+\hbar^{2}k_{\parallel}^{2}/(2m^{*})$。GaAs 中电子有效质量约 $0.067\,m_0$；应变锗中面内重空穴有效质量可降至 $0.05\,m_0$，但面外仍较大。
 
-马璟睿 2026 把应变锗量子阱的求解放在自洽薛定谔-泊松（Schrödinger-Poisson, S-P）框架内：一维泊松方程把静电势 $\phi(x)$ 与载流子密度 $p(x)$ 耦合
+文献 23 把应变锗量子阱的求解放在自洽薛定谔-泊松（Schrödinger-Poisson, S-P）框架内：一维泊松方程把静电势 $\phi(x)$ 与载流子密度 $p(x)$ 耦合
 
 $$
 \frac{\mathrm{d}}{\mathrm{d}x}\left[\varepsilon_{r}(x)\frac{\mathrm{d}\phi(x)}{\mathrm{d}x}\right]=-\frac{e}{\varepsilon_{0}}p(x),
@@ -92,39 +92,39 @@ $$
 n_{2\mathrm{D}}=\frac{B}{eR_{xy}},\qquad \mu=\frac{1}{n_{2\mathrm{D}}\,eR_{xx}}\cdot\frac{L}{W}
 $$
 
-给出 $n_{2D}$ 与 $\mu$，其中 $L$、$W$ 分别是霍尔棒长、宽。周诚 2013 总结的本组晶圆批次典型值（4.2 K）为：批次 #28，$n=3.2\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=1.5\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #34，$n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=0.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #35，$n=3.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。
+给出 $n_{2D}$ 与 $\mu$，其中 $L$、$W$ 分别是霍尔棒长、宽。文献 1 总结的本组晶圆批次典型值（4.2 K）为：批次 #28，$n=3.2\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=1.5\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #34，$n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=0.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #35，$n=3.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。
 
-积累型非掺杂 GaAs 2DEG 的迁移率随面密度上升：尤杰 2016 测得顶栅 $V_{\mathrm{TOP}}=3.2\ \mathrm{V}$ 时 $n_{\mathrm{2DEG}}\approx 3.2\times 10^{11}\ \mathrm{cm^{-2}\,V^{-1}}$，在 $n=2$–$3\times 10^{11}\ \mathrm{cm^{-2}}$ 时 $\mu=1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。同一样品随后做量子点输运，得到总电容 $C_\Sigma=113\ \mathrm{aF}$、充电能 $E_C=1.5\ \mathrm{meV}$，与电极 RP 的杠杆臂 $\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$——这套数值既来自 2DEG 的优良输运，也来自势阱深度足以让量子点工作点稳定。
+积累型非掺杂 GaAs 2DEG 的迁移率随面密度上升：文献 4 测得顶栅 $V_{\mathrm{TOP}}=3.2\ \mathrm{V}$ 时 $n_{\mathrm{2DEG}}\approx 3.2\times 10^{11}\ \mathrm{cm^{-2}\,V^{-1}}$，在 $n=2$–$3\times 10^{11}\ \mathrm{cm^{-2}}$ 时 $\mu=1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。同一样品随后做量子点输运，得到总电容 $C_\Sigma=113\ \mathrm{aF}$、充电能 $E_C=1.5\ \mathrm{meV}$，与电极 RP 的杠杆臂 $\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$——这套数值既来自 2DEG 的优良输运，也来自势阱深度足以让量子点工作点稳定。
 
-除密度与迁移率外，测量顶栅电压下源漏电导的非单调行为可以判断是否存在平行导通：当负栅压使电阻先升高、突然降低、再升高时，说明 AlGaAs 侧已经形成第二条子带，栅极电场被部分屏蔽。尚汝南 2014 指出这是"判断晶圆是否适合做全电控量子点"的快速甄别手段，所希望的样品应当尽量低掺杂、高迁移率。
+除密度与迁移率外，测量顶栅电压下源漏电导的非单调行为可以判断是否存在平行导通：当负栅压使电阻先升高、突然降低、再升高时，说明 AlGaAs 侧已经形成第二条子带，栅极电场被部分屏蔽。文献 2 指出这是"判断晶圆是否适合做全电控量子点"的快速甄别手段，所希望的样品应当尽量低掺杂、高迁移率。
 
 ## 参数与量级汇总
 
 | 体系 | 2DEG/2DHG 深度 | 低温面密度 $n_\mathrm{2D}$ | 低温迁移率 $\mu$ | 来源 |
 | --- | --- | --- | --- | --- |
-| GaAs/AlGaAs 调制掺杂 | 距表面 $90$–$100\ \mathrm{nm}$ | $2.0$–$3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $0.6$–$3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 周诚 2013 |
-| GaAs/AlGaAs 4.2 K 典型 | 表面下 $90\ \mathrm{nm}$ | $\sim 10^{11}\ \mathrm{cm^{-2}}$ | $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 尚汝南 2014 |
-| GaAs/AlGaAs 高阻抗腔样品（$20\ \mathrm{mK}$） | 距表面 $90\ \mathrm{nm}$ | $2.3\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 陈明博 2021 |
-| 非掺杂 GaAs 积累型 | 表面下 $\sim 45\ \mathrm{nm}$ | $\leq 3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 尤杰 2016 |
-| Si-MOS | 距 Si/SiO$_2$ 界面几 nm | 视栅压而定 | $1$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 杨杰诚 2023 |
-| Si/SiGe | 应变 Si 量子阱 | 视栅压而定 | 可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 杨杰诚 2023 |
-| Ge/SiGe 2DHG | $16\ \mathrm{nm}$ 锗量子阱 | 视栅压而定 | 可达 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$（载流子）；高质量样品 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 杨杰诚 2023 / 马璟睿 2026 |
+| GaAs/AlGaAs 调制掺杂 | 距表面 $90$–$100\ \mathrm{nm}$ | $2.0$–$3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $0.6$–$3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 1 |
+| GaAs/AlGaAs 4.2 K 典型 | 表面下 $90\ \mathrm{nm}$ | $\sim 10^{11}\ \mathrm{cm^{-2}}$ | $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 2 |
+| GaAs/AlGaAs 高阻抗腔样品（$20\ \mathrm{mK}$） | 距表面 $90\ \mathrm{nm}$ | $2.3\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 13 |
+| 非掺杂 GaAs 积累型 | 表面下 $\sim 45\ \mathrm{nm}$ | $\leq 3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 4 |
+| Si-MOS | 距 Si/SiO$_2$ 界面几 nm | 视栅压而定 | $1$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 19 |
+| Si/SiGe | 应变 Si 量子阱 | 视栅压而定 | 可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 19 |
+| Ge/SiGe 2DHG | $16\ \mathrm{nm}$ 锗量子阱 | 视栅压而定 | 可达 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$（载流子）；高质量样品 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 文献 19 / 文献 23 |
 
 ![[assets/figures/materials-devices/han-2017-fig1-4-qd-orientations.jpg]]
 
-*横向与纵向量子点器件结构对比（[韩天一 2017]([[sources/han-tianyi-2017]])，图 1.4）*
+*横向与纵向量子点器件结构对比（[文献 7]([[sources/han-tianyi-2017]])，图 1.4）*
 
 <!-- 原始占位：不同体系的 2DEG/2DHG 深度、面密度与迁移率对照示意图（柱状或点图），按 GaAs/AlGaAs、Si-MOS、Si/SiGe、Ge/SiGe 四类排开；标注深度、迁移率、面密度与典型温度 -->
 
 ## 从二维到零维
 
-若平面内也施加足够强的静电限域，连续 2D 子带便分裂为零维分立轨道：表面栅极在 2DEG/2DHG 上加负偏压，在被栅极覆盖的区域把载流子排空，只留下由细栅围出的岛——这就是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]。要在少电子区观察到清晰的逐电子充电，需同时满足 $k_{B}T\ll E_C$、隧穿率 $\hbar\Gamma\ll E_C$，且 $E_C\gg \Delta E$ 时电化学势近似等间距排列，库仑峰近似等周期出现。林霆 2022 给出图像：在 GaAs/AlGaAs 上，"通过对电极施加负偏压将多余的二维电子气排空，并将电子束缚在一个孤岛之内"，这一过程把 2DEG 从"面"压成"点"，把连续态密度切成离散谱。
+若平面内也施加足够强的静电限域，连续 2D 子带便分裂为零维分立轨道：表面栅极在 2DEG/2DHG 上加负偏压，在被栅极覆盖的区域把载流子排空，只留下由细栅围出的岛——这就是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]。要在少电子区观察到清晰的逐电子充电，需同时满足 $k_{B}T\ll E_C$、隧穿率 $\hbar\Gamma\ll E_C$，且 $E_C\gg \Delta E$ 时电化学势近似等间距排列，库仑峰近似等周期出现。文献 17 给出图像：在 GaAs/AlGaAs 上，"通过对电极施加负偏压将多余的二维电子气排空，并将电子束缚在一个孤岛之内"，这一过程把 2DEG 从"面"压成"点"，把连续态密度切成离散谱。
 
 零维化的好坏由 2DEG 本身的质量决定：若迁移率低、无序势涨落大，势阱底部起伏可能与栅压诱导势相当，少电子区无法稳定；若 2DEG 较深且无序度低，则可使用更弱的栅压定义更小的量子点。这一从材料生长到栅控几何的传递链把界面缺陷密度、掺杂均匀性、栅氧质量等材料问题，与量子比特相干性和门控精度直接挂钩。
 
 ## 与谐振腔的耦合
 
-微波谐振腔的电磁场不只与量子点耦合，也与 2DEG 整体耦合。孔伟成毕业论文指出，引入 GaAs 量子点后 3D 腔的品质因子下降，"主要受到砷化镓体系二维电子气对微波的吸收导致"。这是 GaAs/AlGaAs 量子点-腔杂化系统中的常见挑战：2DEG 充当了一层耗散介质，使高阻抗腔的 $Q$ 值远低于其在 Si 基或超导裸芯片上的预期。缓解方法是在量子点电极上施加足够大的负压，耗尽电极下方的 2DEG，使微波电场与载流子层解耦。这是量子点-高阻抗腔杂化系统设计时必须一并考虑的材料层面问题。
+微波谐振腔的电磁场不只与量子点耦合，也与 2DEG 整体耦合。文献 9论文指出，引入 GaAs 量子点后 3D 腔的品质因子下降，"主要受到砷化镓体系二维电子气对微波的吸收导致"。这是 GaAs/AlGaAs 量子点-腔杂化系统中的常见挑战：2DEG 充当了一层耗散介质，使高阻抗腔的 $Q$ 值远低于其在 Si 基或超导裸芯片上的预期。缓解方法是在量子点电极上施加足够大的负压，耗尽电极下方的 2DEG，使微波电场与载流子层解耦。这是量子点-高阻抗腔杂化系统设计时必须一并考虑的材料层面问题。
 
 ## 与其他概念的关系
 
@@ -150,18 +150,18 @@ $$
 
 ## 论文依据
 
-- [[sources/you-jie-2016|尤杰 2016]]，PDF pp. 12–13：调制掺杂 GaAs/AlGaAs 2DEG 形成机理、各层厚度与 Si 掺杂浓度、2DEG 距表面约 $90\ \mathrm{nm}$。
-- [[sources/you-jie-2016|尤杰 2016]]，PDF p. 80：积累型非掺杂 GaAs 2DEG 面密度与迁移率实测，以及同器件库仑菱形提取 $C_\Sigma=113\ \mathrm{aF}$、$E_C=1.5\ \mathrm{meV}$、$\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF pp. 16–17：典型 GaAs/AlGaAs 异质结层结构与 2DEG 形成，未掺杂"空白层"与掺杂 n-AlGaAs 间距约 $20\ \mathrm{nm}$ 以降低散射、4.2 K 下迁移率 $10^{5}$–$10^{6}\ \mathrm{cm^{2}/Vs}$。
-- [[sources/shang-runan-2014|尚汝南 2014]]，PDF p. 68：电容耦合双-双量子点 GaAs/AlGaAs 2DEG 参数，$n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=6\times 10^{4}\ \mathrm{cm^{2}/Vs}$、2DEG 距表面约 $100\ \mathrm{nm}$。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 22–23：GaAs/AlGaAs 异质结生长顺序与三角势阱形成，2DEG 位于异质结表面下 $30$–$200\ \mathrm{nm}$ 单一平面。
-- [[sources/zhou-cheng-2013|周诚 2013]]，PDF pp. 70–71：低温经典霍尔效应测量 2DEG 面密度与迁移率，本组晶圆批次典型值表（批次 #28、#34、#35、#36）。
-- [[sources/han-tianyi-2017|韩天一 2017]]，PDF pp. 17–18：GaAs/AlGaAs 异质结能带与 2DEG 形成原理、电容模型 $C=113\ \mathrm{aF}$ 与 $E_C=1.5\ \mathrm{meV}$ 实测。
-- [[sources/lin-ting-2022|林霆 2022]]，PDF pp. 23–24：GaAs/AlGaAs 2DEG 定义与表面栅极负偏压排空机制、Al 组分 30% 与掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$、2DEG 形成位置约 $90\ \mathrm{nm}$。
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF pp. 16–17：GaAs/AlGaAs 2DEG 距表面 $90\ \mathrm{nm}$、$n=2.3\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=1.6\times 10^{5}\ \mathrm{cm^{2}/Vs}$（$20\ \mathrm{mK}$）。
-- [[sources/yang-jiecheng-2023|杨杰诚 2023]]，PDF pp. 11–12：Si/SiGe、Ge/SiGe、Si-MOS 体系 2DEG 形成原理与载流子积累层概念，Si-MOS 低温迁移率 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^{2}/Vs}$，Si/SiGe 可达 $2.4\times 10^{5}\ \mathrm{cm^{2}/Vs}$、Ge/SiGe 达 $6.2\times 10^{5}\ \mathrm{cm^{2}/Vs}$。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF pp. 16–17：半导体异质结量子阱与 2DEG/2DHG 形成定义，载流子在 $z$ 方向被量子阱限制、$(x,y)$ 平面内自由。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF p. 25：应变锗空穴较小的有效质量、较高的迁移率与较小的超精细相互作用；Luttinger-Kohn 哈密顿量给出轻重空穴有效质量。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF p. 26：应变锗面内重空穴有效质量低至约 $0.05\,m_0$，迁移率提升至 $2\times 10^{6}\ \mathrm{cm^{2}\,V^{-1}\,s^{-1}}$ 量级。
-- [[sources/ma-jingrui-2026|马璟睿 2026]]，PDF p. 57：薛定谔-泊松求解关键参数表（$\Delta E_V=114\ \mathrm{meV}$、$m^{*}_{\mathrm{Ge}}=0.0728\,m_0$、$t_{\mathrm{SiO}_x}=1.5\ \mathrm{nm}$、$t_{\mathrm{SiGe}}=32\ \mathrm{nm}$、$t_{\mathrm{Ge}}=16\ \mathrm{nm}$、$\Delta x=0.05\ \mathrm{nm}$）。
-- [[sources/kong-weicheng-2018|孔伟成 2018]]，PDF pp. 110–112：把门控砷化镓量子点置于 3D 微波腔内，2DEG 对微波的吸收显著降低腔的品质因子。
+- [[sources/ref-04|文献 4]]，PDF pp. 12–13：调制掺杂 GaAs/AlGaAs 2DEG 形成机理、各层厚度与 Si 掺杂浓度、2DEG 距表面约 $90\ \mathrm{nm}$。
+- [[sources/ref-04|文献 4]]，PDF p. 80：积累型非掺杂 GaAs 2DEG 面密度与迁移率实测，以及同器件库仑菱形提取 $C_\Sigma=113\ \mathrm{aF}$、$E_C=1.5\ \mathrm{meV}$、$\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$。
+- [[sources/ref-02|文献 2]]，PDF pp. 16–17：典型 GaAs/AlGaAs 异质结层结构与 2DEG 形成，未掺杂"空白层"与掺杂 n-AlGaAs 间距约 $20\ \mathrm{nm}$ 以降低散射、4.2 K 下迁移率 $10^{5}$–$10^{6}\ \mathrm{cm^{2}/Vs}$。
+- [[sources/ref-02|文献 2]]，PDF p. 68：电容耦合双-双量子点 GaAs/AlGaAs 2DEG 参数，$n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=6\times 10^{4}\ \mathrm{cm^{2}/Vs}$、2DEG 距表面约 $100\ \mathrm{nm}$。
+- [[sources/ref-01|文献 1]]，PDF pp. 22–23：GaAs/AlGaAs 异质结生长顺序与三角势阱形成，2DEG 位于异质结表面下 $30$–$200\ \mathrm{nm}$ 单一平面。
+- [[sources/ref-01|文献 1]]，PDF pp. 70–71：低温经典霍尔效应测量 2DEG 面密度与迁移率，本组晶圆批次典型值表（批次 #28、#34、#35、#36）。
+- [[sources/ref-07|文献 7]]，PDF pp. 17–18：GaAs/AlGaAs 异质结能带与 2DEG 形成原理、电容模型 $C=113\ \mathrm{aF}$ 与 $E_C=1.5\ \mathrm{meV}$ 实测。
+- [[sources/ref-17|文献 17]]，PDF pp. 23–24：GaAs/AlGaAs 2DEG 定义与表面栅极负偏压排空机制、Al 组分 30% 与掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$、2DEG 形成位置约 $90\ \mathrm{nm}$。
+- [[sources/ref-13|文献 13]]，PDF pp. 16–17：GaAs/AlGaAs 2DEG 距表面 $90\ \mathrm{nm}$、$n=2.3\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=1.6\times 10^{5}\ \mathrm{cm^{2}/Vs}$（$20\ \mathrm{mK}$）。
+- [[sources/ref-19|文献 19]]，PDF pp. 11–12：Si/SiGe、Ge/SiGe、Si-MOS 体系 2DEG 形成原理与载流子积累层概念，Si-MOS 低温迁移率 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^{2}/Vs}$，Si/SiGe 可达 $2.4\times 10^{5}\ \mathrm{cm^{2}/Vs}$、Ge/SiGe 达 $6.2\times 10^{5}\ \mathrm{cm^{2}/Vs}$。
+- [[sources/ref-23|文献 23]]，PDF pp. 16–17：半导体异质结量子阱与 2DEG/2DHG 形成定义，载流子在 $z$ 方向被量子阱限制、$(x,y)$ 平面内自由。
+- [[sources/ref-23|文献 23]]，PDF p. 25：应变锗空穴较小的有效质量、较高的迁移率与较小的超精细相互作用；Luttinger-Kohn 哈密顿量给出轻重空穴有效质量。
+- [[sources/ref-23|文献 23]]，PDF p. 26：应变锗面内重空穴有效质量低至约 $0.05\,m_0$，迁移率提升至 $2\times 10^{6}\ \mathrm{cm^{2}\,V^{-1}\,s^{-1}}$ 量级。
+- [[sources/ref-23|文献 23]]，PDF p. 57：薛定谔-泊松求解关键参数表（$\Delta E_V=114\ \mathrm{meV}$、$m^{*}_{\mathrm{Ge}}=0.0728\,m_0$、$t_{\mathrm{SiO}_x}=1.5\ \mathrm{nm}$、$t_{\mathrm{SiGe}}=32\ \mathrm{nm}$、$t_{\mathrm{Ge}}=16\ \mathrm{nm}$、$\Delta x=0.05\ \mathrm{nm}$）。
+- [[sources/ref-09|文献 9]]，PDF pp. 110–112：把门控砷化镓量子点置于 3D 微波腔内，2DEG 对微波的吸收显著降低腔的品质因子。

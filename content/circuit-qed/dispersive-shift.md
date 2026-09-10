@@ -45,7 +45,7 @@ $$
 R=\exp\!\left[\lambda(a^\dagger\sigma_- - a\sigma_+)\right],
 $$
 
-把 $R$ 展开到 $\lambda$ 的二阶项（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 31），得到色散极限下的等效哈密顿量
+把 $R$ 展开到 $\lambda$ 的二阶项（[文献 14]([[sources/duan-peng-2022]])，PDF p. 31），得到色散极限下的等效哈密顿量
 
 $$
 H_{\mathrm{disp}}\approx\left(\omega_r+\frac{g^2}{\Delta}\sigma_z\right)a^\dagger a+\frac{1}{2}\left(\omega_q+\frac{g^2}{\Delta}\right)\sigma_z.
@@ -57,7 +57,7 @@ $$
 \chi\equiv\frac{g^2}{\Delta}.
 $$
 
-第二项是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为**交流斯塔克频移**（ac Stark shift），它把比特频率当作腔内光子数的"内禀电压表"；与光子数无关的 $\chi$ 称为**兰姆频移**（Lamb shift），它源自真空涨落（[陈明博 2021]([[sources/chen-mingbo-2021]])，PDF p. 30；[林霆 2022]([[sources/lin-ting-2022]])，PDF p. 26）。把同一哈密顿量按比特项整理，可以等价写成
+第二项是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为**交流斯塔克频移**（ac Stark shift），它把比特频率当作腔内光子数的"内禀电压表"；与光子数无关的 $\chi$ 称为**兰姆频移**（Lamb shift），它源自真空涨落（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 30；[文献 17]([[sources/lin-ting-2022]])，PDF p. 26）。把同一哈密顿量按比特项整理，可以等价写成
 
 $$
 H_{\mathrm{disp}}\approx\omega_r a^\dagger a+\frac{1}{2}\left(\omega_q+2\chi\,a^\dagger a+\chi\right)\sigma_z,
@@ -65,7 +65,7 @@ $$
 
 由此 ac Stark 频移把比特频率变成光子数的函数：腔内多一个光子，比特频率移动 $2\chi$。
 
-> **取名记号**：英文文献中 "dispersive shift" 常专指腔频移动 $\chi=g^2/\Delta$；本站与林霆 2022 把"ac Stark shift"与"Lamb shift"并列为 $\chi$ 量级修正的两类。本词条统称三者即"色散频移"。
+> **取名记号**：英文文献中 "dispersive shift" 常专指腔频移动 $\chi=g^2/\Delta$；本站与文献 17 把"ac Stark shift"与"Lamb shift"并列为 $\chi$ 量级修正的两类。本词条统称三者即"色散频移"。
 
 ### 半导体量子点中的耦合强度
 
@@ -75,7 +75,7 @@ $$
 g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/(\pi\hbar)},
 $$
 
-其中 $\beta=C_L/C_\Sigma$ 是杠杆臂，$Z_r$ 是谐振腔的特征阻抗（[江顺利 2025]([[sources/jiang-shunli-2025]])，PDF p. 40）。有效耦合 $g_{\mathrm{eff}}=g_0\sin\theta=2t_c g_0/(\hbar\omega_q)$，$\theta=\arctan(2t_c/\varepsilon)$ 是双量子点混合角。把 $g$ 替换为 $g_{\mathrm{eff}}$ 即得到半导体量子点的色散频移
+其中 $\beta=C_L/C_\Sigma$ 是杠杆臂，$Z_r$ 是谐振腔的特征阻抗（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 40）。有效耦合 $g_{\mathrm{eff}}=g_0\sin\theta=2t_c g_0/(\hbar\omega_q)$，$\theta=\arctan(2t_c/\varepsilon)$ 是双量子点混合角。把 $g$ 替换为 $g_{\mathrm{eff}}$ 即得到半导体量子点的色散频移
 
 $$
 \chi_{\mathrm{eff}}=\frac{g_{\mathrm{eff}}^2}{\Delta}.
@@ -91,13 +91,13 @@ $$
 \hat H=\hat H_{\mathrm{lin}}+\frac{\hbar\alpha}{2}\,b^\dagger b^\dagger b b,
 $$
 
-做 Bogoliubov 变换对角化线性部分后，色散哈密顿量的腔频修正变为（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 32）
+做 Bogoliubov 变换对角化线性部分后，色散哈密顿量的腔频修正变为（[文献 14]([[sources/duan-peng-2022]])，PDF p. 32）
 
 $$
 \chi=\frac{g^2\alpha}{\Delta(\Delta+\alpha)}\simeq\frac{g^2\alpha}{\Delta^2}.
 $$
 
-当 $|\Delta|\gg|\alpha|$（transmon 通常满足）时，分母的 $\alpha$ 修正使 $|\chi|$ 比 JC 模型的 $g^2/\Delta$ 小得多；同时 $\chi$ 与 $\alpha$ 同号——transmon 的负非谐性使 $\chi<0$（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 40）。这个非谐性修正决定了 transmon 色散读出的"参数空间位置"，不能直接套用 JC 公式。
+当 $|\Delta|\gg|\alpha|$（transmon 通常满足）时，分母的 $\alpha$ 修正使 $|\chi|$ 比 JC 模型的 $g^2/\Delta$ 小得多；同时 $\chi$ 与 $\alpha$ 同号——transmon 的负非谐性使 $\chi<0$（[文献 14]([[sources/duan-peng-2022]])，PDF p. 40）。这个非谐性修正决定了 transmon 色散读出的"参数空间位置"，不能直接套用 JC 公式。
 
 ## 色散哈密顿量的三种解读
 
@@ -115,11 +115,11 @@ $$
 \tilde\omega_q(n)=\omega_q+\chi+2\chi n.
 $$
 
-第一段 $\chi$（Lamb 频移）与光子数无关，仅来自真空涨落；第二段 $2\chi n$（ac Stark 频移）随腔内光子数线性变化。给定 $\chi$，把比特频率拟合到探测微波功率 $P_p$ 的函数即可反推腔内平均光子数 $n_p$——[林霆 2022]([[sources/lin-ting-2022]])，PDF p. 49）正是用这一方法在 Si/SiGe 双量子点上获得 $n_p\sim 1$ 的弱探测区。
+第一段 $\chi$（Lamb 频移）与光子数无关，仅来自真空涨落；第二段 $2\chi n$（ac Stark 频移）随腔内光子数线性变化。给定 $\chi$，把比特频率拟合到探测微波功率 $P_p$ 的函数即可反推腔内平均光子数 $n_p$——[文献 17]([[sources/lin-ting-2022]])，PDF p. 49）正是用这一方法在 Si/SiGe 双量子点上获得 $n_p\sim 1$ 的弱探测区。
 
 ### 测量视角：QND 条件
 
-色散哈密顿量中测量算符（即腔某一相位分量）与比特泡利 $\sigma_z$ 对易：$[\hat M,\sigma_z]=0$。[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 61）把这一点写得很清楚——色散读出满足量子非破坏测量（quantum nondemolition, QND）条件，因此末态不被读出动作破坏，可用于多次同基测量、容错纠错与实时反馈。
+色散哈密顿量中测量算符（即腔某一相位分量）与比特泡利 $\sigma_z$ 对易：$[\hat M,\sigma_z]=0$。[文献 14]([[sources/duan-peng-2022]])，PDF p. 61）把这一点写得很清楚——色散读出满足量子非破坏测量（quantum nondemolition, QND）条件，因此末态不被读出动作破坏，可用于多次同基测量、容错纠错与实时反馈。
 
 ## 参数与量级
 
@@ -127,14 +127,14 @@ $$
 
 | 体系 / 来源 | $g/2\pi$ | $\Delta/2\pi$ | 非谐 $\alpha/2\pi$ | $\chi/2\pi$（实验或公式） |
 | --- | ---: | ---: | ---: | ---: |
-| GaAs DQD + NbTiN 反射腔（[陈明博 2021]([[sources/chen-mingbo-2021]])，PDF p. 116） | $g_c/2\pi\sim 100$ MHz | 较大 | — | 比特态切换引起腔频几个 MHz 量级移动 |
-| Si/SiGe RDQD + TiN 腔（[江顺利 2025]([[sources/jiang-shunli-2025]])，PDF p. 62） | $g_0/2\pi=175$ MHz | 调谐范围覆盖 $\omega_r=4.993$ GHz | — | 由 $\chi=g^2/\Delta$ 给出 |
-| Si/SiGe RDQD 翻转模式自旋（[江顺利 2025]([[sources/jiang-shunli-2025]])，PDF p. 78） | $g_s/2\pi=21.75$ MHz | 偏离腔频若干 GHz | — | ac Stark 频移可见；读出由 $\chi$ 提供 |
-| GaAs DQD + SQUID 阵列腔（[林霆 2022]([[sources/lin-ting-2022]])，PDF pp. 48、63） | $g/2\pi=103$ MHz | $\omega_a=5.565$ GHz、$\omega_r=6.53$ GHz | — | $\chi/2\pi=11$ MHz 实测 |
-| transmon + 共面腔（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 40） | $g/2\pi$ 由约瑟夫森能决定 | 工作点远离非谐 | $\alpha/2\pi\sim -200$ MHz | $|\chi|$ 由 $\chi=g^2\alpha/\Delta^2$ 给出；$\chi<0$ 与 $\alpha$ 同号 |
-| transmon 单发读出（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 32） | 几十 MHz | $\sim 6$ GHz | $\alpha/2\pi\sim -250$ MHz | $|\chi|/2\pi\sim 1$ MHz 量级 |
+| GaAs DQD + NbTiN 反射腔（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 116） | $g_c/2\pi\sim 100$ MHz | 较大 | — | 比特态切换引起腔频几个 MHz 量级移动 |
+| Si/SiGe RDQD + TiN 腔（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 62） | $g_0/2\pi=175$ MHz | 调谐范围覆盖 $\omega_r=4.993$ GHz | — | 由 $\chi=g^2/\Delta$ 给出 |
+| Si/SiGe RDQD 翻转模式自旋（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 78） | $g_s/2\pi=21.75$ MHz | 偏离腔频若干 GHz | — | ac Stark 频移可见；读出由 $\chi$ 提供 |
+| GaAs DQD + SQUID 阵列腔（[文献 17]([[sources/lin-ting-2022]])，PDF pp. 48、63） | $g/2\pi=103$ MHz | $\omega_a=5.565$ GHz、$\omega_r=6.53$ GHz | — | $\chi/2\pi=11$ MHz 实测 |
+| transmon + 共面腔（[文献 14]([[sources/duan-peng-2022]])，PDF p. 40） | $g/2\pi$ 由约瑟夫森能决定 | 工作点远离非谐 | $\alpha/2\pi\sim -200$ MHz | $|\chi|$ 由 $\chi=g^2\alpha/\Delta^2$ 给出；$\chi<0$ 与 $\alpha$ 同号 |
+| transmon 单发读出（[文献 14]([[sources/duan-peng-2022]])，PDF p. 32） | 几十 MHz | $\sim 6$ GHz | $\alpha/2\pi\sim -250$ MHz | $|\chi|/2\pi\sim 1$ MHz 量级 |
 
-> 自旋比特的色散频移通常比电荷比特小一到两个量级：[江顺利 2025]([[sources/jiang-shunli-2025]])，PDF p. 78）测得 $2g_s/2\pi=43.5$ MHz，对应 $\chi_s/2\pi$ 仅约百 kHz 量级，需更高 $Q$ 腔或更长积分时间才能稳定读出。
+> 自旋比特的色散频移通常比电荷比特小一到两个量级：[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 78）测得 $2g_s/2\pi=43.5$ MHz，对应 $\chi_s/2\pi$ 仅约百 kHz 量级，需更高 $Q$ 腔或更长积分时间才能稳定读出。
 
 ## 实验特征与测量方法
 
@@ -142,8 +142,8 @@ $$
 
 最常见的实验提取方法是组合使用"扫频探测"与"双色调制"：
 
-1. **扫频探测**：固定比特工作点，扫描探测微波频率 $\omega_p$ 穿过裸腔响应曲线，比特基态、激发态分别对应一条谐振曲线 $\omega_r\pm\chi$；两条曲线在 $\chi>\kappa/2$ 时肉眼可分，在 $\chi>\kappa$ 时进入强色散区（[陈明博 2021]([[sources/chen-mingbo-2021]])，PDF p. 30）；
-2. **双色调制（two-tone spectroscopy）**：固定 $\omega_p=\omega_r-\chi$ 测量比特频率，扫描驱动微波频率 $\omega_d$，比特共振时腔的响应回到 $\omega_r$。把测得的 $\omega_a$ 与 $\chi$ 代入 $\chi=g^2/\Delta$ 即可反推 $g=\sqrt{\chi(\omega_a-\omega_r)}$——[林霆 2022]([[sources/lin-ting-2022]])，PDF pp. 47–48 提出方法，PDF p. 63 实测 $\chi/2\pi=11$ MHz、$g/2\pi=103$ MHz。
+1. **扫频探测**：固定比特工作点，扫描探测微波频率 $\omega_p$ 穿过裸腔响应曲线，比特基态、激发态分别对应一条谐振曲线 $\omega_r\pm\chi$；两条曲线在 $\chi>\kappa/2$ 时肉眼可分，在 $\chi>\kappa$ 时进入强色散区（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 30）；
+2. **双色调制（two-tone spectroscopy）**：固定 $\omega_p=\omega_r-\chi$ 测量比特频率，扫描驱动微波频率 $\omega_d$，比特共振时腔的响应回到 $\omega_r$。把测得的 $\omega_a$ 与 $\chi$ 代入 $\chi=g^2/\Delta$ 即可反推 $g=\sqrt{\chi(\omega_a-\omega_r)}$——[文献 17]([[sources/lin-ting-2022]])，PDF pp. 47–48 提出方法，PDF p. 63 实测 $\chi/2\pi=11$ MHz、$g/2\pi=103$ MHz。
 
 ### 动态提取：ac Stark 与 Lamb 频移
 
@@ -153,11 +153,11 @@ $$
 \alpha_{\mathrm{fit}}P_p=2n_p\chi=\Delta\omega_a-\chi,
 $$
 
-由此可得腔内平均光子数 $n_p=\alpha_{\mathrm{fit}}P_p/(2\chi)$——[林霆 2022]([[sources/lin-ting-2022]])，PDF p. 49）用此方法测出 $n_p\sim 1$ 的弱探测区。当 $n_p\to 0$（极弱探测）时残留的 $\chi$ 即 Lamb 频移，可用真空涨落来源自洽。
+由此可得腔内平均光子数 $n_p=\alpha_{\mathrm{fit}}P_p/(2\chi)$——[文献 17]([[sources/lin-ting-2022]])，PDF p. 49）用此方法测出 $n_p\sim 1$ 的弱探测区。当 $n_p\to 0$（极弱探测）时残留的 $\chi$ 即 Lamb 频移，可用真空涨落来源自洽。
 
 ### 透射与反射的散射参数
 
-通过输入–输出理论，透射式共面波导腔的透射系数为（[陈明博 2021]([[sources/chen-mingbo-2021]])，PDF p. 45；[林霆 2022]([[sources/lin-ting-2022]])，PDF p. 28）
+通过输入–输出理论，透射式共面波导腔的透射系数为（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 45；[文献 17]([[sources/lin-ting-2022]])，PDF p. 28）
 
 $$
 S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2},
@@ -180,7 +180,7 @@ $$
 n_{\mathrm{crit}}=\frac{\Delta^2}{4g^2}\simeq\frac{|\Delta|}{4|\chi|}\gg 1,
 $$
 
-色散展开失效，必须回到完整 JC 或 Rabi 模型（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 33）。在 transmon 体系中一般要求 $n_p<n_{\mathrm{crit}}/10$ 以维持色散读出的可解释性。对 $|\Delta|/2\pi\sim 6$ GHz、$g/2\pi\sim 50$ MHz 的典型值，$n_{\mathrm{crit}}$ 在数十到一百量级——这一上限决定了色散读出的最大可用探测功率。
+色散展开失效，必须回到完整 JC 或 Rabi 模型（[文献 14]([[sources/duan-peng-2022]])，PDF p. 33）。在 transmon 体系中一般要求 $n_p<n_{\mathrm{crit}}/10$ 以维持色散读出的可解释性。对 $|\Delta|/2\pi\sim 6$ GHz、$g/2\pi\sim 50$ MHz 的典型值，$n_{\mathrm{crit}}$ 在数十到一百量级——这一上限决定了色散读出的最大可用探测功率。
 
 <!-- FIGURE: $|\Delta|/g$ 区间划分与临界光子数 $n_{\mathrm{crit}}$ 边界，纵轴画 $|\chi|$ 与 $n_p$ 关系 -->
 
@@ -188,12 +188,12 @@ $$
 
 色散频移并非完全"免费"的读出工具。探测光子既提供信息也是扰动来源——在主方程中，色散读出引入两项额外的比特退相干通道：
 
-- **测量诱导退相干（measurement-induced dephasing）**：$\Gamma_d(t)=2\chi\,\mathrm{Im}[\alpha_g(t)\alpha_e^\*(t)]$，随探测光子数增大而增大（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 33）；
+- **测量诱导退相干（measurement-induced dephasing）**：$\Gamma_d(t)=2\chi\,\mathrm{Im}[\alpha_g(t)\alpha_e^\*(t)]$，随探测光子数增大而增大（[文献 14]([[sources/duan-peng-2022]])，PDF p. 33）；
 - **ac Stark 频移的反作用**：比特等效频率被腔光场推 $\omega_{ac}(t)=\tilde\omega_q+2\chi\,\mathrm{Re}[\alpha_g\alpha_e^\*]$，强探测下比特频率显著偏离标定值。
 
-把测量速率 $\Gamma_m(t)=\eta\kappa|\beta(t)|^2$（$\beta=\alpha_e-\alpha_g$，$\eta$ 是量子效率）与退相干速率之比定义为 $\eta=\lim_{t\to\infty}\Gamma_m/(2\Gamma_d)$——它是把"读出"与"扰动"统一起来的单标量（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 40）。$\eta=1$ 对应最大测量速率与最小退相干代价；$\eta=0$ 则只扰动不读出。
+把测量速率 $\Gamma_m(t)=\eta\kappa|\beta(t)|^2$（$\beta=\alpha_e-\alpha_g$，$\eta$ 是量子效率）与退相干速率之比定义为 $\eta=\lim_{t\to\infty}\Gamma_m/(2\Gamma_d)$——它是把"读出"与"扰动"统一起来的单标量（[文献 14]([[sources/duan-peng-2022]])，PDF p. 40）。$\eta=1$ 对应最大测量速率与最小退相干代价；$\eta=0$ 则只扰动不读出。
 
-因此"调高探测功率"看似能提升 SNR，实则会同时增大 $\Gamma_d$、扭曲比特频率、并在 $n_p\to n_{\mathrm{crit}}$ 时破坏色散近似。优化的中心议题是把 SNR、读出速度与比特退相干三项代价一起压到阈值以下——这是[段鹏 2022]([[sources/duan-peng-2022]])，PDF pp. 37–40、p. 67）的"读取参数最优化设计"以及 Purcell 滤波器、量子极限参量放大器的存在理由。
+因此"调高探测功率"看似能提升 SNR，实则会同时增大 $\Gamma_d$、扭曲比特频率、并在 $n_p\to n_{\mathrm{crit}}$ 时破坏色散近似。优化的中心议题是把 SNR、读出速度与比特退相干三项代价一起压到阈值以下——这是[文献 14]([[sources/duan-peng-2022]])，PDF pp. 37–40、p. 67）的"读取参数最优化设计"以及 Purcell 滤波器、量子极限参量放大器的存在理由。
 
 ## 与其他概念的关系
 
@@ -210,11 +210,11 @@ $$
 
 把色散频移从"理论预言"推到"实验可读"，本站几本论文总结了若干经验：
 
-1. **避开源漏隧穿线**：源漏电子库隧穿会显著缩短电荷比特相干时间，$\gamma$ 急剧增大使得 $\chi>\gamma$ 不再成立（[林霆 2022]([[sources/lin-ting-2022]])，PDF pp. 43–45）；
-2. **探测频率选在 $\omega_p=\omega_r-\chi$ 或 $\omega_r$ 上**：前者对小驱动功率敏感，后者在大功率下饱和但对频谱移动观察直接（[林霆 2022]([[sources/lin-ting-2022]])，PDF p. 47）；
-3. **保持 $n_p\lesssim n_{\mathrm{crit}}/10$**：保证色散近似成立，同时把测量诱导退相干压到可接受范围（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 33）；
-4. **同时优化 $\kappa$、$\eta$ 与 $\chi$**：SNR$\propto\chi^2/\kappa$ 与 $\eta t_m$，单纯减小 $\kappa$ 会拉长腔响应时间 $1/\kappa$，需配合 Purcell 滤波器与量子极限放大器（[段鹏 2022]([[sources/duan-peng-2022]])，PDF pp. 37–40）；
-5. **transmon 体系需考虑非谐修正**：$\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 而非 $g^2/\Delta$；$\chi$ 与 $\alpha$ 同号，负非谐性使 $\chi<0$（[段鹏 2022]([[sources/duan-peng-2022]])，PDF p. 40）；
+1. **避开源漏隧穿线**：源漏电子库隧穿会显著缩短电荷比特相干时间，$\gamma$ 急剧增大使得 $\chi>\gamma$ 不再成立（[文献 17]([[sources/lin-ting-2022]])，PDF pp. 43–45）；
+2. **探测频率选在 $\omega_p=\omega_r-\chi$ 或 $\omega_r$ 上**：前者对小驱动功率敏感，后者在大功率下饱和但对频谱移动观察直接（[文献 17]([[sources/lin-ting-2022]])，PDF p. 47）；
+3. **保持 $n_p\lesssim n_{\mathrm{crit}}/10$**：保证色散近似成立，同时把测量诱导退相干压到可接受范围（[文献 14]([[sources/duan-peng-2022]])，PDF p. 33）；
+4. **同时优化 $\kappa$、$\eta$ 与 $\chi$**：SNR$\propto\chi^2/\kappa$ 与 $\eta t_m$，单纯减小 $\kappa$ 会拉长腔响应时间 $1/\kappa$，需配合 Purcell 滤波器与量子极限放大器（[文献 14]([[sources/duan-peng-2022]])，PDF pp. 37–40）；
+5. **transmon 体系需考虑非谐修正**：$\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 而非 $g^2/\Delta$；$\chi$ 与 $\alpha$ 同号，负非谐性使 $\chi<0$（[文献 14]([[sources/duan-peng-2022]])，PDF p. 40）；
 6. **自旋比特的弱 $\chi$ 需要更长积分**：$\chi_s$ 通常比 $\chi_c$ 小一两个量级，必须用更高 $Q$ 腔或更长积分时间补偿。
 
 ## 延伸阅读
@@ -226,8 +226,8 @@ $$
 
 ## 论文依据
 
-- [[sources/chen-mingbo-2021|陈明博 2021]]，PDF p. 15：JC 模型与色散读出发展史；pp. 28–30：旋波近似与色散极限，色散哈密顿量推导（式 2.7）、色散频移 $\Delta\omega_r\approx g_c^2/\Delta$ 与腔频响应；pp. 28–30：比特 ac Stark 频移 $2ng^2/\Delta$ 与 Lamb 频移 $g^2/\Delta$ 的命名与解释，强色散区判据 $g^2/\Delta>\kappa,\gamma$；p. 45：$S_{21}$、$S_{11}$ 透射/反射公式与比特对腔频/线宽的影响（式 2.58–2.62）；p. 116：电荷比特最强耦合 $g_c/\omega_r\sim 0.11$ 与色散读出参数范围。
-- [[sources/lin-ting-2022|林霆 2022]]，PDF pp. 25–26：色散耦合区（$|\Delta|\gg g$）的 Schrieffer–Wolff 推导、色散哈密顿量与 ac Stark、Lamb 频移（式 2.45–2.46）；p. 41：腔频 $\omega_r'=\omega_r+g^2\chi$ 修正与色散简化 $\chi=g^2/(\omega_a-\omega_r)$；pp. 47–48：双色调制频谱提取 $\chi=g^2/(\omega_a-\omega_r)$ 的方法；p. 63：实验测得 $|\chi|/2\pi=11$ MHz、$\omega_a=5.565$ GHz、$g/2\pi=103$ MHz；p. 49：利用 ac Stark 频移 $n_p=\alpha P_p/(2\chi)$ 测腔内光子数；pp. 53–55：色散读出原理与时间平均色散读出的相位响应公式 $\phi=\tan^{-1}(2g^2/\kappa\Delta)\sigma_z$（PDF p. 69 强调 $\chi/2\pi=11$ MHz 较小导致单发读出困难）。
-- [[sources/jiang-shunli-2025|江顺利 2025]]，PDF p. 40：全局耦合 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/(\pi\hbar)}$ 与有效耦合 $g_{\mathrm{eff}}=g_0\sin\theta$；p. 62：Si/SiGe RDQD 与 TiN 腔 $\chi=g^2/\Delta$ 的色散频移提取；p. 78：RDQD 翻转模式自旋比特色散读出与 $2g_s/2\pi=43.5$ MHz 对应的弱 $\chi_s$；p. 100：RX 比特双色调制谱拟合与色散读出在共振交换比特中的应用。
-- [[sources/duan-peng-2022|段鹏 2022]]，PDF p. 31：JC 哈密顿量色散极限的幺正变换 $R=\exp[\lambda(a^\dagger\sigma_--a\sigma_+)]$ 与二阶展开（式 2.11–2.12），明确命名"色散频移 $\chi=g^2/\Delta$"；p. 32：transmon 多能级修正 $\chi=g^2\alpha/[\Delta(\Delta+\alpha)]$、$|\chi|$ 较 JC 模型更小、$\chi$ 与 $\alpha$ 同号（式 2.19、2.16–2.18）；p. 33：临界光子数 $n_{\mathrm{crit}}=\Delta^2/(4g^2)$ 与色散近似失效条件；pp. 33–36：微波驱动下色散哈密顿量（式 2.21）、腔场稳态 $\alpha_{e/g}$、测量诱导退相干 $\Gamma_d=2\chi\mathrm{Im}[\alpha_g\alpha_e^\*]$ 与 ac Stark 频移 $\omega_{ac}$；p. 40：色散频移 $\chi$ 与 transmon 非谐 $\alpha$ 同号的物理解释；p. 61：测量算符 $\sigma_z$ 与色散哈密顿量对易，色散读出满足 QND 条件；pp. 37–40：SNR、量子效率 $\eta=\eta_{\mathrm{col}}\eta_{\mathrm{amp}}$、$\lim_{t\to\infty}\Gamma_m/(2\Gamma_d)=\eta$ 与读取参数最优化设计；pp. 7、120：六比特 transmon 芯片上 $300$–$500$ ns 积分、$98.14\%$ 单发读出保真度。
-- [[sources/gu-sisi-2023|顾思思 2023]]，PDF pp. 63–64：三量子点–腔杂化系统的多能级 JC 模型（式 3.2–3.4）与量子朗之万方程、输入输出边界条件，色散哈密顿量在多能级量子点中的推广。
+- [[sources/ref-13|文献 13]]，PDF p. 15：JC 模型与色散读出发展史；pp. 28–30：旋波近似与色散极限，色散哈密顿量推导（式 2.7）、色散频移 $\Delta\omega_r\approx g_c^2/\Delta$ 与腔频响应；pp. 28–30：比特 ac Stark 频移 $2ng^2/\Delta$ 与 Lamb 频移 $g^2/\Delta$ 的命名与解释，强色散区判据 $g^2/\Delta>\kappa,\gamma$；p. 45：$S_{21}$、$S_{11}$ 透射/反射公式与比特对腔频/线宽的影响（式 2.58–2.62）；p. 116：电荷比特最强耦合 $g_c/\omega_r\sim 0.11$ 与色散读出参数范围。
+- [[sources/ref-17|文献 17]]，PDF pp. 25–26：色散耦合区（$|\Delta|\gg g$）的 Schrieffer–Wolff 推导、色散哈密顿量与 ac Stark、Lamb 频移（式 2.45–2.46）；p. 41：腔频 $\omega_r'=\omega_r+g^2\chi$ 修正与色散简化 $\chi=g^2/(\omega_a-\omega_r)$；pp. 47–48：双色调制频谱提取 $\chi=g^2/(\omega_a-\omega_r)$ 的方法；p. 63：实验测得 $|\chi|/2\pi=11$ MHz、$\omega_a=5.565$ GHz、$g/2\pi=103$ MHz；p. 49：利用 ac Stark 频移 $n_p=\alpha P_p/(2\chi)$ 测腔内光子数；pp. 53–55：色散读出原理与时间平均色散读出的相位响应公式 $\phi=\tan^{-1}(2g^2/\kappa\Delta)\sigma_z$（PDF p. 69 强调 $\chi/2\pi=11$ MHz 较小导致单发读出困难）。
+- [[sources/ref-20|文献 20]]，PDF p. 40：全局耦合 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/(\pi\hbar)}$ 与有效耦合 $g_{\mathrm{eff}}=g_0\sin\theta$；p. 62：Si/SiGe RDQD 与 TiN 腔 $\chi=g^2/\Delta$ 的色散频移提取；p. 78：RDQD 翻转模式自旋比特色散读出与 $2g_s/2\pi=43.5$ MHz 对应的弱 $\chi_s$；p. 100：RX 比特双色调制谱拟合与色散读出在共振交换比特中的应用。
+- [[sources/ref-14|文献 14]]，PDF p. 31：JC 哈密顿量色散极限的幺正变换 $R=\exp[\lambda(a^\dagger\sigma_--a\sigma_+)]$ 与二阶展开（式 2.11–2.12），明确命名"色散频移 $\chi=g^2/\Delta$"；p. 32：transmon 多能级修正 $\chi=g^2\alpha/[\Delta(\Delta+\alpha)]$、$|\chi|$ 较 JC 模型更小、$\chi$ 与 $\alpha$ 同号（式 2.19、2.16–2.18）；p. 33：临界光子数 $n_{\mathrm{crit}}=\Delta^2/(4g^2)$ 与色散近似失效条件；pp. 33–36：微波驱动下色散哈密顿量（式 2.21）、腔场稳态 $\alpha_{e/g}$、测量诱导退相干 $\Gamma_d=2\chi\mathrm{Im}[\alpha_g\alpha_e^\*]$ 与 ac Stark 频移 $\omega_{ac}$；p. 40：色散频移 $\chi$ 与 transmon 非谐 $\alpha$ 同号的物理解释；p. 61：测量算符 $\sigma_z$ 与色散哈密顿量对易，色散读出满足 QND 条件；pp. 37–40：SNR、量子效率 $\eta=\eta_{\mathrm{col}}\eta_{\mathrm{amp}}$、$\lim_{t\to\infty}\Gamma_m/(2\Gamma_d)=\eta$ 与读取参数最优化设计；pp. 7、120：六比特 transmon 芯片上 $300$–$500$ ns 积分、$98.14\%$ 单发读出保真度。
+- [[sources/ref-18|文献 18]]，PDF pp. 63–64：三量子点–腔杂化系统的多能级 JC 模型（式 3.2–3.4）与量子朗之万方程、输入输出边界条件，色散哈密顿量在多能级量子点中的推广。
