@@ -120,6 +120,45 @@ plugins:
       folderClickBehavior: collapse
       folderDefaultState: collapsed
       useSavedState: true
+      sortFn: |
+        (a, b) => {
+          const FOLDERS = ["fundamentals", "materials-devices", "qubit-control", "circuit-qed", "readout-measurement", "scaling-automation", "sources"];
+          const ENTRIES = {
+            "fundamentals": ["two-dimensional-carrier-gas", "semiconductor-quantum-dot", "constant-interaction-model", "electrochemical-potential", "charging-energy", "zeeman-effect", "spin-orbit-coupling", "hyperfine-interaction", "valley-splitting", "coulomb-blockade", "coulomb-diamond", "double-quantum-dot", "charge-stability-diagram", "tunnel-coupling"],
+            "materials-devices": ["gaas-algaas", "silicon-mos", "silicon-sige", "germanium-hut-wire", "strained-germanium", "micromagnet", "interface-defects", "charge-noise"],
+            "qubit-control": ["charge-qubit", "single-spin-qubit", "hole-spin-qubit", "singlet-triplet-qubit", "hybrid-qubit", "resonant-exchange-qubit", "flopping-mode-qubit", "exchange-interaction", "exchange-gates", "landau-zener-transition", "lzsm-interference", "photon-assisted-tunneling", "rabi-oscillation", "ramsey-interferometry", "electric-dipole-spin-resonance", "dynamical-decoupling", "geometric-quantum-gate", "pauli-spin-blockade", "spin-initialization", "spin-decoherence", "cnot-gate", "toffoli-gate"],
+            "circuit-qed": ["microwave-resonator", "cavity-linewidth", "circuit-quantum-electrodynamics", "jaynes-cummings-model", "strong-coupling", "vacuum-rabi-splitting", "dispersive-shift", "high-impedance-resonator", "squid-array-resonator", "charge-photon-coupling", "spin-photon-coupling", "cavity-mediated-coupling", "floquet-dynamics"],
+            "readout-measurement": ["single-electron-transistor", "qpc-charge-sensor", "gate-based-sensing", "rf-reflectometry", "single-shot-readout", "energy-selective-readout", "threshold-independent-readout", "dispersive-readout", "parametric-amplifier", "purcell-filter", "readout-crosstalk"],
+            "scaling-automation": ["quantum-dot-array", "virtual-gates", "cross-capacitance-matrix", "flopping-mode-qubit", "automatic-tuning", "charge-state-recognition", "two-dimensional-array", "cryo-electronics", "spin-orbit-torque-control"]
+          };
+          const top = a.slugSegments.length - 1;
+          const ak = a.slugSegments[top], bk = b.slugSegments[top];
+          if (ak === "index") return -1;
+          if (bk === "index") return 1;
+          if (a.isFolder && !b.isFolder) return -1;
+          if (!a.isFolder && b.isFolder) return 1;
+          if (a.isFolder && b.isFolder) {
+            const ia = FOLDERS.indexOf(ak), ib = FOLDERS.indexOf(bk);
+            if (ia >= 0 && ib >= 0) return ia - ib;
+            if (ia >= 0) return -1;
+            if (ib >= 0) return 1;
+            return a.displayName.localeCompare(b.displayName, "zh-CN");
+          }
+          const parent = a.slugSegments[top - 1] || "";
+          const list = ENTRIES[parent] || [];
+          const ia = list.indexOf(ak), ib = list.indexOf(bk);
+          if (ia >= 0 && ib >= 0) return ia - ib;
+          if (ia >= 0) return -1;
+          if (ib >= 0) return 1;
+          return a.displayName.localeCompare(b.displayName, "zh-CN");
+        }
+      filterFn: |
+        (node) => {
+          if (node.isFolder) return true;
+          if (node.slugSegments.includes("assets")) return false;
+          return true;
+        }
+      order: ["filter", "sort", "map"]
     layout:
       position: left
       priority: 50
