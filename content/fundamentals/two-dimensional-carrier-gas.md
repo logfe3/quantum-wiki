@@ -110,7 +110,11 @@ $$
 | Si/SiGe | 应变 Si 量子阱 | 视栅压而定 | 可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 杨杰诚 2023 |
 | Ge/SiGe 2DHG | $16\ \mathrm{nm}$ 锗量子阱 | 视栅压而定 | 可达 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$（载流子）；高质量样品 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | 杨杰诚 2023 / 马璟睿 2026 |
 
-<!-- FIGURE: 不同体系的 2DEG/2DHG 深度、面密度与迁移率对照示意图（柱状或点图），按 GaAs/AlGaAs、Si-MOS、Si/SiGe、Ge/SiGe 四类排开；标注深度、迁移率、面密度与典型温度 -->
+![[assets/figures/materials-devices/han-2017-fig1-4-qd-orientations.jpg]]
+
+*横向与纵向量子点器件结构对比（[韩天一 2017]([[sources/han-tianyi-2017]])，图 1.4）*
+
+<!-- 原始占位：不同体系的 2DEG/2DHG 深度、面密度与迁移率对照示意图（柱状或点图），按 GaAs/AlGaAs、Si-MOS、Si/SiGe、Ge/SiGe 四类排开；标注深度、迁移率、面密度与典型温度 -->
 
 ## 从二维到零维
 

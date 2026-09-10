@@ -38,7 +38,11 @@ $$
 
 其中 $\mathbf{k}$ 是波矢，$\mathbf{J}$ 是 $J=3/2$ 角动量算符，$\gamma_{1,2,3}$ 是 Luttinger 参数；应变与反演不对称性打开的项又把立方对称降到实际器件的 $C_{2v}$ 或更低。在强量子限域（横向尺度远小于纵向）下，重空穴（heavy hole, hh, $J_z=\pm 3/2$）与轻空穴（light hole, lh, $J_z=\pm 1/2$）的分裂 $\Delta_\mathrm{hl}$ 通常远大于塞曼能与电荷能，于是最低两条子带由一对重空穴赝自旋 $\{|+3/2\rangle,|-3/2\rangle\}$ 组成——这就是空穴自旋比特的计算子空间。
 
-<!-- FIGURE: Luttinger–Kohn 能带结构示意图，标注 hh、lh 自旋劈裂与量子限域导致的子带分裂 Δ_hl -->
+![[assets/figures/qubit-control/xu-2020-fig1-1-ge-hole-single-qd.jpg]]
+
+*锗纳米线空穴型单量子点电路模型与库仑振荡/菱形图（[徐刚 2020]([[sources/xu-gang-2020]])，图 1.1）*
+
+<!-- 原始占位：Luttinger–Kohn 能带结构示意图，标注 hh、lh 自旋劈裂与量子限域导致的子带分裂 Δ_hl -->
 
 ### 单点比特哈密顿量
 

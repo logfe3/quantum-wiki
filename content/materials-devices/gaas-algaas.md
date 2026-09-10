@@ -28,6 +28,10 @@ GaAs/AlGaAs 异质结由分子束外延（MBE）按层依次生长 GaAs 与 Al<s
 
 ## 异质结的能带与三角势阱
 
+![[assets/figures/materials-devices/you-jie-2016-fig1-1-gaas-heterostructure.jpg]]
+
+*掺杂 GaAs/AlGaAs 异质结层结构与垂直能带图（[尤杰 2016]([[sources/you-jie-2016]])，图 1.1）*
+
 本组常用调制掺杂（modulation-doped）GaAs/AlGaAs 晶圆（尤杰 2016 给出的自上而下参数）：$10\ \mathrm{nm}$ GaAs 盖帽层、$50\ \mathrm{nm}$ AlGaAs 隔离层、$20\ \mathrm{nm}$ Si 掺杂 AlGaAs 重掺杂层（Si 浓度 $\sim 7\times 10^{17}\ \mathrm{cm^{-3}}$）、$15\ \mathrm{nm}$ AlGaAs 缓冲层、$500\ \mathrm{nm}$ GaAs 基底；Al 组分取 $30\%$。在该结构下 2DEG 形成在距表面约 $90\ \mathrm{nm}$ 处。尚汝南 2014 的样品同为 GaAs/Al<sub>0.3</sub>Ga<sub>0.7</sub>As 异质结，自上而下为 $10\ \mathrm{nm}$ GaAs 盖帽、$80\ \mathrm{nm}$ AlGaAs 层（含 Si 掺杂，$\sim 10^{18}\ \mathrm{cm^{-3}}$）、$500\ \mathrm{nm}$ GaAs 基底，未掺杂"空白层"与掺杂 n-AlGaAs 相距约 $20\ \mathrm{nm}$ 以减少散射，2DEG 同样位于表面下约 $90$–$100\ \mathrm{nm}$。周诚 2013 综述不同批次的晶圆参数：批次 #28 $n=3.2\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=1.5\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #34 $n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=0.6\times 10^{5}$；批次 #35 $n=3.0\times 10^{11}\ \mathrm{cm^{-2}}$、$\mu=3.2\times 10^{5}$。
 
 在生长方向 $z$ 上，GaAs/AlGaAs 界面的三角势阱可近似为线性势 $V(z)=eFz$ 加无限高势垒，束缚态由 Airy 函数给出

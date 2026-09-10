@@ -60,7 +60,11 @@ $$
 
 其中谷耦合 $\Delta_v$ 是界面势在两个谷态之间的矩阵元。这个写法直接解释了实验规律：界面越锐利、纵向电场把波函数压得越紧，$|\Delta_v|$ 越大；而 Si 量子阱与 SiGe 间隔层界面上的**原子台阶**会让不同横向位置的 $\Delta_v$ 相位不同、相干叠加相消，从而显著抑制谷劈裂。这也是 Si/SiGe 相对 [[materials-devices/silicon-mos|Si-MOS]] 的主要短板：MOS 的 Si/SiO₂ 界面势垒极陡，谷劈裂天然更大，而 Si/SiGe 的化学界面较"软"，$E_\mathrm{VS}$ 偏小，需要靠优化基片结构与生长工艺改善。
 
-<!-- FIGURE: 谷简并逐级解除示意：体硅六重简并 → 应变后 Δ4（四重）与 Γ2（二重）→ 二维限制与电场下 Γ2 劈裂出 E_VS -->
+![[assets/figures/materials-devices/you-jie-2016-fig1-1-gaas-heterostructure.jpg]]
+
+*掺杂 GaAs/AlGaAs 异质结层结构与垂直能带图（[尤杰 2016]([[sources/you-jie-2016]])，图 1.1）*
+
+<!-- 原始占位：谷简并逐级解除示意：体硅六重简并 → 应变后 Δ4（四重）与 Γ2（二重）→ 二维限制与电场下 Γ2 劈裂出 E_VS -->
 
 ## 理论模型
 

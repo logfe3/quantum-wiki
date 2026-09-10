@@ -19,7 +19,11 @@ date: 2026-09-08
 
 把脉冲序列换成"$\pi/2$—等待—$\pi/2$"，就得到 [[qubit-control/ramsey-interferometry|Ramsey 干涉]]；把驱动频率缓慢扫过谐振点则得到 [[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]。三者共同构成单比特相干表征的"三件套"，也是从 Rabi 振荡提取相干时间与 [[qubit-control/electric-dipole-spin-resonance|EDSR]] 强度的基础。
 
-<!-- FIGURE: 布洛赫球上 Rabi 振荡示意图：南北极为 |0⟩/|1⟩，共振驱动下态矢量绕 x 轴进动，转过 π 角即实现 π 脉冲 -->
+![[assets/figures/qubit-control/wang-ke-2020-fig1-6-bloch-sphere.jpg]]
+
+*布洛赫球：|0⟩/|1⟩ 位于南北极，球面上任一点对应一个量子比特的纯态（[王柯 2020]([[sources/wang-ke]])，图 1.6）*
+
+<!-- 原始占位：布洛赫球上 Rabi 振荡示意图：南北极为 |0⟩/|1⟩，共振驱动下态矢量绕 x 轴进动，转过 π 角即实现 π 脉冲 -->
 
 ## 理论模型：哈密顿量与旋转波近似
 
