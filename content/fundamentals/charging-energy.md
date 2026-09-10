@@ -2,12 +2,12 @@
 title: 充电能
 description: 量子点因有限电容而产生的逐个加入载流子的静电能标度。
 aliases:
-  - 库仑充电能
-  - 充电能量
-  - charging energy
+ - 库仑充电能
+ - 充电能量
+ - charging energy
 tags:
-  - 量子点基础
-  - 能量
+ - 量子点基础
+ - 能量
 date: 2026-09-08
 ---
 
@@ -20,7 +20,7 @@ date: 2026-09-08
 充电能在不同文献里给出的形式略有差异。最常见的两种写法是
 
 $$
-E_C=\frac{e^2}{C_\Sigma},\qquad\text{或}\qquad \frac{e^2}{2C_\Sigma},
+E_C=\frac{e^2}{C_\Sigma},\qquad\text{或}\qquad \frac{e^2}{2C_\Sigma}
 $$
 
 差别仅来自电化学势中 $1/2$ 因子的归属方式：把电化学势 $\mu(N)$ 写成相邻能量差的中心点对称形式时出现 $e^2/C_\Sigma$，而把经典电容储能 $Q^2/(2C_\Sigma)$ 直接拆分为"逐份加电子的增量"时则得到 $e^2/(2C_\Sigma)$。两份写法所描述的物理（"加一份电子付多少静电费"）相同，只是边界位置差 $1/2$ 个 $E_C$；本站与[[fundamentals/constant-interaction-model|常相互作用模型]]统一采用 $E_C=e^2/C_\Sigma$。
@@ -34,7 +34,7 @@ $$
 充电能的定量定义来自[[fundamentals/constant-interaction-model|常相互作用模型]]（constant interaction model, CI 模型）。CI 模型把整个系统压成两组变量：一组是经典电容网络描述的全部库仑作用，一组是量子力学给出的单粒子束缚能级。基于这一拆解，含 $N$ 个电子（$|e|$ 取正值）的量子点总能量为
 
 $$
-U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B),
+U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B)
 $$
 
 第一项为静电能 $Q^2/(2C_\Sigma)$，第二项是已占据单粒子能级之和，$N_0|e|$ 补偿背景离子正电荷。漏极接地、源极偏压 $V_{SD}$、栅压 $V_G$ 三组电极通过各自电容 $C_S$、$C_D$、$C_G$ 在岛上感应电荷。CI 模型的两条核心假设是：
@@ -52,7 +52,7 @@ $$
 
 ### 推导梗概：$Q^2/(2C_\Sigma)$ 的来源
 
-把量子点和所有电极当成节点 $i$，节点电荷 $\vec{Q}$ 与电势 $\vec{V}$ 由电容矩阵 $\vec{Q}=C\vec{V}$ 联系起来，系统总静电能为 $U=\frac{1}{2}\vec{V}^\mathrm{T}\,C\,\vec{V}=\frac{1}{2}\vec{Q}^\mathrm{T}\,C^{-1}\,\vec{Q}$。把矩阵按"点"与"电极"分块，能量拆成点内项、点–电极相互作用项、纯电极项。当点内电荷变化 $\delta Q$ 时，电极会感应出反向电荷以维持电势不变，电源做功恰好抵消相互作用项的变化，归入点自由能的只剩点内项 $U_1=\frac{1}{2}\vec{V}_c^\mathrm{T}\,C_{cc}^{-1}\,\vec{V}_c$。对单点取 $C_{cc}=C_\Sigma$ 就得到上式的 $Q^2/(2C_\Sigma)$ 形式。文献 6（PDF pp. 14–17）以及文献 10（PDF p. 58）都按此路径推导出 CI 模型公式，明确指出经典静电能项里已经计入了电极感应电荷与电源做功。
+把量子点和所有电极当成节点 $i$，节点电荷 $\vec{Q}$ 与电势 $\vec{V}$ 由电容矩阵 $\vec{Q}=C\vec{V}$ 联系起来，系统总静电能为 $U=\frac{1}{2}\vec{V}^\mathrm{T}\,C\,\vec{V}=\frac{1}{2}\vec{Q}^\mathrm{T}\,C^{-1}\,\vec{Q}$。把矩阵按"点"与"电极"分块，能量拆成点内项、点–电极相互作用项、纯电极项。当点内电荷变化 $\delta Q$ 时，电极会感应出反向电荷以维持电势不变，电源做功恰好抵消相互作用项的变化，归入点自由能的只剩点内项 $U_1=\frac{1}{2}\vec{V}_c^\mathrm{T}\,C_{cc}^{-1}\,\vec{V}_c$。对单点取 $C_{cc}=C_\Sigma$ 就得到上式的 $Q^2/(2C_\Sigma)$ 形式。以及都按此路径推导出 CI 模型公式，明确指出经典静电能项里已经计入了电极感应电荷与电源做功。
 
 <!-- FIGURE: 量子点电荷态从 $N-1$ 变为 $N$ 时的电化学势阶梯图，标注 $E_C$（步高）与 $E_N$（能级差），强调 $\mu(N+1)-\mu(N)=E_C+\Delta E$ -->
 
@@ -61,7 +61,7 @@ $$
 实际测到的是加电子能（addition energy）
 
 $$
-E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E,
+E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E
 $$
 
 其中 $\Delta E=E_{N+1}-E_N$ 是相邻单粒子能级间隔。对百纳米量级门控量子点 $E_C\gg\Delta E$，加电子能近似等于充电能；少电子区或轨道简并处 $\Delta E$ 不再可忽略，需要把加电子能拆开理解。少电子区 $E_\mathrm{add}$ 还会因电子–电子关联（[[qubit-control/singlet-triplet-qubit|单态–三重态]]交换劈裂、自旋阻塞等）出现奇偶振荡，使库仑峰高度呈 $2:1:2:1\ldots$ 交替——这是 CI 模型之外的修正。
@@ -71,12 +71,12 @@ $$
 "加一个电子需要付静电费"成为可观测量，需要让这份静电费在测量系统中不被热涨落或量子涨落抹平：
 
 $$
-E_C\gg k_\mathrm{B}T,\ \hbar\Gamma,
+E_C\gg k_\mathrm{B}T,\ \hbar\Gamma
 $$
 
 其中 $\Gamma$ 是量子点与储库之间的隧穿率，$\hbar\Gamma$ 是能级展宽。这是[[fundamentals/coulomb-blockade|库仑阻塞]]出现的两条基本条件（参见[[fundamentals/coulomb-blockade|库仑阻塞]]词条），但它们都直接以 $E_C$ 写出来。换言之，充电能的数值同时决定了阻塞窗口的"能量高度"和"温度门槛"。
 
-把 $E_C$ 翻译成温度方便选制冷机：$E_C/k_\mathrm{B}\approx17.6\,(E_C/\mathrm{meV})\,\mathrm{K}$。$E_C=1.5\ \mathrm{meV}$ 对应 $\sim 17\ \mathrm{K}$，意味着 He-3 制冷机（$\sim 300\ \mathrm{mK}$）即可看到清晰阻塞，但电子温度往往高于晶格温度，多需要在稀释制冷机（$T_\mathrm{base}\sim 10$–$20\ \mathrm{mK}$）下做精细测量。文献 1（PDF p. 67）明确指出："当环境的热涨落大于充电能时，库仑阻塞效应便无法发生"，这也是大多数量子点实验对低温和电导门槛提出严格要求的原因。
+把 $E_C$ 翻译成温度方便选制冷机：$E_C/k_\mathrm{B}\approx17.6\,(E_C/\mathrm{meV})\,\mathrm{K}$。$E_C=1.5\ \mathrm{meV}$ 对应 $\sim 17\ \mathrm{K}$，意味着 He-3 制冷机（$\sim 300\ \mathrm{mK}$）即可看到清晰阻塞，但电子温度往往高于晶格温度，多需要在稀释制冷机（$T_\mathrm{base}\sim 10$–$20\ \mathrm{mK}$）下做精细测量。明确指出："当环境的热涨落大于充电能时，库仑阻塞效应便无法发生"，这也是大多数量子点实验对低温和电导门槛提出严格要求的原因。
 
 ## 双量子点：点间耦合能 $E_{Cm}$
 
@@ -107,7 +107,7 @@ $$
 - **$C_m\to 0$**（$E_{Cm}\to 0$）：$U$ 退化为两个独立单点的能量之和，相图为两组平行正交直线构成的矩形网格；
 - **$C_m/C_{1(2)}\to 1$**（$E_{Cm}\gg E_{C1},E_{C2}$）：$U$ 等效为单一总量子点 $\left[-(N_1+N_2)|e|+C_{g1}V_{g1}+C_{g2}V_{g2}\right]^2/(2(C_1+C_2-C_m))$，相图塌缩为一族斜向平行线。
 
-中间区域 $C_m/C_{1(2)}\sim 0.5$ 是"人造分子"区，相图呈标准六边形蜂窝结构。文献 5（PDF pp. 22、26–28）和文献 4（PDF pp. 55–56）均按这一公式给出双点静电能与 $E_{C1},E_{C2},E_{Cm}$，并明确两个极限。
+中间区域 $C_m/C_{1(2)}\sim 0.5$ 是"人造分子"区，相图呈标准六边形蜂窝结构。和均按这一公式给出双点静电能与 $E_{C1},E_{C2},E_{Cm}$，并明确两个极限。
 
 ## 充电能与轨道能级的关系
 
@@ -122,27 +122,27 @@ $$
 1. **多电子区统计**：当点内填充几十到几百个电子时，单粒子能级间隔趋向连续，$\Delta E$ 远小于 $E_C$，库仑峰周期 $\Delta V_G\approx e/C_G$ 几乎不随 $N$ 变化。把实测周期与杠杆臂相乘得到的"加电子能"几乎全来自充电能。
 2. **少电子区反常**：当填充数降到 $0$–$10$ 电子范围，轨道量子化和电子关联开始占主导：相邻 $\mu(N)$ 间隔出现明显起伏，相邻库仑菱形高度在 $E_C$ 与 $E_C+\Delta E$ 之间交替。直接画出各电子的 $E_\mathrm{add}$ 序列（"加电子谱"），就能区分静电贡献与轨道贡献。少电子区还会因塞曼劈裂、谷劈裂、自旋阻塞等机制出现精细结构，此时必须用[[qubit-control/single-spin-qubit|单自旋量子比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]等的物理图像来读图。
 
-文献 21 在 Si/SiGe 二维阵列中直接给出每个点 1 电子、2 电子区的充电能与杠杆臂（PDF p. 80），并指出充电能在不同栅压条件下可能略有变化；文献 10（PDF pp. 59–60）则在锗硅纳米线空穴点上利用磁场下库仑菱形的塞曼劈裂区分奇偶载流子数，间接验证少电子区单粒子谱的修正。
+ 在 Si/SiGe 二维阵列中直接给出每个点 1 电子、2 电子区的充电能与杠杆臂，并指出充电能在不同栅压条件下可能略有变化；则在锗硅纳米线空穴点上利用磁场下库仑菱形的塞曼劈裂区分奇偶载流子数，间接验证少电子区单粒子谱的修正。
 
 ## 参数与量级
 
 | 量 | 典型值 / 标度 | 来源 |
 | --- | --- | --- |
-| 总电容 $C_\Sigma$ | $\sim 10$–$100\ \mathrm{aF}$（百纳米门控点） | 文献 4 |
-| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 文献 4（PDF p. 80） |
-| 充电能 $E_C=e^2/C_\Sigma$ | $1.5\ \mathrm{meV}$（同器件） | 文献 4（PDF p. 80） |
-| 充电能 $E_C$ | $\sim 3\ \mathrm{meV}$（Si/SiGe 量子点典型值） | 文献 21（PDF p. 50） |
-| 充电能 $E_C$ | $4$–$6\ \mathrm{meV}$（锗硅纳米线空穴点，腔读出） | 文献 10（PDF p. 70） |
-| 充电能 $E_C$ | $5$–$10\ \mathrm{meV}$（锗硅自组织纳米线空穴点） | 文献 10（PDF p. 56） |
-| 充电能 $E_C$ | $2.83$ / $5.02$ / $3.05$ / $4.63\ \mathrm{meV}$（Si/SiGe 2×2 阵列四个量子点） | 文献 21（PDF p. 86） |
-| 充电能温度 $E_C/k_\mathrm{B}$ | $E_C=1.5\ \mathrm{meV}$ 时约 $17\ \mathrm{K}$ | 文献 4 |
-| 单粒子能级间隔 $\Delta E$ | $\sim 0.01$–$0.1\ \mathrm{meV}$（多电子区） | 文献 21（PDF p. 80） |
-| 杠杆臂 $\alpha=C_G/C_\Sigma$ | $\sim 0.027$–$0.06\ \mathrm{meV/mV}$（GaAs） | 文献 4 |
-| 杠杆臂 $\alpha$ | $\sim 0.12\ \mathrm{eV/V}$（Si/SiGe 平均值） | 文献 21（PDF p. 80） |
-| 杠杆臂 $\alpha$ | $0.20$–$0.25\ \mathrm{eV/V}$（锗硅纳米线空穴点） | 文献 10（PDF p. 75） |
-| 点间耦合能 $E_{Cm}$ | $E_{Cm}\lesssim 0.3\,E_C$ | 文献 5 |
-| 阵列中点–点耦合库仑 $V_{ij}$ | $\sim 0.05$–$0.2\ \mathrm{meV}$（Si/SiGe 2×2） | 文献 21（PDF p. 87） |
-| 大量子点充电能 | $1.05\ \mathrm{meV}$（4 点强耦合塌缩） | 文献 21（PDF p. 105） |
+| 总电容 $C_\Sigma$ | $\sim 10$–$100\ \mathrm{aF}$（百纳米门控点） | |
+| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | |
+| 充电能 $E_C=e^2/C_\Sigma$ | $1.5\ \mathrm{meV}$（同器件） | |
+| 充电能 $E_C$ | $\sim 3\ \mathrm{meV}$（Si/SiGe 量子点典型值） | |
+| 充电能 $E_C$ | $4$–$6\ \mathrm{meV}$（锗硅纳米线空穴点，腔读出） | |
+| 充电能 $E_C$ | $5$–$10\ \mathrm{meV}$（锗硅自组织纳米线空穴点） | |
+| 充电能 $E_C$ | $2.83$ / $5.02$ / $3.05$ / $4.63\ \mathrm{meV}$（Si/SiGe 2×2 阵列四个量子点） | |
+| 充电能温度 $E_C/k_\mathrm{B}$ | $E_C=1.5\ \mathrm{meV}$ 时约 $17\ \mathrm{K}$ | |
+| 单粒子能级间隔 $\Delta E$ | $\sim 0.01$–$0.1\ \mathrm{meV}$（多电子区） | |
+| 杠杆臂 $\alpha=C_G/C_\Sigma$ | $\sim 0.027$–$0.06\ \mathrm{meV/mV}$（GaAs） | |
+| 杠杆臂 $\alpha$ | $\sim 0.12\ \mathrm{eV/V}$（Si/SiGe 平均值） | |
+| 杠杆臂 $\alpha$ | $0.20$–$0.25\ \mathrm{eV/V}$（锗硅纳米线空穴点） | |
+| 点间耦合能 $E_{Cm}$ | $E_{Cm}\lesssim 0.3\,E_C$ | |
+| 阵列中点–点耦合库仑 $V_{ij}$ | $\sim 0.05$–$0.2\ \mathrm{meV}$（Si/SiGe 2×2） | |
+| 大量子点充电能 | $1.05\ \mathrm{meV}$（4 点强耦合塌缩） | |
 
 可以看出充电能在不同体系中跨度很大：GaAs 浅刻蚀大点 $\sim 1.5\ \mathrm{meV}$，锗硅纳米线小点 $\sim 5\ \mathrm{meV}$，Si/SiGe 单点 $\sim 3\ \mathrm{meV}$；同一 2×2 阵列四个点之间也可能有数倍差距，反映了[[materials-devices/silicon-sige|屏蔽板形状]]、[[materials-devices/charge-noise|电荷噪声]]、器件工艺细节的累积效应。
 
@@ -160,7 +160,7 @@ $$
 \Delta V_G=\frac{e}{C_G}\left(1+\frac{\Delta E}{E_C}\right)\approx\frac{e}{C_G}
 $$
 
-在多电子区近似仅由栅电容决定——这恰好说明 $\Delta V_G$ 直接度量 $C_G$，而 $C_G$ 与 $C_\Sigma$ 之比就是杠杆臂。乘上 $\alpha$ 后得到加电子能 $E_\mathrm{add}$；多电子区 $E_\mathrm{add}\approx E_C$，由此反推充电能。文献 7（PDF pp. 19–22）明确把 $\Delta\mu_N=\mu_N-\mu_{N-1}$ 等同于充电能，并在多电子区取等周期近似。
+在多电子区近似仅由栅电容决定——这恰好说明 $\Delta V_G$ 直接度量 $C_G$，而 $C_G$ 与 $C_\Sigma$ 之比就是杠杆臂。乘上 $\alpha$ 后得到加电子能 $E_\mathrm{add}$；多电子区 $E_\mathrm{add}\approx E_C$，由此反推充电能。明确把 $\Delta\mu_N=\mu_N-\mu_{N-1}$ 等同于充电能，并在多电子区取等周期近似。
 
 ### 库仑菱形半高
 
@@ -168,11 +168,11 @@ $$
 
 ### 蜂窝图三相点间距
 
-双点或多点情形下，[[fundamentals/charge-stability-diagram|蜂窝图]]中加电子线周期 $\Delta V_g$ 与点间转移线引起的原胞劈裂间距 $\Delta V_g^m$ 之比直接给出耦合电容占比 $C_m/C_{2(1)}$。三相点本身则需要 $\mu_S=\mu_1=\mu_2=\mu_D$ 四重简并条件。三相点间距随 $C_m$ 增大而增大，可以同时提取两个充电能与 $E_{Cm}$——文献 5（PDF pp. 26–28）给出了完整的参数提取路径。
+双点或多点情形下，[[fundamentals/charge-stability-diagram|蜂窝图]]中加电子线周期 $\Delta V_g$ 与点间转移线引起的原胞劈裂间距 $\Delta V_g^m$ 之比直接给出耦合电容占比 $C_m/C_{2(1)}$。三相点本身则需要 $\mu_S=\mu_1=\mu_2=\mu_D$ 四重简并条件。三相点间距随 $C_m$ 增大而增大，可以同时提取两个充电能与 $E_{Cm}$——给出了完整的参数提取路径。
 
 ### 谐振腔色散读出
 
-把量子点与[[circuit-qed/microwave-resonator|微波谐振腔]]耦合，在库仑谷中量子点压缩系数 $\chi=\partial N/\partial\mu$ 趋于零，腔的频移由点内充电能经 $\delta f_R\propto -C_\mathrm{dot}/C_\mathrm{res}\,f_0$ 给出；库仑峰处压缩系数上升，频移方向反转。文献 10（PDF pp. 70–75）正是从 $\delta f_R$、$\delta f_D$ 反推出 $\Gamma=1.5\ \mathrm{meV}$、$U=E_C=5\ \mathrm{meV}$ 的充电能与隧穿率。这一手段的最大优势是直流输运信号微弱到无法辨认的区域，腔响应仍清晰可读。
+把量子点与[[circuit-qed/microwave-resonator|微波谐振腔]]耦合，在库仑谷中量子点压缩系数 $\chi=\partial N/\partial\mu$ 趋于零，腔的频移由点内充电能经 $\delta f_R\propto -C_\mathrm{dot}/C_\mathrm{res}\,f_0$ 给出；库仑峰处压缩系数上升，频移方向反转。正是从 $\delta f_R$、$\delta f_D$ 反推出 $\Gamma=1.5\ \mathrm{meV}$、$U=E_C=5\ \mathrm{meV}$ 的充电能与隧穿率。这一手段的最大优势是直流输运信号微弱到无法辨认的区域，腔响应仍清晰可读。
 
 ### 阻塞与更高阶输运
 
@@ -196,37 +196,7 @@ T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|(\epsilon_d+U)}{2U\Gamma}\
 - [[fundamentals/coulomb-blockade|库仑阻塞]]的发生条件 $E_C\gg k_\mathrm{B}T,\hbar\Gamma$ 直接以充电能为标度；[[fundamentals/coulomb-diamond|库仑菱形]]的半高与顶点处 $e|V_{SD}^\mathrm{tip}|=E_C$ 是充电能的几何读取。
 - [[fundamentals/electrochemical-potential|电化学势]] $\mu(N)=\mu_\mathrm{elec}(N)+E_N$ 把充电能与单粒子能级合并在一起；阻塞判据与菱形边界都由 $\mu(N)$ 与源漏费米面的相对位置给出。
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]的栅压周期直接由 $e/C_{gi}$ 给出（多电子区 $\Delta E\ll E_C$ 时），耦合电容 $C_m$ 决定的原胞劈开间距对应 $E_{Cm}$。因此充电能（更准确地说是 $E_{C1},E_{C2},E_{Cm}$）就是稳定图的"几何尺"。
-- [[fundamentals/tunnel-coupling|隧穿耦合]]在三相点附近使转移线发生弯曲，弯曲程度给出 $t_C$；当 $t_C\sim E_{Cm}$ 时，经典蜂窝图塌缩为集体库仑阻塞态，文献 21（PDF p. 105）讨论了这一临界行为。
+- [[fundamentals/tunnel-coupling|隧穿耦合]]在三相点附近使转移线发生弯曲，弯曲程度给出 $t_C$；当 $t_C\sim E_{Cm}$ 时，经典蜂窝图塌缩为集体库仑阻塞态，讨论了这一临界行为。
 - [[qubit-control/charge-qubit|电荷量子比特]]以失谐 $\varepsilon$ 操控能级移动，$\varepsilon$ 的零点定义为两个局域态的能量对齐——而这个能量对齐本质上是 $\mu_1$ 与 $\mu_2$ 的重合，需要 $E_C$、$E_{Cm}$、$t_C$ 三者共同支撑。
-- 多量子点阵列与[[scaling-automation/quantum-dot-array|量子点阵列]]研究中，充电能不均匀（QD2 与 QD4 因屏蔽板形状更"小"而 $E_C$ 更大，文献 21 PDF p. 86）是均匀填充电子的核心障碍，需要按各点充电能调节扫描系数或用虚拟栅极补偿。
+- 多量子点阵列与[[scaling-automation/quantum-dot-array|量子点阵列]]研究中，充电能不均匀（QD2 与 QD4 因屏蔽板形状更"小"而 $E_C$ 更大）是均匀填充电子的核心障碍，需要按各点充电能调节扫描系数或用虚拟栅极补偿。
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]依靠阻塞区电子数整数突变引起附近电导跳变来感知电荷——本质上仍依赖 $E_C$ 大到足以稳定每个电子数。
-
-## 延伸阅读
-
-- L. P. Kouwenhoven, C. M. Marcus, P. L. McEuen, S. Tarucha, R. M. Westervelt, and N. S. Wingreen, "Few-electron quantum dots", *Reports on Progress in Physics* (2001). [DOI: 10.1088/0034-4885/64/6/201]
-- W. G. van der Wiel, S. De Franceschi, J. M. Elzerman, T. Fujisawa, S. Tarucha, and L. M. K. Vandersypen, "Electron transport through double quantum dots", *Reviews of Modern Physics* (2002). [DOI: 10.1103/RevModPhys.75.1]
-- R. Hanson, L. P. Kouwenhoven, J. R. Petta, S. Tarucha, and L. M. K. Vandersypen, "Spins in few-electron quantum dots", *Reviews of Modern Physics* (2007). [DOI: 10.1103/RevModPhys.79.1217]
-- S. V. Amitonov et al., "QDarts: A Quantum Dot Array Transition Simulator for finding charge transitions in the presence of finite tunnel couplings, non-constant charging energies and sensor dots", *SciPost Physics Codebases* (2024). [DOI: 10.21468/SciPostPhysCodeb.43]
-
-## 论文依据
-
-- [[sources/ref-04|文献 4]]，PDF pp. 16–17：CI 模型两条假设、$U(N)$ 与 $\mu(N)$ 公式（式 1-1、1-2），充电能 $E_C=e^2/C_\Sigma$ 与加电子能 $E_\mathrm{add}=E_C+\Delta E$。
-- [[sources/ref-04|文献 4]]，PDF pp. 17–19：库仑阻塞与库仑振荡图像、$20\ \mu\mathrm{V}$ 锁相交流激励叠加直流偏压测量方案，及从库仑菱形提取 $C_G=e/\Delta V$、$E_C$、$\alpha=1/(1/k_1+1/k_2)$ 的方法。
-- [[sources/ref-04|文献 4]]，PDF pp. 55–56：串联双量子点等效电路、$C_{1(2)}=C_{L(R)}+C_{g1(2)}+C_m$，及 $E_{C1},E_{C2},E_{Cm}$ 公式（式 3-9–3-11）与 $C_m\to 0$、$C_m/C_{1(2)}\to 1$ 两个极限。
-- [[sources/ref-04|文献 4]]，PDF p. 80：浅刻蚀 GaAs 量子点实测总电容 $113\ \mathrm{aF}$、充电能 $1.5\ \mathrm{meV}$、$\alpha_{RP}=0.027\ \mathrm{meV/mV}$。
-- [[sources/ref-10|文献 10]]，PDF p. 56：锗硅自组织纳米线空穴单量子点充电能通常在 $5$–$10\ \mathrm{meV}$，过大的电流截止区会淹没量子点能级。
-- [[sources/ref-10|文献 10]]，PDF pp. 57–59：库仑阻塞、库仑振荡与库仑菱形；菱形半高给 $E_C$、宽度给 $C_G=e/\Delta V$、$\alpha=E_C/\Delta V=1/(1/k_1+1/k_2)$。
-- [[sources/ref-10|文献 10]]，PDF pp. 59–60：磁场下库仑菱形基态与激发态塞曼劈裂区分奇偶空穴数。
-- [[sources/ref-10|文献 10]]，PDF pp. 70、75：单量子点–谐振腔复合结构测得 $E_C=4$–$6\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$，从腔频移反推 $\Gamma=1.5\ \mathrm{meV}$、$U=E_C=5\ \mathrm{meV}$。
-- [[sources/ref-07|文献 7]]，PDF pp. 19–20：充电能 $E_C=e^2/C$ 为化学势与静电势之和，$\Delta\mu_N=\mu_N-\mu_{N-1}$ 等同充电能，多电子区 $\Delta\mu_N=\Delta\mu_{N-1}$ 故库仑峰等间距。
-- [[sources/ref-01|文献 1]]，PDF pp. 25–26：CI 模型两条假设、$U(N)$ 与 $\mu(N)$ 公式（式 1.2、1.3），充电能定义 $E_C=e^2/C_\Sigma$，加电子能 $E_\mathrm{add}=E_C+\Delta E$（式 1.4）。
-- [[sources/ref-01|文献 1]]，PDF p. 67：环境热涨落大于充电能时库仑阻塞无法发生，须用 He-3 或稀释制冷机测量。
-- [[sources/ref-05|文献 5]]，PDF p. 22：单量子点 CI 模型，$E_C=e^2/C$ 为充电能，电化学势为化学势与静电势之和。
-- [[sources/ref-05|文献 5]]，PDF pp. 26–28：双量子点充电能与点间耦合静电能公式（式 1-7～1-11），$C_m\to 0$ 与 $C_m/C_{1(2)}\to 1$ 两个极限，蜂窝图随 $C_m$ 增大从矩形网格演化为六边形再到平行线。
-- [[sources/ref-06|文献 6]]，PDF pp. 14–17：CI 模型的两条假设与电容矩阵推导（式 1.1–1.13），证明电源做功恰好抵消相互作用项、点内项即量子点自由能 $Q^2/(2C_\Sigma)$。
-- [[sources/ref-21|文献 21]]，PDF pp. 23–25：单量子点条件 $R_{S(D)}\gg h/e^2$ 与 $E_C\gg k_\mathrm{B}T$，库仑菱形顶点处 $E_C=|eV_{SD}|$、$\alpha=|eV_{SD}|/\Delta V_G$（式 1.4）。
-- [[sources/ref-21|文献 21]]，PDF p. 50：Si/SiGe 量子点充电能通常在 $3\ \mathrm{meV}$ 左右。
-- [[sources/ref-21|文献 21]]，PDF p. 80：2×2 阵列单点模式下各量子点充电能分别为 $2.82$、$3.26$、$2.68$、$3.74\ \mathrm{meV}$（1e 区）与 $3.30$、$3.52$、$3.38$、$3.25\ \mathrm{meV}$（2e 区），杠杆臂 $\alpha\approx 0.12\ \mathrm{eV/V}$。
-- [[sources/ref-21|文献 21]]，PDF p. 86：双点模式下提取四量子点充电能分别为 $2.83$、$5.02$、$3.05$、$4.63\ \mathrm{meV}$，并指出屏蔽板非对称导致 QD2/QD4 充电能更大。
-- [[sources/ref-21|文献 21]]，PDF p. 87：Hubbard 模型模拟采用平均充电能 $3\ \mathrm{meV}$、最近邻库仑 $0.2\ \mathrm{meV}$、次近邻库仑 $0.05\ \mathrm{meV}$，与实验一致。
-- [[sources/ref-21|文献 21]]，PDF p. 105：四量子点强耦合塌缩为大量子点，从填充谱提取 $E_C=1.05\ \mathrm{meV}$，自电容模型估算 $1.68\ \mathrm{meV}$，量级一致。

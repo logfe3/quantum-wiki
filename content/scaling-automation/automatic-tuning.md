@@ -2,11 +2,11 @@
 title: 自动调控
 description: 由测量、状态识别、参数估计和电压更新构成的量子点闭环调参流程。
 aliases:
-  - 自动调点
-  - automated tuning
+ - 自动调点
+ - automated tuning
 tags:
-  - 扩展与自动化
-  - 机器学习
+ - 扩展与自动化
+ - 机器学习
 date: 2026-09-08
 ---
 
@@ -22,7 +22,7 @@ date: 2026-09-08
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]上的反交叉点（[[fundamentals/double-quantum-dot|双点]]对应三相点）张开到可分辨的间距，但不致让两条隧穿线变平行；
 - 充电能、点间耦合势垒、SET（single-electron transistor, 单电子晶体管）电荷传感器的灵敏度都已调到工作区。
 
-文献 16（2022）把上述判据显式拆为四个工作点：①确认栅极开启与夹断电流曲线（pinch-off curves）正常；②通过传感器或源漏电流扫描得到二维电荷稳定图；③用卷积神经网络（convolutional neural network, CNN）定位少电子区；④迭代势垒电压直到 CNN 给出"适中耦合"的标签。在双点上达到这四个目标后，再配合[[scaling-automation/virtual-gates|虚拟电极]]把同一流程逐点推到 $n$ 量子点阵列。
+（2022）把上述判据显式拆为四个工作点：①确认栅极开启与夹断电流曲线（pinch-off curves）正常；②通过传感器或源漏电流扫描得到二维电荷稳定图；③用卷积神经网络（convolutional neural network, CNN）定位少电子区；④迭代势垒电压直到 CNN 给出"适中耦合"的标签。在双点上达到这四个目标后，再配合[[scaling-automation/virtual-gates|虚拟电极]]把同一流程逐点推到 $n$ 量子点阵列。
 
 <!-- FIGURE: 自动调控闭环示意图：测量 → CNN 识别 → 决策 → 电压更新 → 验证，箭头回到测量 -->
 
@@ -33,16 +33,16 @@ date: 2026-09-08
 在常相互作用（CI）模型下，含 $n$ 个量子点的系统静电能为
 
 $$
-U(\mathbf{N};\mathbf{V})=\frac{1}{2}\,\mathbf{Q}^{\mathrm{T}}\mathbf{C}^{-1}\mathbf{Q}+f(V_1,V_2,\dots,V_n),
+U(\mathbf{N};\mathbf{V})=\frac{1}{2}\,\mathbf{Q}^{\mathrm{T}}\mathbf{C}^{-1}\mathbf{Q}+f(V_1,V_2,\dots,V_n)
 $$
 
 其中 $\mathbf{N}=(N_1,N_2,\dots,N_n)$ 是各点电子数，$\mathbf{Q}=-e\,\mathbf{N}$，$\mathbf{C}$ 是含自电容与互电容的电容矩阵，$f$ 描述栅压对系统总能的偏置。进一步把 Hubbard 拓展加上点间隧穿后哈密顿量取
 
 $$
-H=-\sum_i \mu_i(V_i)\,n_i-\sum_{ij} t_{ij}(V_i)\,(c_i^\dagger c_j+\text{h.c.})+\sum_i \frac{U_i}{2}n_i(n_i-1)+\sum_{ij}U_{ij}\,n_i n_j,
+H=-\sum_i \mu_i(V_i)\,n_i-\sum_{ij} t_{ij}(V_i)\,(c_i^\dagger c_j+\text{h.c.})+\sum_i \frac{U_i}{2}n_i(n_i-1)+\sum_{ij}U_{ij}\,n_i n_j
 $$
 
-其中 $\mu_i(V_i)$ 是[[fundamentals/electrochemical-potential|电化学势]]，$t_{ij}$ 是[[fundamentals/tunnel-coupling|隧穿耦合]]，$U_i$ 是点内充电能，$U_{ij}$ 是点间充电能。文献 16把这一公式记为式 1.12，明确点明两点：
+其中 $\mu_i(V_i)$ 是[[fundamentals/electrochemical-potential|电化学势]]，$t_{ij}$ 是[[fundamentals/tunnel-coupling|隧穿耦合]]，$U_i$ 是点内充电能，$U_{ij}$ 是点间充电能。把这一公式记为式 1.12，明确点明两点：
 
 1. 栅压 $\mathbf{V}$ 直接调节前两项（电化学势与隧穿耦合），这正是自动调控可写为"$\mathbf{V}$ 的闭环寻优"的物理基础；
 2. 多点调控若直接对全电压空间搜索，需要在 $2n$ 维空间内同时兼顾 $\boldsymbol{\mu}$ 与 $\mathbf{t}$，测量与计算成本随 $n$ 指数增长。把多点系统拆成局部双点、先单独调控、再通过虚拟电极联立，是化解这一困难的物理路径。
@@ -52,24 +52,24 @@ $$
 栅压对各量子点电化学势的影响是局域线性的：把电压变化记为 $\Delta\mathbf{V}$，电化学势变化记为 $\Delta\boldsymbol{\mu}$，杠杆臂归一化后引入归一化电容矩阵 $\mathbf{T}$，有
 
 $$
-\Delta\boldsymbol{\mu}=\alpha\,\mathbf{T}\,\Delta\mathbf{V}\equiv\alpha\,\Delta\mathbf{U},
+\Delta\boldsymbol{\mu}=\alpha\,\mathbf{T}\,\Delta\mathbf{V}\equiv\alpha\,\Delta\mathbf{U}
 $$
 
-其中 $\alpha$ 是由器件[[scaling-automation/cross-capacitance-matrix|杠杆臂]]（lever arm）决定的标量，$\Delta\mathbf{U}$ 即虚拟电极电压的变化量。取对角元归一化 $t_{ii}=1$，并约定按隧穿线斜率 $r_i=-\Delta V_q/\Delta V_p$ 提取非对角元 $t_{i,p}=-r_i$，则 $\mathbf{T}^{-1}$ 直接给出"同时拧动多根物理栅"以使 $\mu_i$ 不受扰动的代数规则。文献 16在其实验器件上算得的双点实例为
+其中 $\alpha$ 是由器件[[scaling-automation/cross-capacitance-matrix|杠杆臂]]（lever arm）决定的标量，$\Delta\mathbf{U}$ 即虚拟电极电压的变化量。取对角元归一化 $t_{ii}=1$，并约定按隧穿线斜率 $r_i=-\Delta V_q/\Delta V_p$ 提取非对角元 $t_{i,p}=-r_i$，则 $\mathbf{T}^{-1}$ 直接给出"同时拧动多根物理栅"以使 $\mu_i$ 不受扰动的代数规则。在其实验器件上算得的双点实例为
 
 $$
 \mathbf{T}=\begin{pmatrix}1 & 0.125\\ 0.325 & 1\end{pmatrix},\qquad
-\mathbf{T}^{-1}=\begin{pmatrix}1.042 & -0.13\\ -0.339 & 1.042\end{pmatrix},
+\mathbf{T}^{-1}=\begin{pmatrix}1.042 & -0.13\\ -0.339 & 1.042\end{pmatrix}
 $$
 
 变换后 $(0,1)-(1,0)$ 区[[fundamentals/charge-stability-diagram|电荷隧穿线]]变成相互垂直——这就是虚拟电极生效的几何判据。
 
 ### 势垒方向：指数律
 
-势垒栅对隧穿耦合的调控不是线性的。文献 21（2025）2×2 阵列上实测的指数律为
+势垒栅对隧穿耦合的调控不是线性的。（2025）2×2 阵列上实测的指数律为
 
 $$
-t_{ij}=t_0+t_1\,\exp(\beta_{ij}\,\mathrm{vB}_{ij}),
+t_{ij}=t_0+t_1\,\exp(\beta_{ij}\,\mathrm{vB}_{ij})
 $$
 
 其中 $\beta_{ij}$ 量化势垒栅的调控能力，$\mathrm{vB}_{ij}$ 是虚拟势垒栅电压。在 2×2 Si/SiGe 阵列上四个最近邻的 $\beta$ 在 $(1.42$–$6.85)\times10^{-2}\ \mathrm{mV}^{-1}$ 之间分布，最强者约为最弱者的 5 倍。同一工作中还测出 vB41 对 $t_{34}$ 的交叉调控系数 $\beta'=-1.03\pm0.11\times10^{-2}\ \mathrm{mV}^{-1}$——意味着势垒方向仍存在残余串扰，需要在自动调控里加入专门的补偿步。
@@ -83,7 +83,7 @@ $$
 在 20 mK 量级的稀释制冷机内，对每一条栅极单独测量夹断电流曲线
 
 $$
-I(V)=a\bigl(1+\tanh(bV+c)\bigr),
+I(V)=a\bigl(1+\tanh(bV+c)\bigr)
 $$
 
 其中 $a$ 是曲线幅值，$b$ 反映曲线随电压变化的快慢，$c$ 是横移量。由曲线的一阶导数与二阶导数极值点确定势垒电极的初始工作点；泵浦电极则取两个拐点之间的电压范围并向外适当扩大（式 3.1）。SET 传感器的栅极取微分信号最大处，使传感器对电荷态变化最敏感。
@@ -97,11 +97,11 @@ CNN 完成两类独立任务：
 - CNN1 输出五元概率向量 $l_a=[l_1,l_2,l_3,l_4,l_5]$，分别对应无点、单点（少线）、单点（多线）、双点（适中耦合）、双点（过耦合）；
 - CNN2 输出三元概率向量 $l_b=[l_1,l_2,l_3]$，对应欠耦合、适中耦合、过耦合。
 
-对 CNN1，少电子区的特征是"沿着减小电压的方向不再出现新的隧穿线"——即第一个被识别为双点的像素块所在位置。文献 16对 42 块子相图打分后，把概率值高于 80% 的子相图标记为双点，按对应的最小栅压值排序即得到少电子区的中心。
+对 CNN1，少电子区的特征是"沿着减小电压的方向不再出现新的隧穿线"——即第一个被识别为双点的像素块所在位置。对 42 块子相图打分后，把概率值高于 80% 的子相图标记为双点，按对应的最小栅压值排序即得到少电子区的中心。
 
 ### 第三步：CNN2 迭代调节势垒电压
 
-CNN2 在少电子区对应的势垒电压附近迭代，步长约 20 mV。文献 16在其实验器件上展示的典型轨迹：起始势垒 $V_B=0.23\ \mathrm{V}$，经 8 次迭代后被推到 $V_B=0.39\ \mathrm{V}$，最后输出耦合值 0.67，落在适中耦合区间（前 5 次迭代耦合几乎不动，后 3 次出现明显变化——这是势垒方向指数律的体现）。
+CNN2 在少电子区对应的势垒电压附近迭代，步长约 20 mV。在其实验器件上展示的典型轨迹：起始势垒 $V_B=0.23\ \mathrm{V}$，经 8 次迭代后被推到 $V_B=0.39\ \mathrm{V}$，最后输出耦合值 0.67，落在适中耦合区间（前 5 次迭代耦合几乎不动，后 3 次出现明显变化——这是势垒方向指数律的体现）。
 
 ### 第四步：传统电压更新与回跳
 
@@ -109,7 +109,7 @@ CNN2 在少电子区对应的势垒电压附近迭代，步长约 20 mV。文献
 
 ### 典型结果
 
-双量子点调控完成后，相图可分为四个区域：(1) 无隧穿线的无点区；(2) 单量子点隧穿线的单点区；(3) 适中耦合的少电子区；(4) 过耦合的双点区。文献 16报道该流程在双量子点上达到了 90% 量级的少电子区定位准确度。
+双量子点调控完成后，相图可分为四个区域：(1) 无隧穿线的无点区；(2) 单量子点隧穿线的单点区；(3) 适中耦合的少电子区；(4) 过耦合的双点区。报道该流程在双量子点上达到了 90% 量级的少电子区定位准确度。
 
 ## 卷积神经网络架构与训练
 
@@ -124,12 +124,12 @@ CNN2 在少电子区对应的势垒电压附近迭代，步长约 20 mV。文献
 训练采用有监督学习：预先为每个样本分配标签 $l$，通过比较预测结果与训练样本逐层优化权重 $w_i$ 与偏置量 $b_i$，响应函数形式为
 
 $$
-y_i=f(w_i x_i+b_i),
+y_i=f(w_i x_i+b_i)
 $$
 
 其中 $f$ 通常取非线性激活函数。损失函数通过反向传播最小化，常用 Adam 或交叉熵。
 
-训练集构建的关键问题是真实器件标签稀缺、电荷跳变与传感器伪影难模拟。文献 16采用的折中是用模拟相图扩充标签，同时加入 Laplace 算子对图像锐化以突出隧穿线、抑制背景波动；少量真实样本混入训练还可减少过拟合，因为含噪声的样本对特征畸变更鲁棒。
+训练集构建的关键问题是真实器件标签稀缺、电荷跳变与传感器伪影难模拟。采用的折中是用模拟相图扩充标签，同时加入 Laplace 算子对图像锐化以突出隧穿线、抑制背景波动；少量真实样本混入训练还可减少过拟合，因为含噪声的样本对特征畸变更鲁棒。
 
 ## 阵列扩展：虚拟电极与量子点遍历
 
@@ -147,18 +147,18 @@ $$
 $$
 \Delta\mu_i=\alpha\bigl(t_{i,q}\Delta V_q+t_{i,p}\Delta V_p\bigr)=0
 \;\Longrightarrow\;
-t_{i,p}=-\frac{\Delta V_q}{\Delta V_p}\equiv -r_i,
+t_{i,p}=-\frac{\Delta V_q}{\Delta V_p}\equiv -r_i
 $$
 
-$r_i$ 就是电荷隧穿线在 $(V_p,V_q)$ 平面的斜率。在实测相图上，隧穿线可能残缺、被背景遮挡，直接拟合斜率容易出错。文献 16采用霍夫线变换（Hough line transform）从稳定图中检测线段：对超过阈值的所有像素点 $(x_i,y_i)$，在极坐标 $(\rho,\theta)$ 下取
+$r_i$ 就是电荷隧穿线在 $(V_p,V_q)$ 平面的斜率。在实测相图上，隧穿线可能残缺、被背景遮挡，直接拟合斜率容易出错。采用霍夫线变换（Hough line transform）从稳定图中检测线段：对超过阈值的所有像素点 $(x_i,y_i)$，在极坐标 $(\rho,\theta)$ 下取
 
 $$
-\rho=x\cos\theta+y\sin\theta,
+\rho=x\cos\theta+y\sin\theta
 $$
 
 同一直线上的所有点会在极坐标中收敛到一个 $(\rho_0,\theta_0)$，由此自动给出线段位置与斜率。配合 CNN 的相图分类，虚拟电极的建立可在无人工干预的条件下完成。
 
-### 四量子点示例：文献 16 15 栅器件
+### 四量子点示例： 15 栅器件
 
 器件含 15 条可调控栅极（5 条势垒 $B_i$ + 4 条柱塞 $P_i$ + SET 的栅极 $SB_1,SB_2,SP$ + 端栅），共 4 个量子点与 2 个 SET。流程按 $\text{QD}_1\text{-QD}_2\rightarrow\text{QD}_2\text{-QD}_3\rightarrow\text{QD}_3\text{-QD}_4$ 顺序推进：
 
@@ -181,13 +181,13 @@ $n$ 量子点系统完整的电荷稳定图维数为 $n$，$n\ge 4$ 时无法用
 2. **漂移**（drift）：温度、电磁环境、应力引起的低频慢变；
 3. **随机电报噪声**（random telegraph noise）：双能级系统缺陷产生的双态翻转，使每个测量点都带有不可预测的偏置。
 
-自动调控系统应对这些扰动的方式有两种：一是 CNN 同时输出概率而非硬标签，并在概率低于阈值时缩小步长或重新测量；二是回跳机制把每次迭代纳入电压范围检查与失败回退。概率阈值的选取本身也是设计参数：文献 16对 42 块子相图打分后观察到 CNN 输出概率主要分布在 80% 以上与 20% 以下两个区间，50%–80% 之间几乎为空，因此 80% 阈值既能筛掉不确定样本又留有余量。
+自动调控系统应对这些扰动的方式有两种：一是 CNN 同时输出概率而非硬标签，并在概率低于阈值时缩小步长或重新测量；二是回跳机制把每次迭代纳入电压范围检查与失败回退。概率阈值的选取本身也是设计参数：对 42 块子相图打分后观察到 CNN 输出概率主要分布在 80% 以上与 20% 以下两个区间，50%–80% 之间几乎为空，因此 80% 阈值既能筛掉不确定样本又留有余量。
 
 置信度（confidence）和分布外（out-of-distribution, OOD）检测因此被反复强调为自动调控的核心属性：当输入图像与训练分布显著偏离（例如出现训练集中没有的杂点、隧穿线消失、或背景剧烈漂移），CNN 输出概率应同时变低或偏向空值，触发重新扫描而非强行迭代。
 
 ## 从双点到二维阵列
 
-双量子点的成功可被推广到 1D 线性阵列，再推广到 2D 阵列。以文献 21（2025）的 Si/SiGe 2×2 阵列为例：四个量子点共含 11 根有效栅极（7 势垒 + 4 柱塞），串扰矩阵 $\mathbf{M}$ 为 $11\times11$；先把所有点单独排空、再按 $\text{QD}_1\text{-QD}_2$、$\text{QD}_2\text{-QD}_3$、$\text{QD}_3\text{-QD}_4$、$\text{QD}_4\text{-QD}_1$、$\text{QD}_1\text{-QD}_3$、$\text{QD}_2\text{-QD}_4$ 的顺序两两成双点建立虚拟栅极，最终得到每个量子点充电能 2.83/5.02/3.05/4.63 meV、平均杠杆臂 $\alpha\approx0.12\ \mathrm{eV/V}$、最近邻隧穿耦合可从约 $25\ \mu\mathrm{eV}$ 调到超过 $200\ \mu\mathrm{eV}$。
+双量子点的成功可被推广到 1D 线性阵列，再推广到 2D 阵列。以（2025）的 Si/SiGe 2×2 阵列为例：四个量子点共含 11 根有效栅极（7 势垒 + 4 柱塞），串扰矩阵 $\mathbf{M}$ 为 $11\times11$；先把所有点单独排空、再按 $\text{QD}_1\text{-QD}_2$、$\text{QD}_2\text{-QD}_3$、$\text{QD}_3\text{-QD}_4$、$\text{QD}_4\text{-QD}_1$、$\text{QD}_1\text{-QD}_3$、$\text{QD}_2\text{-QD}_4$ 的顺序两两成双点建立虚拟栅极，最终得到每个量子点充电能 2.83/5.02/3.05/4.63 meV、平均杠杆臂 $\alpha\approx0.12\ \mathrm{eV/V}$、最近邻隧穿耦合可从约 $25\ \mu\mathrm{eV}$ 调到超过 $200\ \mu\mathrm{eV}$。
 
 二维阵列引入两个新变量：中心势垒栅 CB 与次近邻隧穿耦合 $t_{\text{nnn}}$。CB 上的电压独立调节 $t_{\text{nnn}}$，可用于表面码（保留最近邻、抑制次近邻）与 Hubbard 量子模拟（保留特定次近邻）。$t_{\text{nnn}}$ 通过相图反交叉点的双曲线拟合提取，无需做完整的 $n$ 维电荷稳定图。
 
@@ -195,27 +195,27 @@ $n$ 量子点系统完整的电荷稳定图维数为 $n$，$n\ge 4$ 时无法用
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 稀释制冷机电子温度 | $20\ \mathrm{mK}$ 量级 | 文献 16 |
-| 栅极数（双量子点示例） | 5 条势垒 + 2 条柱塞 + 3 条 SET 栅 | 文献 16 |
-| 栅极数（四量子点示例） | 15 条（5 势垒 + 4 柱塞 + SET 栅） | 文献 16 |
-| 栅极数（2×2 阵列示例） | 11 根有效栅极（7 势垒 + 4 柱塞） | 文献 21 |
-| 夹断电流拟合 | $f=a(1+\tanh(bV+c))$ | 文献 16 |
-| 电荷稳定图扫描步长 | 约 1.5 mV/像素 | 文献 16 |
-| CNN 输入子图尺寸 | $31\times31\ \text{px}$（≈45 mV×45 mV） | 文献 16 |
-| CNN 拉伸后尺寸 | $51\times51\ \text{px}$ | 文献 16 |
-| 双量子点少电子区定位准确度 | 约 90% | 文献 16 |
-| 双量子点 CNN1 概率阈值 | 80% | 文献 16 |
-| 势垒电压迭代步长 | 约 20 mV | 文献 16 |
-| 势垒电压迭代次数 | 8 次（适中耦合） | 文献 16 |
-| 隧穿线斜率实例 | $r_1=-8$、$r_2=-0.325$（GaAs 双点） | 文献 16 |
-| $\mathbf{T}^{-1}$ 实测值 | $\bigl(\begin{smallmatrix}1.042 & -0.13\\ -0.339 & 1.042\end{smallmatrix}\bigr)$ | 文献 16 |
-| 势垒指数律调控系数 $\beta_{ij}$ | $(1.42$–$6.85)\times10^{-2}\ \mathrm{mV}^{-1}$ | 文献 21 |
-| 交叉调控系数 $\beta'$ | $-1.03\pm0.11\times10^{-2}\ \mathrm{mV}^{-1}$（vB41→$t_{34}$） | 文献 21 |
-| 四点充电能 $U_i$ | 2.83 / 5.02 / 3.05 / 4.63 meV | 文献 21 |
-| 平均杠杆臂 $\alpha$ | $\approx 0.12\ \mathrm{eV/V}$ | 文献 21 |
-| 最近邻隧穿耦合调节范围 | 约 $25\ \mu\mathrm{eV}$ 到 $>200\ \mu\mathrm{eV}$ | 文献 21 |
-| 阵列迭代势垒电压 | $B_2: 0.6\to0.56$ V；$B_3: 0.23\to0.37$ V；$B_4: 0.35\to0.51$ V | 文献 16 |
-| 锁相激励频率/幅值（参考） | 73 Hz / 0.5 mV 分压 | 文献 21 |
+| 稀释制冷机电子温度 | $20\ \mathrm{mK}$ 量级 | |
+| 栅极数（双量子点示例） | 5 条势垒 + 2 条柱塞 + 3 条 SET 栅 | |
+| 栅极数（四量子点示例） | 15 条（5 势垒 + 4 柱塞 + SET 栅） | |
+| 栅极数（2×2 阵列示例） | 11 根有效栅极（7 势垒 + 4 柱塞） | |
+| 夹断电流拟合 | $f=a(1+\tanh(bV+c))$ | |
+| 电荷稳定图扫描步长 | 约 1.5 mV/像素 | |
+| CNN 输入子图尺寸 | $31\times31\ \text{px}$（≈45 mV×45 mV） | |
+| CNN 拉伸后尺寸 | $51\times51\ \text{px}$ | |
+| 双量子点少电子区定位准确度 | 约 90% | |
+| 双量子点 CNN1 概率阈值 | 80% | |
+| 势垒电压迭代步长 | 约 20 mV | |
+| 势垒电压迭代次数 | 8 次（适中耦合） | |
+| 隧穿线斜率实例 | $r_1=-8$、$r_2=-0.325$（GaAs 双点） | |
+| $\mathbf{T}^{-1}$ 实测值 | $\bigl(\begin{smallmatrix}1.042 & -0.13\\ -0.339 & 1.042\end{smallmatrix}\bigr)$ | |
+| 势垒指数律调控系数 $\beta_{ij}$ | $(1.42$–$6.85)\times10^{-2}\ \mathrm{mV}^{-1}$ | |
+| 交叉调控系数 $\beta'$ | $-1.03\pm0.11\times10^{-2}\ \mathrm{mV}^{-1}$（vB41→$t_{34}$） | |
+| 四点充电能 $U_i$ | 2.83 / 5.02 / 3.05 / 4.63 meV | |
+| 平均杠杆臂 $\alpha$ | $\approx 0.12\ \mathrm{eV/V}$ | |
+| 最近邻隧穿耦合调节范围 | 约 $25\ \mu\mathrm{eV}$ 到 $>200\ \mu\mathrm{eV}$ | |
+| 阵列迭代势垒电压 | $B_2: 0.6\to0.56$ V；$B_3: 0.23\to0.37$ V；$B_4: 0.35\to0.51$ V | |
+| 锁相激励频率/幅值（参考） | 73 Hz / 0.5 mV 分压 | |
 
 ## 实验特征
 
@@ -237,40 +237,3 @@ $n$ 量子点系统完整的电荷稳定图维数为 $n$，$n\ge 4$ 时无法用
 - [[qubit-control/exchange-interaction|交换相互作用]]与隧穿耦合 $t_{ij}$ 直接相连：自动调控在势垒方向的精度直接决定双比特门参数 $J$ 的稳定性。
 - [[readout-measurement/single-shot-readout|单发读出]]与[[qubit-control/rabi-oscillation|Rabi 振荡]]等操控层概念对自动调控提出了隐含约束：少电子区定位必须满足比特工作点对 $\varepsilon$ 与 $t$ 的精度要求，否则后续比特操作无法开展。
 - [[materials-devices/charge-noise|电荷噪声]]是自动调控必须容忍的扰动源；自动调控的回跳、阈值与置信度机制都是对低频漂移与随机电报噪声的工程化应对。
-
-## 延伸阅读
-
-- A. R. Mills, M. M. Feldman, C. Monical, et al., "Computer-automated tuning procedures for semiconductor quantum dot arrays", *Applied Physics Letters* (2019). [DOI: 10.1063/1.5121444]
-- D. T. Lennon, H. Moon, L. C. Camenzind, et al., "Efficiently measuring a quantum device using machine learning", *npj Quantum Information* (2019) / "Machine learning enables completely automatic tuning of a quantum device faster than human experts", *Nature Communications* (2020). [DOI: 10.1038/s41467-020-17835-9]
-- J. Darulová, S. J. Pauka, N. Wiebe, et al., "Autonomous tuning and charge-state detection of gate-defined quantum dots", *Physical Review Applied* (2020). [DOI: 10.1103/PhysRevApplied.13.054005]
-- T. Hensgens, T. Fujita, L. Janssen, et al., "Quantum simulation of a Fermi–Hubbard model using a semiconductor quantum dot array", *Nature* (2017). [DOI: 10.1038/nature23022]
-- C. Volk, A. M. J. Zwerver, U. Mukhopadhyay, et al., "Loading a quantum-dot based 'Qubyte' register", *npj Quantum Information* (2019). [DOI: 10.1038/s41534-019-0146-y]
-
-## 论文依据
-
-- [[sources/ref-16|文献 16]]，PDF pp. 7–8：摘要与创新点——神经网络识别电荷稳定图、最优电压配置、虚拟电极与阵列遍历。
-- [[sources/ref-16|文献 16]]，PDF p. 7：多点系统哈密顿量（式 1.12），栅压直接调节 $\mu_i(V_i)$ 与 $t_{ij}(V_i)$。
-- [[sources/ref-16|文献 16]]，PDF pp. 16–19：门控量子点体系、量子点阵列结构与多量子点电荷稳定图的复杂性。
-- [[sources/ref-16|文献 16]]，PDF p. 47：第 2 章 神经网络模型与电荷稳定图分析总览。
-- [[sources/ref-16|文献 16]]，PDF pp. 48–50：卷积神经网络基本结构（输入/卷积/池化/全连接/输出层）与 AlexNet 详细参数（$k=11$、$s=4$、96 核，$227\times227\times3 \to 6\times6\times256$）。
-- [[sources/ref-16|文献 16]]，PDF pp. 55–57：双量子点电荷稳定图隧穿线间距 $\Delta V_i=|e|/C_i$、反交叉点间距由耦合电容 $C_m$ 决定、少电子区定义为"沿减小电压方向不再出现新隧穿线"。
-- [[sources/ref-16|文献 16]]，PDF pp. 58–59：相图分类标准——五元标签 $l_a$（无点/单点少线/单点多线/双点适中/双点过耦合）与三元标签 $l_b$（欠/适中/过耦合）。
-- [[sources/ref-16|文献 16]]，PDF p. 60：Laplace 算子对相图锐化预处理以突出隧穿线、抑制背景波动。
-- [[sources/ref-16|文献 16]]，PDF p. 65：第 3 章 双量子点的自动调控开始。
-- [[sources/ref-16|文献 16]]，PDF p. 66：传统人工调控过程，双量子点器件由 5 势垒 + 2 柱塞 + 3 SET 栅组成。
-- [[sources/ref-16|文献 16]]，PDF p. 73：自动调控流程图，CNN1 定位少电子区 + CNN2 迭代势垒电压至适中耦合。
-- [[sources/ref-16|文献 16]]，PDF p. 74：夹断电流曲线拟合 $f=a(1+\tanh(bV+c))$（式 3.1）与拐点提取。
-- [[sources/ref-16|文献 16]]，PDF pp. 76–77：相图切割为 $31\times31$ 像素子图、$51\times51$ 像素插值拉伸、CNN1 输出概率阈值 80%。
-- [[sources/ref-16|文献 16]]，PDF p. 78：CNN2 迭代调节势垒电压——8 次迭代、势垒电压从 0.23 V 升至 0.39 V、输出耦合值 0.67。
-- [[sources/ref-16|文献 16]]，PDF pp. 79–80：双量子点调控前后电荷稳定图对比（4 区域分类：无点/单点/适中耦合少电子区/过耦合双点区）与 90% 量级定位准确度。
-- [[sources/ref-16|文献 16]]，PDF pp. 85–88：第 4 章 多量子点电荷稳定图的复杂性——4 种斜率的隧穿线、近邻与次近邻耦合共同决定反交叉点形状。
-- [[sources/ref-16|文献 16]]，PDF pp. 89–91：虚拟电极原理——变换矩阵 $\Delta\boldsymbol{\mu}=\alpha\mathbf{T}\Delta\mathbf{V}=\alpha\Delta\mathbf{U}$（式 4.3–4.4）、$r_i=-8$、$r_2=-0.325$ 实例与 $\mathbf{T}^{-1}$ 数值（式 4.9–4.10）。
-- [[sources/ref-16|文献 16]]，PDF p. 92：霍夫线变换原理（式 4.13）——从极坐标 $(\rho,\theta)$ 寻找多条曲线穿过同一 $(\rho_0,\theta_0)$ 的相交点来检测线段位置与斜率。
-- [[sources/ref-16|文献 16]]，PDF p. 93：15 栅四量子点器件结构——5 条势垒 $B_i$、4 条柱塞 $P_i$、2 个 SET 传感器。
-- [[sources/ref-16|文献 16]]，PDF pp. 94–95：量子点遍历流程——按 QD1–QD2→QD2–QD3→QD3–QD4 顺序、共用 QD2 起过渡作用、虚拟电极乘法更新规则 $\mathbf{M}_n=\mathbf{M}_n^{\text{update}}\mathbf{M}_{n-1}$。
-- [[sources/ref-16|文献 16]]，PDF p. 96：四量子点阵列自动调控结果——$B_2: 0.6\to0.56$ V、$B_3: 0.23\to0.37$ V、$B_4: 0.35\to0.51$ V。
-- [[sources/ref-16|文献 16]]，PDF p. 98：自动调控可优化方向——CNN 深度加深、势垒栅纳入矩阵、次近邻耦合纳入 CI 模型、电荷稳定图清晰度提升。
-- [[sources/ref-21|文献 21]]，PDF pp. 7–8：二维阵列多参数表征与耦合调控作为自动调控的扩展场景。
-- [[sources/ref-21|文献 21]]，PDF pp. 84–86：11×11 串扰矩阵、虚拟栅极建立 $\mathrm{v}\mathbf{G}=\mathbf{M}\mathbf{G}$、四点充电能 2.83/5.02/3.05/4.63 meV、平均杠杆臂 $\alpha\approx 0.12\ \mathrm{eV/V}$。
-- [[sources/ref-21|文献 21]]，PDF pp. 88–90：势垒指数律 $t_{ij}=t_0+t_1\exp(\beta_{ij}\,\mathrm{vB}_{ij})$（式 4.2）、$\beta$ 范围 $(1.42$–$6.85)\times10^{-2}\ \mathrm{mV}^{-1}$、交叉调控系数 $\beta'=-1.03\pm0.11\times10^{-2}\ \mathrm{mV}^{-1}$。
-- [[sources/ref-14|文献 14]]，PDF pp. 7–8：作为对照——基于浅层神经网络的态分类器用于抑制多比特联合读取串扰，体现"机器学习用于量子器件"这一更广泛方法论。

@@ -2,14 +2,14 @@
 title: 单态–三重态量子比特
 description: 以双量子点两电子自旋单态与零磁量子数三重态编码的量子比特。
 aliases:
-  - ST量子比特
-  - S-T0量子比特
-  - 单态-三重态量子比特
-  - singlet-triplet qubit
+ - ST量子比特
+ - S-T0量子比特
+ - 单态-三重态量子比特
+ - singlet-triplet qubit
 tags:
-  - 量子比特操控
-  - 自旋
-  - 双量子点
+ - 量子比特操控
+ - 自旋
+ - 双量子点
 date: 2026-09-08
 ---
 
@@ -30,7 +30,7 @@ $$
 
 ![[assets/figures/qubit-control/wang-ke-2020-fig1-4-psb-bias-triangles.jpg]]
 
-*泡利自旋阻塞下正/反偏压偏压三角形中电子跃迁通道与能级示意图（[文献 11]([[sources/wang-ke]])，图 1.4）*
+*泡利自旋阻塞下正/反偏压偏压三角形中电子跃迁通道与能级示意图*
 
 <!-- 原始占位：(1,1)–(0,2) 反交叉附近 S、T0、T± 各能级随失谐 ε 变化的示意图，标注交换能 J(ε)、(0,2) 区单态–三重态能级差 E_ST 与外磁场下的 S–T+ 交叉点 -->
 
@@ -42,16 +42,15 @@ $S$–$T_0$ 比特的理论描述分两层：先由 $(1,1)$–$(0,2)$ 电荷反�
 
 ### 交换能：从电荷反交叉到 $J(\varepsilon)$
 
-点间隧穿保持自旋守恒，因此只有自旋相同的态相互耦合：$S(1,1)$ 与 $S(0,2)$ 耦合，而 $T_{0,\pm}$ 不与 $S(0,2)$ 耦合。在基 $\{S(0,2),\,S(1,1)\}$ 下，
-
+点间隧穿保持自旋守恒，因此只有自旋相同的态相互耦合：$S(1,1)$ 与 $S(0,2)$ 耦合，而 $T_{0,\pm}$ 不与 $S(0,2)$ 耦合。在基 $\{S(0,2),\,S(1,1)\}$ 下
 $$
-H=\begin{pmatrix} -\varepsilon & \Delta \\ \Delta & 0 \end{pmatrix},
+H=\begin{pmatrix} -\varepsilon & \Delta \\ \Delta & 0 \end{pmatrix}
 $$
 
 其中 $\Delta$ 表征隧穿耦合强度。本征能量为 $(-\varepsilon\pm\sqrt{\varepsilon^2+4\Delta^2})/2$。$T_0$（能量取为零点）与较低单态本征态的能量差定义为[[exchange-interaction|交换相互作用]]能
 
 $$
-J(\varepsilon)=\frac{\varepsilon+\sqrt{\varepsilon^2+4\Delta^2}}{2},
+J(\varepsilon)=\frac{\varepsilon+\sqrt{\varepsilon^2+4\Delta^2}}{2}
 $$
 
 在负大失谐极限 $J(\varepsilon)\approx \Delta^2/|\varepsilon|$，即交换能被指数式地压向零。这与 Hubbard 图像一致：在充电能 $U$ 远大于失谐与塞曼差时，$J= \dfrac{2t_c^2}{U-\varepsilon-\Delta E_z}+\dfrac{2t_c^2}{U-\varepsilon+\Delta E_z}\approx\dfrac{4t_c^2}{U}$，$t_c$ 为[[fundamentals/tunnel-coupling|隧穿耦合]]。失谐和势垒栅压都能调节 $J$，但二者对[[materials-devices/charge-noise|电荷噪声]]的敏感度不同。
@@ -62,7 +61,7 @@ $$
 
 $$
 B=B_{\mathrm{ext}}+\frac{B_{\mathrm{nuc},l}+B_{\mathrm{nuc},r}}{2},\qquad
-dB=\frac{B_{\mathrm{nuc},l}-B_{\mathrm{nuc},r}}{2},
+dB=\frac{B_{\mathrm{nuc},l}-B_{\mathrm{nuc},r}}{2}
 $$
 
 总哈密顿量为
@@ -86,7 +85,7 @@ $$
 可见：平均场的 $z$ 分量劈裂 $T_\pm$；**两点核场差的 $z$ 分量 $dB_z$ 耦合 $S$ 与 $T_0$**；差场的横向分量耦合 $S$ 与 $T_\pm$。当 $B_z\gg B_{\mathrm{nuc}}$ 时 $T_\pm$ 被塞曼能移出，$\{|T_0\rangle,|S\rangle\}$ 子空间的有效哈密顿量为
 
 $$
-H_{\mathrm{eff}}=\begin{pmatrix} 0 & -g\mu_B dB_z \\ -g\mu_B dB_z & -J(\varepsilon) \end{pmatrix},
+H_{\mathrm{eff}}=\begin{pmatrix} 0 & -g\mu_B dB_z \\ -g\mu_B dB_z & -J(\varepsilon) \end{pmatrix}
 $$
 
 这就是 $S$–$T_0$ 比特的工作哈密顿量：对角元差 $J(\varepsilon)$ 提供 $z$ 轴，非对角元 $g\mu_B dB_z$ 提供 $x$ 轴。类似地，在 $S$–$T_+$ 交叉点附近，横向核场差以混合角 $\theta=\arctan\!\big[2\Delta/\big(\sqrt{\varepsilon^2+4\Delta^2}-\varepsilon\big)\big]$ 加权后驱动 $S\leftrightarrow T_+$，把交叉变成反交叉。
@@ -109,11 +108,11 @@ $$
 
 **读出（自旋–电荷转换）**：在 $(1,1)$–$(0,2)$ 反交叉的正失谐一侧，单态基态为 $(0,2)$ 电荷构型而三重态基态仍为 $(1,1)$。操作结束后把系统快速驱动到读出窗口（$\varepsilon<E_{ST}$）：末态为单态则跃迁到 $S(0,2)$，末态为三重态则因 $T(0,2)$ 能量过高而被"阻塞"在 $(1,1)$——这就是泡利自旋阻塞（Pauli spin blockade）。两种自旋由此映射为两种电荷构型，可由[[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]或射频单电子晶体管分辨，是[[readout-measurement/single-shot-readout|单发读出]]的基础。
 
-实验上观测阻塞有两种方式。**输运法**：在源漏间加偏压，反偏压下输运循环 $(0,1)\to(1,1)\to(0,2)\to(0,1)$ 在形成三重态时中断，偏压三角形内电流被抑制，而正偏压下循环 $(0,1)\to(0,2)\to(1,1)\to(0,1)$ 只经过 $S(0,2)$，电流畅通——正反偏压的不对称（整流特征）即自旋阻塞的指纹；该法要求点间与点–库耦合都适中，并非所有样品都能测到。**脉冲栅法**：不依赖电流，先在 $(0,1)$ 区初始化，再移到加载点无自旋选择地装入第二个电子（$S$ 与三个 $T$ 近似等概率），最后脉冲到 $(0,2)$ 区内的测量点停留大部分周期；当测量点落在由三条电荷跃迁（延长）线围成的"阻塞三角形"内时，QPC 信号介于 $(1,1)$ 与 $(0,2)$ 两种构型之间，表明部分时间系统被阻塞在 $(1,1)$。由三角形内信号随脉冲周期的指数衰减可提取三重态弛豫时间，文献 6论文样品上测得约 $70\,\mu$s。
+实验上观测阻塞有两种方式。**输运法**：在源漏间加偏压，反偏压下输运循环 $(0,1)\to(1,1)\to(0,2)\to(0,1)$ 在形成三重态时中断，偏压三角形内电流被抑制，而正偏压下循环 $(0,1)\to(0,2)\to(1,1)\to(0,1)$ 只经过 $S(0,2)$，电流畅通——正反偏压的不对称（整流特征）即自旋阻塞的指纹；该法要求点间与点–库耦合都适中，并非所有样品都能测到。**脉冲栅法**：不依赖电流，先在 $(0,1)$ 区初始化，再移到加载点无自旋选择地装入第二个电子（$S$ 与三个 $T$ 近似等概率），最后脉冲到 $(0,2)$ 区内的测量点停留大部分周期；当测量点落在由三条电荷跃迁（延长）线围成的"阻塞三角形"内时，QPC 信号介于 $(1,1)$ 与 $(0,2)$ 两种构型之间，表明部分时间系统被阻塞在 $(1,1)$。由三角形内信号随脉冲周期的指数衰减可提取三重态弛豫时间，论文样品上测得约 $70\,\mu$s。
 
 **$J(\varepsilon)$ 的标定（自旋漏斗）**：把 $S(0,2)$ 快速绝热地脉冲到失谐 $\varepsilon$ 处等待 $\tau_S\gg T_2^*$（保证与核场充分混合）再返回读出。当脉冲尖端落在 $S$–$T_+$ 交叉线上（$J(\varepsilon)=g\mu_B B_{\mathrm{ext}}$）时，核场横向分量驱动 $S$–$T_+$ 混合，单态概率下降；在 $(\varepsilon, B_{\mathrm{ext}})$ 平面上呈现漏斗状特征，沿漏斗线即可逐点提取 $J(\varepsilon)$。
 
-**$S$–$T_+$  Landau–Zener–Stückelberg 干涉**：$S$–$T_+$ 反交叉可用[[landau-zener-transition|Landau–Zener 跃迁]]做相干控制。单次以速率 $v$ 穿过反交叉时，停留在 $S$ 的振幅满足 $|A_S|^2=P_{LZ}=\exp(-2\pi\Delta_{ST}^2/\hbar v)$（$\Delta_{ST}$ 为反交叉能隙）；在两次穿越之间于失谐 $\varepsilon$ 处停留 $\tau_S$，积累相位 $\varphi=\frac{1}{\hbar}\int\{E_S[\varepsilon(t)]-E_{T_+}[\varepsilon(t)]\}dt$，返回时发生干涉。理想情形 $P_{LZ}=1/2$ 时每次穿越等效于一个 Hadamard 门，相位积累等效于绕 $z$ 轴旋转，二者合成普适单比特操作——这是[[lzsm-interference|LZSM 干涉]]在自旋比特中的形态。此外，反复"绝热穿过、非绝热返回" $S$–$T_+$ 反交叉，每循环翻转一个核自旋，可实现动态核自旋极化，在两点间建立稳定梯度供 $x$ 轴操作使用。
+**$S$–$T_+$ Landau–Zener–Stückelberg 干涉**：$S$–$T_+$ 反交叉可用[[landau-zener-transition|Landau–Zener 跃迁]]做相干控制。单次以速率 $v$ 穿过反交叉时，停留在 $S$ 的振幅满足 $|A_S|^2=P_{LZ}=\exp(-2\pi\Delta_{ST}^2/\hbar v)$（$\Delta_{ST}$ 为反交叉能隙）；在两次穿越之间于失谐 $\varepsilon$ 处停留 $\tau_S$，积累相位 $\varphi=\frac{1}{\hbar}\int\{E_S[\varepsilon(t)]-E_{T_+}[\varepsilon(t)]\}dt$，返回时发生干涉。理想情形 $P_{LZ}=1/2$ 时每次穿越等效于一个 Hadamard 门，相位积累等效于绕 $z$ 轴旋转，二者合成普适单比特操作——这是[[lzsm-interference|LZSM 干涉]]在自旋比特中的形态。此外，反复"绝热穿过、非绝热返回" $S$–$T_+$ 反交叉，每循环翻转一个核自旋，可实现动态核自旋极化，在两点间建立稳定梯度供 $x$ 轴操作使用。
 
 ## 参数与量级
 
@@ -136,19 +135,4 @@ $S$–$T_0$ 比特的退相干有两个主要来源。其一是超精细核场�
 
 ## 与其他概念的关系
 
-与[[qubit-control/single-spin-qubit|单自旋量子比特]]相比，$S$–$T_0$ 编码的全部操控可由栅压脉冲（全电控）完成，无需微波磁场或强局域驱动，代价是每个比特占用两个电子、且需要稳定的磁场梯度。其 $z$ 轴与本站[[exchange-interaction|交换相互作用]]词条共享同一微观起源；$x$ 轴所需的梯度与[[materials-devices/micromagnet|微磁体]]方案互通。向更多电子数推广，三电子情形给出[[resonant-exchange-qubit|共振交换量子比特]]与[[hybrid-qubit|杂化量子比特]]，其 $\{|S\rangle,|T_0\rangle\}$ 子空间结构在两重态–四重态体系中会以相似形式复现。多电子双量子点中还会出现四重态阻塞等超出两电子模型的结构（文献 6论文第 3 章），不能简单套用本词条的哈密顿量。两个 $S$–$T_0$ 比特之间可借杂化偶极矩的电容耦合实现纠缠（Yacoby 组已演示）；在硅基阵列中，同一交换哈密顿量在 $J\gg\Delta E_z$ 极限下给出 $\sqrt{\mathrm{SWAP}}$ 类两比特门，与单自旋编码的门集互补。
-
-## 延伸阅读
-
-- J. R. Petta et al., "Coherent Manipulation of Coupled Electron Spins in Semiconductor Quantum Dots", Science (2005). [DOI: 10.1126/science.1116955]
-- M. D. Shulman et al., "Demonstration of Entanglement of Electrostatically Coupled Singlet-Triplet Qubits", Science (2012). [DOI: 10.1126/science.1217692]
-- X. Wu et al., "Two-axis control of a singlet–triplet qubit with an integrated micromagnet", Proceedings of the National Academy of Sciences (2014). [DOI: 10.1073/pnas.1412230111]
-
-## 论文依据
-
-- [[sources/ref-06|文献 6]]，PDF pp. 29–31：$S(1,1)$–$S(0,2)$ 两能级哈密顿量、$J(\varepsilon)$ 公式及其大失谐渐近、含核磁场的四态哈密顿量与 $S$–$T_0$ 有效二能级哈密顿量、$S$–$T_+$ 反交叉。
-- [[sources/ref-06|文献 6]]，PDF pp. 33–36：自旋阻塞的输运与脉冲栅两种观测方式、读出窗口与三重态弛豫时间约 $70\,\mu$s。
-- [[sources/ref-06|文献 6]]，PDF pp. 37–39：交换振荡的脉冲流程与布洛赫球图像、自旋漏斗标定 $J(\varepsilon)$、电荷噪声敏感度 $dJ/d\varepsilon$ 与对称工作点。
-- [[sources/ref-06|文献 6]]，PDF pp. 39–41：$S$–$T_+$ LZS 干涉（$P_{LZ}$ 公式与 Hadamard 类比）、动态核自旋极化提供梯度、$T_2^*$ 与 $T_2$ 的代表性数值。
-- [[sources/ref-08|文献 8]]，PDF pp. 26–29：$S$–$T_0$ 编码的态定义、$E_{ST}\approx 400\,\mu$eV、核场混合下的二能级哈密顿量、交换振荡脉冲序列与自旋–电荷转换读出。
-- [[sources/ref-21|文献 21]]，PDF pp. 35–36：Hubbard 极限下的交换相互作用表达式及 $\sqrt{\mathrm{SWAP}}$ 门构造；p. 30：双量子点两电子编码为单态–三重态量子比特的方案列举。
+与[[qubit-control/single-spin-qubit|单自旋量子比特]]相比，$S$–$T_0$ 编码的全部操控可由栅压脉冲（全电控）完成，无需微波磁场或强局域驱动，代价是每个比特占用两个电子、且需要稳定的磁场梯度。其 $z$ 轴与本站[[exchange-interaction|交换相互作用]]词条共享同一微观起源；$x$ 轴所需的梯度与[[materials-devices/micromagnet|微磁体]]方案互通。向更多电子数推广，三电子情形给出[[resonant-exchange-qubit|共振交换量子比特]]与[[hybrid-qubit|杂化量子比特]]，其 $\{|S\rangle,|T_0\rangle\}$ 子空间结构在两重态–四重态体系中会以相似形式复现。多电子双量子点中还会出现四重态阻塞等超出两电子模型的结构（论文第 3 章），不能简单套用本词条的哈密顿量。两个 $S$–$T_0$ 比特之间可借杂化偶极矩的电容耦合实现纠缠（Yacoby 组已演示）；在硅基阵列中，同一交换哈密顿量在 $J\gg\Delta E_z$ 极限下给出 $\sqrt{\mathrm{SWAP}}$ 类两比特门，与单自旋编码的门集互补。

@@ -2,13 +2,13 @@
 title: 电荷噪声
 description: 来自陷阱、杂质、界面与电路漂移的随机电势涨落，会扰动量子点失谐和比特频率。
 aliases:
-  - 电势噪声
-  - 1/f噪声
-  - 低频电荷噪声
-  - 能量涨落
+ - 电势噪声
+ - 1/f噪声
+ - 低频电荷噪声
+ - 能量涨落
 tags:
-  - 材料与器件
-  - 噪声
+ - 材料与器件
+ - 噪声
 date: 2026-09-08
 ---
 
@@ -46,16 +46,16 @@ $$
 把栅极 $G_i$ 上的电压噪声写成自相关函数的傅里叶变换
 
 $$
-S_{G_i}(f)=\int_{-\infty}^{+\infty}dt\;e^{-2\pi i f t}\,
-\left\langle \delta V_{G_i}(t)\,\delta V_{G_i}(0)\right\rangle,
+S_{G_i}(f)=\int_{-\infty}^{+\infty}dt\;e^{-2\pi i f t}\
+\left\langle \delta V_{G_i}(t)\,\delta V_{G_i}(0)\right\rangle
 $$
 
 实验上常用的两种参数化形式为
 
 $$
-S_q(\omega)=\frac{2\pi A_q}{|\omega|},
+S_q(\omega)=\frac{2\pi A_q}{|\omega|}
 \qquad
-S(f)=S_{\mathrm{hf}}\left(\frac{f_0}{f}\right)^{\alpha},
+S(f)=S_{\mathrm{hf}}\left(\frac{f_0}{f}\right)^{\alpha}
 $$
 
 前者中 $A_q$ 是失谐参数 $q$ 的噪声在 $1\ \mathrm{Hz}$ 处的功率，后者把谱指数 $\alpha$ 留作可拟合量、$f_0$ 为参考频率。理想 $1/f$ 对应 $\alpha=1$；实测值通常略小于 1（例如平面锗空穴器件上拟合得到 $\alpha\approx0.907$），仍属于典型的 $1/f$ 型电荷噪声。
@@ -63,7 +63,7 @@ $$
 $\alpha$ 不能直接测量，但可以从回波衰减的形状反推。Hahn 回波幅度随等待时间的衰减写成
 
 $$
-\exp\left[-\left(\frac{\tau_{\mathrm{idle}}}{T_2^{\mathrm{Echo}}}\right)^{\beta}\right],
+\exp\left[-\left(\frac{\tau_{\mathrm{idle}}}{T_2^{\mathrm{Echo}}}\right)^{\beta}\right]
 $$
 
 拟合出的指数 $\beta$ 与谱指数满足 $\alpha=\beta-1$。这条关系把"波形长什么样"和"噪声谱多陡"直接联系起来，是仅凭比特实验就能读出噪声谱形的实用技巧。
@@ -77,9 +77,9 @@ $$
 [[qubit-control/charge-qubit|电荷量子比特]]的最小模型是
 
 $$
-H=\frac{\varepsilon}{2}\sigma_z+t_c\sigma_x,
+H=\frac{\varepsilon}{2}\sigma_z+t_c\sigma_x
 \qquad
-\hbar\omega_{01}=\sqrt{\varepsilon^{2}+4t_c^{2}},
+\hbar\omega_{01}=\sqrt{\varepsilon^{2}+4t_c^{2}}
 $$
 
 其中 $\varepsilon$ 是双点失谐、$t_c$ 是[[fundamentals/tunnel-coupling|隧穿耦合]]。比特频率对失谐的敏感度
@@ -109,7 +109,7 @@ $$
 \gamma_\phi=\frac{1}{2\pi\hbar}\left[\sum_{q=\varepsilon,\Delta}
 \left(\frac{1}{4}\left(\frac{\partial\omega_{\mathrm{RX}}}{\partial q}\right)^{2}\mathrm{var}(q)
 +\frac{1}{16}\left(\frac{\partial^{2}\omega_{\mathrm{RX}}}{\partial q^{2}}\right)^{2}\mathrm{var}(q)^{2}\right)
-+\cdots\right]^{1/2},
++\cdots\right]^{1/2}
 $$
 
 完整表达式还含 $\varepsilon$ 与 $\Delta$ 的交叉项，其权重由相关系数 $c=\mathrm{cov}(\varepsilon,\Delta)/(\sigma_\varepsilon\sigma_\Delta)$ 决定。这个形式的实用价值在于：当一阶导数被工作点设计压到零时，**二阶项和交叉项就成为剩余退相干的主导**，展宽随失谐的依赖曲线因此不是简单的 V 形，而是可以用上式整体拟合——拟合与实验数据吻合，即可判定电荷噪声是主导噪声源。
@@ -123,15 +123,15 @@ $$
 1. **自旋轨道耦合 / $g$ 张量的电压依赖**。把空穴比特写成有效自旋 $1/2$ 系统
 
 ```math
-H_s=\mathbf{S}\cdot\boldsymbol{\omega}_L(\mathbf{V}_G),
+H_s=\mathbf{S}\cdot\boldsymbol{\omega}_L(\mathbf{V}_G)
 \qquad
-\boldsymbol{\omega}_L(\mathbf{V}_G)=\frac{\mu_B}{\hbar}\,\mathsf{g}(\mathbf{V}_G)\cdot\mathbf{B},
+\boldsymbol{\omega}_L(\mathbf{V}_G)=\frac{\mu_B}{\hbar}\,\mathsf{g}(\mathbf{V}_G)\cdot\mathbf{B}
 ```
 
 $g$ 张量显含栅压，于是拉莫尔频率 $f_L=\frac{\mu_B}{h}\left|\mathsf{g}(\mathbf{V}_G^0)\cdot\mathbf{B}\right|$ 也随栅压变化。定义**纵向自旋–电场敏感度**（longitudinal spin–electric susceptibility, LSES）
 
 $$
-D_{G_i}=\frac{\partial f_L}{\partial V_{G_i}^{0}},
+D_{G_i}=\frac{\partial f_L}{\partial V_{G_i}^{0}}
 $$
 
 它的大小直接反映比特对电荷噪声的敏感程度，实验上就是"比特频率随柱塞栅压的斜率"。
@@ -140,7 +140,7 @@ $$
 
 ```math
 Q=\frac{\mathrm{d}B_{tr}^{tot}/\mathrm{d}y}
-{\sqrt{\left(\mathrm{d}B_{long}/\mathrm{d}x\right)^{2}+\left(\mathrm{d}B_{long}/\mathrm{d}y\right)^{2}}},
+{\sqrt{\left(\mathrm{d}B_{long}/\mathrm{d}x\right)^{2}+\left(\mathrm{d}B_{long}/\mathrm{d}y\right)^{2}}}
 ```
 
 最大化 $Q$ 的面内磁场角并不沿磁体轴向，而是偏离一定角度。
@@ -148,7 +148,7 @@ Q=\frac{\mathrm{d}B_{tr}^{tot}/\mathrm{d}y}
 在平面锗中，有效 $g$ 因子的各向异性源于重空穴–轻空穴（HH–LH）混合，而混合程度又由量子点的电势分布决定，因此 $g$ 与 LSES 都强烈依赖磁场取向。面内旋转磁场时
 
 $$
-g(\theta)=\sqrt{g_a^{2}\cos^{2}(\theta-\theta_0)+g_b^{2}\sin^{2}(\theta-\theta_0)},
+g(\theta)=\sqrt{g_a^{2}\cos^{2}(\theta-\theta_0)+g_b^{2}\sin^{2}(\theta-\theta_0)}
 $$
 
 对应的自旋–电场敏感度解析近似为
@@ -166,25 +166,25 @@ $$
 把上述"敏感度 × 噪声谱"整合成相干时间，需要滤波函数（filter function）形式。栅压噪声在自由演化中累积随机相位
 
 $$
-\delta\phi(t)=2\pi\int_{-\infty}^{+\infty}dt'\sum_i D_{G_i}\,\delta V_{G_i}(t')\,\eta_t(t'),
+\delta\phi(t)=2\pi\int_{-\infty}^{+\infty}dt'\sum_i D_{G_i}\,\delta V_{G_i}(t')\,\eta_t(t')
 $$
 
 其中 $\eta_t(t')$ 描述脉冲序列的符号翻转。对含 $N_\pi$ 个 $\pi$ 脉冲的 CPMG 序列
 
 $$
-\eta_t^{\mathrm{CPMG}}(t')=\sum_{k=0}^{N_\pi}(-1)^{k}\,
-\Theta(t_{k+1}-t')\,\Theta(t'-t_k),
+\eta_t^{\mathrm{CPMG}}(t')=\sum_{k=0}^{N_\pi}(-1)^{k}\
+\Theta(t_{k+1}-t')\,\Theta(t'-t_k)
 $$
 
 $\Theta$ 为 Heaviside 阶跃函数，Hahn 回波对应 $N_\pi=1$。旋转坐标系中密度矩阵非对角元的衰减为
 
 $$
 \left\langle\tilde\rho_{01}(t)\right\rangle
-=\tilde\rho_{01}(0)\,e^{-\frac{1}{2}\left\langle\delta\phi^{2}(t)\right\rangle},
+=\tilde\rho_{01}(0)\,e^{-\frac{1}{2}\left\langle\delta\phi^{2}(t)\right\rangle}
 \qquad
 \left\langle\delta\phi^{2}(t)\right\rangle
-=4\pi^{2}\int_{-\infty}^{+\infty}df\sum_i D_{G_i}^{2}\,S_{G_i}(f)\,
-\left|\tilde\eta_t(f)\right|^{2},
+=4\pi^{2}\int_{-\infty}^{+\infty}df\sum_i D_{G_i}^{2}\,S_{G_i}(f)\
+\left|\tilde\eta_t(f)\right|^{2}
 $$
 
 即**退相干速率 = 噪声谱与滤波函数的重叠积分**。Ramsey 序列的滤波函数
@@ -217,7 +217,7 @@ $$
 - **交换门的对称操作点**。交换耦合与失谐 $\epsilon=\alpha(V_{P2}-V_{P1})$ 的关系为
 
 ```math
-J=\frac{2tU}{U^{2}-\epsilon^{2}},
+J=\frac{2tU}{U^{2}-\epsilon^{2}}
 ```
 
 $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。$J$ 在 $\epsilon=0$ 处取极小值、对 $\epsilon$ 一阶不敏感，因此实验上不再用失谐脉冲、而是用快速电压脉冲直接抬降点间势垒来开关 $J$，可有效抑制电荷噪声对 $J$ 的干扰。需要注意的是，正反脉冲会使两点电化学势非对称偏移，实测对称点常偏离失谐零点，需用 Hahn 回波型序列单独标定（引入[[scaling-automation/virtual-gates|虚拟栅极]]可缓解）。
@@ -229,21 +229,21 @@ $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 能量涨落 $\Delta\varepsilon$（传统掺杂 GaAs 单点） | $3.1\pm1.1\ \mu\mathrm{eV}$ | 文献 4 |
-| 能量涨落 $\Delta\varepsilon$（浅刻蚀 GaAs 单点） | $0.50\pm0.23\ \mu\mathrm{eV}$ | 文献 4 |
-| 能量涨落 $\Delta\varepsilon$（非掺杂 GaAs 单点） | $0.55$–$1.4\ \mu\mathrm{eV}$ | 文献 4 |
-| 杠杆臂 $\alpha$（用于 $\Delta\varepsilon=\alpha\Delta V$） | $0.05$（浅刻蚀）/ $0.03\ \mathrm{meV/mV}$（传统） | 文献 4 |
-| 噪声谱指数 $\alpha$ | $0.907$（由 $\beta=1.907\pm0.23$ 反推） | 文献 25 |
-| 电荷涨落特征时间尺度 | 毫秒量级（低频主导） | 文献 20 |
-| 比特频率抖动（55 h Ramsey 监测） | 近似高斯分布，$\sigma=0.794\ \mathrm{MHz}$ | 文献 25 |
-| 内禀失谐噪声幅度 $\delta f_{\mathrm{Larmor}}$ | $\approx1.66\ \mathrm{MHz}$（由 $T_2^{*}$ 估算），拟合取 $1.80\ \mathrm{MHz}$ | 文献 25 |
-| 平面锗空穴比特 $T_2^{*}$ | $169.9\ \mathrm{ns}$，随面内磁场角近似不变 | 文献 25 |
-| 平面锗空穴比特 $T_2^{\mathrm{Echo}}$ | Q1 $500\to2200\ \mathrm{ns}$；Q2 $400\to800\ \mathrm{ns}$ | 文献 25 |
-| 甜点处单比特门保真度增益 | $+2\%$，最高 $99.82\%$ | 文献 25 |
-| RX 比特退相干率 $\gamma_{\mathrm{RX}}/2\pi$ | $16.9\ \mathrm{MHz}$ | 文献 20 |
+| 能量涨落 $\Delta\varepsilon$（传统掺杂 GaAs 单点） | $3.1\pm1.1\ \mu\mathrm{eV}$ | |
+| 能量涨落 $\Delta\varepsilon$（浅刻蚀 GaAs 单点） | $0.50\pm0.23\ \mu\mathrm{eV}$ | |
+| 能量涨落 $\Delta\varepsilon$（非掺杂 GaAs 单点） | $0.55$–$1.4\ \mu\mathrm{eV}$ | |
+| 杠杆臂 $\alpha$（用于 $\Delta\varepsilon=\alpha\Delta V$） | $0.05$（浅刻蚀）/ $0.03\ \mathrm{meV/mV}$（传统） | |
+| 噪声谱指数 $\alpha$ | $0.907$（由 $\beta=1.907\pm0.23$ 反推） | |
+| 电荷涨落特征时间尺度 | 毫秒量级（低频主导） | |
+| 比特频率抖动（55 h Ramsey 监测） | 近似高斯分布，$\sigma=0.794\ \mathrm{MHz}$ | |
+| 内禀失谐噪声幅度 $\delta f_{\mathrm{Larmor}}$ | $\approx1.66\ \mathrm{MHz}$（由 $T_2^{*}$ 估算），拟合取 $1.80\ \mathrm{MHz}$ | |
+| 平面锗空穴比特 $T_2^{*}$ | $169.9\ \mathrm{ns}$，随面内磁场角近似不变 | |
+| 平面锗空穴比特 $T_2^{\mathrm{Echo}}$ | Q1 $500\to2200\ \mathrm{ns}$；Q2 $400\to800\ \mathrm{ns}$ | |
+| 甜点处单比特门保真度增益 | $+2\%$，最高 $99.82\%$ | |
+| RX 比特退相干率 $\gamma_{\mathrm{RX}}/2\pi$ | $16.9\ \mathrm{MHz}$ | |
 | Si-MOS 微磁体器件 $T_2^{*}$ / $T_2^{\mathrm{echo}}$ | $624\ \mathrm{ns}$ / $60.2\ \mu\mathrm{s}$ | 楚宁 2025 |
-| 电流噪声积分频段 | $1$–$9\ \mathrm{Hz}$（浅刻蚀）；$5$–$45\ \mathrm{Hz}$（非掺杂） | 文献 4 |
-| 温度依赖 | $250\ \mathrm{mK}\to1\ \mathrm{K}$，峰顶电流涨落上升约 $20\%$ | 文献 4 |
+| 电流噪声积分频段 | $1$–$9\ \mathrm{Hz}$（浅刻蚀）；$5$–$45\ \mathrm{Hz}$（非掺杂） | |
+| 温度依赖 | $250\ \mathrm{mK}\to1\ \mathrm{K}$，峰顶电流涨落上升约 $20\%$ | |
 
 ## 实验测量方法
 
@@ -256,7 +256,7 @@ $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。
 3. **积分**。对低频段积分得到电流涨落
 
 ```math
-\Delta I=\sqrt{\int_{f_1}^{f_2}\left[S_I^{2}(f)-S_{BG}^{2}(f)\right]df},
+\Delta I=\sqrt{\int_{f_1}^{f_2}\left[S_I^{2}(f)-S_{BG}^{2}(f)\right]df}
 ```
 
 $S_{BG}$ 为系统噪声本底。
@@ -296,39 +296,3 @@ $S_{BG}$ 为系统噪声本底。
 - [[materials-devices/interface-defects|界面缺陷]]既是电荷噪声的微观载体，也是[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]内损耗的来源，二者需一起优化才能满足[[circuit-qed/strong-coupling|强耦合]]判据。
 - 测量层面，[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]既是探测电荷噪声的工具，其自身工作点也受电荷噪声漂移影响。
 - 在[[scaling-automation/flopping-mode-qubit|翻转模式比特]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]中，比特被有意置于电荷–自旋混合区以增大偶极矩，代价正是更强的电荷噪声敏感性。
-
-## 延伸阅读
-
-- M. Kȩpa, N. Focke, Ł. Cywiński, and J. A. Krzywda, "Simulation of 1/f charge noise affecting a quantum dot in a Si/SiGe structure" (2023). [DOI: 10.1063/5.0151029，arXiv:2303.13968]
-- Yuan-Chi Yang, S. Coppersmith, and M. Friesen, "High-fidelity single-qubit gates in a strongly driven quantum-dot hybrid qubit with 1/f charge noise", *Physical Review A* (2019). [DOI: 10.1103/PhysRevA.100.022337]
-- F. Martins, F. Malinowski, P. D. Nissen, E. Barnes, S. Fallahi, G. Gardner, M. Manfra, C. Marcus, and F. Kuemmeth, "Noise Suppression Using Symmetric Exchange Gates in Spin Qubits", *Physical Review Letters* (2015). [DOI: 10.1103/PhysRevLett.116.116801]
-- T. Pathan and D. Vashaee, "Quantifying Charge Noise Sources in Quantum Dot Spin Qubits via Impedance Spectroscopy, DLTS, and C-V Analysis", *Advanced Quantum Technologies* (2025). [DOI: 10.1002/qute.202500948]
-
-## 论文依据
-
-- [[sources/ref-04|文献 4]]，PDF p. 64：$1/f$ 噪声是各材料体系纳米器件的共同问题、被认为是比特退相干的主因；随机电荷涨落被认为是其主要来源；肖特基电极到二维电子气的漏电流是门控 GaAs 器件的主要噪声通道。
-- [[sources/ref-04|文献 4]]，PDF p. 68：库仑阻塞区低频噪声的测量方案（SR785 直流源 + 频谱仪、SR570 前放）、库仑峰三点取谱、峰底零电流处噪声对应隧穿几率涨落 $\Delta\Gamma$，以及积分电流涨落公式 (4-1)。
-- [[sources/ref-04|文献 4]]，PDF p. 70：$\Delta V=\Delta I/|dI/dV|$ 与 $\Delta\varepsilon=\alpha\Delta V$ 的换算、电流噪声与微分电导一一对应、峰顶数据须舍弃；$250\ \mathrm{mK}\to1\ \mathrm{K}$ 电流涨落上升约 $20\%$；浅刻蚀 $\alpha=0.05$、传统 $\alpha=0.03\ \mathrm{meV/mV}$。
-- [[sources/ref-04|文献 4]]，PDF pp. 70–71：浅刻蚀量子点能量涨落 $0.50\pm0.23\ \mu\mathrm{eV}$ 与传统量子点 $3.1\pm1.1\ \mu\mathrm{eV}$ 的统计对比（相差约一个数量级）。
-- [[sources/ref-04|文献 4]]，PDF pp. 82–83：非掺杂 GaAs 单量子点噪声级别 $0.55$–$1.4\ \mu\mathrm{eV}$，$5$–$45\ \mathrm{Hz}$ 积分频段，证实移除掺杂层可降低电荷噪声。
-- [[sources/ref-20|文献 20]]，PDF p. 100：电荷噪声时间尺度为毫秒量级、低频主导；哈密顿量对 $(\varepsilon,\Delta)$ 的二阶展开；$1/f$ 谱假设 $S_q(\omega)=2\pi A_q/|\omega|$。
-- [[sources/ref-20|文献 20]]，PDF p. 101：含一阶、二阶与交叉项的退相位率 $\gamma_\phi$ 表达式，以及比特展宽随失谐依赖的电荷噪声模型拟合结论。
-- [[sources/ref-20|文献 20]]，PDF pp. 102–103：电子–声子相互作用哈密顿量与费米黄金定则估算，硅中声子贡献可忽略而 GaAs 中不可忽略。
-- [[sources/ref-25|文献 25]]，PDF p. 137：最优工作点（sweet spot）定义为拉莫尔频率对电荷噪声敏感性最小处；最优操控线（sweet lines）为单位球面上的连续轨迹，可由栅压调控。
-- [[sources/ref-25|文献 25]]，PDF p. 143：LSES 的定义与提取方法，$g$ 因子各向异性公式 $g(\theta)=\sqrt{g_a^2\cos^2(\theta-\theta_0)+g_b^2\sin^2(\theta-\theta_0)}$ 及拟合值。
-- [[sources/ref-25|文献 25]]，PDF p. 145：LSES 解析近似公式 (6.6) 及其符号来源（波函数在 $z$ 向扩展与面内压缩）。
-- [[sources/ref-25|文献 25]]，PDF p. 147：$H_s=\mathbf{S}\cdot\boldsymbol{\omega}_L(\mathbf{V}_G)$、栅压分解 $V_{G_i}=V_{G_i}^0+\delta V_{G_i}$、Hahn 回波衰减指数 $\beta$ 与谱指数 $\alpha=\beta-1=0.907$；$T_2^{\mathrm{Echo}}$ 从 $500\ \mathrm{ns}$ 提升至 $2200\ \mathrm{ns}$。
-- [[sources/ref-25|文献 25]]，PDF p. 149：滤波函数形式的退相干理论——$\langle\delta\phi^2(t)\rangle$ 的谱积分表达、Ramsey 滤波函数，以及 $T_2^{*}$ 与 $T_2^{\mathrm{Echo}}$ 的近似公式 (6.21)、(6.22)。
-- [[sources/ref-25|文献 25]]，PDF p. 150：由 55 小时 Ramsey 漂移与 CPMG 阶数扫描重构横跨多个数量级的宽频噪声谱、提取 $S^{\mathrm{lf}}$ 与 $S^{\mathrm{hf}}$，以及势垒栅极噪声通道缺失导致模拟低估 $T_2^{\mathrm{Echo}}$ 各向异性。
-- [[sources/ref-25|文献 25]]，PDF p. 128：55 小时内比特频率抖动近似高斯分布、标准差 $0.794\ \mathrm{MHz}$；$\delta f_{\mathrm{Larmor}}\approx1.66\ \mathrm{MHz}$ 的估算与 $1.80\ \mathrm{MHz}$ 的拟合值。
-- [[sources/ref-25|文献 25]]，PDF p. 152：强自旋轨道耦合的"双刃剑"效应——$f_{\mathrm{Rabi}}$ 与 $T_2^{\mathrm{Echo}}$ 随磁场角呈相反趋势。
-- [[sources/ref-25|文献 25]]，PDF p. 153：甜点处单比特门保真度提升约 $2\%$、最高 $99.82\%$。
-- [[sources/ref-21|文献 21]]，PDF p. 47：过厚的氧化铝会显著增加电荷噪声，Si/SiGe 器件栅氧层厚度通常控制在 $7\ \mathrm{nm}$ 左右。
-- [[sources/ref-21|文献 21]]，PDF p. 67：在对称操作点用快速电压脉冲调控点间势垒高度开关 $J$，可有效抑制电荷噪声影响。
-- [[sources/ref-21|文献 21]]，PDF p. 69：$J=2tU/(U^2-\epsilon^2)$，$J$ 在 $\epsilon=0$ 处对失谐一阶不敏感；实测对称操作点偏离失谐零点，需用 Hahn echo 型序列标定。
-- [[sources/ref-22|楚宁 2025]]，PDF p. 25：Si-MOS 界面质量低于外延结构，均匀性有限、电荷噪声更大。
-- [[sources/ref-22|楚宁 2025]]，PDF p. 26：锗中衬底电荷噪声经自旋轨道耦合导致 $g$ 因子随时间涨落，是空穴比特退相干的主要障碍。
-- [[sources/ref-22|楚宁 2025]]，PDF p. 80：横向梯度 $b_{tr}$ 与纵向梯度 $b_{long}=(\vec{e}_{noise}\cdot\nabla)B_{MM}$ 的定义，后者与涨落电场结合导致退相干。
-- [[sources/ref-22|楚宁 2025]]，PDF p. 82：品质因子 $Q$ 的梯度比值定义、最优面内磁场角偏离磁体轴向；该器件 $T_2^{*}=624\ \mathrm{ns}$、$T_2^{\mathrm{echo}}=60.2\ \mu\mathrm{s}$。
-- [[sources/ref-23|文献 23]]，PDF p. 22：氧化层悬挂键等效为二能级系统（TLS），既为谐振腔提供额外耗散通道、又向耦合系统贡献电荷噪声；界面缺陷俘获载流子造成阈值电压漂移与工作电流衰减。
-- [[sources/ref-23|文献 23]]，PDF p. 37：在同一衬底上并行制备场效应管与量子点器件，研究界面缺陷对空穴比特电荷噪声的贡献及界面电荷"产生–隧穿–俘获"的完整图像。

@@ -2,12 +2,12 @@
 title: 读出串扰
 description: 多比特同时测量时，一条读出通道或一个比特的状态改变其他通道判决结果的现象。
 aliases:
-  - 测量串扰
-  - 读取串扰
-  - readout crosstalk
+ - 测量串扰
+ - 读取串扰
+ - readout crosstalk
 tags:
-  - 读出与测量
-  - 多比特
+ - 读出与测量
+ - 多比特
 date: 2026-09-08
 ---
 
@@ -17,7 +17,7 @@ date: 2026-09-08
 
 读出串扰（readout crosstalk）的定义是操作性的：读取目标比特时，如果测量结果会受到其他非目标比特所处状态的影响，就认为读出存在串扰。它最典型的实验表现出现在频分复用的[[readout-measurement/dispersive-readout|色散读出]]中：理想情况下，每个比特的 $|0\rangle$、$|1\rangle$ 态在 $IQ$ 平面上对应两个位置固定的高斯圆斑，用一条直线（阈值）即可分开；而存在串扰时，目标比特圆斑的**整体位置**会随邻近比特的状态发生偏移。
 
-以两比特 $Q_3$、$Q_4$ 为例：区分 $|00\rangle$ 与 $|01\rangle$ 得到一条最佳分类线 $l_0$，区分 $|10\rangle$ 与 $|11\rangle$ 得到另一条 $l_1$。由于 $Q_4$ 的圆斑受 $Q_3$ 状态影响而平移，$l_0$ 与 $l_1$ 不再重合；交叉使用分类线（用 $l_1$ 去判 $Q_3$ 在 $|0\rangle$ 时的 $Q_4$ 数据）会使保真度显著下降。文献 14论文中实测 $F(0|l_0)=0.9130$、$F(1|l_1)=0.9150$，而交叉项掉到 $F(0|l_1)=0.8993$、$F(1|l_0)=0.8470$。
+以两比特 $Q_3$、$Q_4$ 为例：区分 $|00\rangle$ 与 $|01\rangle$ 得到一条最佳分类线 $l_0$，区分 $|10\rangle$ 与 $|11\rangle$ 得到另一条 $l_1$。由于 $Q_4$ 的圆斑受 $Q_3$ 状态影响而平移，$l_0$ 与 $l_1$ 不再重合；交叉使用分类线（用 $l_1$ 去判 $Q_3$ 在 $|0\rangle$ 时的 $Q_4$ 数据）会使保真度显著下降。论文中实测 $F(0|l_0)=0.9130$、$F(1|l_1)=0.9150$，而交叉项掉到 $F(0|l_1)=0.8993$、$F(1|l_0)=0.8470$。
 
 <!-- FIGURE: 两比特体系 IQ 圆斑偏移示意图：Q3 处于 |0⟩ 与 |1⟩ 时 Q4 的两组圆斑整体平移，最佳分类线 l0 与 l1 不再重合 -->
 
@@ -30,7 +30,7 @@ date: 2026-09-08
 多比特联合读出的硬件基础是频分复用（frequency-division multiplexing）：$M$ 个比特各有一个[[circuit-qed/microwave-resonator|读出谐振腔]]，全部耦合到同一条读取总线（readout bus）。本振（LO）输出记为 $A_{\mathrm{LO}}\cos(\omega_{\mathrm{LO}}t+\theta_{\mathrm{LO}})$，任意波形发生器产生的中频（IF）信号为各比特分量之和，混频（下变频 $\omega_{\mathrm{RF}}=\omega_{\mathrm{LO}}-\omega_{\mathrm{IF}}$）后得到包含 $M$ 个频率分量的射频输入信号。输出端经同一本振再次混频，得到 ADC 可直接采集的中频信号：
 
 $$
-s(t)=\sum_{i=1}^{M}A_s^{(i)}\cos\!\left(\omega_{\mathrm{IF}}^{(i)}t+\theta_s^{(i)}\right),
+s(t)=\sum_{i=1}^{M}A_s^{(i)}\cos\!\left(\omega_{\mathrm{IF}}^{(i)}t+\theta_s^{(i)}\right)
 $$
 
 比特状态信息就编码在每个分量的幅值 $A_s^{(i)}$ 与相位 $\theta_s^{(i)}$ 中。采用外差（非零差）测量模式的原因正在于此：零差模式下各比特的直流分量直接叠加、不可区分，一个 ADC 通道只能读一个比特；外差模式还要求各比特中频互不相等，并有利于避开电路低频 $1/f$ 噪声。
@@ -41,14 +41,14 @@ $$
 
 $$
 I^{(i)}=\sum_{n=1}^{N}w_I^{(i)}(n)\,u^{(i)}(n),\qquad
-Q^{(i)}=\sum_{n=1}^{N}w_Q^{(i)}(n)\,v^{(i)}(n),
+Q^{(i)}=\sum_{n=1}^{N}w_Q^{(i)}(n)\,v^{(i)}(n)
 $$
 
 其中使信噪比最大的最佳窗函数是匹配滤波器（match filter）系数：
 
 $$
 w_I^{(i)}(n)=\left\langle u_e^{(i)}(n)\right\rangle-\left\langle u_g^{(i)}(n)\right\rangle,\qquad
-w_Q^{(i)}(n)=\left\langle v_e^{(i)}(n)\right\rangle-\left\langle v_g^{(i)}(n)\right\rangle,
+w_Q^{(i)}(n)=\left\langle v_e^{(i)}(n)\right\rangle-\left\langle v_g^{(i)}(n)\right\rangle
 $$
 
 下标 $e$、$g$ 分别对应比特处于 $|1\rangle$、$|0\rangle$ 时的信号，$\langle\cdot\rangle$ 为多次重复测量的系综平均。整个"解调—投影—阈值判决"流程全部是**线性**运算，这正是串扰问题的算法根源：低通滤波器无法完全滤除邻近比特中频分量的泄露（尤其当包络频谱展宽覆盖相邻谐振腔时），而线性投影无法跟随圆斑的条件性平移。
@@ -58,7 +58,7 @@ $$
 联合读出中串扰大小的标准度量是交叉保真度矩阵（cross-fidelity matrix）：
 
 $$
-\mathbb{F}_{ij}=1-P(1_i\mid 0_j)-P(0_i\mid 1_j),
+\mathbb{F}_{ij}=1-P(1_i\mid 0_j)-P(0_i\mid 1_j)
 $$
 
 其中 $P(x_i|y_j)$ 表示比特 $Q_j$ 制备在 $|y\rangle$ 时比特 $Q_i$ 被识别为 $|x\rangle$ 的概率。理想无串扰时 $Q_i$ 的读出与 $Q_j$ 无关，对 $i\neq j$ 有 $P(1_i|0_j)=P(0_i|1_j)=0.5$，非对角元全为 0；非对角元的大小即串扰的定量度量。当 $i=j$ 时上式退化为单比特读出保真度的定义，故对角元给出各比特自身的读出保真度。该矩阵可从 $2^N\times 2^N$ 混淆矩阵（元素 $P_{ij}$ 为初态 $|i\rangle$ 被判为 $|j\rangle$ 的概率，对角元即各联合态的保真度）方便地算出。每个比特的平均读出保真度定义为
@@ -69,7 +69,7 @@ $$
 
 ## 形成机制
 
-文献 14论文将读出串扰的形成机制归纳为四类：
+论文将读出串扰的形成机制归纳为四类：
 
 1. **读取信号波形的频谱展宽与泄露**：读取脉冲包络在频谱上有固有展宽，覆盖到频域近邻的谐振腔并使其激发，使单一频率分量的读取信号混入多个比特的信息；解调端数字下变频时，邻近腔的信号也会因同样的展宽泄露进目标通道。
 2. **残留寄生耦合**：固定电容耦合不可开关，原则上使包括读取在内的所有单比特操作都违反局域性，只能把比特频率调到大失谐状态（失谐量远大于耦合强度）以减小有效耦合；此外还存在目标比特与邻近比特谐振腔的间接耦合、谐振腔之间的耦合等寄生通道。
@@ -80,7 +80,7 @@ $$
 
 ## 参数与量级
 
-以下为文献 14论文六比特（可调 transmon 一维链）联合读出实验的实测参数：
+以下为论文六比特（可调 transmon 一维链）联合读出实验的实测参数：
 
 | 量 | 典型值 | 说明 |
 | --- | --- | --- |
@@ -107,11 +107,10 @@ $$
 
 ### 算法层面：浅层神经网络态分类器
 
-文献 14论文的关键观察是：传统的"匹配滤波解调 + 投影阈值"态分类器（MFD, match-filter-based discriminator）在数学上完全等价于一个**零偏置的线性浅层神经网络**。把解调写成矩阵形式，
-
+论文的关键观察是：传统的"匹配滤波解调 + 投影阈值"态分类器（MFD, match-filter-based discriminator）在数学上完全等价于一个**零偏置的线性浅层神经网络**。把解调写成矩阵形式
 $$
 \begin{pmatrix}I\\ Q\end{pmatrix}=D\,\vec{s},\qquad
-p=\begin{pmatrix}a & b\end{pmatrix}\begin{pmatrix}I\\ Q\end{pmatrix}=P D\,\vec{s},
+p=\begin{pmatrix}a & b\end{pmatrix}\begin{pmatrix}I\\ Q\end{pmatrix}=P D\,\vec{s}
 $$
 
 其中 $D$ 由快解调系数 $k_I$、$k_Q$ 构成，$P$ 为投影系数。与之对应，浅层神经网络态分类器（SNND, shallow-neural-network discriminator）的运算为
@@ -133,22 +132,3 @@ $$
 - 共用[[readout-measurement/parametric-amplifier|参量放大器]]的带宽、饱和功率与互调决定了多少读出音可以共享一条放大链；[[readout-measurement/purcell-filter|Purcell 滤波器]]既保护比特免受 Purcell 衰减，也抑制非共振驱动的串扰激发。
 - 读出串扰属于"测量侧"串扰；与之并列的"控制侧"串扰在量子点阵列中表现为栅极对非目标点电化学势的牵拉，由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]定量描述并可用[[scaling-automation/virtual-gates|虚拟电极]]补偿；超导芯片中还有磁通串扰等封装与布线层面的来源。
 - 对量子纠错而言，串扰使读出误差具有空间相关性，解码器若假设独立同分布的测量误差会低估逻辑错误率。
-
-## 延伸阅读
-
-- J. Heinsoo et al., "Rapid High-fidelity Multiplexed Readout of Superconducting Qubits", *Physical Review Applied* (2018). [DOI: 10.1103/PhysRevApplied.10.034040]
-- B. Lienhard et al., "Deep-Neural-Network Discrimination of Multiplexed Superconducting-Qubit States", *Physical Review Applied* (2022). [DOI: 10.1103/PhysRevApplied.17.014024]
-- Y. Xiong et al., "High-performance multiplexed readout of superconducting qubits with a tunable broadband Purcell filter", arXiv (2025). [arXiv: 2509.11822]
-- M. Sarovar et al., "Detecting crosstalk errors in quantum information processors", *Quantum* (2020). [DOI: 10.22331/q-2020-09-11-321]
-
-## 论文依据
-
-- [[sources/ref-14|文献 14]]，PDF p. 126：零差与外差测量模式的取舍，频分复用共用一条电路同时读取多比特的原理。
-- [[sources/ref-14|文献 14]]，PDF pp. 127–128：正交 $IQ$ 数字下变频、FIR 低通滤波与匹配滤波器系数 $w_I$、$w_Q$ 的定义式。
-- [[sources/ref-14|文献 14]]，PDF p. 131：六比特芯片结构与实测参数（$J/2\pi\approx10\ \mathrm{MHz}$、$g/2\pi\approx50\ \mathrm{MHz}$、腔间隔约 $20\ \mathrm{MHz}$）。
-- [[sources/ref-14|文献 14]]，PDF p. 132：$IQ$ 圆斑随邻近比特状态偏移的现象、分类线 $l_0$/$l_1$ 交叉使用保真度数据与交叉保真度矩阵 $\mathbb{F}_{ij}$ 的定义。
-- [[sources/ref-14|文献 14]]，PDF pp. 132–133：读出串扰的四类形成机制（频谱泄露、残留寄生耦合、关联噪声、关联态制备）与独立 Purcell 滤波器抑制方案。
-- [[sources/ref-14|文献 14]]，PDF pp. 135–136：阈值投影法等价于零偏置线性浅层神经网络的论证，SNND 的预处理、初始化与训练流程。
-- [[sources/ref-14|文献 14]]，PDF pp. 138–140：SNND 的实测效果——平均错误抑制率 $8.5\%$、平均非对角串扰降低 84%、近邻串扰下降近一个量级。
-- [[sources/ref-22|文献 22]]，PDF p. 8：规模化自旋比特芯片中比特间串扰、微波加热等因素限制整体门保真度。
-- [[sources/ref-21|文献 21]]，PDF pp. 84–86：量子点阵列中电容串扰系数的提取、串扰矩阵与虚拟栅极补偿。

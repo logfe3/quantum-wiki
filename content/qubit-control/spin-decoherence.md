@@ -2,16 +2,16 @@
 title: 自旋退相干
 description: 自旋量子比特在自由演化与受控演化中相位相干性逐步丧失的物理机制、特征时间与典型量级。
 aliases:
-  - 退相干时间
-  - T1 T2
-  - T2* 退相位
-  - 相干时间
-  - 自旋相干
-  - 退相位
+ - 退相干时间
+ - T1 T2
+ - T2* 退相位
+ - 相干时间
+ - 自旋相干
+ - 退相位
 tags:
-  - 量子比特操控
-  - 自旋
-  - 相干性
+ - 量子比特操控
+ - 自旋
+ - 相干性
 date: 2026-09-08
 ---
 
@@ -36,26 +36,26 @@ $|\psi\rangle=\cos(\theta/2)|0\rangle+e^{i\phi}\sin(\theta/2)|1\rangle$ 在布�
 把比特哈密顿量写为
 
 $$
-H(t)=\tfrac{1}{2}\,h\,[f_0+\delta f(t)]\,\sigma_z,
+H(t)=\tfrac{1}{2}\,h\,[f_0+\delta f(t)]\,\sigma_z
 $$
 
 其中 $\delta f(t)=\delta f_\mathrm{hf}(t)+\delta f_\mathrm{charge}(t)+\delta f_\mathrm{grad}(t)$ 把三类主要噪声源累加：
 
-- **核自旋 Overhauser 场涨落** $\delta f_\mathrm{hf}$：电子与点内 $N\sim 10^4$–$10^6$ 个晶格核自旋通过费米接触超精细耦合 $H_\mathrm{hf}=A\,\mathbf{I}\cdot\mathbf{S}$，平均场 $\langle B_\mathrm{nuc}\rangle$ 对 GaAs 约 $1$–$5\ \mathrm{mT}$（相当于百 MHz 量级的拉莫尔频率偏移），涨落部分则随核自旋扩散、动态核极化过程在毫秒到秒尺度上漂移。[文献 6]([[sources/chen-baobao-2017]]) 把核磁场等效为准静态场，明确写出 $H_\mathrm{hf}=g\mu_B \sum_i B_{\mathrm{nuc},i}\cdot \mathbf{S}_i$（式 2.12 与式 3.10），并把 S–T0、S–T+ 反交叉附近的相干动力学归因于 $\mathbf{d}B = (\mathbf{B}_{\mathrm{nuc},L}-\mathbf{B}_{\mathrm{nuc},R})/2$（即两点核磁场之差，式 2.13）。
-- **栅极电压电荷噪声 $\delta V_{G_i}(t)$**：通过自旋–轨道耦合或人工磁场梯度把噪声注入比特频率，$\delta f_\mathrm{charge}(t)=\sum_i (\partial f_0/\partial V_{G_i})\,\delta V_{G_i}(t)$。硅体系典型灵敏度 $|\partial f_0/\partial V_{G_i}|\sim 10$–$100\ \mathrm{MHz/mV}$；锗空穴自旋因强 SOC 可达 $0.1$–$10\ \mathrm{MHz/mV}$ 量级（[文献 25]([[sources/zhou-yuchen-2026]])）。
+- **核自旋 Overhauser 场涨落** $\delta f_\mathrm{hf}$：电子与点内 $N\sim 10^4$–$10^6$ 个晶格核自旋通过费米接触超精细耦合 $H_\mathrm{hf}=A\,\mathbf{I}\cdot\mathbf{S}$，平均场 $\langle B_\mathrm{nuc}\rangle$ 对 GaAs 约 $1$–$5\ \mathrm{mT}$（相当于百 MHz 量级的拉莫尔频率偏移），涨落部分则随核自旋扩散、动态核极化过程在毫秒到秒尺度上漂移。 把核磁场等效为准静态场，明确写出 $H_\mathrm{hf}=g\mu_B \sum_i B_{\mathrm{nuc},i}\cdot \mathbf{S}_i$（式 2.12 与式 3.10），并把 S–T0、S–T+ 反交叉附近的相干动力学归因于 $\mathbf{d}B = (\mathbf{B}_{\mathrm{nuc},L}-\mathbf{B}_{\mathrm{nuc},R})/2$（即两点核磁场之差，式 2.13）。
+- **栅极电压电荷噪声 $\delta V_{G_i}(t)$**：通过自旋–轨道耦合或人工磁场梯度把噪声注入比特频率，$\delta f_\mathrm{charge}(t)=\sum_i (\partial f_0/\partial V_{G_i})\,\delta V_{G_i}(t)$。硅体系典型灵敏度 $|\partial f_0/\partial V_{G_i}|\sim 10$–$100\ \mathrm{MHz/mV}$；锗空穴自旋因强 SOC 可达 $0.1$–$10\ \mathrm{MHz/mV}$ 量级。
 - **杂散磁场梯度**：微磁体或邻近电极磁性材料提供的 $\partial B/\partial \mathbf{r}$ 与电子波函数位置变化耦合进入 $f_0$；梯度越强，EDSR 越快但同时也越容易把电场噪声转译为比特频率抖动。
 
 ### $T_1$ 与自旋–声子、自旋–轨道机制
 
-$T_1$ 反映"激发态→基态"的能量弛豫。在 Si/SiGe、Si-MOS 中，自旋–晶格耦合以形变势声子为主，硅里还能通过谷激发态泄漏（spin–valley mixing）产生额外通道。[文献 22]([[sources/chu-ning-2025]]) 把弛豫速率写为多通道相加：
+$T_1$ 反映"激发态→基态"的能量弛豫。在 Si/SiGe、Si-MOS 中，自旋–晶格耦合以形变势声子为主，硅里还能通过谷激发态泄漏（spin–valley mixing）产生额外通道。 把弛豫速率写为多通道相加：
 
 $$
-T_1^{-1}=\Gamma_{J,\mathrm{SV}}+\Gamma_{\mathrm{ph},\mathrm{SV}}+\Gamma_{J,\mathrm{SO}}+\Gamma_{\mathrm{ph},\mathrm{SO}}+\Gamma_\mathrm{const},
+T_1^{-1}=\Gamma_{J,\mathrm{SV}}+\Gamma_{\mathrm{ph},\mathrm{SV}}+\Gamma_{J,\mathrm{SO}}+\Gamma_{\mathrm{ph},\mathrm{SO}}+\Gamma_\mathrm{const}
 $$
 
-其中下标 SV、SO 分别表示自旋–谷混合与自旋–轨道混合，$J$ 表示 Johnson 噪声、ph 表示声子、const 表示与外磁场无关的常值通道（式 2.7）。当 $E_Z$ 与谷能级劈裂 $E_\mathrm{VS}$ 重合时，自旋–谷混合打开一条特别强的弛豫通道，$T_1$ 会从 ms 量级骤降到 μs 量级——这是硅自旋比特独有的失效模式，磁输运上表现为 $B_\mathrm{kink}$ 处 $T_1$ 的"V 形"谷（[文献 15]([[sources/hu-ruizi-2022]])）。
+其中下标 SV、SO 分别表示自旋–谷混合与自旋–轨道混合，$J$ 表示 Johnson 噪声、ph 表示声子、const 表示与外磁场无关的常值通道（式 2.7）。当 $E_Z$ 与谷能级劈裂 $E_\mathrm{VS}$ 重合时，自旋–谷混合打开一条特别强的弛豫通道，$T_1$ 会从 ms 量级骤降到 μs 量级——这是硅自旋比特独有的失效模式，磁输运上表现为 $B_\mathrm{kink}$ 处 $T_1$ 的"V 形"谷。
 
-在 GaAs 双量子点的电荷比特中，$T_1$ 主要受电子–声子耦合与电荷态间的隧穿耦合控制，典型值在纳秒量级（[文献 2]([[sources/shang-runan-2014]]) 在 GaAs 双量子点电荷比特上测得 $T_1\approx 8\ \mathrm{ns}$，PDF p. 47）。
+在 GaAs 双量子点的电荷比特中，$T_1$ 主要受电子–声子耦合与电荷态间的隧穿耦合控制，典型值在纳秒量级。
 
 ### $T_2$：随机相位累积
 
@@ -69,10 +69,10 @@ $$
 其中 $S_{\delta\omega}(f)$ 是 $\delta\omega$ 的功率谱密度（power spectral density，PSD），$|\tilde\eta_\tau(f)|^2$ 是序列对应的滤波函数。对纯 [[qubit-control/ramsey-interferometry|Ramsey]] 序列 $\eta_\tau(t)=+1$（$0<t<\tau$），滤波函数 $|\tilde\eta_\mathrm{Ramsey}(f)|^2=[\sin(\pi f \tau)/(\pi f)]^2$ 在 $f\lesssim 1/\tau$ 近似为常数，对 $1/f^\alpha$ 类低频噪声权重最大，Ramsey 衰减常呈高斯或拉伸指数形式
 
 $$
-\rho_\uparrow(\tau)=A\,\cos(\Omega_\mathrm{Ramsey}\tau)\,e^{-(\tau/T_2^*)^{1+\alpha'}}+B,
+\rho_\uparrow(\tau)=A\,\cos(\Omega_\mathrm{Ramsey}\tau)\,e^{-(\tau/T_2^*)^{1+\alpha'}}+B
 $$
 
-$\alpha'=0$ 对应白噪声、$\alpha'=1$ 对应准静态 $1/f$ 噪声、$0<\alpha'<1$ 是混合噪声谱的常见取值（[文献 21]([[sources/wang-ning-2025]]) 式 3.2、[文献 22]([[sources/chu-ning-2025]]) §2.4.2）。
+$\alpha'=0$ 对应白噪声、$\alpha'=1$ 对应准静态 $1/f$ 噪声、$0<\alpha'<1$ 是混合噪声谱的常见取值 §2.4.2）。
 
 Hahn 回波在中点插入 $\pi$ 脉冲把 $\eta$ 在前后两段反号，使低频段 $|\tilde\eta_\mathrm{Hahn}(f)|^2\sim f^2$ 抑制低频噪声；CPMG-$N$ 把脉冲加密到 $N$ 个，滤波窗口推至 $f\sim N/\tau$，$T_2^\mathrm{CPMG}$ 可较 $T_2^\mathrm{Hahn}$ 再延长一个量级以上。完整推导与噪声谱重建见[[qubit-control/dynamical-decoupling|动力学解耦]]词条。
 
@@ -84,13 +84,13 @@ Hahn 回波在中点插入 $\pi$ 脉冲把 $\eta$ 在前后两段反号，使低
 - $T_2^*$：自由演化期间、不带重聚焦的退相位，由全部低频噪声决定；
 - $T_2^\mathrm{Hahn}$/$T_2^\mathrm{CPMG}$：插入 $\pi$ 脉冲后逐步压低低频噪声，把可观测相干时间向本征极限推进。
 
-在工程上常用品质因子 $Q=2f_\mathrm{Rabi}\,T_2^\mathrm{Rabi}=T_2^\mathrm{Rabi}/t_\pi$ 描述"相干时间内能完成多少个 $\pi$ 操作"；对 Ramsey/Hahn 序列也有类似的 $Q^*=f_\mathrm{Rabi}\,T_2^*$ 与 $Q^\mathrm{Hahn}=f_\mathrm{Rabi}\,T_2^\mathrm{Hahn}$（[文献 25]([[sources/zhou-yuchen-2026]]) §5.3、[文献 21]([[sources/wang-ning-2025]]) §3.3.4）。
+在工程上常用品质因子 $Q=2f_\mathrm{Rabi}\,T_2^\mathrm{Rabi}=T_2^\mathrm{Rabi}/t_\pi$ 描述"相干时间内能完成多少个 $\pi$ 操作"；对 Ramsey/Hahn 序列也有类似的 $Q^*=f_\mathrm{Rabi}\,T_2^*$ 与 $Q^\mathrm{Hahn}=f_\mathrm{Rabi}\,T_2^\mathrm{Hahn}$ §3.3.4）。
 
 ## 噪声通道与材料体系
 
 ### 超精细噪声：GaAs 与硅、锗的根本差异
 
-GaAs 中每个量子点电子与 $\sim 10^6$ 个 $^{69}\mathrm{Ga}$/$^{71}\mathrm{Ga}$/$^{75}\mathrm{As}$ 核自旋接触耦合，Overhauser 场 $\langle B_\mathrm{nuc}\rangle\sim 1$–$5\ \mathrm{mT}$、典型涨落 $\Delta B_\mathrm{nuc}\sim 1$–$5\ \mathrm{mT}$，对应 $T_2^*\sim 10$ ns（[文献 2]([[sources/shang-runan-2014]]) §1.4.4、[文献 6]([[sources/chen-baobao-2017]]) §3.5）。Ge/SiGe 异质结中 $^{73}\mathrm{Ge}$ 丰度约 7.7%，超精细噪声比 GaAs 弱约一个量级，$T_2^*$ 可达数十至上百 ns 量级（[文献 25]([[sources/zhou-yuchen-2026]])）。自然硅中 $^{29}\mathrm{Si}$ 丰度 4.7%，$T_2^*$ 典型为 0.5–1 μs；同位素纯化到 $^{28}\mathrm{Si}$ 富集度 $>99.9\%$ 后，$T_2^*$ 可突破 100 μs、$T_2$ 可达 ms 量级（[文献 6]([[sources/chen-baobao-2017]]) PDF p. 28 引 Veldhorst 等）。
+GaAs 中每个量子点电子与 $\sim 10^6$ 个 $^{69}\mathrm{Ga}$/$^{71}\mathrm{Ga}$/$^{75}\mathrm{As}$ 核自旋接触耦合，Overhauser 场 $\langle B_\mathrm{nuc}\rangle\sim 1$–$5\ \mathrm{mT}$、典型涨落 $\Delta B_\mathrm{nuc}\sim 1$–$5\ \mathrm{mT}$，对应 $T_2^*\sim 10$ ns §3.5）。Ge/SiGe 异质结中 $^{73}\mathrm{Ge}$ 丰度约 7.7%，超精细噪声比 GaAs 弱约一个量级，$T_2^*$ 可达数十至上百 ns 量级。自然硅中 $^{29}\mathrm{Si}$ 丰度 4.7%，$T_2^*$ 典型为 0.5–1 μs；同位素纯化到 $^{28}\mathrm{Si}$ 富集度 $>99.9\%$ 后，$T_2^*$ 可突破 100 μs、$T_2$ 可达 ms 量级。
 
 ### 电荷噪声与栅极灵敏度
 
@@ -105,61 +105,61 @@ $$
 \frac{1}{T_2^*}\sim 2\pi\sqrt{\ln(f_\mathrm{hf}/f_\mathrm{lf})}\sqrt{f_\mathrm{lf}}\sum_i\!\left(\frac{\partial f_0}{\partial V_{G_i}}\right)^{\!2}S_{V_i}(f)
 $$
 
-（[文献 25]([[sources/zhou-yuchen-2026]]) §6.5）；这意味着提高 $T_2^*$ 既要降噪（材料、电极工艺）也要降灵敏度（优化工作点）。
+；这意味着提高 $T_2^*$ 既要降噪（材料、电极工艺）也要降灵敏度（优化工作点）。
 
 ### 杂散磁场与微磁体
 
-微磁体或磁性电极漏磁在量子点处产生 $\partial B/\partial \mathbf{r}$，一方面通过梯度增强 EDSR，另一方面也会随样品移动把 $f_0$ 暴露在低频磁场噪声下。设计时常在"驱动强"与"相干好"之间折中：横向梯度给驱动、纵向梯度给寻址（错开比特频率），但两者同时增大也意味着把更多电荷、磁场噪声注入自旋通道（[文献 19]([[sources/yang-jiecheng-2023]]) 优化方案）。
+微磁体或磁性电极漏磁在量子点处产生 $\partial B/\partial \mathbf{r}$，一方面通过梯度增强 EDSR，另一方面也会随样品移动把 $f_0$ 暴露在低频磁场噪声下。设计时常在"驱动强"与"相干好"之间折中：横向梯度给驱动、纵向梯度给寻址（错开比特频率），但两者同时增大也意味着把更多电荷、磁场噪声注入自旋通道。
 
 ## 参数与量级
 
 | 体系 | 比特类型 | $T_1$ | $T_2^*$ | $T_2^\mathrm{Hahn}$ | $T_2^\mathrm{CPMG}$ | $T_2^\mathrm{Rabi}$ | 备注 / 来源 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| GaAs 双量子点电荷比特 | [[qubit-control/charge-qubit\|电荷比特]] | $\sim 8\ \mathrm{ns}$ | — | $1.36\pm 0.40\ \mathrm{ns}$（拟合 $T_2$） | — | — | [文献 2]([[sources/shang-runan-2014]]) PDF p. 47；[文献 8]([[sources/wang-baochuan-2017]]) PDF p. 47–51 |
-| GaAs 三电子区 LZS 干涉 | S–T 类 | — | $7.0\ \mathrm{ns}$ | — | — | — | 高斯衰减余弦拟合，[文献 6]([[sources/chen-baobao-2017]]) PDF p. 43 |
-| Ge 棚顶纳米线空穴自旋 | [[qubit-control/hole-spin-qubit\|空穴自旋]] | — | $65\pm 2\ \mathrm{ns}$ | $523\pm 41\ \mathrm{ns}$ | — | — | 拉伸指数拟合 $\alpha=0.9$，[文献 11]([[sources/wang-ke]]) PDF pp. 92–94 |
-| 平面锗双量子点空穴自旋（章节 5.3） | 空穴自旋 | — | $136\ \mathrm{ns}$ | $401\ \mathrm{ns}$ | $6.75\ \mathrm{\mu s}$（$N_\pi=230$） | — | [文献 25]([[sources/zhou-yuchen-2026]]) PDF p. 98 |
-| 平面锗双量子点空穴自旋（章节 2.6.1） | 空穴自旋 | — | $120\ \mathrm{\mu s}$ | $1.2\ \mathrm{ms}$ | $28\ \mathrm{ms}$ | — | 优质器件，[文献 25]([[sources/zhou-yuchen-2026]]) |
-| 自然 Si/SiGe 自旋比特 Q1 | 单自旋 | $116\ \mathrm{ms}$ | $0.9\ \mathrm{\mu s}$ | $15.5\ \mathrm{\mu s}$ | — | $27.6\ \mathrm{\mu s}$（Q2，$f_\mathrm{Rabi}=3.5\ \mathrm{MHz}$） | [文献 21]([[sources/wang-ning-2025]]) PDF pp. 44–47 |
-| 自然 Si/SiGe 自旋比特 Q2 | 单自旋 | $94\ \mathrm{ms}$ | $0.7\ \mathrm{\mu s}$ | $11.3\ \mathrm{\mu s}$ | — | $27.6\ \mathrm{\mu s}$ | [文献 21]([[sources/wang-ning-2025]]) |
-| Si-MOS 单自旋 | 单自旋 | $1/T_1=112\pm 6\ \mathrm{s^{-1}}$ | $624\ \mathrm{ns}$ | $60.2\ \mathrm{\mu s}$ | — | $5.4\ \mathrm{\mu s}$ | [文献 15]([[sources/hu-ruizi-2022]]) PDF p. 70；[文献 22]([[sources/chu-ning-2025]]) PDF p. 82 |
-| 翻转模式 Si 单自旋（零失谐） | 单自旋 | — | $0.42\pm 0.31\ \mathrm{\mu s}$ | — | — | — | [文献 15]([[sources/hu-ruizi-2022]]) PDF pp. 89–91 |
-| GaAs 单自旋（早年 EDSR 文献） | 单自旋 | — | $\sim 10\ \mathrm{ns}$ | $\sim \mu\mathrm{s}$（echo 后） | $0.87\ \mathrm{ms}$（DD 后） | — | [文献 2]([[sources/shang-runan-2014]]) §1.4.4；[文献 6]([[sources/chen-baobao-2017]]) 引 Veldhorst 等 |
-| 同位素纯化 $^{28}\mathrm{Si}$ 单自旋 | 单自旋 | — | $120\ \mathrm{\mu s}$ | — | $28\ \mathrm{ms}$ | — | [文献 6]([[sources/chen-baobao-2017]]) PDF p. 28 引 Veldhorst 等 |
+| GaAs 双量子点电荷比特 | [[qubit-control/charge-qubit\|电荷比特]] | $\sim 8\ \mathrm{ns}$ | — | $1.36\pm 0.40\ \mathrm{ns}$（拟合 $T_2$） | — | — | PDF p. 47–51 |
+| GaAs 三电子区 LZS 干涉 | S–T 类 | — | $7.0\ \mathrm{ns}$ | — | — | — | 高斯衰减余弦拟合 |
+| Ge 棚顶纳米线空穴自旋 | [[qubit-control/hole-spin-qubit\|空穴自旋]] | — | $65\pm 2\ \mathrm{ns}$ | $523\pm 41\ \mathrm{ns}$ | — | — | 拉伸指数拟合 $\alpha=0.9$ |
+| 平面锗双量子点空穴自旋（章节 5.3） | 空穴自旋 | — | $136\ \mathrm{ns}$ | $401\ \mathrm{ns}$ | $6.75\ \mathrm{\mu s}$（$N_\pi=230$） | — | PDF p. 98 |
+| 平面锗双量子点空穴自旋（章节 2.6.1） | 空穴自旋 | — | $120\ \mathrm{\mu s}$ | $1.2\ \mathrm{ms}$ | $28\ \mathrm{ms}$ | — | 优质器件， |
+| 自然 Si/SiGe 自旋比特 Q1 | 单自旋 | $116\ \mathrm{ms}$ | $0.9\ \mathrm{\mu s}$ | $15.5\ \mathrm{\mu s}$ | — | $27.6\ \mathrm{\mu s}$（Q2，$f_\mathrm{Rabi}=3.5\ \mathrm{MHz}$） | PDF pp. 44–47 |
+| 自然 Si/SiGe 自旋比特 Q2 | 单自旋 | $94\ \mathrm{ms}$ | $0.7\ \mathrm{\mu s}$ | $11.3\ \mathrm{\mu s}$ | — | $27.6\ \mathrm{\mu s}$ | |
+| Si-MOS 单自旋 | 单自旋 | $1/T_1=112\pm 6\ \mathrm{s^{-1}}$ | $624\ \mathrm{ns}$ | $60.2\ \mathrm{\mu s}$ | — | $5.4\ \mathrm{\mu s}$ | PDF p. 70 |
+| 翻转模式 Si 单自旋（零失谐） | 单自旋 | — | $0.42\pm 0.31\ \mathrm{\mu s}$ | — | — | — | PDF pp. 89–91 |
+| GaAs 单自旋（早年 EDSR 文献） | 单自旋 | — | $\sim 10\ \mathrm{ns}$ | $\sim \mu\mathrm{s}$（echo 后） | $0.87\ \mathrm{ms}$（DD 后） | — | §1.4.4； 引 Veldhorst 等 |
+| 同位素纯化 $^{28}\mathrm{Si}$ 单自旋 | 单自旋 | — | $120\ \mathrm{\mu s}$ | — | $28\ \mathrm{ms}$ | — | PDF p. 28 引 Veldhorst 等 |
 
 补充几个跨体系的常用经验值：
 
 - 栅极电压灵敏度 $|\partial f_0/\partial V_{G_i}|$：硅电子 $10$–$100\ \mathrm{MHz/mV}$，锗空穴 $1$–$10\ \mathrm{MHz/mV}$；电荷噪声 PSD $S_V(f)\sim 10^{-8}$–$10^{-6}\ \mathrm{V^2/Hz}$@1 Hz 直接决定 $T_2^*$ 上限。
-- 弛豫速率的温度依赖：硅中 $T_1$ 在低温下主要由声子与 Johnson 通道决定，温度升高时声子贡献迅速变大；GaAs 中 $T_1$ 主要受电–声子耦合控制（[文献 2]([[sources/shang-runan-2014]]) §3.3：$T_1\approx 8\ \mathrm{ns}$ 与晶格温度 250 mK 时基本一致，电子温度抬到 1 K 以上仍变化不大）。
-- CPMG 阶数：N 从 25、75 提升到 230 时，$T_2^\mathrm{CPMG}$ 近似线性增长，对应低频噪声投影随 N 系统性下降（[文献 25]([[sources/zhou-yuchen-2026]]) §5.3.4）。
-- 自旋–电荷混合：在翻转模式单自旋比特里，$T_1$ 会被人为的"翻转"通道压制；这一通道让 Rabi 频率提高一个量级，但代价是电荷噪声灵敏度同步上升（[文献 15]([[sources/hu-ruizi-2022]])）。
+- 弛豫速率的温度依赖：硅中 $T_1$ 在低温下主要由声子与 Johnson 通道决定，温度升高时声子贡献迅速变大；GaAs 中 $T_1$ 主要受电–声子耦合控制。
+- CPMG 阶数：N 从 25、75 提升到 230 时，$T_2^\mathrm{CPMG}$ 近似线性增长，对应低频噪声投影随 N 系统性下降。
+- 自旋–电荷混合：在翻转模式单自旋比特里，$T_1$ 会被人为的"翻转"通道压制；这一通道让 Rabi 频率提高一个量级，但代价是电荷噪声灵敏度同步上升。
 
 ## 实验特征与测量
 
 ### $T_1$ 的脉冲测量
 
-施加 $\pi$ 脉冲把比特制备到激发态 $|{\uparrow}\rangle$，等待 $t_\mathrm{wait}$ 后再施加 $\pi$ 脉冲把残存布居转回基态并测量，扫描 $t_\mathrm{wait}$ 得到 $P_\uparrow(t_\mathrm{wait})=A\,e^{-t_\mathrm{wait}/T_1}+B$。对 GaAs 电荷比特，[文献 2]([[sources/shang-runan-2014]]) 通过斩波–锁相方法在双量子点电荷比特上拟合出 $T_1\approx 8\ \mathrm{ns}$（PDF p. 47）；对 Si/SiGe 单自旋，[文献 21]([[sources/wang-ning-2025]]) 用 Elzerman 单发读出直接拟合，$T_1$ 在 100 ms 量级（PDF pp. 44–45）。硅中 $T_1$ 远大于读出时间，因此对读出保真度的影响可忽略；但在 GaAs 电荷比特中 $T_1$ 与操作时间同量级，必须考虑。
+施加 $\pi$ 脉冲把比特制备到激发态 $|{\uparrow}\rangle$，等待 $t_\mathrm{wait}$ 后再施加 $\pi$ 脉冲把残存布居转回基态并测量，扫描 $t_\mathrm{wait}$ 得到 $P_\uparrow(t_\mathrm{wait})=A\,e^{-t_\mathrm{wait}/T_1}+B$。对 GaAs 电荷比特， 通过斩波–锁相方法在双量子点电荷比特上拟合出 $T_1\approx 8\ \mathrm{ns}$；对 Si/SiGe 单自旋， 用 Elzerman 单发读出直接拟合，$T_1$ 在 100 ms 量级。硅中 $T_1$ 远大于读出时间，因此对读出保真度的影响可忽略；但在 GaAs 电荷比特中 $T_1$ 与操作时间同量级，必须考虑。
 
 ### $T_2^*$ 的 Ramsey 测量
 
-标准 Ramsey 序列：$\pi/2$–$t_\mathrm{wait}$–$\pi/2$，扫描 $t_\mathrm{wait}$ 得到相位振荡包络 $P(t_\mathrm{wait})=A\,\cos(\Omega_\mathrm{Ramsey}\,t_\mathrm{wait})\,\exp[-(t_\mathrm{wait}/T_2^*)^{1+\alpha'}]+B$；失谐 $\Omega_\mathrm{Ramsey}/2\pi$ 通常取 5–20 MHz，便于拟合振荡频率。[文献 15]([[sources/hu-ruizi-2022]]) 给出翻转模式单自旋比特 $\varepsilon=0$ 与 $\varepsilon=1.5\ \mathrm{meV}$ 两点的 $T_2^*\approx 0.42\ \mathrm{\mu s}$；[文献 21]([[sources/wang-ning-2025]]) Q1/Q2 分别为 $0.9/0.7\ \mathrm{\mu s}$，包络为高斯衰减；[文献 25]([[sources/zhou-yuchen-2026]]) 在锗空穴上 $T_2^*=136\ \mathrm{ns}$（20 MHz 失谐）。
+标准 Ramsey 序列：$\pi/2$–$t_\mathrm{wait}$–$\pi/2$，扫描 $t_\mathrm{wait}$ 得到相位振荡包络 $P(t_\mathrm{wait})=A\,\cos(\Omega_\mathrm{Ramsey}\,t_\mathrm{wait})\,\exp[-(t_\mathrm{wait}/T_2^*)^{1+\alpha'}]+B$；失谐 $\Omega_\mathrm{Ramsey}/2\pi$ 通常取 5–20 MHz，便于拟合振荡频率。 给出翻转模式单自旋比特 $\varepsilon=0$ 与 $\varepsilon=1.5\ \mathrm{meV}$ 两点的 $T_2^*\approx 0.42\ \mathrm{\mu s}$； Q1/Q2 分别为 $0.9/0.7\ \mathrm{\mu s}$，包络为高斯衰减； 在锗空穴上 $T_2^*=136\ \mathrm{ns}$（20 MHz 失谐）。
 
 ### $T_2^\mathrm{Hahn}$ 与 $T_2^\mathrm{CPMG}$
 
-在 Ramsey 序列中点插入一个 $\pi$ 脉冲即得 Hahn 回波 $\pi/2$–$\tau/2$–$\pi$–$\tau/2$–$\pi/2$，包络拟合公式 $P_\uparrow(\tau)=A\exp[-(\tau/T_2^\mathrm{Hahn})^{1+\alpha'}]+B$，$\alpha'$ 反映噪声谱形状（[文献 21]([[sources/wang-ning-2025]]) 式 3.3，$\alpha'=1$ 对应 $1/f^2$ 类准静态噪声）。自然 Si/SiGe Q1/Q2 在 $\alpha'\approx 1$ 下给出 $T_2^\mathrm{Hahn}=15.5/11.3\ \mathrm{\mu s}$（约 $17/16$ 倍 $T_2^*$），Si-MOS 实测 $T_2^\mathrm{Hahn}=60.2\ \mathrm{\mu s}$（约 96 倍 $T_2^*$）。把 $N$ 个 $\pi$ 脉冲等距插入得到 CPMG-$N$，[文献 25]([[sources/zhou-yuchen-2026]]) 在锗空穴上 $N_\pi=230$ 给出 $T_2^\mathrm{CPMG}=6.75\ \mathrm{\mu s}$（约 50 倍 $T_2^*$）。
+在 Ramsey 序列中点插入一个 $\pi$ 脉冲即得 Hahn 回波 $\pi/2$–$\tau/2$–$\pi$–$\tau/2$–$\pi/2$，包络拟合公式 $P_\uparrow(\tau)=A\exp[-(\tau/T_2^\mathrm{Hahn})^{1+\alpha'}]+B$，$\alpha'$ 反映噪声谱形状。自然 Si/SiGe Q1/Q2 在 $\alpha'\approx 1$ 下给出 $T_2^\mathrm{Hahn}=15.5/11.3\ \mathrm{\mu s}$（约 $17/16$ 倍 $T_2^*$），Si-MOS 实测 $T_2^\mathrm{Hahn}=60.2\ \mathrm{\mu s}$（约 96 倍 $T_2^*$）。把 $N$ 个 $\pi$ 脉冲等距插入得到 CPMG-$N$， 在锗空穴上 $N_\pi=230$ 给出 $T_2^\mathrm{CPMG}=6.75\ \mathrm{\mu s}$（约 50 倍 $T_2^*$）。
 
 ### Rabi 振荡与 $T_2^\mathrm{Rabi}$
 
-驱动期间改变脉冲时长 $t_\mathrm{MW}$，扫出 $P(t_\mathrm{MW})=A\,\sin(2\pi f_\mathrm{Rabi}\,t_\mathrm{MW}+\phi)\,\exp(-t_\mathrm{MW}/T_2^\mathrm{Rabi})+B$；$T_2^\mathrm{Rabi}$ 同时反映驱动期间的相干性与微波加热。[文献 21]([[sources/wang-ning-2025]]) 在 Q2 上 $A_\mathrm{MW}\approx 7\ \mathrm{mV}$ 时 $f_\mathrm{Rabi}=3.5\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=27.6\ \mathrm{\mu s}$，$Q\approx 19$；[文献 15]([[sources/hu-ruizi-2022]]) 翻转模式样品 $f_\mathrm{Rabi}=1.256\pm 0.003\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=5.4\pm 0.4\ \mathrm{\mu s}$。
+驱动期间改变脉冲时长 $t_\mathrm{MW}$，扫出 $P(t_\mathrm{MW})=A\,\sin(2\pi f_\mathrm{Rabi}\,t_\mathrm{MW}+\phi)\,\exp(-t_\mathrm{MW}/T_2^\mathrm{Rabi})+B$；$T_2^\mathrm{Rabi}$ 同时反映驱动期间的相干性与微波加热。 在 Q2 上 $A_\mathrm{MW}\approx 7\ \mathrm{mV}$ 时 $f_\mathrm{Rabi}=3.5\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=27.6\ \mathrm{\mu s}$，$Q\approx 19$； 翻转模式样品 $f_\mathrm{Rabi}=1.256\pm 0.003\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=5.4\pm 0.4\ \mathrm{\mu s}$。
 
 ### 噪声谱重建
 
-把不同序列（Ramsey、Hahn、CPMG、UDD）测得的 $T_2$ 与已知滤波函数联立，可反推 $S_{\delta\omega}(f)$。[[qubit-control/dynamical-decoupling|动力学解耦]]序列扫描实际上给出"在频率 $f\sim 1/\tau$ 处累积了多少相位方差"的快照；拟合 $\alpha'$ 由 $\alpha'=\alpha-1$ 关系给出 PSD 斜率 [文献 25]([[sources/zhou-yuchen-2026]]) §6.5.3：[文献 25]([[sources/zhou-yuchen-2026]]) 通过 55 小时 Ramsey + CPMG 联立拟合，得到锗空穴自旋体系的噪声 PSD 为 $1/f^{0.92}$，覆盖 $10^{-4}$–$10^{10}\ \mathrm{Hz}$ 频段。
+把不同序列（Ramsey、Hahn、CPMG、UDD）测得的 $T_2$ 与已知滤波函数联立，可反推 $S_{\delta\omega}(f)$。[[qubit-control/dynamical-decoupling|动力学解耦]]序列扫描实际上给出"在频率 $f\sim 1/\tau$ 处累积了多少相位方差"的快照；拟合 $\alpha'$ 由 $\alpha'=\alpha-1$ 关系给出 PSD 斜率 §6.5.3： 通过 55 小时 Ramsey + CPMG 联立拟合，得到锗空穴自旋体系的噪声 PSD 为 $1/f^{0.92}$，覆盖 $10^{-4}$–$10^{10}\ \mathrm{Hz}$ 频段。
 
 ### 测量注意
 
-- **微波加热**会随脉冲数累积，CPMG 阶数过高时 $T_2^\mathrm{CPMG}(N)$ 不再单调上升甚至回落（[文献 25]([[sources/zhou-yuchen-2026]]) §5.3.4）。
-- **双脉冲相位连续性**：两段 $\pi/2$ 之间若相位不连续，会引入额外的虚拟 $z$ 旋转；使用 AWG 时必须把等待时间内的相位累加补偿进第一段脉冲（[文献 15]([[sources/hu-ruizi-2022]])）。
+- **微波加热**会随脉冲数累积，CPMG 阶数过高时 $T_2^\mathrm{CPMG}(N)$ 不再单调上升甚至回落。
+- **双脉冲相位连续性**：两段 $\pi/2$ 之间若相位不连续，会引入额外的虚拟 $z$ 旋转；使用 AWG 时必须把等待时间内的相位累加补偿进第一段脉冲。
 - **拟合模型选择**：纯指数、高斯、拉伸指数分别对应白噪声、纯 $1/f$ 噪声与混合噪声谱；模型错误会让拟合参数偏离真实 $T_2$。
 - **谷能级混淆**：硅中 $B_\mathrm{kink}$ 附近 $T_1$ 骤降但 $T_2^*$ 未必同向响应，需分别测量 $T_1(B)$ 与 $T_2^*(B)$ 以诊断自旋–谷混合通道。
 
@@ -173,34 +173,3 @@ $$
 - [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]以交换相互作用 $J$ 为 $z$ 轴，$T_2^*$ 主要由电荷噪声决定；它的回波逻辑（DCZ）与自旋比特完全平行。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]因强自旋–轨道耦合使 $T_2^*$ 较短（数十至上百 ns），但 $T_2^\mathrm{CPMG}$ 可突破 ms 量级；DD 在该体系同时是最重要的延长手段和噪声谱诊断工具。
 - [[circuit-qed/circuit-quantum-electrodynamics|cQED]]侧利用腔介导耦合与色散读出时，腔频 $1/f$ 噪声同样会让自旋–光子相位累积；其形式与自旋比特本身的退相干可统一处理。
-
-## 延伸阅读
-
-- D. Loss and D. P. DiVincenzo, "Quantum computation with quantum dots", *Physical Review A* (1998). [DOI: 10.1103/PhysRevA.57.120]
-- R. Hanson, L. P. Kouwenhoven, J. R. Petta, S. Tarucha, L. M. K. Vandersypen, "Spins in few-electron quantum dots", *Reviews of Modern Physics* (2007). [DOI: 10.1103/RevModPhys.79.1217]
-- W. A. Coish, J. Baugh, "Nuclear spins in quantum dots", *physica status solidi (b)* (2009). [DOI: 10.1002/pssb.200945208]
-- M. H. Levitt, "Composite pulses", *eMagRes* (2007). [DOI: 10.1002/9780470034590.emrstm0086]
-- A. M. Waeber, M. Hopkinson, I. Farrer, D. A. Ritchie et al., "SiGe/Si quantum dot electron spin decoherence dependence on $^{73}$Ge", arXiv:1110.4143.
-- A. C. Johnson, J. R. Petta, J. M. Taylor, A. Yacoby, M. D. Lukin, C. M. Marcus, M. P. Hanson, A. C. Gossard, "Suppression of electron spin decoherence in a quantum dot", arXiv:cond-mat/0703453.
-
-## 论文依据
-
-- [[sources/ref-15|文献 15]]，PDF p. 4：$T_1$/$T_2^*$ 区别、自旋弛豫来自自旋–晶格/声子、自旋退相干来自超精细相互作用与"$f_0$ 空间梯度 + 电荷噪声"两类机制，硅自旋比特 $T_1\gg T_2^*$ 故 $T_2^*$ 可充分反映退相干性质。
-- [[sources/ref-15|文献 15]]，PDF pp. 89–92：翻转模式单自旋比特 $\varepsilon=0$ 与 $\varepsilon=1.5\ \mathrm{meV}$ 两点 Ramsey 拟合 $T_2^*\approx 0.42\ \mathrm{\mu s}$（式 1.2 与图 5.8），Rabi 拟合 $f_\mathrm{Rabi}=1.256\pm 0.003\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=5.4\pm 0.4\ \mathrm{\mu s}$（式 1.2 与图 5.9–5.10）。
-- [[sources/ref-15|文献 15]]，PDF p. 70：Elzerman 单发读出条件中 $1/T_1=112\pm 6\ \mathrm{s^{-1}}$，即 $T_1\approx 8.9\ \mathrm{ms}$；硅自旋比特 $T_1$ 远大于读出窗口，可忽略对读出保真度的影响。
-- [[sources/ref-02|文献 2]]，PDF p. 12（§1.4.4）：退相干时间综述，GaAs 电荷比特 $T_2$ 约 100 ps 量级、自旋比特 $T_2$ 百 ns 量级；回波可把 GaAs 自旋比特 $T_2$ 推到数 μs 但保真度仅约 0.7；GeSi 自旋比特 $T_2$ 报告达数十 μs。
-- [[sources/ref-02|文献 2]]，PDF p. 47（§3.3）：GaAs 双量子点电荷比特斩波–锁相法测得 $T_1\approx 8\ \mathrm{ns}$，与电–声子耦合主导一致，电子温度从 250 mK 抬到 1 K 以上仍基本不变。
-- [[sources/ref-11|文献 11]]，PDF pp. 92–94：Ge 棚顶纳米线空穴自旋 $T_2^*=65\pm 2\ \mathrm{ns}$，Hahn 回波拟合 $P=A\exp[-(\tau/T_2^\mathrm{Hahn})^{1+\alpha}]$，$\alpha=0.9$，$T_2^\mathrm{Hahn}=523\pm 41\ \mathrm{ns}$，归因于压制缓慢核磁场涨落。
-- [[sources/ref-12|文献 12]]，PDF pp. 64–66：Ge 棚顶纳米线空穴自旋 $T_2^*=65\pm 2\ \mathrm{ns}$、$T_2^\mathrm{Hahn}=523\pm 41\ \mathrm{ns}$，明确把回波延长归因于压制缓慢变化的核磁场涨落。
-- [[sources/ref-25|文献 25]]，PDF p. 26（§2.5）：Ramsey 拟合公式 $\rho(t_\mathrm{wait})=\rho(0)\cos(\Omega_\mathrm{Ramsey}t_\mathrm{wait})\exp(-t_\mathrm{wait}/T_2^*)+\rho_0$（式 2.16）；最优锗空穴器件 $T_2^*=120\ \mathrm{\mu s}$。
-- [[sources/ref-25|文献 25]]，PDF p. 98（§5.3.4）：锗空穴自旋比特 $T_2^*=136\ \mathrm{ns}$（20 MHz 失谐）、$T_2^\mathrm{Echo}=401\ \mathrm{ns}$、$T_2^\mathrm{CPMG}=6.75\ \mathrm{\mu s}$（$N_\pi=230$，约 50 倍延长）。
-- [[sources/ref-25|文献 25]]，PDF pp. 128–130（§6.5）：栅极电压噪声引起的相位累积公式（式 6.12–6.16）、Ramsey 滤波函数 $|\tilde\eta_t^\mathrm{R}(f)|^2=\sin^2(\pi f t)/(\pi f)^2$（式 6.20）以及 $1/T_2^*$ 的低频噪声积分公式（式 6.21）；55 小时 Ramsey + CPMG 联立重建的 $1/f^{0.92}$ 噪声谱。
-- [[sources/ref-21|文献 21]]，PDF p. 45（§3.3.3）：自旋比特寿命 $T_1$ 测量脉冲与拟合公式（式 3.1），Q1/Q2 $T_1=116/94\ \mathrm{ms}$；Ramsey 拟合公式（式 3.2）给出 $T_2^*=0.9/0.7\ \mathrm{\mu s}$，高斯包络；Hahn 回波拟合公式（式 3.3），$T_2^\mathrm{Hahn}=15.5/11.3\ \mathrm{\mu s}$，$\alpha'\approx 1$ 指向 $1/f^2$ 类准静态噪声。
-- [[sources/ref-21|文献 21]]，PDF p. 47（§3.3.4）：Q2 Rabi 振荡拟合（式 3.4）给出 $f_\mathrm{Rabi}=3.5\ \mathrm{MHz}$、$T_2^\mathrm{Rabi}=27.6\ \mathrm{\mu s}$，品质因子 $Q\approx 19$，指出微波加热是 $T_2^\mathrm{Rabi}$ 在高功率下回落的主因。
-- [[sources/ref-22|文献 22]]，PDF p. 26（§2.4）：Si-MOS 自旋比特 $T_1^{-1}$ 多通道相加（式 2.7）：自旋–谷、声子、自旋–轨道、Johnson、常值通道之和，明确谷能级对 $T_1$ 的强烈影响；§2.4.2 给出 $T_2^*$ 与 Hahn echo、CPMG 序列对低频噪声的递进抑制。
-- [[sources/ref-22|文献 22]]，PDF p. 82（§4.4）：Si-MOS 量子点实测 $T_2^*=624\ \mathrm{ns}$、Hahn 回波 $T_2^\mathrm{Echo}=60.2\ \mathrm{\mu s}$，提升约 96 倍。
-- [[sources/ref-06|文献 6]]，PDF p. 20（§2.2.1）：GaAs 双量子点 S–T0 比特的完整哈密顿量（式 2.12–2.15），把核磁场作为准静态有效场处理，并明确 $J(\varepsilon)\approx \Delta^2/|\varepsilon|$（式 2.11）。
-- [[sources/ref-06|文献 6]]，PDF p. 28：综述引用 Veldhorst 等的同位素纯化 $^{28}\mathrm{Si}$ 数据——$T_2^*=120\ \mathrm{\mu s}$、$T_2=28\ \mathrm{ms}$，"这是量子点系统中最高水平"。
-- [[sources/ref-06|文献 6]]，PDF p. 41：GaAs 三电子区 S–T0 比特 $T_2^*\approx 360\ \mathrm{ns}$（相较硅同结构仅 7 ns，差异归因于核自旋噪声抑制）。
-- [[sources/ref-06|文献 6]]，PDF p. 43（§3.5）：GaAs 三电子区 LZS 干涉高斯衰减拟合 $T_2^*=7.0\ \mathrm{ns}$，退相干主要由核磁场涨落造成（式 3.9–3.10 与式 3.11）。
-- [[sources/ref-08|文献 8]]，PDF pp. 47–51（§3.4）：GaAs 电荷量子比特 $\pi/2$ 脉冲 180 ps、$\pi$ 脉冲 300 ps、回波拟合 $T_2=1360\pm 400\ \mathrm{ps}$，较 $T_2^*=112\pm 21\ \mathrm{ps}$ 提升约 12 倍，归因于低频电荷噪声主导。

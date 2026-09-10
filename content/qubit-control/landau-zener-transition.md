@@ -2,12 +2,12 @@
 title: Landau–Zener 跃迁
 description: 二能级系统扫过避免交叉时，在绝热跟随与非绝热跃迁之间发生的可控分束过程。
 aliases:
-  - LZ跃迁
-  - Landau-Zener跃迁
-  - 朗道-齐纳跃迁
+ - LZ跃迁
+ - Landau-Zener跃迁
+ - 朗道-齐纳跃迁
 tags:
-  - 量子比特操控
-  - 二能级系统
+ - 量子比特操控
+ - 二能级系统
 date: 2026-09-08
 ---
 
@@ -31,13 +31,13 @@ date: 2026-09-08
 在裸基（如双量子点的左右电荷态 $|L\rangle$、$|R\rangle$）下，模型哈密顿量为
 
 $$
-H(t)=\frac{\varepsilon(t)}{2}\sigma_z+\Delta\sigma_x,
+H(t)=\frac{\varepsilon(t)}{2}\sigma_z+\Delta\sigma_x
 $$
 
 其中 $\varepsilon=E_R-E_L$ 是失谐，$\Delta=\langle R|W|L\rangle$ 是两个裸态间的耦合矩阵元。$\Delta$ 由体系自身性质决定，$\varepsilon(t)$ 是外加的含时控制参量。瞬时本征值为
 
 $$
-E_\pm(t)=\pm\frac{1}{2}\sqrt{\varepsilon(t)^2+4\Delta^2},
+E_\pm(t)=\pm\frac{1}{2}\sqrt{\varepsilon(t)^2+4\Delta^2}
 $$
 
 在 $\varepsilon=0$ 处取最小间隔 $2|\Delta|$，即反交叉能隙。不同文献的约定可能相差因子 2——有些作者把哈密顿量写成 $H=(\varepsilon\sigma_z+\Delta\sigma_x)/2$，此时能隙为 $\Delta$——代公式前必须核对所用约定下的 $\Delta$ 究竟是非对角元还是能隙。
@@ -47,7 +47,7 @@ $$
 设失谐以恒定速率扫过反交叉，定义 $v=d(E_+-E_-)/dt|_{\varepsilon=0}$（弱耦合极限下即 $v=|d\varepsilon/dt|$）。系统从 $t\to-\infty$ 的瞬时本征态出发，演化到 $t\to+\infty$ 后仍停留在原透热支（即发生非绝热跃迁）的概率为 Landau–Zener 公式
 
 $$
-P_\mathrm{LZ}=\exp\left(-\frac{2\pi\Delta^2}{\hbar v}\right)=e^{-2\pi\delta},
+P_\mathrm{LZ}=\exp\left(-\frac{2\pi\Delta^2}{\hbar v}\right)=e^{-2\pi\delta}
 $$
 
 其中 $\delta=\Delta^2/(\hbar v)$ 称为绝热参数（adiabaticity parameter），只依赖能隙与扫速之比。两个极限清晰可见：$v\to 0$（$\delta\to\infty$）时 $P_\mathrm{LZ}\to 0$，完全绝热跟随；$v\to\infty$（$\delta\to 0$）时 $P_\mathrm{LZ}\to 1$，完全留在裸态。慢扫或大能隙趋向绝热，快扫或小能隙趋向非绝热。
@@ -68,20 +68,20 @@ i\sqrt{P_\mathrm{LZ}} & \sqrt{1-P_\mathrm{LZ}}\,e^{-i\varphi_\mathrm{LZ}}
 \begin{pmatrix}
 \cos\dfrac{\theta_\mathrm{LZ}}{2}\,e^{i\varphi_\mathrm{LZ}} & i\sin\dfrac{\theta_\mathrm{LZ}}{2} \\
 i\sin\dfrac{\theta_\mathrm{LZ}}{2} & \cos\dfrac{\theta_\mathrm{LZ}}{2}\,e^{-i\varphi_\mathrm{LZ}}
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 其中混合角与相位为
 
 $$
 \theta_\mathrm{LZ}=2\sin^{-1}\sqrt{P_\mathrm{LZ}},\qquad
-\varphi_\mathrm{LZ}=\varphi_S-\frac{\pi}{2},
+\varphi_\mathrm{LZ}=\varphi_S-\frac{\pi}{2}
 $$
 
 $\varphi_S$ 是与斯托克斯现象（Stokes phenomenon）相关的斯托克斯相位（Stokes phase）：
 
 $$
-\varphi_S=\frac{\pi}{4}+\arg\Gamma(1-i\delta)+\delta(\ln\delta-1),
+\varphi_S=\frac{\pi}{4}+\arg\Gamma(1-i\delta)+\delta(\ln\delta-1)
 $$
 
 $\Gamma$ 为伽玛函数。极限行为：绝热极限 $\delta\to\infty$ 时 $P_\mathrm{LZ}=0$、$\varphi_S=0$；突发极限 $\delta\to 0$ 时 $P_\mathrm{LZ}=1$、$\varphi_S=\pi/4$。在布洛赫球上，$U_\mathrm{LZ}=R_z(-\varphi_\mathrm{LZ})R_x(\theta_\mathrm{LZ})R_z(-\varphi_\mathrm{LZ})$，即一次跃迁等价于一次绕 $x$ 轴的旋转加上两个绕 $z$ 轴的相位校正。
@@ -92,7 +92,7 @@ $\Gamma$ 为伽玛函数。极限行为：绝热极限 $\delta\to\infty$ 时 $P_
 
 $$
 \varphi=\frac{1}{\hbar}\int_{t_1}^{t_2}\big[E_+(t)-E_-(t)\big]dt
-=\frac{1}{\hbar}\int_{t_1}^{t_2}\sqrt{\varepsilon(t)^2+4\Delta^2}\,dt,
+=\frac{1}{\hbar}\int_{t_1}^{t_2}\sqrt{\varepsilon(t)^2+4\Delta^2}\,dt
 $$
 
 可形象理解为演化时间内两条能级曲线之间包围的面积。总演化 $U=e^{-i\varphi_1\sigma_z/2}U_\mathrm{LZ}\,e^{-i\varphi_2\sigma_z/2}U_\mathrm{LZ}$，最终测得的跃迁概率为
@@ -110,7 +110,7 @@ $$
 在[[qubit-control/charge-qubit|电荷量子比特]]中，裸基是双量子点中单电子的左右局域态 $|L\rangle$、$|R\rangle$，失谐由栅压脉冲控制。对高斯型尖锐脉冲（幅度 $A$、上升/下降沿 $t_r$，初始失谐 $\varepsilon_0$，扫速 $v=A/t_r$），两次穿越之间积累的相位在 $\Delta/v\ll 1$ 的尖脉冲极限下简化为
 
 $$
-\varphi_i=\frac{(A-\varepsilon_0)^2}{A}\cdot\frac{t_r}{\hbar},
+\varphi_i=\frac{(A-\varepsilon_0)^2}{A}\cdot\frac{t_r}{\hbar}
 $$
 
 生成性（相长）干涉条纹出现在 $\varphi_i=2N\pi$ 处，即失谐位置
@@ -126,7 +126,7 @@ $$
 \theta=2\theta_\mathrm{LZ}=4\sin^{-1}\exp\!\left(-\frac{2\pi\Delta^2 t_r}{\hbar A}\right).
 $$
 
-由于脉冲幅度 $A$、边沿时间 $t_r$、静态失谐 $\varepsilon_0$ 与能隙 $2\Delta$ 全部人为可控，单次 LZSM 序列可以实现布洛赫球上任意角度的旋转——曹刚等人 2013 年在 GaAs 双量子点电荷比特上正是用这一方案完成了超快普适单比特操控（文献 1论文第 5 章）。与驻留反交叉点的[[qubit-control/rabi-oscillation|拉比振荡]]相比，LZ 方案不依赖脉冲在 $\varepsilon=0$ 处精确定时，对波形失真更鲁棒；代价是每个逻辑门由多次穿越拼接，总时长未必更短。
+由于脉冲幅度 $A$、边沿时间 $t_r$、静态失谐 $\varepsilon_0$ 与能隙 $2\Delta$ 全部人为可控，单次 LZSM 序列可以实现布洛赫球上任意角度的旋转——曹刚等人 2013 年在 GaAs 双量子点电荷比特上正是用这一方案完成了超快普适单比特操控（论文第 5 章）。与驻留反交叉点的[[qubit-control/rabi-oscillation|拉比振荡]]相比，LZ 方案不依赖脉冲在 $\varepsilon=0$ 处精确定时，对波形失真更鲁棒；代价是每个逻辑门由多次穿越拼接，总时长未必更短。
 
 ### 单态–三重态比特的 $S$–$T_+$ 反交叉
 
@@ -134,25 +134,25 @@ $$
 
 ### 周期微波驱动与腔探测
 
-对失谐施加单色纵向驱动 $\varepsilon(t)=\varepsilon_0+A_d\sin(2\pi\nu_d t)$，系统每个周期两次穿过反交叉，多次 LZ 跃迁与相位积累叠加出稳态干涉图样；此时绝热参数写作 $\delta=t^2/(\hbar v)$（$2t$ 为能隙），并可自然纳入[[circuit-qed/floquet-dynamics|Floquet 理论]]描述。强微波驱动下，这类过程与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]（PAT）共享同一实验条件：文献 2在双量子点 PAT 实验（15 GHz 微波）中发现，峰高随功率在某些功率点几乎归零、峰位等间距、高功率下出现更多阶数的峰——这三个特征表明观察到的已是 LZS 干涉而非单光子 PAT 图像。在量子点–微波谐振腔杂化系统中，LZSM 干涉还可由腔透射/反射信号读出（[[readout-measurement/dispersive-readout|色散读出]]），并出现腔光子辅助的 LZSM 与"双共振"条件 $kf_d=\mu/h=\nu_r+k'f_d$ 下干涉条纹劈裂成月牙形孔洞等更丰富的结构（文献 13论文第 6 章）。
+对失谐施加单色纵向驱动 $\varepsilon(t)=\varepsilon_0+A_d\sin(2\pi\nu_d t)$，系统每个周期两次穿过反交叉，多次 LZ 跃迁与相位积累叠加出稳态干涉图样；此时绝热参数写作 $\delta=t^2/(\hbar v)$（$2t$ 为能隙），并可自然纳入[[circuit-qed/floquet-dynamics|Floquet 理论]]描述。强微波驱动下，这类过程与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]（PAT）共享同一实验条件：在双量子点 PAT 实验（15 GHz 微波）中发现，峰高随功率在某些功率点几乎归零、峰位等间距、高功率下出现更多阶数的峰——这三个特征表明观察到的已是 LZS 干涉而非单光子 PAT 图像。在量子点–微波谐振腔杂化系统中，LZSM 干涉还可由腔透射/反射信号读出（[[readout-measurement/dispersive-readout|色散读出]]），并出现腔光子辅助的 LZSM 与"双共振"条件 $kf_d=\mu/h=\nu_r+k'f_d$ 下干涉条纹劈裂成月牙形孔洞等更丰富的结构（论文第 6 章）。
 
 ## 参数与量级
 
 | 量 | 典型值 | 体系 / 来源 |
 | --- | --- | --- |
-| 反交叉能隙 $2\Delta$ | $20.7\ \mu$eV（$\approx 5$ GHz） | GaAs 双量子点电荷比特（文献 1，由拉比频率标定） |
+| 反交叉能隙 $2\Delta$ | $20.7\ \mu$eV（$\approx 5$ GHz） | GaAs 双量子点电荷比特 |
 | 环境温度 | $30$ mK（稀释制冷机） | 同上实验的 Triton 400 系统 |
 | 脉冲源 | Agilent 81134A 码型发生器，经偏置 T 与直流叠加 | 同上 |
 | 绝热参数 $\delta=\Delta^2/\hbar v$ | $\gg1$ 绝热、$\ll1$ 突发 | LZ 公式的无量纲控制量 |
-| 微波驱动频率 | $15$ GHz，功率至 $10$ dBm | 双量子点 PAT/LZS 实验（文献 2） |
-| $S$–$T_+$ LZS 工作磁场 | 数十至上百 mT（如 $110$ mT） | GaAs 自旋比特（文献 6） |
-| 腔探测 LZSM | $\nu_d=3.3$ GHz，$2t/h\approx5.3$ GHz | 双量子点–高阻抗腔（文献 18） |
+| 微波驱动频率 | $15$ GHz，功率至 $10$ dBm | 双量子点 PAT/LZS 实验 |
+| $S$–$T_+$ LZS 工作磁场 | 数十至上百 mT（如 $110$ mT） | GaAs 自旋比特 |
+| 腔探测 LZSM | $\nu_d=3.3$ GHz，$2t/h\approx5.3$ GHz | 双量子点–高阻抗腔 |
 
 ## 实验特征与测量
 
-**干涉条纹**：固定脉冲波形扫描静态失谐 $\varepsilon_0$，电荷占据概率随 $\varphi_i\propto(A-\varepsilon_0)^2$ 周期性振荡，生成性条纹的位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$ 随阶数 $N$ 呈平方根压缩，是 LZS 干涉区别于普通拉比振荡的指纹；条纹位置与理论预言定量吻合（文献 1论文图 5.4）。
+**干涉条纹**：固定脉冲波形扫描静态失谐 $\varepsilon_0$，电荷占据概率随 $\varphi_i\propto(A-\varepsilon_0)^2$ 周期性振荡，生成性条纹的位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$ 随阶数 $N$ 呈平方根压缩，是 LZS 干涉区别于普通拉比振荡的指纹；条纹位置与理论预言定量吻合（论文图 5.4）。
 
-**从可见度反推 $P_\mathrm{LZ}$**：理想情形下条纹可见度 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$，由此可反推单次跃迁概率并研究它随扫速的依赖。文献 1进一步把受控的 $P_\mathrm{LZ}(v)$ 与 Kibble–Zurek 机制中拓扑缺陷密度对淬火速率的依赖一一对应，在电荷比特上完成了对该非平衡相变预言的量子模拟：淬火越慢缺陷越少，实验与理论曲线定量吻合。
+**从可见度反推 $P_\mathrm{LZ}$**：理想情形下条纹可见度 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$，由此可反推单次跃迁概率并研究它随扫速的依赖。进一步把受控的 $P_\mathrm{LZ}(v)$ 与 Kibble–Zurek 机制中拓扑缺陷密度对淬火速率的依赖一一对应，在电荷比特上完成了对该非平衡相变预言的量子模拟：淬火越慢缺陷越少，实验与理论曲线定量吻合。
 
 **退相干的作用**：退相干不改变条纹的周期结构，只压低条纹幅度，且幅度随干涉阶数衰减——因此高阶条纹的可见度本身是[[materials-devices/charge-noise|电荷噪声]]与退相干速率的探针（LZSM 干涉计量学在超导比特中也被用来表征退相干）。
 
@@ -165,23 +165,3 @@ $$
 - 强微波驱动下与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]是同一物理的两副面孔；周期驱动情形的系统化处理见[[circuit-qed/floquet-dynamics|Floquet 动力学]]。
 - 在[[qubit-control/charge-qubit|电荷量子比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/single-spin-qubit|单自旋量子比特]]中分别对应失谐反交叉、$S$–$T_+$ 反交叉与自旋翻转避免交叉的扫越操控。
 - 条纹对比度受[[materials-devices/charge-noise|电荷噪声]]限制；腔读出实现见[[readout-measurement/dispersive-readout|色散读出]]与[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]。
-
-## 延伸阅读
-
-- S. N. Shevchenko, S. Ashhab, and F. Nori, "Landau–Zener–Stückelberg interferometry", *Physics Reports* (2010). [DOI: 10.1016/j.physrep.2010.03.002]
-- G. Cao et al., "Ultrafast universal quantum control of a quantum-dot charge qubit using Landau–Zener–Stückelberg interference", *Nature Communications* (2013). [DOI: 10.1038/ncomms2412]
-- J. Stehlik et al., "Landau-Zener-Stückelberg interferometry of a single electron charge qubit", *Physical Review B* (2012). [DOI: 10.1103/PhysRevB.86.121303]
-- O. V. Ivakhnenko, S. N. Shevchenko, and F. Nori, "Nonadiabatic Landau–Zener–Stückelberg–Majorana transitions, dynamics, and interference", *Physics Reports* (2022). [DOI: 10.1016/j.physrep.2022.10.002]
-
-## 论文依据
-
-- [[sources/ref-01|文献 1]]，PDF pp. 103–105：二能级哈密顿量 $H=\varepsilon\sigma_z/2+\Delta\sigma_x$、瞬时本征值、绝热–脉冲模型、Landau–Zener 公式 $P_\mathrm{LZ}=\exp(-2\pi\Delta^2/\hbar v)$、跃迁矩阵 $U_\mathrm{LZ}$、斯托克斯相位与绝热参数 $\delta$ 的两个极限。
-- [[sources/ref-01|文献 1]]，PDF pp. 105–106：两次穿越的相位累积 $\varphi=\frac{1}{\hbar}\int\sqrt{\varepsilon^2+4\Delta^2}dt$、干涉概率 $P_+=2P_\mathrm{LZ}(1-P_\mathrm{LZ})[1+\cos(\varphi_2-2\varphi_\mathrm{LZ})]$、Stückelberg 相位与 Mach–Zehnder 类比。
-- [[sources/ref-01|文献 1]]，PDF pp. 107–108：GaAs/AlGaAs 双量子点实验装置（Triton 400 稀释制冷机 30 mK、81134A 脉冲源）、反交叉能隙 $2\Delta=20.7\ \mu$eV 的标定。
-- [[sources/ref-01|文献 1]]，PDF pp. 111–113：尖脉冲极限下相位 $\varphi_i=(A-\varepsilon_0)^2t_r/(A\hbar)$ 的推导、生成性条纹位置 $\varepsilon_0^{(N)}=A-\sqrt{2\pi\hbar AN/t_r}$、总旋转角 $\theta=4\sin^{-1}\exp(-2\pi\Delta^2t_r/\hbar A)$ 与任意布洛赫球旋转。
-- [[sources/ref-01|文献 1]]，PDF pp. 124–126：LZ 跃迁与 Kibble–Zurek 机制的对应、由条纹可见度 $V=4P_\mathrm{LZ}(1-P_\mathrm{LZ})$ 反推跃迁概率、拓扑缺陷密度量子模拟结果。
-- [[sources/ref-06|文献 6]]，PDF pp. 39–40：$S$–$T_+$ 反交叉的 LZS 干涉、$|A_S|^2=P_\mathrm{LZ}=e^{-2\pi\Delta^2/\hbar v}$、$P_\mathrm{LZ}=1/2$ 时穿越等效 Hadamard 门、"绝热穿过–非绝热返回"循环实现动态核自旋极化。
-- [[sources/ref-02|文献 2]]，PDF pp. 23–25：拉比振荡与 LZS 过程两条操控路径的对比、绝热–脉冲模型给出的三角脉冲旋转角 $\varphi$、$\theta$ 公式（式 1.2–1.3）。
-- [[sources/ref-02|文献 2]]，PDF p. 60：15 GHz 微波驱动下 LZS 干涉的三个实验判据（峰高随功率归零、峰位等间距、高功率出现高阶峰）。
-- [[sources/ref-18|文献 18]]，PDF pp. 50–51：纵向周期驱动二能级系统的 LZSM 干涉，$P_\mathrm{LZ}=e^{-2\pi\delta}$ 与 $\delta=t^2/\hbar v$、Stückelberg 相位与 Stokes 相位的分解；p. 79：腔透射 $|S_{21}|$ 测得的 LZSM 干涉图（$\nu_d=3.3$ GHz，$2t/h\approx5.3$ GHz）。
-- [[sources/ref-13|文献 13]]，PDF pp. 102–104：Floquet 理论处理受驱双量子点 LZSM 干涉、腔反射信号与相位平均磁化率、腔光子辅助 LZSM 与双共振条件 $kf_d=\mu/h=\nu_r+k'f_d$。

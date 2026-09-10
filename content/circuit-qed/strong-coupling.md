@@ -2,15 +2,15 @@
 title: 强耦合判据
 description: 相干耦合速率大于相关损耗率，使两个系统能在衰减前多次交换激发的工作区。
 aliases:
-  - 强耦合
-  - 强耦合极限
-  - 强耦合区
-  - strong coupling
-  - strong coupling regime
-  - strong coupling limit
+ - 强耦合
+ - 强耦合极限
+ - 强耦合区
+ - strong coupling
+ - strong coupling regime
+ - strong coupling limit
 tags:
-  - 电路量子电动力学
-  - 耦合
+ - 电路量子电动力学
+ - 耦合
 date: 2026-09-08
 ---
 
@@ -50,7 +50,7 @@ $$
 为量化"相干 vs 非相干"的相对权重，引入**合作因子**（cooperativity）
 
 $$
-C=\frac{g^2}{\kappa\gamma},
+C=\frac{g^2}{\kappa\gamma}
 $$
 
 或常见等价的双倍写法 $C=4g^2/(\kappa\gamma)$、$C=2g^2/(\kappa\gamma)$——三种归一仅差一个常数因子，物理含义一致：相干耦合相对于腔耗散与比特退相干的几何平均。$C>1$ 表明系统进入"相干耦合占优"的工作区，但能否在谱上分辨还要看线宽定义、失谐、温度占据与拟合模型。
@@ -64,13 +64,13 @@ $$
 旋波近似（rotating-wave approximation，RWA）下，单比特–单模的耦合由 Jaynes–Cummings 哈密顿量描述（参见[[circuit-qed/jaynes-cummings-model|JC 模型]]词条）。对双量子点电荷比特，相互作用项的微观推导给出全局耦合强度（overall coupling strength，或 bare coupling strength）
 
 $$
-g_0=\omega_r c_c\sqrt{\frac{2Z_r}{R_Q}},
+g_0=\omega_r c_c\sqrt{\frac{2Z_r}{R_Q}}
 $$
 
 其中 $c_c=C_L/C_\Sigma$ 是左量子点的杠杆臂（lever arm），$Z_r=\sqrt{L/C}$ 是腔的特征阻抗，$R_Q=h/e^2\approx 26\ \mathrm{k\Omega}$ 是电阻量子。有效耦合
 
 $$
-g_\mathrm{eff}=g_0\sin\theta=g_0\,\frac{2t_c}{\hbar\omega_q},
+g_\mathrm{eff}=g_0\sin\theta=g_0\,\frac{2t_c}{\hbar\omega_q}
 $$
 
 其中 $\theta=\arctan(2t_c/\varepsilon)$ 是双量子点的混合角，$t_c$ 是点间隧穿耦合，$\varepsilon$ 是失谐。当 $\varepsilon\ll 2t_c$（最大混合）时 $\sin\theta\approx 1$，$g_\mathrm{eff}$ 取得最大值 $g_0$；当 $|\varepsilon|\gg 2t_c$ 时电子局域在单个点内，$\sin\theta\to 0$，耦合消失。
@@ -78,7 +78,7 @@ $$
 高阶模的耦合为
 
 $$
-g^{(n)}=g_0\sin\theta\,\frac{\omega_n}{\sqrt{\omega_r}},
+g^{(n)}=g_0\sin\theta\,\frac{\omega_n}{\sqrt{\omega_r}}
 $$
 
 即随腔模频率升高而增大；实际实验常工作于基模。
@@ -88,7 +88,7 @@ $$
 通过输入–输出理论，透射式共面波导腔的透射系数为
 
 $$
-S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2},
+S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2}
 $$
 
 其中 $\chi_c=g_c/(-\Delta+i\gamma)$ 是量子点的磁化系数，$\Delta=\omega_a-\omega$ 是比特–探测失谐，$\gamma=\gamma_1/2+\gamma_\phi$ 是比特的总退相干速率（$\gamma_1$ 弛豫、$\gamma_\phi$ 纯退相位）。反射式腔的 $S_{11}$ 形式类似，仅分子替换为 $i\kappa_i$。
@@ -118,15 +118,15 @@ $$
 ### 抑制损耗 $\kappa$ 与 $\gamma$
 
 - **腔侧**：TiN 纳米线腔的 $\kappa/2\pi$ 已压到约 2.2 MHz；NbTiN 反射腔约 11 MHz；SQUID 阵列腔因结参数不均匀与氧化层损耗较高，约 $30\text{–}60$ MHz；
-- **比特侧**：自旋比特的电偶极矩小、与电荷噪声解耦，$\gamma/2\pi$ 可低至 $2\text{–}5$ MHz；电荷比特虽然 $g$ 大但 $\gamma/2\pi$ 多在 $30\text{–}100$ MHz 量级。强耦合的达成往往需要在电荷混合与退相干之间选择最优工作点——这是文献 13、文献 17、文献 20三本论文反复讨论的实验经验。
+- **比特侧**：自旋比特的电偶极矩小、与电荷噪声解耦，$\gamma/2\pi$ 可低至 $2\text{–}5$ MHz；电荷比特虽然 $g$ 大但 $\gamma/2\pi$ 多在 $30\text{–}100$ MHz 量级。强耦合的达成往往需要在电荷混合与退相干之间选择最优工作点——这是、、三本论文反复讨论的实验经验。
 
-文献 20 论文中（PDF p. 78）总结的判据为
+ 论文中总结的判据为
 
 $$
-g_s>\kappa^\*,\gamma_s,
+g_s>\kappa^\*,\gamma_s
 $$
 
-即自旋–光子耦合同时超过腔耗散与自旋退相干；文献 13 论文（PDF p. 30）给出的共振区有效总耗散为
+即自旋–光子耦合同时超过腔耗散与自旋退相干； 论文给出的共振区有效总耗散为
 
 $$
 \Gamma_\mathrm{eff}=\frac{\kappa+\gamma}{2}.
@@ -136,7 +136,7 @@ $$
 
 ### 实验进展横向对比
 
-下表汇总文献 13 与文献 17 论文表 1.2/1.1 所列近年半导体量子点–腔杂化系统的关键参数（电荷比特为主，自旋与共振交换比特单列；$C=g^2/(\kappa\gamma)$ 为合作因子，按原文定义）。
+下表汇总 与 论文表 1.2/1.1 所列近年半导体量子点–腔杂化系统的关键参数（电荷比特为主，自旋与共振交换比特单列；$C=g^2/(\kappa\gamma)$ 为合作因子，按原文定义）。
 
 | 单位 | 年份 | 材料 | 比特类型 | 腔材料 | $g/2\pi$ (MHz) | $\gamma/2\pi$ (MHz) | $\kappa/2\pi$ (MHz) | $C$ |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
@@ -159,12 +159,12 @@ $$
 
 | 比特类型 | 体系 | $g/2\pi$ | $\gamma/2\pi$ | $\kappa/2\pi$ | $C$ | 来源 |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| 电荷比特 | GaAs DQDs + NbTiN 高阻抗反射腔 | 74 MHz（DQD1）、119 MHz（DQD2） | 视比特而异 | 11 MHz 量级 | — | 文献 13 |
-| 电荷比特 | GaAs DQD + SQUID 阵列反射腔（$\nu_r=6.758$ GHz，$Z_r\approx 1$ kΩ） | 57 MHz | — | 58.9 MHz | — | 文献 13 |
-| 电荷比特 | Si/SiGe RDQD + TiN 纳米线腔（$Z_r\approx 3.5$ kΩ，$f_r=4.993$ GHz） | 175 MHz | — | 2.2 MHz | — | 文献 20 |
-| 翻转模式自旋比特 | Si/SiGe 三量子点（RDQD/LDQD） + TiN 腔 | 21.8 MHz / 13.8 MHz | — | — | — | 文献 20 |
-| 自旋–光子耦合 | Si/SiGe DQD + TiN 腔 | 43.5 MHz（$2g_s/2\pi$，真空 Rabi 劈裂） | — | 2.2 MHz | — | 文献 20 |
-| 共振交换比特 | Si/SiGe 三量子点 + TiN 腔 | $g_\mathrm{RX}/2\pi=65$ MHz，$g_{c0}/2\pi=168$ MHz | 16.9 MHz | — | $>1$ | 文献 20 |
+| 电荷比特 | GaAs DQDs + NbTiN 高阻抗反射腔 | 74 MHz（DQD1）、119 MHz（DQD2） | 视比特而异 | 11 MHz 量级 | — | |
+| 电荷比特 | GaAs DQD + SQUID 阵列反射腔（$\nu_r=6.758$ GHz，$Z_r\approx 1$ kΩ） | 57 MHz | — | 58.9 MHz | — | |
+| 电荷比特 | Si/SiGe RDQD + TiN 纳米线腔（$Z_r\approx 3.5$ kΩ，$f_r=4.993$ GHz） | 175 MHz | — | 2.2 MHz | — | |
+| 翻转模式自旋比特 | Si/SiGe 三量子点（RDQD/LDQD） + TiN 腔 | 21.8 MHz / 13.8 MHz | — | — | — | |
+| 自旋–光子耦合 | Si/SiGe DQD + TiN 腔 | 43.5 MHz（$2g_s/2\pi$，真空 Rabi 劈裂） | — | 2.2 MHz | — | |
+| 共振交换比特 | Si/SiGe 三量子点 + TiN 腔 | $g_\mathrm{RX}/2\pi=65$ MHz，$g_{c0}/2\pi=168$ MHz | 16.9 MHz | — | $>1$ | |
 
 ## 实验证据与边界
 
@@ -182,7 +182,7 @@ $$
 - **多能级效应**：量子点的更高激发态（轨道、谷、电荷）若同时参与跃迁，会产生与真空 Rabi 劈裂混淆的多峰结构；
 - **Fano 干涉**：高阻抗腔的细中心导体与寄生通道耦合常导致谱线不对称，未做 Fano 修正的拟合会把 $2g$ 系统性低估。
 
-可靠的判断需要同时拟合频率、线宽、功率依赖，并确认工作点与目标量子点的调参一致。文献 13论文（PDF p. 63）即强调"劈裂大小等于 $2g_c$，免交点处两条谱线的展宽等于 $(\kappa+\gamma)/2$；真空 Rabi 劈裂是半导体双量子点与腔强耦合的直接证据"。
+可靠的判断需要同时拟合频率、线宽、功率依赖，并确认工作点与目标量子点的调参一致。论文即强调"劈裂大小等于 $2g_c$，免交点处两条谱线的展宽等于 $(\kappa+\gamma)/2$；真空 Rabi 劈裂是半导体双量子点与腔强耦合的直接证据"。
 
 ## 强弱耦合区的物理差异
 
@@ -192,7 +192,7 @@ $$
 | 强耦合 | $g>\kappa,\gamma$（等价 $2g>\kappa+\gamma$） | 两条杂化支，间距 $2g$，线宽 $(\kappa+\gamma)/2$ | 真空 Rabi 振荡，周期 $\pi/g$ |
 | 超强耦合 | $g/\omega_r\gtrsim 0.1$ | 双峰仍可见，但谱线对失谐不再对称 | 反旋项显著，JC 模型失效，需回到 Rabi 模型 |
 
-在半导体 cQED 中，超强耦合尚未稳定演示。文献 13论文（PDF p. 116）记录了 Wallraff 组利用约瑟夫森结阵列达到的 $g_c/\omega_r\sim 0.11\pm 0.01$，是首次进入超强耦合区的工作；该区下 JC 模型失效，反旋项贡献不可忽略，真空会出现虚光子云，是 cQED 仍待探索的物理前沿。
+在半导体 cQED 中，超强耦合尚未稳定演示。论文记录了 Wallraff 组利用约瑟夫森结阵列达到的 $g_c/\omega_r\sim 0.11\pm 0.01$，是首次进入超强耦合区的工作；该区下 JC 模型失效，反旋项贡献不可忽略，真空会出现虚光子云，是 cQED 仍待探索的物理前沿。
 
 ## 与其他概念的关系
 
@@ -206,7 +206,7 @@ $$
 
 ## 设计经验：寻找强耦合工作点
 
-文献 13、文献 17、文献 20三本论文在不同的腔型与材料体系中总结出寻找强耦合工作点的若干经验（综合 PDF pp. 43–45, pp. 57–58, pp. 60–62）：
+、、三本论文在不同的腔型与材料体系中总结出寻找强耦合工作点的若干经验（综合 PDF pp. 43–45, pp. 57–58, pp. 60–62）：
 
 1. **优先选取响应强的点间隧穿线**：谐振腔扫描电荷稳定图时，那些幅值/相位响应强的隧穿线一般对应较高的 $g$；
 2. **避开源漏隧穿线**：源漏电子库隧穿会缩短电荷比特的相干时间，$\gamma$ 急剧增大；
@@ -214,16 +214,3 @@ $$
 4. **耦合强度依赖电子空间分布**：电荷填充数相近的两个比特有相近的 $g$；多电子比特因电偶极矩更大通常 $g$ 更大；
 5. **回避杂点**：蜂窝图中存在第二套隧穿线往往预示器件内有意外的量子点，会污染主比特的频率与耦合；
 6. **调节 $2t_c$ 接近 $\omega_r$**：当隧穿速率 $2t_c/\hbar$ 与腔频 $\omega_r$ 重合时 $\sin\theta$ 接近 1，可直接提取全局耦合强度 $g_0$。
-
-## 延伸阅读
-
-- A. Stockklauser et al., "Strong Coupling Cavity QED with Gate-Defined Double Quantum Dots Enabled by a High Impedance Resonator", *Physical Review X* (2017). [DOI: 10.1103/PhysRevX.7.011030]
-- N. Samkharadze et al., "High Kinetic Inductance Superconducting Nanowire Resonators for Circuit QED in a Magnetic Field", *Physical Review Applied* (2016). [DOI: 10.1103/PhysRevApplied.5.044004]
-- H. J. Kimble, "Strong interactions of single atoms and photons in cavity QED", *Physica Scripta* (1998). [DOI: 10.1238/Physica.Topical076.a00127]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, A. Wallraff, "Circuit Quantum Electrodynamics", *Reviews of Modern Physics* (2021). [DOI: 10.1103/RevModPhys.93.025005]
-
-## 论文依据
-
-- [[sources/ref-13|文献 13]]，PDF pp. 7–8：NbTiN 高阻抗腔中两个电荷比特与 NbTiN 腔的真空 Rabi 劈裂；p. 20：合作因子 $C=g^2/(\kappa\gamma)$ 的定义与半导体 cQED 强耦合新进展表 1.2；pp. 28–30：JC 模型、缀饰态、共振 Rabi 振荡与色散极限；p. 30：强耦合判据 $g>\kappa,\gamma$ 与有效总耗散 $\Gamma_\mathrm{eff}=(\kappa+\gamma)/2$；pp. 43–45：双量子点与腔的耦合、$g_0=\omega_r c_c\sqrt{2Z_r/R_Q}$（式 2.54）、$g_c=g_0\sin\theta$ 与 $g_c/\omega_r\sim 0.11$ 的超强耦合报道；p. 45：$S_{21}$、$S_{11}$ 透射/反射公式（式 2.58–2.60）与比特对腔频/展宽的影响（式 2.61–2.62）；pp. 62–63：NbTiN 腔上 DQD1、DQD2 的真空 Rabi 劈裂 $2g_c/2\pi=74$、$119$ MHz 提取、避免交叉处线宽等于 $(\kappa+\gamma)/2$；p. 75：郭国平组实验参数 $g_0/2\pi\approx 104.5$ MHz、$\gamma/2\pi\approx 72$ MHz；p. 87：SQUID 阵列反射腔参数 $\nu_r=6.758$ GHz、$Z_r\approx 1$ kΩ、$(\kappa,\kappa_i,\kappa_e)/2\pi=(58.9,36.9,22.0)$ MHz、$g_0/2\pi\approx 57$ MHz；p. 116：超强耦合区 $g_c/\omega_r\sim 0.11\pm 0.01$ 与 JC 模型失效。
-- [[sources/ref-17|文献 17]]，PDF pp. 7–8：高阻抗 SQUID 阵列腔中两个电荷比特强耦合与远距离相干相互作用；pp. 17–18：表 1.1 强耦合实验进展；pp. 57–58：合作因子 $C=2g^2/(\kappa\gamma)$ 与强耦合极限 $g>\max(\gamma,\kappa_p)$ 的定义及寻找强耦合工作点的六条经验；pp. 95–96：五个双量子点集体耦合的整体协同性 $C_\mathrm{total}=\sum_k C_k>17.6$。
-- [[sources/ref-20|文献 20]]，PDF pp. 7–8：电荷、翻转模式与共振交换比特与高阻抗腔的强耦合；p. 40：全局耦合强度公式 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/(\pi\hbar)}$（式 2.54）；p. 52：RDQD 与 TiN 腔全局耦合 $g_0/2\pi=175$ MHz 的强耦合实现；pp. 60–61：双量子点隧穿耦合 $2t_c$ 调节与共振点提取；p. 68：翻转模式自旋比特耦合 $g_s/2\pi=21.8$ MHz 与 $13.8$ MHz；pp. 77–78：RDQD、LDQD 自旋比特与腔的强耦合及 $g_s>\kappa^\*,\gamma_s$ 的判据；pp. 88：本章小结"两个翻转模式量子比特都与谐振腔实现了强耦合"；p. 99：RX 量子比特与腔耦合 $g_{c0}/2\pi=168$ MHz 与 $g_\mathrm{RX}/2\pi=65$ MHz 的提取；p. 100：双色调制谱拟合得到 RX 退相干 $\gamma_\mathrm{RX}/2\pi=16.9$ MHz，并确认 $g_\mathrm{RX}>\gamma_\mathrm{RX}$ 且 $g_\mathrm{RX}>\kappa$，系统实现强耦合。

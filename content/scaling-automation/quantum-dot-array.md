@@ -2,12 +2,12 @@
 title: 量子点阵列
 description: 由多个可独立控制且按目标拓扑耦合的量子点组成的多比特或量子模拟器件。
 aliases:
-  - 多量子点阵列
-  - quantum dot array
-  - quantum dot arrays
+ - 多量子点阵列
+ - quantum dot array
+ - quantum dot arrays
 tags:
-  - 扩展与自动化
-  - 多量子点
+ - 扩展与自动化
+ - 多量子点
 date: 2026-09-08
 ---
 
@@ -28,7 +28,7 @@ date: 2026-09-08
 对多点系统，[[fundamentals/constant-interaction-model|常相互作用模型]]本质上是经典电路模型，随点数增加迅速变得繁琐，且无法描述点间隧穿引起的能级杂化。更合适的出发点是费米–哈伯德模型（Fermi–Hubbard model）。单轨道、半满填充的标准 Hubbard 哈密顿量为
 
 $$
-H=-t\sum_{\langle i,j\rangle,\sigma}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)+U\sum_{i}n_{i\uparrow}n_{i\downarrow},
+H=-t\sum_{\langle i,j\rangle,\sigma}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)+U\sum_{i}n_{i\uparrow}n_{i\downarrow}
 $$
 
 其中 $\langle i,j\rangle$ 遍历最近邻格点，$t$ 是格点间隧穿能，$U$ 是同一格点双占据的库仑能，$c_{i\sigma}^{\dagger}$、$c_{i\sigma}$ 是格点 $i$ 上自旋 $\sigma$ 电子的产生、湮灭算符，$n_{i\sigma}=c_{i\sigma}^{\dagger}c_{i\sigma}$。动能项（$t$）使电子离域，排斥项（$U$）使电子局域，两者竞争决定基态性质：$U\gg t$ 时电子被局域在各格点上，体系是莫特绝缘体（Mott insulator）；$U\ll t$ 时电子自由移动，体系呈金属性。半满单带情形下，自由电子模型给出 Hubbard 带宽 $W=4dt$（$d$ 为维度），当 $U$ 超过临界值 $U_c=W$ 时体系劈裂出上、下 Hubbard 带，带间距离即莫特间隙（Mott gap）。
@@ -36,7 +36,7 @@ $$
 量子点阵列并不严格等同于纯净 Hubbard 模型——各点[[fundamentals/electrochemical-potential|电化学势]] $\mu_i$ 可由栅极独立调节，点间还存在长程库仑相互作用 $V_{ij}$——因此实际描述用扩展 Fermi–Hubbard 模型。对含最近邻隧穿 $t_{ij}$ 与次近邻隧穿 $t'_{ij}$ 的二维阵列（如 2×2 阵列）：
 
 $$
-H=-\sum_{i}\mu_i n_i+\sum_{i}U_i\,n_{i\uparrow}n_{i\downarrow}+\sum_{i\neq j}V_{ij}\,n_i n_j-\sum_{\langle i,j\rangle,\sigma}t_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)-\sum_{\langle i,j\rangle',\sigma}t'_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right),
+H=-\sum_{i}\mu_i n_i+\sum_{i}U_i\,n_{i\uparrow}n_{i\downarrow}+\sum_{i\neq j}V_{ij}\,n_i n_j-\sum_{\langle i,j\rangle,\sigma}t_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)-\sum_{\langle i,j\rangle',\sigma}t'_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)
 $$
 
 其中 $\langle i,j\rangle'$ 表示次近邻格点对，$U_i$ 即各点的[[fundamentals/charging-energy|充电能]]。模型参数与旋钮一一对应：$\mu_i$ 由能级栅（plunger）设定，$t_{ij}$、$t'_{ij}$ 由势垒栅设定，$U_i$ 主要由点尺寸决定、近似固定，$V_{ij}$ 随点间距衰减。与常相互作用模型相比，它能定量再现[[fundamentals/charge-stability-diagram|电荷稳定图]]中点间隧穿线的弯曲（能级杂化），这是纯静电模型做不到的。量子点阵列模拟 Hubbard 模型的想法最早由 Stafford 与 Das Sarma 于 1994 年提出，目标正是研究强关联体系的多体物理——莫特转变。
@@ -46,7 +46,7 @@ $$
 当 $U/t\gg 1$ 且每点近似单占据时，双占据态被投影掉，二阶微扰把 Hubbard 模型约化为海森堡自旋模型。对双点（失谐 $\varepsilon=\mu_1-\mu_2$，两点塞曼能差 $\Delta E_z$），交换耦合为
 
 $$
-J=\frac{2t^{2}}{U-\varepsilon-\Delta E_z}+\frac{2t^{2}}{U-\varepsilon+\Delta E_z},
+J=\frac{2t^{2}}{U-\varepsilon-\Delta E_z}+\frac{2t^{2}}{U-\varepsilon+\Delta E_z}
 $$
 
 在 $U\gg\varepsilon,\Delta E_z$ 时退化为熟悉的 $J=4t^{2}/U$。这正是阵列中相邻自旋比特两比特门的微观来源，也说明"量子模拟"与"量子计算"两种用途共享同一套器件参数。
@@ -57,7 +57,7 @@ $$
 
 ## 参数与量级
 
-以下数值取自 Si/SiGe 2×2 阵列（文献 21）与 Si/SiGe 三点–腔器件（文献 20）的实测：
+以下数值取自 Si/SiGe 2×2 阵列与 Si/SiGe 三点–腔器件的实测：
 
 | 量 | 典型值 | 说明 |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ $$
 
 三维相图中的四相点在二维截面里通常不可见，需要精确调节多个电极才能让两个三相点合并成四相点；因此能在二维图中找到四相点本身就是阵列可调性好的判据。三点体系还特有量子元胞自动机（quantum cellular automata, QCA）过程：如 $(1,5,3)\leftrightarrow(2,4,4)$ 的跃迁涉及两个电子在三个点与源漏之间的协同移动，是高阶隧穿过程。
 
-阵列与谐振腔杂化后，相图本身也可由腔的[[readout-measurement/dispersive-readout|色散读出]]成像：文献 20论文用高阻抗谐振腔的相位响应直接测出三点电荷稳定图与四相点，并用 Hubbard 模型结合输入–输出理论再现了四相点附近的腔相位响应。
+阵列与谐振腔杂化后，相图本身也可由腔的[[readout-measurement/dispersive-readout|色散读出]]成像：论文用高阻抗谐振腔的相位响应直接测出三点电荷稳定图与四相点，并用 Hubbard 模型结合输入–输出理论再现了四相点附近的腔相位响应。
 
 ### 虚拟电极与同步扫描
 
@@ -111,7 +111,7 @@ $$
 
 ## 阵列能做什么
 
-- **多比特处理器**：一维阵列已实现 GaAs 8 点、Si/SiGe 6、9 乃至 12 点；二维方向已演示 2×2、3×3 乃至 10 点器件（Ge/SiGe 与掺杂磷体系）。基于一维 Si/SiGe 四点阵列，文献 21论文实现了单比特门保真度超过 99.9%、两比特门超过 99% 的通用门操控与贝尔态制备；三个点还可直接编码全电学的[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]。
+- **多比特处理器**：一维阵列已实现 GaAs 8 点、Si/SiGe 6、9 乃至 12 点；二维方向已演示 2×2、3×3 乃至 10 点器件（Ge/SiGe 与掺杂磷体系）。基于一维 Si/SiGe 四点阵列，论文实现了单比特门保真度超过 99.9%、两比特门超过 99% 的通用门操控与贝尔态制备；三个点还可直接编码全电学的[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]。
 - **量子模拟器**：除上述 CCB/莫特转变实验外，同类 2×2 阵列还观察过 Nagaoka 铁磁性；引入可控次近邻耦合 $t'$ 后，可模拟阻挫磁体、自旋液体乃至与高温超导相关的强关联相——这正是二维阵列相对一维链的独特价值。
 - **长程耦合总线的最小单元**：三量子点加[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]是"比特阵列 × 光子总线"的最小构型：两个点各编码一个比特、第三点作耦合中介，即可验证阵列经腔模实现长程[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]的原理。
 
@@ -122,30 +122,3 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 一头连着 Hubbard 模型的动能项，一头连着强耦合极限下的[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$。
 - 阵列态的感知依赖电荷传感器与[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与腔模杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
-
-## 延伸阅读
-
-- T. Hensgens, T. Fujita, L. Janssen, et al., "Quantum simulation of a Fermi-Hubbard model using a semiconductor quantum dot array", *Nature* (2017). [arXiv: 1702.07511]
-- C. Volk, A. M. J. Zwerver, U. Mukhopadhyay, et al., "Loading a quantum-dot based 'Qubyte' register", *npj Quantum Information* (2019). [DOI: 10.1038/s41534-019-0146-y]
-- M. Kiczynski, S. K. Gorman, H. Geng, et al., "Quantum Simulation of an Extended Fermi-Hubbard Model Using a 2D Lattice of Dopant-based Quantum Dots", (2021). [arXiv: 2110.08982]
-- M. J. Curry, et al., "Modular Autonomous Virtualization System for Two-Dimensional Semiconductor Quantum Dot Arrays", *Physical Review X* (2025). [DOI: 10.1103/physrevx.15.021034]
-
-## 论文依据
-
-- [[sources/ref-21|文献 21]]，PDF p. 30：Hubbard 模型哈密顿量（式 1.10）、扩展 Fermi–Hubbard 模型（式 1.11）、一维 Bethe 拟设可解而二维无解析解、Stafford 与 Das Sarma 1994 年提出量子点阵列模拟 Hubbard 模型。
-- [[sources/ref-21|文献 21]]，PDF p. 36：Hubbard 极限下交换相互作用 $J=\frac{2t^2}{U-\varepsilon-\Delta E_z}+\frac{2t^2}{U-\varepsilon+\Delta E_z}$ 及其 $4t^2/U$ 近似。
-- [[sources/ref-21|文献 21]]，PDF p. 22：一维阵列规模（GaAs 8 点、Si/SiGe 6/9/12 点）与二维阵列（Nagaoka 铁磁、3×3 等）研究现状。
-- [[sources/ref-21|文献 21]]，PDF p. 78：2×2 阵列器件结构——四层铝栅（35/50/55/70 nm）、能级栅 70 nm × 90 nm 与 45 nm 间距、中心势垒 CB 控制次近邻耦合。
-- [[sources/ref-21|文献 21]]，PDF p. 80：表 4.1 四点杠杆臂平均 $\alpha\approx 0.12\ \mathrm{eV/V}$、单点模式充电能 2.7–3.7 meV。
-- [[sources/ref-21|文献 21]]，PDF pp. 86–87：阵列模式充电能 2.83/5.02/3.05/4.63 meV、虚拟栅极 $\mathbf{vG}=M\mathbf{G}$、按 $k_i=U_i/U_0$ 设定扫描系数实现均匀填充；Hubbard 模拟参数（平均充电能 3 meV，最近邻 $t=0.1$ meV、$V=0.2$ meV，次近邻 $V=0.05$ meV）。
-- [[sources/ref-21|文献 21]]，PDF p. 89：以 $t_{\mathrm{ref}}=60\ \mu\mathrm{eV}$ 为参考调节最近邻隧穿耦合。
-- [[sources/ref-21|文献 21]]，PDF p. 97：次近邻隧穿耦合三档 30/130/280 $\mu\mathrm{eV}$。
-- [[sources/ref-21|文献 21]]，PDF pp. 102–103：虚拟势垒栅极独立调节点间隧穿耦合；耦合增强后虚拟栅极有效性降低，需重新测量并更新串扰矩阵。
-- [[sources/ref-21|文献 21]]，PDF p. 99：Hubbard 带宽 $W=4dt$、莫特间隙与 $U_c=W$ 的物理图像。
-- [[sources/ref-21|文献 21]]，PDF pp. 98, 102, 105–106：集体库仑阻塞随耦合增强出现再消失，对应莫特绝缘体–金属转变的有限尺寸类比；强耦合下大量子点充电能 1.05 meV。
-- [[sources/ref-16|文献 16]]，PDF p. 89：虚拟电极是物理栅极的线性变换，可独立调节单点电化学势或势垒。
-- [[sources/ref-16|文献 16]]，PDF pp. 94–95：量子点遍历方法——多点系统划分为双点重复单元，按 QD1→QD4 顺序逐点调控并以虚拟电极保护已调好的点。
-- [[sources/ref-16|文献 16]]，PDF p. 80：双点自动调控（少电子区定位与耦合判定）准确度约 90%，CNN 单次判定不到半分钟。
-- [[sources/ref-20|文献 20]]，PDF pp. 22–23：三量子点–谐振腔系统是量子比特阵列与腔耦合的最小单元。
-- [[sources/ref-20|文献 20]]，PDF p. 58：库仑菱形标定电极 lever arm 为 126 meV/V。
-- [[sources/ref-20|文献 20]]，PDF pp. 65–66：用谐振腔相位响应测得三点电荷稳定图与四相点（四电荷态简并），观测到量子元胞自动机（QCA）高阶隧穿过程，并以 Hubbard 模型结合输入–输出理论模拟四相点附近的腔响应。

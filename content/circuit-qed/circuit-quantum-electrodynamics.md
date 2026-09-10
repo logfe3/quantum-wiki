@@ -2,12 +2,12 @@
 title: 电路量子电动力学
 description: 用量子化微波电路研究人工原子与单个或少量微波光子相互作用的框架。
 aliases:
-  - cQED
-  - circuit QED
-  - 电路量子电动学
+ - cQED
+ - circuit QED
+ - 电路量子电动学
 tags:
-  - 电路量子电动力学
-  - 理论
+ - 电路量子电动力学
+ - 理论
 date: 2026-09-08
 ---
 
@@ -41,17 +41,16 @@ $$
 由泊松括号 $\{\phi,q\}=1$ 直接正则量子化，$[\hat{\phi},\hat{q}]=i\hbar$，引入满足 $[a,a^\dagger]=1$ 的湮灭、产生算符后，哈密顿量化为量子简谐振子
 
 $$
-\hat{H}_r=\hbar\omega_r\left(a^\dagger a+\frac{1}{2}\right),\qquad \omega_r=\frac{1}{\sqrt{LC}},
+\hat{H}_r=\hbar\omega_r\left(a^\dagger a+\frac{1}{2}\right),\qquad \omega_r=\frac{1}{\sqrt{LC}}
 $$
 
 即[[circuit-qed/microwave-resonator|微波谐振腔]]的单模描述，通常略去零点能写成 $\hbar\omega_r a^\dagger a$。
 
-实际器件更多使用分布式的共面波导谐振腔（coplanar waveguide resonator，CPW resonator）：中心导体宽 $w$、与两侧地平面间隔 $s$，电磁场在有限长度的传输线内形成驻波。其单位长度几何电容与几何电感由保角映射给出，
-
+实际器件更多使用分布式的共面波导谐振腔（coplanar waveguide resonator，CPW resonator）：中心导体宽 $w$、与两侧地平面间隔 $s$，电磁场在有限长度的传输线内形成驻波。其单位长度几何电容与几何电感由保角映射给出
 $$
 C_l=4\varepsilon_0\varepsilon_{\mathrm{eff}}\frac{K(k')}{K(k)},\qquad
 L_l=\frac{\mu_0}{4}\frac{K(k')}{K(k)},\qquad
-k=\frac{w}{w+2s},\quad k'=\sqrt{1-k^2},
+k=\frac{w}{w+2s},\quad k'=\sqrt{1-k^2}
 $$
 
 其中 $K$ 为第一类完全椭圆积分，$\varepsilon_{\mathrm{eff}}$ 为有效介电常数（衬底厚度远大于膜厚时 $\varepsilon_{\mathrm{eff}}\approx(1+\varepsilon_r)/2$）。与集总 LC 不同，CPW 腔支持一系列模式：两端开路的透射腔基模为半波长模式，频率 $\omega_0=1/(2l\sqrt{L_lC_l})$；一端短路的反射腔基模为 $\lambda/4$，高阶模频率为 $(2n+1)\omega_0$。腔频与长度 $l$ 成反比，设计灵活。超导（铝、铌、NbTiN 等）制成的腔电阻损耗可忽略，特征阻抗为
@@ -67,13 +66,13 @@ $$
 二能级"人工原子"与单腔模经电偶极相互作用耦合，最小模型为量子 Rabi 模型：
 
 $$
-H_{\mathrm{Rabi}}/\hbar=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z+g\left(a^\dagger+a\right)\left(\sigma_-+\sigma_+\right),
+H_{\mathrm{Rabi}}/\hbar=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z+g\left(a^\dagger+a\right)\left(\sigma_-+\sigma_+\right)
 $$
 
 其中 $\omega_q$ 是比特跃迁频率，$g$ 是单激发耦合强度。绝大多数实验满足旋转波近似条件 $g\ll\omega_q,\omega_r$ 且 $|\omega_q-\omega_r|\ll|\omega_q+\omega_r|$，反旋项被平均掉，得到 [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]
 
 $$
-H_{\mathrm{JC}}/\hbar=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z+g\left(a^\dagger\sigma_-+a\sigma_+\right),
+H_{\mathrm{JC}}/\hbar=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z+g\left(a^\dagger\sigma_-+a\sigma_+\right)
 $$
 
 其缀饰态、JC 阶梯、真空 Rabi 劈裂与色散极限的完整推导见该词条。从 cQED 的角度看，系统的全部行为由三个速率分类：耦合强度 $g$、腔光子耗散率 $\kappa$、比特退相干率 $\gamma$。当 $g>\kappa,\gamma$ 时系统进入[[circuit-qed/strong-coupling|强耦合]]区，激发在丢失前可在比特与腔之间完成多次往返，有效总耗散为 $\Gamma_{\mathrm{eff}}=(\kappa+\gamma)/2$；在大失谐 $|\Delta|\gg g$ 的色散区，相互作用归结为频移 $\chi=g^2/\Delta$，当 $\chi>\kappa,\gamma$ 时进入强色散区，可以单发分辨比特态或腔内光子数。
@@ -90,15 +89,14 @@ $$
 
 $$
 g_0=\frac{r\nu}{\hbar s}\sqrt{\frac{\hbar\omega_r}{lC_0}}
-=\frac{1}{2}\beta\,\omega_r\sqrt{\frac{Z_r}{\pi\hbar}},
+=\frac{1}{2}\beta\,\omega_r\sqrt{\frac{Z_r}{\pi\hbar}}
 $$
 
 其中 $r$ 为偶极矩大小、$s$ 为量子点到地平面的距离，$\beta$ 是量子点的差分杠杆臂因子。第二个等号代入 $Z_r=\sqrt{L_0/C_0}$，清楚地显示 $g_0\propto\sqrt{Z_r}$：阻抗每提高一个量级，耦合约增强三倍（$\sqrt{10}$ 倍），高阻抗腔（从 $50\ \Omega$ 到数 $\mathrm{k}\Omega$）因此是提升耦合的核心手段；另一条途径是提高杠杆臂因子 $\beta$，依赖电极与异质结结构设计。
 
-全局耦合还要乘上比特本征态的偶极矩阵元才是有效耦合。以双量子点[[qubit-control/charge-qubit|电荷比特]]为例，
-
+全局耦合还要乘上比特本征态的偶极矩阵元才是有效耦合。以双量子点[[qubit-control/charge-qubit|电荷比特]]为例
 $$
-g_{\mathrm{eff}}=g_0\sin\theta=g_0\,\frac{2t_c}{\hbar\omega_q},
+g_{\mathrm{eff}}=g_0\sin\theta=g_0\,\frac{2t_c}{\hbar\omega_q}
 $$
 
 其中 $\theta$ 为混合角、$t_c$ 为点间[[fundamentals/tunnel-coupling|隧穿耦合]]。耦合随失谐 $\varepsilon$ 通过 $\sin\theta$ 被调制，在简并点 $\varepsilon=0$ 处最大——实验中扫描栅压观察劈裂随 $\varepsilon$ 的变化即可验证这一预言。
@@ -116,7 +114,7 @@ cQED 实验可按耦合强度 $g$ 与失谐 $\Delta=\omega_q-\omega_r$（以最�
 
 这一"相图"给出 cQED 的通用设计语言：同一个器件只需调节比特频率（栅压或磁场），就能在"交换量子信息"与"读出量子信息"两种模式间切换。
 
-半导体量子点 cQED 的典型参数量级（取自本站论文依据所列实验）：
+半导体量子点 cQED 的典型参数量级（取自本站论文中所列实验）：
 
 | 参数 | 典型量级 | 说明 |
 | --- | --- | --- |
@@ -138,7 +136,7 @@ cQED 实验可按耦合强度 $g$ 与失谐 $\Delta=\omega_q-\omega_r$（以最�
 $$
 g_s=g_{\mathrm{eff}}\,\frac{g\mu_B\Delta B_x\,|\Delta_\tau|\cos\theta}{2\hbar\left(\Delta_\tau^2+\gamma_c^2\right)}
 \;\xrightarrow{\ \varepsilon=0,\ |\Delta_\tau|\gg\gamma_c\ }\;
-g_c\,\frac{g\mu_B\Delta B_x}{2\left(2t_c-\hbar\omega_r\right)},
+g_c\,\frac{g\mu_B\Delta B_x}{2\left(2t_c-\hbar\omega_r\right)}
 $$
 
 而自旋继承的退相干满足
@@ -165,17 +163,3 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）。
 - 多比特扩展经[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]实现；比特的"人工原子"载体是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]与[[fundamentals/double-quantum-dot|双量子点]]上的[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]、[[qubit-control/hole-spin-qubit|空穴自旋比特]]、[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]等编码。
 - 性能瓶颈主要来自[[materials-devices/charge-noise|电荷噪声]]与材料界面质量（如[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/gaas-algaas|GaAs/AlGaAs]] 平台）；强驱动修饰谱需[[circuit-qed/floquet-dynamics|Floquet 动力学]]描述。
-
-## 延伸阅读
-
-- A. Wallraff et al., "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics", *Nature* (2004). [DOI: 10.1038/nature02851]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, A. Wallraff, "Circuit Quantum Electrodynamics", *Reviews of Modern Physics* (2021). [DOI: 10.1103/RevModPhys.93.025005]
-- N. Samkharadze et al., "Strong spin-photon coupling in silicon", *Science* (2018). [DOI: 10.1126/science.aar4054]
-- C. X. Yu, S. Zihlmann, J. C. Abadillo-Uriel, et al., "Strong coupling between a photon and a hole spin in silicon", *Nature Nanotechnology* (2023). [DOI: 10.1038/s41565-023-01332-3]
-
-## 论文依据
-
-- [[sources/ref-13|文献 13]]，PDF p. 15：里德堡原子 CQED 实验中首次观测真空 Rabi 振荡；pp. 17–18：cQED 的命名与定位、2004 年 Schoelkopf 组开创性工作、半导体 cQED 先驱实验参数表（表 1.1）与弱耦合瓶颈分析、2016 年高阻抗腔转折；pp. 28–30：Rabi/JC 哈密顿量、缀饰态、色散极限、强耦合判据与 $\Gamma_{\mathrm{eff}}=(\kappa+\gamma)/2$；p. 45：最强电荷比特耦合 619 MHz（$g_c/\omega_r\sim0.11$）；p. 116：微磁体梯度磁场产生人造自旋轨道耦合的机制。
-- [[sources/ref-17|文献 17]]，PDF pp. 27–28：LC 谐振电路的正则量子化与 $\hat{H}_r=\hbar\omega_r a^\dagger a$；pp. 28–30：共面波导谐振腔的几何电容/电感、透射腔与反射腔模式频率、特征阻抗 $Z_r=\sqrt{L_r/C_r}$ 与 $50\ \Omega$ 匹配惯例；p. 30：腔损耗分解 $\kappa=\kappa_i+\kappa_e$。
-- [[sources/ref-20|文献 20]]，PDF p. 40：偶极近似下耦合强度推导，$g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 与 $g_{\mathrm{eff}}=g_0\sin\theta$（式 2.49–2.56）、高阻抗与杠杆臂两条增强途径；pp. 76–77：微磁体方案的有效自旋–光子耦合公式（式 5.15–5.16）、$\gamma_s/\gamma_c$ 的二次方标度（式 5.17–5.18）与"强电荷耦合非必要条件"的讨论；p. 78：$2g_s/2\pi=43.5\ \mathrm{MHz}$ 自旋真空 Rabi 劈裂与强耦合判据 $g_s>\kappa^*,\gamma_s$。
-- [[sources/ref-03|文献 3]]，PDF pp. 82–84：色散区哈密顿量与 QND 测量性质、按 $g/\gamma$ 与 $\Delta/\gamma$ 划分的耦合相图及各区间用途（图 6.3）；pp. 84–85：双量子点作为人工二能级原子与腔的电容耦合模型（式 6.12–6.14）；pp. 89–90：点间跃迁线与共隧穿线对腔响应的选择性、主方程拟合提取 $g\sim 6.5$–$20\ \mathrm{MHz}$ 与退相干 $0.4$–$1.1\ \mathrm{GHz}$。

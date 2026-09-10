@@ -2,11 +2,11 @@
 title: 库仑阻塞
 description: 小电容量子点中，因加电子能不满足输运条件而出现的电流抑制。
 aliases:
-  - 库伦阻塞
-  - 库仑阻塞效应
+ - 库伦阻塞
+ - 库仑阻塞效应
 tags:
-  - 量子点基础
-  - 量子输运
+ - 量子点基础
+ - 量子输运
 date: 2026-09-08
 ---
 
@@ -17,7 +17,7 @@ date: 2026-09-08
 库仑阻塞（Coulomb blockade）是介观物理中最基础的单电子效应：当一个导体岛（这里是[[semiconductor-quantum-dot|半导体量子点]]）通过两个隧穿势垒与源极（source）、漏极（drain）电子库相连时，岛内的载流子数 $N$ 只能取整数。一旦岛上已有 $N-1$ 个电子，再填入第 $N$ 个电子需要支付[[electrochemical-potential|电化学势]] $\mu(N)=U(N)-U(N-1)$；只要这个能量高于源、漏两侧的费米面，即
 
 $$
-\mu(N-1)<\mu_D<\mu_S<\mu(N),
+\mu(N-1)<\mu_D<\mu_S<\mu(N)
 $$
 
 电子就既不能从源极跳入、也不能从漏极跳出，顺序隧穿（sequential tunneling）被禁止，源漏电流降为零，量子点上的电子数被锁定为一个确定的整数。反之，当某个 $\mu(N)$ 落入源漏费米面之间（$\mu_D<\mu(N)<\mu_S$）时，电子按"源极 $\to$ 量子点 $\to$ 漏极"的顺序逐个通过，称为单电子隧穿（single electron tunneling），电流大小由进、出两侧的隧穿率 $\Gamma_S$、$\Gamma_D$ 决定。
@@ -26,7 +26,7 @@ $$
 
 ![[assets/figures/fundamentals/shang-2014-fig1-3-sqd-blockade.jpg]]
 
-*单量子点器件与库仑阻塞输运示意图（[文献 2]([[sources/shang-runan-2014]])，图 1.3）*
+*单量子点器件与库仑阻塞输运示意图*
 
 <!-- 原始占位：量子点双势垒输运能级示意图：(a) 阻塞情形 μ(N−1) < μD < μS < μ(N)；(b) 单电子隧穿情形 μD < μ(N) < μS -->
 
@@ -37,7 +37,7 @@ $$
 1. 量子点中电子之间、以及电子与外界电极之间的库仑相互作用，全部压缩为一个常数总电容
 
 ```math
-C_\Sigma=C_S+C_D+C_G,
+C_\Sigma=C_S+C_D+C_G
 ```
 
 即点与源、漏、栅电容之和；
@@ -46,19 +46,19 @@ C_\Sigma=C_S+C_D+C_G,
 源极施加 $V_{SD}$、漏极接地、栅压 $V_G$ 时，含 $N$ 个电子的量子点总能量为
 
 $$
-U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B),
+U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B)
 $$
 
 其中 $N_0|e|$ 补偿异质结施主离子的正电荷背景。第 $N$ 个电子进入量子点所需的最小能量即电化学势：
 
 $$
-\mu(N)=U(N)-U(N-1)=\left(N-N_0-\frac{1}{2}\right)E_C-\frac{E_C}{|e|}\left(C_S V_{SD}+C_G V_G\right)+E_N,
+\mu(N)=U(N)-U(N-1)=\left(N-N_0-\frac{1}{2}\right)E_C-\frac{E_C}{|e|}\left(C_S V_{SD}+C_G V_G\right)+E_N
 $$
 
 其中 $E_C=e^2/C_\Sigma$ 为[[charging-energy|充电能]]（charging energy）。相邻电荷态的间距为加电子能（addition energy）：
 
 $$
-E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E,
+E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E
 $$
 
 $\Delta E=E_{N+1}-E_N$ 是单粒子能级间隔。对百纳米量级的门控量子点，$C_\Sigma$ 很小，$E_C$ 远大于 $\Delta E$，因此电化学势近似等间距排列，库仑峰近似等周期出现。
@@ -68,13 +68,13 @@ $\Delta E=E_{N+1}-E_N$ 是单粒子能级间隔。对百纳米量级的门控量
 上式中 $\mu(N)$ 对栅压 $V_G$ 是线性的，斜率直接给出杠杆臂（lever arm）的微观定义：
 
 $$
-\frac{d\mu(N)}{dV_G}=-\frac{E_C}{|e|}C_G=-|e|\,\frac{C_G}{C_\Sigma}\equiv-|e|\alpha,
+\frac{d\mu(N)}{dV_G}=-\frac{E_C}{|e|}C_G=-|e|\,\frac{C_G}{C_\Sigma}\equiv-|e|\alpha
 $$
 
 即 $\alpha=C_G/C_\Sigma$——栅压改变 $1\ \mathrm{mV}$ 时点内电化学势移动 $\alpha\ \mathrm{meV}$。令相邻两个电荷态在同一源漏条件下简并，$\mu(N+1;V_G)=\mu(N;V_G+\Delta V_G)$，可得库仑峰的栅压周期
 
 $$
-\Delta V_G=\frac{E_C+\Delta E}{|e|\alpha}=\frac{e}{C_G}\left(1+\frac{\Delta E}{E_C}\right)\approx\frac{e}{C_G},
+\Delta V_G=\frac{E_C+\Delta E}{|e|\alpha}=\frac{e}{C_G}\left(1+\frac{\Delta E}{E_C}\right)\approx\frac{e}{C_G}
 $$
 
 多电子区 $\Delta E\ll E_C$ 时峰严格等周期。这解释了为什么栅压扫描中阻塞谷与导通峰交替等距出现，也说明峰周期本身就是栅电容的直接度量。同理，$\mu(N)$ 对 $V_{SD}$ 的斜率为 $-|e|C_S/C_\Sigma$，源、漏、栅三个方向斜率的差异正是库仑菱形倾斜边界的来源。
@@ -90,7 +90,7 @@ $$
 
 $$
 \Gamma^{\mathrm{in}}_{\alpha}=\Gamma_{\alpha}\,f\!\left(\mu(N)-\mu_\alpha,\,T_e\right),\qquad
-\Gamma^{\mathrm{out}}_{\alpha}=\Gamma_{\alpha}\left[1-f\!\left(\mu(N)-\mu_\alpha,\,T_e\right)\right],
+\Gamma^{\mathrm{out}}_{\alpha}=\Gamma_{\alpha}\left[1-f\!\left(\mu(N)-\mu_\alpha,\,T_e\right)\right]
 $$
 
 其中 $\alpha\in\{S,D\}$，$f$ 为费米–狄拉克函数，$T_e$ 为电子温度。阻塞条件 $\mu(N)>\mu_S,\mu_D$ 正对应 $\Gamma^{\mathrm{in}}$ 被占据因子指数压制；对存在塞曼劈裂 $E_z$ 的自旋分辨能级，只需把 $\mu(N)$ 替换为相应的自旋能级，即可得到自旋选择的进、出速率，这是[[readout-measurement/single-shot-readout|单发读出]]速率方程的出发点。
@@ -112,12 +112,12 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | 文献 2 |
-| 量子点尺度 | 百纳米量级，$E_C\gg\Delta E$，化学势近似等间距 | 文献 4 |
-| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 文献 4 |
-| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 文献 4 |
-| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | 文献 4 |
-| 输运电导 | $G\ll 2e^2/h$（阻塞 regime 前提） | 文献 1 |
+| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | |
+| 量子点尺度 | 百纳米量级，$E_C\gg\Delta E$，化学势近似等间距 | |
+| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | |
+| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | |
+| 杠杆臂 $\alpha$ | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | |
+| 输运电导 | $G\ll 2e^2/h$（阻塞 regime 前提） | |
 
 ## 实验特征与测量
 
@@ -132,23 +132,23 @@ $$
 - **共隧穿**（cotunneling）：电子经虚占据中间态一次性穿过量子点，属于更高阶过程，在阻塞谷中产生弱但有限的电流；
 - **近藤效应**（Kondo effect）：当点内净自旋为 $1/2$（电子数为奇）时，点自旋与电子库传导电子在低温下屏蔽成单态。把量子点映射为安德森杂质模型（Anderson impurity model）。
 
-  哈密顿量写作
+ 哈密顿量写作
 
-  ```math
-H=H_R+H_L+H_{QD}+H_I,\quad H_{QD}=\sum_{\sigma}\epsilon_d\,d^\dagger_\sigma d_\sigma+U n_\uparrow n_\downarrow,
+ ```math
+H=H_R+H_L+H_{QD}+H_I,\quad H_{QD}=\sum_{\sigma}\epsilon_d\,d^\dagger_\sigma d_\sigma+U n_\uparrow n_\downarrow
 ```
 
-  ```math
-H_I=\sum_{k\sigma}V_{Rk\sigma}\left[c^\dagger_{Rk\sigma}d_\sigma+\mathrm{h.c.}\right]+\sum_{k\sigma}V_{Lk\sigma}\left[c^\dagger_{Lk\sigma}d_\sigma+\mathrm{h.c.}\right],
+ ```math
+H_I=\sum_{k\sigma}V_{Rk\sigma}\left[c^\dagger_{Rk\sigma}d_\sigma+\mathrm{h.c.}\right]+\sum_{k\sigma}V_{Lk\sigma}\left[c^\dagger_{Lk\sigma}d_\sigma+\mathrm{h.c.}\right]
 ```
 
-  其中 $U$ 即点内库仑相互作用。系统在 Kondo 温度
+ 其中 $U$ 即点内库仑相互作用。系统在 Kondo 温度
 
-  ```math
+ ```math
 T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gamma}\right]
 ```
 
-  以下于阻塞谷中央产生零偏压电导峰（zero-bias peak, ZBP）——在原本 $dI/dV=0$ 的阻塞区出现电导。实验判据有二：加平行磁场后峰按塞曼能劈裂为二；升温后峰高下降直至消失；
+ 以下于阻塞谷中央产生零偏压电导峰（zero-bias peak, ZBP）——在原本 $dI/dV=0$ 的阻塞区出现电导。实验判据有二：加平行磁场后峰按塞曼能劈裂为二；升温后峰高下降直至消失；
 - **光子辅助过程**：强微波驱动下，电子可吸收光子能量跨越失谐，在阻塞区诱导[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]（photon-assisted tunneling）边带。
 
 因此，"库仑阻塞"总是相对特定的输运阶次、温度与测量分辨率而言的。
@@ -160,24 +160,3 @@ T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gamma
 - [[constant-interaction-model|常相互作用模型]]给出阻塞区边界、峰周期与菱形尺寸的定量预言。
 - 有限偏压下阻塞区展开为[[coulomb-diamond|库仑菱形]]；在[[double-quantum-dot|双量子点]]中，两个点各自的阻塞条件与点间能级对齐共同编织出[[charge-stability-diagram|电荷稳定图]]的蜂窝结构。
 - 隧穿势垒的透明度由[[tunnel-coupling|隧穿耦合]]控制，它同时决定阻塞的"封闭程度"与库仑峰的高度。
-
-## 延伸阅读
-
-- T. A. Fulton and G. J. Dolan, "Observation of single-electron charging effects in small tunnel junctions", *Physical Review Letters* (1987). [DOI: 10.1103/PhysRevLett.59.109]
-- L. P. Kouwenhoven, C. M. Marcus, P. L. McEuen, S. Tarucha, R. M. Westervelt, and N. S. Wingreen, "Few-electron quantum dots", *Reports on Progress in Physics* (2001). [DOI: 10.1088/0034-4885/64/6/201]
-- D. Goldhaber-Gordon et al., "Kondo effect in a single-electron transistor", *Nature* (1998). [DOI: 10.1038/34373]
-- R. Hanson, L. P. Kouwenhoven, J. R. Petta, S. Tarucha, and L. M. K. Vandersypen, "Spins in few-electron quantum dots", *Reviews of Modern Physics* (2007). [DOI: 10.1103/RevModPhys.79.1217]
-
-## 论文依据
-
-- [[sources/ref-01|文献 1]]，PDF pp. 25–26：常相互作用模型的两条假设、$U(N)$ 与 $\mu(N)$ 公式、库仑阻塞条件 $\mu(N-1)<\mu_D<\mu_S<\mu(N)$ 及 $G_{QPC}\ll 2e^2/h$ 前提。
-- [[sources/ref-01|文献 1]]，PDF p. 67：环境热涨落大于充电能时库仑阻塞无法发生。
-- [[sources/ref-04|文献 4]]，PDF pp. 16–19：库仑阻塞与库仑菱形的定义、锁相测量方案，以及从菱形提取 $C_G$、$E_C$、$\alpha$ 的方法。
-- [[sources/ref-04|文献 4]]，PDF p. 80：浅刻蚀 GaAs 量子点实测总电容 $113\ \mathrm{aF}$、充电能 $1.5\ \mathrm{meV}$。
-- [[sources/ref-04|文献 4]]，PDF pp. 64–65：在库仑阻塞区测量低频 $1/f$ 噪声。
-- [[sources/ref-07|文献 7]]，PDF pp. 20–21：偏压窗口、库仑振荡峰与库仑菱形，杠杆臂 $\alpha=|V_{SD}|/\Delta V_g$ 的标定。
-- [[sources/ref-02|文献 2]]，PDF p. 18：库仑阻塞的能级图像与逐个排空电子的实验思想。
-- [[sources/ref-02|文献 2]]，PDF pp. 76–77：量子点 Kondo 问题的安德森模型哈密顿量与 Kondo 温度公式。
-- [[sources/ref-02|文献 2]]，PDF p. 84：阻塞谷中零偏压峰的实验观测。
-- [[sources/ref-10|文献 10]]，PDF p. 57：空穴量子点中的库仑阻塞、库仑振荡与共隧穿。
-- [[sources/ref-15|文献 15]]，PDF p. 74：费米黄金定则给出含费米–狄拉克占据因子的进、出隧穿速率。

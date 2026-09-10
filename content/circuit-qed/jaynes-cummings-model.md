@@ -2,12 +2,12 @@
 title: Jaynes–Cummings 模型
 description: 描述旋转波近似下单个二能级系统与单量子谐振模式交换激发的基础模型。
 aliases:
-  - JC模型
-  - J-C模型
-  - Jaynes-Cummings模型
+ - JC模型
+ - J-C模型
+ - Jaynes-Cummings模型
 tags:
-  - 电路量子电动力学
-  - 模型
+ - 电路量子电动力学
+ - 模型
 date: 2026-09-08
 ---
 
@@ -27,7 +27,7 @@ date: 2026-09-08
 
 $$
 H_{\mathrm{Rabi}}/\hbar=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z
-+g\left(a^\dagger+a\right)\left(\sigma_++\sigma_-\right),
++g\left(a^\dagger+a\right)\left(\sigma_++\sigma_-\right)
 $$
 
 其中 $a^\dagger$、$a$ 是腔光子的产生、湮灭算符，$\omega_r$ 是腔模频率，$\omega_q$ 是比特跃迁频率，$\sigma_z$、$\sigma_\pm$ 是比特的泡利算符与升降算符，$g$ 是单光子耦合强度。相互作用项展开后含两类过程：$a^\dagger\sigma_-+a\sigma_+$ 描述激发在比特与腔之间的相干交换（总激发数守恒）；$a^\dagger\sigma_++a\sigma_-$ 描述比特与光子同时激发或同时弛豫的反旋项（counter-rotating terms）。
@@ -35,7 +35,7 @@ $$
 当系统满足旋转波近似（rotating-wave approximation，RWA）条件
 
 $$
-g\ll\omega_q,\omega_r,\qquad |\omega_q-\omega_r|\ll|\omega_q+\omega_r|,
+g\ll\omega_q,\omega_r,\qquad |\omega_q-\omega_r|\ll|\omega_q+\omega_r|
 $$
 
 反旋项以约 $\omega_q+\omega_r$ 的频率快速振荡、平均为零，可以略去，得到 JC 哈密顿量：
@@ -54,7 +54,7 @@ RWA 之后总激发数 $\hat{N}=a^\dagger a+\sigma_+\sigma_-$ 与哈密顿量对
 $$
 \begin{aligned}
 |{+},n\rangle&=\sin\phi_n\,|g,n\rangle+\cos\phi_n\,|e,n-1\rangle,\\
-|{-},n\rangle&=\cos\phi_n\,|g,n\rangle-\sin\phi_n\,|e,n-1\rangle,
+|{-},n\rangle&=\cos\phi_n\,|g,n\rangle-\sin\phi_n\,|e,n-1\rangle
 \end{aligned}
 $$
 
@@ -76,7 +76,7 @@ $$
 共振（$\Delta=0$）时缀饰态是最大混合态 $|\pm,n\rangle=(|g,n\rangle\pm|e,n-1\rangle)/\sqrt{2}$，能级劈裂为 $2g\sqrt{n}$。若初态制备为 $|e,0\rangle=\frac{1}{\sqrt{2}}(|{+},1\rangle-|{-},1\rangle)$，系统演化为
 
 $$
-|\psi(t)\rangle=\cos(gt)\,|e,0\rangle+i\sin(gt)\,|g,1\rangle,
+|\psi(t)\rangle=\cos(gt)\,|e,0\rangle+i\sin(gt)\,|g,1\rangle
 $$
 
 即一个激发以速率 $g$ 在比特与空腔之间往返——真空 Rabi 振荡。频域上，$|\pm,1\rangle$ 之间 $2g$ 的间隔表现为透射/反射谱中的[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，是实验提取 $g$ 的最直接手段；在自旋比特体系中测得的劈裂可达 $2g_s/2\pi=43.5$ MHz，在电荷比特体系中全局耦合可达 $g_0/2\pi=175$ MHz。观察到劈裂还要求谱线可分辨，即进入[[circuit-qed/strong-coupling|强耦合]]区 $g>\kappa,\gamma$；此时系统的有效总耗散为 $\Gamma_{\mathrm{eff}}=(\kappa+\gamma)/2$。
@@ -92,18 +92,17 @@ $$
 
 定义色散频移 $\chi=g^2/\Delta$。从腔的角度看，腔频依比特态移动 $\pm\chi$：比特处于基态（$\langle\sigma_z\rangle=-1$）与激发态（$+1$）时腔频偏移方向相反。测量腔的透射或反射相位即可推断比特态，且该测量算符与比特哈密顿量对易，构成量子非破坏测量（quantum nondemolition measurement，QND），是[[readout-measurement/dispersive-readout|色散读出]]的理论基础。
 
-把同一哈密顿量按比特项整理，
-
+把同一哈密顿量按比特项整理
 $$
 H_{\mathrm{disp}}/\hbar\approx\omega_r a^\dagger a
-+\frac{1}{2}\left(\omega_q+2\chi\,a^\dagger a+\chi\right)\sigma_z,
++\frac{1}{2}\left(\omega_q+2\chi\,a^\dagger a+\chi\right)\sigma_z
 $$
 
 可见比特频率也获得两项修正：与腔内光子数成正比的 $2\chi n$ 称为交流斯塔克频移（ac Stark shift），可用来标定腔内光子数；与光子数无关的 $\chi$ 来自真空涨落，称为兰姆频移（Lamb shift）。能从谱上分辨比特态（或光子数）要求 $\chi>\kappa,\gamma$，满足此条件的系统称为处于强色散区（strong dispersive regime）。
 
 ## 参数与量级
 
-半导体量子点 cQED 实验中的典型参数（取自本站论文依据所列工作）：
+半导体量子点 cQED 实验中的典型参数（取自本站论文中所列工作）：
 
 | 参数 | 典型量级 | 说明 |
 | --- | --- | --- |
@@ -119,7 +118,7 @@ $$
 JC 物理通过腔的散射参数进入测量。透射式腔的透射系数
 
 $$
-S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2},
+S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2}
 $$
 
 其中比特的响应通过磁化率 $\chi_c=g_c/(-\Delta+i\gamma)$ 进入，$\gamma=\gamma_1/2+\gamma_\phi$ 汇总弛豫与退相位。按实部、虚部分解，比特同时移动腔频与展宽：
@@ -141,18 +140,3 @@ $$
 ## 与其他概念的关系
 
 JC 模型是[[circuit-quantum-electrodynamics|电路量子电动力学]]的最小构件：其共振极限对应[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合]]判据；色散极限对应[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。在半导体实现中，"二能级"可以是[[qubit-control/charge-qubit|电荷比特]]（电偶极强、退相干快）、经微磁体或自旋轨道机制获得电荷混合的[[circuit-qed/spin-photon-coupling|自旋比特]]，以及多量子点杂化编码；耦合的微观大小由[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的杠杆臂、混合角与腔阻抗决定。
-
-## 延伸阅读
-
-- E. T. Jaynes, F. W. Cummings, "Comparison of quantum and semiclassical radiation theories with application to the beam maser", Proceedings of the IEEE (1963). [DOI: 10.1109/proc.1963.1664]
-- A. Wallraff et al., "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics", Nature (2004). [DOI: 10.1038/nature02851]
-- A. Blais et al., "Cavity quantum electrodynamics for superconducting electrical circuits: An architecture for quantum computation", Physical Review A (2004). [DOI: 10.1103/PhysRevA.69.062320]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, A. Wallraff, "Circuit Quantum Electrodynamics", Reviews of Modern Physics (2021). [DOI: 10.1103/RevModPhys.93.025005]
-
-## 论文依据
-
-- [[sources/ref-03|文献 3]]，PDF p. 80：JC 模型哈密顿量（式 6.1–6.3）与按激发数分块对角化；pp. 83–84：强色散区与弱色散区的划分及其测量含义。
-- [[sources/ref-13|文献 13]]，PDF p. 15：JC 模型的提出（1963）与里德堡原子真空 Rabi 振荡；pp. 28–30：旋波近似条件、缀饰态与本征能量（式 2.2–2.9）、色散哈密顿量、ac Stark 与 Lamb 频移、强耦合与强色散判据；p. 45：腔透射/反射响应公式与最强电荷比特耦合 619 MHz（$g_c/\omega_r\sim0.11$）；p. 116：超强耦合区 JC 模型失效的讨论。
-- [[sources/ref-17|文献 17]]，PDF pp. 37–40：Rabi 模型到 JC 模型的旋波近似推导、缀饰态（式 2.39–2.44）、共振/准色散/色散区间划分、真空 Rabi 振荡与劈裂、色散频移与 ac Stark/Lamb 频移（式 2.45–2.46）。
-- [[sources/ref-20|文献 20]]，PDF pp. 38–39：JC 模型推导、相互作用绘景与共振/色散两种极限（式 2.37–2.48）；p. 40：耦合强度公式 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 与 2–20 GHz 比特频率范围；pp. 55、62、78：$f_r=4.993$ GHz 与 $\kappa/2\pi=2.2$ MHz 的腔参数、$g_0/2\pi=175$ MHz 强耦合提取、$2g_s/2\pi=43.5$ MHz 自旋真空 Rabi 劈裂。
-- [[sources/ref-18|文献 18]]，PDF pp. 63–64：三量子点–腔杂化系统的多能级 JC 模型（式 3.2–3.4）与量子朗之万方程、输入输出边界条件。

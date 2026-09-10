@@ -2,14 +2,14 @@
 title: 空穴自旋量子比特
 description: 以半导体价带空穴的两个自旋态编码、可利用强自旋轨道耦合全电操控的量子比特。
 aliases:
-  - 空穴量子比特
-  - 锗空穴自旋比特
-  - 锗空穴比特
-  - 平面锗空穴自旋比特
+ - 空穴量子比特
+ - 锗空穴自旋比特
+ - 锗空穴比特
+ - 平面锗空穴自旋比特
 tags:
-  - 量子比特操控
-  - 空穴自旋
-  - 锗
+ - 量子比特操控
+ - 空穴自旋
+ - 锗
 date: 2026-09-08
 ---
 
@@ -33,14 +33,14 @@ date: 2026-09-08
 立方半导体的价带顶在 $\Gamma$ 点是四重简并的 $J=3/2$ 多重态。空穴自旋比特的"自旋"并非电子意义上的 $S=1/2$，而是有效自旋 $J=3/2$ 的赝自旋投影。这一表象下，$\Gamma$ 点附近低能级激发由 4×4 Luttinger–Kohn 哈密顿量描述（论文中以 $H_\mathrm{LK}$ 或 $\mathcal{H}_\mathrm{LK}$ 表示）：
 
 $$
-\mathcal{H}_\mathrm{LK}=\frac{\hbar^{2}}{2m_{0}}\!\left[\!\left(\gamma_{1}+\tfrac{5}{2}\gamma_{2}\right)k^{2}-2\gamma_{2}(\mathbf{k}\cdot\mathbf{J})^{2}+(\gamma_{3}-\gamma_{2})\sum_{i\ne j}k_{i}k_{j}\{J_{i},J_{j}\}\!\right],
+\mathcal{H}_\mathrm{LK}=\frac{\hbar^{2}}{2m_{0}}\!\left[\!\left(\gamma_{1}+\tfrac{5}{2}\gamma_{2}\right)k^{2}-2\gamma_{2}(\mathbf{k}\cdot\mathbf{J})^{2}+(\gamma_{3}-\gamma_{2})\sum_{i\ne j}k_{i}k_{j}\{J_{i},J_{j}\}\!\right]
 $$
 
 其中 $\mathbf{k}$ 是波矢，$\mathbf{J}$ 是 $J=3/2$ 角动量算符，$\gamma_{1,2,3}$ 是 Luttinger 参数；应变与反演不对称性打开的项又把立方对称降到实际器件的 $C_{2v}$ 或更低。在强量子限域（横向尺度远小于纵向）下，重空穴（heavy hole, hh, $J_z=\pm 3/2$）与轻空穴（light hole, lh, $J_z=\pm 1/2$）的分裂 $\Delta_\mathrm{hl}$ 通常远大于塞曼能与电荷能，于是最低两条子带由一对重空穴赝自旋 $\{|+3/2\rangle,|-3/2\rangle\}$ 组成——这就是空穴自旋比特的计算子空间。
 
 ![[assets/figures/qubit-control/xu-2020-fig1-1-ge-hole-single-qd.jpg]]
 
-*锗纳米线空穴型单量子点电路模型与库仑振荡/菱形图（[文献 12]([[sources/xu-gang-2020]])，图 1.1）*
+*锗纳米线空穴型单量子点电路模型与库仑振荡/菱形图*
 
 <!-- 原始占位：Luttinger–Kohn 能带结构示意图，标注 hh、lh 自旋劈裂与量子限域导致的子带分裂 Δ_hl -->
 
@@ -49,7 +49,7 @@ $$
 把两条重空穴子带作为计算子空间，单空穴自旋比特的最低阶有效哈密顿量在形式上与[[qubit-control/single-spin-qubit|单电子自旋比特]]一致：
 
 $$
-H_{0}=\tfrac{1}{2}\,\mu_\mathrm{B}\,\mathbf{B}\cdot\boldsymbol{g}\cdot\boldsymbol{\sigma},
+H_{0}=\tfrac{1}{2}\,\mu_\mathrm{B}\,\mathbf{B}\cdot\boldsymbol{g}\cdot\boldsymbol{\sigma}
 $$
 
 其中 $\boldsymbol{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ 是 Pauli 矢量、$\boldsymbol{g}$ 是 3×3 的 $g$ 张量、$\mathbf{B}$ 是外磁场。差别在于导带电子 $\boldsymbol{g}\approx 2\,\mathbb{1}$ 几乎各向同性，而空穴的 $\boldsymbol{g}$ 在晶轴坐标系下对角元大小悬殊且带内禀各向异性，对外磁场方向与栅极电场方向都敏感——这正是后文磁场方向优化与栅压调谐的物理根源。
@@ -59,7 +59,7 @@ $$
 当量子点尺寸有限、量子点界面或栅压破坏反演对称时，会出现两类 SOC 项：
 
 $$
-\mathcal{H}_\mathrm{SOC}=\mathcal{H}_\mathrm{R}+\mathcal{H}_\mathrm{D},
+\mathcal{H}_\mathrm{SOC}=\mathcal{H}_\mathrm{R}+\mathcal{H}_\mathrm{D}
 $$
 
 - **Rashba 型** $\mathcal{H}_\mathrm{R}=\alpha(\boldsymbol{\sigma}\times\mathbf{k})\cdot\vec{E}$：源于结构反演不对称（界面、栅电场）。在空穴体系中，$\alpha$ 通常比电子大两到三个量级；
@@ -68,17 +68,17 @@ $$
 实际锗量子点的主导机制常是重空穴–轻空穴混合产生的"类 Rashba"项，与电场强度线性可调。一个常用的微观长度刻画强度：
 
 $$
-l_\mathrm{SO}=\frac{\hbar}{m^{*}\sqrt{\alpha^{2}+\beta^{2}}},
+l_\mathrm{SO}=\frac{\hbar}{m^{*}\sqrt{\alpha^{2}+\beta^{2}}}
 $$
 
-即"自旋轨道长度"。$l_\mathrm{SO}$ 越短，单位电场位移产生的有效自旋转动越大，EDSR 越快。论文中文献 12 报告锗棚顶纳米线双量子点 $t_\mathrm{SO}\sim 38\pm 4\ \mu\mathrm{eV}$、$l_\mathrm{SO}\sim 40{-}100\ \mathrm{nm}$，与 GaAs 电子体系 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ 形成鲜明对比。
+即"自旋轨道长度"。$l_\mathrm{SO}$ 越短，单位电场位移产生的有效自旋转动越大，EDSR 越快。论文中 报告锗棚顶纳米线双量子点 $t_\mathrm{SO}\sim 38\pm 4\ \mu\mathrm{eV}$、$l_\mathrm{SO}\sim 40{-}100\ \mathrm{nm}$，与 GaAs 电子体系 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ 形成鲜明对比。
 
 ### 自旋阻塞漏电流的来源
 
 双量子点中进入泡利自旋阻塞（Pauli spin blockade, PSB）区后，理想情况下漏电流为零。空穴体系的漏电流有三种典型来源：
 
 $$
-I_\mathrm{leak}=I_\mathrm{hyper}+I_{\Delta g}+I_\mathrm{SOC},
+I_\mathrm{leak}=I_\mathrm{hyper}+I_{\Delta g}+I_\mathrm{SOC}
 $$
 
 - $I_\mathrm{hyper}$：超精细相互作用引起的自旋翻转；
@@ -95,7 +95,7 @@ $$
 
 $$
 H=\tfrac{1}{2}\mu_\mathrm{B}gB\sigma_{z}+\tfrac{1}{2}\mu_\mathrm{B}gB_\mathrm{eff}\cdot\boldsymbol{\sigma}_{\perp},\qquad
-B_\mathrm{eff}=\frac{2eE(t)\,l_\mathrm{dot}}{\hbar\,\Delta}\,\tilde{\alpha},
+B_\mathrm{eff}=\frac{2eE(t)\,l_\mathrm{dot}}{\hbar\,\Delta}\,\tilde{\alpha}
 $$
 
 其中 $l_\mathrm{dot}$ 是量子点特征尺寸、$\Delta$ 是重空穴–轻空穴分裂或能级间距、$\tilde{\alpha}$ 是含 Rashba/Dresselhaus 系数的归一化常数。当微波频率 $\omega=\omega_Z=g\mu_\mathrm{B}B/\hbar$ 共振时，布洛赫矢量绕等效横向场进动，出现 Rabi 振荡：
@@ -104,7 +104,7 @@ $$
 f_\mathrm{Rabi}=\frac{g\mu_\mathrm{B}B_\mathrm{eff}}{2h}\propto \frac{V_\mathrm{AC}\,l_\mathrm{dot}}{h\,\Delta}\sqrt{\alpha^{2}+\beta^{2}}.
 $$
 
-锗空穴体系 $f_\mathrm{Rabi}$ 可达数百 MHz 到数 GHz 量级，远高于电子自旋比特常报告的 1–30 MHz。论文中报告的最高值：文献 12 棚顶纳米线 $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$；文献 25 平面应变锗几何门区 $f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 用于容错优化的"低速率高保真"区。
+锗空穴体系 $f_\mathrm{Rabi}$ 可达数百 MHz 到数 GHz 量级，远高于电子自旋比特常报告的 1–30 MHz。论文中报告的最高值： 棚顶纳米线 $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$； 平面应变锗几何门区 $f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 用于容错优化的"低速率高保真"区。
 
 ### 操控序列与时间域测量
 
@@ -115,7 +115,7 @@ $$
 - **CPMG / dynamical decoupling** 把 $\pi$ 脉冲串延长到毫秒级，与电荷噪声频谱耦合；
 - **Rabi 扫描** 改变脉冲长度 $t_\mathrm{p}$，记录翻转概率随时间的正弦振荡，提取 $f_\mathrm{Rabi}$ 与 $T_{2}^\mathrm{Rabi}$。
 
-论文中文献 11 在锗棚顶纳米线单空穴比特上用 Hahn echo 把退相干从 $T_{2}^{*}\sim 65\ \mathrm{ns}$ 提升到 $T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$，并实现 $\pi$ 脉冲单比特翻转保真度超过 99%；文献 25 报告在最优工作点下 $T_2^\mathrm{Rabi}\sim 1.77\ \mu\mathrm{s}$。
+论文中 在锗棚顶纳米线单空穴比特上用 Hahn echo 把退相干从 $T_{2}^{*}\sim 65\ \mathrm{ns}$ 提升到 $T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$，并实现 $\pi$ 脉冲单比特翻转保真度超过 99%； 报告在最优工作点下 $T_2^\mathrm{Rabi}\sim 1.77\ \mu\mathrm{s}$。
 
 ### 读出：自旋–电荷转换
 
@@ -124,7 +124,7 @@ $$
 - **能量选择读出**：把 $|{\uparrow}\rangle$、$|{\downarrow}\rangle$ 调节到与漏极能级对齐的能量差处，利用 Pauli 自旋阻塞判定隧穿是否发生；
 - **PSB 读出**：在双量子点偏压三角形底部监测漏电流，漏电流大小直接反映比特态；
 - **电荷感应器**（QPC、单电子管、射频反射）：通过邻近电导变化感知比特点电荷态——若比特点中的最后一个电子自旋翻转改变了双点电荷分布，感应器立即给出电学信号；
-- **腔色散读出**：把比特耦合到超导微波腔，用比特–腔色散位移读取电荷或自旋态；文献 12 报告锗棚顶纳米线空穴双量子点–腔耦合强度 $g_C/2\pi\sim 15\ \mathrm{MHz}$。
+- **腔色散读出**：把比特耦合到超导微波腔，用比特–腔色散位移读取电荷或自旋态； 报告锗棚顶纳米线空穴双量子点–腔耦合强度 $g_C/2\pi\sim 15\ \mathrm{MHz}$。
 
 ## 与其他概念的关系
 
@@ -143,22 +143,22 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 自旋轨道耦合强度 $t_\mathrm{SO}$ | $\sim 38\pm 4\ \mu\mathrm{eV}$ | 文献 12（锗棚顶纳米线双量子点） |
-| 自旋轨道长度 $l_\mathrm{SO}$ | $40{-}100$ nm | 文献 12；GaAs 电子 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ |
-| 单比特 Rabi 频率（高速） | $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$ | 文献 12 |
-| 高速区 $T_{2}^{\mathrm{Rabi}}$ | $\sim 1.77\ \mu\mathrm{s}$（@ $f_\mathrm{Rabi}\sim 19\ \mathrm{MHz}$） | 文献 25 |
-| 优化工作点 $T_{2}^{*}$ 提升 | 约 5 倍（相对常规工作点） | 文献 25 |
-| 几何门单比特保真度 | $>99.9\%$（$f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 区间均 $>99\%$） | 文献 25 |
-| 动力学门优化后保真度 | 最高 $99.82\%$，超过容错阈值 | 文献 25 |
-| Hahn echo 提升 | $T_{2}^{*}\sim 65\ \mathrm{ns}\to T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$ | 文献 11 |
-| 空穴–腔耦合强度 | $g_C/2\pi\sim 15\ \mathrm{MHz}$ | 文献 12 |
-| 重空穴有效质量 | 比电子小（具体值与应变/限域相关，论文强调"对量子点尺寸要求相对宽松"） | 文献 25 |
-| 单比特门操作时间（参考） | 20 ns 单比特、75 ns 两比特（锗异质结） | 文献 23 转引文献 [36] |
-| 单/两比特保真度（参考） | 99.97% 单比特、99.3% 两比特（空穴跳跃方法） | 文献 23 转引文献 [41] |
-| 阵列规模（参考） | $2\times 2$、$2\times 4$、$4\times 4$、10、18 空穴比特 | 文献 23 转引文献 [43–47] |
-| 长程穿梭距离 | 自旋态在 9 μm（可优化至 49 μm）穿梭后保持相干 | 文献 23 转引文献 [48] |
+| 自旋轨道耦合强度 $t_\mathrm{SO}$ | $\sim 38\pm 4\ \mu\mathrm{eV}$ | （锗棚顶纳米线双量子点） |
+| 自旋轨道长度 $l_\mathrm{SO}$ | $40{-}100$ nm | ；GaAs 电子 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ |
+| 单比特 Rabi 频率（高速） | $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$ | |
+| 高速区 $T_{2}^{\mathrm{Rabi}}$ | $\sim 1.77\ \mu\mathrm{s}$（@ $f_\mathrm{Rabi}\sim 19\ \mathrm{MHz}$） | |
+| 优化工作点 $T_{2}^{*}$ 提升 | 约 5 倍（相对常规工作点） | |
+| 几何门单比特保真度 | $>99.9\%$（$f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 区间均 $>99\%$） | |
+| 动力学门优化后保真度 | 最高 $99.82\%$，超过容错阈值 | |
+| Hahn echo 提升 | $T_{2}^{*}\sim 65\ \mathrm{ns}\to T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$ | |
+| 空穴–腔耦合强度 | $g_C/2\pi\sim 15\ \mathrm{MHz}$ | |
+| 重空穴有效质量 | 比电子小（具体值与应变/限域相关，论文强调"对量子点尺寸要求相对宽松"） | |
+| 单比特门操作时间（参考） | 20 ns 单比特、75 ns 两比特（锗异质结） | 转引文献 [36] |
+| 单/两比特保真度（参考） | 99.97% 单比特、99.3% 两比特（空穴跳跃方法） | 转引文献 [41] |
+| 阵列规模（参考） | $2\times 2$、$2\times 4$、$4\times 4$、10、18 空穴比特 | 转引文献 [43–47] |
+| 长程穿梭距离 | 自旋态在 9 μm（可优化至 49 μm）穿梭后保持相干 | 转引文献 [48] |
 
-> [!note] 上表第三栏"参考"标记的数据来自文献 23（PDF pp. 18–19）转引的国际同行工作，不是本站 26 篇论文的原始内容，使用时请核对原文。
+> [!note] 上表第三栏"参考"标记的数据来自转引的国际同行工作，不是本站 26 篇论文的原始内容，使用时请核对原文。
 
 ## 实验特征
 
@@ -192,16 +192,3 @@ $$
 - **操控方法**：用[[qubit-control/geometric-quantum-gate|几何量子门]]等相位门降低对控制参数噪声的敏感性；
 - **工作点优化**：旋转外磁场方向、选择合适的势垒电压，让电荷噪声耦合最弱、相干时间最长；
 - **材料工程**：用臭氧钝化、自洽能带/缺陷建模与低缺陷密度的腔设计，减弱界面态对腔与比特的耦合。
-
-## 延伸阅读
-
-- "Ultrafast coherent control of a hole spin qubit in a germanium quantum dot", *Nature Communications* (2021). [DOI: 10.1038/s41467-021-27880-7]
-- "Ultrafast and Electrically Tunable Rabi Frequency in a Germanium Hut Wire Hole Spin Qubit", *Nano Letters* (2023). [DOI: 10.1021/acs.nanolett.3c00213]
-- "Theory of hole-spin qubits in strained germanium quantum dots", *Physical Review B* (2021). [DOI: 10.1103/PhysRevB.103.125201]
-- "Circuit QED with hole-spin qubits in Ge/Si nanowire quantum dots", *Physical Review B* (2013). [DOI: 10.1103/PhysRevB.88.241405]
-
-## 论文依据
-
-- [[sources/ref-12|文献 12]]，PDF pp. 4–5：锗棚顶纳米线空穴 EDSR、腔耦合与定位纳米线探索。
-- [[sources/ref-11|文献 11]]，PDF pp. 9–10：锗棚顶纳米线单空穴自旋比特 Rabi、Larmor 与 Hahn echo。
-- [[sources/ref-25|文献 25]]，PDF pp. 7–9：平面锗几何门、SOC 矢量场与最优工作点。

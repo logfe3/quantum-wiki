@@ -2,15 +2,15 @@
 title: 自旋轨道力矩操控
 description: 用电流产生的自旋轨道力矩翻转微磁性结构，从而以基带方式调节量子点局域磁场。
 aliases:
-  - SOT操控
-  - 自旋轨道力矩
-  - 自旋轨道转矩
-  - SOT基带门
-  - 可控翻转磁体
+ - SOT操控
+ - 自旋轨道力矩
+ - 自旋轨道转矩
+ - SOT基带门
+ - 可控翻转磁体
 tags:
-  - 扩展与自动化
-  - 自旋操控
-  - 磁性器件
+ - 扩展与自动化
+ - 自旋操控
+ - 磁性器件
 date: 2026-09-08
 ---
 
@@ -40,7 +40,7 @@ SOT 的微观前提是把电荷流转化为自旋流。在重金属/铁磁（HM/
 第一是自旋霍尔效应（spin Hall effect, SHE）。在重金属内部，自旋-轨道耦合使沿 $x$ 方向流动的电子按自旋取向在 $z$ 方向分成两束，形成纯自旋流：
 
 $$
-\boldsymbol{J}_s=\theta_\mathrm{SH}\,(\boldsymbol{J}_e\times\boldsymbol{\sigma}),
+\boldsymbol{J}_s=\theta_\mathrm{SH}\,(\boldsymbol{J}_e\times\boldsymbol{\sigma})
 $$
 
 其中 $\theta_\mathrm{SH}$ 是材料的本征自旋霍尔角。常见体系 Pt、Ta、W 的 $\theta_\mathrm{SH}\sim 0.1$–$0.5$，Pt 为正、Ta 与 W 为负。SHE 又分两类微观起源：外在机制是斜散射与侧跳，内在机制是能带中自旋-轨道耦合诱导的非零贝里曲率。
@@ -54,7 +54,7 @@ $$
 $$
 \frac{d\boldsymbol{M}}{dt}=-\gamma\boldsymbol{M}\times\boldsymbol{H}_\mathrm{eff}+\alpha\,\boldsymbol{M}\times\frac{d\boldsymbol{M}}{dt}
 +\tau_\mathrm{DL}\frac{\boldsymbol{M}\times(\boldsymbol{M}\times\boldsymbol{\sigma})}{|\boldsymbol{M}\times\boldsymbol{\sigma}|}
-+\tau_\mathrm{FL}\frac{\boldsymbol{M}\times\boldsymbol{\sigma}}{|\boldsymbol{M}\times\boldsymbol{\sigma}|},
++\tau_\mathrm{FL}\frac{\boldsymbol{M}\times\boldsymbol{\sigma}}{|\boldsymbol{M}\times\boldsymbol{\sigma}|}
 $$
 
 其中 $\gamma$ 是旋磁比、$\alpha$ 是无量纲 Gilbert 阻尼系数、$\boldsymbol{H}_\mathrm{eff}$ 是含外磁场、退磁场与各向异性场的有效场。SOT 项被分解为两个正交分量：
@@ -69,7 +69,7 @@ $$
 为定量描述 SOT 翻转对量子点磁场环境的调控，将铁磁体近似为磁偶极子：
 
 $$
-\boldsymbol{B}_\mathrm{dip}(\boldsymbol{r})=\frac{\mu_0}{4\pi}\,\frac{3(\boldsymbol{m}\cdot\hat{\boldsymbol{r}})\hat{\boldsymbol{r}}-\boldsymbol{m}}{r^3},
+\boldsymbol{B}_\mathrm{dip}(\boldsymbol{r})=\frac{\mu_0}{4\pi}\,\frac{3(\boldsymbol{m}\cdot\hat{\boldsymbol{r}})\hat{\boldsymbol{r}}-\boldsymbol{m}}{r^3}
 $$
 
 其中 $\boldsymbol{m}$ 是磁矩。当在量子点两侧对称设置两个尺寸为 $l=200\,\mathrm{nm}$、$w=100\,\mathrm{nm}$ 的 SOT 单元（面外磁化厚度 $2\,\mathrm{nm}$、面内磁化厚度 $5\,\mathrm{nm}$，磁体中心到量子点的水平距离 $d=80\,\mathrm{nm}$、垂直高度 $h=40\,\mathrm{nm}$），并且材料选为 CoFeB（饱和磁化强度 $M_s=1.6\times 10^6\,\mathrm{A/m}$）时，两单元产生的杂散场在量子点处矢量叠加。微磁学仿真（OOMMFc）给出：当两侧磁体平行时量子点处 $\boldsymbol{B}_1\approx(18.77,\,-10^{-3},\,-0.145)\,\mathrm{mT}$，沿 $+x$；一侧被 SOT 脉冲翻转到反平行时 $\boldsymbol{B}_2\approx(0.151,\,-0.095,\,10.34)\,\mathrm{mT}$，沿 $+z$。两组构型的磁场夹角接近 $\pi/2$，这是面内磁化 SOT 方案构造 $R(\pi/2)$ 旋转门的几何基础。
@@ -80,13 +80,13 @@ $$
 
 $$
 H_L=-\frac{\hbar\omega_0}{2}\sigma_z,\qquad
-H_R=-\frac{\hbar\omega_0}{2}\big(\cos\theta\,\sigma_z+\sin\theta\,\sigma_x\big),
+H_R=-\frac{\hbar\omega_0}{2}\big(\cos\theta\,\sigma_z+\sin\theta\,\sigma_x\big)
 $$
 
 其中 $\omega_0=g\mu_B B_0/\hbar$ 是拉莫尔频率。整体哈密顿量
 
 $$
-H=H_1+H_2,\qquad H_1=\frac{\varepsilon}{2}(|R\rangle\langle R|-|L\rangle\langle L|)+t_c(|L\rangle\langle R|+\mathrm{h.c.}),
+H=H_1+H_2,\qquad H_1=\frac{\varepsilon}{2}(|R\rangle\langle R|-|L\rangle\langle L|)+t_c(|L\rangle\langle R|+\mathrm{h.c.})
 $$
 
 $$
@@ -97,7 +97,7 @@ $$
 
 $$
 |\psi(t)\rangle=\cos\frac{\theta}{2}\,e^{-i\omega_0 t/2}|\!\uparrow\rangle_{\hat{\boldsymbol{n}}}
--\sin\frac{\theta}{2}\,e^{+i\omega_0 t/2}|\!\downarrow\rangle_{\hat{\boldsymbol{n}}},
+-\sin\frac{\theta}{2}\,e^{+i\omega_0 t/2}|\!\downarrow\rangle_{\hat{\boldsymbol{n}}}
 $$
 
 写回 $z$ 基下后控制等待时间 $t$ 即可得到任意轴旋转。这一方案要求 $\theta\neq 0$，而单 SOT 单元翻转前后杂散场是等大反向的 $\boldsymbol{B}_\mathrm{flipped}(\boldsymbol{r})=-\boldsymbol{B}_\mathrm{initial}(\boldsymbol{r})$，只让比特反向、不引入进动。
@@ -114,7 +114,7 @@ SOT 方案绕过该限制的两条路径：
 门保真度定义为对所有输入纯态平均后的输出态与理想幺正变换的重叠。在只存在相干噪声时
 
 $$
-\mathcal{F}=\frac{1}{2}+\frac{1}{6}\sum_{i=x,y,z}\bigl|\mathrm{Tr}\bigl(U_\mathrm{ideal}^\dagger U_\mathrm{actual}\sigma_i\bigr)\bigr|^2,
+\mathcal{F}=\frac{1}{2}+\frac{1}{6}\sum_{i=x,y,z}\bigl|\mathrm{Tr}\bigl(U_\mathrm{ideal}^\dagger U_\mathrm{actual}\sigma_i\bigr)\bigr|^2
 $$
 
 其中 $\sigma_i$ 为泡利矩阵。对 SOT 门方案，主要噪声源彼此独立，总保真度近似为各因素贡献的乘积：
@@ -130,7 +130,7 @@ $$
 - **SOT 翻转非理想**：临界电流密度不足或热涨落导致部分失败。设成功概率 $p_\mathrm{sw}$、失败时磁矩不变，则单比特保真度
 
 ```math
-\mathcal{F}_\mathrm{sw}=p_\mathrm{sw}+\frac{1-p_\mathrm{sw}}{6}\bigl(1+\cos\theta_\mathrm{ideal}\bigr),
+\mathcal{F}_\mathrm{sw}=p_\mathrm{sw}+\frac{1-p_\mathrm{sw}}{6}\bigl(1+\cos\theta_\mathrm{ideal}\bigr)
 ```
 
 典型 $p_\mathrm{sw}=0.999$、$\theta_\mathrm{ideal}=\pi/2$ 时 $\delta\mathcal{F}_\mathrm{sw}\approx 8.3\times 10^{-4}$；
@@ -145,41 +145,41 @@ $$
 通用量子计算还需要纠缠门。SOT 单比特门可与[[qubit-control/exchange-interaction|交换相互作用]]组合构造[[qubit-control/cnot-gate|CNOT]]。双量子点交换耦合
 
 $$
-H_\mathrm{ex}=J\,\boldsymbol{S}_1\cdot\boldsymbol{S}_2,
+H_\mathrm{ex}=J\,\boldsymbol{S}_1\cdot\boldsymbol{S}_2
 $$
 
 时间演化算符 $U_\mathrm{ex}(t)=\exp(-iJ\sigma_x t/2\hbar)$，通过控制 $J$ 的开启时间实现 $\sqrt{\mathrm{SWAP}}$（$Jt/\hbar=\pi/2$）或完整 SWAP（$Jt/\hbar=\pi$）。静态微磁体方案中梯度磁场引入塞曼失谐 $\Delta E_Z$，抑制 SWAP；SOT 器件能在执行两比特门前翻转磁化构型，使两比特量子化轴平行从而压制 $\Delta E_Z$，而单比特操控阶段又恢复磁场梯度。CNOT 门由此可分解为
 
 $$
-U_\mathrm{CNOT}=(I\otimes R_y(-\pi/2))\,U_{\sqrt{\mathrm{SWAP}}}\,(R_z(\pi)\otimes R_y(\pi/2))\,U_{\sqrt{\mathrm{SWAP}}},
+U_\mathrm{CNOT}=(I\otimes R_y(-\pi/2))\,U_{\sqrt{\mathrm{SWAP}}}\,(R_z(\pi)\otimes R_y(\pi/2))\,U_{\sqrt{\mathrm{SWAP}}}
 $$
 
 其中单比特旋转均由 SOT 基带操控门完成。
 
 ## 参数与量级
 
-SOT 单元的尺寸与材料参数（取自本站论文依据所列工作）：
+SOT 单元的尺寸与材料参数（取自本站论文中所列工作）：
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 重金属自旋霍尔角 $\theta_\mathrm{SH}$ | $0.1$–$0.5$（Pt、Ta、W），拓扑绝缘体 $\geq 1$ | 文献 24，p. 38 |
-| Ta 层电阻率 | $100$–$200\,\mu\Omega\cdot\mathrm{cm}$ | 文献 24，p. 39 |
-| 多层膜结构 | Ta(8)–CoFeB($t$)–MgO(1)–Ta(3)，$t=1\,\mathrm{nm}$ 面外、$t=3$–$5\,\mathrm{nm}$ 面内 | 文献 24，p. 41–42 |
-| SOT 单元几何 | $l=200\,\mathrm{nm}$，$w=100\,\mathrm{nm}$；磁体中心到量子点水平距离 $d=80\,\mathrm{nm}$，垂直高度 $h=40\,\mathrm{nm}$ | 文献 24，p. 26 |
-| CoFeB 饱和磁化强度 | $M_s=1.6\times 10^6\,\mathrm{A/m}$ | 文献 24，p. 26 |
-| 面内磁化构型翻转前/后磁场 | $\approx 18.77\,\mathrm{mT}$（沿 $x$）/$\approx 10.34\,\mathrm{mT}$（沿 $z$） | 文献 24，p. 28 |
-| 面外磁化构型磁场（平行态） | $\approx 2.5\,\mathrm{mT}$（沿 $z$） | 文献 24，p. 28 |
-| 磁体间距 $D$ | $\approx 360\,\mathrm{nm}$ | 文献 24，p. 34 |
-| 面外器件矫顽场 $H_c$ | $\approx 19\,\mathrm{mT}$ | 文献 24，p. 53 |
-| 交换偏置场 $H_\mathrm{EB}$ | $\approx 9\,\mathrm{mT}$ | 文献 24，p. 53 |
-| 翻转电流阈值 $I_c$ | $\approx 20\,\mathrm{mA}$（20 mK 下，$H_x=40\,\mathrm{mT}$，$t_\mathrm{pulse}=20\,\mathrm{ms}$，$t_\mathrm{delay}=20\,\mathrm{s}$） | 文献 24，p. 55 |
-| 翻转时间（已实现） | ms–百 $\mu\mathrm{s}$ 量级 | 文献 24，p. 69 |
-| 翻转时间（路线目标） | $\lesssim 1\,\mu\mathrm{s}$ | 文献 24，p. 69 |
-| 翻转时间（路线上限） | 百 ps | 文献 24，p. 39 |
-| 写入电流引起的温升 | 长脉冲可达约 1 K；短脉冲约 50 mK | 文献 24，p. 61 |
-| 整体器件电阻 | $\approx 100\,\Omega$（优化扇出电极后），未优化 $1$–$2\,\mathrm{k}\Omega$ | 文献 24，p. 48 |
-| 刻蚀侧壁斜坡 | $\approx 48.37^\circ$，对 30 nm 氧化铝衬底损伤 $\leq 1\,\mathrm{nm}$ | 文献 24，p. 48 |
-| 刻蚀后表面粗糙度 $R_a$ | $0.402\,\mathrm{nm}$（IBE），刻蚀前 $0.201\,\mathrm{nm}$ | 文献 24，p. 47 |
+| 重金属自旋霍尔角 $\theta_\mathrm{SH}$ | $0.1$–$0.5$（Pt、Ta、W），拓扑绝缘体 $\geq 1$ | ，p. 38 |
+| Ta 层电阻率 | $100$–$200\,\mu\Omega\cdot\mathrm{cm}$ | ，p. 39 |
+| 多层膜结构 | Ta(8)–CoFeB($t$)–MgO(1)–Ta(3)，$t=1\,\mathrm{nm}$ 面外、$t=3$–$5\,\mathrm{nm}$ 面内 | ，p. 41–42 |
+| SOT 单元几何 | $l=200\,\mathrm{nm}$，$w=100\,\mathrm{nm}$；磁体中心到量子点水平距离 $d=80\,\mathrm{nm}$，垂直高度 $h=40\,\mathrm{nm}$ | ，p. 26 |
+| CoFeB 饱和磁化强度 | $M_s=1.6\times 10^6\,\mathrm{A/m}$ | ，p. 26 |
+| 面内磁化构型翻转前/后磁场 | $\approx 18.77\,\mathrm{mT}$（沿 $x$）/$\approx 10.34\,\mathrm{mT}$（沿 $z$） | ，p. 28 |
+| 面外磁化构型磁场（平行态） | $\approx 2.5\,\mathrm{mT}$（沿 $z$） | ，p. 28 |
+| 磁体间距 $D$ | $\approx 360\,\mathrm{nm}$ | ，p. 34 |
+| 面外器件矫顽场 $H_c$ | $\approx 19\,\mathrm{mT}$ | ，p. 53 |
+| 交换偏置场 $H_\mathrm{EB}$ | $\approx 9\,\mathrm{mT}$ | ，p. 53 |
+| 翻转电流阈值 $I_c$ | $\approx 20\,\mathrm{mA}$（20 mK 下，$H_x=40\,\mathrm{mT}$，$t_\mathrm{pulse}=20\,\mathrm{ms}$，$t_\mathrm{delay}=20\,\mathrm{s}$） | ，p. 55 |
+| 翻转时间（已实现） | ms–百 $\mu\mathrm{s}$ 量级 | ，p. 69 |
+| 翻转时间（路线目标） | $\lesssim 1\,\mu\mathrm{s}$ | ，p. 69 |
+| 翻转时间（路线上限） | 百 ps | ，p. 39 |
+| 写入电流引起的温升 | 长脉冲可达约 1 K；短脉冲约 50 mK | ，p. 61 |
+| 整体器件电阻 | $\approx 100\,\Omega$（优化扇出电极后），未优化 $1$–$2\,\mathrm{k}\Omega$ | ，p. 48 |
+| 刻蚀侧壁斜坡 | $\approx 48.37^\circ$，对 30 nm 氧化铝衬底损伤 $\leq 1\,\mathrm{nm}$ | ，p. 48 |
+| 刻蚀后表面粗糙度 $R_a$ | $0.402\,\mathrm{nm}$（IBE），刻蚀前 $0.201\,\mathrm{nm}$ | ，p. 47 |
 
 ## 实验特征与测量
 
@@ -192,19 +192,19 @@ SOT 单元的尺寸与材料参数（取自本站论文依据所列工作）：
 完成 Hall Bar 图形化与刻蚀后，电学输运是读出磁化状态的主要工具。磁性层中电阻随磁化方向变化源于本征自旋-轨道耦合与 $s$–$d$ 散射的各向异性，沿 $x$ 通电流、磁化与电流夹角 $\alpha$ 时
 
 $$
-\rho_{xx}(\alpha)=\rho_{xx}^\perp+(\rho_{xx}^\parallel-\rho_{xx}^\perp)\cos^2\alpha,
+\rho_{xx}(\alpha)=\rho_{xx}^\perp+(\rho_{xx}^\parallel-\rho_{xx}^\perp)\cos^2\alpha
 $$
 
 称各向异性磁阻（anisotropic magnetoresistance, AMR）。读取横向电压则给出平面霍尔效应（planar Hall effect, PHE）
 
 $$
-\rho_{xy}=\rho_1\,m_x m_y=\tfrac{1}{2}\rho_1 m_0^2\sin 2\theta,
+\rho_{xy}=\rho_1\,m_x m_y=\tfrac{1}{2}\rho_1 m_0^2\sin 2\theta
 $$
 
 它直接对应 AMR 张量的非对角项，常用于读出面内磁化。反常霍尔效应（anomalous Hall effect, AHE）
 
 $$
-\rho_{xy}=\rho_2\,m_z,
+\rho_{xy}=\rho_2\,m_z
 $$
 
 则在仅有 $z$ 方向磁化分量时给出与 $m_z$ 成正比的横向电阻，是面外 SOT 器件最直接的磁化读出。
@@ -225,7 +225,7 @@ $$
 写入电流通过焦耳热在器件中产生瞬时温升。当脉冲过长（典型如 $t_\mathrm{pulse}=250\,\mathrm{ms}$、$t_\mathrm{delay}=1\,\mathrm{s}$）时，$R_{xy}$ 中观察到与 $j^2$ 成正比的大幅漂移，量级远高于真实翻转信号。这一热信号主要由反常能斯特效应（anomalous Nernst effect, ANE）贡献：
 
 $$
-\boldsymbol{E}_\mathrm{ANE}=C_\mathrm{ANE}\,j^2\,(\boldsymbol{M}\times\nabla T),
+\boldsymbol{E}_\mathrm{ANE}=C_\mathrm{ANE}\,j^2\,(\boldsymbol{M}\times\nabla T)
 $$
 
 其中 $C_\mathrm{ANE}$ 是材料常数、$\nabla T$ 是电流焦耳热引起的温度梯度。在所讨论的器件构型中，$\nabla T$ 主要在 $xz$ 平面内，$\boldsymbol{E}_\mathrm{ANE}$ 沿 $y$，恰好与 AHE 读出方向一致，因此热信号会直接叠加在磁阻读出上。变温磁性测试（1.5 K 到 300 K，结合 PPMS）显示 ANE 量级约 200–500 $\mathrm{m}\Omega$，比室温 Ta/CoFeB 文献报道（1–20 $\mathrm{m}\Omega$）高出一个量级以上。缓解方案包括：（i）优化 SOT 材料，降低电阻率同时提高 $\theta_\mathrm{SH}$；（ii）轨道霍尔效应材料可把自旋注入效率提高数个量级；（iii）深硅刻蚀切断量子点与 SOT 磁体之间的热链路；（iv）"高温比特"路线容许 SOT 翻转引起的温升；（v）交换偏置提供无场翻转路径，减小辅助外磁场所需的额外电流。
@@ -243,35 +243,3 @@ $$
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]与[[qubit-control/geometric-quantum-gate|几何量子门]]：SOT 切换量子化轴的能力也支持在 SOT 器件辅助下做非绝热几何门（Aharonov–Anandan 相位门）与绝热几何门，是单比特门的另一族实现；
 - [[materials-devices/charge-noise|电荷噪声]]：SOT 把磁场梯度做成可关断，从而在门操作间隙切断电荷噪声耦合自旋的通道，理论上可显著延长 $T_2^\*$；
 - [[qubit-control/singlet-triplet-qubit|单态-三重态比特]]与[[qubit-control/resonant-exchange-qubit|共振交换比特]]：共享同一梯度磁场的方案；SOT 翻转可以在它们的双比特操作阶段临时消除塞曼失谐，恢复理想 SWAP。
-
-## 延伸阅读
-
-- T. Chen et al., "An SOT-switchable micromagnet scheme of adiabatic geometric gates for silicon spin qubits", *Chinese Physics B* (2025). [DOI: 10.1088/1674-1056/addcd3]
-- Y. Lim et al., "SWAP Gate for Spin Qubits Based on Silicon Devices Integrated with a Micromagnet", *Nano Letters* (2024). [DOI: 10.1021/acs.nanolett.4c05540]
-- B. Dieny et al., "Field-Free Spin–Orbit Torque Magnetization Switching in a Single-Phase Ferromagnetic and Spin Hall Oxide", *Nano Letters* (2024). [DOI: 10.1021/acs.nanolett.4c01788]
-- C. O. Avci et al., "Unidirectional spin Hall magnetoresistance in ferromagnet/normal metal bilayers", *Nature Physics* (2015). [DOI: 10.1038/nphys3356]
-
-## 论文依据
-
-- [[sources/ref-24|文献 24]]，PDF p. 19：传统微磁体的局限与李方阁等提出的可切换微磁体方案；
-- [[sources/ref-24|文献 24]]，PDF pp. 17–19：Loss–DiVincenzo 单自旋比特、硅基阵列规模、6 量子比特阵列与微磁体集成；
-- [[sources/ref-24|文献 24]]，PDF pp. 30–32：自旋霍尔效应、Rashba–Edelstein 效应、SOT 与 STT 的差异；
-- [[sources/ref-24|文献 24]]，PDF pp. 32–33：SOT 器件按易磁化轴的 $x$/$y$/$z$ 三型分类与翻转对称性；
-- [[sources/ref-24|文献 24]]，PDF pp. 37–38：基于 SOT 的原位基带操控方案的五步操作序列；
-- [[sources/ref-24|文献 24]]，PDF pp. 40–41：面内磁化 SOT 器件构型与仿真磁场 $\boldsymbol{B}_1$、$\boldsymbol{B}_2$；
-- [[sources/ref-24|文献 24]]，PDF pp. 42–43：面外磁化器件与外场辅助下的角度调节；
-- [[sources/ref-24|文献 24]]，PDF pp. 44–49：门保真度公式与有限翻转时间、翻转非理想、位置偏移、磁场偏差、奥斯特场各项噪声；
-- [[sources/ref-24|文献 24]]，PDF p. 50：典型参数下 $\mathcal{F}_\mathrm{total}\approx 0.9957$（99.57%）；
-- [[sources/ref-24|文献 24]]，PDF p. 51：SOT 单比特门与交换耦合构造 CNOT 的分解；
-- [[sources/ref-24|文献 24]]，PDF pp. 52–53：重金属与磁性层材料选择（Ta、CoFeB、MgO）与自旋霍尔角量级；
-- [[sources/ref-24|文献 24]]，PDF pp. 55–57：磁控溅射多层膜与 CoFeB/MgO 退火诱导 PMA；
-- [[sources/ref-24|文献 24]]，PDF pp. 57–60：MOKE 测量原理、反对称化处理、面内器件磁性表征；
-- [[sources/ref-24|文献 24]]，PDF pp. 60–62：RIE/ICP/IBE 刻蚀对比、AFM 粗糙度数据与 IBE 工艺最终选择；
-- [[sources/ref-24|文献 24]]，PDF pp. 63–65：低电阻扇出电极（$\sim 100\,\Omega$）与刻蚀侧壁斜坡 $\approx 48.37^\circ$；
-- [[sources/ref-24|文献 24]]，PDF pp. 64–67：AMR、PHE、AHE 读出面内/面外磁化的原理与适用边界；
-- [[sources/ref-24|文献 24]]，PDF pp. 69–70：20 mK 下面外器件首次 SOT 翻转（$I_c\approx 20\,\mathrm{mA}$）与极低温下的热信号特征；
-- [[sources/ref-24|文献 24]]，PDF pp. 70–72：交换偏置 $H_\mathrm{EB}\approx 9\,\mathrm{mT}$、来源分析（$\alpha$-$\mathrm{Fe}_2\mathrm{O}_3$）与无场翻转潜力；
-- [[sources/ref-24|文献 24]]，PDF pp. 72–75：反常能斯特效应（ANE）解释与变温磁性测试的温升估计（约 1 K 长脉冲，约 50 mK 短脉冲）；
-- [[sources/ref-24|文献 24]]，PDF pp. 76–80：USMR 与差分平面霍尔效应读出面内磁化、面内 SOT 翻转困难分析；
-- [[sources/ref-24|文献 24]]，PDF p. 83：未来路线（$\tau_\mathrm{sw}\lesssim 1\,\mu\mathrm{s}$、Bias Tee、深硅刻蚀、轨道霍尔效应材料、"高温比特"、可切换几何门）；
-- [[sources/ref-19|文献 19]]，PDF p. 4：作为对照的静态微磁体设计与迭代优化。

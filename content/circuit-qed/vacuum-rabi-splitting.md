@@ -2,12 +2,12 @@
 title: 真空 Rabi 劈裂
 description: 二能级系统与腔模在共振强耦合下，原本交叉的腔与比特谱线分裂成上、下两条相距约 2g 的杂化极化激元谱线。
 aliases:
-  - 真空拉比劈裂
-  - vacuum Rabi splitting
-  - 真空 Rabi 振荡
+ - 真空拉比劈裂
+ - vacuum Rabi splitting
+ - 真空 Rabi 振荡
 tags:
-  - 电路量子电动力学
-  - 谱学
+ - 电路量子电动力学
+ - 谱学
 date: 2026-09-08
 ---
 
@@ -40,7 +40,7 @@ $$
 $$
 \begin{aligned}
 |+,n\rangle&=\sin\phi_n\,|g,n\rangle+\cos\phi_n\,|e,n-1\rangle,\\
-|{-},n\rangle&=\cos\phi_n\,|g,n\rangle-\sin\phi_n\,|e,n-1\rangle,
+|{-},n\rangle&=\cos\phi_n\,|g,n\rangle-\sin\phi_n\,|e,n-1\rangle
 \end{aligned}
 $$
 
@@ -106,7 +106,7 @@ $$
 - 强弱耦合边界：$g>\kappa,\gamma$，等价于两支极化激元谱线能彼此分辨。
 - 合作因子（cooperativity）：$C=2g^2/(\kappa\gamma)$（或按某些教材定义为 $C=4g^2/(\kappa\gamma)$）；$C>1$ 表示相干交换速率超过损耗速率一次以上，但能否分辨谱线还需结合 $\kappa/2$、$\gamma$ 与拟合模型共同判定。
 
-在本站论及的强耦合实验中，文献 13 给出双量子点电荷比特与 NbTiN 腔的全局耦合 $2g_{0,1}/2\pi\approx 74\ \mathrm{MHz}$、$2g_{0,2}/2\pi\approx 119\ \mathrm{MHz}$；文献 17 报告单比特 $g/2\pi=81\ \mathrm{MHz}$、退相干 $\gamma/2\pi=65\ \mathrm{MHz}$；文献 20 在 Si/SiGe 三量子点中获得电荷比特 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$，翻转模式自旋比特 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$\gamma_s/2\pi=4.6\ \mathrm{MHz}$，所有这些系统都满足 $g>\kappa,\gamma$，因此真空 Rabi 劈裂可以直接在腔反射/透射谱上读出。
+在本站论及的强耦合实验中给出双量子点电荷比特与 NbTiN 腔的全局耦合 $2g_{0,1}/2\pi\approx 74\ \mathrm{MHz}$、$2g_{0,2}/2\pi\approx 119\ \mathrm{MHz}$； 报告单比特 $g/2\pi=81\ \mathrm{MHz}$、退相干 $\gamma/2\pi=65\ \mathrm{MHz}$； 在 Si/SiGe 三量子点中获得电荷比特 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$，翻转模式自旋比特 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$\gamma_s/2\pi=4.6\ \mathrm{MHz}$，所有这些系统都满足 $g>\kappa,\gamma$，因此真空 Rabi 劈裂可以直接在腔反射/透射谱上读出。
 
 ## 实验特征与参数提取
 
@@ -154,12 +154,12 @@ $$
 两比特同时与腔共振（$\omega_{a,1}=\omega_{a,2}=\omega_r$）时，单光子子空间变为三维，本征态出现一个**暗态**（dark state）
 
 $$
-|0\rangle_C=\frac{1}{g_C}\!\left(g_{c,1}|ge,0\rangle-g_{c,2}|eg,0\rangle\right),\qquad g_C=\sqrt{g_{c,1}^2+g_{c,2}^2},
+|0\rangle_C=\frac{1}{g_C}\!\left(g_{c,1}|ge,0\rangle-g_{c,2}|eg,0\rangle\right),\qquad g_C=\sqrt{g_{c,1}^2+g_{c,2}^2}
 $$
 
 它不含光子态成分，无法通过探测微波从基态 $|gg,0\rangle$ 跃迁，因此腔频谱上看不到中间那条线，只剩 $|+,1\rangle$、$|{-},1\rangle$ 两个相距 $2\hbar g_C$ 的本征态——**增强真空 Rabi 劈裂**（enhanced vacuum Rabi splitting）。
 
-文献 17 在 SQUID 阵列腔中测得单比特 $g_1/2\pi=81\ \mathrm{MHz}$、$g_2/2\pi=80\ \mathrm{MHz}$，两者同时共振时 $2g_{\mathrm{eff}}/2\pi=2\times 112\ \mathrm{MHz}$，与 $\sqrt{g_1^2+g_2^2}\approx 113\ \mathrm{MHz}$ 的理论值一致。文献 13 在 NbTiN 反射腔中测得两比特 $2g_C/2\pi\approx 177\ \mathrm{MHz}$，但因每个比特到腔的耦合强度有限、比特退相干又较快，谱线宽度已接近 $2g$，因此只能定性确认集体增强，无法在此基础上进一步实现两比特门。
+ 在 SQUID 阵列腔中测得单比特 $g_1/2\pi=81\ \mathrm{MHz}$、$g_2/2\pi=80\ \mathrm{MHz}$，两者同时共振时 $2g_{\mathrm{eff}}/2\pi=2\times 112\ \mathrm{MHz}$，与 $\sqrt{g_1^2+g_2^2}\approx 113\ \mathrm{MHz}$ 的理论值一致。 在 NbTiN 反射腔中测得两比特 $2g_C/2\pi\approx 177\ \mathrm{MHz}$，但因每个比特到腔的耦合强度有限、比特退相干又较快，谱线宽度已接近 $2g$，因此只能定性确认集体增强，无法在此基础上进一步实现两比特门。
 
 > 推广到 $N$ 个比特时，集体耦合强度 $g_C=\sqrt{\sum_k g_k^2}$，相应地在 $|+,1\rangle$、$|{-},1\rangle$ 之外出现 $N-1$ 个暗态；当各 $g_k$、$\omega_{a,k}$ 出现非均匀展宽时，多比特关联谱将退化为多个分立共振与展宽的叠加，这是[[scaling-automation/quantum-dot-array|多比特扩展]]的核心约束之一。
 
@@ -175,23 +175,3 @@ $$
 - [[readout-measurement/dispersive-readout|色散读出]]：进入色散区 $|\Delta|>10g$ 后，避免交叉让位于腔频移动 $\pm g^2/\Delta$，劈裂消失，但比特态信息保留在腔响应里。
 - [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：多比特同时处于强耦合区时，真空 Rabi 劈裂被增强为 $2g_C$；若仅一个比特处于色散区，则腔介导有效交换为 $\sim g_1g_2/\Delta$。
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]：真空 Rabi 振荡是频域真空 Rabi 劈裂的傅里叶对偶；驱动 Rabi 振荡（$\Omega_R$）则属于外部驱动项，不属于真空场物理。
-
-## 延伸阅读
-
-- M. Toida, T. Nakajima, S. Komiyama, "Vacuum Rabi Splitting in a Semiconductor Circuit QED System", *Physical Review Letters* (2012). [arXiv: 1206.0674]
-- X. Mi et al., "Strong Coupling Cavity QED with Gate-Defined Double Quantum Dots Enabled by a High Impedance Resonator", *Physical Review X* (2017). [arXiv: 1701.03433]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, A. Wallraff, "Circuit Quantum Electrodynamics", *Reviews of Modern Physics* (2021). [DOI: 10.1103/RevModPhys.93.025005]
-- J. M. Fink et al., "Climbing the Jaynes–Cummings ladder and observing its nonlinearity in a cavity QED system", *Nature* (2008). [DOI: 10.1038/nature07112]
-
-## 论文依据
-
-- [[sources/ref-13|文献 13]]，PDF pp. 7–8：摘要强调 NbTiN 高阻抗腔中两个双量子点的真空 Rabi 劈裂与强耦合。
-- [[sources/ref-13|文献 13]]，PDF pp. 28–29：JC 哈密顿量、缀饰态、$|+,1\rangle$ 与 $|{-},1\rangle$ 间能级间隔 $2g$（即真空 Rabi 劈裂）的推导与命名。
-- [[sources/ref-13|文献 13]]，PDF pp. 62–63：NbTiN 反射腔 + GaAs 双量子点的真空 Rabi 劈裂原始数据与拟合，提取 $2g_{0,1}/2\pi\approx 74\ \mathrm{MHz}$、$2g_{0,2}/2\pi\approx 119\ \mathrm{MHz}$。
-- [[sources/ref-13|文献 13]]，PDF pp. 63–65：两电荷比特同时与腔共振的真空 Rabi 劈裂 $2g_C/2\pi\approx 177\ \mathrm{MHz}$，指出每个比特耦合不大、退相干较快导致谱线较粗、暗态 $|0\rangle_C$ 的对称化分析。
-- [[sources/ref-17|文献 17]]，PDF pp. 7–8：摘要强调 SQUID 阵列腔中两比特的远距离相干相互作用与多比特集体响应。
-- [[sources/ref-17|文献 17]]，PDF pp. 60–61：单比特真空 Rabi 劈裂 $2g/2\pi=2\times 81\ \mathrm{MHz}$、退相干 $\gamma/2\pi=65\ \mathrm{MHz}$ 的提取，强调拟合的色散关系。
-- [[sources/ref-17|文献 17]]，PDF pp. 81–84：Tavis–Cummings 模型与暗态、增强真空 Rabi 劈裂 $2g_{\mathrm{eff}}/2\pi=2\times 112\ \mathrm{MHz}$ 的能级与谱线分析，与 $\sqrt{g_1^2+g_2^2}$ 理论值吻合。
-- [[sources/ref-17|文献 17]]，PDF pp. 96–98：多比特集体响应，DQD1–DQD5 各自 $(g_k,\gamma_k)/2\pi$ 及合作因子 $C_k=2g_k^2/(\kappa\gamma_k)$，整体 $C_{\mathrm{total}}>17.6$。
-- [[sources/ref-20|文献 20]]，PDF pp. 61–62：Si/SiGe 三量子点中电荷比特全局耦合 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$，由避免交叉谱拟合得到强耦合证据。
-- [[sources/ref-20|文献 20]]，PDF pp. 77–79：RDQD 与 LDQD 翻转模式自旋比特的真空 Rabi 劈裂，分别为 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$2g_{s,L}/2\pi=27.6\ \mathrm{MHz}$，均满足 $g>\kappa^\*,\gamma_s$。

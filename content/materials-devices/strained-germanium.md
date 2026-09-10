@@ -2,15 +2,15 @@
 title: 应变锗空穴平台
 description: 在应变锗量子阱中形成高迁移率二维空穴气、支持强自旋轨道全电操控的 Ge/SiGe 异质结平台。
 aliases:
-  - 平面锗量子点
-  - 应变锗异质结
-  - 平面锗空穴平台
-  - strained germanium
-  - Ge/SiGe heterostructure
+ - 平面锗量子点
+ - 应变锗异质结
+ - 平面锗空穴平台
+ - strained germanium
+ - Ge/SiGe heterostructure
 tags:
-  - 材料与器件
-  - 锗
-  - 空穴
+ - 材料与器件
+ - 锗
+ - 空穴
 date: 2026-09-08
 ---
 
@@ -33,7 +33,7 @@ date: 2026-09-08
 应变锗中价带的微观描述建立在 $j=3/2$ 多带 k·p 模型上，原始的 Luttinger–Kohn 哈密顿量在立方对称下写成
 
 $$
-H_{\mathrm{LK}} = -\frac{\hbar^2}{2m_0}\!\left[(\gamma_1+\tfrac{5}{2}\gamma_s)k^2-2\gamma_s(\boldsymbol{k}\cdot\boldsymbol{J})^2\right],
+H_{\mathrm{LK}} = -\frac{\hbar^2}{2m_0}\!\left[(\gamma_1+\tfrac{5}{2}\gamma_s)k^2-2\gamma_s(\boldsymbol{k}\cdot\boldsymbol{J})^2\right]
 $$
 
 其中 $\gamma_1,\gamma_s$ 是 Luttinger 参数（Ge 中 $\gamma_1\approx 13,\ \gamma_s\approx 5$），$\boldsymbol{J}$ 是 $j=3/2$ 的自旋算符，$k^2=k_x^2+k_y^2+k_z^2$。求解该式给出两组本征解：重空穴和轻空穴，对应的有效质量分别是
@@ -47,7 +47,7 @@ $$
 
 $$
 m_{\mathrm{HH}}^{\parallel}=\frac{m_0}{\gamma_1+\gamma_s},\qquad
-m_{\mathrm{LH}}^{\parallel}=\frac{m_0}{\gamma_1-\gamma_s},
+m_{\mathrm{LH}}^{\parallel}=\frac{m_0}{\gamma_1-\gamma_s}
 $$
 
 即"轻重空穴的角色互换"——HH 在面内反而变成了"轻"载流子，实验上其有效质量可达 $0.05\,m_0$ 量级。轻的有效质量带来两重红利：
@@ -60,7 +60,7 @@ $$
 在动量表象下，HH/LH 混合给出的线性自旋轨道耦合可整理为 Rashba 与 Dresselhaus 两项之和
 
 $$
-H_{\mathrm{SOC}}=\alpha\,(k_y\sigma_x-k_x\sigma_y)+\beta\,(k_x\sigma_x-k_y\sigma_y),
+H_{\mathrm{SOC}}=\alpha\,(k_y\sigma_x-k_x\sigma_y)+\beta\,(k_x\sigma_x-k_y\sigma_y)
 $$
 
 其中 $\alpha,\beta$ 依赖于电场与应变。论文中直接可测的物理量是"漏电流"——[[qubit-control/electric-dipole-spin-resonance|泡利自旋阻塞]]区中本应被禁止的电流分量。其来源有两类：
@@ -75,7 +75,7 @@ $$
 在仅有恒定外磁场 $B_0\hat{n}$ 与微波驱动 $E(t)\hat{e}$ 时，单空穴自旋比特在旋转坐标系下的等效哈密顿量可写成
 
 $$
-H_{\mathrm{rot}}=f_{\mathrm{Rabi}}\,(S_x\cos\phi-S_y\sin\phi),
+H_{\mathrm{rot}}=f_{\mathrm{Rabi}}\,(S_x\cos\phi-S_y\sin\phi)
 $$
 
 其中 $f_{\mathrm{Rabi}}\propto E\cdot\alpha_{\mathrm{SO}}/h$ 反映电场–自旋耦合把微波电场转换为等效磁场 $B_{\mathrm{eff}}$，相位 $\phi$ 由微波载波相位决定。论文样品上典型 Rabi 频率在 8–19 MHz 区间（如共振点测得 $f_{\mathrm{Rabi}}=11.61\ \mathrm{MHz}$），即可在不依赖微磁体的前提下实现纳秒–十纳秒量级的翻转。[[qubit-control/geometric-quantum-gate|几何相位门]]则通过在参数空间走闭合路径，使累计的几何相位天然抵消拉比频率抖动 $\delta f_{\mathrm{Rabi}}$ 或共振频率抖动 $\Delta f$。
@@ -85,11 +85,11 @@ $$
 对异质结电势的精确预测依赖一维自洽 [[materials-devices/interface-defects|薛定谔–泊松（Schrödinger–Poisson, S-P）]]求解：在生长方向交替求解
 
 $$
--\frac{\hbar^2}{2m_z}\frac{\partial^2\psi_i}{\partial z^2}+U(z)\psi_i=E_i\psi_i,
+-\frac{\hbar^2}{2m_z}\frac{\partial^2\psi_i}{\partial z^2}+U(z)\psi_i=E_i\psi_i
 $$
 
 $$
-\frac{\partial^2\varphi}{\partial z^2}=-\frac{\rho(z)}{\varepsilon},
+\frac{\partial^2\varphi}{\partial z^2}=-\frac{\rho(z)}{\varepsilon}
 $$
 
 直到价带、空穴波函数与电场三者同时自洽收敛。S-P 求解器直接给出给定栅压下的量子阱深度、束缚态能级和二维空穴气密度 $p_{\mathrm{2DHG}}$（实验上以 $\mathrm{cm^{-2}}$ 为单位）。论文把它扩展为"逆向"算法——把低温场效应管测得的载流子密度反代回求解器，即可反推出界面态的填充电荷 $p_{it}$ 与密度分布 $D_{it}(E)$。
@@ -101,7 +101,7 @@ $$
 - **直接隧穿**：电流密度
 
 ```math
-J_{\mathrm{direct}}\propto \exp\!\left(-\frac{4\sqrt{2m^*}}{3\hbar eE}\,\phi_B^{3/2}\right),
+J_{\mathrm{direct}}\propto \exp\!\left(-\frac{4\sqrt{2m^*}}{3\hbar eE}\,\phi_B^{3/2}\right)
 ```
 
 其中 $m^*$ 是势垒层空穴有效质量、$\phi_B$ 是势垒高度、$E$ 是外加电场。该机制在电场较弱时随栅压衰减最快，仅在高位移电场下才可与下两项相比；
@@ -120,29 +120,29 @@ S-P 求解与三种隧穿电流叠加构成"界面态填充–缺陷密度提取
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 应变锗量子阱厚度 $t_{\mathrm{Ge}}$ | $16\ \mathrm{nm}$（实验所用基片） | 文献 23 |
-| 顶部 SiGe 势垒层厚度 $t_{\mathrm{SiGe}}$ | $32\ \mathrm{nm}$ 或 $47\ \mathrm{nm}$（不同基片） | 文献 25；文献 23 |
-| 衬底 | 8 英寸硅，[[materials-devices/silicon-sige\|Si/SiGe]] 虚衬底上外延 Ge | 文献 25 |
-| 外延方法 | 减压化学气相沉积 RPCVD | 文献 25 |
-| 2DHG 迁移率 | 高达 $2\times 10^{6}\ \mathrm{cm^{2}V^{-1}s^{-1}}$ | 文献 23 |
-| 界面氧化层 SiO<sub>x</sub> 厚度 | $\approx 1.5\ \mathrm{nm}$ | 文献 23 |
-| 栅氧 Al<sub>2</sub>O<sub>3</sub> 厚度 | $30\ \mathrm{nm}$，干法（O<sub>3</sub>）生长 $100\,^\circ\mathrm{C}$ | 文献 23 |
-| Luttinger 参数（Ge） | $\gamma_1\approx 13,\ \gamma_s\approx 5$ | 文献 23 |
-| 面内 HH 有效质量 | $\sim 0.05\,m_0$ | 文献 23 |
-| 量子点柱塞电极宽度 | $100$–$120\ \mathrm{nm}$ | 文献 25 |
-| 限制电极 C2 宽度 | $\sim 90\ \mathrm{nm}$ | 文献 25 |
-| 栅间 Al 原位氧化层 | $\approx 4\ \mathrm{nm}$ | 文献 25 |
-| 自旋轨道耦合强度 | $15$–$21\ \mu\mathrm{eV}$（栅压可调） | 文献 25 |
-| 自旋轨道场方向 | 与面外方向夹角 $4\pm 6^\circ$ | 文献 25 |
-| 硼注入剂量 / 能量 | $1\times 10^{13}\ \mathrm{cm^{-2}}$、$13\ \mathrm{keV}$（47 nm 量子阱） | 文献 25 |
-| Rabi 频率 $f_{\mathrm{Rabi}}$ | $8$–$19\ \mathrm{MHz}$，共振点 $11.61\ \mathrm{MHz}$ | 文献 25 |
-| 相干时间 | $T_2^*=120\ \mu\mathrm{s}$（Ramsey），$T_2^H=1.2\ \mathrm{ms}$（Hahn echo，引用值） | 文献 25 |
-| 最优工作点相干时间 | $T_2^*=17.6\ \mu\mathrm{s}$（低磁场 + 优化方向） | 文献 25 |
-| 单比特门保真度 | 几何门 $>99.9\%$；动力学门最高 $99.82\%$（最优工作点） | 文献 25 |
-| 基温 | $\approx 15\ \mathrm{mK}$（稀释制冷机） | 文献 25 |
-| 未处理界面态密度 | $\sim 6\times 10^{12}\ \mathrm{cm^{-2}eV^{-1}}$（过氧化氢处理后参考值） | 文献 23 |
-| 臭氧钝化后总界面态 | $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$ | 文献 23 |
-| 势垒层位错密度 | $10^{6\sim 8}\ \mathrm{cm^{-2}}$ | 文献 23 |
+| 应变锗量子阱厚度 $t_{\mathrm{Ge}}$ | $16\ \mathrm{nm}$（实验所用基片） | |
+| 顶部 SiGe 势垒层厚度 $t_{\mathrm{SiGe}}$ | $32\ \mathrm{nm}$ 或 $47\ \mathrm{nm}$（不同基片） | ； |
+| 衬底 | 8 英寸硅，[[materials-devices/silicon-sige\|Si/SiGe]] 虚衬底上外延 Ge | |
+| 外延方法 | 减压化学气相沉积 RPCVD | |
+| 2DHG 迁移率 | 高达 $2\times 10^{6}\ \mathrm{cm^{2}V^{-1}s^{-1}}$ | |
+| 界面氧化层 SiO<sub>x</sub> 厚度 | $\approx 1.5\ \mathrm{nm}$ | |
+| 栅氧 Al<sub>2</sub>O<sub>3</sub> 厚度 | $30\ \mathrm{nm}$，干法（O<sub>3</sub>）生长 $100\,^\circ\mathrm{C}$ | |
+| Luttinger 参数（Ge） | $\gamma_1\approx 13,\ \gamma_s\approx 5$ | |
+| 面内 HH 有效质量 | $\sim 0.05\,m_0$ | |
+| 量子点柱塞电极宽度 | $100$–$120\ \mathrm{nm}$ | |
+| 限制电极 C2 宽度 | $\sim 90\ \mathrm{nm}$ | |
+| 栅间 Al 原位氧化层 | $\approx 4\ \mathrm{nm}$ | |
+| 自旋轨道耦合强度 | $15$–$21\ \mu\mathrm{eV}$（栅压可调） | |
+| 自旋轨道场方向 | 与面外方向夹角 $4\pm 6^\circ$ | |
+| 硼注入剂量 / 能量 | $1\times 10^{13}\ \mathrm{cm^{-2}}$、$13\ \mathrm{keV}$（47 nm 量子阱） | |
+| Rabi 频率 $f_{\mathrm{Rabi}}$ | $8$–$19\ \mathrm{MHz}$，共振点 $11.61\ \mathrm{MHz}$ | |
+| 相干时间 | $T_2^*=120\ \mu\mathrm{s}$（Ramsey），$T_2^H=1.2\ \mathrm{ms}$（Hahn echo，引用值） | |
+| 最优工作点相干时间 | $T_2^*=17.6\ \mu\mathrm{s}$（低磁场 + 优化方向） | |
+| 单比特门保真度 | 几何门 $>99.9\%$；动力学门最高 $99.82\%$（最优工作点） | |
+| 基温 | $\approx 15\ \mathrm{mK}$（稀释制冷机） | |
+| 未处理界面态密度 | $\sim 6\times 10^{12}\ \mathrm{cm^{-2}eV^{-1}}$（过氧化氢处理后参考值） | |
+| 臭氧钝化后总界面态 | $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$ | |
+| 势垒层位错密度 | $10^{6\sim 8}\ \mathrm{cm^{-2}}$ | |
 
 ## 实验特征与测量方法
 
@@ -159,13 +159,13 @@ S-P 求解与三种隧穿电流叠加构成"界面态填充–缺陷密度提取
 **谐振腔杂化与镂空腔设计。** 应变锗量子点可与超导共面波导（CPW）[[circuit-qed/microwave-resonator|谐振腔]]耦合，沿用 [[circuit-qed/jaynes-cummings-model|Jaynes-Cummings 模型]]描述
 
 $$
-H=\frac{\hbar\omega_q}{2}\sigma_z+\hbar\omega_r\!\left(a^\dagger a+\tfrac{1}{2}\right)+\hbar g\,(a^\dagger\sigma_-+a\sigma_+),
+H=\frac{\hbar\omega_q}{2}\sigma_z+\hbar\omega_r\!\left(a^\dagger a+\tfrac{1}{2}\right)+\hbar g\,(a^\dagger\sigma_-+a\sigma_+)
 $$
 
 其中耦合强度 $g\propto \sqrt{Z_r}$，$Z_r=\sqrt{L_l/C_l}$ 为谐振腔的特征阻抗。应变锗中界面缺陷对应的微观 [[materials-devices/interface-defects|二能级系统（TLS）]]与腔场的耦合同样满足 JC 型结构
 
 $$
-H_{\mathrm{TLS}}=\frac{\hbar\omega_q}{2}\sigma_z+\hbar\omega_r\!\left(a^\dagger a+\tfrac{1}{2}\right)+\hbar g_{\mathrm{TLS}}\,(a^\dagger\sigma_-+a\sigma_+),
+H_{\mathrm{TLS}}=\frac{\hbar\omega_q}{2}\sigma_z+\hbar\omega_r\!\left(a^\dagger a+\tfrac{1}{2}\right)+\hbar g_{\mathrm{TLS}}\,(a^\dagger\sigma_-+a\sigma_+)
 $$
 
 并通过该通道耗散腔内能量，表现为 $Q$ 值下降。论文针对这一问题提出基于湿法刻蚀的"镂空谐振腔"——把 CPW 中央导体下方及周围的承托层挖空，使电磁场集中区域与界面缺陷所在区域在空间上解耦，从而同时提高 $g$ 和 $Q$。
@@ -194,30 +194,3 @@ $$
 - 与 [[materials-devices/charge-noise|电荷噪声]]通过自旋轨道耦合间接相连：自旋轨道耦合越强、操控越快，但比特对电场扰动也越敏感。最优工作点策略本质上是把两者折中；
 - 与 [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]构成材料层与系统层的对接：应变锗给出强电偶极、高 $g$ 因子各向异性，谐振腔提供长程耦合媒介，二者共同支撑[[circuit-qed/spin-photon-coupling|空穴–光子杂化]]与未来的 [[circuit-qed/cavity-mediated-coupling|腔介导长程比特耦合]]；
 - 与 [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]、[[qubit-control/rabi-oscillation|Rabi 振荡]]、[[qubit-control/ramsey-interferometry|Ramsey 干涉]]、[[qubit-control/dynamical-decoupling|动力学解耦]]、[[qubit-control/geometric-quantum-gate|几何量子门]]等操控技术形成上下游：平台决定了哪些操控策略最有效。
-
-## 延伸阅读
-
-- G. Scappucci et al., "The germanium quantum information route", *Nature Reviews Materials* (2021). [DOI: 10.1038/s41578-020-00262-z]
-- C. Kloeffel et al., "Theory of hole-spin qubits in strained germanium quantum dots", *Physical Review B* (2021). [DOI: 10.1103/PhysRevB.103.125201]
-- N. W. Hendrickx et al., "Fast two-qubit logic with holes in germanium", *Nature* (2019). [DOI: 10.1038/s41586-019-1919-3]
-- D. J. Ibb or al, "A germanium hole spin qubit", *Nature Communications* (2018). [DOI: 10.1038/s41467-018-06418-4]
-
-## 论文依据
-
-- [[sources/ref-25|文献 25]]，PDF pp. 7–9：创新性说明与摘要——自旋轨道场性质、几何门、最优磁场工作点三个层面的系统研究框架。
-- [[sources/ref-25|文献 25]]，PDF pp. 61–62：3.1.3 节微纳加工——硼注入 SRIM 模拟，剂量 $1\times 10^{13}\ \mathrm{cm^{-2}}$、能量 $13\ \mathrm{keV}$，对应 47 nm 量子阱深度。
-- [[sources/ref-25|文献 25]]，PDF pp. 53–54：3.1.1 节 Ge/SiGe 异质结构——RPCVD 在 8 英寸硅衬底上外延量子阱结构，15–40 nm Si<sub>1-x</sub>Ge<sub>x</sub> 势垒层。
-- [[sources/ref-25|文献 25]]，PDF p. 78：4.1 节研究背景——应变锗空穴有效质量较小且可被量子限域与应变工程灵活调控；空穴主要来源于 $p$ 轨道，超精细相互作用较弱。
-- [[sources/ref-25|文献 25]]，PDF pp. 80, 99：4.2 节——泡利自旋阻塞漏电流反推出的自旋轨道耦合强度在 $15$–$21\ \mu\mathrm{eV}$ 区间连续可调；自旋轨道场与面外方向夹角约 $4\pm 6^\circ$。
-- [[sources/ref-25|文献 25]]，PDF pp. 115–117：5.3 节——量子比特共振点 $f_{\mathrm{Rabi}}=11.61\ \mathrm{MHz}$，$T_2^*=136\ \mathrm{ns}$、$T_2^{\mathrm{Echo}}=401\ \mathrm{ns}$。
-- [[sources/ref-25|文献 25]]，PDF pp. 124–128：5.4 节几何相位门 Path1/Path2——分别在 $f_{\mathrm{Rabi}}=8$–$19\ \mathrm{MHz}$ 范围内实现 $>99\%$ 操控保真度并对 $\Delta f$、$\delta f_{\mathrm{Rabi}}$ 抖动具有强抗噪性。
-- [[sources/ref-25|文献 25]]，PDF pp. 131, 138：6 章最优工作点——磁场方向优化使相干时间拉长到 $17.6\ \mu\mathrm{s}$，Hahn echo 在该方向下 $T_2^H$ 提升至 $88\ \mu\mathrm{s}$，动力学门保真度最高 $99.82\%$。
-- [[sources/ref-23|文献 23]]，PDF pp. 7–8：摘要——臭氧表面钝化、含界面态的自洽 S-P 求解与隧穿模型、减弱缺陷参与的镂空谐振腔设计。
-- [[sources/ref-23|文献 23]]，PDF pp. 25–27：2.1.1 节应变锗外延异质结——Luttinger–Kohn 哈密顿量（公式 2.1）与应变修正（公式 2.4–2.5），面内 HH 有效质量可低至 $0.05\,m_0$；塞曼劈裂 $E_Z=g\mu_B B$ 与电场可调 $g(V)$。
-- [[sources/ref-23|文献 23]]，PDF pp. 27–30：2.1.2–2.1.3 节共面波导谐振腔与 JC 哈密顿量——谐振腔结构、$Q=f_0/\delta f$ 的定义；Jaynes–Cummings 哈密顿量（公式 2.9）与 $g\propto \sqrt{Z_r}$ 的耦合强度依赖。
-- [[sources/ref-23|文献 23]]，PDF pp. 33–38：2.3–2.4 节界面态提取与现有研究——传统 C-V/G-V/CP 方法在应变锗器件中不适用的三条原因（能带结构不同、低温下陷阱无法充放电、价带弯曲使空穴只能单向进入缺陷）以及 Hutchins-Delgado 等的过氧化氢/硝酸钝化结果对比。
-- [[sources/ref-23|文献 23]]，PDF pp. 39–43：3.1.1 节薄膜生长——TMA+臭氧干法在 100 °C 下沉积 30 nm Al<sub>2</sub>O<sub>3</sub>，避免 GeO<sub>2</sub> 在常规 TMA+水 ALD 中溶水带来的薄膜质量问题；变温 AFM 表征给出实际厚度与目标厚度的对比。
-- [[sources/ref-23|文献 23]]，PDF pp. 47–48：3.2–3.3 节循环扫描阈值电压与臭氧钝化——提取臭氧钝化后总界面态 $p_{it}(\mathrm{O_3})\approx 8.58\times 10^{12}\ \mathrm{cm^{-2}}$（公式 3.3），并与过氧化氢/硝酸/氢氟酸钝化结果对比。
-- [[sources/ref-23|文献 23]]，PDF pp. 50–55：4.2 节自洽 S-P 求解器与"逆向 S-P"反推界面态密度的数值方法。
-- [[sources/ref-23|文献 23]]，PDF pp. 63–67：5 章界面缺陷捕获的隧穿机制——直接、Fowler–Nordheim 与陷阱辅助三种隧穿机制的电流密度公式及其在不同电场区间的相对贡献；势垒层位错密度约 $10^{6\sim 8}\ \mathrm{cm^{-2}}$。
-- [[sources/ref-23|文献 23]]，PDF pp. 76–80：6 章镂空谐振腔设计——基于湿法刻蚀的悬空 CPW 谐振腔结构与电磁学仿真；按 $g\propto\sqrt{Z_r}\propto\sqrt{1/C_l}$ 提高耦合强度（公式 6.1）；空间隔离降低 TLS 对 $Q$ 的耗散（公式 6.2–6.3）。

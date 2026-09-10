@@ -2,13 +2,13 @@
 title: 几何量子门
 description: 让量子态沿参数空间闭合路径演化并利用几何相位实现旋转的量子门，对部分类型的噪声具有天然的抵抗性。
 aliases:
-  - 几何相位门
-  - 几何门
-  - geometric gate
-  - holonomic gate
+ - 几何相位门
+ - 几何门
+ - geometric gate
+ - holonomic gate
 tags:
-  - 量子比特操控
-  - 鲁棒控制
+ - 量子比特操控
+ - 鲁棒控制
 date: 2026-09-08
 ---
 
@@ -19,7 +19,7 @@ date: 2026-09-08
 量子态沿参数空间闭合路径演化回到起点时，所累积的总相位分成两部分：一部分由 [[materials-devices/charge-noise|电荷噪声]]与系统哈密顿量演化共同决定，称为动力学相位 $\phi_\mathrm{dyn}=-\int_0^\tau E(t)/\hbar\,dt$，其大小依赖于演化时间与瞬时能量；另一部分只取决于路径在参数空间中所围的几何面积，称为 Berry 相位（Berry phase）或几何相位 $\phi_\mathrm{g}$。在 1984 年由 M. V. Berry 系统给出数学形式之后，演化算符可写为
 
 $$
-U(\tau)=e^{i\phi_\mathrm{dyn}}\,e^{i\phi_\mathrm{g}}\，
+U(\tau)=e^{i\phi_\mathrm{dyn}}\,e^{i\phi_\mathrm{g}}
 $$
 
 其中 $\phi_\mathrm{g}=\oint \mathcal{A}\cdot d\mathcal{R}=\int \mathcal{F}\,d^2\mathcal{R}$，$\mathcal{A}$ 是参数空间的矢势（Berry 联络），$\mathcal{F}=\nabla\times\mathcal{A}$ 是对应的曲率（Berry 强度）。
@@ -46,7 +46,7 @@ $$
 \begin{pmatrix}
 \Delta f & (1+\delta)f_\mathrm{Rabi}\,e^{-i\Phi}\\[4pt]
 (1+\delta)f_\mathrm{Rabi}\,e^{i\Phi} & -\Delta f
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 其中 $\Delta f=f_\mathrm{MW}-f_\mathrm{Larmor}$ 是微波与比特共振频率的失谐（刻画失谐噪声），$\delta$ 是拉比频率抖动（刻画系统性噪声），$\Phi$ 是微波相位。
@@ -54,7 +54,7 @@ $$
 要让动力学相位在闭合路径上抵消，并只保留所需几何相位，最简洁的做法是把演化切成三段，每段固定 $\Phi$ 与瞬时拉比频率：
 
 $$
-\int_{\tau_{k-1}}^{\tau_k}2\pi f_\mathrm{Rabi}\,dt=\theta_k,\qquad \Phi(t)=\phi_k,\quad t\in[\tau_{k-1},\tau_k],
+\int_{\tau_{k-1}}^{\tau_k}2\pi f_\mathrm{Rabi}\,dt=\theta_k,\qquad \Phi(t)=\phi_k,\quad t\in[\tau_{k-1},\tau_k]
 $$
 
 其中 Path2 方案的具体取值为
@@ -75,7 +75,7 @@ U(\theta,\gamma,\phi)=\cos\gamma\,\mathbb{I}+i\sin\gamma
 \cos\theta & \sin\theta\,e^{-i\phi}\\[4pt]
 \sin\theta\,e^{i\phi} & -\cos\theta
 \end{pmatrix}
-=\exp(i\gamma\,\mathbf{n}\cdot\boldsymbol{\sigma}),
+=\exp(i\gamma\,\mathbf{n}\cdot\boldsymbol{\sigma})
 $$
 
 其中旋转轴 $\mathbf{n}=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$，旋转角 $-2\gamma$。当 $\theta=\pi/2$、$\phi=\pi/2$、$\gamma=0$ 时上式退化为单位算符，等价于绕 $X$ 轴做 $2\pi$ 旋转——这就是几何 $I$ 门；改变 $\theta,\phi,\gamma$ 三个参数即可实现任意单比特门。
@@ -100,7 +100,7 @@ $$
 \begin{pmatrix}
 \Delta f+\delta f_\mathrm{Larmor} & \big[(1+\delta)f_\mathrm{Rabi}+\delta f_\mathrm{Rabi}\big]e^{-i\Phi}\\[4pt]
 \big[(1+\delta)f_\mathrm{Rabi}+\delta f_\mathrm{Rabi}\big]e^{i\Phi} & -\Delta f-\delta f_\mathrm{Larmor}
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 并对两类噪声做不同的时间演化假设：
@@ -149,7 +149,7 @@ $$
 两比特几何门可以把上述三段式闭合路径推广到由交换相互作用驱动的双比特希尔伯特空间。考虑双量子点中两枚空穴自旋，哈密顿量为
 
 $$
-H(t)=J(t)(\mathbf{S}_L\cdot\mathbf{S}_R-1/4)+\mathbf{S}_L\cdot\mathbf{B}_L+\mathbf{S}_R\cdot\mathbf{B}_R,
+H(t)=J(t)(\mathbf{S}_L\cdot\mathbf{S}_R-1/4)+\mathbf{S}_L\cdot\mathbf{B}_L+\mathbf{S}_R\cdot\mathbf{B}_R
 $$
 
 在双比特基矢 $\{|00\rangle,|01\rangle,|10\rangle,|11\rangle\}$ 下展开为
@@ -161,13 +161,13 @@ E_z+J/2 & 0 & 0 & 0\\
 0 & \delta E_z/2 & J/2 & 0\\
 0 & J/2 & -\delta E_z/2 & 0\\
 0 & 0 & 0 & -E_z+J/2
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 其中 $E_z=B_z\hbar+(B_z^L+B_z^R)/2$、$\delta E_z=B_z^L-B_z^R$。在对称工作点附近 $J\gg E_z,\delta E_z$，可用 $J/2$ 作微扰耦合 $|01\rangle$ 与 $|10\rangle$ 子空间。令交换耦合经微波调制 $J(t)=j_0+j(t)\cos(\omega_J t+\phi)$，在旋波近似下耦合子空间有效哈密顿量可写为
 
 $$
-H_R(t)=\frac{j(t)}{2}\big(\cos\phi\,\tilde\sigma_x+\sin\phi\,\tilde\sigma_y\big),
+H_R(t)=\frac{j(t)}{2}\big(\cos\phi\,\tilde\sigma_x+\sin\phi\,\tilde\sigma_y\big)
 $$
 
 其中 $\tilde\sigma_x,\tilde\sigma_y$ 是 $\{|01\rangle,|10\rangle\}$ 子空间的有效泡利矩阵。把单比特 Path2 的三段式相位设计原样移植过来，可得两比特等效演化算符：
@@ -179,7 +179,7 @@ U(\xi,\upsilon,\phi)=
 0 & \cos\xi+i\sin\xi\cos\upsilon & i\sin\xi\sin\upsilon\,e^{-i\phi} & 0\\
 0 & i\sin\xi\sin\upsilon\,e^{i\phi} & \cos\xi-i\sin\xi\cos\upsilon & 0\\
 0 & 0 & 0 & 1
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 当 $\phi=0$、$\upsilon=\xi=\pi/2$ 时 $U$ 等价于 iSWAP 门；两次 iSWAP 与若干单比特操作即可合成 CNOT，从而构成通用的几何门集。
@@ -193,26 +193,3 @@ $$
 - [[qubit-control/ramsey-interferometry|Ramsey 干涉]] 与 [[qubit-control/dynamical-decoupling|动态解耦]]：Ramsey 给出 $T_2^*$，进而决定内在失谐噪声 $\delta f_\mathrm{Larmor}$ 的估算值；CPMG 等动态解耦序列把 $T_2$ 从百纳秒延长到微秒量级，本身就是一种与几何门互补的抗噪声手段。
 - [[materials-devices/charge-noise|电荷噪声]]：几何门的"几何"鲁棒性只针对不改变闭合路径所围面积的微扰；电荷噪声中的低频 $1/f$ 分量表现为路径面积抖动，是几何门最直接压制的对象；但高频电荷涨落、电荷阶跃等改变路径形状的扰动仍会破坏几何相位。
 - 缀饰自旋量子比特（dressed spin qubit）与 GRAPE（gradient ascent pulse engineering）最优控制：同属"鲁棒单比特操控"方案。缀饰态方案通过连续驱动把系统静态化，GRAPE 通过梯度上升算法设计波形补偿特定噪声；几何门则属于"换一个自由度（路径面积）来编码门"的第三类方案，三者经常在同一器件上互为对照。
-
-## 延伸阅读
-
-- M. V. Berry, "Quantal phase factors accompanying adiabatic changes", *Proceedings of the Royal Society of London A* (1984). [DOI: 10.1098/rspa.1984.0023]
-- X.-B. Wang and M. Keiji, "Nonadiabatic conditional geometric phase shift with NMR", *Physical Review Letters* (2001); 及 P. Zanardi, M. Rasetti, "Holonomic quantum computation", *Physics Letters A* (1999)——非绝热几何计算的两篇奠基性工作（综合参考）。
-- J. W. Zhao et al., "Single-spin-qubit geometric gate in a silicon quantum dot", *Physical Review Applied* (2024). [DOI: 10.1103/PhysRevApplied.21.014044]
-- K. Z. Li et al., "Universal, high-fidelity quantum gates based on superadiabatic, geometric phases on a solid-state spin-qubit at room temperature", *npj Quantum Information* (2018). [DOI: 10.1038/s41534-018-0098-7]
-- Y. Liang et al., "Nonadiabatic holonomic quantum computation and its optimal control", *Science China Information Sciences* (2023). [DOI: 10.1007/s11432-023-3824-0]
-
-## 论文依据
-
-- [[sources/ref-25|文献 25]]，PDF p. 7：首次在平面锗空穴自旋量子比特中实验实现基于几何相位的单量子比特门，并以几何相位门提升操控的噪声鲁棒性。
-- [[sources/ref-25|文献 25]]，PDF pp. 82–83：几何量子门引入动机（噪声鲁棒性、高一致性、高保真度）；典型的低频电荷噪声主导下传统动力学门的局限。
-- [[sources/ref-25|文献 25]]，PDF p. 85：Berry 1984 年几何相位工作、Wang/Zanardi 1999–2001 年非绝热几何计算方案、阿贝尔/非阿贝尔分类及空穴自旋比特作为非绝热几何计算平台的定位。
-- [[sources/ref-25|文献 25]]，PDF pp. 102–103：双段驱动哈密顿量（式 5.5）与 Path1/Path2 三段式相位设计（式 5.6），等效演化算符 $U(\theta,\gamma,\phi)=\exp(i\gamma\,\mathbf{n}\cdot\boldsymbol{\sigma})$（式 5.7）及几何 $I$ 门特例 $\theta=\pi/2,\phi=\pi/2,\gamma=0$。
-- [[sources/ref-25|文献 25]]，PDF pp. 104–105：图 5.13 给出 Path1 与 Path2 在布洛赫球上的演化路径、表 5.1 给出 $f_\mathrm{Rabi}=8.23\text{–}18.97\,\mathrm{MHz}$ 下 Path2 几何 $I,X/2,Y/2$ 门保真度最高 99.98%、99.80%、99.97%。
-- [[sources/ref-25|文献 25]]，PDF p. 106：Path2 vs Path3$\pi$ 保真度对比（5.4.2 节），Path3$\pi$ 因约 $6$ 倍动力学门操作时间而被拖低。
-- [[sources/ref-25|文献 25]]，PDF p. 107：Path2 在 $\Delta f=\pm 2.5\,\mathrm{MHz}$（$X/2,Y/2$）、$\Delta f=\pm 1.2\,\mathrm{MHz}$（$I$）下保持 $>99\%$ 保真度；55 h 内比特共振频率漂移标准差 $0.794\,\mathrm{MHz}$，完全落在 Path2 容差之内。
-- [[sources/ref-25|文献 25]]，PDF p. 108：含 $\delta f_\mathrm{Larmor}$、$\delta f_\mathrm{Rabi}$ 的有限哈密顿量（式 5.8）及两类噪声的时间更新假设；拟合得到 $\delta f_\mathrm{Larmor}=1.80\,\mathrm{MHz}$、$\delta f_\mathrm{Rabi}=58.48\,\mathrm{kHz}$、$M=24$。
-- [[sources/ref-25|文献 25]]，PDF pp. 109–110：Path1 对系统性噪声 $\delta$ 的鲁棒性实验（$\delta\approx \pm 0.2$ 时反超动力学门）以及 Path1 对失谐噪声 $\Delta f$ 几乎无抵抗的对比（图 5.18、5.19），明确"几何门只对目标噪声占主导时展现优势"。
-- [[sources/ref-25|文献 25]]，PDF p. 111：更长 $T_2^*$ 与更小 $\delta f_\mathrm{Larmor}$（如 17.6 $\mu$s 对应 0.012 MHz）下的数值模拟，验证几何门在低噪声极限下仍稳定优于动力学门。
-- [[sources/ref-25|文献 25]]，PDF pp. 112–113：双比特几何门理论方案（式 5.9–5.11）、三段式闭合路径（式 5.12–5.14）与两比特等效演化算符（式 5.15），取 $\phi=0,\upsilon=\xi=\pi/2$ 即得 iSWAP；iSWAP×2 配合单比特操作合成 CNOT。
-- [[sources/ref-25|文献 25]]，PDF pp. 113–114：5.4.8 节讨论最优方案选择、最优操控点（sweet spot）与几何门操作时间之间的权衡，指出非循环、非绝热方案可在缩短演化时间的同时保留几何鲁棒性。

@@ -2,13 +2,13 @@
 title: 光子辅助隧穿
 description: 载流子吸收或发射一个或多个驱动光子后跨越原本失谐能量差的隧穿过程。
 aliases:
-  - PAT
-  - 光辅助隧穿
-  - photon-assisted tunneling
-  - 光子辅助隧穿过程
+ - PAT
+ - 光辅助隧穿
+ - photon-assisted tunneling
+ - 光子辅助隧穿过程
 tags:
-  - 量子比特操控
-  - 微波谱学
+ - 量子比特操控
+ - 微波谱学
 date: 2026-09-08
 ---
 
@@ -21,13 +21,13 @@ date: 2026-09-08
 物理上，把系统限制到只考虑每个量子点最高占据能级时，双量子点中电子从左点 $(N+1,M)$ 到右点 $(N,M+1)$ 的电荷转移可以约化为一个两能级体系（two-level system，TLS），其失谐量（detuning）记为 $\varepsilon$。无驱动时，自发隧穿只发生在 $\varepsilon=0$ 附近——电荷转移线（intra-dot tunneling line）就是两量子点电化学势对齐的轨迹。在门电极上叠加微波电压 $V_{ac}\cos(2\pi f t)$ 后，含时项把失谐改写为
 
 $$
-\varepsilon(t)=\varepsilon+V_{ac}\cos(2\pi f t),
+\varepsilon(t)=\varepsilon+V_{ac}\cos(2\pi f t)
 $$
 
 隧穿几率被周期势场调制：失谐 $\varepsilon$ 落在某个 $n h f$ 附近时，电子通过吸收（$n>0$）或放出（$n<0$）$|n|$ 个微波光子跨过能级差，即
 
 $$
-\Delta E=\varepsilon\,\alpha=n h f,
+\Delta E=\varepsilon\,\alpha=n h f
 $$
 
 其中 $\alpha$ 是参与扫描的电极的[[fundamentals/charging-energy|杠杆臂]]（level arm），把栅压换算成能量。这套图景最早由 Tien–Gordon 在超导隧道结中提出，1994 年由 Kouwenhoven 等人首次在半导体量子点中实验验证，并迅速成为电荷比特表征的标准工具。
@@ -39,7 +39,7 @@ $$
 PAT 的定量描述建立在含时隧穿问题的标准近似上。对一个无交流信号时电子隧穿几率 $\Gamma(E)$，当驱动频率为 $f$、幅值为 $V_{ac}$ 时，PAT 修正后的隧穿几率为
 
 $$
-\tilde{\Gamma}(E)=\sum_{n=-\infty}^{+\infty}J_{n}^{2}(\alpha)\,\Gamma(E+n h f),
+\tilde{\Gamma}(E)=\sum_{n=-\infty}^{+\infty}J_{n}^{2}(\alpha)\,\Gamma(E+n h f)
 $$
 
 其中 $J_n(\alpha)$ 是第一类 $n$ 阶 Bessel 函数，约化参数
@@ -57,13 +57,13 @@ $$
 把双量子点限制在电荷态 $\{|L\rangle=|N+1,M\rangle,\ |R\rangle=|N,M+1\rangle\}$ 两个态上，无驱动哈密顿量在失谐 $\varepsilon$ 与点间隧穿耦合 $t$ 之下写为
 
 $$
-H_0/\hbar=\frac{\varepsilon}{2}\sigma_z+t\,\sigma_x,
+H_0/\hbar=\frac{\varepsilon}{2}\sigma_z+t\,\sigma_x
 $$
 
 对应的本征态为缀饰态 $(|L\rangle\pm|R\rangle)/\sqrt{2}$，能级差 $\hbar\sqrt{\varepsilon^2+4t^2}$。在弱驱动极限下（$\alpha\ll 1$，保留至 $n=\pm 1$），微波场把失谐变为 $\varepsilon(t)=\varepsilon+V_{ac}\cos(2\pi f t)$，电子主要通过吸收或放出单光子完成跃迁；PAT 共振线在
 
 $$
-\alpha\,\varepsilon=\sqrt{(h f)^2-(2t)^2},
+\alpha\,\varepsilon=\sqrt{(h f)^2-(2t)^2}
 $$
 
 处出现。这一关系是 PAT 谱的"指纹方程"：它把一阶共振峰的失谐位置 $\varepsilon$、微波频率 $f$ 与点间隧穿耦合 $t$ 联系起来，给出同时拟合杠杆臂 $\alpha$ 与耦合 $t$ 的标准方法。
@@ -75,7 +75,7 @@ $$
 把连续微波斩波成 50% 占空比、周期 $\tau$ 可调的方波包络，可以由一阶共振峰高度的衰减测量电荷弛豫时间 $T_1$。定义峰高比
 
 $$
-\frac{M(\tau)}{M(\tau_0)}=\frac{1}{2}+\frac{T_1}{\tau}\left(1-e^{-\tau/2T_1}\right),
+\frac{M(\tau)}{M(\tau_0)}=\frac{1}{2}+\frac{T_1}{\tau}\left(1-e^{-\tau/2T_1}\right)
 $$
 
 其中 $\tau_0$ 取几纳秒（远小于 $T_1$）以对应饱和峰高；当 $\tau\gg T_1$ 时比值趋于 $1/2$，$\tau\to 0$ 时趋于 $1$。把实验测得的 $M(\tau)$ 与上式拟合即可得到 $T_1$——这是 PAT 谱同时充当"弛豫计"的典型用法。同一斩波信号的低占位下，电子没有足够时间从激发态回到基态，PAT 共振峰趋于饱和高度；这一段正是拟合 $M(\tau_0)$ 的依据。
@@ -84,20 +84,20 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 微波频率 $f$ | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点） | 文献 2 |
-| 驱动功率 | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动） | 文献 2 |
-| 最高观测 PAT 阶数 | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs） | 文献 2 |
-| 微波衰减 | $-22\ \mathrm{dBm}$（设备至样品实测） | 文献 4 |
-| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$） | 文献 4 |
-| 杠杆臂 $\alpha$ | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点） | 文献 4 |
-| 电子温度 $T_e$ | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） | 文献 4 |
-| 电荷弛豫时间 $T_1$ | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度） | 文献 2 |
-| 电荷弛豫时间 $T_1$ | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs） | 文献 4 |
-| 退相干时间 $T_2^*$ | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs） | 文献 4 |
-| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率） | 文献 4 |
-| PAT 提取的耦合能 | $7\ \mathrm{GHz}$（GaAs 串联双点） | 文献 2 |
-| 中间电极调谐范围 | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合） | 文献 4 |
-| 斩波混频器 | Marki M80420MS 1120 | 文献 2、文献 4 |
+| 微波频率 $f$ | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点） | |
+| 驱动功率 | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动） | |
+| 最高观测 PAT 阶数 | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs） | |
+| 微波衰减 | $-22\ \mathrm{dBm}$（设备至样品实测） | |
+| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$） | |
+| 杠杆臂 $\alpha$ | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点） | |
+| 电子温度 $T_e$ | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） | |
+| 电荷弛豫时间 $T_1$ | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度） | |
+| 电荷弛豫时间 $T_1$ | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs） | |
+| 退相干时间 $T_2^*$ | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs） | |
+| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率） | |
+| PAT 提取的耦合能 | $7\ \mathrm{GHz}$（GaAs 串联双点） | |
+| 中间电极调谐范围 | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合） | |
+| 斩波混频器 | Marki M80420MS 1120 | 、 |
 | 信号源 | Agilent E8257D（GaAs） / HP 86732B（三量子点） / Agilent 8253D | 三篇论文 |
 
 ## 实验特征
@@ -160,28 +160,3 @@ PAT 用连续微波驱动、把电荷转移过程"打开"为电流；而[[readou
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/jaynes-cummings-model|JC 模型]]：PAT 是腔量子电动力学在"经典极限"下的对应，色散读出与 PAT 共振条件在数学上接续；
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs 异质结]]：传统 GaAs 双量子点是 PAT 谱学的标准平台，非掺杂 GaAs 把 $T_2^*$ 的天花板提高到了接近传统器件的水平；
 - [[materials-devices/charge-noise|电荷噪声]]：PAT 共振峰的展宽部分源于低频电荷噪声，是测量 [[materials-devices/charge-noise|电荷噪声]]对相干时间影响的直接途径。
-
-## 延伸阅读
-
-- L. P. Kouwenhoven, S. Jauho, M. Belle, A. S. Johnson, W. G. v. d. Wiel, C. M. Marcus, "Photon-assisted tunneling through a quantum dot", *Physical Review B* (1994).
-- T. H. Oosterkamp, T. Fujisawa, W. G. van der Wiel, K. Ishibashi, R. V. Hijman, S. Tarucha, L. P. Kouwenhoven, "Microwave spectroscopy of a quantum-dot molecule", *Nature* (1998).
-- J. R. Petta, A. C. Johnson, C. M. Marcus, M. P. Hanson, A. C. Gossard, "Manipulation of a single charge in a double quantum dot", *Physical Review Letters* (2004).
-- W. G. van der Wiel, S. De Franceschi, J. M. Elzerman, T. Fujisawa, S. Tarucha, L. P. Kouwenhoven, "Electron transport through double quantum dots", *Reviews of Modern Physics* (2002).
-
-## 论文依据
-
-- [[sources/ref-02|文献 2]]，PDF pp. 9–10：摘要阐述 GaAs 串联双量子点上的光子辅助隧穿过程、最高 14 阶 PAT 与 LZSM 干涉图样。
-- [[sources/ref-02|文献 2]]，PDF pp. 56–57：3.2 节给出 PAT 定义、Tien–Gordon 型隧穿率 $\tilde\Gamma(E)=\sum_n J_n^2(\alpha)\Gamma(E+n h f)$、约化参数 $\alpha=e V_{ac}/h f$ 与 $J_n^2(\alpha)$ 劈裂原能级为 $E+n h f$ 的物理图景。
-- [[sources/ref-02|文献 2]]，PDF pp. 57–60：3.3 节高频微波（$12$–$30\ \mathrm{GHz}$、$-5$–$10\ \mathrm{dBm}$）驱动下观察 PAT 共振隧穿条纹与功率依赖。
-- [[sources/ref-02|文献 2]]，PDF pp. 60–62：脉冲斩波（Marki M80420MS 1120 + Agilent E8257D）测量 $M(\tau)$，拟合得 $T_1\approx 8\ \mathrm{ns}$。
-- [[sources/ref-02|文献 2]]，PDF p. 63：电子温度高于 $2\ \mathrm{K}$ 时观察到 14 阶 PAT 过程并证明存在 LZSM 干涉。
-- [[sources/ref-02|文献 2]]，PDF p. 84：由 PAT 技术提取 GaAs 串联双点隧穿耦合能 $7\ \mathrm{GHz}$（与六边形几何给出的电容耦合能 $16\ \mathrm{GHz}$ 互补）。
-- [[sources/ref-04|文献 4]]，PDF pp. 4–5：摘要概述非掺杂 GaAs 双量子点上首次 PAT 实验、最高 6 阶 PAT 与弛豫/退相干时间测量。
-- [[sources/ref-04|文献 4]]，PDF pp. 86–87：6.1–6.2 节 PAT 实验设置（无液氦稀释制冷机 $10\ \mathrm{mK}$、$20$–$100$ 次平均、$\alpha=6\%$、$T_e\approx 80\ \mathrm{mK}$）。
-- [[sources/ref-04|文献 4]]，PDF pp. 87–88：非掺杂双点耦合强度 $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$ 的指数拟合（不同 $V_m$）。
-- [[sources/ref-04|文献 4]]，PDF pp. 89–90：$14\ \mathrm{GHz}$ 微波、$-5$ 至 $3\ \mathrm{dBm}$ 驱动下观察到 6 阶 PAT；指纹方程 $\alpha\varepsilon=\sqrt{(h f)^2-(2t_c)^2}$ 拟合给出 $2t_c=2.7$、$6.8$、$11\ \mathrm{GHz}$。
-- [[sources/ref-04|文献 4]]，PDF pp. 90–91：Marki M80420MS 1120 + AWG7082C 斩波，$M(\tau)$ 拟合得 $T_1\approx 15\ \mathrm{ns}$；$28\ \mathrm{GHz}$ 饱和一阶 PAT 峰 FWHM $\approx 0.42\ \mathrm{mV}$，$\alpha=0.06\ \mathrm{meV/mV}$ 给出 $T_2^*\approx 330\ \mathrm{ps}$；微波加热使 $T_e$ 升至 $280\ \mathrm{mK}$。
-- [[sources/ref-08|文献 8]]，PDF pp. 5–6：摘要概述线性耦合三量子点样品上利用 PAT 探究各量子点间相互关系。
-- [[sources/ref-08|文献 8]]，PDF pp. 71–72：5.2 节 PAT 表征原理（双量子点示意图、PAC 共振条件 $\Delta E=n h f$、多光子过程随功率增加而出现）。
-- [[sources/ref-08|文献 8]]，PDF pp. 73–75：5.3 节线性耦合三量子点中三个交叉区域（区域 1/2/3）的 PAT 边带峰——区域 3 出现对称双量子点 PAT 边带峰；区域 2 因 L 与 R 无直接隧穿耦合，边带峰仅出现在一侧，由中间点 C 的虚跃迁参与。
-- [[sources/ref-08|文献 8]]，PDF pp. 75–77：PAT 边带峰的对称与单侧分布对应不同的能级图景（(1,1,1)↔(0,2,1) 直接耦合 vs (1,1,0)↔(0,1,1) 经虚电子态 (0,2,0) 间接路径）。

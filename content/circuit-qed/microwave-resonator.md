@@ -2,13 +2,13 @@
 title: 微波谐振腔
 description: 在微波频段储存电磁能量并形成离散模式的集总、传输线或三维结构。
 aliases:
-  - 微波谐振器
-  - 超导谐振腔
-  - 共面波导谐振腔
-  - 谐振腔
+ - 微波谐振器
+ - 超导谐振腔
+ - 共面波导谐振腔
+ - 谐振腔
 tags:
-  - 电路量子电动力学
-  - 微波
+ - 电路量子电动力学
+ - 微波
 date: 2026-09-08
 ---
 
@@ -22,7 +22,7 @@ date: 2026-09-08
 
 ![[assets/figures/circuit-qed/gu-2023-fig1-6-cpw-cavity.jpg]]
 
-*半波长共面波导透射腔结构、横截面与等效电路（[文献 18]([[sources/gu-sisi-2023]])，图 1.6）*
+*半波长共面波导透射腔结构、横截面与等效电路*
 
 <!-- 原始占位：微波谐振腔的三类实现：集总 LC 元件、半波长共面波导、四分之一波长反射腔与三维矩形腔体 -->
 
@@ -34,7 +34,7 @@ date: 2026-09-08
 - **分布式传输线腔**：共面波导（coplanar waveguide，CPW）或带状线（stripline）被截取为有限长度 $l$，两端开路或一端短路形成驻波。典型基模是 $\lambda/2$ 透射腔或 $\lambda/4$ 反射腔，频率 $\omega_n\propto(2n+1)\pi/(2l\sqrt{L_lC_l})$，与电长度反比；
 - **三维腔体**：用整块超导金属（铝、铌）铣出矩形或圆柱形空腔，TE/TM 模式由腔长 $d$ 决定 $\omega_{mnp}$。介电参与度低、无大电流密度的细线结构，$Q$ 值可达 $10^5$–$10^6$，但与半导体器件的直流与射频引线集成更难。
 
-这三类在本站论文中分别由[[sources/ref-03|文献 3]]（系统对比）、[[sources/ref-17|文献 17]]（共面波导 + SQUID 阵列）与[[sources/ref-10|文献 10]]（反射式超导腔耦合纳米线量子点）作为代表实现。
+这三类在本站论文中作为代表实现。
 
 ## 集总模型与量子化
 
@@ -42,7 +42,7 @@ date: 2026-09-08
 
 $$
 \hat\Phi=\sqrt{\frac{\hbar Z_r}{2}}\left(a+a^\dagger\right),\qquad
-\hat H_r=\hbar\omega_r\left(a^\dagger a+\tfrac{1}{2}\right),
+\hat H_r=\hbar\omega_r\left(a^\dagger a+\tfrac{1}{2}\right)
 $$
 
 其中
@@ -75,7 +75,7 @@ $n=0$ 的基模为半波长 $\lambda/2$ 模式，对应两端开路透射腔；�
 
 $$
 C_l=4\varepsilon_0\varepsilon_{\mathrm{eff}}\frac{K(k')}{K(k)},\qquad
-L_l=\frac{\mu_0}{4}\frac{K(k')}{K(k)},
+L_l=\frac{\mu_0}{4}\frac{K(k')}{K(k)}
 $$
 
 其中 $k=w/(w+2s)$ 由中心导体宽 $w$ 与地间距 $s$ 决定，$\varepsilon_{\mathrm{eff}}\approx(1+\varepsilon_r)/2$ 在衬底远厚于膜厚的条件下成立。
@@ -85,7 +85,7 @@ $$
 超导材料制成的传输线 $R_l, G_l\approx0$，特征阻抗化为
 
 $$
-Z_r=\sqrt{\frac{L_l}{C_l}}=\sqrt{\frac{L_r}{C_r}},
+Z_r=\sqrt{\frac{L_l}{C_l}}=\sqrt{\frac{L_r}{C_r}}
 $$
 
 商用微波器件为 $50\ \Omega$，因此传统 CPW 腔也按 $50\ \Omega$ 设计以避免反射与失真；但半导体 cQED 中需要偏离此惯例——腔电压的零点涨落正比于 $\sqrt{Z_r}$，提高 $Z_r$ 即放大量子点所感受到的真空电场（详见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]）。这是[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线的理论根源。
@@ -108,14 +108,14 @@ $$
 \omega_{mnp}=\frac{1}{\sqrt{\mu\varepsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2+\left(\frac{p\pi}{d}\right)^2},\qquad m,n,p=0,1,2,\dots
 $$
 
-腔长 $d$ 须为半波导波长的整数倍，对应短路 $\lambda/2$ 谐振。文献 3 用 HFSS 设计了一个 $9.5\ \mathrm{GHz}$ 附近的矩形 3D 腔，并在 $20\ \mathrm{mK}$ 温度下测得全封闭铝腔 $Q\sim 2\times10^5$，开槽腔 $Q\sim 10^5$，加直流引线后 $Q$ 降至 $\sim 8\times10^3$。3D 腔的优势是没有中心细线、导体损耗极小，但同轴线 TEM 模到 3D 腔 TE 模的模式转换效率低，需要把同轴线芯直接插入腔中精细调节长度。
+腔长 $d$ 须为半波导波长的整数倍，对应短路 $\lambda/2$ 谐振。 用 HFSS 设计了一个 $9.5\ \mathrm{GHz}$ 附近的矩形 3D 腔，并在 $20\ \mathrm{mK}$ 温度下测得全封闭铝腔 $Q\sim 2\times10^5$，开槽腔 $Q\sim 10^5$，加直流引线后 $Q$ 降至 $\sim 8\times10^3$。3D 腔的优势是没有中心细线、导体损耗极小，但同轴线 TEM 模到 3D 腔 TE 模的模式转换效率低，需要把同轴线芯直接插入腔中精细调节长度。
 
 ## 散射矩阵与端口网络
 
 实际测量的对象是端口的散射参数 $S_{ij}$。对单端口反射腔，由输入–输出理论可得反射系数
 
 $$
-S_{11}(\omega)=-1+\frac{2Q/Q_e}{1-2iQ(\omega/\omega_r-1)},
+S_{11}(\omega)=-1+\frac{2Q/Q_e}{1-2iQ(\omega/\omega_r-1)}
 $$
 
 对双端口透射腔
@@ -129,7 +129,7 @@ $$
 
 $$
 S_{11}(\omega)=-1+\frac{\kappa_e}{i(\omega_r-\omega)+g_c\chi+\kappa/2},\qquad
-S_{21}(\omega)=\frac{\sqrt{\kappa_{e,1}\kappa_{e,2}}}{i(\omega_r-\omega)+g_c\chi+\kappa/2},
+S_{21}(\omega)=\frac{\sqrt{\kappa_{e,1}\kappa_{e,2}}}{i(\omega_r-\omega)+g_c\chi+\kappa/2}
 $$
 
 其中 $\kappa=\kappa_i+\kappa_e$，$\gamma=\gamma_1/2+\gamma_\phi$。当 $g_c\chi\to0$ 时回到无加载谐振腔的洛伦兹响应。
@@ -142,7 +142,7 @@ $$
 - **介质与界面二能级系统**（TLS）：电极–衬底界面、隧穿结氧化层中的非晶态缺陷，在低温下饱和为 $\tan\delta\sim 10^{-3}$–$10^{-4}$ 的介电损耗；
 - **微波辐射与泄漏**：长直流电极在微波频段如同一根天线，把腔内能量辐射进自由空间或邻近电路，常用片上[[readout-measurement/purcell-filter|Purcell 滤波]]结构抑制。
 
-对常规 CPW 腔，$Q$ 在 $10^3$–$10^4$ 之间；3D 腔可达 $10^5$–$10^6$；高阻抗动态电感腔（如 NbTiN、TiN）通常 $Q\sim 10^3$；SQUID 阵列腔受结参数离散与氧化层缺陷影响，$Q\sim 10^2$–$10^3$。本站论文中具体的内耗散/外耗散值由矢量网络分析仪拟合散射谱直接得到（如文献 17论文双量子点电荷比特实验中 $\omega_r/2\pi=6.53\ \mathrm{GHz}$，$\kappa_i/2\pi=30.0\ \mathrm{MHz}$、$\kappa_e/2\pi$ 数十 MHz 量级）。
+对常规 CPW 腔，$Q$ 在 $10^3$–$10^4$ 之间；3D 腔可达 $10^5$–$10^6$；高阻抗动态电感腔（如 NbTiN、TiN）通常 $Q\sim 10^3$；SQUID 阵列腔受结参数离散与氧化层缺陷影响，$Q\sim 10^2$–$10^3$。本站论文中具体的内耗散/外耗散值由矢量网络分析仪拟合散射谱直接得到（如论文双量子点电荷比特实验中 $\omega_r/2\pi=6.53\ \mathrm{GHz}$，$\kappa_i/2\pi=30.0\ \mathrm{MHz}$、$\kappa_e/2\pi$ 数十 MHz 量级）。
 
 ## 参数与量级
 
@@ -150,14 +150,14 @@ $$
 
 | 腔型 | $Z_r$ | $\omega_r/2\pi$ | $\kappa/2\pi$ | 关键参数 | 来源 |
 | --- | --- | --- | --- | --- | --- |
-| 标准 CPW 透射腔 | 50 Ω | 5.92 GHz | κᵢ/2π ≈ 数十 MHz，κₑ 可调 | 半波长开路，CPW 标准阻抗 | 文献 3 |
-| 反射式超导腔（铝制） | 50 Ω | 6.045 GHz | κᵢ/2π ≈ 11.3 MHz，κₑ/2π ≈ 数十 MHz | 半波长双线，奇模激励 | 文献 10 |
-| 三维铝腔（20 mK） | — | 9.45 GHz | $Q\sim 2\times10^5$ | 全封闭 | 文献 3 |
-| 双端口透射腔耦合两个 DQD | 50 Ω | 6.53 GHz | κᵢ/2π=30.0 MHz | 测得 $g_0/2\pi\sim81\ \mathrm{MHz}$ | 文献 17 |
-| 高阻抗 SQUID 阵列腔 | ~1 kΩ | 磁通可调 | 30–60 MHz | 38 个 SQUID 串联 | 文献 18 |
-| 高阻抗 NbTiN 腔 | ~2 kΩ | ~6 GHz | ~11 MHz | w=0.32 µm，11 nm 膜 | 文献 18 |
-| 高阻抗 TiN λ/2 腔 | ~3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，Lₖ=265.9 pH/□ | 文献 20 |
-| 高阻抗 TiN 腔（7.3 GHz） | ~2.5 kΩ | 7.332 GHz | 5.13 MHz | 用于自旋–光子耦合 | 文献 20 |
+| 标准 CPW 透射腔 | 50 Ω | 5.92 GHz | κᵢ/2π ≈ 数十 MHz，κₑ 可调 | 半波长开路，CPW 标准阻抗 | |
+| 反射式超导腔（铝制） | 50 Ω | 6.045 GHz | κᵢ/2π ≈ 11.3 MHz，κₑ/2π ≈ 数十 MHz | 半波长双线，奇模激励 | |
+| 三维铝腔（20 mK） | — | 9.45 GHz | $Q\sim 2\times10^5$ | 全封闭 | |
+| 双端口透射腔耦合两个 DQD | 50 Ω | 6.53 GHz | κᵢ/2π=30.0 MHz | 测得 $g_0/2\pi\sim81\ \mathrm{MHz}$ | |
+| 高阻抗 SQUID 阵列腔 | ~1 kΩ | 磁通可调 | 30–60 MHz | 38 个 SQUID 串联 | |
+| 高阻抗 NbTiN 腔 | ~2 kΩ | ~6 GHz | ~11 MHz | w=0.32 µm，11 nm 膜 | |
+| 高阻抗 TiN λ/2 腔 | ~3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，Lₖ=265.9 pH/□ | |
+| 高阻抗 TiN 腔（7.3 GHz） | ~2.5 kΩ | 7.332 GHz | 5.13 MHz | 用于自旋–光子耦合 | |
 
 耦合强度的收益与之同步：50 Ω CPW 透射腔中 $g/2\pi\sim6.5$–$20\ \mathrm{MHz}$ 停留在弱耦合区；SQUID 阵列腔把 GaAs 双量子点的耦合提升到 $g/2\pi\approx119\ \mathrm{MHz}$；3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175\ \mathrm{MHz}$ 的电荷比特强耦合。
 
@@ -165,7 +165,7 @@ $$
 
 微波谐振腔是半导体 cQED 实验中几乎唯一的读出与耦合通道。典型应用如下：
 
-- **反射式谐振测量量子点复导纳**：将量子点等效为与谐振腔耦合的复阻抗 $Y(\omega)=G(\omega)+i\omega C(\omega)$，通过反射谱的幅值与相位拟合提取 $G$、$C$，从而分辨[[fundamentals/charge-stability-diagram|电荷稳定图]]中的隧穿线（改变 $C$）与共隧穿线（改变 $G$）。文献 10 用此方法在锗硅纳米线空穴量子点上测得 $g_c/2\pi=148\ \mathrm{MHz}$；
+- **反射式谐振测量量子点复导纳**：将量子点等效为与谐振腔耦合的复阻抗 $Y(\omega)=G(\omega)+i\omega C(\omega)$，通过反射谱的幅值与相位拟合提取 $G$、$C$，从而分辨[[fundamentals/charge-stability-diagram|电荷稳定图]]中的隧穿线（改变 $C$）与共隧穿线（改变 $G$）。 用此方法在锗硅纳米线空穴量子点上测得 $g_c/2\pi=148\ \mathrm{MHz}$；
 - **色散读出**：在 $|\Delta|\gg g$ 的大失谐区，腔频按 $\chi=g^2/\Delta\sigma_z$ 移动，测量腔相位即可读出比特态而不破坏它，是[[readout-measurement/dispersive-readout|色散读出]]的基础；
 - **真空 Rabi 劈裂与强耦合判定**：比特频率穿过腔频时，谱线出现最小间距 $2g$ 的避免交叉，要求 $g>\kappa,\gamma$，对应[[circuit-qed/strong-coupling|强耦合]]判据；
 - **腔介导远程耦合**：两比特共享同一腔模时，经虚光子交换得到有效相互作用 $\sim g_1g_2/\Delta$，把近邻（百纳米）相互作用扩展到毫米尺度，对应[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]；
@@ -179,19 +179,3 @@ $$
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）；
 - 多比特共享同一腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础；
 - 性能瓶颈来自[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]，常见平台包括[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]。
-
-## 延伸阅读
-
-- A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.-S. Huang, J. Majer, S. Kumar, S. M. Girvin, R. J. Schoelkopf, "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics", *Nature* (2004). [DOI: 10.1038/nature02851]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, A. Wallraff, "Circuit Quantum Electrodynamics", *Reviews of Modern Physics* (2021). [DOI: 10.1103/RevModPhys.93.025005]
-- M. Göppl, A. Fragner, M. Baur, R. Bianchetti, S. Filipp, J. M. Fink, P. J. Leek, G. Puebla, L. Steffen, A. Wallraff, "Coplanar waveguide resonators for circuit quantum electrodynamics", *Journal of Applied Physics* (2008). [DOI: 10.1063/1.3010859]
-- A. Stockklauser, P. Scarlino, J. V. Koski, S. Gasparinetti, C. K. Andersen, C. Reichl, W. Wegscheider, T. Ihn, K. Ensslin, A. Wallraff, "Strong Coupling Cavity QED with Gate-Defined Double Quantum Dots Enabled by a High Impedance Resonator", *Physical Review X* (2017). [DOI: 10.1103/PhysRevX.7.011030]
-- N. Holman, D. Rosenberg, D. Yost, J. L. Yoder, R. Das, W. D. Oliver, R. McDermott, M. A. Eriksson, "3D integration and measurement of a semiconductor double quantum dot with a high-impedance TiN resonator", *npj Quantum Information* (2021). [DOI: 10.1038/s41534-021-00469-0]
-
-## 论文依据
-
-- [[sources/ref-03|文献 3]]，PDF p. 40：集总并联谐振电路图与有载品质因数 $1/Q=1/Q_i+1/Q_e$ 的推导；PDF pp. 42–43：传输线谐振电路与等效 RLC 参数 $R=Z_r/\alpha$、$L=Z_r l/(\omega_r\alpha)$、$C=\alpha/(\omega_r Z_r)$；PDF p. 44：LC 谐振电路量子化为 $\hat H_r=\hbar\omega_r a^\dagger a$，零点能略去；PDF pp. 45–46：共面波导 CPW 几何电容 $C_l$、几何电感 $L_l$（式 3.9–3.10）；PDF p. 49：透射式 CPW 腔的 ABCD 传输矩阵与 $S$ 参数；PDF p. 52：反射式耦合线传输线谐振腔与缝耦合输入阻抗；PDF p. 58：矩形波导结构与 TE/TM 模式；PDF p. 59：矩形 3D 谐振腔频率公式 $\omega_{mnp}$；PDF p. 63：HFSS 模拟与 3D 腔品质因数表（全封闭铝腔 $Q\sim 2\times10^5$、开槽腔 $Q\sim 10^5$、加直流引线后 $Q\sim 8\times10^3$）；PDF pp. 82–83：双量子点–腔耦合模型的本征态（式 6.12–6.14）与电容耦合强度；PDF pp. 89–90：通过腔响应读出电荷稳定图、提取隧穿率与电荷退相干。
-- [[sources/ref-17|文献 17]]，PDF p. 27：集总 LC 谐振电路量子化（式 2.7–2.8）；PDF pp. 28–29：共面波导传输线模式频率 $\omega_n$（式 2.11）、反射腔频率 $\omega_n=(2n+1)\omega_0$（式 2.12）与特征阻抗 $Z_r=\sqrt{L_r/C_r}$（式 2.14）；PDF pp. 30–31：散射矩阵 $S_{11}$（式 2.20）、$S_{21}$（式 2.21）与 $S_{ii}$（式 2.22）、有载品质因数定义与过/欠耦合分类；PDF p. 32：高阻抗谐振腔设计目标 $Z_r\sim 1$–$2\ \mathrm{k\Omega}$；PDF pp. 33–34：约瑟夫森结与 SQUID 电感公式（式 2.23–2.29）；PDF p. 35：SQUID 阵列腔拉格朗日量与离散模式 $\omega_k$（式 2.30–2.35）；PDF p. 36：动态电感公式 $L_k=m_e l/(2n_s e^2 wh)$；PDF pp. 40–42：偶极耦合 $H_{\mathrm{int}}=(e\nu/2)\tau_z V$ 与全局耦合 $g_0=\nu\omega_r\sqrt{2Z_r/R_Q}$（式 2.47–2.51）；PDF p. 42：耦合比特的散射矩阵（式 2.58–2.59）；PDF pp. 55、60–61：双端口透射腔参数 $\omega_r/2\pi=6.53\ \mathrm{GHz}$、$\kappa_i/2\pi=30.0\ \mathrm{MHz}$，全局耦合 $g_0/2\pi\sim81\ \mathrm{MHz}$，自旋比特色散频移 $|\chi|/2\pi=11\ \mathrm{MHz}$。
-- [[sources/ref-10|文献 10]]，PDF pp. 7–8：反射式超导微波谐振腔耦合锗硅纳米线空穴单量子点；PDF pp. 76–79：通过腔幅值与相位响应拟合复导纳模型，得空穴–腔耦合强度 $g_c/2\pi=148\ \mathrm{MHz}$，对应自旋–腔预估 $2$–$4\ \mathrm{MHz}$；PDF pp. 86–87：纯腔谐振频率 $\omega_0/2\pi=5.92\ \mathrm{GHz}$；PDF p. 101：另一反射腔参数 $f_r=6.045\ \mathrm{GHz}$、$\kappa_i/2\pi$、$\kappa_e/2\pi$；PDF p. 103：双量子点与腔的偶极耦合强度 $g_c=2.96\ \mathrm{MHz}$ 与电荷退相干速率。
-- [[sources/ref-18|文献 18]]，PDF p. 22：高阻抗腔在电路量子电动力学中的作用综述；PDF p. 34：SQUID 阵列腔的拉格朗日量与模式频率（式 2.6–2.10）；PDF p. 37：动态电感材料腔的 $Z_r$ 与 $\kappa/2\pi$ 关系；PDF p. 41：SQUID 阵列腔阻抗 $\sim 1\ \mathrm{k\Omega}$、$\kappa/2\pi\approx 30$–$60\ \mathrm{MHz}$；PDF p. 42：NbTiN 腔阻抗 $\sim 2\ \mathrm{k\Omega}$、$\kappa/2\pi\approx 11\ \mathrm{MHz}$、中心导体 $w\approx 0.32\ \mathrm{\mu m}$。
-- [[sources/ref-20|文献 20]]，PDF p. 24：高阻抗超导谐振腔概述；PDF p. 29：动态电感物理与 $Z_r$ 关系（2.1.6 节）；PDF p. 40：耦合强度公式 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$（式 2.55）；PDF p. 52：TiN 腔 $L_k=265.9\ \mathrm{pH/\Box}$、全局耦合 $g_0/2\pi=175\ \mathrm{MHz}$；PDF p. 55：$f_r=4.993\ \mathrm{GHz}$、$\kappa/2\pi=2.2\ \mathrm{MHz}$、$Z_r\approx 3.5\ \mathrm{k\Omega}$；PDF p. 69：$f_r=7.332\ \mathrm{GHz}$、$\kappa/2\pi=5.13\ \mathrm{MHz}$、$Z_r=2.5\ \mathrm{k\Omega}$。

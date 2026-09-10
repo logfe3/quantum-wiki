@@ -2,14 +2,14 @@
 title: Si/SiGe 异质结
 description: 在 SiGe 势垒中形成应变硅量子阱、用于长相干电子自旋量子比特的材料平台。
 aliases:
-  - 硅锗量子点
-  - SiSiGe
-  - Si/SiGe
-  - SiGe 异质结
-  - 应变硅量子阱
+ - 硅锗量子点
+ - SiSiGe
+ - Si/SiGe
+ - SiGe 异质结
+ - 应变硅量子阱
 tags:
-  - 材料与器件
-  - 硅
+ - 材料与器件
+ - 硅
 date: 2026-09-08
 ---
 
@@ -26,7 +26,7 @@ Si/SiGe 异质结（Si/SiGe heterostructure）的核心是一个"三明治"：�
 
 ![[assets/figures/materials-devices/yang-2023-fig1-1-sisiGe-band.jpg]]
 
-*Si/SiGe 异质结的能带与结构示意图（[文献 19]([[sources/yang-jiecheng-2023]])，图 1.1）*
+*Si/SiGe 异质结的能带与结构示意图*
 
 <!-- 原始占位：Si/SiGe 异质结层结构剖面（Si cap / SiGe spacer / Si 量子阱 / SiGe buffer / graded buffer / Si 衬底）与对应的导带底能级示意，标出费米面与三角势阱中的 2DEG -->
 
@@ -54,15 +54,15 @@ $$
 谷劈裂的定量描述可用两个谷态张成的二能级有效哈密顿量：
 
 $$
-H_v=\begin{pmatrix} 0 & \Delta_v \\ \Delta_v^{*} & 0\end{pmatrix},
-\qquad E_\mathrm{VS}=2|\Delta_v|,
+H_v=\begin{pmatrix} 0 & \Delta_v \\ \Delta_v^{*} & 0\end{pmatrix}
+\qquad E_\mathrm{VS}=2|\Delta_v|
 $$
 
 其中谷耦合 $\Delta_v$ 是界面势在两个谷态之间的矩阵元。这个写法直接解释了实验规律：界面越锐利、纵向电场把波函数压得越紧，$|\Delta_v|$ 越大；而 Si 量子阱与 SiGe 间隔层界面上的**原子台阶**会让不同横向位置的 $\Delta_v$ 相位不同、相干叠加相消，从而显著抑制谷劈裂。这也是 Si/SiGe 相对 [[materials-devices/silicon-mos|Si-MOS]] 的主要短板：MOS 的 Si/SiO₂ 界面势垒极陡，谷劈裂天然更大，而 Si/SiGe 的化学界面较"软"，$E_\mathrm{VS}$ 偏小，需要靠优化基片结构与生长工艺改善。
 
 ![[assets/figures/materials-devices/you-jie-2016-fig1-1-gaas-heterostructure.jpg]]
 
-*掺杂 GaAs/AlGaAs 异质结层结构与垂直能带图（[文献 4]([[sources/you-jie-2016]])，图 1.1）*
+*掺杂 GaAs/AlGaAs 异质结层结构与垂直能带图*
 
 <!-- 原始占位：谷简并逐级解除示意：体硅六重简并 → 应变后 Δ4（四重）与 Γ2（二重）→ 二维限制与电场下 Γ2 劈裂出 E_VS -->
 
@@ -77,9 +77,9 @@ $$
 栅极在平面内造出的束缚势通常近似为对称谐振子势
 
 $$
-V(r)=\tfrac12 m^*\omega_0^2 r^2,
-\qquad \Delta_\mathrm{orb}=\hbar\omega_0,
-\qquad l_\mathrm{orb}=\sqrt{\frac{2\hbar}{m^*\omega_0}},
+V(r)=\tfrac12 m^*\omega_0^2 r^2
+\qquad \Delta_\mathrm{orb}=\hbar\omega_0
+\qquad l_\mathrm{orb}=\sqrt{\frac{2\hbar}{m^*\omega_0}}
 $$
 
 $\Delta_\mathrm{orb}$ 为最低两个轨道的间距，$l_\mathrm{orb}$ 为势阱特征长度。用量子点物理尺寸 $l$ 作粗估，轨道能标为
@@ -95,30 +95,29 @@ $$
 量子点的充放电由[[fundamentals/constant-interaction-model|常相互作用模型]]描述，[[fundamentals/charging-energy|充电能]]为
 
 $$
-E_C=\frac{e^2}{C_\Sigma},
+E_C=\frac{e^2}{C_\Sigma}
 $$
 
 $C_\Sigma$ 是量子点总电容。相邻[[fundamentals/coulomb-blockade|库仑阻塞]]峰的间距对应加电子能
 
 $$
-E_\mathrm{add}=E_C+E_\mathrm{orb}+E_\mathrm{spin},
+E_\mathrm{add}=E_C+E_\mathrm{orb}+E_\mathrm{spin}
 $$
 
 其中 $E_\mathrm{spin}$ 为自旋（塞曼）劈裂。可分辨的库仑峰要求两个条件：$E_C\gg k_\mathrm{B}T_e$，以及量子点与源漏的隧穿电阻 $R_t\gg h/e^2$。Si/SiGe 量子点的 $E_C$ 通常约 $3\ \mathrm{meV}$（对应 $E_C/k_\mathrm{B}\approx35\ \mathrm{K}$），而液氦温度 $4.2\ \mathrm{K}$ 已相当于 $362\ \mathrm{\mu eV}$ 的热涨落——所以 $4.2\ \mathrm{K}$ 下通常看不到清晰库仑峰，实验必须在 $10$–$20\ \mathrm{mK}$ 的稀释制冷机中进行。
 
 ### 自旋比特与 EDSR
 
-外磁场 $B_0$ 下电子自旋塞曼劈裂 $E_z=g\mu_\mathrm{B}B_0$，以拉莫尔频率 $\omega_0=E_z/\hbar$ 进动。加一个垂直于 $B_0$ 的交变磁场后，
-
+外磁场 $B_0$ 下电子自旋塞曼劈裂 $E_z=g\mu_\mathrm{B}B_0$，以拉莫尔频率 $\omega_0=E_z/\hbar$ 进动。加一个垂直于 $B_0$ 的交变磁场后
 $$
-H(t)=\frac{\hbar\omega_0}{2}\sigma_z+\hbar\Omega_\mathrm{R}\cos(\omega_1 t+\varphi)\,\sigma_x,
+H(t)=\frac{\hbar\omega_0}{2}\sigma_z+\hbar\Omega_\mathrm{R}\cos(\omega_1 t+\varphi)\,\sigma_x
 \qquad \Omega_\mathrm{R}=\frac{g\mu_\mathrm{B}B_\mathrm{ac}}{\hbar}.
 $$
 
 转到驱动场的旋转坐标系并作旋波近似：
 
 $$
-H_\mathrm{rot}=\frac{\hbar\Delta\omega}{2}\sigma_z+\frac{\hbar\Omega_\mathrm{R}}{2}\left[\cos\varphi\,\sigma_x-\sin\varphi\,\sigma_y\right],
+H_\mathrm{rot}=\frac{\hbar\Delta\omega}{2}\sigma_z+\frac{\hbar\Omega_\mathrm{R}}{2}\left[\cos\varphi\,\sigma_x-\sin\varphi\,\sigma_y\right]
 \qquad \Delta\omega=\omega_0-\omega_1 .
 $$
 
@@ -128,13 +127,13 @@ $\Delta\omega$ 给出绕 $z$ 轴的旋转，$\varphi$ 选定赤道面内的旋�
 
 $$
 B_\mathrm{eff}=\frac{eE_\mathrm{ac}\,l_\mathrm{orb}^{2}\,|b_\mathrm{sl}|}{\Delta_\mathrm{orb}}
-\propto\frac{eE_\mathrm{ac}|b_\mathrm{sl}|}{\Delta_\mathrm{orb}^{2}},
+\propto\frac{eE_\mathrm{ac}|b_\mathrm{sl}|}{\Delta_\mathrm{orb}^{2}}
 $$
 
 其中 $E_\mathrm{ac}$ 是微波电场幅值，$b_\mathrm{sl}=\partial B_x/\partial z$ 是微磁体的横向磁场梯度。把 $l_\mathrm{orb}^2=2\hbar/(m^*\omega_0)$ 与 $\Delta_\mathrm{orb}=\hbar\omega_0$ 代入即得
 
 $$
-B_\mathrm{eff}=\frac{2eE_\mathrm{ac}|b_\mathrm{sl}|}{m^*\omega_0^{2}}=\frac{2\hbar^{2}eE_\mathrm{ac}|b_\mathrm{sl}|}{m^{*}\Delta_\mathrm{orb}^{2}},
+B_\mathrm{eff}=\frac{2eE_\mathrm{ac}|b_\mathrm{sl}|}{m^*\omega_0^{2}}=\frac{2\hbar^{2}eE_\mathrm{ac}|b_\mathrm{sl}|}{m^{*}\Delta_\mathrm{orb}^{2}}
 $$
 
 也就是说驱动效率对轨道能隙是平方反比的：势阱越软、量子点越大，同样功率能翻转得越快。这条标度是[[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]的直接动机——把电子放到双量子点失谐零点，电偶极矩显著增大，Si/SiGe 中曾用此法把驱动效率提高近三个数量级。
@@ -155,7 +154,7 @@ H=\begin{pmatrix}
 0 & -J/2+\Delta E_z & J/2 & 0\\
 0 & J/2 & -J/2-\Delta E_z & 0\\
 0 & 0 & 0 & -\bar{E}_z
-\end{pmatrix},
+\end{pmatrix}
 $$
 
 $\bar{E}_z=g\mu_\mathrm{B}(B_{z1}+B_{z2})/2$ 为平均塞曼能，$\Delta E_z=g\mu_\mathrm{B}(B_{z1}-B_{z2})/2$ 为塞曼能差——在 Si/SiGe 中它由微磁体的纵向梯度提供，正是比特寻址的依据。
@@ -164,7 +163,7 @@ $\bar{E}_z=g\mu_\mathrm{B}(B_{z1}+B_{z2})/2$ 为平均塞曼能，$\Delta E_z=g\
 
 $$
 J=\frac{2t^2}{U-\epsilon-\Delta E_z}+\frac{2t^2}{U-\epsilon+\Delta E_z}
-\ \xrightarrow{\ U\gg\epsilon,\Delta E_z\ }\ \frac{4t^2}{U},
+\ \xrightarrow{\ U\gg\epsilon,\Delta E_z\ }\ \frac{4t^2}{U}
 $$
 
 $t$ 为点间隧穿耦合，$U$ 为平均充电能，$\epsilon=\mu_1-\mu_2$ 为失谐。
@@ -181,23 +180,23 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| Si 量子阱厚度 | $10\ \mathrm{nm}$ | 文献 21、文献 20 |
-| SiGe 间隔层厚度 | $30\ \mathrm{nm}$（常用区间 $30$–$60\ \mathrm{nm}$） | 文献 21 |
-| Si 帽层 / SiGe 缓冲层 / 渐变缓冲层 | $2\ \mathrm{nm}$ / $500\ \mathrm{nm}$ / $\sim3\ \mathrm{\mu m}$ | 文献 21 |
-| Ge 组分 $x$ | $0.30$–$0.33$ | 文献 21、文献 20 |
-| 晶格常数 | $a_\mathrm{Si}=5.431\ \text{Å}$，$a_\mathrm{SiGe}=5.499\ \text{Å}$ | 文献 21 |
-| 面内有效质量 | $m^*=0.19\,m_0$ | 文献 21 |
-| 量子点尺寸 | $\sim60\ \mathrm{nm}$ | 文献 21 |
-| 充电能 $E_C$ | $\sim3\ \mathrm{meV}$（2×2 阵列实测 $2.68$–$3.74\ \mathrm{meV}$） | 文献 21 |
-| 杠杆臂 $\alpha$ | $\approx0.12\ \mathrm{eV/V}$ | 文献 21 |
-| 最近邻隧穿耦合 $t_{ij}$ | 约 $25$–$200\ \mathrm{\mu eV}$ 连续可调，平均值可推到近 $300\ \mathrm{\mu eV}$ | 文献 21 |
-| 次近邻隧穿耦合 | 零附近 → $>100\ \mathrm{\mu eV}$（中心栅调控） | 文献 21 |
-| 比特频率 | $19.2771$ / $19.2354\ \mathrm{GHz}$（$B_\mathrm{ext}=500\ \mathrm{mT}$，含微磁体贡献） | 文献 21 |
-| 自旋弛豫 $T_1$ | $116\ \mathrm{ms}$ / $94\ \mathrm{ms}$ | 文献 21 |
-| 退相干 $T_2^{*}$（自然硅） | $0.9\ \mathrm{\mu s}$ / $0.7\ \mathrm{\mu s}$ | 文献 21 |
-| Hahn echo $T_2^\mathrm{Hahn}$ | $15.5\ \mathrm{\mu s}$ / $11.3\ \mathrm{\mu s}$ | 文献 21 |
-| Rabi 频率 | 随驱动幅值线性增长，最高约 $10\ \mathrm{MHz}$ | 文献 21 |
-| 门保真度（自然硅） | 单比特 $>99\%$，CZ $\approx91\%$ | 文献 21 |
+| Si 量子阱厚度 | $10\ \mathrm{nm}$ | 、 |
+| SiGe 间隔层厚度 | $30\ \mathrm{nm}$（常用区间 $30$–$60\ \mathrm{nm}$） | |
+| Si 帽层 / SiGe 缓冲层 / 渐变缓冲层 | $2\ \mathrm{nm}$ / $500\ \mathrm{nm}$ / $\sim3\ \mathrm{\mu m}$ | |
+| Ge 组分 $x$ | $0.30$–$0.33$ | 、 |
+| 晶格常数 | $a_\mathrm{Si}=5.431\ \text{Å}$，$a_\mathrm{SiGe}=5.499\ \text{Å}$ | |
+| 面内有效质量 | $m^*=0.19\,m_0$ | |
+| 量子点尺寸 | $\sim60\ \mathrm{nm}$ | |
+| 充电能 $E_C$ | $\sim3\ \mathrm{meV}$（2×2 阵列实测 $2.68$–$3.74\ \mathrm{meV}$） | |
+| 杠杆臂 $\alpha$ | $\approx0.12\ \mathrm{eV/V}$ | |
+| 最近邻隧穿耦合 $t_{ij}$ | 约 $25$–$200\ \mathrm{\mu eV}$ 连续可调，平均值可推到近 $300\ \mathrm{\mu eV}$ | |
+| 次近邻隧穿耦合 | 零附近 → $>100\ \mathrm{\mu eV}$（中心栅调控） | |
+| 比特频率 | $19.2771$ / $19.2354\ \mathrm{GHz}$（$B_\mathrm{ext}=500\ \mathrm{mT}$，含微磁体贡献） | |
+| 自旋弛豫 $T_1$ | $116\ \mathrm{ms}$ / $94\ \mathrm{ms}$ | |
+| 退相干 $T_2^{*}$（自然硅） | $0.9\ \mathrm{\mu s}$ / $0.7\ \mathrm{\mu s}$ | |
+| Hahn echo $T_2^\mathrm{Hahn}$ | $15.5\ \mathrm{\mu s}$ / $11.3\ \mathrm{\mu s}$ | |
+| Rabi 频率 | 随驱动幅值线性增长，最高约 $10\ \mathrm{MHz}$ | |
+| 门保真度（自然硅） | 单比特 $>99\%$，CZ $\approx91\%$ | |
 
 ## 材料生长与器件工艺
 
@@ -288,30 +287,3 @@ $$
 - 扩展层面：[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]是阵列可调性的前提，[[scaling-automation/two-dimensional-array|二维阵列]]是表面码纠错的物理载体。
 - 杂化层面：[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]把[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]推入[[circuit-qed/strong-coupling|强耦合]]区，为远程互连铺路。
 - 限制层面：[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是当前相干时间的主要瓶颈。
-
-## 延伸阅读
-
-- F. K. Unseld, M. Meyer, M. T. Mądzik, F. Borsoi, S. L. de Snoo, S. V. Amitonov, A. Sammak, G. Scappucci, M. Veldhorst, and L. M. K. Vandersypen, "A 2D quantum dot array in planar ²⁸Si/SiGe", *Applied Physics Letters* (2023). [DOI: 10.1063/5.0160847]
-- J. C. Marcks, E. Eagen, E. S. Brann, M. P. Losert, T. Oh, J. Reily, C. Wang, D. Keith, F. A. Mohiyaddin, F. Luthi, M. Curry, J. Zhang, F. J. Heremans, M. Friesen, and M. A. Eriksson, "Valley splitting correlations across a silicon quantum well containing germanium", *Nature Communications* (2025). [DOI: 10.1038/s41467-025-67325-z]
-- A. Noiri, K. Takeda, T. Nakajima, T. Kobayashi, A. Sammak, G. Scappucci, and S. Tarucha, "Fast universal quantum gate above the fault-tolerance threshold in silicon", *Nature* (2021). [DOI: 10.1038/s41586-021-04182-y]
-- X. Xue, T. F. Watson, J. Helsen, D. R. Ward, D. E. Savage, M. G. Lagally, S. N. Coppersmith, M. A. Eriksson, S. Wehner, and L. M. K. Vandersypen, "Benchmarking gate fidelities in a Si/SiGe two-qubit device", *Physical Review X* (2018). [DOI: 10.1103/PhysRevX.9.021011]
-
-## 论文依据
-
-- [[sources/ref-21|文献 21]]，PDF pp. 20–21：各材料平台对比——GaAs 迁移率高、点尺寸大但核自旋使 $T_2^{*}$ 仅纳秒量级；Si-MOS 点尺寸约 $30\ \mathrm{nm}$、迁移率低；Ge/GeSi 点尺寸百纳米、热预算低；Si:$^{31}$P 点尺寸约 $2\ \mathrm{nm}$；Si/SiGe 迁移率高、无序低、点尺寸约 $60\ \mathrm{nm}$、与产线高度兼容，主要问题是谷劈裂偏小。
-- [[sources/ref-21|文献 21]]，PDF pp. 39–40：Si/SiGe "三明治"结构与谷简并逐级解除；$a_\mathrm{SiGe}=5.499\ \text{Å}$、$a_\mathrm{Si}=5.431\ \text{Å}$ 与双轴张应变；$\Delta_4$/$\Gamma_2$ 劈裂与谷劈裂定义；$m^*=0.19\,m_0$；量子阱/间隔层厚度折中与界面原子台阶对谷劈裂的抑制。
-- [[sources/ref-21|文献 21]]，PDF p. 41：量子阱由 Si 与 SiGe 导带不连续性形成（Si 带隙 $1.12\ \mathrm{eV}$ 对 30% Ge 的 SiGe $0.98\ \mathrm{eV}$，叠加应变压低 Si 导带）及 2DEG 的形成。
-- [[sources/ref-21|文献 21]]，PDF pp. 41–42：重叠铝栅三层结构（屏蔽栅、能级栅与引导栅、势垒栅）与场氧/栅氧差异化设计。
-- [[sources/ref-21|文献 21]]，PDF pp. 44, 47–48：电子束光刻最小线宽 $20\ \mathrm{nm}$、套刻精度 $\pm10\ \mathrm{nm}$；栅氧层约 $7\ \mathrm{nm}$；铝电极等离子体氧化约 $5\ \mathrm{nm}$、层间厚度差约 $20\ \mathrm{nm}$。
-- [[sources/ref-21|文献 21]]，PDF pp. 33–34：单比特哈密顿量与旋转坐标系形式；EDSR 等效交变磁场 $B_\mathrm{eff}$ 公式及 $l_\mathrm{orb}$、$\Delta_\mathrm{orb}$ 定义。
-- [[sources/ref-21|文献 21]]，PDF pp. 35–37：海森堡两自旋哈密顿量与 $4\times4$ 矩阵形式；Hubbard 极限下 $J=4t^2/U$；CPhase 与 CZ 门；失谐零点的对称操作。
-- [[sources/ref-21|文献 21]]，PDF p. 50：Si/SiGe 量子点充电能约 $3\ \mathrm{meV}$，液氦温度 $4.2\ \mathrm{K}\approx362\ \mathrm{\mu eV}$ 下观察不到清晰库仑峰。
-- [[sources/ref-21|文献 21]]，PDF pp. 55–56：自然硅 Si/SiGe 一维四点阵列实现单比特门 $>99\%$、CZ $\approx91\%$、贝尔态平均保真度 $91\%$；电荷噪声经微磁体杂散梯度场限制相干时间。
-- [[sources/ref-21|文献 21]]，PDF pp. 59–64：chirp 波形寻找 EDSR 峰与 $28\ \mathrm{MHz/mT}$ 磁场判据；比特频率 $19.2771$/$19.2354\ \mathrm{GHz}$；$T_1=116$/$94\ \mathrm{ms}$，$T_2^{*}=0.9$/$0.7\ \mathrm{\mu s}$，$T_2^\mathrm{Hahn}=15.5$/$11.3\ \mathrm{\mu s}$；Ramsey 与 Hahn echo 拟合式；Rabi 品质因子 $Q>300$ 与 $F\approx1-1/Q$。
-- [[sources/ref-21|文献 21]]，PDF pp. 80, 87–88, 91：2×2 阵列四点杠杆臂 $\alpha\approx0.12\ \mathrm{eV/V}$、充电能 $2.68$–$3.74\ \mathrm{meV}$；Hubbard 模型模拟参数；最近邻 $t_{ij}$ 在 $25$–$200\ \mathrm{\mu eV}$ 指数可调、次近邻从近零调到 $>100\ \mathrm{\mu eV}$。
-- [[sources/ref-20|文献 20]]，PDF pp. 31–33：$\mathrm{Si/Si_{1-x}Ge_x}$（$x=0.33$）层结构与 2DEG 形成；$E_C=e^2/C_\Sigma$、$E_\mathrm{orb}\sim\hbar^2/(m^*l^2)$、$E_\mathrm{add}=E_C+E_\mathrm{orb}+E_\mathrm{spin}$；可分辨库仑峰的两个条件。
-- [[sources/ref-20|文献 20]]，PDF p. 55：TiN 高阻抗腔 $L_k=265.9\ \mathrm{pH/\square}$、$f_r=4.993\ \mathrm{GHz}$、$\kappa/2\pi=2.2\ \mathrm{MHz}$、$Z_r\approx3.5\ \mathrm{k\Omega}$，相对 $50\ \Omega$ 提升约 $8.4$ 倍耦合。
-- [[sources/ref-20|文献 20]]，PDF pp. 62, 78：电荷–光子全局耦合 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$ 与 $g=g_0(2t_c/\omega_q)$；自旋–光子 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$\gamma_s/2\pi=4.6\ \mathrm{MHz}$、$\kappa^{*}/2\pi=7.5\ \mathrm{MHz}$。
-- [[sources/ref-15|文献 15]]，PDF p. 22：Si/SiGe 晶格失配较大使迁移率低于 GaAs，但受核自旋影响小；2012 年 Si/SiGe 量子点首次实现 $T_2^{*}=360\ \mathrm{ns}$，为 GaAs 的 40 倍；Si-MOS 与 Si/SiGe 在 2DEG 深度上的差异。
-- [[sources/ref-15|文献 15]]，PDF pp. 96–97：Si/SiGe 中翻转模式 EDSR 把驱动效率提升近三个数量级。
-- [[sources/ref-24|文献 24]]，PDF pp. 21, 27：Si/SiGe 能带失配形成 2DEG 的图像；硅本征自旋–轨道耦合弱、需集成微磁体构建合成自旋–轨道耦合。

@@ -2,12 +2,12 @@
 title: 电化学势
 description: 向量子点增加第 N 个载流子所需的能量，是判断电荷跃迁的直接量。
 aliases:
-  - 加电子能
-  - 化学势
-  - 电化学势能
+ - 加电子能
+ - 化学势
+ - 电化学势能
 tags:
-  - 量子点基础
-  - 能量
+ - 量子点基础
+ - 能量
 date: 2026-09-08
 ---
 
@@ -18,10 +18,10 @@ date: 2026-09-08
 电化学势（electrochemical potential）是描述[[fundamentals/semiconductor-quantum-dot|半导体量子点]]充放电过程的核心量：对[[fundamentals/constant-interaction-model|常相互作用模型]]（CI 模型）下含有 $N$ 个电子的量子点，电化学势定义为把第 $N$ 个电子放入点中所需支付的最小能量，即
 
 $$
-\mu(N)=U(N)-U(N-1),
+\mu(N)=U(N)-U(N-1)
 $$
 
-其中 $U(N)$ 是含 $N$ 个电子时系统的总能量。$\mu(N)$ 同时包含了两个不可分割的部分——经典充电能 $E_C=e^2/C_\Sigma$（点电容储能）和单粒子能级 $E_N$（束缚势决定的分立能），所以它既是"化学势"，也是"静电势"；文献 7论文中明言"$\mu_N$ 即化学势和静电势之和"，文献 6、文献 5、文献 4等人也从不同起点给出完全等价的定义。
+其中 $U(N)$ 是含 $N$ 个电子时系统的总能量。$\mu(N)$ 同时包含了两个不可分割的部分——经典充电能 $E_C=e^2/C_\Sigma$（点电容储能）和单粒子能级 $E_N$（束缚势决定的分立能），所以它既是"化学势"，也是"静电势"；论文中明言"$\mu_N$ 即化学势和静电势之和"，、、等人也从不同起点给出完全等价的定义。
 
 电化学势的物理意义在于：源极（source）、漏极（drain）电子库各自的费米面 $\mu_S$、$\mu_D$ 与 $\mu(N)$ 的相对位置直接决定了隧穿是否允许。固定源漏费米面、连续扫描栅压 $V_G$，$\mu(N)$ 在能量轴上线性移动，逐次掠过源漏费米面，便形成一列分立的电流峰（库仑振荡）；若 $\mu(N)$ 始终停留在 $\mu_S$ 与 $\mu_D$ 之外，顺序隧穿被[[fundamentals/coulomb-blockade|库仑阻塞]]，电子数被锁定为整数的 $N-1$ 或 $N$。电化学势因此是判断电荷态跃迁、读取电子数、设计[[qubit-control/charge-qubit|电荷量子比特]]工作点的直接判据。
 
@@ -34,13 +34,13 @@ $$
 常相互作用模型把量子点与外界的全部库仑相互作用压缩成一个总电容
 
 $$
-C_\Sigma=C_S+C_D+C_G,
+C_\Sigma=C_S+C_D+C_G
 $$
 
 分别对应点与源、漏、栅电极之间的电容；点内的单粒子能级 $E_n$（可含磁场依赖）则与电子数无关。漏极接地、源极加偏压 $V_{SD}$、栅压 $V_G$ 时，含 $N$ 个电子的量子点总能量为
 
 $$
-U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B),
+U(N)=\frac{\left[-|e|(N-N_0)+C_S V_{SD}+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n(B)
 $$
 
 其中 $N_0$ 是电极电压全为零时点内补偿背景正电荷后的电子数。直接做差分即得电化学势：
@@ -49,30 +49,30 @@ $$
 \mu(N)=\left(N-N_0-\frac{1}{2}\right)E_C-\frac{E_C}{|e|}\left(C_S V_{SD}+C_G V_G\right)+E_N.
 $$
 
-$E_C=e^2/C_\Sigma$ 是[[fundamentals/charging-energy|充电能]]（charging energy）。上述推导可以用电容矩阵方法给出更严格的版本（文献 6论文 1.10–1.15 式）：把量子点与各电极视作导体节点，节点电荷与电势由电容矩阵联系 $\vec{Q}=C\vec{V}$，系统总静电能为 $U=\tfrac{1}{2}\vec{V}_c^{\mathrm{T}}C_{cc}\vec{V}_c$。当点内电荷改变 $\delta Q$ 时电极上会感应电荷，为维持电极电势不变电源必须做功，且该功恰好等于点–电极相互作用项的变化（$W=\delta U_2$），故可归入量子点自由能的只剩点内项 $U_1$；对单点取 $C_{cc}=C_\Sigma$ 即得上式的二次型。这一推导说明 $Q^2/2C_\Sigma$ 并非单纯的几何电容储能，而是计入了电源做功的热力学自由能。
+$E_C=e^2/C_\Sigma$ 是[[fundamentals/charging-energy|充电能]]（charging energy）。上述推导可以用电容矩阵方法给出更严格的版本（论文 1.10–1.15 式）：把量子点与各电极视作导体节点，节点电荷与电势由电容矩阵联系 $\vec{Q}=C\vec{V}$，系统总静电能为 $U=\tfrac{1}{2}\vec{V}_c^{\mathrm{T}}C_{cc}\vec{V}_c$。当点内电荷改变 $\delta Q$ 时电极上会感应电荷，为维持电极电势不变电源必须做功，且该功恰好等于点–电极相互作用项的变化（$W=\delta U_2$），故可归入量子点自由能的只剩点内项 $U_1$；对单点取 $C_{cc}=C_\Sigma$ 即得上式的二次型。这一推导说明 $Q^2/2C_\Sigma$ 并非单纯的几何电容储能，而是计入了电源做功的热力学自由能。
 
 ### 加电子能（addition energy）
 
 相邻两个电化学势之差称为加电子能（addition energy）：
 
 $$
-E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E,
+E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E
 $$
 
-其中 $\Delta E=E_{N+1}-E_N$ 是单粒子能级间隔。文献 5论文中强调，$E_\mathrm{add}$ 是"每向量子点中增加一个电子所需要增加的能量"，可理解为填充一个电子的综合代价。对百纳米量级量子点，$C_\Sigma$ 很小，$E_C\gg\Delta E$，电化学势近似等间距排列，库仑峰近似等周期出现；少电子区（最后几个电子）则 $\Delta E$ 不可忽略，加电子能随 $N$ 起伏，直接泄露单粒子能谱。
+其中 $\Delta E=E_{N+1}-E_N$ 是单粒子能级间隔。论文中强调，$E_\mathrm{add}$ 是"每向量子点中增加一个电子所需要增加的能量"，可理解为填充一个电子的综合代价。对百纳米量级量子点，$C_\Sigma$ 很小，$E_C\gg\Delta E$，电化学势近似等间距排列，库仑峰近似等周期出现；少电子区（最后几个电子）则 $\Delta E$ 不可忽略，加电子能随 $N$ 起伏，直接泄露单粒子能谱。
 
 ### 杠杆臂的微观起源
 
 $\mu(N)$ 对 $V_G$ 线性依赖的斜率给出[[fundamentals/coulomb-diamond|库仑菱形]]提取杠杆臂（lever arm）的微观定义：
 
 $$
-\frac{d\mu(N)}{dV_G}=-\frac{E_C}{|e|}C_G=-|e|\,\frac{C_G}{C_\Sigma}\equiv-|e|\alpha,
+\frac{d\mu(N)}{dV_G}=-\frac{E_C}{|e|}C_G=-|e|\,\frac{C_G}{C_\Sigma}\equiv-|e|\alpha
 $$
 
 即 $\alpha=C_G/C_\Sigma$——栅压改变 $1\ \mathrm{mV}$ 时点内电化学势移动 $\alpha\ \mathrm{meV}$。令相邻两个电荷态在同一源漏条件下简并，$\mu(N+1;V_G)=\mu(N;V_G+\Delta V_G)$，可得库仑峰的栅压周期
 
 $$
-\Delta V_G=\frac{E_C+\Delta E}{|e|\alpha}=\frac{e}{C_G}\left(1+\frac{\Delta E}{E_C}\right)\approx\frac{e}{C_G},
+\Delta V_G=\frac{E_C+\Delta E}{|e|\alpha}=\frac{e}{C_G}\left(1+\frac{\Delta E}{E_C}\right)\approx\frac{e}{C_G}
 $$
 
 多电子区 $\Delta E\ll E_C$ 时峰严格等间距。换言之，库仑峰间距本身即是栅电容 $C_G$ 的直接度量，而峰间距乘以杠杆臂就是加电子能 $E_\mathrm{add}$——这是把栅压轴换算为能量轴的两种标准做法。
@@ -84,10 +84,10 @@ $$
 在源漏偏压为零或很小（$\mu_S=\mu_D=\mu$）时，源漏费米面对齐；电化学势 $\mu(N)$ 是否掠过这一公共费米面决定电流是否出现。当 $\mu_S=\mu(N)=\mu_D$ 时，共振隧穿开启，电流峰出现；当 $\mu(N)$ 偏离费米面，且
 
 $$
-\mu(N-1)<\mu_D<\mu_S<\mu(N),
+\mu(N-1)<\mu_D<\mu_S<\mu(N)
 $$
 
-电子既不能从源极跳入也不能从漏极跳出，顺序隧穿被禁止，进入[[fundamentals/coulomb-blockade|库仑阻塞]]区。文献 7论文 1.5 节明确指出，"阻塞区电子数目保持不变"，这一性质是实验上逐个数出量子点中电子数、把量子点用作"人造原子"的基础。
+电子既不能从源极跳入也不能从漏极跳出，顺序隧穿被禁止，进入[[fundamentals/coulomb-blockade|库仑阻塞]]区。论文 1.5 节明确指出，"阻塞区电子数目保持不变"，这一性质是实验上逐个数出量子点中电子数、把量子点用作"人造原子"的基础。
 
 <!-- FIGURE: 库仑振荡曲线：栅压轴上一列等间距电流峰，峰顶处 µ(N)=µS=µD，峰间谷地为阻塞区 -->
 
@@ -104,14 +104,14 @@ $$
 电化学势的概念可以原样推广到[[fundamentals/double-quantum-dot|双量子点]]。以串联双点为例：点 1、点 2 分别经 $C_L$、$C_R$ 与源漏耦合，经 $C_{g1}$、$C_{g2}$ 与栅极耦合，经互电容 $C_m$ 互相耦合；定义各点总电容 $C_{1(2)}=C_{L(R)}+C_{g1(2)}+C_m$，则系统静电能为
 
 $$
-U(N_1,N_2)=\frac{1}{2}N_1^2 E_{C1}+\frac{1}{2}N_2^2 E_{C2}+N_1 N_2 E_{Cm}+f(V_{g1},V_{g2}),
+U(N_1,N_2)=\frac{1}{2}N_1^2 E_{C1}+\frac{1}{2}N_2^2 E_{C2}+N_1 N_2 E_{Cm}+f(V_{g1},V_{g2})
 $$
 
 其中三个特征能量
 
 $$
 E_{C1(2)}=\frac{e^2}{C_{1(2)}}\,\frac{1}{1-\dfrac{C_m^2}{C_1 C_2}},\qquad
-E_{Cm}=\frac{e^2}{C_m}\,\frac{1}{\dfrac{C_1 C_2}{C_m^2}-1},
+E_{Cm}=\frac{e^2}{C_m}\,\frac{1}{\dfrac{C_1 C_2}{C_m^2}-1}
 $$
 
 分别对应两点各自的充电能与点间静电耦合能。两个极限很有说明力：$C_m\to 0$ 时 $E_{Cm}=0$，$U$ 退化为两个独立单点能量之和；$C_m/C_{1(2)}\to 1$ 时系统等价于一个含 $N_1+N_2$ 个电子、$C_1+C_2$ 总电容的大单点。
@@ -121,7 +121,7 @@ $$
 与单点类似，把 $U(N_1,N_2)$ 对电子数做差分得到两个点的电化学势：
 
 $$
-\mu_1(N_1,N_2)=\left(N_1-\frac{1}{2}\right)E_{C1}+N_2 E_{Cm}-\frac{1}{|e|}\left(C_{g1}V_{g1}E_{C1}+C_{g2}V_{g2}E_{Cm}\right),
+\mu_1(N_1,N_2)=\left(N_1-\frac{1}{2}\right)E_{C1}+N_2 E_{Cm}-\frac{1}{|e|}\left(C_{g1}V_{g1}E_{C1}+C_{g2}V_{g2}E_{Cm}\right)
 $$
 
 $$
@@ -154,41 +154,41 @@ $$
 施加有限源漏偏压后，简并条件放宽为偏压窗口内的一组不等式，每个三相点在相图上展开成一对三角形——偏压三角形（bias triangle）。三条边分别对应 $\mu_1$ 与源极费米面对齐、$\mu_2$ 与漏极费米面对齐、两点化学势互相对齐。三角形尺寸正比于偏压大小，沿栅压方向量出三角形边长 $\delta V_{gi}$，结合偏压 $V_{SD}$ 即可提取各电极杠杆臂：
 
 $$
-eV_{SD}=\alpha_i\,e\,\delta V_{gi},\qquad \alpha_i=\frac{C_{gi}}{C_i},
+eV_{SD}=\alpha_i\,e\,\delta V_{gi},\qquad \alpha_i=\frac{C_{gi}}{C_i}
 $$
 
 即栅压轴上的三角形宽度经杠杆臂换算后恰好等于所加偏压。偏压进一步增大时，激发态能级进入窗口，三角形内出现激发态输运线，可用于读取[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]等体系的能级间距。
 
 ### 量子修正与隧穿耦合
 
-CI 模型是纯经典理论。文献 5、文献 16论文明确指出，CI 模型无法解释三相点附近电荷转移线的弯曲。引入第 $n$ 个单粒子能级修正后，向点 $i$ 中能级 $n$ 填充一个电子所需电化学势可以写成经典电化学势与单粒子能级之和 $\mu_{i,n}=\mu_i^{c}+E_n$；这一修正把加电子能改写为
+CI 模型是纯经典理论。、论文明确指出，CI 模型无法解释三相点附近电荷转移线的弯曲。引入第 $n$ 个单粒子能级修正后，向点 $i$ 中能级 $n$ 填充一个电子所需电化学势可以写成经典电化学势与单粒子能级之和 $\mu_{i,n}=\mu_i^{c}+E_n$；这一修正把加电子能改写为
 
 $$
-\mu_{1,m}(N_1+1,N_2)-\mu_{1,n}(N_1,N_2)=E_{C1}+(E_m-E_n)=E_{C1}+\Delta E,
+\mu_{1,m}(N_1+1,N_2)-\mu_{1,n}(N_1,N_2)=E_{C1}+(E_m-E_n)=E_{C1}+\Delta E
 $$
 
 并使栅压周期含 $1+\Delta E/E_{C1(2)}$ 因子。进一步计入点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t_C$，$(N_1+1,N_2)$ 与 $(N_1,N_2+1)$ 杂化成键态与反键态，能级劈裂为 $2t_C$；在蜂窝图上表现为三相点附近的转移线发生反交叉弯曲，弯曲程度直接标定 $t_C$ 的大小。更系统的量子描述是 Hubbard 模型：
 
 $$
-H=-\sum_i\mu_i n_i-\sum_{ij}t_{ij}(c_i^\dagger c_j+\mathrm{h.c.})+\sum_i\frac{U_i}{2}n_i(n_i-1)+\sum_{ij}U_{ij}n_i n_j,
+H=-\sum_i\mu_i n_i-\sum_{ij}t_{ij}(c_i^\dagger c_j+\mathrm{h.c.})+\sum_i\frac{U_i}{2}n_i(n_i-1)+\sum_{ij}U_{ij}n_i n_j
 $$
 
-其中 $U_i=e^2(C_i+\sum_j C_{ij})/C_\Sigma^2$，$U_{ij}=e^2 C_{ij}/C_\Sigma^2$，与 CI 模型在去掉隧穿项时完全对应；文献 16论文 1.36–1.38 式明确给出该映射，并指出"考虑 $H_t$ 时不同的 $t_{ij}$ 取值会导致反交叉点出现轻微的偏移"——这是自动调点算法判定点间耦合强弱的物理依据。
+其中 $U_i=e^2(C_i+\sum_j C_{ij})/C_\Sigma^2$，$U_{ij}=e^2 C_{ij}/C_\Sigma^2$，与 CI 模型在去掉隧穿项时完全对应；论文 1.36–1.38 式明确给出该映射，并指出"考虑 $H_t$ 时不同的 $t_{ij}$ 取值会导致反交叉点出现轻微的偏移"——这是自动调点算法判定点间耦合强弱的物理依据。
 
 ## 参数与量级
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | 文献 2 |
-| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | 文献 4 |
-| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | 文献 4 |
-| 杠杆臂 $\alpha$（GaAs） | plunger gate $0.05$，barrier gate $0.1$（无量纲） | 文献 2 |
-| 杠杆臂 $\alpha$（GaAs） | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | 文献 4 |
-| 充电能 $E_C$（Ge/Si 纳米线空穴点） | $4$–$6\ \mathrm{meV}$ | 文献 10 |
-| 杠杆臂 $\alpha$（Ge/Si 纳米线空穴点） | $0.20$–$0.25\ \mathrm{eV/V}$ | 文献 10 |
-| 栅–点电容 $C_G$ | $C_{RP}=3.1\ \mathrm{aF}$，$\alpha_{RP}=0.027\ \mathrm{meV/mV}$ | 文献 4 |
-| 阻塞前提 | $E_C\gg k_\mathrm{B}T$ 且 $G\ll 2e^2/h$ | 文献 2 |
-| 交流激励 | $20\ \mu\mathrm{V}$、$37.1\ \mathrm{Hz}$（锁相 SR830） | 文献 4 |
+| 横向量子点尺寸 | $\sim 200\ \mathrm{nm}$（GaAs 二维电子气门控定义） | |
+| 总电容 $C_\Sigma$ | $113\ \mathrm{aF}$（浅刻蚀 GaAs 单点实测） | |
+| 充电能 $E_C$ | $1.5\ \mathrm{meV}$（同器件，$E_C=e^2/C_\Sigma$） | |
+| 杠杆臂 $\alpha$（GaAs） | plunger gate $0.05$，barrier gate $0.1$（无量纲） | |
+| 杠杆臂 $\alpha$（GaAs） | $0.027$–$0.06\ \mathrm{meV/mV}$（不同电极、不同器件） | |
+| 充电能 $E_C$（Ge/Si 纳米线空穴点） | $4$–$6\ \mathrm{meV}$ | |
+| 杠杆臂 $\alpha$（Ge/Si 纳米线空穴点） | $0.20$–$0.25\ \mathrm{eV/V}$ | |
+| 栅–点电容 $C_G$ | $C_{RP}=3.1\ \mathrm{aF}$，$\alpha_{RP}=0.027\ \mathrm{meV/mV}$ | |
+| 阻塞前提 | $E_C\gg k_\mathrm{B}T$ 且 $G\ll 2e^2/h$ | |
+| 交流激励 | $20\ \mu\mathrm{V}$、$37.1\ \mathrm{Hz}$（锁相 SR830） | |
 
 量级背后的物理直觉是：百纳米量级门控量子点的 $C_\Sigma\sim 10$–$100\ \mathrm{aF}$，对应充电能 $E_C\sim 1$–$10\ \mathrm{meV}$、$E_C/k_\mathrm{B}\approx 10$–$100\ \mathrm{K}$，故清晰的阻塞输运通常要求稀释制冷机量级的电子温度；空穴量子点由于器件尺寸更小、有效质量不同，充电能可达数 meV，杠杆臂更大但电子温度敏感度也更高。
 
@@ -215,40 +215,3 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t_C$ 使三相点附近转移线弯曲，其大小既由电荷比特杂化能决定，也可从反交叉形貌直接读出。
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]中，每个量子点的电化学势同时被多个物理栅极经交叉电容调制，需要用[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]构造[[scaling-automation/virtual-gates|虚拟电极]]才能独立调节；这是阵列化电化学势调控的核心。
 - 电化学势决定阻塞区电子数严格为整数的性质，也是[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]逐个数电子、标定绝对电子数的物理基础；射频化后即[[readout-measurement/rf-reflectometry|射频反射测量]]。
-
-## 延伸阅读
-
-- T. A. Fulton and G. J. Dolan, "Observation of single-electron charging effects in small tunnel junctions", *Physical Review Letters* (1987). [DOI: 10.1103/PhysRevLett.59.109]
-- L. P. Kouwenhoven, C. M. Marcus, P. L. McEuen, S. Tarucha, R. M. Westervelt, and N. S. Wingreen, "Few-electron quantum dots", *Reports on Progress in Physics* (2001). [DOI: 10.1088/0034-4885/64/6/201]
-- W. G. van der Wiel, S. De Franceschi, J. M. Elzerman, T. Fujisawa, S. Tarucha, and L. M. K. Vandersypen, "Electron transport through double quantum dots", *Reviews of Modern Physics* (2002). [DOI: 10.1103/RevModPhys.75.1]
-- R. Hanson, L. P. Kouwenhoven, J. R. Petta, S. Tarucha, and L. M. K. Vandersypen, "Spins in few-electron quantum dots", *Reviews of Modern Physics* (2007). [DOI: 10.1103/RevModPhys.79.1217]
-
-## 论文依据
-
-- [[sources/ref-05|文献 5]]，PDF p. 7：研究背景与基本概念综述，电化学势、充电能、库仑阻塞、库仑菱形等核心概念的引出。
-- [[sources/ref-05|文献 5]]，PDF p. 22：CI 模型两条假设、单点总能量 $U(N)$（式 1-1）与电化学势 $\mu(N)$（式 1-2）的推导，$E_C=e^2/C$ 定义。
-- [[sources/ref-05|文献 5]]，PDF p. 23：加电子能 $E_\mathrm{add}=\mu(N+1)-\mu(N)=E_C+\Delta E$（式 1-3），库仑振荡与阻塞图像（图 1.5）。
-- [[sources/ref-05|文献 5]]，PDF p. 25：双量子点串联结构、CI 模型推广与等效电路（图 1.8）。
-- [[sources/ref-05|文献 5]]，PDF pp. 26–28：双点静电能 $U(N_1,N_2)$（式 1-5）与三个特征能量 $E_{C1},E_{C2},E_{Cm}$（式 1-7~1-9），$C_m\to 0$ 与 $C_m/C_{1(2)}\to 1$ 两个极限，蜂窝图与三相点的构建。
-- [[sources/ref-05|文献 5]]，PDF p. 27：双点电化学势 $\mu_1(N_1,N_2)$、$\mu_2(N_1,N_2)$（式 1-12、1-13）及加电子能的物理含义。
-- [[sources/ref-05|文献 5]]，PDF pp. 28–29：蜂窝图原胞结构（图 1.10）、边距公式 $\Delta V_g=|e|/C_g$（式 1-18、1-19）与耦合导致的 $\Delta V_g^m$（式 1-22、1-23）；并指出 CI 模型为经典模型，需要量子修正。
-- [[sources/ref-05|文献 5]]，PDF p. 29：含单粒子能级的量子修正加电子能（式 1-24）及修正后的栅压周期（式 1-25、1-26）。
-- [[sources/ref-05|文献 5]]，PDF p. 30：隧穿耦合 $t_C$ 使三相点附近转移线弯曲（图 1.11），以及源漏偏压下三相点展成偏压三角形（图 1.12）。
-- [[sources/ref-04|文献 4]]，PDF p. 4：核心研究目标，包括电化学势、库仑阻塞与库仑菱形等基础概念的引出。
-- [[sources/ref-04|文献 4]]，PDF pp. 16–17：单量子点 CI 模型（式 1-1、1-2），电化学势定义（式 1-3），加电子能 $E_\mathrm{add}=E_C+\Delta E$（式 1-4），库仑阻塞与库仑振荡的关系。
-- [[sources/ref-04|文献 4]]，PDF p. 22：电化学势、充电能、库仑阻塞、库仑菱形四个基本参数与现象的总结。
-- [[sources/ref-04|文献 4]]，PDF pp. 56–58：串联双量子点静电能、$E_{C1}/E_{C2}/E_{Cm}$ 公式（式 3-9~3-11），双点电化学势 $\mu_1,\mu_2$（式 3-14、3-15），耦合能 $E_{Cm}$ 的定义（式 3-16）。
-- [[sources/ref-04|文献 4]]，PDF p. 57：不同耦合强度下电流蜂窝图的演化（图 3.2）：弱耦合方格、中间耦合蜂窝、强耦合单点极限。
-- [[sources/ref-04|文献 4]]，PDF p. 61：三相点附近沿失谐方向扫描构建二能级体系，构成电荷量子比特工作点的实验演示（图 3.6）。
-- [[sources/ref-04|文献 4]]，PDF p. 80：浅刻蚀 GaAs 量子点实测 $C_\Sigma=113\ \mathrm{aF}$、$E_C=1.5\ \mathrm{meV}$、$C_{RP}=3.1\ \mathrm{aF}$、$\alpha_{RP}=0.027\ \mathrm{meV/mV}$。
-- [[sources/ref-02|文献 2]]，PDF p. 18：单量子点中电子数与电化学势的关系，库仑阻塞与化学势相对位置的物理图像（图 1.3）。
-- [[sources/ref-02|文献 2]]，PDF p. 54：库仑菱形测量杠杆臂的方法，GaAs 量子点 plunger gate $\sim0.05$、barrier gate $\sim0.1$ 的参考值。
-- [[sources/ref-01|文献 1]]，PDF pp. 25–26：CI 模型的两条假设、$U(N)$ 与 $\mu(N)$ 公式、库仑阻塞条件 $\mu(N-1)<\mu_D<\mu_S<\mu(N)$，以及 $G\ll 2e^2/h$ 的阻塞前提。
-- [[sources/ref-01|文献 1]]，PDF p. 28：不同耦合强度 $C_m/C_{1(2)}\sim 0,\ 0.5,\ 1$ 下双量子点电荷稳定图的形态演化。
-- [[sources/ref-06|文献 6]]，PDF p. 17：用电容矩阵推导单点电化学势（式 1.15），证明电源做功恰好抵消相互作用项，点内项即量子点自由能。
-- [[sources/ref-06|文献 6]]，PDF pp. 20–22：串联双点等效电路、双点电化学势 $\mu_1/\mu_2$（式 1.22、1.23）、蜂窝图的构建、电子型与空穴型三相点。
-- [[sources/ref-07|文献 7]]，PDF pp. 19–20：电化学势定义（式 1.2）、化学势与静电势之和的物理含义、零偏压库仑振荡与偏压窗口图像，以及 $E_C=e|V_{SD}|$ 提取和 $\alpha=|V_{SD}|/\Delta V_g$ 标定。
-- [[sources/ref-16|文献 16]]，PDF p. 34：CI 模型下单点电化学势（式 1.22），库仑阻塞态与电流的对应关系。
-- [[sources/ref-16|文献 16]]，PDF pp. 38–39：Hubbard 模型哈密顿量（式 1.36–1.38）作为 CI 模型的扩展，电化学势项 $H_\mu$、跃迁项 $H_t$、库仑排斥项 $H_U$、交换作用项 $H_J$ 的分解；CI 模型只含势能项与库仑排斥项，不含自旋与隧穿项。
-- [[sources/ref-10|文献 10]]，PDF pp. 57–58：锗硅纳米线空穴量子点中空穴隧穿过程的电化学势解释，激发态落入偏压窗口使电流增加。
-- [[sources/ref-10|文献 10]]，PDF pp. 58–60：空穴量子点库仑菱形测量流程、$E_C=4$–$6\ \mathrm{meV}$、$\alpha=0.20$–$0.25\ \mathrm{eV/V}$，磁场下基态与激发态的塞曼劈裂区分奇偶空穴数。

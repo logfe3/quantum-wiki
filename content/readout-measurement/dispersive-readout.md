@@ -2,13 +2,13 @@
 title: 色散读出
 description: 在远离真实能量交换的条件下，用量子态引起的谐振频移或相移进行读出。
 aliases:
-  - 色散测量
-  - 色散耦合读出
-  - dispersive readout
-  - dispersive shift readout
+ - 色散测量
+ - 色散耦合读出
+ - dispersive readout
+ - dispersive shift readout
 tags:
-  - 读出与测量
-  - 电路QED
+ - 读出与测量
+ - 电路QED
 date: 2026-09-08
 ---
 
@@ -24,7 +24,7 @@ date: 2026-09-08
 - **电路级耦合**：在半导体量子点中"比特"可以是[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]、或经微磁体或自旋轨道作用获得电荷成分的杂化比特；读出指针则是与该比特电偶极耦合的[[circuit-qed/microwave-resonator|微波谐振腔]]。
 - **不可避免的反作用**：探测光子既提供信息也是扰动来源——测量诱导退相干（measurement-induced dephasing）、AC Stark 频移、以及经腔辐射的[[readout-measurement/purcell-filter|Purcell 通道]]都会与读出速度、信噪比（SNR）和保真度直接挂钩。
 
-由于这套方法把比特态编码到一段独立可观测的相位或频率信号上，它在 2004 年 Wallraff 等人首次演示[[circuit-qed/circuit-quantum-electrodynamics|cQED]] 架构时就被用作主读出手段，并被沿用至半导体量子点–腔杂化体系（[文献 13]([[sources/chen-mingbo-2021]])；[文献 17]([[sources/lin-ting-2022]])）。
+由于这套方法把比特态编码到一段独立可观测的相位或频率信号上，它在 2004 年 Wallraff 等人首次演示[[circuit-qed/circuit-quantum-electrodynamics|cQED]] 架构时就被用作主读出手段，并被沿用至半导体量子点–腔杂化体系）。
 
 <!-- FIGURE: 色散读出工作示意：比特 |g⟩、|e⟩ 与失谐 Δ 下的腔频响应曲线，两态对应腔频 ±χ 的双峰结构，标注探测频率 ω_p 选在斜坡处 -->
 
@@ -38,7 +38,7 @@ $$
 H_{\mathrm{JC}}=\omega_r a^\dagger a+\frac{\omega_q}{2}\sigma_z+g\left(a^\dagger\sigma_-+a\sigma_+\right).
 $$
 
-这里 $a^\dagger$、$a$ 是腔光子的产生、湮灭算符，$\sigma_z$、$\sigma_\pm$ 是比特泡利算符，$g$ 是单光子耦合强度。JC 模型在[[circuit-qed/jaynes-cummings-model|JC 模型]]词条中已给出完整推导，这里只关心 $|\Delta|\gg g$ 的色散极限。当 $|\Delta|>10g$ 时，比特–腔通过虚光子交换能量；以 $g/\Delta$ 为小量对 JC 哈密顿量做 Schrieffer–Wolff 二阶微扰，等效色散哈密顿量为（[文献 17]([[sources/lin-ting-2022]])，PDF pp. 25–26）
+这里 $a^\dagger$、$a$ 是腔光子的产生、湮灭算符，$\sigma_z$、$\sigma_\pm$ 是比特泡利算符，$g$ 是单光子耦合强度。JC 模型在[[circuit-qed/jaynes-cummings-model|JC 模型]]词条中已给出完整推导，这里只关心 $|\Delta|\gg g$ 的色散极限。当 $|\Delta|>10g$ 时，比特–腔通过虚光子交换能量；以 $g/\Delta$ 为小量对 JC 哈密顿量做 Schrieffer–Wolff 二阶微扰，等效色散哈密顿量为
 
 $$
 H_{\mathrm{disp}}\approx\left(\omega_r+\frac{g^2}{\Delta}\sigma_z\right)a^\dagger a+\frac{1}{2}\left(\omega_q+\frac{g^2}{\Delta}\right)\sigma_z.
@@ -47,7 +47,7 @@ $$
 第一项告诉我们腔的有效频率依比特态平移
 
 $$
-\tilde\omega_{r,\pm}=\omega_r\pm\frac{g^2}{\Delta}\equiv\omega_r\pm\chi,
+\tilde\omega_{r,\pm}=\omega_r\pm\frac{g^2}{\Delta}\equiv\omega_r\pm\chi
 $$
 
 其中
@@ -56,43 +56,43 @@ $$
 \chi=\frac{g^2}{\Delta}
 $$
 
-是色散频移（dispersive shift）。第二项则是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为交流斯塔克频移（ac Stark shift），可用来标定腔内光子数；与光子数无关的 $\chi$ 来自真空涨落，称为兰姆频移（Lamb shift）。文献 14 在对 transmon 做色散读出建模时进一步用电路的非谐性 $\alpha$ 替换 $\Delta$，得
+是色散频移（dispersive shift）。第二项则是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为交流斯塔克频移（ac Stark shift），可用来标定腔内光子数；与光子数无关的 $\chi$ 来自真空涨落，称为兰姆频移（Lamb shift）。 在对 transmon 做色散读出建模时进一步用电路的非谐性 $\alpha$ 替换 $\Delta$，得
 
 $$
-\chi=\frac{g^2\alpha}{\Delta(\Delta+\alpha)}\simeq\frac{g^2\alpha}{\Delta^2},
+\chi=\frac{g^2\alpha}{\Delta(\Delta+\alpha)}\simeq\frac{g^2\alpha}{\Delta^2}
 $$
 
-并指出 $\chi$ 与 $\alpha$ 同号（[文献 14]([[sources/duan-peng-2022]])，PDF p. 40）。在半导体量子点体系中，全局耦合 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 正比于谐振腔特征阻抗 $Z_r$ 的平方根——这是[文献 20]([[sources/jiang-shunli-2025]]) 等工作中采用[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线的理论依据。
+并指出 $\chi$ 与 $\alpha$ 同号。在半导体量子点体系中，全局耦合 $g_0=\frac{1}{2}\beta\omega_r\sqrt{Z_r/\pi\hbar}$ 正比于谐振腔特征阻抗 $Z_r$ 的平方根——这是 等工作中采用[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线的理论依据。
 
 ### 量子点中的耦合机制
 
-半导体量子点的电荷自由度直接与腔电场耦合，因此电荷–光子耦合 $g_c$ 通常远大于自旋–光子耦合 $g_s$。在双量子点电荷比特中，比特本征态由失谐 $\varepsilon$ 与隧穿耦合 $t_c$ 共同决定，等效比特–光子耦合为 $g_{\mathrm{eff}}=g_0\sin\theta=2t_cg_0/(\hbar\omega_q)$（[文献 17]([[sources/lin-ting-2022]])，PDF p. 26，[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 40）。混合角 $\theta=\arctan(2t_c/\varepsilon)$ 决定了电荷比特含有多少"真实电荷"成分，因此通过调节双量子点失谐可以连续地打开或关断色散耦合（[文献 13]([[sources/chen-mingbo-2021]])，PDF pp. 28–30）。
+半导体量子点的电荷自由度直接与腔电场耦合，因此电荷–光子耦合 $g_c$ 通常远大于自旋–光子耦合 $g_s$。在双量子点电荷比特中，比特本征态由失谐 $\varepsilon$ 与隧穿耦合 $t_c$ 共同决定，等效比特–光子耦合为 $g_{\mathrm{eff}}=g_0\sin\theta=2t_cg_0/(\hbar\omega_q)$）。混合角 $\theta=\arctan(2t_c/\varepsilon)$ 决定了电荷比特含有多少"真实电荷"成分，因此通过调节双量子点失谐可以连续地打开或关断色散耦合。
 
-对于自旋比特，因为直接电偶极矩几乎为零，自旋–光子耦合必须经由微磁体梯度或自旋轨道机制在自旋态中引入少量电荷成分才能实现——典型实验测得 $2g_s/2\pi\sim 43.5$ MHz，远小于 $g_c/2\pi\sim 175$ MHz 的电荷比特值（[文献 20]([[sources/jiang-shunli-2025]])，PDF pp. 55、62、78）。
+对于自旋比特，因为直接电偶极矩几乎为零，自旋–光子耦合必须经由微磁体梯度或自旋轨道机制在自旋态中引入少量电荷成分才能实现——典型实验测得 $2g_s/2\pi\sim 43.5$ MHz，远小于 $g_c/2\pi\sim 175$ MHz 的电荷比特值。
 
 ### 量子电容与等效电路描述
 
-把量子点看作并联 $RC$ 电路是直观理解色散响应的另一途径。在[文献 3]([[sources/zhang-miaolei-2014]]，PDF pp. 73–79) 的反射式谐振腔实验中，量子点等效为一个并联 $RC$ 电路，复导纳（complex admittance）为
+把量子点看作并联 $RC$ 电路是直观理解色散响应的另一途径。在 的反射式谐振腔实验中，量子点等效为一个并联 $RC$ 电路，复导纳（complex admittance）为
 
 $$
-Y(\omega)=\frac{1}{R_{\mathrm{eff}}}+j\omega C_{\mathrm{eff}},
+Y(\omega)=\frac{1}{R_{\mathrm{eff}}}+j\omega C_{\mathrm{eff}}
 $$
 
 其中
 
 $$
 C_{\mathrm{eff}}=\frac{e^2\alpha^2}{\hbar\omega}\,\frac{\Gamma}{(\omega-\Omega)^2+\Gamma^2/4},\qquad
-R_{\mathrm{eff}}=\frac{(\omega-\Omega)^2+\Gamma^2/4}{\omega\Gamma e^2\alpha^2/\hbar},
+R_{\mathrm{eff}}=\frac{(\omega-\Omega)^2+\Gamma^2/4}{\omega\Gamma e^2\alpha^2/\hbar}
 $$
 
-$\Omega$ 是量子点能级跃迁频率、$\Gamma$ 是电子隧穿率（隧穿线宽）、$\alpha$ 是杠杆臂。当隧穿率 $\Gamma$ 远小于失谐 $|{\omega-\Omega}|$ 时，$R_{\mathrm{eff}}\to\infty$、$C_{\mathrm{eff}}\to 0$，即量子点对外呈纯虚电容响应，对应隧穿电容（tunneling capacitance）/量子电容（quantum capacitance）效应：量子点的电荷涨落引入额外的电容性电纳，使谐振腔频谱发生相位偏转。把这套等效电路挂到反射式谐振腔上即可通过测 $S_{11}$ 复响应直接反推量子点的 $R_{\mathrm{eff}}$、$C_{\mathrm{eff}}$，进而估计隧穿率——在[文献 3]([[sources/zhang-miaolei-2014]]，PDF pp. 77–79) 的石墨烯量子点器件中实测约 $1.6^\circ$ 相移、$4.2\times10^{-4}\ \mathrm{aF}$ 等效电容与 $37\ \mathrm{MHz}$ 隧穿率。这种"反射腔测复导纳"与色散读出本质上是同一物理图像的不同表述：量子点的电学状态改变腔的复阻抗，复阻抗的改变落到 $S_{11}$（或 $S_{21}$）上即可读取。
+$\Omega$ 是量子点能级跃迁频率、$\Gamma$ 是电子隧穿率（隧穿线宽）、$\alpha$ 是杠杆臂。当隧穿率 $\Gamma$ 远小于失谐 $|{\omega-\Omega}|$ 时，$R_{\mathrm{eff}}\to\infty$、$C_{\mathrm{eff}}\to 0$，即量子点对外呈纯虚电容响应，对应隧穿电容（tunneling capacitance）/量子电容（quantum capacitance）效应：量子点的电荷涨落引入额外的电容性电纳，使谐振腔频谱发生相位偏转。把这套等效电路挂到反射式谐振腔上即可通过测 $S_{11}$ 复响应直接反推量子点的 $R_{\mathrm{eff}}$、$C_{\mathrm{eff}}$，进而估计隧穿率——在 的石墨烯量子点器件中实测约 $1.6^\circ$ 相移、$4.2\times10^{-4}\ \mathrm{aF}$ 等效电容与 $37\ \mathrm{MHz}$ 隧穿率。这种"反射腔测复导纳"与色散读出本质上是同一物理图像的不同表述：量子点的电学状态改变腔的复阻抗，复阻抗的改变落到 $S_{11}$（或 $S_{21}$）上即可读取。
 
 ### 腔响应的散射矩阵
 
-在实验上观察到的不是哈密顿量本身，而是谐振腔的散射参数。在输入–输出形式下，透射式腔的透射系数为（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 45；[文献 17]([[sources/lin-ting-2022]])，PDF p. 28）
+在实验上观察到的不是哈密顿量本身，而是谐振腔的散射参数。在输入–输出形式下，透射式腔的透射系数为）
 
 $$
-S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2},
+S_{21}(\omega)=\frac{-i\sqrt{\kappa_1\kappa_2}}{\omega_r-\omega+g_c\chi_c-i\kappa/2}
 $$
 
 其中比特响应通过磁化率 $\chi_c=g_c/(-\Delta+i\gamma)$ 进入，$\gamma=\gamma_1/2+\gamma_\phi$ 汇总弛豫与纯退相位。整理后腔频与线宽获得两项修正：
@@ -102,7 +102,7 @@ $$
 \kappa'=\kappa+\frac{2g_c^2\gamma}{\Delta^2+\gamma^2}.
 $$
 
-色散区 $|\Delta|\gg g_c$ 实部主导，$\Delta\omega_r\approx g_c^2/\Delta$；近共振区虚部主导，比特为腔光子打开额外耗散通道，腔线展宽、可见度下降。反射式腔给出的复反射系数 $|\Gamma|e^{i\phi}$ 同时含有相位 $\phi=\arg\Gamma$ 与幅度 $|\Gamma|$，两路经 IQ 混频解调后分别得到同相 $I$ 与正交 $Q$ 分量，构成二维 IQ 平面上的态分离图（[文献 17]([[sources/lin-ting-2022]])，PDF p. 55）。
+色散区 $|\Delta|\gg g_c$ 实部主导，$\Delta\omega_r\approx g_c^2/\Delta$；近共振区虚部主导，比特为腔光子打开额外耗散通道，腔线展宽、可见度下降。反射式腔给出的复反射系数 $|\Gamma|e^{i\phi}$ 同时含有相位 $\phi=\arg\Gamma$ 与幅度 $|\Gamma|$，两路经 IQ 混频解调后分别得到同相 $I$ 与正交 $Q$ 分量，构成二维 IQ 平面上的态分离图。
 
 ### 强色散区与量子非破坏条件
 
@@ -115,10 +115,10 @@ $$
 同时测量算符 $\hat M$（腔透射或反射的某一相位分量）与比特哈密顿量 $\hat H_q$ 必须对易
 
 $$
-[\hat M,\hat H_q]=0,
+[\hat M,\hat H_q]=0
 $$
 
-保证多次测量不破坏比特态、给出相同结果。这是量子非破坏测量（quantum nondemolition, QND）的判定条件，[文献 14]([[sources/duan-peng-2022]]，PDF p. 61) 明确写出比特泡利算符 $\hat\sigma_z$ 与系统哈密顿量（式 2.21）满足对易关系，所以色散读出方案天然满足 QND。代价是该方案不可避免地把比特态与一个外部自由度（腔内光子数）纠缠，理论上限制了无反作用读出的极限灵敏度。
+保证多次测量不破坏比特态、给出相同结果。这是量子非破坏测量（quantum nondemolition, QND）的判定条件， 明确写出比特泡利算符 $\hat\sigma_z$ 与系统哈密顿量（式 2.21）满足对易关系，所以色散读出方案天然满足 QND。代价是该方案不可避免地把比特态与一个外部自由度（腔内光子数）纠缠，理论上限制了无反作用读出的极限灵敏度。
 
 <!-- FIGURE: 透射式腔在色散区的 |S21| 与相位响应：基态与激发态分别对应实线与虚线，标注探测频率 ω_p 选在相位斜率最大点 -->
 
@@ -128,29 +128,29 @@ $$
 
 色散读出按数据采集方式分两类。
 
-**时间平均（time-averaged）读出**：探测脉冲持续时间远长于比特相干时间 $T_2^*$，测得的是比特态时间平均的相位响应 $\Delta\phi=\langle\phi\rangle_t$。优点是不必等待腔达到稳态、对 $T_1$ 限制宽松，缺点是读不出瞬时态信息。[文献 17]([[sources/lin-ting-2022]]，PDF p. 55) 利用这种读出观察电荷比特的 Rabi 振荡与 Ramsey 干涉，通过解调相位响应直接拟合出 $T_2^*$ 与拉比频率。
+**时间平均（time-averaged）读出**：探测脉冲持续时间远长于比特相干时间 $T_2^*$，测得的是比特态时间平均的相位响应 $\Delta\phi=\langle\phi\rangle_t$。优点是不必等待腔达到稳态、对 $T_1$ 限制宽松，缺点是读不出瞬时态信息。 利用这种读出观察电荷比特的 Rabi 振荡与 Ramsey 干涉，通过解调相位响应直接拟合出 $T_2^*$ 与拉比频率。
 
-**单发（real-time, single-shot）读出**：探测脉冲短于 $T_1$，在态弛豫之前就完成判决，输出一次实验的 0/1 结果。文献 14 在六比特超导芯片上实现了 $300$–$500\ \mathrm{ns}$ 积分、最高保真度 $98.14\%$（[文献 14]([[sources/duan-peng-2022]])，PDF pp. 7、120、145）。在半导体量子点体系中，单发读出常与[[readout-measurement/single-shot-readout|单发读出]]配合完成自旋态读出——例如 Elzerman 2004 年的开创性 GaAs 双量子点实验。
+**单发（real-time, single-shot）读出**：探测脉冲短于 $T_1$，在态弛豫之前就完成判决，输出一次实验的 0/1 结果。 在六比特超导芯片上实现了 $300$–$500\ \mathrm{ns}$ 积分、最高保真度 $98.14\%$。在半导体量子点体系中，单发读出常与[[readout-measurement/single-shot-readout|单发读出]]配合完成自旋态读出——例如 Elzerman 2004 年的开创性 GaAs 双量子点实验。
 
 ### 参数优化与信噪比
 
-色散读出的核心权衡是 $\chi$、$\kappa$ 与积分时间 $t_m$ 的联合优化。给定比特退相干 $\gamma$ 与探测器量子效率 $\eta$，单位时间内获得的信号能量 $\propto \chi^2/\kappa$，噪声能量 $\propto 1/(\eta\,t_m)$，信噪比与读出错误率的关系为（[文献 14]([[sources/duan-peng-2022]])，PDF pp. 37–40）
+色散读出的核心权衡是 $\chi$、$\kappa$ 与积分时间 $t_m$ 的联合优化。给定比特退相干 $\gamma$ 与探测器量子效率 $\eta$，单位时间内获得的信号能量 $\propto \chi^2/\kappa$，噪声能量 $\propto 1/(\eta\,t_m)$，信噪比与读出错误率的关系为
 
 $$
-\mathrm{SNR}=\frac{8\chi^2}{\kappa}\frac{\eta t_m}{1},
+\mathrm{SNR}=\frac{8\chi^2}{\kappa}\frac{\eta t_m}{1}
 $$
 
 $$
 E_{\mathrm{sep}}\approx\frac{1}{2}\mathrm{erfc}\!\left(\frac{\mathrm{SNR}}{2\sqrt{2}}\right).
 $$
 
-固定 $t_m$ 时 SNR 在 $(\chi,\kappa)$ 平面上有封闭的等值曲线；减小 $\kappa$ 同时会加长腔响应时间 $\tau_r=2/\kappa$，过小的 $\kappa$ 反而拖累读出速度。文献 14 把这条曲线推广为 $\kappa|\chi|\leqslant \pi|\alpha|/T_1$ 的 Purcell 极限（[文献 14]([[sources/duan-peng-2022]])，PDF p. 67），并指出 Purcell 滤波器和量子极限参量放大器可以同时压低噪声光子数与提高量子效率，把有效参数空间推到极限之外。
+固定 $t_m$ 时 SNR 在 $(\chi,\kappa)$ 平面上有封闭的等值曲线；减小 $\kappa$ 同时会加长腔响应时间 $\tau_r=2/\kappa$，过小的 $\kappa$ 反而拖累读出速度。 把这条曲线推广为 $\kappa|\chi|\leqslant \pi|\alpha|/T_1$ 的 Purcell 极限，并指出 Purcell 滤波器和量子极限参量放大器可以同时压低噪声光子数与提高量子效率，把有效参数空间推到极限之外。
 
-量子效率 $\eta=\eta_{\mathrm{col}}\eta_{\mathrm{amp}}$ 又可分解为信号收集效率与放大器效率两部分。文献 14 在仿真中明确：$\eta_{\mathrm{col}}$ 受限于 Purcell 滤波器与比特端口之间的阻抗匹配，而 $\eta_{\mathrm{amp}}$ 主要取决于首级放大器是否工作在量子极限（[文献 14]([[sources/duan-peng-2022]])，PDF p. 64）。把 $\eta$ 从 $0.4$ 提高到 $0.5$ 已经能让整个参数空间从"完全无法达到阈值 SNR"切换到"小区域可读"，说明放大器改造是高保真读出的关键。
+量子效率 $\eta=\eta_{\mathrm{col}}\eta_{\mathrm{amp}}$ 又可分解为信号收集效率与放大器效率两部分。 在仿真中明确：$\eta_{\mathrm{col}}$ 受限于 Purcell 滤波器与比特端口之间的阻抗匹配，而 $\eta_{\mathrm{amp}}$ 主要取决于首级放大器是否工作在量子极限。把 $\eta$ 从 $0.4$ 提高到 $0.5$ 已经能让整个参数空间从"完全无法达到阈值 SNR"切换到"小区域可读"，说明放大器改造是高保真读出的关键。
 
 ### 频分复用与多比特扩展
 
-每个比特配一个独立谐振腔、把多个腔挂到同一根总线上、用不同载波频率分别解调，是 cQED 多比特读出的标准做法（[文献 7]([[sources/han-tianyi-2017]])，PDF p. 65）。在半导体量子点体系中，[文献 17]([[sources/lin-ting-2022]]，PDF p. 7) 用高阻抗 SQUID 阵列腔把五个双量子点集成到同一腔上，观测到集体色散响应——线性近似下相位响应 $\phi_{\mathrm{sim}}\propto nP$ 与参与耦合的比特数 $n$ 成正比。当多个比特频率接近同一腔模时，会出现局域破坏性干涉（$g_1\chi_1$ 与 $g_2\chi_2$ 虚部反号），此时总响应反而被压制，需要错开比特频率来恢复可读性（[文献 17]([[sources/lin-ting-2022]])，PDF p. 86）。
+每个比特配一个独立谐振腔、把多个腔挂到同一根总线上、用不同载波频率分别解调，是 cQED 多比特读出的标准做法。在半导体量子点体系中， 用高阻抗 SQUID 阵列腔把五个双量子点集成到同一腔上，观测到集体色散响应——线性近似下相位响应 $\phi_{\mathrm{sim}}\propto nP$ 与参与耦合的比特数 $n$ 成正比。当多个比特频率接近同一腔模时，会出现局域破坏性干涉（$g_1\chi_1$ 与 $g_2\chi_2$ 虚部反号），此时总响应反而被压制，需要错开比特频率来恢复可读性。
 
 ### 实验判据
 
@@ -164,17 +164,17 @@ $$
 
 | 量 | 典型值 | 说明 / 来源 |
 | --- | --- | --- |
-| 比特–腔失谐 $|\Delta|/2\pi$ | 几 GHz（远大于 $g$） | 实用判据 $|\Delta|>10g$（[文献 17]([[sources/lin-ting-2022]])，PDF p. 25） |
-| 谐振腔频率 $\omega_r/2\pi$ | $4.993$、$6.48$、$7.332$ GHz | 文献 20；文献 17 |
-| 比特频率 $\omega_q/2\pi$ | 2–20 GHz（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 40） | 由器件与编码决定 |
-| 电荷–光子耦合 $g_c/2\pi$ | 175 MHz 量级（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 62）；$g_c/\omega_r\sim 0.11$ 进入超强耦合（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 45） | 双量子点电荷比特 |
-| 自旋–光子耦合 $g_s/2\pi$ | $21.75$ MHz（$2g_s/2\pi=43.5$ MHz，[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 78） | Si/SiGe 单自旋比特 |
-| 腔线宽 $\kappa/2\pi$ | $2$–$8$ MHz（[文献 20]([[sources/jiang-shunli-2025]])，PDF p. 55）；高阻抗腔可低至 $\sim 2.2$ MHz | 取决于耦合 $Q$ |
-| 色散频移 $\chi/2\pi$ | $\sim 1$–$10$ MHz；与 $g^2/\Delta$ 同量级 | transmon 典型 $\chi/2\pi\approx 1$ MHz；半导体电荷比特可至 $\sim 7$ MHz（[文献 13]([[sources/chen-mingbo-2021]])，PDF p. 116） |
+| 比特–腔失谐 $|\Delta|/2\pi$ | 几 GHz（远大于 $g$） | 实用判据 $|\Delta|>10g$ |
+| 谐振腔频率 $\omega_r/2\pi$ | $4.993$、$6.48$、$7.332$ GHz | ； |
+| 比特频率 $\omega_q/2\pi$ | 2–20 GHz | 由器件与编码决定 |
+| 电荷–光子耦合 $g_c/2\pi$ | 175 MHz 量级；$g_c/\omega_r\sim 0.11$ 进入超强耦合 | 双量子点电荷比特 |
+| 自旋–光子耦合 $g_s/2\pi$ | $21.75$ MHz（$2g_s/2\pi=43.5$ MHz） | Si/SiGe 单自旋比特 |
+| 腔线宽 $\kappa/2\pi$ | $2$–$8$ MHz；高阻抗腔可低至 $\sim 2.2$ MHz | 取决于耦合 $Q$ |
+| 色散频移 $\chi/2\pi$ | $\sim 1$–$10$ MHz；与 $g^2/\Delta$ 同量级 | transmon 典型 $\chi/2\pi\approx 1$ MHz；半导体电荷比特可至 $\sim 7$ MHz |
 | 比特退相干 $\gamma$ | 自旋 $2$–$5$ MHz；电荷 $50$–$100$ MHz | 决定强色散区判据 |
-| 单发读出 SNR | $\geq 5.7$ 即可达 $99.86\%$ 保真度（[文献 22]([[sources/chu-ning-2025]])，PDF p. 129） | 140 ns 积分 |
-| 六比特单发保真度 | 最高 $98.14\%$（积分 $300$–$500$ ns，[文献 14]([[sources/duan-peng-2022]])，PDF pp. 7、120） | 含 Purcell 滤波与 JPA |
-| 量子效率 $\eta$ | transmon 仿真 $\eta\geq 0.5$ 才达阈值 SNR（[文献 14]([[sources/duan-peng-2022]])，PDF p. 69） | 收集效率与放大效率的乘积 |
+| 单发读出 SNR | $\geq 5.7$ 即可达 $99.86\%$ 保真度 | 140 ns 积分 |
+| 六比特单发保真度 | 最高 $98.14\%$（积分 $300$–$500$ ns、120） | 含 Purcell 滤波与 JPA |
+| 量子效率 $\eta$ | transmon 仿真 $\eta\geq 0.5$ 才达阈值 SNR | 收集效率与放大效率的乘积 |
 
 ## 不是完全无回作用
 
@@ -182,9 +182,9 @@ $$
 
 - **测量诱导退相干（measurement-induced dephasing）**：探测光子反复被比特散射，关联到比特 $\sigma_z$，使比特相位被随机化。退相干率近似为 $\Gamma_\phi\simeq \kappa\chi^2/(g^2+\chi^2)$——增大 $\chi$ 既能改善读出，也加速退相干；
 - **AC Stark 频移**：腔内光子数 $n$ 通过 $2\chi n$ 推比特频率，使比特共振条件被读出脉冲本身移动。这在标定 $\chi$ 时有用，但在长读出门操作时必须把 $n$ 锁稳；
-- **Purcell 弛豫**：比特激发态混入 $(g/\Delta)$ 比例的"单光子 + 比特基态"成分，这部分成分以 $\kappa$ 速率漏出腔外，等效于比特以 $\gamma^{\mathrm{Purcell}}\simeq\kappa_r g^2/\Delta^2$ 速率弛豫。对 transmon，这一约束可写为 $T_1^{\mathrm{Purcell}}\simeq 2\pi\alpha/(\kappa\chi)$，要求 $\kappa|\chi|\leqslant \pi\alpha/T_1$（[文献 14]([[sources/duan-peng-2022]])，PDF p. 67）。
+- **Purcell 弛豫**：比特激发态混入 $(g/\Delta)$ 比例的"单光子 + 比特基态"成分，这部分成分以 $\kappa$ 速率漏出腔外，等效于比特以 $\gamma^{\mathrm{Purcell}}\simeq\kappa_r g^2/\Delta^2$ 速率弛豫。对 transmon，这一约束可写为 $T_1^{\mathrm{Purcell}}\simeq 2\pi\alpha/(\kappa\chi)$，要求 $\kappa|\chi|\leqslant \pi\alpha/T_1$。
 
-因此读出速度、SNR 与反作用必须联合优化。最直接的修正是插入[[readout-measurement/purcell-filter|Purcell 滤波器]]在比特频段抑制环境阻抗，在读出频段保持通畅，使上述 Purcell 极限被有效解除（[文献 14]([[sources/duan-peng-2022]])，PDF p. 67；[文献 17]([[sources/lin-ting-2022]])，PDF p. 60）。在低噪声侧，靠近量子极限的[[readout-measurement/parametric-amplifier|参量放大器]]（如 JPA、TWPA）进一步把放大器贡献的噪声光子数压到 1 以下。
+因此读出速度、SNR 与反作用必须联合优化。最直接的修正是插入[[readout-measurement/purcell-filter|Purcell 滤波器]]在比特频段抑制环境阻抗，在读出频段保持通畅，使上述 Purcell 极限被有效解除）。在低噪声侧，靠近量子极限的[[readout-measurement/parametric-amplifier|参量放大器]]（如 JPA、TWPA）进一步把放大器贡献的噪声光子数压到 1 以下。
 
 ## 与其他概念的关系
 
@@ -194,29 +194,4 @@ $$
 - 色散频移 $\chi$ 与腔线宽 $\kappa$ 在读出速度和 Purcell 弛豫之间形成基本矛盾——[[readout-measurement/purcell-filter|Purcell 滤波器]]通过引入频率选择性阻抗零点解决这一矛盾。
 - IQ 解调后的 I/Q 平面分类（阈值、模板匹配、神经网络）属于[[readout-measurement/threshold-independent-readout|阈值无关读出]]范畴；[[readout-measurement/readout-crosstalk|读出串扰]]是频分复用多比特系统中色散读出的重要误差来源。
 - 量子电容与隧穿电容描述的复导纳效应把色散读出与[[readout-measurement/gate-based-sensing|栅极射频传感]]联系起来：两者都是"量子点状态 → 阻抗 → 反射相位"链路上的不同端点。
-- 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色（[文献 17]([[sources/lin-ting-2022]])，PDF p. 7）。
-
-## 延伸阅读
-
-- A. Blais, R.-S. Huang, A. Wallraff, S. M. Girvin, and R. J. Schoelkopf, "Cavity quantum electrodynamics for superconducting electrical circuits: An architecture for quantum computation", *Physical Review A* (2004). [DOI: 10.1103/PhysRevA.69.062320]
-- A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.-S. Huang, J. Majer, S. Kumar, S. M. Girvin, and R. J. Schoelkopf, "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics", *Nature* (2004). [DOI: 10.1038/nature02851]
-- J. Gambetta, A. Blais, D. I. Schuster, A. Wallraff, L. Frunzio, J. Majer, M. H. Devoret, S. M. Girvin, and R. J. Schoelkopf, "Qubit-photon interactions in a cavity: Measurement-induced dephasing and number splitting", *Physical Review A* (2006). [DOI: 10.1103/PhysRevA.74.042318]
-- A. Blais, A. L. Grimsmo, S. M. Girvin, and A. Wallraff, "Circuit Quantum Electrodynamics", *Reviews of Modern Physics* (2021). [DOI: 10.1103/RevModPhys.93.025005]
-
-## 论文依据
-
-- [[sources/ref-03|文献 3]]，PDF pp. 4–5：反射式谐振腔测孤立量子点复导纳与隧穿率的总体思路与摘要要点。
-- [[sources/ref-03|文献 3]]，PDF pp. 73–79：把量子点等效为并联 RC 电路，给出复导纳 $Y(\omega)$ 公式、有效电阻 $R_{\mathrm{eff}}$ 与电容 $C_{\mathrm{eff}}$ 的频率依赖，石墨烯量子点实测约 $1.6^\circ$ 相移、$4.2\times10^{-4}\ \mathrm{aF}$ 等效电容、$\Gamma\approx 37\ \mathrm{MHz}$ 隧穿率。
-- [[sources/ref-03|文献 3]]，PDF pp. 80–84：JC 模型哈密顿量与色散频移、AC Stark 与 Lamb 频移推导，共振/准色散/色散区划分及真空 Rabi 劈裂。
-- [[sources/ref-17|文献 17]]，PDF pp. 7–8：通过时间平均色散读出提取 Rabi 振荡与 Ramsey 干涉相干时间的总体研究脉络。
-- [[sources/ref-17|文献 17]]，PDF pp. 25–26：色散耦合理论推导、$g_{\mathrm{eff}}=g_0\sin\theta$ 与 $g_0\propto\sqrt{Z_r}$ 的耦合公式。
-- [[sources/ref-17|文献 17]]，PDF p. 28：杂化系统散射矩阵形式（式 2.45–2.48），把比特响应按实部、虚部合并入 $\omega_r$ 与 $\kappa$。
-- [[sources/ref-17|文献 17]]，PDF pp. 53–55：4.1 节色散读取原理、$\chi=g^2/\Delta$ 的频移提取（$\omega_r'$ 与 $\omega_r$ 之差）、反射率 $|S_{11}|$ 谱与谐振腔响应时间 $\tau_r=2/\kappa$ 对读出带宽的限制。
-- [[sources/ref-17|文献 17]]，PDF pp. 55–58：4.1.2 时间平均色散读出与 Rabi/Ramsey 实验数据拟合，$\omega_r/2\pi=6.48$ GHz、$g/2\pi=81$ MHz 的 GaAs 双量子点器件结果。
-- [[sources/ref-17|文献 17]]，PDF pp. 60、86：半导体量子点–腔弱杂化区的谱线展宽（Purcell 效应）、多比特情形 $g_1\chi_1$ 与 $g_2\chi_2$ 虚部反号的破坏性干涉。
-- [[sources/ref-17|文献 17]]，PDF pp. 86、100–101：高阻抗 SQUID 阵列腔集成的五个双量子点集体色散响应 $\phi_{\mathrm{sim}}\propto nP$ 线性近似。
-- [[sources/ref-14|文献 14]]，PDF pp. 7–8：六比特超导芯片上 $300$–$500\ \mathrm{ns}$、最高 $98.14\%$ 保真度读出的总体设计思路与 Purcell 滤波器、JPA 的引入。
-- [[sources/ref-14|文献 14]]，PDF pp. 31–33：2.1.2 色散耦合区与 2.2 色散读取原理，幺正变换把 JC 模型对角化并给出 $\chi=g^2\alpha/[\Delta(\Delta+\alpha)]$（含非谐修正）。
-- [[sources/ref-14|文献 14]]，PDF pp. 37–40：2.2.3 信噪比与保真度公式（式 2.41–2.46）、SNR 随 $\chi$ 与 $\kappa$ 的等值曲线、$E_{\mathrm{sep}}$ 表达式；2.2.4 量子效率 $\eta=\eta_{\mathrm{col}}\eta_{\mathrm{amp}}$ 的拆解与 $\eta$ 从 $0.4$ 升到 $0.5$ 的参数空间扩展。
-- [[sources/ref-14|文献 14]]，PDF p. 61：比特泡利算符 $\hat\sigma_z$ 与系统哈密顿量满足对易关系，色散读取满足量子非破坏（QND）条件。
-- [[sources/ref-14|文献 14]]，PDF pp. 67、95、120、145：$\kappa|\chi|\leqslant \pi|\alpha|/T_1$ 的 Purcell 极限；六比特表 4.1 的 SNR 与读取错误率；300–500 ns、98.14% 保真度的实测汇总。
+- 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色。

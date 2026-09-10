@@ -2,13 +2,13 @@
 title: 二维量子点阵列
 description: 在两个空间方向布置并可控耦合量子点的阵列，是表面码和二维量子模拟的基础器件。
 aliases:
-  - 2D量子点阵列
-  - 二维扩展
-  - 二维扩展量子点阵列
-  - 2D array
+ - 2D量子点阵列
+ - 二维扩展
+ - 二维扩展量子点阵列
+ - 2D array
 tags:
-  - 扩展与自动化
-  - 二维阵列
+ - 扩展与自动化
+ - 二维阵列
 date: 2026-09-08
 ---
 
@@ -18,11 +18,11 @@ date: 2026-09-08
 
 ### 从一维到二维的差别
 
-一维量子点阵列（linear array）只是在单方向增加量子点：电荷探测器位于"对面"，栅极扇出、串扰补偿和读出复用都有现成方案。GaAs 体系已经做到一维 8 个量子点，Si/SiGe 体系先后做到了 6、9 乃至 12 个量子点，并在这些器件上演示了电子远距离传输、多比特通用控制和工业级良率制造 [文献 21]。二维阵列则同时沿两个方向增加量子点：电荷探测器失去了"对面"的位置，每个量子点可以拥有 2 个最近邻（水平、垂直）和 1–2 个次近邻（对角、反对角）耦合，栅极层数和布线复杂度随之翻倍，但回报是连接图更接近纠错码（surface code，表面码等）和凝聚态晶格——后者正是二维模拟型量子模拟器的目标对象。
+一维量子点阵列（linear array）只是在单方向增加量子点：电荷探测器位于"对面"，栅极扇出、串扰补偿和读出复用都有现成方案。GaAs 体系已经做到一维 8 个量子点，Si/SiGe 体系先后做到了 6、9 乃至 12 个量子点，并在这些器件上演示了电子远距离传输、多比特通用控制和工业级良率制造 。二维阵列则同时沿两个方向增加量子点：电荷探测器失去了"对面"的位置，每个量子点可以拥有 2 个最近邻（水平、垂直）和 1–2 个次近邻（对角、反对角）耦合，栅极层数和布线复杂度随之翻倍，但回报是连接图更接近纠错码（surface code，表面码等）和凝聚态晶格——后者正是二维模拟型量子模拟器的目标对象。
 
 ![[assets/figures/scaling-automation/wang-ning-2025-fig1-2-quantum-platforms.jpg]]
 
-*五大量子计算物理体系：超导电路、栅控半导体量子点、金刚石色心、离子阱、半导体/超导体复合拓扑比特（[文献 21]([[sources/wang-ning-2025]])，图 1.2）*
+*五大量子计算物理体系：超导电路、栅控半导体量子点、金刚石色心、离子阱、半导体/超导体复合拓扑比特*
 
 <!-- 原始占位：一维链（左）与二维方格（右）的栅极排布、电荷传感器位置、耦合连线对比示意 -->
 
@@ -32,7 +32,7 @@ date: 2026-09-08
 
 - **布线与引出**：一维阵列可以把柱塞栅和势垒栅都从一侧扇出；二维阵列在二维平面内排列栅极，柱塞/势垒/屏蔽栅往往需要多层金属（如 Si/SiGe 工艺常做 35 / 50 / 55 / 70 nm 四层铝栅）才能把所有电极拉出来。
 - **电容串扰放大**：栅极越密集，[[fundamentals/electrochemical-potential|电化学势]]方向的交叉电容矩阵越接近奇异；势垒栅对最近邻与次近邻耦合同时有非零响应，调控维度膨胀。
-- **电荷传感器摆放**：一维中 SET（single-electron transistor，单电子晶体管）可以贴在链端；二维中四个内点同时被遮挡，需要在阵列对角（左上、右下）布置多个 SET，并配合两台锁相放大器同步读出 [文献 21]。
+- **电荷传感器摆放**：一维中 SET（single-electron transistor，单电子晶体管）可以贴在链端；二维中四个内点同时被遮挡，需要在阵列对角（左上、右下）布置多个 SET，并配合两台锁相放大器同步读出 。
 - **次近邻耦合残留**：方形排列天然引入对角量子点之间的残余隧穿，必须用额外栅极（中心势垒 CB）单独压制或打开，否则既会污染表面码所要求的"仅最近邻"耦合，又会引入无法用[[fundamentals/constant-interaction-model|常相互作用模型]]描述的多体效应。
 
 ## 理论模型：二维扩展 Fermi–Hubbard 模型
@@ -42,7 +42,7 @@ date: 2026-09-08
 [[fundamentals/constant-interaction-model|常相互作用模型]]对单点、双点已经足够，对多点尤其是二维阵列则迅速失效：每个量子点都和几乎所有栅极有电容耦合，参数空间维度爆炸；而更致命的是，常相互作用模型是经典电路模型，不能解释点间隧穿引起的能级杂化——在二维相图里表现为反交叉点的弯曲。把量子点阵列描述为"格点 + 隧穿 + 在位排斥"的人工晶格，自然就得到费米–哈伯德模型（Fermi–Hubbard model）。对单轨道、可能含次近邻耦合的二维阵列，扩展 Fermi–Hubbard 哈密顿量为
 
 $$
-H=-\sum_{i}\mu_i n_i-\sum_{\langle i,j\rangle,\sigma}t_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)-\sum_{\langle i,j\rangle',\sigma}t'_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)+\sum_i U_i\,n_{i\uparrow}n_{i\downarrow}+\sum_{i\neq j}V_{ij}\,n_i n_j,
+H=-\sum_{i}\mu_i n_i-\sum_{\langle i,j\rangle,\sigma}t_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)-\sum_{\langle i,j\rangle',\sigma}t'_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)+\sum_i U_i\,n_{i\uparrow}n_{i\downarrow}+\sum_{i\neq j}V_{ij}\,n_i n_j
 $$
 
 其中 $\langle i,j\rangle$ 与 $\langle i,j\rangle'$ 分别遍历最近邻和次近邻格点对，$t_{ij}$、$t'_{ij}$ 是相应隧穿能，$U_i$ 是各点[[fundamentals/charging-energy|充电能]]（同格点双占据库仑能），$V_{ij}$ 是点间长程库仑相互作用，$\mu_i$ 是栅压可调的[[fundamentals/electrochemical-potential|电化学势]]。动能项 $t$ 使电子离域，排斥项 $U$ 使电子局域——这一竞争是后文 Mott 绝缘体（莫特绝缘体）–金属转变的源头。
@@ -54,18 +54,18 @@ $$
 当 $U/t\gg 1$ 且每点近似单占据时，双占据态被投影掉，二阶微扰把 Hubbard 模型约化为海森堡自旋模型（Heisenberg model）。对两个量子点的失谐 $\varepsilon=\mu_1-\mu_2$，塞曼能差 $\Delta E_z$，交换耦合为
 
 $$
-J=\frac{2t^{2}}{U-\varepsilon-\Delta E_z}+\frac{2t^{2}}{U-\varepsilon+\Delta E_z},
+J=\frac{2t^{2}}{U-\varepsilon-\Delta E_z}+\frac{2t^{2}}{U-\varepsilon+\Delta E_z}
 $$
 
 当 $U\gg\varepsilon,\Delta E_z$ 时退化为熟悉的 $J\approx 4t^2/U$。这一公式同时连接两件事：它既是[[qubit-control/exchange-interaction|交换相互作用]]量子门的微观来源，也是"量子模拟"和"量子计算"两种用途在参数空间的交汇点——同一个 $t$、$U$，既被用来做两比特门，也被用来扫过 $U/t$ 比值研究莫特物理。
 
 ### 二维为何无可解性
 
-一维 Hubbard 模型可用 Bethe 拟设（Bethe ansatz）严格求解，但维度提升至二维后由于电子间相互作用复杂性的急剧增加，已无解析解，只能依赖数值解法；进一步扩展到 N 个格点时希尔伯特空间维度指数膨胀，经典数值很快失效。这正是用二维量子点阵列做模拟型量子模拟（analog quantum simulation）的动机：与其在经典计算机上求解二维 Hubbard，不如直接制备一个服从同一哈密顿量的人工晶格并测量它的演化。半导体量子点与 Hubbard 模型的这种对应最早由 Stafford 与 Das Sarma 于 1994 年明确提出，目标是研究强关联体系中的莫特转变——这一想法此后被 Hensgens 等人于 2017 年在硅量子点线性阵列上首次实现，文献 21 论文则把它推进到硅基 2×2 阵列。
+一维 Hubbard 模型可用 Bethe 拟设（Bethe ansatz）严格求解，但维度提升至二维后由于电子间相互作用复杂性的急剧增加，已无解析解，只能依赖数值解法；进一步扩展到 N 个格点时希尔伯特空间维度指数膨胀，经典数值很快失效。这正是用二维量子点阵列做模拟型量子模拟（analog quantum simulation）的动机：与其在经典计算机上求解二维 Hubbard，不如直接制备一个服从同一哈密顿量的人工晶格并测量它的演化。半导体量子点与 Hubbard 模型的这种对应最早由 Stafford 与 Das Sarma 于 1994 年明确提出，目标是研究强关联体系中的莫特转变——这一想法此后被 Hensgens 等人于 2017 年在硅量子点线性阵列上首次实现， 论文则把它推进到硅基 2×2 阵列。
 
 ## 器件结构：以 Si/SiGe 2×2 阵列为例
 
-下面以文献 21 论文设计的 Si/SiGe 2×2 阵列作为典型器件展开说明，其设计要点同时也是其他硅基二维阵列的通用参考。
+下面以 论文设计的 Si/SiGe 2×2 阵列作为典型器件展开说明，其设计要点同时也是其他硅基二维阵列的通用参考。
 
 ### 多层栅极与电极配置
 
@@ -96,23 +96,23 @@ $$
 阵列中每根栅极通过寄生电容同时影响多个量子点——这就是[[fundamentals/electrochemical-potential|电化学势]]方向的[[scaling-automation/cross-capacitance-matrix|交叉电容串扰]]。解决方案是[[scaling-automation/virtual-gates|虚拟电极]]：在 (1,1,1,1) 电荷区附近，逐栅扫描测得[[fundamentals/charge-stability-diagram|电荷稳定图]]的隧穿线斜率，由斜率提取归一化串扰矩阵
 
 $$
-\Delta\boldsymbol\mu=\alpha\,\mathbf T\,\Delta\mathbf V\equiv\alpha\,\Delta\mathbf U,
+\Delta\boldsymbol\mu=\alpha\,\mathbf T\,\Delta\mathbf V\equiv\alpha\,\Delta\mathbf U
 $$
 
-文献 21在 Si/SiGe 2×2 阵列中得到 11×11 矩阵（7 势垒 + 4 柱塞），其逆矩阵 $\mathbf M^{-1}$ 把物理栅压组合成虚拟电极，使 $\mathrm{vP}_i$ 只移动 $\mu_i$ 而不显著扰动其他参数。隧穿线由倾斜变正交是虚拟电极生效的直接判据。
+在 Si/SiGe 2×2 阵列中得到 11×11 矩阵（7 势垒 + 4 柱塞），其逆矩阵 $\mathbf M^{-1}$ 把物理栅压组合成虚拟电极，使 $\mathrm{vP}_i$ 只移动 $\mu_i$ 而不显著扰动其他参数。隧穿线由倾斜变正交是虚拟电极生效的直接判据。
 
 ### 充电能不均匀的处理：扫描系数归一化
 
-即使每个量子点的 $\mu_i$ 已经能独立控制，四个点的充电能 $U_i$ 通常并不相等——文献 21实测四点 $U_i$ 为 2.83、5.02、3.05、4.63 meV。要实现均匀填充，需要把每个虚拟柱塞栅的扫描系数按充电能归一化：
+即使每个量子点的 $\mu_i$ 已经能独立控制，四个点的充电能 $U_i$ 通常并不相等——实测四点 $U_i$ 为 2.83、5.02、3.05、4.63 meV。要实现均匀填充，需要把每个虚拟柱塞栅的扫描系数按充电能归一化：
 
 $$
-k_i=\frac{U_i}{U_0},
+k_i=\frac{U_i}{U_0}
 $$
 
 以 $U_0=U_4=3.00$ meV 为基准，可得 $k_1=0.67$、$k_2=0.71$、$k_3=0.97$、$k_4=1.00$。再把扫描轴换成失谐轴与能量轴
 
 $$
-\varepsilon_{ij}=k_i\mathrm{vP}_i-k_j\mathrm{vP}_j,\qquad U_{ij}=k_i\mathrm{vP}_i+k_j\mathrm{vP}_j,
+\varepsilon_{ij}=k_i\mathrm{vP}_i-k_j\mathrm{vP}_j,\qquad U_{ij}=k_i\mathrm{vP}_i+k_j\mathrm{vP}_j
 $$
 
 相当于把相图绕原点旋转 45° 并按充电能缩放。给两个对角对（QD1–QD3、QD2–QD4）的失谐轴再分别乘以不同系数 $\gamma_{13}=0.5$、$\gamma_{24}=0.25$，即可在一张"电子填充谱"中同时区分四个量子点的填充过程。
@@ -124,14 +124,14 @@ $$
 隧穿耦合不是线性可分的，而是与势垒电压呈强指数依赖：
 
 $$
-t_{ij}=t_0+t_1\exp\!\left(\beta_{ij}\,\mathrm{vB}_{ij}\right),
+t_{ij}=t_0+t_1\exp\!\left(\beta_{ij}\,\mathrm{vB}_{ij}\right)
 $$
 
-文献 21在 2×2 阵列中测得四个最近邻势垒的调控系数 $\beta_{ij}$ 从 $1.42\times10^{-2}$ 到 $6.85\times10^{-2}$ mV$^{-1}$ 不等，最弱者仅为最强者的 21%。最近邻隧穿耦合可在约 25 $\mu$eV 到超过 200 $\mu$eV 的大范围内调节，下限主要由有限电子温度（150 mK ≈ 13 $\mu$eV）和 SET 反作用、交流激励功率展宽等因素决定。势垒栅之间的串扰并非严格为零：文献 21测得 $\mathrm{vB}_{41}$ 增大时会把 QD4 推离 QD3 而显著压低 $t_{34}$，交叉调控系数 $\beta'=-1.03\pm0.11\times10^{-2}$ mV$^{-1}$，据此手动补偿对应势垒栅即可实现 $t_{ij}$ 的独立控制——这正是[[fundamentals/tunnel-coupling|隧穿耦合]]方向的"虚拟势垒栅极"。
+在 2×2 阵列中测得四个最近邻势垒的调控系数 $\beta_{ij}$ 从 $1.42\times10^{-2}$ 到 $6.85\times10^{-2}$ mV$^{-1}$ 不等，最弱者仅为最强者的 21%。最近邻隧穿耦合可在约 25 $\mu$eV 到超过 200 $\mu$eV 的大范围内调节，下限主要由有限电子温度（150 mK ≈ 13 $\mu$eV）和 SET 反作用、交流激励功率展宽等因素决定。势垒栅之间的串扰并非严格为零：测得 $\mathrm{vB}_{41}$ 增大时会把 QD4 推离 QD3 而显著压低 $t_{34}$，交叉调控系数 $\beta'=-1.03\pm0.11\times10^{-2}$ mV$^{-1}$，据此手动补偿对应势垒栅即可实现 $t_{ij}$ 的独立控制——这正是[[fundamentals/tunnel-coupling|隧穿耦合]]方向的"虚拟势垒栅极"。
 
 ### 次近邻耦合的选择性调控：CB 电极
 
-二维相对一维的本质区别是有对角隧穿 $t'_{ij}$。文献 21利用中心势垒 CB 实现了次近邻耦合的**选择性**打开：当 $v_\mathrm{CB}=0$ 时 $t'_{ij}\approx 0$；逐渐增大 $v_\mathrm{CB}$ 时，$t_{24}$（QD2 与 QD4 之间，反对角）先被打开，再到一定阈值后 $t_{13}$（QD1 与 QD3 之间，对角）才被打通。这种非对称来自屏蔽板的非对称屏蔽——QD2/QD4 比 QD1/QD3 靠得更近。CB 在打开次近邻耦合的同时会改变最近邻耦合与电化学势，电化学势方向的串扰可由虚拟电极补偿，势垒方向则因 CB 电压行程较大无法建立有效虚拟势垒栅极，需按"先确保最近邻处于弱耦合，再手动调节势垒栅补偿"的流程手动完成。
+二维相对一维的本质区别是有对角隧穿 $t'_{ij}$。利用中心势垒 CB 实现了次近邻耦合的**选择性**打开：当 $v_\mathrm{CB}=0$ 时 $t'_{ij}\approx 0$；逐渐增大 $v_\mathrm{CB}$ 时，$t_{24}$（QD2 与 QD4 之间，反对角）先被打开，再到一定阈值后 $t_{13}$（QD1 与 QD3 之间，对角）才被打通。这种非对称来自屏蔽板的非对称屏蔽——QD2/QD4 比 QD1/QD3 靠得更近。CB 在打开次近邻耦合的同时会改变最近邻耦合与电化学势，电化学势方向的串扰可由虚拟电极补偿，势垒方向则因 CB 电压行程较大无法建立有效虚拟势垒栅极，需按"先确保最近邻处于弱耦合，再手动调节势垒栅补偿"的流程手动完成。
 
 ### 不同耦合构型：方形、菱形、锯齿形
 
@@ -149,11 +149,11 @@ $$
 
 1. **弱耦合（$t\approx 0$）**：四个量子点近似孤立，电子被局域在各自格点上，填充谱呈现四种斜率截然不同的电荷隧穿线，对应四个单点[[fundamentals/coulomb-blockade|库仑阻塞]]的叠加。系统性质类比于绝缘体（准确说是莫特绝缘体）。
 2. **中等耦合**：单点特征消失，电荷隧穿线交叉处弯曲杂化，能级简并被解除并展宽成"微带"——有限尺寸下的能带类比。填充谱中可辨认上 Hubbard 微带（UHB）和下 Hubbard 微带（LHB），二者之间的有限能级间隔即为类莫特能隙（Mott gap）。系统进入**集体库仑阻塞**（collective Coulomb blockade, CCB）区，即莫特绝缘态的有限尺寸对应。
-3. **强耦合**：微带与能隙闭合，填充谱退化为等间距隧穿线，整个 2×2 阵列表现为一个"大量子点"的库仑阻塞。文献 21实测大点充电能 1.05 meV，与按阵列核心尺寸（190 nm × 220 nm、有效直径约 230 nm）和自电容模型估算的 1.68 meV 同量级；改变部分点的电化学势时填充线不移动，说明电子已完全离域——系统类比于金属。
+3. **强耦合**：微带与能隙闭合，填充谱退化为等间距隧穿线，整个 2×2 阵列表现为一个"大量子点"的库仑阻塞。实测大点充电能 1.05 meV，与按阵列核心尺寸（190 nm × 220 nm、有效直径约 230 nm）和自电容模型估算的 1.68 meV 同量级；改变部分点的电化学势时填充线不移动，说明电子已完全离域——系统类比于金属。
 
 这一 CCB 出现–消失的过程就是莫特绝缘体–金属转变在 2×2 阵列上的有限尺寸类比；电荷感应填充谱与直流输运库仑菱形两种测量手段结果一致，且与二维扩展 Fermi–Hubbard 模型的数值模拟相符。
 
-物理上，半满单带 Hubbard 模型的带宽 $W=4dt$（$d$ 为维度），临界相互作用 $U_c=W$；超过 $U_c$ 后上、下 Hubbard 带劈裂开，其间即为莫特间隙。量子点体系中 $U$ 通常由点尺寸固定，因此实验上扫过相变点的手段就是调节 $t$（带宽调控）。文献 21 2×2 阵列的模拟参数取 $U=3$ meV、$V_\mathrm{nn}=0.4$ meV、$V_\mathrm{nnn}=0$，与实测一致。
+物理上，半满单带 Hubbard 模型的带宽 $W=4dt$（$d$ 为维度），临界相互作用 $U_c=W$；超过 $U_c$ 后上、下 Hubbard 带劈裂开，其间即为莫特间隙。量子点体系中 $U$ 通常由点尺寸固定，因此实验上扫过相变点的手段就是调节 $t$（带宽调控）。 2×2 阵列的模拟参数取 $U=3$ meV、$V_\mathrm{nn}=0.4$ meV、$V_\mathrm{nnn}=0$，与实测一致。
 
 <!-- FIGURE: 2×2 阵列电子填充谱随最近邻隧穿耦合的演化：(a) 弱耦合——四个单点库仑阻塞叠加；(b) 中等耦合——集体库仑阻塞，标注上/下 Hubbard 微带与类莫特能隙；(c) 强耦合——退化为大量子点的等间距填充线 -->
 
@@ -174,21 +174,21 @@ $$
 
 | 量 | 典型值 | 说明 | 来源 |
 | --- | --- | --- | --- |
-| 栅极层厚 | 35 / 50 / 55 / 70 nm | 四层铝栅（屏蔽 / 能级 / 两层势垒） | 文献 21 |
-| 能级栅尺寸 | 70 nm × 90 nm | 间距 45 nm | 文献 21 |
-| QD1–QD3 / QD2–QD4 距离 | 139 nm / 114 nm | COMSOL 静电模拟 | 文献 21 |
-| 平均杠杆臂 $\alpha$ | ≈ 0.12 eV/V | 2×2 四点平均 | 文献 21 |
-| 单点充电能 $E_C$ | 2.7–3.7 meV | 单点模式逐点测量 | 文献 21 |
-| 阵列模式充电能 $U_i$ | 2.83 / 5.02 / 3.05 / 4.63 meV | 四点同时形成后重测 | 文献 21 |
-| 扫描系数 $k_i$ | 0.67 / 0.71 / 0.97 / 1.00 | $k_i=U_i/U_0$，$U_0=U_4$ | 文献 21 |
-| 最近邻隧穿 $t$ | 25–200 $\mu$eV 可调 | 参考点 $t_\mathrm{ref}=60$ $\mu$eV | 文献 21 |
-| 次近邻隧穿 $t'$ | 0 → > 100 $\mu$eV | 通过 CB 选择性打开 | 文献 21 |
-| 点间库仑 $V_{ij}$ | 最近邻 ≈ 0.2–0.4 meV，次近邻 ≈ 0.05 meV | Hubbard 模拟所用参数 | 文献 21 |
-| 势垒调控系数 $\beta_{ij}$ | (1.42–6.85)×10⁻² mV⁻¹ | 四个最近邻势垒 | 文献 21 |
-| 耦合串扰补偿系数 $\beta'$ | −1.03 ± 0.11 ×10⁻² mV⁻¹ | vB₄₁→t₃₄ | 文献 21 |
-| 电子温度 | 150 mK ≈ 13 $\mu$eV | 反交叉拟合下限 | 文献 21 |
-| 库仑阻塞–CCB–大点 三段 | 见正文 § 集体库仑阻塞 | 弱→中→强耦合三阶段 | 文献 21 |
-| 大量子点充电能 | 1.05 meV 实测 / 1.68 meV 估算 | 强耦合极限下整个阵列 | 文献 21 |
+| 栅极层厚 | 35 / 50 / 55 / 70 nm | 四层铝栅（屏蔽 / 能级 / 两层势垒） | |
+| 能级栅尺寸 | 70 nm × 90 nm | 间距 45 nm | |
+| QD1–QD3 / QD2–QD4 距离 | 139 nm / 114 nm | COMSOL 静电模拟 | |
+| 平均杠杆臂 $\alpha$ | ≈ 0.12 eV/V | 2×2 四点平均 | |
+| 单点充电能 $E_C$ | 2.7–3.7 meV | 单点模式逐点测量 | |
+| 阵列模式充电能 $U_i$ | 2.83 / 5.02 / 3.05 / 4.63 meV | 四点同时形成后重测 | |
+| 扫描系数 $k_i$ | 0.67 / 0.71 / 0.97 / 1.00 | $k_i=U_i/U_0$，$U_0=U_4$ | |
+| 最近邻隧穿 $t$ | 25–200 $\mu$eV 可调 | 参考点 $t_\mathrm{ref}=60$ $\mu$eV | |
+| 次近邻隧穿 $t'$ | 0 → > 100 $\mu$eV | 通过 CB 选择性打开 | |
+| 点间库仑 $V_{ij}$ | 最近邻 ≈ 0.2–0.4 meV，次近邻 ≈ 0.05 meV | Hubbard 模拟所用参数 | |
+| 势垒调控系数 $\beta_{ij}$ | (1.42–6.85)×10⁻² mV⁻¹ | 四个最近邻势垒 | |
+| 耦合串扰补偿系数 $\beta'$ | −1.03 ± 0.11 ×10⁻² mV⁻¹ | vB₄₁→t₃₄ | |
+| 电子温度 | 150 mK ≈ 13 $\mu$eV | 反交叉拟合下限 | |
+| 库仑阻塞–CCB–大点 三段 | 见正文 § 集体库仑阻塞 | 弱→中→强耦合三阶段 | |
+| 大量子点充电能 | 1.05 meV 实测 / 1.68 meV 估算 | 强耦合极限下整个阵列 | |
 
 ## 与其他概念的关系
 
@@ -200,34 +200,3 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 既进入扩展 Fermi–Hubbard 模型的动能项，又在强耦合极限下决定[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$——同一个参数同时服务量子模拟和量子计算两种用途。
 - 二维阵列态的感知依赖[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET 探测器以及[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
-
-## 延伸阅读
-
-- D. M. Zajac, T. M. Hazard, X. Mi, et al., "A 2D quantum dot array in planar 28Si/SiGe", *Applied Physics Letters* (2023). [DOI: 10.1063/5.0160847]
-- X. Croot, X. Mi, et al., "A 2 × 2 Quantum Dot Array in Silicon with Fully Tunable Pairwise Interdot Coupling", *Nano Letters* (2024). [DOI: 10.1021/acs.nanolett.4c06264]
-- T. Hensgens, T. Fujita, L. Janssen, et al., "Quantum simulation of a Fermi–Hubbard model using a semiconductor quantum dot array", *Nature* (2017). [DOI: 10.1038/nature23022]
-- A. R. Mills, D. M. Zajac, M. J. Gullans, et al., "Coherent control of individual electron spins in a two-dimensional quantum dot array", *Nature Nanotechnology* (2020). [DOI: 10.1038/s41565-020-00816-w]
-- M. J. Curry et al., "Modular Autonomous Virtualization System for Two-Dimensional Semiconductor Quantum Dot Arrays", *Physical Review X* (2025). [DOI: 10.1103/physrevx.15.021034]
-
-## 论文依据
-
-- [[sources/ref-21|文献 21]]，PDF pp. 7–8：Si/SiGe 2×2 阵列、二维扩展 Fermi–Hubbard 模型与集体库仑阻塞的研究主线。
-- [[sources/ref-21|文献 21]]，PDF pp. 22–23：一维阵列规模（GaAs 8 点、Si/SiGe 6/9/12 点）与二维阵列研究现状对比；Nagaoka 铁磁、3×3 共隧穿、Si:P 3×3 莫特转变等里程碑。
-- [[sources/ref-21|文献 21]]，PDF pp. 28–29：二维阵列相对一维的耦合多样性（最近邻 + 次近邻）；虚拟栅极技术抑制电容串扰。
-- [[sources/ref-21|文献 21]]，PDF p. 30：扩展 Fermi–Hubbard 哈密顿量（式 1.11）；二维无可解性，只能借助数值或量子模拟。
-- [[sources/ref-21|文献 21]]，PDF p. 36：Hubbard 极限下交换相互作用 $J=\frac{2t^2}{U-\varepsilon-\Delta E_z}+\frac{2t^2}{U-\varepsilon+\Delta E_z}$ 及其 $4t^2/U$ 近似。
-- [[sources/ref-21|文献 21]]，PDF p. 78：2×2 阵列器件结构——四层铝栅（35/50/55/70 nm）、能级栅 70 nm × 90 nm 与 45 nm 间距、CB 控制次近邻耦合、两个对角 SET 探测器。
-- [[sources/ref-21|文献 21]]，PDF p. 80：表 4.1 四点杠杆臂平均 $\alpha\approx 0.12$ eV/V、单点模式充电能 2.7–3.7 meV。
-- [[sources/ref-21|文献 21]]，PDF pp. 86–87：阵列模式充电能 2.83/5.02/3.05/4.63 meV、虚拟栅极 $\mathrm{v}\mathbf G=\mathbf M\mathbf G$、按 $k_i=U_i/U_0$ 设定扫描系数实现均匀填充；Hubbard 模拟参数（平均充电能 3 meV，最近邻 $t=0.1$ meV、$V=0.2$ meV，次近邻 $V=0.05$ meV）。
-- [[sources/ref-21|文献 21]]，PDF pp. 87–89：同步扫描方法、四种斜率的隧穿线、SET1/SET2 互补探测，以及"以一个点的充电能为基准做归一化扫描"实现四点均匀填充的细节。
-- [[sources/ref-21|文献 21]]，PDF pp. 89–91：隧穿耦合的指数调控律 $t_{ij}=t_0+t_1\exp(\beta_{ij}\mathrm{vB}_{ij})$、四个 $\beta$ 值、最近邻耦合调节范围 25–200 $\mu$eV，以及大行程下虚拟电极失效的现象。
-- [[sources/ref-21|文献 21]]，PDF pp. 92–93：次近邻隧穿耦合的 CB 选择性调控——$v_\mathrm{CB}=250$ mV 时打开 $t_{24}$ 同时保持 $t_{13}\approx 0$，以及"先确保最近邻弱耦合，再手动补偿势垒栅"的原则。
-- [[sources/ref-21|文献 21]]，PDF p. 95：双量子点反交叉的 DiCarlo 拟合公式，以及 $V_\mathrm{bias}=0.2$ mV、$V_\mathrm{amp}=200$ $\mu$V 下提取最小隧穿耦合 30 $\mu$eV。
-- [[sources/ref-21|文献 21]]，PDF p. 97：方形 / 菱形 / 锯齿形耦合构型的电荷稳定图；4 个最近邻耦合 ≈ 60 $\mu$eV，$t_{24}\approx 113$ $\mu$eV；SSH 模型与锯齿形梯子模型作为应用场景。
-- [[sources/ref-21|文献 21]]，PDF p. 99：莫特金属–绝缘体转变的物理图像、Hubbard 带宽 $W=4dt$、莫特间隙与 $U_c=W$。
-- [[sources/ref-21|文献 21]]，PDF pp. 104–105：电子填充谱随最近邻隧穿耦合的演化——弱耦合（四个单点库仑阻塞叠加）→ 中等耦合（集体库仑阻塞，上/下 Hubbard 微带 + 类莫特能隙）→ 强耦合（大量子点库仑阻塞，$E_C=1.05$ meV）。
-- [[sources/ref-21|文献 21]]，PDF p. 106：强耦合下电子填充谱对部分电化学势不敏感，与金属–绝缘体转变的对应；与二维扩展 Fermi–Hubbard 模型模拟的对照。
-- [[sources/ref-21|文献 21]]，PDF p. 108：附录 5.A 虚拟栅极更新过程，$\mathbf M_3=\mathbf M_2\mathbf M_1$。
-- [[sources/ref-16|文献 16]]，PDF pp. 7–8：阵列自动调控方法——虚拟电极与量子点遍历方法结合，实现多点系统从局部到整体的自动调控。
-- [[sources/ref-16|文献 16]]，PDF pp. 86–87：双/三/四量子点系统的电荷稳定图维度演化、考虑次近邻耦合的四量子点等效电路图，以及 4 量子点相图的复杂性。
-- [[sources/ref-16|文献 16]]，PDF pp. 88–89：高维电荷稳定图完整测量的时间复杂度随维度指数增长，无法直接用于可扩展量子点系统；虚拟电极作为多点阵列自动调控的核心技术。

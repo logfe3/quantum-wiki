@@ -2,13 +2,13 @@
 title: 电荷态识别
 description: 从电荷稳定图或时间轨迹中自动判断量子点拓扑、占据和跃迁线的信号处理任务。
 aliases:
-  - 稳定图识别
-  - charge-state recognition
-  - 电荷稳定图分类
-  - 相图识别
+ - 稳定图识别
+ - charge-state recognition
+ - 电荷稳定图分类
+ - 相图识别
 tags:
-  - 扩展与自动化
-  - 机器学习
+ - 扩展与自动化
+ - 机器学习
 date: 2026-09-08
 ---
 
@@ -32,7 +32,7 @@ date: 2026-09-08
 识别任务的物理基础是[[fundamentals/charge-stability-diagram|电荷稳定图]]本身的结构化特征。在[[fundamentals/constant-interaction-model|常相互作用模型]]（CI 模型）下，双量子点系统的静电能为
 
 $$
-U(N_1,N_2)=\frac{1}{2}N_1^2E_{C1}+\frac{1}{2}N_2^2E_{C2}+N_1N_2E_{Cm}+f(V_{g1},V_{g2}),
+U(N_1,N_2)=\frac{1}{2}N_1^2E_{C1}+\frac{1}{2}N_2^2E_{C2}+N_1N_2E_{Cm}+f(V_{g1},V_{g2})
 $$
 
 其中 $E_{C1},E_{C2},E_{Cm}$ 分别由点电容 $C_1,C_2$ 与互电容 $C_m$ 决定。三类边界——点 1 加电子线、点 2 加电子线、点间转移线——分别对应电化学势简并条件 $\mu_1(N_1+1,N_2)=0$、$\mu_2(N_1,N_2+1)=0$ 与 $\mu_1=\mu_2$，它们两两一组围成六边形蜂窝原胞。
@@ -54,7 +54,7 @@ $$
 沿着栅压 $V_1$ 方向，存在间距为 $\Delta V_1$ 的两条平行隧穿线，对应
 
 $$
-\mu_1(N_1,N_2;V_1,V_2)=\mu_1(N_1+1,N_2;V_1+\Delta V_1,V_2),
+\mu_1(N_1,N_2;V_1,V_2)=\mu_1(N_1+1,N_2;V_1+\Delta V_1,V_2)
 $$
 
 代入 CI 模型下的电化学势即得
@@ -87,14 +87,14 @@ $$
 
 ## 神经网络模型
 
-文献 16 自动调控流水线使用两套独立训练的卷积神经网络（CNN），分别承担少电子区定位（CNN 1）与耦合强度判定（CNN 2）。两套网络采用 AlexNet 结构作为骨架。
+ 自动调控流水线使用两套独立训练的卷积神经网络（CNN），分别承担少电子区定位（CNN 1）与耦合强度判定（CNN 2）。两套网络采用 AlexNet 结构作为骨架。
 
 ### AlexNet 架构
 
 AlexNet 由 5 个卷积层与 3 个全连接层组成，前两层后追加池化层，最终通过 Softmax 函数输出分类概率。卷积层完成
 
 $$
-a_j^l=f\!\left(b_j^l+\sum_{i\in M_l}a_i^{l-1}k_{ij}^l\right),
+a_j^l=f\!\left(b_j^l+\sum_{i\in M_l}a_i^{l-1}k_{ij}^l\right)
 $$
 
 池化层则在保留显著特征的同时降低数据维度
@@ -106,7 +106,7 @@ $$
 不同卷积核对不同形貌敏感——这正是它能够识别稳定图中隧穿线位置、宽度和反交叉形状的物理基础。Softmax 把最后输出映射成多类概率分布
 
 $$
-S_i=\frac{e^{v_i}}{\sum_j e^{v_j}},
+S_i=\frac{e^{v_i}}{\sum_j e^{v_j}}
 $$
 
 使得网络对"是否属于第 $i$ 类"给出 0 到 1 的置信度而不是硬判定。
@@ -116,7 +116,7 @@ $$
 训练采用有监督学习，损失函数为交叉熵
 
 $$
-\mathrm{loss}=-\sum_i P_\mathrm{target}(i)\cdot\ln[P_\mathrm{pred}(i)],
+\mathrm{loss}=-\sum_i P_\mathrm{target}(i)\cdot\ln[P_\mathrm{pred}(i)]
 $$
 
 其中 $P_\mathrm{target}$ 是样本标签给出的真实概率分布，$P_\mathrm{pred}$ 是网络输出。交叉熵同时具备"硬约束正确类别"与"软约束错误类别"的双重作用，适合稳定图中存在中间形态（如欠耦合与适中耦合之间无清晰边界）的情形。
@@ -133,7 +133,7 @@ $$
 把耦合强度进一步量化为单个数值的"软指标"
 
 $$
-\mathrm{Coupling}=[0,\,0.5,\,1]\cdot[l_1,l_2,l_3]=0\,l_1+0.5\,l_2+l_3,
+\mathrm{Coupling}=[0,\,0.5,\,1]\cdot[l_1,l_2,l_3]=0\,l_1+0.5\,l_2+l_3
 $$
 
 则欠耦合的输出值趋于 0、过耦合趋于 1、适中耦合落在 0.3–0.7 之间（实验对应实际耦合强度约 9–12 GHz）。这一软指标使势垒电极的迭代优化（升压 / 降压）可以基于一个连续量进行。
@@ -143,7 +143,7 @@ $$
 电荷稳定图常含有样品、仪器、温度波动和实验线路引入的随机噪声。适度噪声能提升网络的鲁棒性，但信噪比过低时识别准确率显著下降。常用 Laplace 算子对图像作锐化预处理
 
 $$
-\Delta f(x,y)=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2},
+\Delta f(x,y)=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}
 $$
 
 强化隧穿线（信号剧烈变化处）而压平背景波动与低频噪声。处理后的图像在保持隧穿线形貌的前提下显著提升信噪比，使得训练和推理两端的性能都更稳定。
@@ -164,15 +164,15 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
-| 子图电压范围 | 约 $45\ \mathrm{mV}\times 45\ \mathrm{mV}$（切割前） | 文献 16 |
-| 子图像素 | $31\ \mathrm{px}\times 31\ \mathrm{px}$（约 $1.5\ \mathrm{mV}$/像素） | 文献 16 |
-| 训练样本尺寸 | $51\ \mathrm{px}\times 51\ \mathrm{px}$（插值后） | 文献 16 |
-| 概率阈值 | $P\geq 80\%$ 记为双点候选 | 文献 16 |
-| 扫描步长 | 约 $0.002\ \mathrm{V}$（粗扫，对应 $200\ \mathrm{px}\times 200\ \mathrm{px}$） | 文献 16 |
-| 适中耦合对应的软指标 | $0.3$–$0.7$，对应实际耦合强度约 $9$–$12\ \mathrm{GHz}$ | 文献 16 |
-| 泵浦电极扫描范围 | 约 $0.4\ \mathrm{V}\times 0.4\ \mathrm{V}$（识别阶段） | 文献 16 |
-| 拟合函数 | $f(V)=a(1+\tanh(bV+c))$（夹断电流曲线） | 文献 16 |
-| 偏置电压范围调整 | 泵浦上限 +0.08 V，下限 −0.08 V；势垒初值 +0.1 V | 文献 16 |
+| 子图电压范围 | 约 $45\ \mathrm{mV}\times 45\ \mathrm{mV}$（切割前） | |
+| 子图像素 | $31\ \mathrm{px}\times 31\ \mathrm{px}$（约 $1.5\ \mathrm{mV}$/像素） | |
+| 训练样本尺寸 | $51\ \mathrm{px}\times 51\ \mathrm{px}$（插值后） | |
+| 概率阈值 | $P\geq 80\%$ 记为双点候选 | |
+| 扫描步长 | 约 $0.002\ \mathrm{V}$（粗扫，对应 $200\ \mathrm{px}\times 200\ \mathrm{px}$） | |
+| 适中耦合对应的软指标 | $0.3$–$0.7$，对应实际耦合强度约 $9$–$12\ \mathrm{GHz}$ | |
+| 泵浦电极扫描范围 | 约 $0.4\ \mathrm{V}\times 0.4\ \mathrm{V}$（识别阶段） | |
+| 拟合函数 | $f(V)=a(1+\tanh(bV+c))$（夹断电流曲线） | |
+| 偏置电压范围调整 | 泵浦上限 +0.08 V，下限 −0.08 V；势垒初值 +0.1 V | |
 
 ## 实验特征与测量方法
 
@@ -193,25 +193,3 @@ $$
 - [[scaling-automation/automatic-tuning|自动调控]]是电荷态识别的下游用户：识别给出"当前状态 + 耦合判断"，自动调控给出"下一组栅压"；
 - 与[[readout-measurement/readout-crosstalk|多比特读出分类]]不同：这里识别的是器件工作区与电荷拓扑，而读出分类在已调好的工作点上判定单次量子态，时间尺度与误差模型均不同；
 - [[materials-devices/charge-noise|电荷噪声]]引起的图像漂移和跳变是识别系统的最大干扰源之一，必须借助[[qubit-control/dynamical-decoupling|动态解耦]]、低通滤波或多帧平均在算法侧抑制。
-
-## 延伸阅读
-
-- S. S. Kalantre et al., "Machine Learning techniques for state recognition and auto-tuning in quantum dots", *arXiv* (2017). [arXiv: 1712.04914]
-- R. Durrer et al., "Automated Tuning of Double Quantum Dots into Specific Charge States Using Neural Networks", *Physical Review Applied* (2020). [DOI: 10.1103/PhysRevApplied.13.054019]
-- J. Darulová et al., "Autonomous Tuning and Charge-State Detection of Gate-Defined Quantum Dots", *Physical Review Applied* (2020). [DOI: 10.1103/PhysRevApplied.13.054005]
-- B. Severin et al., "Tuning arrays with rays: Physics-informed tuning of quantum dot charge states", *Physical Review Applied* (2023). [DOI: 10.1103/PhysRevApplied.20.034067]
-
-## 论文依据
-
-- [[sources/ref-16|文献 16]]，PDF pp. 7–8：摘要给出神经网络、虚拟电极与阵列遍历的整体方案；电荷稳定图的电荷态识别与分类思想。
-- [[sources/ref-16|文献 16]]，PDF p. 33：第 2 章目标——建立自动识别与分析电荷稳定图的模型，CNN 在图像特征提取上的适用性。
-- [[sources/ref-16|文献 16]]，PDF pp. 34–37：卷积层与池化层公式（式 2.1–2.3）、AlexNet 的 8 层结构、Softmax（式 2.4）与交叉熵损失函数（式 2.6）。
-- [[sources/ref-16|文献 16]]，PDF pp. 38–43：2.2 节电荷稳定图特征分析——双量子点等效电路与典型蜂窝图、隧穿线间距公式（式 2.14–2.15）、三相点间隔公式（式 2.18–2.19）、反交叉形貌随耦合强度的演化。
-- [[sources/ref-16|文献 16]]，PDF pp. 44–46：2.3 节基于神经网络的相图分析方法——5 类少电子区样本与 3 类耦合样本的标签分配、Laplace 算子预处理、异常相图处理。
-- [[sources/ref-16|文献 16]]，PDF pp. 57–58：自动调控系统的 8 个模块，CNN 1（少电子区）与 CNN 2（耦合强度）分别训练的判断依据。
-- [[sources/ref-16|文献 16]]，PDF pp. 60–61：3.3 节自动调控实现——夹断电流曲线拟合（式 3.1）与 SET 工作点选取。
-- [[sources/ref-16|文献 16]]，PDF pp. 61–62：泵浦电极扫描范围 $0.4\ \mathrm{V}$、子图切割尺寸 $31\ \mathrm{px}\times 31\ \mathrm{px}$（约 $1.5\ \mathrm{mV}$/像素）。
-- [[sources/ref-16|文献 16]]，PDF p. 75：训练样本被统一为 $51\ \mathrm{px}\times 51\ \mathrm{px}$。
-- [[sources/ref-16|文献 16]]，PDF pp. 76–77：少电子区搜索过程——$80\%$ 概率阈值、子图概率直方图。
-- [[sources/ref-16|文献 16]]，PDF p. 77：软耦合指标公式（式 3.2）、$0.3$–$0.7$ 输出区间对应实际耦合强度 $9$–$12\ \mathrm{GHz}$。
-- [[sources/ref-14|文献 14]]，PDF pp. 7–8：浅层神经网络作为态分类器抑制多比特读取串扰，与稳定图识别共同构成"机器学习 + 量子点"的两类典型应用。
