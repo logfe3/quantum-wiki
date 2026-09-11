@@ -254,7 +254,9 @@ plugins:
     enabled: true
     options:
       links:
-        Quartz: https://quartz.jzhao.xyz/
+        主站: https://chenzhaoyun.com
+        Wiki 门户: https://wiki.chenzhaoyun.com
+        教程门户: https://tutorial.chenzhaoyun.com
     layout:
       position: footer
       priority: 50
