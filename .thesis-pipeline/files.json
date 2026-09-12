@@ -1,0 +1,269 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "files": [
+      {
+        "created_time": "1788234078",
+        "modified_time": "1788234081",
+        "name": "半导体量子点系统中微磁体的优化研究_杨杰诚.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "WTAhbCG9no9N4CxKOsvcSN6cn0e",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/WTAhbCG9no9N4CxKOsvcSN6cn0e"
+      },
+      {
+        "created_time": "1788233889",
+        "modified_time": "1788233891",
+        "name": "（已压缩）双量子点中电子态的操控与测量_周诚.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "KOpubNidNoLdXNxHQzjc1oG2nuh",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/KOpubNidNoLdXNxHQzjc1oG2nuh"
+      },
+      {
+        "created_time": "1788233888",
+        "modified_time": "1788233889",
+        "name": "（已压缩）尚汝南_2014.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Hk6MbSu6iopNYpx71Zlcmx3wnUg",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Hk6MbSu6iopNYpx71Zlcmx3wnUg"
+      },
+      {
+        "created_time": "1788233885",
+        "modified_time": "1788233887",
+        "name": "（已压缩）Thesis2025_王宁_最终版.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "A2PmbMkH7o5z2mxL22pclVb1nGb",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/A2PmbMkH7o5z2mxL22pclVb1nGb"
+      },
+      {
+        "created_time": "1788233812",
+        "modified_time": "1788233814",
+        "name": "徐刚 基于锗纳米线量子点的空穴自旋.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "J7FDbTtFnoef7LxIgGgcBRszner",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/J7FDbTtFnoef7LxIgGgcBRszner"
+      },
+      {
+        "created_time": "1788233809",
+        "modified_time": "1788233811",
+        "name": "李炎_锗硅自组织纳米线量子点和微波谐振腔的复合结构的实验研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "TLNnbNsCvoYc5Ux5nYbcYq8cnpb",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/TLNnbNsCvoYc5Ux5nYbcYq8cnpb"
+      },
+      {
+        "created_time": "1788233805",
+        "modified_time": "1788233809",
+        "name": "孔伟成毕业论文.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "ORybbc6tFoGFHixtQIccOp5xn1L",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/ORybbc6tFoGFHixtQIccOp5xn1L"
+      },
+      {
+        "created_time": "1788233803",
+        "modified_time": "1788233805",
+        "name": "韩天一_2017.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "ByOjbgFqFoZ4Pux94Agc5uLtnze",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/ByOjbgFqFoZ4Pux94Agc5uLtnze"
+      },
+      {
+        "created_time": "1788233800",
+        "modified_time": "1788233802",
+        "name": "段鹏博士论文-超导量子比特快速高保真度读取的实验研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "J5MgbEbHOoB7AtxMUeLca7OnnWg",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/J5MgbEbHOoB7AtxMUeLca7OnnWg"
+      },
+      {
+        "created_time": "1788233798",
+        "modified_time": "1788233800",
+        "name": "陈宝宝_2017.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "WXUUbbYoYoTPi5xZAt1cOxVUn2g",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/WXUUbbYoYoTPi5xZAt1cOxVUn2g"
+      },
+      {
+        "created_time": "1788233796",
+        "modified_time": "1788233798",
+        "name": "半导体量子点阵列的自动调控方法研究 - 0525_final(1).pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "LSUKbfFsLo2je3xqYSHcv1LsnUc",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/LSUKbfFsLo2je3xqYSHcv1LsnUc"
+      },
+      {
+        "created_time": "1788233793",
+        "modified_time": "1788233796",
+        "name": "余国栋 多电荷量子比特的相干操控研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Uz05bhnCvofcvwxolGBc4GSenmb",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Uz05bhnCvofcvwxolGBc4GSenmb"
+      },
+      {
+        "created_time": "1788233791",
+        "modified_time": "1788233793",
+        "name": "尤杰_新型砷化镓量子点的制备与量子输运研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Q7I8bSrf3oJVT7xv48Ccqulxn48",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Q7I8bSrf3oJVT7xv48Ccqulxn48"
+      },
+      {
+        "created_time": "1788232977",
+        "modified_time": "1788232983",
+        "name": "张苗磊 谐振腔与量子点耦合体系的研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "EfK2bYy4joxMaux4pOHcSSY8nyg",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/EfK2bYy4joxMaux4pOHcSSY8nyg"
+      },
+      {
+        "created_time": "1788232974",
+        "modified_time": "1788232977",
+        "name": "陈明博 半导体量子点与腔杂化系统的动力学耦合研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "W8ZJbPBuroOViox4O3Ccs9fcnZR",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/W8ZJbPBuroOViox4O3Ccs9fcnZR"
+      },
+      {
+        "created_time": "1788232968",
+        "modified_time": "1788232968",
+        "name": "林霆 微波谐振腔与半导体量子点的杂化系统研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "KnmMbxS21opAUwxG9ppcSnABnrg",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/KnmMbxS21opAUwxG9ppcSnABnrg"
+      },
+      {
+        "created_time": "1788091953",
+        "modified_time": "1788091955",
+        "name": "（已压缩）刘铮 - SOT磁化翻转操控硅基自旋量子比特的方案及实验兼容性研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Xh1Sb5j5EobrELxfWikc0Z21nLc",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Xh1Sb5j5EobrELxfWikc0Z21nLc"
+      },
+      {
+        "created_time": "1788091800",
+        "modified_time": "1788091800",
+        "name": "马璟睿 - 应变锗空穴-谐振腔耦合系统中缺陷机制与器件优化研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "RHCJbcrlYo8X6txQWL3cv82rnnc",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/RHCJbcrlYo8X6txQWL3cv82rnnc"
+      },
+      {
+        "created_time": "1788091795",
+        "modified_time": "1788091797",
+        "name": "（已压缩）王保传 半导体量子点中量子比特编码研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "AB7LbtHVLom2itx6KofcknXAnfe",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/AB7LbtHVLom2itx6KofcknXAnfe"
+      },
+      {
+        "created_time": "1788091793",
+        "modified_time": "1788091795",
+        "name": "（已压缩）基于Si-MOS量子点的高保真度自旋量子比特操控研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "UsX5bD4lKoTeLbxYjvqcILkancb",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/UsX5bD4lKoTeLbxYjvqcILkancb"
+      },
+      {
+        "created_time": "1788091791",
+        "modified_time": "1788091792",
+        "name": "（已压缩）超导量子比特快速高保真度读取的实验研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Vn4Dbnhi0owmGkxOF1Ic50kunag",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Vn4Dbnhi0owmGkxOF1Ic50kunag"
+      },
+      {
+        "created_time": "1788091789",
+        "modified_time": "1788091791",
+        "name": "（已压缩）SiSiGe三量子点阵列-高阻抗谐振腔杂化系统中量子比特-微波光子耦合研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "IaX3bWSbFoLx3VxwktAcHbZ5nzC",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/IaX3bWSbFoLx3VxwktAcHbZ5nzC"
+      },
+      {
+        "created_time": "1788091496",
+        "modified_time": "1788091497",
+        "name": "周雨晨 - 锗量子点中空穴自旋量子比特的操控研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "Tll7bbK9io3IVjxCoxIcc3cBnWf",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/Tll7bbK9io3IVjxCoxIcc3cBnWf"
+      },
+      {
+        "created_time": "1788091495",
+        "modified_time": "1788091495",
+        "name": "王柯 低维半导体材料中门控量子点及自旋量子比特研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "ZDtzbunwUoDMGnxJQkMcpdwjn0b",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/ZDtzbunwUoDMGnxJQkMcpdwjn0b"
+      },
+      {
+        "created_time": "1788091493",
+        "modified_time": "1788091494",
+        "name": "硅量子点中单自旋量子比特的实验研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "A9Hcbxo7LoidNnxpRTlcGk6fnfe",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/A9Hcbxo7LoidNnxpRTlcGk6fnfe"
+      },
+      {
+        "created_time": "1788091492",
+        "modified_time": "1788091492",
+        "name": "半导体量子点-高阻抗谐振腔杂化系统的基本表征与动力学研究.pdf",
+        "owner_id": "ou_a20918140a2a1193eb47dca8ca7054c2",
+        "parent_token": "YtlAflo0MlUPG4dehX4cUg7LnNf",
+        "token": "OZ2sbfAD4oNiQ4x86i2cCsKwnY4",
+        "type": "file",
+        "url": "https://xcnknb3lcg3n.feishu.cn/file/OZ2sbfAD4oNiQ4x86i2cCsKwnY4"
+      }
+    ],
+    "has_more": false
+  }
+}

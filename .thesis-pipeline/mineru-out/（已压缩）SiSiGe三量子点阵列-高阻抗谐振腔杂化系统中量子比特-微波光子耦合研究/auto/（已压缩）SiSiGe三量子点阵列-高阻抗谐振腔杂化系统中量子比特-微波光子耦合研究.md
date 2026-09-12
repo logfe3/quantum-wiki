@@ -1,0 +1,2577 @@
+![](images/cd42fce55dd38c1ba9e4f55dd055ee40a25dba7803e5834ba8d5b3a970dca477.jpg)
+
+# 博士学位论文
+
+![](images/7967ce9a09ceed25131acd945e19004a899aafb218b1604f022d6e3ceb1a378e.jpg)
+
+## Si/SiGe 三量子点阵列-高阻抗谐振腔杂化系统中量子比特-微波光子耦合研究
+
+作者姓名： 江顺利
+
+学科专业： 物理学
+
+导 师： 曹刚教授 郭国平教授
+
+完成时间： 二〇二五年二月二十六日
+
+# A dissertation for doctor’s degree
+
+![](images/0b4b407e5d0c1b1ab2ca5391c7d522d3c6057106f593f10ef43009aea1a7785d.jpg)
+
+# Research on coupling of qubit and microwave photon in Si/SiGe triple quantum dot array-high impedance resonator hybrid system
+
+Author: Shun-Li Jiang
+
+Speciality: Physics
+
+Supervisor: Prof. Gang Cao Prof. Guo-Ping Guo
+
+Completion date: February 26, 2025
+
+## 中国科学技术大学学位论文原创性声明
+
+本人声明所呈交的学位论文，是本人在导师指导下进行研究工作所取得的成果。除已特别加以标注和致谢的地方外，论文中不包含任何他人已经发表或撰写过的研究成果。与我一同工作的同志对本研究所做的贡献均已在论文中作了明确的说明。
+
+作者签名：
+
+签字日期：
+
+## 中国科学技术大学学位论文授权使用声明
+
+作为申请学位的条件之一，学位论文著作权拥有者授权中国科学技术大学拥有学位论文的部分使用权，即：学校有权按有关规定向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅，可以将学位论文编入《中国学位论文全文数据库》等有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。本人提交的电子文档的内容和纸质论文的内容相一致。
+
+控阅的学位论文在解密后也遵守此规定。
+
+□<sub>✓</sub> 公开 □ 控阅（ 年）
+
+作者签名：
+
+导师签名：
+
+签字日期：
+
+签字日期：
+
+## 摘要
+
+基于硅基半导体量子点编码的自旋量子比特具有相干时间长、可控性好并且其制备过程与先进半导体产线工艺兼容的优点，被认为是实现量子计算的主要候选者之一。
+
+实现大规模半导体量子计算不仅需要增加量子比特数量，还需确保量子比特之间具有有效耦合。结合半导体量子比特和超导谐振腔的电路量子电动力学系统被认为是一种实现量子比特长程扩展的有效方案。近年来，研究者使用高阻抗超导微波谐振腔作为媒介成功实现了半导体自旋量子比特与微波光子之间的强耦合。在此基础上，研究者们进一步实现了自旋量子比特之间长程的信息交换，以及谐振腔介导的硅基自旋两比特逻辑门操作。这些成果表明，谐振腔在实现量子比特长程耦合方面具有巨大潜力。
+
+为了进一步增加量子比特数目并提高集成效率，可以使用量子比特阵列与谐振腔耦合的架构。实验中实现量子比特与谐振腔强耦合的器件，其量子比特至少由两个量子点共同编码。一个量子比特阵列中至少要包含两个量子比特，双量子点显然无法达到这一要求。而在三量子点与谐振腔耦合的系统中，可以使用其中两个量子点编码一个量子比特与谐振腔进行耦合，剩余的一个量子点则用于编码另一个量子比特。因此，三量子点与谐振腔耦合系统是展示量子比特阵列与谐振腔耦合的最小单元。此外，基于三量子点编码的共振交换量子比特具有可直接电学操作的优点，这使得其非常适合进行大规模量子比特扩展。在硅基三量子点与谐振腔耦合器件的相关研究中，谐振腔已经被用于探测三量子点中的能谷态，并通过辅助比特实现了高保真度的量子比特读取。然而，受制于器件制备中的困难，谐振腔与三量子点中量子比特的强耦合尚未被实验演示。
+
+本文以硅/硅锗三量子点与谐振腔耦合体系为研究对象，对谐振腔与三量子点中量子比特的耦合展开了系统性的研究。作为基础内容，研究了三量子点中电子的填充特性、基本参数的表征方法以及电荷量子比特与谐振腔的强耦合。进一步地，实现了翻转模式（flopping-mode）自旋量子比特与谐振腔的强耦合，这展现了三量子点在量子比特扩展方面的潜力。此外本文实现了共振交换量子比特与谐振腔的强耦合，借助比特完全电控的特性，有望在大规模量子计算中发挥重要应用价值。论文主要内容包括：
+
+1. 背景与理论框架。系统介绍了半导体量子计算和电路量子电动力学的相关背景，阐述了电路量子电动力学在扩展量子比特中的重要意义。详细介绍了高阻抗谐振腔的原理和实现方法，概述了硅基半导体量子点的基本知识，并阐述了谐振腔与量子比特耦合的基本理论。
+
+2. 器件制备与低温实验技术。详细描述了硅/硅锗三量子点与谐振腔耦合器件的制备工艺以及低温测量技术。
+
+3. 三量子点基本性质的表征。通过超导微波谐振腔研究了三量子点中电子的填充特性，观察到了四相点以及量子元胞自动机现象，验证了三量子点系统优良的调节性能，这是后续进行量子比特编码以及量子比特操作的基础。此外，本文还研究了电荷量子比特与谐振腔的耦合特性，并实现了强耦合。
+
+4.翻转模式自旋量子比特与谐振腔的耦合。在三量子点系统中，我们依次在不同位置编码了两个翻转模式自旋量子比特，并且分别实现了它们与谐振腔的强耦合。此外，本文还研究了翻转模式量子比特在拉比（Rabi）振荡以及拉姆齐（Ramsey）干涉实验中的相干演化，并提取出了量子比特的相干时间。
+
+5. 共振交换量子比特和谐振腔的耦合。基于三个量子点中的电子自旋编码共振交换量子比特，并利用谐振腔探测其能谱结构。测量了共振交换量子比特和谐振强的耦合强度，以及共振交换量子比特的退相干。通过理论模型，解释了退相干与比特失谐量之间的关系，并确认了电荷噪声是导致量子比特退相干的主要因素。这些结果验证了通过共振交换量子比特实现大规模量子比特扩展的可行性。
+
+本论文的主要创新点在于：
+
+1. 实现了硅/硅锗三量子点中电荷量子比特与高阻抗谐振腔的强耦合，此外，使用谐振腔探测到三量子点体系中的四相点和量子元胞自动机现象。
+
+2. 在三量子点中实现了两个翻转模式量子比特和谐振腔的强耦合。用于编码其中一个量子比特的量子点不存在电极与谐振腔直接相连，这是首次实现无电极直接连接量子点中的量子比特与谐振腔的强耦合。这个强耦合的实现验证了谐振腔具有更大范围耦合量子比特的能力，拓展了谐振腔应用范围。此外，这种耦合方式还可以应用于不同量子比特阵列之间的量子信息交换。
+
+3. 实现了硅基体系共振交换量子比特和谐振腔的强耦合，并从理论和实验两个方面研究了量子比特的退相干机制，确定了电荷噪声是导致退相干的主要因素，为后续提高量子比特性质提供了方向。
+
+关键词：硅/硅锗三量子点；自旋-微波光子强耦合；电路量子电动力学；高阻抗 微波谐振腔
+
+## ABSTRACT
+
+Silicon-based semiconductor spin qubits exhibit long coherence times, high operational fidelity, and compatibility with advanced semiconductor processes, making them one of the leading candidates for realizing quantum computation.
+
+However, achieving large-scale quantum computing requires not only increasing the number of qubits but also enabling effective coupling between them. Circuit quantum electrodynamics (cQED) system incorporating semiconductor qubits and superconducting resonators is considered an effective approach for long-range scalability of qubits. By employing a resonator as a mediator, photons can transmit information between qubits, enabling long-range coupling. In recent years, strong coupling between semiconductor spin qubits and microwave photons using high-impedance superconducting microwave resonators as mediators has been achieved. Based on this, researches have further realized long-range information exchange between spin qubits and demonstrated silicon-based spin two-qubit gate operations mediated by resonator. These achievements demonstrate the potential of resonators in facilitating long-range coupling.
+
+To further increase the number ofqubits and improve integration efficiency, a qubit array coupled to a resonator can be employed. Experimental devices that achieve strong coupling between qubits and resonators typically encode each qubit using at least two quantum dots. In such a scheme, a qubit array must contain at least two qubits, which cannot be achieved with double quantum dots. In a system combing a triple quantum dot and a resonator, two of the quantum dots can encode one qubit for coupling with the resonator, while the remaining quantum dot can encode another qubit. This makes the TQD-resonator coupling system the basic cell for demonstrating the coupling of a qubit array to a resonator. Furthermore, the resonant exchange (RX) qubit encoded in TQDs, characterized by full electrical control, is particularly suitable for qubit expansion. Previous research has employed a resonator to probe valley states in TQDs and achieve high-fidelity readout of qubits via an ancillary qubit. However, due to the challenges in device fabrication, strong coupling between a resonator and qubits encoded in TQDs has not yet been experimentally demonstrated.
+
+This thesis focuses on the coupling between a Si/SiGe TQD and a resonator, presenting a systematic study of this hybrid system. Foundational work includes characterizing the electron filling properties of TQDs, parameter extraction methods, and the
+
+strong coupling between charge qubits and the resonator. Furthermore, strong coupling between flopping-mode spin qubits and the resonator is achieved, demonstrating the potential of TQDs in qubit scaling. In addition, this research achieved strong coupling between a RX qubit and a resonator. Leveraging the fully electrical control ofthe qubit, this approach holds significant potential for applications in large-scale quantum computing. The main content includes the following aspects: 1.Background and Theoretical Framework: A comprehensive overview of semiconductor quantum computing and cQED is provided, highlighting the significance of cQED in qubit scaling. The principles and realization of high-impedance resonators are introduced, along with fundamental knowledge of silicon-based semiconductor quantum dots and the basic theory of qubit-resonator coupling. 2.Device Fabrication and Low-Temperature Experimental Techniques: Detailed descriptions of the fabrication process for Si/SiGe TQD-resonator coupled devices and low-temperature measurement techniques are presented. 3.Characterization of TQD Properties: The electron filling properties of TQDs were studied using superconducting microwave resonators, revealing quadruple points and quantum cellular automata (QCA) phenomena. These results validate the excellent tunability of the TQD system, providing a foundation for qubit encoding and operation. Additionally, the coupling characteristics of charge qubits and the resonator were investigated, achieving strong coupling. 4.Flopping-Mode Spin Qubits and Resonator Coupling: In the TQD system, we sequentially encoded two flopping-mode spin qubits at different positions and successfully achieved strong coupling between each qubit and the resonator. The coherence evolution of the qubits was studied through Rabi oscillations and Ramsey interference experiments, with the qubit coherence times extracted. 5.Resonant Exchange Qubits and Resonator Coupling: RX qubits were encoded using three electron spins in the TQD system, and their energy spectrum was investigated via the resonator. The coupling strength between RX qubits and the resonator was measured, and the decoherence mechanisms were studied both theoretically and experimentally. It was confirmed that charge noise is the primary source of qubit decoherence, providing direction for improving qubit performance. The main creative points in this thesis contain: 1.Strong coupling between a charge qubit encoded in a Si/SiGe triple quantum dot and a high-impedance resonator was achieved. Additionally, the resonator was used to detect quadruple points and quantum cellular automata phenomena within the triple
+
+quantum dot system.
+
+2.Strong coupling between two flopping-mode spin qubits and the resonator was demonstrated in the TQD system. One ofthe qubits was encoded in quantum dots without direct electrode connections to the resonator, marking the first realization of such coupling. This validates the resonator’s capability to couple qubits over a broader range, expanding its application scope. Moreover, this coupling scheme enables quantum information exchange between distant qubit arrays.
+
+3.Strong coupling between RX qubits and the resonator was achieved in a siliconbased system. The decoherence mechanisms of RX qubits were studied, identifying charge noise as the main decoherence source. This provides a foundation for future improvements in qubit performance and scaling.
+
+KEY WORDS: Si/SiGe triple quantum dot, strong microwave photon-spin coupling, circuit quantum electrodynamics, high impedance resonator
+
+## 目录
+
+第1章 绪论 ..  
+1.1 量子计算 ...  
+1.1.1 量子计算的发展与挑战 .....  
+1.1.2 半导体量子点与半导体量子计算 .  
+1.2 半导体量子比特的扩展... 4  
+1.3 选题背景 ... 6  
+1.4 论文结构 ....  
+第 2 章 硅基量子比特与谐振腔耦合的相关理论 .......  
+2.1 高阻抗超导谐振腔..... . 8  
+2.1.1 谐振腔基本概念及结构 . 8  
+2.1.2 谐振腔的量子化描述 .  
+2.1.3 谐振腔的耗散 ... . 10  
+2.1.4 谐振腔的传输特性 . .. 11  
+2.1.5 谐振腔中的 Fano 效应 ... .. 13  
+2.1.6 利用动态电感实现高阻抗谐振腔 ........ . . . 13  
+2.2 硅基半导体量子点.... . . . 15  
+2.2.1 量子点的基本概念 .. . . . 15  
+2.2.2 量子点的电化学势和库仑峰 .. . . . 16  
+2.2.3 双量子点系统 .... . . . 17  
+2.2.4 半导体量子点中的电荷量子比特 .... . . . 19  
+2.2.5 半导体量子点中的自旋量子比特 . . . . 20  
+2.3 量子比特与谐振腔耦合的基本理论... . . . 21  
+2.3.1 J-C 模型 .. . . . 21  
+2.3.2 耦合强度计算 . . . . 23  
+2.4 本章小结 ..... . . . 25  
+第 3 章 量子器件的制备以及低温测量技术 ........ . . . 26  
+3.1 微纳工艺基本介绍... . . . 26  
+3.1.1 图形传递 .... . . . 26  
+3.1.2 薄膜沉积过程 .. . . . 29  
+3.1.3 刻蚀过程 . . . 29  
+3.1.4 封装测试 . .. 29  
+3.2 工艺流程 .. .. 30  
+3.2.1 谐振腔工艺 .. .. 30  
+3.2.2 量子点工艺流程 . .. 31  
+3.2.3 谐振腔与量子点耦合的工艺流程 ....... . . . 32  
+3.3 低温测量平台介绍... . . . 33  
+3.3.1 测量平台 . .. 33  
+3.3.2 测量方法 ... . . . 34  
+3.3.3 测量程序 . .. 35  
+3.4 本章小结 .... . . . 35  
+第4章 硅基三量子点系统的基本表征 ... . . . . 36  
+4.1 研究背景 .... . . . 36  
+4.2 杂化器件基本性质表征.. . . . 37  
+4.2.1 器件结构 .. .. 37  
+4.2.2 通过电流测量量子点电荷分布 ....... . . . 39  
+4.2.3 Lever arm 测量 ... . . . 40  
+4.2.4 电子温度的测量 .. .. 42  
+4.3 三量子点中的电荷比特与谐振腔的耦合.... . . . 43  
+4.3.1 利用谐振腔探测量子点信号 . .. 43  
+4.3.2 谐振腔与电荷量子比特耦合强度的提取 ..... . . . 44  
+4.4 三量子点性质的研究... . . . 47  
+4.4.1 三量子点中的电子数目确定 .. 47  
+4.4.2 量子元胞自动机和四相点 ... . . . 48  
+4.5 本章小结 ... . . . 50  
+第5章 硅基自旋量子比特与谐振腔耦合 ...... . . . 52  
+5.1 研究背景 ... . . . 52  
+5.2 三量子点中翻转模式自旋比特编码.... . . . 53  
+5.2.1 器件结构 . . . . 53  
+5.2.2 能级结构 . . . 54  
+5.2.3 比特编码 .. . . . 55  
+5.3 翻转模式自旋比特与谐振腔的耦合... . . . 56  
+5.3.1 电荷态测量 .. . . . 56  
+5.3.2 自旋与谐振腔耦合的理论描述 .. . . . 58  
+5.3.3 自旋比特与谐振腔的强耦合 .. .. 61  
+5.3.4 磁场大小的校准 .. .. 63  
+5.4 翻转模式自旋比特的操作.. . 64  
+5.4.1 操作线路 .... . 65  
+5.4.2 设备延时校准 .. 66  
+5.4.3 Rabi 振荡实验 ... . 67  
+5.4.4 Ramsey 干涉实验 ... .. 69  
+5.5 AC Stark 效应 .. .. 70  
+5.6 本章小结 .... .. 72  
+第6章 共振交换量子比特与谐振腔的耦合 .. . . . 73  
+6.1 研究背景 . . . . . . . . . . 73  
+6.2 共振交换量子比特理论.... . . . 74  
+6.2.1 共振交换量子比特的编码 .. 74  
+6.2.2 共振交换量子比特与谐振腔的耦合 .. .. 79  
+6.3 实验部分 .... . . . 80  
+6.3.1 共振交换量子比特工作位置的确定 .... . . . 80  
+6.3.2 共振交换量子比特能谱 .. . . . 82  
+6.3.3 耦合强度的提取 . . . . 83  
+6.4 共振交换量子比特的退相干. . . . 84  
+6.4.1 退相干的实验测量 .. . . . 84  
+6.4.2 退相干机制分析 ..... . . . 84  
+6.5 本章小结 ..... . . . 88  
+第7章 总结与展望 .. . . . 89  
+7.1 总结 . . . . .. 89  
+7.2 展望 . . . . .. 90  
+7.2.1 制造工艺改进 .... .. 90  
+7.2.2 高温量子比特 .. . . 91  
+7.2.3 多腔结构 ... .. 91  
+7.2.4 新材料体系 ... .. 92  
+参考文献 . . . . . . . 93  
+致谢 . . . . . . . . 106  
+在读期间取得的科研成果 ... . . . . 108
+
+## 第 1 章 绪论
+
+量子计算是继经典计算之后最具革命性潜力的技术之一，通过利用量子叠加和纠缠等特性，有望在质因数分解<sup>[1]</sup>、数据库搜索<sup>[2]</sup>等问题上实现计算加速。
+
+近年来，量子计算已经在多种物理体系上进行了原理性的演示。其中，基于半导体量子点的量子比特因其制造过程与成熟的半导体制造工艺兼容、特征结构尺寸小且易于扩展，具有实现大规模量子计算的独特潜力。然而，如何有效延长量子比特的相干时间、进而提高量子操作的保真度以及实现量子比特的大规模扩展仍是该领域亟待解决的核心问题<sup>[3-4]</sup>。本章首先简单回顾量子计算的发展历程，然后着重介绍半导体量子计算的优势以及发展现状，紧接着阐述电路量子电动力学（circuit quantum electrodynamics，cQED）体系<sup>[5]</sup>在半导体量子计算上的应用，最后介绍本论文的选题依据、研究意义以及论文结构。
+
+## 1.1 量子计算
+
+## 1.1.1 量子计算的发展与挑战
+
+1982 年，著名物理学家 Richard Feynman 首次指出，经典计算机无法有效模拟多体量子系统的复杂行为，而基于量子力学的量子计算机则可以完成这一任务<sup>[6]</sup>，这一观点在促进量子计算的研究中起到了关键作用。1985 年，DavidDeutsch 提出了通用量子计算机的理论模型<sup>[7]</sup>，即量子图灵机，从而奠定了量子计算的理论基础。1994年，PeterShor提出了在量子计算机上高效因式分解大整数的算法，即著名的Shor算法<sup>[1]</sup>。相较于经典计算机算法，该算法能够将计算时间从随数字位数呈指数级增长降低到多项式量级。在量子比特数量达到数千甚至更多的情况下，该算法能在多项式时间内破解当前广泛运用的 RSA 密钥，因而在学术界，尤其是密码学领域引发了广泛关注。1997 年，Lov Grover 提出了Grover算法<sup>[2]</sup>，使量子计算在未排序数据库的搜索问题上显示出优越性。
+
+而显示这两种算法的优越性需要大量的量子比特，这在当前实验条件下是难以达到的。在 2018 年，由 Preskill 提出了“含噪中等规模量子”（noisy intermediate-scale quantum，NISQ）<sup>[8]</sup>的概念。主要的 NISQ 算法包括变分量子算法（variationalquantum algorithm，VQA）<sup>[9]</sup>和量子退火（quantum annealing）<sup>[10]</sup>算法等。这些算法的提出和优化进一步推动了量子计算的高速发展。
+
+随着量子计算机概念的提出和相应量子算法的发展，研究者们开始关注如何将这些理论转化为现实。一个关键问题是，如何寻找适合量子计算的物理体系呢？2000 年，David DiVincenzo 提出了五项判据<sup>[11]</sup>，用于评估特定物理体系是否适合实现量子计算。经过物理学家多年来的不断尝试和探索，已经发展出了众多量子计算的物理体系，包括离子阱体系<sup>[12]</sup>、超导电路体系<sup>[13]</sup>、线性光学体系<sup>[14]</sup>、中性原子体系<sup>[15]</sup>、以及半导体量子点体系<sup>[16]</sup>等。
+
+近年来，量子计算领域发展迅猛，取得了一系列重要突破，其中最引人注目的是量子优越性的成功演示。量子优越性这一概念由 Preskill 于 2012 年首次提出<sup>[17]</sup>，其核心含义是：在某些特定计算任务中，量子计算机能够比经典计算机更高效地完成计算，甚至经典计算机无法在合理时间内完成的任务，量子计算机依然能够有效解决问题。2019 年谷歌公司推出了“Sycamore”超导量子计算机，宣称实现了量子优越性<sup>[18]</sup>。尽管这一声明仍存在争议，但这一成果展示了量子计算在解决特定的优化问题和模拟复杂系统方面的巨大潜力。2024 年，谷歌公司推出了新一代超导量子计算机“Willow”，成功演示了基于表面码的量子纠错，并实现了量子纠错的正收益<sup>[19]</sup>。国内在量子计算方面的研究也取得了重要突破。2021年，中国科学技术大学潘建伟团队成功研制了量子计算原型机“九章二号”，其处理高斯玻色采样实验的速度比当时最快的超级计算机还要快 1024 倍，展示出了量子优越性<sup>[20]</sup>。同样是 2021 年，潘建伟团队在具有 66 个超导量子比特的“祖冲之 2 号”上执行了量子线路随机采样，也展现出了量子优越性<sup>[21]</sup>，并于2024年展示了其在化学方面的应用<sup>[22]</sup>。2024年，潘建伟团队推出了“祖冲之3号”，具有105个量子比特，进一步扩大了量子优越性<sup>[23]</sup>。
+
+## 1.1.2 半导体量子点与半导体量子计算
+
+半导体量子计算的物理实现依赖于门控半导体量子点。量子点是存在于硅（Si）、砷化镓（GaAs）等半导体材料中的准零维结构，其中电子的运动会在三个空间维度上均受到限制<sup>[24]</sup>。在极低温环境下，量子点表现出类似于原子的分立能级结构，因此也被称为“人造原子”<sup>[25]</sup>。1998 年，Daniel Loss 和 David DiVincenzo提出可以利用半导体量子点中单个电子自旋的两种不同状态来进行量子比特编码，并设计了相应的量子门实验方案<sup>[16]</sup>，由此推动了半导体计算的高速发展。这种基于单个自旋状态编码的量子比特被称为 Loss-DiVincenzo（LD）<sup>[16]</sup>量子比特或单自旋量子比特。理想的LD量子比特由于仅与磁场发生相互作用，其量子态非常稳定，不易被破坏，因此具有较长的相干时间，从而成为了当前半导体量子计算的主要研究方向。然而，这种稳定性也导致了操作上的困难，自旋比特难以实现快速操作。除了利用自旋状态编码LD量子比特，还可以利用电子在量子点中的位置编码电荷量子比特<sup>[26-27]</sup>。电荷量子比特具有操作速度快的优点，但由于容易与环境发生相互作用，其相干时间较短。
+
+为了让量子比特兼具电荷态操作速度快和 LD 量子比特相干时间长的优点，可以将电荷量子比特与 LD 量子比特结合，从而编码多种不同类型的量子比特。
+
+例如杂化（hybrid）量子比特<sup>[28]</sup>、翻转模式（flopping-mode）自旋量子比特<sup>[29]</sup>、交换（exchange-only，EO）量子比特<sup>[30]</sup>、共振交换（resonant exchange，RX）量子比特以及自旋单-三态（singlet-triplet，S-T）量子比特<sup>[31]</sup>等。由于这些比特都具有自旋的性质，广义上也被统称为自旋量子比特。此外，在半导体材料中，空穴态和核自旋态<sup>[32]</sup>同样可以用于量子比特编码。使用空穴<sup>[33]</sup>和核自旋<sup>[32]</sup>进行量子比特编码的原理与电子型量子比特类似，此处就不再赘述。
+
+可以用于半导体量子计算的材料种类繁多，主要包括GaAs基异质结、Si基异质结、Ge基异质结，纳米线<sup>[34]</sup>以及硅中掺杂磷原子<sup>[35]</sup>等。由于GaAs体系具有较高的电子迁移率、简单的能带结构以及器件制备相对容易制备等特性，半导体量子计算的早期研究主要集中于GaAs异质结衬底。在这一上衬底上，电荷量子比特<sup>[27,36]</sup>和自旋量子比特<sup>[37-39]</sup>都成功进行了演示。然而，稳定存在的 Ga 和As 同位素都具有非零核自旋，显著限制了自旋量子比特的退相干时间素<sup>[40-41]</sup>，因而研究逐渐转向了具有零核自旋的硅基体系。在天然硅中，零核自旋同位素$^ { 2 8 } \mathrm { S i }$ 的丰度为 92.25%，具有非零核自旋的同位素 <sup>29</sup>Si 的丰度为 4.67%。通过同位素纯化技术，可以进一步降低 $^ { 2 9 } \mathrm { S i }$ 的含量<sup>[42-43]</sup>，从而使纯化硅中电子自旋的弛豫时间达到秒量级<sup>[44]</sup>。硅基体系主要包括 Si/SiGe 异质结和 $\mathrm { S i } / \mathrm { S i O } _ { 2 }$ 异质结。$\mathrm { S i } / \mathrm { S i O } _ { 2 }$ 异质结的优势在于谷能级间距较大，并且制造过程与现有工业产线工艺完全兼容。然而 $\mathrm { S i } / \mathrm { S i O } _ { 2 }$ 异质结的量子点尺寸较小（约 30 nm），加工难度较大，并且由于 $\mathrm { S i O } _ { 2 }$ 生长过程中容易产生缺陷，迁移率难以提升，在大规模芯片生产中具有一定挑战。相比之下，Si/SiGe异质结具有较高的迁移率和较少的缺陷，适合大规模扩展，但是其谷能级的间距较小，不利于量子比特编码。基于Ge/SiGe异质结的空穴型量子比特由于具有较大的自旋轨道耦合，操作更加便捷，在最近几年吸引了广泛关注<sup>[33]</sup>。掺杂磷原子体系中的量子点尺寸较小，器件制备和比特操作比较困难。纳米线体系则具有较大的自旋轨道耦合，操作速度非常快，但是其缺点在于纳米线的定位生长十分困难，难以实现大规模扩展。
+
+经过二十余年的发展，半导体量子比特研究取得了显著进展。首先，量子比特的弛豫时间 $T _ { 1 }$ 实现了大幅提升，从最初的纳秒量级<sup>[45-46]</sup>提高到目前多种类型的量子比特的驰豫时间都超过了 1 s<sup>[47-51]</sup>。量子比特的退相干时间 $T _ { 2 } ^ { * }$ 普遍达到了微秒量级<sup>[52-53]</sup>，部分体系甚至突破到毫秒量级<sup>[54-55]</sup>。在量子比特读出方面，各种新技术的使用，包括射频反射式（RF）测量<sup>[56-57]</sup>和锁存读取<sup>[58-59]</sup>等，量子比特的读出保真度不断提升，超过99%的读取保真度也已经被成功演示<sup>[60-61]</sup>，这大幅提升了量子测量的精度和系统可靠性。在量子比特操作方面，单个量子比特和双量子比特操作的保真度均已经超过了99%，达到了表面码的容错阈值<sup>[62-64]</sup>。此外，在单一器件上，成功演示了四个比特<sup>[65]</sup>和六个比特的量子门操作<sup>[66]</sup>，并提出了更多量子比特的器件设计和操作方案<sup>[67-68]</sup>。在部分研究中，量子比特操作的品质因子（qulity factor， $\boldsymbol { Q } _ { \mathrm { q } } )$ ）已经超过了200<sup>[69-71]</sup>。高温量子比特研究也取得了重要突破，量子比特现已能够在超过1K的温度下稳定运行，这显著降低了量子计算系统对极低温环境的依赖，为更高效、更广泛的量子计算应用提供了新的可能性<sup>[72-76]</sup>。此外，工业集成技术的进步同样令人瞩目。多家研究机构利用先进的半导体产线工艺，成功制造出高质量的量子点器件<sup>[67,77-79]</sup>。这些器件的制备工艺不仅展现出超高的良品率，还具有良好的可扩展性和稳定性。更多半导体量子比特相关进展，可以参阅 Peter Stano 和 Daniel Loss 撰写的综述文章<sup>[52]</sup>。
+
+## 1.2 半导体量子比特的扩展
+
+随着量子比特操控和测量技术的不断进步，研究者们逐渐将更多关注放在量子比特扩展的问题上，即如何有效增加量子比特的数目。量子比特的扩展对于提升量子计算机的计算能力和构建大规模量子计算系统至关重要。在半导体量子比特扩展的研究中，存在两种耦合形式：近邻耦合扩展和长程耦合扩展。
+
+在近邻耦合方案中，量子比特被编码在一维或二维的量子点阵列中，通过电子的库仑相互作用或自旋交换相互作用实现量子比特间的耦合，从而实现量子信息的交换和量子比特的操作。由于库仑和交换作用的强度随着距离增加而急剧减小，量子比特之间的距离维持在百纳米量级。目前，基于近邻耦合方案已经实现了量子点阵列的一维扩展，包括三量子点、四量子点、六量子点、九量子点以及十量子点的线性阵列<sup>[80]</sup>。此外，二维阵列器件也取得了显著进展，涵盖了如 2×2<sup>[65,81]</sup>、3×3<sup>[82-83]</sup>、4×2<sup>[84-85]</sup>和 4×4<sup>[86]</sup>等结构，这些成果充分展示了近邻耦合方案在量子比特扩展中的巨大潜力。随着工业界的持续推进，以及制备工艺和器件良率的不断提升，未来有望涌现出更多创新的方案和器件。
+
+与经典计算类似，量子信息需要在相隔较远的量子比特或处理器之间进行交换，即长程耦合<sup>[87]</sup>。为实现长程耦合，研究者已提出多种方案，例如通过表面声波<sup>[88-90]</sup>或电子穿梭（shuttle）<sup>[91-93]</sup>技术来实现电子的传递。然而，这两种方案都需要移动电子的物理位置，伴随较为复杂的结构设计和操作方式。
+
+相比之下，电路量子电动力学系统通过超导谐振腔中的微波光子作为信息传输的媒介，为长程耦合提供了另外一种实现途径。这种方案由于使用了光子作为媒介，因而不需要电子位置的长距离移动，具有结构简单、操作方便的优势，被认为是非常有前景的长程扩展方案，并且已经在超导量子计算体系中得到了验证<sup>[5]</sup>。本文采用的正是基于电路量子电动力学的扩展方案。
+
+通过电路量子电动力学系统进行量子比特扩展需要一个重要的前提条件，即实现量子比特与谐振腔的强耦合。在这个条件下，谐振腔与量子比特的耦合强度大于量子比特的退相干速率和谐振腔的耗散速率，因而量子信息能够以高度相干的方式在量子比特与微波光子之间进行交换与传递<sup>[5]</sup>。强耦合使得量子比特与光子之间的相互作用可以超越传统的单纯量子比特或光子处理的范畴，提供了更强的控制能力和更大的灵活性。因而实现强耦合是使用电路量子电动力学系统进行量子比特扩展的第一步，到目前为止关于强耦合的研究仍然是半导体量子比特扩展中的重要课题。
+
+2004年，Childress等人提出利用谐振腔耦合半导体量子点中电荷比特<sup>[94]</sup>的方案。相较于超导量子比特，半导体电荷量子比特具有较小的电偶极矩且电荷量子比特的退相干速率较快，早期实验未能实现强耦合。尽管如此，研究者们在弱耦合区间仍取得了一系列重要进展，包括量子点稳定性图谱的测量<sup>[95]</sup>、谷能级读取<sup>[96-97]</sup>以及强驱动条件下的动力学特性研究<sup>[98-99]</sup>等。基于多种不同材料体系，包括碳纳米管<sup>[100-101]</sup> 、纳米线<sup>[102]</sup> 、GaAs<sup>[103]</sup> 、石墨烯<sup>[104-105]</sup> 等，制备出的量子点都可以实现与谐振腔的耦合。理论研究表明，耦合强度与谐振腔阻抗的开方成正比<sup>[106]</sup>。借助高阻抗谐振腔，研究者成功实现了单个电荷比特、两个电荷比特与谐振腔的强耦合<sup>[107-109]</sup>。
+
+但是电荷量子比特的退相干时间较短，研究者们开始探索相干时间更长的自旋比特与谐振腔的耦合。然而，单电子自旋不具有电偶极矩，并且磁偶极矩非常小，因此难以直接与谐振腔耦合。为了解决这一问题，可以通过耦合自旋态和电荷态，间接实现自旋与谐振腔的耦合。实现这一目标的主要方法包括：利用微磁体的梯度磁场或材料的自旋轨道耦合来杂化自旋和电荷状态<sup>[110]</sup>，以及通过特殊编码的量子比特来实现电荷与自旋的杂化<sup>[111]</sup>。基于上述方法，2018年普林斯顿大学的 Petta 研究组和代尔夫特理工的 Vandersypen 研究组在 Si/SiGe 体系中分别实现了翻转模式自旋量子比特与谐振腔的强耦合<sup>[112-113]</sup>。同年，基于GaAs的共振交换量子比特与谐振腔的强耦合也被成功演示<sup>[111]</sup>。此后 Petta 研究组在 2020年实现了两个翻转模式自旋比特同时和谐振腔的强耦合<sup>[114]</sup>。Vandersypen 研究组在 2022 年实现了两个翻转模式自旋比特通过虚光子进行耦合<sup>[115]</sup>，并在 2024年展示了谐振腔介导的 iSWAP 操作<sup>[116]</sup>。此外，研究者使用高阻抗谐振腔实现了空穴体系中电荷以及翻转模式自旋量子比特与谐振腔的强耦合<sup>[117-119]</sup>。2024年 Ungerer研究组实现了纳米线体系中 S-T 量子比特与谐振腔的强耦合<sup>[120]</sup>。近几年，Yacoby 研究组和 Eriksson 研究组演示了谐振腔和量子点的纵向耦合方案<sup>[121-122]</sup>。为了集成更多量子比特，研究者们提出了3D封装的方案，并通过谐振腔成功探测到了量子点的信号<sup>[123]</sup>。
+
+谐振腔不仅可以作为量子比特之间的耦合器，还能够用作电荷感应器，用于探测量子点的电荷稳定性图谱<sup>[103]</sup>，从而准确判断量子点中的电子数目<sup>[124]</sup>。更进一步地，谐振腔还可以用于读取量子比特状态，其中较易实现的是通过色散读出（dispersive readout）方式进行平均测量<sup>[125]</sup>。此外，利用谐振腔进行单发读出（single-shotreadout）也是可行的，这种方法能够实现快速且高保真度的读出<sup>[126]</sup>，但对信号的信噪比提出了更高的要求。通过采用纵向耦合方案，有望在更宽的频率范围内实现高效的信号读取<sup>[127]</sup>。此外，谐振腔还可以用来探测量子点中的激发态能级<sup>[128]</sup>以及硅材料中的能谷态<sup>[97,129]</sup>。
+
+## 1.3 选题背景
+
+最近几年，半导体量子计算发展势头迅猛。如前文所述，单比特和两比特操作保真度都已经超过表面码的容错阈值<sup>[62-64]</sup>，当前研究者们正致力于扩展量子比特的数目。本文也正是基于这一背景，着力探索量子比特的扩展问题。考虑到前文所述的电路量子电动力学系统的多种优势以及在实验中的可行性，本文选择使用电路量子电动力学系统进行半导体量子比特的扩展。在材料选取方面，我们从与现有产线工艺兼容和将来大规模集成的角度出发，优先选取平面材料体系。在平面材料体系中，GaAs体系自旋退相干时间较短，不利于比特操作；$\mathrm { S i } / \mathrm { S i O } _ { 2 }$ 体系由于电耦极矩偏小，实现强耦合的难度较很大。相比之下，Ge/SiGe和 Si/SiGe 异质结体系具有相干时间长且电偶极矩较大的特点，使自旋与谐振腔的耦合更为容易。然而Ge/SiGe异质结生长困难，在本论文开题之时，并没有解决异质结生长问题，因而在本论文中，我们选取了Si/SiGe异质结体系进行研究。
+
+目前已有大量的工作探讨了电路量子电动力学系统中双量子点与谐振腔的耦合情况，并实现了谐振腔与多种量子比特的强耦合<sup>[120,130]</sup>。为了进一步通过谐振腔耦合更多的量子比特，可以采用以下两种方案：一种是增加谐振腔上的耦合节点，每个节点与一个双量子点中的量子比特耦合。这种方案在我们课题组的先前工作中已经得到了探索，并成功实现了五个量子比特与谐振腔的耦合<sup>[107]</sup>。另一种方案是在单个耦合节点上连接更多量子比特，其中每个节点都耦合一个量子比特阵列。在阵列内，量子比特通过近邻耦合实现量子信息的交换，而不同阵列间的量子比特则可以通过谐振腔实现耦合。在这种情况下，谐振腔可以被视作“量子总线”，用于在远距离节点间高效传递量子信息。
+
+基于单个量子点编码的量子比特与谐振腔的耦合强度较小，实验中实现强耦合的量子比特至少由两个量子点共同编码。而一个量子点阵列中至少要包含两个量子比特，在三量子点与谐振腔耦合的系统中，可以使用两个量子点编码一个量子比特与谐振腔进行耦合，另一个量子点则用于编码另一个量子比特。因此，展示量子比特阵列与谐振腔耦合的最小单元就是三量子点与谐振腔耦合系统。
+
+在这一背景下，本文以“Si/SiGe 三量子点与谐振腔耦合”为题，旨在探索硅基量子比特的扩展问题。总的来说，选择该研究方向的依据主要有以下几点：
+
+首先，Si/SiGe 异质结体系具有较长的相干时间和较大的电偶极矩，使其成为研究自旋与谐振腔耦合的理想平台。其次，三量子点系统作为量子比特阵列与谐振腔耦合的最小单元，不仅能够验证量子比特扩展的基本原理，还具有实际推广的潜力。最后，三量子点系统还可以用于编码可以完全电学控制的共振交换量子比特，这也为量子比特扩展提供了新的思路。
+
+本文将重点研究电荷量子比特、翻转模式自旋量子比特和共振交换量子比特与谐振腔的耦合特性，并分析其在量子比特扩展中的应用潜力。本文的研究有望为进一步实现大规模量子比特集成和高效量子信息处理提供理论与实验依据。
+
+## 1.4 论文结构
+
+为了系统地介绍研究内容，本文的结构安排如下：
+
+第2章：重点介绍硅基量子比特和谐振腔的背景知识及理论基础。首先介绍高阻抗谐振腔的原理、特性以及应用；接着介绍硅基量子点的基本知识和表征方法；最后将详细说明半导体量子比特与谐振腔的耦合理论。
+
+第3章：主要介绍器件制备工艺和低温测试平台。首先将阐述半导体制造设备和工艺基本原理；然后介绍用于制备耦合器件的基本流程和注意事项；最后将介绍用于测试器件的低温平台，说明测量线路的配置以及基本仪器的使用。
+
+第4章：主要研究硅基三量子点与谐振腔耦合器件的基本性质。首先介绍三量子点器件的基本表征方法；然后演示电荷量子比特与谐振腔的强耦合；最后我们将通过谐振腔的色散读取探测三量子点的相图，并以此验证三量子点系统的可调性。
+
+第5章：主要研究三量子点中的翻转模式自旋量子比特。我们依次在器件的不同位置编码了两个翻转模式自旋量子比特，其中一个比特所在的量子点没有直接通过电极与谐振腔相连。在这一章中，我们将探索没有直接连接的情况下，量子比特与谐振腔的耦合情况。此外，我们还将以拉比（Rabi）振荡以及拉姆齐（Ramsey）干涉为例研究翻转模式量子比特的操作。
+
+第6章：主要研究三量子点中的共振交换量子比特与谐振腔的耦合。我们首先介绍共振交换量子比特的编码方式及其与谐振腔耦合的基础理论；然后，我们将通过实验测量共振交换量子比特的能谱、表征其与谐振腔的耦合并提取耦合强度；最后，我们将从实验上测量共振交换量子比特的退相干与失谐量的关系，并建立理论模型分析退相干的机制。
+
+第7章：总结全文，回顾研究进展与不足，并对未来的研究方向和可能的改进方案进行展望。
+
+## 第2章 硅基量子比特与谐振腔耦合的相关理论
+
+参照超导量子计算中的概念<sup>[5]</sup>，在半导体量子计算中，将半导体量子比特与微波谐振腔耦合的体系称为电路量子电动力学系统。该系统被认为可以有效地实现远距离量子比特之间的耦合，这也是本文研究的主要内容。本章将从组成电路量子电动力学系统的两个重要部分—高阻抗超导微波谐振腔以及硅基量子点出发，分别介绍它们的基本概念以及相关理论。最后，本章将阐述二者之间耦合的基本理论，为后续研究奠定基础。
+
+## 2.1 高阻抗超导谐振腔
+
+本文所使用的谐振腔基于超导金属材料，并且具有高阻抗的特性。在这一节中，我们将详细介绍谐振腔的基本概念并说明高阻抗谐振腔的原理和制备方法。
+
+## 2.1.1 谐振腔基本概念及结构
+
+谐振腔是一种能够在特定频率下实现高频电磁波共振的器件，广泛应用于物理学和工程学领域，尤其在光学、微波技术、激光器和量子信息处理等方面。谐振腔的基本原理是利用两个或多个反射面构成的空间，使电磁波在其中多次反射。当腔内的电磁波频率满足特定条件时，系统会进入共振状态，形成稳定的驻波模式。为了与量子点中的量子比特频率相匹配，本文的研究主要集中在微波频段（4–8GHz）。接下来的讨论将以微波谐振为核心展开。
+
+常见的微波谐振腔有集总式 LC 谐振腔、共面波导（coplanar waveguide，CPW）谐振腔<sup>[131]</sup>、微带线谐振腔<sup>[132]</sup>以及超导量子干涉器件（superconducting quantuminterference device，SQUID）阵列谐振腔<sup>[108]</sup>等。其中集总式谐振腔通常占用较大面积，微带线谐振腔耗散较大，而 SQUID 阵列谐振腔对磁场非常敏感，不利于进行自旋相关实验。相比之下，共面波导谐振腔因其低耗散特性和较强的磁场抗性成为了本文的首选，本节后续内容均围绕共面波导谐振腔展开。
+
+图2.1展示了共面波导谐振腔的结构示意图。谐振腔由基片和金属层构成，通过对金属层进行刻蚀从而制备出中心导体，传输线以及相应的地平面。这些结构处在同一个平面上，因此称为共面波导谐振腔。谐振腔的关键几何参量包括：金属层厚度 𝑡、中心导体宽度 𝑤、中心导体和地平面的间距 𝑠 以及中心导体和传输线之间的距离𝑑。此外，基片的厚度ℎ也会对谐振腔的性质产生影响。在金属膜层较厚且中心导体宽度较大的情况下，谐振腔的性质主要由其几何结构决定。
+
+通过使用保角映射的方法，可以计算得到谐振腔的等效电容和电感<sup>[131]</sup>：
+
+$$
+C = 4 \varepsilon _ { 0 } \varepsilon _ { \mathrm { e f f } } \frac { K \left( k _ { \mathrm { g } } \right) } { K ( k _ { \mathrm { g } } ^ { \prime } ) } ,\tag{2.1}
+$$
+
+$$
+L = \frac { \mu _ { 0 } } { 4 } \frac { K ( k _ { \mathrm { g } } ^ { \prime } ) } { K \left( k _ { \mathrm { g } } \right) } ,\tag{2.2}
+$$
+
+其中𝜀 为真空介电常数，𝜀 为有效介电常数， $\varepsilon _ { 0 }$ $\varepsilon _ { \mathrm { e f f } }$ $K ( k _ { \mathrm { g } } )$ 表示对 $k _ { \mathrm { g } }$ 进行第一类完全椭圆积分， $k _ { \mathrm { g } }$ 和 $k _ { \mathrm { g } } ^ { \prime }$ 是几何结构参数，满足 $k _ { \mathrm { g } } = w / ( w + 2 s )$ $k _ { \mathrm { g } } ^ { \prime } = \sqrt { 1 - k _ { \mathrm { g } } ^ { 2 } }$ 。由于这些电容和电感由谐振腔的几何结构决定，通常被称为几何电容，几何电感。
+
+![](images/27b0aec3314299ee44e917080aa357495be353b111eb6ca2dd19a4dd243367c9.jpg)
+
+![](images/a01027c240147e892064943113bd0a251bf9378af2270e331dbcfd27caf5f0a1.jpg)
+
+![](images/8ca5d9ee6b84bcc63b22e463c60d99aa0daa62b5642ad7eda1d7707416804f78.jpg)  
+图 2.1 共面波导谐振腔结构示意图。（a）共面波导谐振腔横截面示意图，展示了金属层和基片。（b）谐振腔的等效电路图，可以将谐振腔整体等效为一个电容𝑳和电感𝑪的组合。（c）谐振腔平面示意图，展示了中心导体，传输线和地平面。
+
+## 2.1.2 谐振腔的量子化描述
+
+由于谐振腔与量子比特的耦合需要采用全量子理论进行描述，因此我们首先介绍谐振腔的量子化描述。谐振腔可以简化为一个𝐿𝐶 电路，由电容和电感组成，如图2.1（b）所示。这样一个模型中，通过电感的电流𝐼 与磁通𝛷 的关系为$I = \varPhi / L$ ，电容 𝐶 上的电压 𝑉 表示为 $V = Q / C = \dot { \phi }$ ，其中 𝑄 表示电容上的电荷量。电容和电感上存储的能量分别为：
+
+$$
+E _ { C } = Q ^ { 2 } / 2 C , E _ { L } = \varPhi ^ { 2 } / 2 L .\tag{2.3}
+$$
+
+因此系统的拉格朗日量可以写为<sup>[133]</sup>:
+
+$$
+{ \cal L } = \frac { Q ^ { 2 } } { 2 C } - \frac { \phi ^ { 2 } } { 2 L } = \frac { C \dot { \phi } ^ { 2 } } { 2 } - \frac { \phi ^ { 2 } } { 2 L } ,\tag{2.4}
+$$
+
+其中电荷 𝑄 可以看作是磁通 $\pmb { \phi }$ 的共轭变量，即 $\partial { \cal L } / \partial \dot { \phi } = C \dot { \phi } = Q$ ，因此系统的哈密顿量可以表示为:
+
+$$
+H = { \frac { \partial L } { \partial { \dot { \phi } } } } { \dot { \phi } } - L = { \frac { Q ^ { 2 } } { 2 C } } + { \frac { \phi ^ { 2 } } { 2 L } } .\tag{2.5}
+$$
+
+为建立改系统的量子力学描述，我们引入量子力学算符 $\hat { \phi }$ 和 $\hat { Q }$ ，它们满足对易关系 $[ \hat { \pmb { \phi } } , \hat { Q } ] = \mathrm { i } \hbar$ ，其中ℏ表示约化普朗克常数。算符 $\hat { \phi }$ 和 $\hat { Q }$ 可以用产生 $\hat { a } ^ { \dagger }$ 和湮灭算符 ̂𝑎来表示：
+
+$$
+\hat { \phi } = \sqrt { \frac { \hbar { \cal Z } _ { \mathrm { r } } } { 2 } } \left( \hat { a } ^ { \dagger } + \hat { a } \right) , \hat { \cal Q } = - \mathrm { i } \sqrt { \frac { \hbar } { 2 { \cal Z } _ { \mathrm { r } } } } \left( \hat { a } ^ { \dagger } - \hat { a } \right) ,\tag{2.6}
+$$
+
+相对应地，有:
+
+$$
+\begin{array} { r l } & { \hat { a } ^ { \dagger } = \frac { 2 } { \pi } \sqrt { \frac { 1 } { 2 \hbar L _ { \mathrm { r } } } } \hat { \phi } + \mathrm { i } \frac { \pi } { 2 } \sqrt { \frac { Z _ { \mathrm { r } } } { 2 \hbar } } \hat { Q } , } \\ & { \hat { a } = \frac { 2 } { \pi } \sqrt { \frac { 1 } { 2 \hbar L _ { \mathrm { r } } } } \hat { \phi } - \mathrm { i } \frac { \pi } { 2 } \sqrt { \frac { Z _ { \mathrm { r } } } { 2 \hbar } } \hat { Q } , } \end{array}\tag{2.7}
+$$
+
+其中 $Z _ { \mathrm { r } } = { \sqrt { L / C } }$ 表示谐振腔的特征阻抗。利用产生和湮灭算符，谐振腔的哈密顿量可以表示为:
+
+$$
+\hat { H } _ { \mathrm { r } } = \hbar \omega _ { \mathrm { r } } \left( \hat { a } ^ { \dagger } \hat { a } + 1 / 2 \right) ,\tag{2.8}
+$$
+
+其中 $\omega _ { \mathrm { r } } = 1 / \sqrt { L C }$ 表示谐振腔的角频率。在本文中我们也会使用频率 $f _ { \mathrm r }$ ，它们之间的关系为 $f _ { \mathrm { r } } = \omega _ { \mathrm { r } } / ( 2 \pi )$ 。公式2.8就是谐振腔的量子化形式。为了简化，有时可以省去常数项 $1 / 2$ ，这并不影响物理过程，哈密顿量可以写为:
+
+$$
+\hat { H } _ { \mathrm { r } } = \hbar \omega _ { \mathrm { r } } \hat { a } ^ { \dagger } \hat { a } .\tag{2.9}
+$$
+
+## 2.1.3 谐振腔的耗散
+
+存储于谐振腔中的电磁波会和环境发生相互作用，导致其能量逐渐耗散。通常用𝜅 表示谐振腔中光子的耗散速率，也称为谐振腔的线宽。谐振腔耗散的原因多种多样，根据作用形式可以分为两类，一类是内部耗散，另一类是外部耗散。因而总的谐振腔衰减速率𝜅 可以分解为：
+
+$$
+\kappa = \kappa _ { \mathrm { e x t } } + \kappa _ { \mathrm { i n t } } ,\tag{2.10}
+$$
+
+其中𝜅 表示谐振腔通过有限的电容耦合（电容为 $\kappa _ { \mathrm { e x t } }$ $C _ { \mathrm { e x t } } )$ ）向传输线耗散能量的速率，称为外部损耗因 $\vec { \mathrm { f } }$ 。对于透射式谐振腔，由于其具有两个耦合电容， $\kappa _ { \mathrm { e x t } }$ 可以进一步分解为 $\kappa _ { \mathrm { e x t } } = \kappa _ { 1 } + \kappa _ { 2 }$ ，而总的外部衰减率具有如下表达式<sup>[134]</sup>：
+
+$$
+\kappa _ { \mathrm { e x t } } = \frac { 2 \omega _ { \mathrm { r } } ^ { 3 } Z _ { \mathrm { r } } Z _ { 0 } C _ { \mathrm { e x t } } ^ { 2 } } { \pi } ,\tag{2.11}
+$$
+
+其中 $Z _ { 0 }$ 是两侧传输线的阻抗，公式中假设了两个耦合电容的大小相等。外部损耗可以通过调节耦合的电容大小来实现有效控制，通常是通过改变图2.1（c）所示结构中中心导体和传输线之间的距离 𝑑 来实现的。谐振腔的内部损耗 $\kappa _ { \mathrm { i n t } }$ 指的是谐振腔因材料特性、结构设计或其他内部机制导致的损耗。内部损耗通常有以下几种途径：材料损耗，表面缺陷，界面损耗，辐射损耗以及超导损耗<sup>[135]</sup>等。内部损耗通常需要从材料选择或者制备工艺入手，才能有效降低。
+
+另一个表征谐振腔性能的参数是品质因子（quality factor），用 $Q _ { \mathrm { r } }$ 表示，用来描述谐振腔存储电磁波能量的能力，其定义为<sup>[136]</sup>：
+
+$$
+Q _ { \mathrm { r } } = \omega _ { \mathrm { r } } \frac { \mathrm { a v e r a g e ~ e n e r g y ~ s t o r a g e } } { \mathrm { e n e r g y ~ l o s s / s e c o n d } } = \frac { \omega _ { \mathrm { r } } } { \kappa } ,\tag{2.12}
+$$
+
+其中 $\omega _ { \mathrm { r } }$ 表示谐振腔的共振频率。谐振腔的品质因子可以理解为平均经过𝑄次振荡，谐振腔中存储的能量衰减到原来的 1/e，这里的 e 是自然对数的底数。与耗散速率类似，总品质因子可以分解为：
+
+$$
+\frac { 1 } { Q _ { \mathrm { r } } } = \frac { 1 } { Q _ { \mathrm { e x t } } } + \frac { 1 } { Q _ { \mathrm { i n t } } } ,\tag{2.13}
+$$
+
+其中 $Q _ { \mathrm { e x t } }$ 表示外部品质因子， $Q _ { \mathrm { i n t } }$ 表示内部品质因子。
+
+## 2.1.4 谐振腔的传输特性
+
+![](images/9a8ac29fe8781367dc096aff224dfa468310dae8d896b4388b20699b3f4b0ce3.jpg)  
+图2.2 透射式谐振腔两端口网络示意图，其中每个端口都可以用来输入微波和输出微波。
+
+如图2.2所示，透射式谐振腔的两个端口都可以用于施加微波，在进行谐振腔测量的时候，通常将谐振腔看作是一个两端口网络。这里用 $\hat { a } _ { i }$ 和 $\hat { b } _ { i }$ 分别表示端口 𝑖 处的输入场和输出场算符，其中 𝑖 = 1,2 表示两个不同的端口。谐振腔中电磁波的演化可以用下述动力学方程表示：
+
+$$
+\frac { \mathrm { d } \hat { a } ( t ) } { \mathrm { d } t } = - \mathrm { i } \omega _ { \mathrm { r } } \hat { a } ( t ) - \frac { \kappa } { 2 } \hat { a } ( t ) + [ \sqrt { \kappa _ { 1 } } \hat { a } _ { 1 } ( t ) + \sqrt { \kappa _ { 2 } } \hat { a } _ { 2 } ( t ) ] ,\tag{2.14}
+$$
+
+$$
+\frac { \mathrm { d } \hat { a } ( t ) } { \mathrm { d } t } = - \mathrm { i } \omega _ { \mathrm { r } } \hat { a } ( t ) + \frac { \kappa } { 2 } \hat { a } ( t ) - [ \sqrt { \kappa _ { 1 } } \hat { b } _ { 1 } ( t ) + \sqrt { \kappa _ { 2 } } \hat { b } _ { 2 } ( t ) ] ,\tag{2.15}
+$$
+
+其中 𝑡 表示时间， $\kappa = \kappa _ { 1 } + \kappa _ { 2 } + \kappa _ { \mathrm { i n t } }$ 是谐振腔的总耗散速率，公式右侧的三项分别表示自由振荡项、总耗散项和涨落项。根据输入-输出理论，在端口𝑖处存在以
+
+下边界条件：
+
+$$
+\hat { a } _ { 1 } ( t ) + \hat { b } _ { 1 } ( t ) = \sqrt { \kappa _ { 1 } } \hat { a } ( t ) ,\tag{2.16}
+$$
+
+$$
+\hat { a } _ { 2 } ( t ) + \hat { b } _ { 2 } ( t ) = \sqrt { \kappa _ { 2 } } \hat { a } ( t ) .\tag{2.17}
+$$
+
+接下来我们讨论谐振腔内微波场频谱与输入和输出场频谱之间的关系。为此我们先定义场算符的傅里叶变换关系如下：
+
+$$
+\hat { A } ( t ) = \frac { 1 } { \sqrt { 2 \pi } } \int _ { - \infty } ^ { \infty } \mathrm { d } \omega \hat { A } ( \omega ) e ^ { - \mathrm { i } \omega ( t - t _ { 0 } ) } ,\tag{2.18}
+$$
+
+其中 $\hat { A }$ 表示场算符， $\omega$ 表示场频率， $t _ { 0 }$ 表示初始时刻。对公式2.16和2.17进行傅里叶变换并整理可以得到频域上的传输函数：
+
+$$
+\begin{array} { r } { \hat { a } ( \omega ) = \frac { \sqrt { \kappa _ { 1 } } \hat { a } _ { 1 } ( \omega ) + \sqrt { \kappa _ { 2 } } \hat { a } _ { 2 } ( \omega ) } { \mathrm { i } ( \omega - \omega _ { \mathrm { r } } ) + \frac { \kappa } { 2 } } , } \\ { \hat { a } ( \omega ) = \frac { \sqrt { \kappa _ { 1 } } \hat { b } _ { 1 } ( \omega ) + \sqrt { \kappa _ { 2 } } \hat { b } _ { 2 } ( \omega ) } { \mathrm { i } ( \omega - \omega _ { \mathrm { r } } ) - \frac { \kappa } { 2 } } . } \end{array}\tag{9}
+$$
+
+(2.19)
+
+同样地，我们对边界条件进行傅里叶变换，可以得到：
+
+$$
+\hat { a } _ { 1 } ( \omega ) + \hat { b } _ { 1 } ( \omega ) = \sqrt { \kappa _ { 1 } } \hat { a } ( \omega ) ,\tag{7}
+$$
+
+$$
+\hat { a } _ { 2 } ( \omega ) + \hat { b } _ { 2 } ( \omega ) = \sqrt { \kappa _ { 2 } } \hat { a } ( \omega ) .\tag{8}
+$$
+
+微波工程中通常用散射参数 𝑆 来描述输入-输出信号之间的关系。对于两端口网络，散射参数共包含四个参量，其定义为：
+
+$$
+S _ { 2 1 } ( \omega ) = \frac { \hat { b } _ { 2 } ( \omega ) } { \hat { a } _ { 1 } ( \omega ) } , \quad S _ { 1 1 } ( \omega ) = \frac { \hat { b } _ { 1 } ( \omega ) } { \hat { a } _ { 1 } ( \omega ) } ,\tag{2.20}
+$$
+
+$$
+S _ { 1 2 } ( \omega ) = \frac { \hat { b } _ { 1 } ( \omega ) } { \hat { a } _ { 2 } ( \omega ) } , \quad S _ { 2 2 } ( \omega ) = \frac { \hat { b } _ { 2 } ( \omega ) } { \hat { a } _ { 2 } ( \omega ) } ,\tag{2.21}
+$$
+
+其中 $S _ { 2 1 }$ 表示从端口 1 到端口 2 的传输系数，在谐振腔中也称透射信号， $S _ { 1 1 }$ 表示端口 1 的反射系数，在谐振腔中也称反射信号， $S _ { 1 2 }$ 和 $S _ { 2 2 }$ 的定义则与 $S _ { 2 1 }$ 和$S _ { 1 1 }$ 相反。若谐振腔是完全对称的则 $S _ { 2 1 } = S _ { 1 2 }$ 。对于透射腔，通常会从一个端口施加微波信号，并在另一个端口测量微波信号，此时 $\hat { a } _ { 2 } = 0 \mathrm { _ o }$ 。我们关注的谐振腔的传输特性，结合结合频域上的传输函数和边界调节，可以得到透射信号的表达式：
+
+$$
+S _ { 2 1 } ( \omega ) = \frac { \sqrt { \kappa _ { 1 } \kappa _ { 2 } } } { \mathrm { i } ( \omega - \omega _ { \mathrm { r } } ) + \frac { \kappa } { 2 } } .\tag{2.22}
+$$
+
+用品质因子表示则可以写成：
+
+$$
+S _ { 2 1 } ( \omega ) = \frac { Q _ { \mathrm { r } } / \sqrt { Q _ { 1 } Q _ { 2 } } } { 1 + 2 \mathrm { i } Q _ { \mathrm { r } } \left( \omega / \omega _ { \mathrm { r } } - 1 \right) } .\tag{2.23}
+$$
+
+对于其中一个端口接地的反射腔，我们更关注反射信号，其表达式为：
+
+$$
+S _ { 1 1 } \left( \omega \right) = - 1 + \frac { Q _ { \mathrm { r } } / Q _ { 1 } } { 1 - 2 \mathrm { i } Q _ { \mathrm { r } } \left( \omega / \omega _ { \mathrm { r } } - 1 \right) } .\tag{2.24}
+$$
+
+在实验中我们可以通过矢量网络分析仪对谐振腔进行测量，从而得到 𝑆 参数的幅值 |𝑆| 或者相位 $a r g ( S )$ 关于输入频率 $\omega$ 的关系。通过对 $S _ { 2 1 }$ 或 $S _ { 1 1 }$ 的频率响应进行分析，可以提取谐振腔的谐振频率 $\omega _ { \mathrm { r } }$ 、耗散速率 $\kappa$ 以及品质因子 $Q _ { \mathrm { r } }$ ，为谐振腔的性能评估和优化提供理论支撑。
+
+## 2.1.5 谐振腔中的 Fano 效应
+
+从谐振腔的 $S _ { 2 1 }$ 公式2.22可以看出，谐振腔的幅值响应信号在理想情况下应当是沿着谐振频率呈对称的Lorentzian信号。然而，在实验测量过程中，经常可以观察到谐振峰的不对称现象，有时这种现象甚至十分显著。这种偏离对称的线型通常被称为Fano线型<sup>[137]</sup>。可能导致非对称Fano线型的物理机制包括：输入与输出端口之间的存在寄生传输通道并与谐振腔的传输通道并联；附近地平面或其他结构中存在的虚假宽谐振峰与谐振腔中的谐振模式发生耦合；谐振腔与输入/输出传输线之间的阻抗不匹配；耦合方式不仅包含纯电容性，还涉及少量的电感成分等。这种非对称效应通常难以消除。为了更好地描述这种非对称性，可以在原始公式2.22中引入一个复数项 $S _ { 2 1 } ^ { \mathrm { F a n o } }$ 。对于透射式谐振腔，传输系数变为：
+
+$$
+S _ { 2 1 } = \frac { \sqrt { \kappa _ { 1 } \kappa _ { 2 } } } { \frac { \kappa } { 2 } + \mathrm { i } ( \omega - \omega _ { \mathrm { r } } ) } + S _ { 2 1 } ^ { \mathrm { F a n o } } .\tag{2.25}
+$$
+
+图2.3中的蓝色点展示了实验测量得到的谐振腔的归一化幅值响应 $A / A _ { 0 }$ 与探测频率 $f _ { \mathfrak { p } }$ 之间的关系。其中 $A = | S _ { 2 1 } |$ $A _ { 0 }$ 表示归一化系数。这种归一化的表示方法在本文后续章节中多次使用，因此不再赘述。图2.3（a）中的棕色曲线为通过原始公式2.22对实验数据进行的拟合，可以看出拟合曲线与实验数据符合度较差。相比之下，使用带有 Fano 因子的公式2.25进行拟合，可以显著提高拟合效果，如图2.3（b）中棕色曲线所示，与实验数据高度吻合。
+
+## 2.1.6 利用动态电感实现高阻抗谐振腔
+
+谐振腔的阻抗 $Z _ { \mathrm { r } } = { \sqrt { L / C } }$ 由电感和电容共同决定，减小电容或者增加电感都可以提高阻抗。然而，实验中电容的减小是存在限制的。为了进一步增加阻抗，研究者将重点放在了增加电感上。如前文所述，几何电感主要由谐振腔的几何尺寸决定，而在当前技术条件下，几何结构变化带来的电感变化也是有限的，进一步增加几何电感也存在较大的困难。
+
+![](images/860b83d882572dbe7f49d7bf39ce90d3298c33ffdf3984cff731b6fb66d68d21.jpg)
+
+(b)  
+![](images/fea3dff67ac3df93f92a4f1f8aa39df996c1dc3dd7d8773a827fbf477e5f7f30.jpg)  
+图2.3 谐振腔拟合示意图。（a）归一化幅值响应 $\pmb { A } / A _ { \pmb { 0 } }$ 随探测频率 $f _ { \mathfrak { p } }$ 的变化关系。蓝色圆点表示实验测量数据，棕色曲线为使用标准 Lorentzian 线型进行拟合的结果。在实验数据存在明显不对称性的情况下，拟合效果较差。（b）棕色曲线表示基于带有Fano因子的公式拟合的结果。在数据不对称性较为显著的情况下，Fano 因子修正的公式能够更好地与实验数据吻合。
+
+除了几何电感，超导体还具有动态电感（kineticinductance，KI）这一特性。其原理如下：对超导体施加交流信号时，由于库珀对（Cooperpairs）无法瞬时响应电流频率的变化，这一现象导致了额外阻抗的产生。这种效应为超导体提供了除几何电感之外的能量存储通道，即库珀对的动能，其能量表达式为<sup>[138]</sup>：
+
+$$
+E _ { \mathrm { k } } = \int \frac { m _ { e } n _ { \mathrm { s } } v _ { 0 } ^ { 2 } } { 2 } { \mathrm { d } } V = \frac { 1 } { 2 } L _ { \mathrm { k } } I ^ { 2 } ,\tag{2.26}
+$$
+
+其中𝑣 是库珀对平均运动速度，𝑚 是电子质量，𝑛 是超导载流子的密度，𝐼 表 $v _ { 0 }$ $m _ { e }$ $n _ { \mathrm { s } }$ 示经过超导体的电流。从公式中可以看出，其中 $E _ { \mathrm { k } }$ 与电流之间的关系在形式上与公式2.3给出的几何电感的能量表达一致，因此系数 $L _ { \mathrm { k } }$ 具有类似电感的特性。由于 $L _ { \mathrm { k } }$ 源于库珀对的动能，故称之为动态电感。对于 CPW 谐振腔，动态电感可以进一步表示为：
+
+$$
+L _ { \mathrm { k } } = { \frac { m _ { e } } { 2 n _ { \mathrm { s } } e ^ { 2 } } } { \frac { l } { w t } } .\tag{2.27}
+$$
+
+从上式可以看出，减小谐振腔中心导体宽度 $w$ 和谐振腔金属层厚度𝑡可以有效增加动态电感。需要注意的是，由于实验中谐振腔的谐振频率需要在特定范围内，在设计完成 $w$ 和 𝑡 后，谐振腔的长度 𝑙 可以通过目标谐振频率加以确定。公式中的 𝑛 与材料的种类以及环境温度有关，常见的高动态电感材料有氮化铌<sup>[139]</sup>、 $n _ { \mathrm { s } }$ 铌钛氮<sup>[138]</sup> 、颗粒铝<sup>[119]</sup> 、氮化钛<sup>[140]</sup> 等。
+
+考虑到几何电感 $L _ { \mathrm { m } }$ 和动态电感 $L _ { \mathrm { k } }$ ，总电感可以写成 $L = L _ { \mathrm { k } } + L _ { \mathrm { m } }$ 。其中$L _ { \mathrm { k } }$ 与𝐿的比值定义为动态电感分数：
+
+$$
+\alpha = \frac { L _ { \mathrm { k } } } { L _ { \mathrm { k } } + L _ { \mathrm { m } } } ,\tag{2.28}
+$$
+
+其中𝛼 越高，表明动态电感占总电感的比例越大，会带来更高的阻抗。在我们的实验中，𝛼 可以超过90%，这意味着使用动态电感可以极大地提高谐振腔特征阻抗。
+
+## 2.2 硅基半导体量子点
+
+介绍了谐振腔相关内容之后，本文接下来转向构成量子比特的基本单元-半导体量子点（quantum dot，QD）的介绍。经过几十年的发展，半导体量子点领域已经建立了较为完善的理论框架和实验技术。量子点的结构形式多种多样，且多种半导体材料均可用于制造量子点。本节将介绍量子点的基本概念和常见的实验现象，以及如何用半导体量子点来编码量子比特。由于本文仅涉及到栅控横向量子点，且专注于 Si/SiGe 异质结，因此以下内容将重点介绍基于 Si/SiGe 异质结的横向栅控半导体量子点。
+
+## 2.2.1 量子点的基本概念
+
+量子点是人为制造的纳米级结构，可以在三个空间维度上限制电子的运动。在量子点中，电子数量可以被精确地控制<sup>[24]</sup>。图2.4（a）展示了实验中采用的$\mathrm { S i } / \mathrm { S i } _ { 1 - x } \mathrm { G e } _ { x }$ 异质结结构，其中𝑥在我们的实验中的取值是0.33。一层薄硅层（约10 nm），被称为量子阱（quantumwell, QW），置于两层 $\mathrm { S i } _ { 0 . 6 7 } \mathrm { G e } _ { 0 . 3 3 }$ 层之间。量子阱的导带（conduction band, CB）底显著低于相邻 $\mathrm { S i } _ { 0 . 6 7 } \mathrm { G e } _ { 0 . 3 3 }$ 层的导带底，如图2.4（b）所示。位于量子阱上方的 $\mathrm { S i } _ { 0 . 6 7 } \mathrm { G e } _ { 0 . 3 3 }$ 层厚度为30nm。尽管Si和 $\mathrm { S i } _ { 0 . 6 7 } \mathrm { G e } _ { 0 . 3 3 }$ 晶格常数存在轻微失配，但当 Si 量子阱层的厚度较薄时，该薄硅层在平面内受到的物理应力会使其晶格常数量与下方的 ${ \mathrm { S i } } _ { 0 . 6 7 } { \mathrm { G e } } _ { 0 . 3 3 }$ 层一致，从而实现无位错生长。
+
+在基片顶部，制备有多个金属电极。通过向这些电极施加正电压，可以使导带发生倾斜。当导带底部被拉低至费米能级（ $\mathrm { . } E _ { \mathrm { F } } .$ ）以下时，便在 Si 量子阱中形成了二维电子气（two-dimensional electron gas，2DEG）。2DEG 中的电子在 𝑧 方向上的运动受到量子阱顶部三角势阱的限制，但在𝑥-𝑦平面内可以自由移动。通过给基片表面的金属电极施加不同的电压，可以在量子阱的位置形成势阱，进一步限制电子在𝑥-𝑦平面内的运动，从而实现三维束缚。在这个势阱的内部能够容纳电子，而这个可以容纳电子的区域就叫做量子点。
+
+量子点可以通过电路模型进行描述，如图2.5（a）所示，这种方法被称为常相互作用模型（constantinteractionmodel）。通常情况下，电子通过隧穿势垒进入或离开量子点，隧穿势垒在常相互作用模型下可以通过电阻和电容的并联来描述。由于量子点的尺寸非常小，其可容纳的电子数目也是有限的。向量子点中添加一个电子需要克服原有电子的库仑斥力，所需要的能量叫做充电能（chargingenergy, $E _ { \mathrm { C } } { \mathrm { ~ , ~ } }$ ），其表达式为<sup>[24]</sup>：
+
+(a)  
+![](images/98b091d444ff72b756a4b897c6fcca5cafd51fa3e6b091f7e0b3d53548d1877d.jpg)
+
+(b)  
+![](images/9b0cd29e332ff2821be7d97e3351d9230c254139f8db5c9fc5fb5c2a825dbb5e.jpg)  
+图2.4 （a）实验使用的Si/SiGe异质结结构示意图。（b）基片的能带结构，在三角形区域其导带底低于费米面。
+
+$$
+E _ { \mathrm { C } } = { \frac { e ^ { 2 } } { C _ { \scriptscriptstyle  } } } ,\tag{2.29}
+$$
+
+其中 $e$ 是电子的基本电荷量， $C _ { \varSigma }$ 是量子点的总电容。由于量子点的尺寸足够小，并且其处于低温环境中，量子点中电子的热运动能量远小于其充电能，因此量子点的能量是量子化的，这种量子化的轨道能级可以表示为<sup>[24]</sup>：
+
+$$
+E _ { \mathrm { o r b } } \sim \frac { \hbar ^ { 2 } } { m ^ { * } l ^ { 2 } } ,\tag{2.30}
+$$
+
+其中ℏ是约化普朗克常数， $m ^ { * }$ 是电子的有效质量，𝑙 是量子点的物理尺寸。
+
+## 2.2.2 量子点的电化学势和库仑峰
+
+在量子点中，通常通过定义电化学势 $\mu$ 来描述向量子点中添加第 𝑁 个电子所需的能量。当对应量子点中 𝑁 个电子的电化学势 𝜇 恰好低于源极（source） $\mu _ { N }$ 和漏极（drain）的电化学势时，量子点中恰好存在 𝑁 个电子。电子通过量子点的隧穿过程取决于量子点的电化学势能级和源极和漏极电化学势的精确对齐情况。如图2.5（b）所示，展示了单个量子点的电化学势示意图。
+
+在传统的输运测量中，通常施加一个小的源漏电压 $V _ { \mathrm { S D } }$ （我们实验中通常使用 $5 0 \mu \mathrm { V } )$ ）来打开偏置窗口当测量电流随栅极电压 $V _ { \mathrm { P } }$ 变化时，可以观察到如图2.5（c）所示离散的电流峰，这些电流峰称为库仑峰（Coulomb peaks）。库仑峰是量子点能级量子化的体现。当降低 $V _ { \mathrm { P } }$ 时，量子点中的能级会上升，相对应量子点中的电子可能会减少。只有当量子点能级处于 𝜇 和 𝜇 之间时，单电子 $\mu _ { \mathrm { S } }$ $\mu _ { \mathrm { D } }$ 传输才可能发生，产生电流峰。否则，输运电流被阻止，这种情况称为库仑阻塞（Coulomb blockade）<sup>[141]</sup>。
+
+![](images/d04c6f8b350aa5ad37ab4fcb23473bcdfafc99342fc566a21d8f4e63dbdd99dd.jpg)
+
+![](images/350b1a1267a009b9f5e356ece8704ed51d2726c4d454d0ea9a99c11c5b8c15fb.jpg)  
+图 2.5 （a）单量子点电路模型示意图（b）单量子点电化学势示意图。（c）实验测量得到的量子点的库仑峰。
+
+库仑峰的间距反映了量子点中电子增加能 $( E _ { \mathrm { a d d } } = E _ { \mathrm { C } } + E _ { \mathrm { o r b } } + E _ { \mathrm { s p i n } } )$ ），其中$E _ { \mathrm { C } }$ 是充电能， $E _ { \mathrm { o r b } }$ 是轨道能量， $E _ { \mathrm { s p i n } }$ 是自旋劈裂能量。此外，库仑峰的宽度受到电子温度和隧穿速率的影响。为了测量得到清晰可分辨的库仑峰，需要满足以下两个条件：首先，充电能需要远大于费米面的热涨落能量 $( E _ { \mathrm { C } } \gg k _ { \mathrm { B } } T _ { e } )$ ），这就要求实验在足够低的温度下进行（本文涉及到的实验为 10 mK左右）；其次，量子点与源漏的隧穿耦合速率要足够小，以确保量子化的能级可以被分辨，这意味着隧穿电阻 $R _ { \mathrm { t } }$ 需要远大于 $\frac { h } { e ^ { 2 } } \left[ 1 4 2 \right]$
+
+## 2.2.3 双量子点系统
+
+将两个量子点通过隧穿耦合作用串联起来，可以形成一个串联双量子点（double quantum dot, DQD）系统。本文不讨论并联双量子点的情况，后续提到的双量子点，如没有特殊说明，都指串联双量子点。图2.6展示了一个由量子点1（QD1）和量子点2（QD2）组成的双量子点的简化电路模型。与单量子点被视为人造原子类似，DQD 可以被视为一种人造分子，根据双点之间隧穿耦合的强度大小，双点系统的性质会有所不同：在弱隧穿耦合下，两个量子点的电子波函数几乎不重叠，系统表现为两个独立的量子点；而在强隧穿耦合下，电子波函数显著重叠，形成分子状的结合态（低能态）和反结合态（高能态），导致能级劈裂。当隧穿耦合增强到一定程度后，两个量子点合并成一个。通常情况下，我们要求量子点之间存在耦合，但依然保持双点状态。
+
+![](images/23d23e695e24c0839da3020452a5c615f15be9181cfe28651ed717390b803807.jpg)  
+图2.6 （a）由QD1和QD2串联组成的双量子点的电路模型示意图。（b）双量子点电荷稳定性图谱示意图，量子点中的电子数目受到电极电压 $V _ { \mathbf { p 1 } }$ 和 $V _ { \mathbf { P } 2 }$ 的控制。（c）三相点处的量子点能级示意图。（d）量子点QD2与源漏对齐的能级示意图，在（a）中用紫色线表示。（e）量子点QD1与源漏对齐的能级示意图，在（a）中用橙色线表示。
+
+双量子点的源漏电流与电极电压的关系，被称为电荷稳定性图谱（stabilitydiagram），因为其可以反映稳态时双量子点中的电子数目。此外，由于电荷稳定性图谱通常呈现蜂窝状也被称为蜂窝图（honeycomb diagram）。图2.6（b）展示了两个量子点中的电子填充情况。当调节两个栅极电压时，可以观察到不同电子数目组合下的稳态区域，用 $\left( \begin{array} { l l } { n _ { 1 } , } & { n _ { 2 } } \end{array} \right)$ ）表示，其中 $n _ { 1 }$ 和 $n _ { 2 }$ 分别表示量子点1和2 中的电子数目。图2.6（b）中实线标记的是量子点中的电子数目发生改变的情况。黄色和紫色线表示量子点和源漏发生电子交换的情况，也称为量子点充电线（chargingline），充电线处的量子点电化学势关系如图2.6（d）和（e）所示。图2.6（b）中棕色线表示的是双量子点之间的电子交换，也称为点间隧穿线（transitionline）。在交叉点处，如图2.6（b）中的黑色虚线圆圈所所示，三个不同的电荷态[（0，0）、（0，1）和（1，0）]的电化学势是相等的，电子可以在两个量子点之间以及量子点和源漏之间自由隧穿，形成所谓的“三相点”（triple points）。
+
+在双量子点系统中，通过调节栅极电压可以控制量子点中的电子数目，而通过改变势垒电极的电压，可以精确控制隧穿耦合强度。这种灵活性使得双量子点成为研究电子相干性、量子纠缠以及多电子动力学的重要平台。此外，由于双量子点的不同电荷态具有不同的电偶极矩，这就使得双点非常适合于与谐振腔耦合。
+
+## 2.2.4 半导体量子点中的电荷量子比特
+
+(a)  
+![](images/69ebdaf49ac9f44ddfd9fb48a7a385ead7453c14c4192c643fa01d0be1a8eace.jpg)  
+(b)
+
+![](images/16a5f515d605f8e74207361176ed470317481690eba18d3fad461f929f353b83.jpg)
+
+-  
+![](images/7d542480cda18a2e8b1101daed27342a06f237e9bf6ba094feddc98fa9cd61f4.jpg)  
+(d)
+
+![](images/55c1291089d806f497ebe46e2b56059d92c46bd06f1f511d206030c3b4a97416.jpg)  
+图 2.7 电荷量子比特示意图。（a）双量子点势阱示意图，其中电荷态 |𝐿⟩ 和 |𝑅⟩ 之间存在速率为 $2 t _ { \mathrm { c } }$ 的隧穿耦合。电荷态的能量 $E _ { \mathrm { L } }$ 和 $E _ { \mathrm { { R } } }$ 分别对应于频率 ${ \pmb { \omega } } _ { \bf L }$ 和 ${ \pmb { \omega } } _ { \bf R } .$ 。电荷态之间的失谐量由双点间的能量差 $\varepsilon = \omega _ { \mathrm { L } } - \omega _ { \mathrm { R } }$ 决定。（b）双量子点局部的电荷稳定性图，棕色箭头给定了失谐量𝜺的变化。（c）电荷量子比特的能级图，本征态|+⟩和|−⟩存在免交叉（d）在进行量子比特编码情况下的双量子点电化学势示意图。
+
+当双量子点中仅存在单个电子时，如图2.7（a）所示，该电子既可以存在于左侧量子点，对应量子态|𝐿⟩，也可以存在于右侧量子点，对应量子态|𝑅⟩。|𝐿⟩态和 |𝑅⟩ 态之间存在能量差，由此构成了一个二能级系统，可以编码量子比特。此时 |𝐿⟩ 态和 |𝑅⟩ 态代表的量子点中的电子分布分别为（1，0）和（0，1），而图2.7（b）展示了这种电荷分布情况下的双量子点电荷稳定性图谱。这种通过量子点中电子位置的不同进行编码的量子比特被称为电荷量子比特（chargequbit）。需要指出的是，电荷量子比特也可以编码在多电子态中，此时|𝐿⟩态和|𝑅⟩态代表的电荷状态为 $( n _ { 1 } + 1 , ~ n _ { 2 } )$ 和 $( n _ { 1 } , \ n _ { 2 } { + } 1 )$ ），其中 $n _ { 1 }$ 和 $n _ { 2 }$ 分别表示 QD1 和 QD2中的电子数目。电荷量子比特的哈密顿量可以表示为：
+
+$$
+\hat { H } = \frac { 1 } { 2 } \varepsilon \hat { \sigma } _ { z } + t _ { \mathrm { c } } \hat { \sigma } _ { x } ,\tag{2.31}
+$$
+
+其中 $\sigma _ { z }$ 和𝜎 表示以|𝐿⟩和|𝑅⟩为基矢的泡利矩阵， $\sigma _ { x }$ $\varepsilon = \varepsilon _ { \mathrm { L } } - \varepsilon _ { \mathrm { R } }$ 表示这两个态的能量差，通常称为失谐量， $t _ { \mathrm { c } }$ 则表示双量子点之间的隧穿耦合速率。𝜀可以通过改变量子点电极的电压来调节，如图2.7（b）箭头标识了双量子点总能量不变的情况下，𝜀的变化方向。
+
+图2.7（d）展示了进行量子比特编码时双量子点的电化学势关系图。将公式2.31中的哈密顿量对角化，可以得到哈密顿量的本征态：
+
+$$
+\begin{array} { r } { | + \rangle = \cos ( \theta / 2 ) | L \rangle + \sin ( \theta / 2 ) | R \rangle , } \end{array}\tag{2.32}
+$$
+
+$$
+\begin{array} { r } { | - \rangle = - \sin ( \theta / 2 ) | L \rangle + \cos ( \theta / 2 ) | R \rangle , } \end{array}\tag{2.33}
+$$
+
+其中 $\theta = \arctan \left( 2 t _ { \mathrm { c } } / \varepsilon \right)$ 表示混合角，|+⟩ 和 |−⟩ 也被称为结合态和反结合态。在$\varepsilon = 0$ 时，系统处于|𝐿⟩和|𝑅⟩的最大杂化态， $| \pm \rangle = ( | L \rangle \pm | R \rangle ) / { \sqrt { 2 } } ,$ 。经过计算得到系统的本征能量为:
+
+$$
+E _ { \pm } = \pm \frac { 1 } { 2 } \sqrt { \varepsilon ^ { 2 } + 4 t _ { \mathrm { c } } ^ { 2 } } ,\tag{2.34}
+$$
+
+图2.7（c）绘制出了系统的本征能量和失谐量之间的关系，从图中可以看到红色和蓝色两个分离开的能级，这种情况称为免交叉（anticrossing），作为对比图中虚线所示的 |𝐿⟩ 和 |𝑅⟩ 态则在 $\varepsilon = 0$ 处简并。通过对量子点栅极施加微波或方波信号，可以改变失谐量 𝜀 的大小，此时量子比特状态会在 |𝐿⟩ 和 |𝑅⟩ 之间振荡。控制施加微波的时间或者方波的幅度，可以让量子比特处于不同的状态，从而实现对量子比特的操作。由于电荷量子比特仅依赖电子位置，对电场的响应速度非常块，因而可以实现比特状态的快速翻转，通常比特操作速度可以达到 GHz 量级<sup>[143]</sup> 。
+
+## 2.2.5 半导体量子点中的自旋量子比特
+
+![](images/8228f142e95f716d0c85d9339eb8dd938af4ce920efefecd22c6a380cb2c5390.jpg)  
+图 2.8 用 Bloch 球表示量子比特，这个球面上的任意一点都表示一个量子态。量子比特的两个基态在 Bloch 球的两端，分别用 |0⟩ 和 |1⟩ 来表示。
+
+电荷比特由于容易受到环境中电磁信号的干扰，其相干时间相对较短，一般是纳秒量级。这对于实现高保真度的量子比特门操作来说是不利的。因而研究者
+
+们开始关注自旋量子比特。自旋量子比特一般不与环境中的电场发生相互作用，因而具有抗电荷噪声的能力，其相干时间相对较长。目前半导体量子计算的研究重点已经逐渐转移到自旋量子比特上。
+
+正如第 1 章所介绍，单个电子自旋可以编码 Loss-DiVincenzo（LD）量子比特<sup>[16]</sup>。当对量子点施加外磁场 𝐵 时，由于塞曼效应，自旋上态 |↑⟩ 和自旋下态|↓⟩解除简并，它们之间的能量差可以表示为:
+
+$$
+E _ { z } = g \mu _ { \mathrm { B } } B ,\tag{2.35}
+$$
+
+其中 $g$ 为电子的朗德 $g -$ 因子（在硅中 $g \approx 2 )$ ）， $\mu _ { \mathrm { B } }$ 为玻尔磁 $\vec { \mathrm { \mathcal { F } } }$ 。我们就可以利用自旋上态和自旋下态构成的二能级系统编码量子比特，这就是LD量子比特。
+
+单个量子比特的状态可以方便地用 Bloch 球来可视化展示（如图 2.8 所示）。量子比特的状态用指向球面上的一个矢量表示。Bloch球的南北两极分别表示量子比特的基态|1⟩和|0⟩。对于硅中的自旋态，基态|0⟩对应于|↓⟩，而激发态|1⟩对应于|↑⟩，而一个任意自旋态可以表示为：
+
+$$
+| \psi \rangle = \cos \frac { \theta } { 2 } | 0 \rangle + e ^ { i \phi } \sin \frac { \theta } { 2 } | 1 \rangle ,\tag{2.36}
+$$
+
+其中 $\theta$ 决定了两个本征态的振幅， $\phi$ 决定了它们之间的相对相位。
+
+## 2.3 量子比特与谐振腔耦合的基本理论
+
+前面分别介绍了谐振腔和量子点的基本知识，这里我们将二者结合起来，讨论本文最重要的内容，基于半导体量子比特和超导微波谐振腔的电路量子电动力学系统（cQED）。
+
+## 2.3.1 J-C 模型
+
+量子比特是一个二能级系统，其哈密顿量可以简化为：
+
+$$
+\hat { H } _ { \mathrm { q } } = \frac { 1 } { 2 } \omega _ { \mathrm { q } } \hat { \sigma _ { z } } ,\tag{2.37}
+$$
+
+其中𝜔 表示量子比特的频率。而谐振腔的哈密顿量由式2.8给出： $\omega _ { \mathsf { q } }$
+
+$$
+\hat { H } _ { \mathrm { r } } = \hbar \omega _ { \mathrm { r } } \left( \hat { a } ^ { \dagger } \hat { a } + 1 / 2 \right) .\tag{2.38}
+$$
+
+谐振腔与量子比特相互作用的哈密顿量由下式给出：
+
+$$
+\hat { H } _ { \mathrm { i n t } } = \hbar g \left( \hat { \sigma } _ { + } + \hat { \sigma } _ { - } \right) \left( \hat { a } ^ { \dagger } + \hat { a } \right) ,\tag{2.39}
+$$
+
+这里 $g$ 表示谐振腔与量子比特的耦合强度， $\hat { \sigma } _ { + } ( \hat { \sigma } _ { - } )$ 则表示量子比特的升（降）算符，其与泡利算符 $\hat { \sigma } _ { x }$ 和 $\hat { \sigma } _ { y }$ 的关系为 $\begin{array} { r } { \hat { \sigma } _ { \pm } = \frac { 1 } { 2 } \left( \hat { \sigma } _ { x } \pm \mathrm { i } \hat { \sigma } _ { y } \right) } \end{array}$ 。乘积项 $\hat { \sigma } _ { + } \hat { a }$ 表示比特吸
+
+收一个光子从基态跃迁到激发态， $\hat { \sigma } _ { - } \hat { a }$ 表示比特从激发态跃迁到基态并吸收一个光子， $\hat { a } ^ { \dagger } \hat { \sigma } _ { - }$ 表示比特从基态跃迁到激发态并释放一个光子， $\hat { a } ^ { \dagger } \hat { \sigma } _ { + }$ 则表示比特从基态跃迁到激发态并释放一个光子。系统总哈密顿量为三项之和可以写成<sup>[110]</sup>：
+
+$$
+\hat { H } = \frac { 1 } { 2 } \hbar \omega _ { \mathrm { q } } \hat { \sigma } _ { z } + \hbar \omega _ { \mathrm { r } } \hat { a } ^ { \dagger } \hat { a } + \hbar g \left( \hat { \sigma } _ { + } + \hat { \sigma } _ { - } \right) \left( \hat { a } ^ { \dagger } + \hat { a } \right) ,\tag{2.40}
+$$
+
+为了方便，这里我们省略了谐振腔哈密顿量中的常数项，这并不影响物理过程。在旋转波近似下，两个高频振荡项 $\hat { \sigma } \hat { a }$ 和 $\hat { a } ^ { \dagger } \hat { \sigma }$ 可以被省略。这个条件为 $g \ll \omega _ { \mathrm { q } } , \omega _ { \mathrm { r } }$ ，本文所涉及到的实验均满足这一条件。由此我们就得到了著名的 Jaynes-Cummings模型，简称为J-C 模型。
+
+$$
+\hat { H } _ { \mathrm { J C } } = \hbar \omega _ { \mathrm { r } } \hat { a } ^ { \dagger } \hat { a } + \frac { 1 } { 2 } \hbar \omega _ { \mathrm { q } } \hat { \sigma } _ { z } + \hbar g \left( \hat { a } ^ { \dagger } \hat { \sigma } _ { - } + \hat { a } \hat { \sigma } _ { + } \right) ,\tag{2.41}
+$$
+
+在相互作用绘景下，哈密顿量可以写成：
+
+$$
+\begin{array} { r } { \hat { H } _ { \mathrm { I } } = \hbar g \left( \hat { a } \hat { \sigma } _ { + } e ^ { \mathrm { i } A t } + \hat { a } ^ { \dagger } \hat { \sigma } _ { - } e ^ { - \mathrm { i } A t } \right) , } \end{array}\tag{2.42}
+$$
+
+其中 $\varDelta = \omega _ { \mathrm { q } } - \omega _ { \mathrm { r } }$ ，通常称为谐振腔和量子比特的失谐量。
+
+在 J-C 模型中有两种特殊情况，第一种是共振情况，即 $\varDelta = 0$ ，则系统的本征能量为：
+
+$$
+E _ { \pm } ( n ) = \hbar \left( n + \frac { 1 } { 2 } \right) \omega _ { \mathrm { r } } \pm \frac { 1 } { 2 } \hbar \varOmega _ { \mathrm { R } } ,\tag{2.43}
+$$
+
+对应的本征态为：
+
+$$
+\vert \psi _ { n } ^ { \pm } \rangle = { \frac { 1 } { \sqrt { 2 } } } \left( \vert g , n \rangle \pm \vert e , n - 1 \rangle \right) ,\tag{2.44}
+$$
+
+其中 𝑛 表示谐振腔中的光子数目， $| g \rangle$ 和 $| e \rangle$ 分别表示量子比特的基态和激发态，$\Omega _ { \mathrm { R } } = 2 g \sqrt { n + 1 }$ 表示量子Rabi频率，当光场处于真空态，即 $n = 0$ 时， $\varOmega _ { \mathrm { R } } = 2 g$ 量子比特将在|𝑔⟩和 $| e \rangle$ 之间进行真空Rabi振荡，据此可以提取量子比特与谐振腔的耦合强度。
+
+另一种特殊情况是大失谐情况也称色散情况，具体来说是处于 $| \varDelta | \gg g$ 的状态。此时，系统的哈密顿量可以近似为：
+
+$$
+\hat { H } _ { \mathrm { J C } } ^ { \mathrm { d i s p } } \approx \hbar \left( \omega _ { \mathrm { r } } + \frac { g ^ { 2 } } { \cal A } \hat { \sigma } _ { z } \right) \hat { a } ^ { \dagger } \hat { a } + \frac { 1 } { 2 } \hbar \left( \omega _ { \mathrm { q } } + \frac { g ^ { 2 } } { \cal A } \right) \hat { \sigma } _ { z } .\tag{2.45}
+$$
+
+本征值和本征态的表达式可以通过微扰理论进行近似，其表达式为：
+
+$$
+E _ { n } ^ { \pm } \approx n \hbar \omega _ { \mathrm { r } } \pm \frac { \hbar } { 2 } ( \varDelta + \frac { n g ^ { 2 } } { \varDelta } ) ,\tag{2.46}
+$$
+
+$$
+| \psi _ { n } ^ { \pm } \rangle \approx | g , n \rangle \pm { \frac { g { \sqrt { n } } } { \varDelta } } | e , n - 1 \rangle .\tag{2.47}
+$$
+
+从公式2.45可以看出，在色散耦合条件下，光场项 $\hat { a } ^ { \dagger } \hat { a }$ 的系数相比于单独谐振腔发生了变化。这表明，由于色散耦合的影响，谐振腔的频率发生了大小为 $\begin{array} { r } { \frac { g ^ { 2 } } { \varDelta } \hat { \sigma } _ { z } } \end{array}$ 偏移。当量子比特处于不同状态（即 $\langle \hat { \sigma } _ { z } \rangle = 1$ 或 $\langle \hat { \sigma } _ { z } \rangle = - 1 )$ 时，谐振腔的频率偏移方向是相反的。因此，通过测量谐振腔的频率偏移，可以间接测量量子比特的状态，而不需要直接干扰量子比特系统。这为我们后续使用谐振腔探测量子比特状态提供了理论基础。
+
+将公式2.45中的量子比特项合并，可以得到以下表达式：
+
+$$
+\hat { H } _ { \mathrm { J C } } ^ { \mathrm { d i s p } } \approx \hbar \omega _ { \mathrm { r } } \hat { a } ^ { \dagger } \hat { a } + \frac { 1 } { 2 } \left( \omega _ { \mathrm { q } } + \frac { 2 g ^ { 2 } } { \varDelta } \hat { a } ^ { \dagger } \hat { a } + \frac { g ^ { 2 } } { \varDelta } \right) \hat { \sigma } _ { z } .\tag{2.48}
+$$
+
+从上式可以看出，量子比特频率也受到了色散耦合的影响。导致比特频率偏移的有两项，其中一项为 $\begin{array} { r } { \frac { 2 g ^ { 2 } } { \varDelta } \hat { a } ^ { \dagger } \hat { a } } \end{array}$ ，其偏移量与光子数 $\langle \hat { a } ^ { \dagger } \hat { a } \rangle$ 、耦合强度 𝑔 以及失谐量𝛥相关，这一项被称为交流史塔克频移（acStarkshift）；另外一项为 $\frac { 2 g ^ { 2 } } { \varDelta }$ ，其偏移量与光子数无关，被称为兰姆频移（Lamb shift）<sup>[5,144]</sup>。与前文所述利用谐振腔探测量子比特状态类似，依据acStarkshift可以通过量子比特的频率变化来测量谐振腔中的光子数目，在后续章节我们会详细进行介绍。
+
+## 2.3.2 耦合强度计算
+
+图2.9给出了典型的双量子点与谐振腔耦合的结构示意图。谐振腔的中心导体直接与量子点的其中一个电极相连，这就使得量子点与谐振腔之间形成了电容耦合。对于一个电荷量子比特，处于|𝐿⟩和|𝑅⟩这两个不同的态时，谐振腔感应到的电偶极矩是不相同的。
+
+![](images/c64d9cd7fce8c2320fad7b2d7b2080eb6ddc29855b5a64f850a9dfcdd66c4050.jpg)  
+图2.9 双量子点与谐振腔耦合的结构示意图
+
+本节将以前文所述的电荷量子比特为例，展示其与谐振腔电磁场模式相互作用耦合强度𝑔 的推导过程。此推导基于J-C模型和偶极近似。而关于自旋与谐振腔的耦合部分，我们将在后续章节进行介绍。
+
+设谐振腔为单频谐振腔，其谐振频率为 $\omega _ { \mathrm { r } }$ ，谐振腔末端的量子化电压可以
+
+表示为：
+
+$$
+\hat { V } = \sqrt { \frac { \hbar \omega _ { \mathrm { r } } } { l C _ { 0 } } } ( \hat { a } + \hat { a } ^ { \dagger } ) ,\tag{2.49}
+$$
+
+其中𝑙为谐振腔长度， $C _ { 0 }$ 为谐振腔单位长度的电容，𝑉 为谐振腔末端的电压。考虑到谐振腔与量子点之间是通过电容耦合的，因此量子点处的电压为：
+
+$$
+\hat { V } _ { \mathrm { q } } = \nu \hat { V } ,\tag{2.50}
+$$
+
+其中𝜈 是与电容有关的转化系数，进而量子点处的电场可以表示为：
+
+$$
+\hat { E } = \hat { e } \hat { V } _ { \mathrm { q } } / s ,\tag{2.51}
+$$
+
+其中 $s$ 是量子点到地平面的距离， $\hat { e }$ 表示电场的方向。在电偶极近似下，量子点与谐振腔相互作用的哈密顿量可以写成：
+
+$$
+\hat { H } _ { \mathrm { i n t } } = \boldsymbol { \hat { d } } \cdot \boldsymbol { \hat { E } } ,\tag{2.52}
+$$
+
+其中 $\hat { d } \equiv r \hat { e } _ { d }$ 表示电偶极矩, 𝑟 是电偶极矩的模， $\hat { e } _ { d }$ 是电偶极矩的方向。此时我们可以得到：
+
+$$
+\hat { H } _ { \mathrm { i n t } } = \frac { r \nu } { s } \sqrt { \frac { \hbar \omega _ { \mathrm { r } } } { l C _ { 0 } } } \hat { e } _ { d } \hat { e } ( \hat { a } + \hat { a } ^ { \dagger } ) ,\tag{2.53}
+$$
+
+与 $\mathbf { g }$ 公式2.41给出的J-C 模型哈密顿量进行对比，可以得到耦合强度为：
+
+$$
+g _ { \mathrm { 0 } } = \frac { r \nu } { \hbar s } \sqrt { \frac { \hbar \omega _ { \mathrm { r } } } { l C _ { \mathrm { 0 } } } } ,\tag{2.54}
+$$
+
+将特征阻抗的表达式 ${ Z _ { \mathrm { r } } } = \sqrt { L _ { 0 } / C _ { 0 } }$ 代入可以得到：
+
+$$
+g _ { \mathrm { 0 } } = { \frac { 1 } { 2 } } \beta \omega _ { \mathrm { r } } { \sqrt { \frac { Z _ { \mathrm { r } } } { \pi \hbar } } } ,\tag{2.55}
+$$
+
+这里 $\beta$ 是量子点的差分杆臂因子。其中 $g _ { 0 }$ 是全局耦合强度，其与有效耦合强度的关系为:
+
+$$
+g _ { \mathrm { e f f } } = g _ { 0 } \sin \theta = g _ { \mathrm { c } } \frac { 2 t _ { 0 } } { \hbar \omega _ { \mathrm { q } } } ,\tag{2.56}
+$$
+
+其中 $\theta$ 是混合角。在我们的研究中，量子比特频率通常在2−20GHz，谐振腔的频率需要与此匹配，通常都是固定的。从公式中可以观察到，电荷量子比特与谐振腔的耦合强度与谐振腔阻抗的开方成正比。因而提高谐振腔的阻抗是提高耦合强度的重要手段，这也是前文我们要研究高阻抗腔的原因。此外，耦合强度还与杆臂因子有关，提高杆臂因子也是提高耦合强度的手段之一<sup>[145]</sup>，这通常可以通过电极结构设计、异质结结构设计来实现。
+
+## 2.4 本章小结
+
+本章主要介绍谐振腔与半导体量子点耦合体系的基本理论。首先，介绍了谐振腔的基本概念，以及高阻抗腔的工作原理。接着，详细介绍了硅基半导体量子点的相关知识，主要包括异质结结构，量子点的形成和表征方法，以及电荷与自旋量子比特的编码方式。最后，讨论了谐振腔与量子点耦合的基本模型，并给出了耦合强度的基本计算方法。这一章内容是后续实验研究的基础。
+
+## 第3章 量子器件的制备以及低温测量技术
+
+一个工作良好的器件是我们实验研究的基础。能否制备出高质量的器件是决定研究课题能否顺利完成的关键。本文研究中所涉及到的器件，包括量子点和谐振腔，它们的特征尺寸分别在纳米和亚微米量级。因此，我们需要采用微纳加工技术进行器件的制备。本文中使用的所有器件均按照本章所述的工艺流程制备而成。
+
+热噪声会显著降低半导体量子比特的寿命，因此，我们希望量子比特在更低的温度下工作。通常，半导体量子比特的工作温度在毫开尔文（mK）量级<sup>[146]</sup>，而目前研究的高温量子比特的工作温度也仅达到 1 K<sup>[73]</sup>。因此，这些量子比特都需要在低温制冷机中才能运行。正因如此，低温测量技术在整个实验过程中占据了相当重要的地位。
+
+本章将从器件制备和低温测量两个方面，详细介绍从基片出发到实现量子点低温测量的全过程。
+
+## 3.1 微纳工艺基本介绍
+
+微纳加工工艺是实现各类半导体器件、量子器件与纳米结构的关键技术手段。通过精密的光刻、刻蚀、薄膜沉积和封装等工艺，我们能够在微米乃至纳米尺度上构建器件单元，为量子计算研究提供技术支撑<sup>[147]</sup>。我们的目的是制造出如图3.1所设计包含谐振腔和量子点的器件。我们的器件制备过程涉及半导体与超导两种材料，需要多个工艺过程相互协同才能最终完成器件的制备。整个流程通常涵盖了薄膜沉积、图形生成、刻蚀以及封装测试等多个步骤。在本节中，我们将对这些工艺环节逐一进行介绍。
+
+## 3.1.1 图形传递
+
+图形传递，是指通过一定手段，将我们设计的版图转移到基片上的工艺过程<sup>[148]</sup>。常用的图形传递方法有：光学光刻（photolithography）法、电子束光刻法、纳米压印法、X射线光刻法等。在我们实验中用到的主要是光学光刻法和电子束光刻法，以下统称为光刻。
+
+光刻的实现依赖于光化学反应，其原理和照相相似。对于某些高分子有机物，当其受到光照后，分子链会断裂，从而更容易被有机溶剂溶解；而未被光照的部分则得以保留。通过对光刻胶的选择性曝光，便可在其表面形成所需的图形。在这一过程中，高分子有机物被称为光刻胶（或抗蚀剂），光照的步骤称为曝光，去除曝光部分光刻胶的过程称为显影，所使用的有机溶剂则称为显影液。
+
+![](images/0fde856a8db65bc9ab91a63ad6358617e72052ea8f666218c536a77e85e71838.jpg)  
+图3.1 耦合器件的版图设计。（a）耦合器件设计图整体概览。（b）谐振腔的结构设计图。（c）量子点电极的结构设计图。
+
+![](images/b2ce3aaa4d7380535e6665d005349d9f26a3e85bc2edd7fcbe11176388f1b9cc.jpg)  
+图3.2 光刻工艺过程示意图，包括光刻胶的涂覆、曝光以及显影三个步骤。
+
+图3.2给出了光刻的主要流程，第一步是进行光刻胶的涂覆，即通过旋涂工艺将光刻胶均匀分布在基片表面，然后通过高温让光刻胶固化，在表面形成一层均匀的胶膜，其厚度视光刻胶的种类不同，从几十个纳米到数个微米不等。第二步是进行曝光，这一步的核心是对需要的区域进行选择性曝光，需要借助光刻机完成。第三步是显影，这一步是利用显影液清洗掉被曝光过的光刻胶，而未曝光的部分则保留，从而实现了版图到光刻胶图形转移。
+
+工业上常用基于掩膜版的光刻过程，掩膜版指的是带有图形结构的介质，光通过掩膜版上的透明部分后才能到达光刻胶表面，非透明区域则不能到达光刻胶表面，这就实现了选择性曝光。这种方式在大规模生产中效率极高，但由于掩膜版的图形固化后无法更改，不适合需要频繁更换设计的实验室工作，因而，我们实验室绝大多数情况都使用无掩膜光刻。无掩膜光刻的基本原理是使用直径极其微小的光束或者电子束进行曝光，每次仅进行单个点的曝光，通过移动光源或者基片来实现所需要区域的曝光。这种曝光模式的图形结构不依赖于掩膜版，原则上可以实现任意图形的曝光，这就给我们的科研带来了极大的灵活性。
+
+量子点电极的尺寸通常是几十纳米，这就对我们的光刻设备提出了很高的分辨率要求。为满足这一需求，我们采用电子束曝光（electron beam lithography，EBL）技术。与光子相比，电子具有更小的波长，从而具有更高的分辨率。
+
+量子点电极需要通过宏观结构与外部仪器建立电学连接，这些宏观结构包括键合焊盘（pad）和过渡电极（大电极）。键合焊盘的尺寸通常为百微米量级，而连接焊盘与量子点小电极的过渡电极通常面积也比较大，用电子束曝光完成这些大面积结构是不经济的。因此，我们采用激光直写曝光技术，其具有更快的曝光速度，且操作更加方便。通过结合电子束曝光和激光直写曝光两种技术，我们实现了小尺寸与大面积结构的高效制备，为量子点器件的研究提供了可靠的工艺支持。
+
+## 3.1.2 薄膜沉积过程
+
+薄膜沉积过程是在基片上形成特定厚度和性质薄膜的工艺。薄膜沉积可以分为物理气相沉积，化学气相沉积以及其他特殊沉积方法。在本论文中，我们结合了多种薄膜沉积技术以满足不同材料的制备需求。物理气相沉积的原理是通过热能将材料蒸发成气相，然后气相物质在基片上冷凝形成薄膜，主要包括电子束蒸发、磁控溅射等。在实验中，我们通常使用电子束蒸发来进行量子点电极的制备，而采用磁控溅射来制备谐振腔薄膜。
+
+化学气相沉积是通过化学反应在基底表面形成薄膜的技术。主要技术手段有常压气相沉积、低压气相沉积、原子层沉积等。本文涉及到的化学气相沉积主要是原子层沉积，我们使用原子层沉积技术生长氧化铝薄膜，用于形成我们的场氧结构，其厚度通常在15nm左右。我们对氧化铝的要求有两点，其一是具有较高的击穿电压，其二是具有较少的缺陷。
+
+## 3.1.3 刻蚀过程
+
+刻蚀是一种用于去除材料的工艺，可以将光刻胶上的图形转移到基片上。刻蚀工艺按照原理可以分为两类：干法刻蚀和湿法刻蚀。干法刻蚀利用离子或化学物质去除材料，常见的干法刻蚀包括物理刻蚀、化学刻蚀和反应离子刻蚀（reactiveionetch,RIE）。物理刻蚀利用高能离子轰击材料表面，让材料发生溅射从而移除材料，我们通常也称为离子束刻蚀。在我们的实验中主要用于去除金属表面氧化层。化学刻蚀，利用气相的化学物质与材料表面发生化学反应，从而去除材料。反应离子刻蚀则是结合了物理刻蚀和化学刻蚀过程，通过产生的高能等离子体同时对材料进行轰击和发生化学反应。在我们谐振腔的制备中，就需要使用反应离子刻蚀。干法刻蚀的特性决定了其具有很好的方向性，可以得到更好的侧壁，这对于谐振腔来说是非常重要的。但是，使用纯物理刻蚀通常对材料没有选择性，有些时候会导致过刻蚀。
+
+湿法刻蚀是通过化学试剂和材料表面发生化学反应从而去除材料的工艺。在我们的实验中会使用湿法刻蚀去除氧化铝，以及基片表面自然氧化的 $\mathrm { S i O } _ { 2 }$ 层。与干法刻蚀相比较，湿法刻蚀具有各相同性的特征，通常情况下，侧壁形貌不如干法刻蚀。然而湿法刻蚀根据化学试剂的不同，对材料的选择性极好，比如，用于刻蚀 $\mathrm { S i O } _ { 2 }$ 的氢氟酸，就不会刻蚀底层的Si，从而达到仅去除氧化层的目的。
+
+## 3.1.4 封装测试
+
+在完成器件的制备后，我们需要对器件进行一系列的检测步骤，才能最终放入制冷机进行电学测量。首先是光学和扫描电子显微镜的检查，这一步骤的目的是：确认量子点电极和谐振腔结构的完整性；检查多层结构的对准；确保制备过
+
+程中各步骤的一致性。然后我们要将基片进行进一步切割，得到最小的重复单元。最后我们要对器件进行封装，这一步主要是通过键合的方式，将器件和外部电路建立起电学连接。
+
+## 3.2 工艺流程
+
+各个不同工艺之间相互搭配才能最终制备出我们的器件。这一节将从谐振腔，量子点以及二者之间的耦合工艺三个方面详细阐述我们的工艺流程。
+
+## 3.2.1 谐振腔工艺
+
+这里我们将介绍仅制备谐振腔时的工艺流程。通过第 2 章的介绍，我们知道，单独的谐振腔由金属层，介质层以及衬底层组成。考虑到和量子点器件的兼容性，这里的介质层是必需的，通常情况下，我们选择 ${ \bf A l } _ { 2 } { \bf O } _ { 3 }$ 作为介质层。用于制备谐振腔的整个工艺流程可以从图3.3中获取。首先，我们需要对基片进行清洗，这里可以使用氢氟酸去除表面的氧化层，有助于提高谐振腔品质因子。然后是使用原子层沉积（atomic layer deposition，ALD）设备生长 15 nm 的氧化铝层。紧接着我们会使用磁控溅射生长超导金属。接下来我们会使用电子束曝光制备出谐振腔的图案，最后通过反应离子刻蚀去除不需要的金属，最终制备完成谐振腔。
+
+![](images/842b428c1dcb110a40c1576db84e96a4c04a7e7995f5a2776e528c0786201ec9.jpg)  
+图3.3 单独制备谐振腔的工艺流程图。
+
+在整个流程中，薄膜生长环节是影响谐振腔性质最关键的工艺。为了实现高动态电感，我们选择了Nb、NbTiN、TiN 等材料，其中NbTiN、TiN 需要使用反应磁控溅射的方法进行生长。我们的靶材是Ti和NbTi合金，在溅射过程中同时通入 $. \mathrm { N } _ { 2 }$ 和 $\mathbf { A r }$ ，其中 $\Nu _ { 2 }$ 用于和靶材反应生成 NbTiN 和 TiN，而Ar 则用于轰击靶材，完成溅射过程。以下是针对溅射工艺中几个关键影响因素的一些说明：
+
+1. 真空度的要求。真空度是溅射腔体的基本参数之一。如果腔体的本底真空不够理想，残留气体（如氧气）可能与溅射材料发生化学反应，导致薄膜化学成分的复杂化。特别是当氧含量较高时，薄膜可能无法实现超导。根据我们的经验来看，将腔体的本底真空保持在优于 $1 0 ^ { - 6 } \mathrm { P a }$ 的水平是较为稳妥的。
+
+2. 工艺气体参数的优化。工艺气体的气压及 $\Nu _ { 2 }$ 与 Ar 的比例是决定薄膜特性的重要因素。在溅射过程中， $\Nu _ { 2 }$ 通过与靶材的反应生成氮化物薄膜，而Ar则通过轰击靶材实现溅射。不同的 $\Nu _ { 2 } / \mathrm { A r }$ 比例会直接影响薄膜的氮含量，从而影响其超导转变温度和动态电感等关键参数。
+
+3. 基片温度的控制。基片温度对于薄膜的晶体质量至关重要。在实验中，我们选择将基片加热至250℃，以促进薄膜形成更高质量的晶体结构。
+
+4. 其他影响因素。其他可能影响薄膜性质的工艺条件包括溅射电压的选择和基片表面的预处理工艺等。优化这些参数可以进一步提升薄膜的质量和均匀性。
+
+综合考虑这些影响因素，我们在实验中不断优化工艺条件，已经实现了具有高动态电感的薄膜，并能制备出高质量的谐振腔。
+
+## 3.2.2 量子点工艺流程
+
+在本节中，我们将详细介绍实验中单独制备量子点的工艺流程。具体步骤如图3.4所示。与谐振腔的制备工艺相比，量子点的制备过程显得更加复杂。为了清晰地描述这一工艺流程，我们将其分为以下两个部分：
+
+1. 外围结构制备这部分工艺主要涉及微米量级的大结构制备，具体流程如下：对准标记（mark）制备。使用刻蚀技术在异质结上制备mark，用于后续结构的对准。在这一步骤中，我们会同时刻蚀掉不需要的异质结部分，仅留下一个量子点平台（mesa），这样做能够有效降低器件的漏电风险。离子注入与激活。通过离子注入形成导电区域，随后进行激活处理，以确保良好的导电性能。场氧生长。在基片表面生长约15nm厚的氧化铝层，用于实现电极和基片的绝缘。生长后，需要对离子注入区域上方的氧化铝层进行刻蚀，以留出导电区域。欧姆接触制备。使用Ti/Au作为金属层制备欧姆接触，同时还需要制备金属mark。金属mark相较于刻蚀mark更易被电子束曝光机识别。大电极制备。制备外围的大电极，用于连接外部电路。以上这些工艺中的曝光过程都是通过激光直写曝光设备完成的。至此，外围结构制备完成。
+
+2. 量子点电极制备量子点电极的制备更为复杂，分为以下几步：电子束曝光金属mark制备。使用电子束曝光技术制备一层金属mark，其边缘更加整齐，有助于实现高精度扫描。量子点电极制备。量子点电极通常分为三层，每层电极的制备工艺相同。工艺流程为：使用电子束曝光技术曝光电极结构，蒸镀Al电极，完成Al剥离工艺后，进行氧化处理，使Al表面生成一层致密的氧化层，确保电极间绝缘。氧化工艺是在原子层沉积设备中完成的，在此过程中，我们需要通入氧气并维持高温。补丁层制备。补丁层的作用是连接量子点电极与外围大电极，这是因为 Al 表面具有氧化层，直接蒸镀的量子点电极无法与外围大电极实现电学连接。在补丁层的薄膜沉积前，需用离子束刻蚀去除先前电极表面的氧化层，以确保良好的电连接。由于 Al 在空气中氧化速率快，刻蚀和薄膜沉积需在同一设备中连续完成。微磁体制备。使用电子束曝光和电子束蒸发工艺制备微磁体，微磁体提供了自旋量子比特与谐振腔耦合所需的电荷自旋杂化<sup>[149]</sup>。完成以上步骤后，量子点结构的制备就完成了。
+
+在如此之长的工艺流程中，以下工艺过程需要尤其关注：
+
+1. 欧姆接触的制备。氧化铝刻蚀不完全或欧姆接触金属沉积质量差，会导致接触不佳，器件无法正常工作。
+
+2. 量子点电极制备。不同电极层对准不佳会影响量子点的调控性能，甚至无法形成量子点。电极宽度未达预期会直接影响量子点势阱的形成。绝缘性能差会导致电极漏电，无法实现独立调控。
+
+3. 离子注入与场氧生长。这里的工艺故障可能导致离子注入区与量子点电极之间漏电，最终导致器件失效。
+
+通过对以上关键步骤参数的严格控制，我们可以提高量子点器件的成功率。
+
+![](images/7753aa79879ac0d97ece16d8918c74af97d8c0cd0209a7c12520c30073ef24a1.jpg)  
+图3.4 量子点的制备流程示意图，共分为外围结构制备和量子点结构制备两个主要模块。
+
+## 3.2.3 谐振腔与量子点耦合的工艺流程
+
+在我们制备谐振腔与量子点耦合器件的时候，我们会将二者的工艺交叉进行。这里我们需要考虑二者工艺的兼容性问题。具体有以下几点考虑：
+
+1. 量子点工艺需要使用氧化，但是氧化会导致谐振腔性质发生重大变化，甚至导致薄膜无法超导。经过长期测试，我们发现，其对谐振腔的影响是不可控的。因而，谐振腔的工艺必须放在量子点工艺之后进行。
+
+2. 谐振腔工艺需要使用反应离子刻蚀，这一步骤也有可能会刻蚀量子点电极和基片。这里的解决方案是，在制备谐振腔薄膜之前，生长一层氧化铝，充当阻刻层。
+
+3. 由于第1点和第2点，我们会在量子点电极上引入氧化层，这就导致谐振腔与量子点的连接存在困难。这里依然需要使用离子束刻蚀，不过需要严格控制工艺参数，保证离子束刻蚀不会把谐振腔金属层完全去除。
+
+## 3.3 低温测量平台介绍
+
+## 3.3.1 测量平台
+
+在通过光学显微镜和扫描电子显微镜的检查后，我们通常在液氦环境下对器件进行初步筛选。具体操作是利用粗测杆将器件放入液氦杜瓦中，使器件温度迅速降至约 4.2 K。在这一温度环境下，我们可以对量子点的基本特性进行初步表征，包括量子点沟道的开启、关闭以及漏电情况的测试。由于器件直接与液氦接触，其降温速度极快，因此这一方案被广泛用于快速筛选样品。然而，由于TiN谐振腔的超导临界温度较低，无法在液氦环境中测得信号；相比之下，NbTiN谐振腔则能够在这一温度下正常工作。
+
+量子比特相关实验则需要在稀释制冷机中进行。本研究中使用的稀释制冷机由Bluefors公司生产，最低温度可达10mK。为在稀释制冷机中实现高精度的量子比特操作，我们构建了一套低温测量系统。该系统包括直流源、微波源、波形发生器、测控一体机、矢量网络分析仪等关键测量仪器设备，整体线路结构如图3.5所示。
+
+我们的线路系统主要由以下三个部分组成：
+
+直流部分：用于为量子点电极施加电压，形成势阱以控制量子点中的电子。
+
+谐振腔部分：包括两路高频线，其中一路配备微波放大器，用以提高谐振腔信号的信噪比。这部分主要负责信号的读出。
+
+非谐振腔高频部分：由若干高频线组成，通常与微波源和任意波形发生器等设备相连，主要用于操作量子比特。
+
+这一测量平台的设计和设备布局为量子比特的高精度测量提供了良好的支持，同时为实现高质量的实验结果奠定了基础。
+
+![](images/e4c67bb07767b671c196f8a3a1d0ac0928fba8520a645921abe0586d39593f55.jpg)  
+图3.5 基于稀释制冷机的低温测量线路示意图。
+
+## 3.3.2 测量方法
+
+在我们的实验中，通常采用以下两种测量方法：
+
+1. 交流输运测量。这一方法依靠锁相放大器施加交流信号，测量量子点源漏间的电流，是表征量子点的最基础方法，也是后续测量的基础。通过交流输运测量，我们可以对量子点的特性进行初步分析，并找到合适的工作位置。
+
+2. 谐振腔测量。利用谐振腔来探测量子点的信号，不依赖于源漏电流的测量。由于谐振腔的带宽较窄，在测量前需通过交流输运方法确定量子点的工作区域，然后使用谐振腔实现更灵敏的信号探测。
+
+我们的量子点通常工作在少电子区域，其信号极其微弱。因此，降低系统噪声以提高测量信噪比尤为关键。以下几个因素对系统噪声的影响显著：
+
+1. 稀释制冷机的最低温度。温度越低，热噪声越小。稀释制冷机的低温性能对减小热噪声起着至关重要的作用。
+
+2. 制冷机的地线。一个良好的地线不仅可以为器件提供稳定的参考电位，还能显著提升信号的稳定性，减少电磁干扰引入的噪声。
+
+3. 制冷机线路。通过在线路中增加热沉，可以高效地带走热量，进一步降低器件温度。在线路中添加滤波器有助于减少电压抖动，从而降低系统噪声。对于高频线路，使用衰减器可以有效降低高频噪声。
+
+通过优化以上关键因素，我们能够有效提高实验的信噪比，从而更精确地测量量子点器件的特性。
+
+## 3.3.3 测量程序
+
+在对量子点器件进行表征时，需要借助多种精密仪器设备，并进行长时间的数据采集工作。我们需要用到大量的仪器设备，并且会进行长时间的数据采集工作。由人力手动完成这些任务显然不现实。因此，采用扫描程序来控制仪器设备以实现自动化数据采集显得尤为重要。
+
+此外，实验过程中存在大量的校准工作，这些校准也可以通过自动化程序完成，以实现快速响应并提高实验效率。
+
+更进一步地，未来可以通过引入机器学习的方法，对测量得到的图像或数据进行自动识别，从而动态调整实验参数并指导程序执行下一步操作。这不仅能够显著提升实验效率，还为复杂实验任务的优化提供了新的可能性。
+
+## 3.4 本章小结
+
+在本章中，我们首先介绍了用于器件制备的微纳加工工艺，包括了基本原理，关键步骤和技术要点。随后，重点描述了实验中涉及的谐振腔、量子点及其耦合器件的具体工艺流程。3.3节则详细介绍了低温测试平台的基本配置和特性，为后续的测量实验提供了重要的技术支持。
+
+## 第4章 硅基三量子点系统的基本表征
+
+在前面的章节中，我们介绍了用于量子比特扩展的电路量子电动力学系统。在这种谐振腔-半导体量子点的杂化系统中，实验中会通过量子点电极直接连接谐振腔来实现耦合。然而，由于器件结构设计上的困难，与谐振腔直接相连的量子比特数目是存在限制。为进一步扩展量子比特，一个直观的方案是将谐振腔用作量子总线，连接多个量子点阵列模块。这一方案不仅能够在不显著增加工艺复杂度的情况下扩展量子比特数目，还可以实现空间上相距较远的量子比特阵列模块之间的量子信息交换。此外，谐振腔还可以充当电荷探测器，用于探测量子点以及量子比特状态。超导谐振腔与三量子点（triple quantum dot, TQD）阵列的耦合系统作为这一扩展方案的基本单元，在目前的研究中受到广泛关注。在本章中，我们聚焦于由硅基三量子点和高阻抗氮化钛共面波导谐振腔组成的杂化系统。在该系统中，TQD 通过其右侧的双量子点（right double quantum dot，RDQD）与谐振腔实现了强耦合，且全局耦合强度达到了 $g _ { 0 } / ( 2 \pi ) = 1 7 5 \ : \mathrm { M H z }$ ，这一结果验证了硅基平台构建量子电动力学系统的突出潜力，为量子比特的进一步扩展提供了新的思路。
+
+此外，通过测量量子点电荷稳定性图谱，我们清晰地展示了在不同参数下TQD中电子的占据情况。进一步地，我们对TQD中的四相点（quadruplepoints，QPs）以及量子元胞自动机（quantum cellular automata，QCA）过程进行了深入表征，验证了该系统的高可调性。这些结果不仅验证了该系统良好的量子相干特性，还为在硅基平台上实现可扩展量子比特阵列奠定了基础，有助于推动硅基量子比特的集成化和多量子比特体系的构建。
+
+## 4.1 研究背景
+
+通过采用量子点阵列的方式，可以有效增加近邻量子比特的数目。目前四比特<sup>[65]</sup>和六比特<sup>[66]</sup>实验已经被成功演示，针对更多量子比特编码的器件研究也在持续进行中<sup>[150]</sup>。此外，电路量子电动力学架构被认为是实现远距离量子比特扩展的有效方案<sup>[5]</sup>。基于这一方案，我们研究组在之前的工作中已经成功实现了五个电荷比特<sup>[107]</sup>与谐振腔的耦合；国际上也已经实现了两个自旋比特与谐振腔的耦合<sup>[114-115]</sup>。更进一步地，基于谐振腔介导的两比特门<sup>[116]</sup>也已经被演示。
+
+使用谐振腔连接量子比特阵列是一种具有潜力的方案，该方案能够实现不同阵列中量子比特之间的信息交换。在这样的量子点阵列中，借助翻转模式自旋量子比特（flopping mode spin qubit）<sup>[29,151]</sup>，双量子点可以用来耦合微波光子并实现强耦合，而剩余的量子点则可用于编码单个自旋Loss-DiVincenzo（LD）量子比特<sup>[16]</sup>。考虑到TQD可以同时编码一个LD量子比特和一个翻转模式量子比特，因此耦合谐振腔的 TQD 系统是演示基于电路量子电动力学系统的量子比特阵列与谐振腔耦合的最小单元。这种方法的优势在于，它允许量子比特阵列在长距离分离下依然具有相互作用，从而实现更高效的电极排列并减少不必要的热耗散<sup>[87]</sup>。然而，由于器件制造工艺上的挑战性，这种系统在硅基材料中研究的仍然较为有限。
+
+利用三量子点自身的特性还可以编码不同种类的量子比特，例如电荷四偶极矩量子比特<sup>[152-153]</sup> 、交换量子比特<sup>[154-156]</sup> 以及共振交换量子比特<sup>[157-158]</sup> 等。这些编码方案基于去耦合空间设计并且不需要微磁体结构。此外，使用三量子点还可以研究丰富的物理现象，包括电荷四相点<sup>[159-161]</sup>、量子元胞自动机<sup>[162-163]</sup>、双极自旋阻塞<sup>[164]</sup>、暗态<sup>[165-166]</sup>以及 Hubbard 模型中的强量子关联<sup>[167]</sup>。
+
+在本章中，我们成功制备了一个硅基三量子点与谐振腔耦合的器件。以这个器件为基础，我们首先介绍三量子点的基本理论和基本表征方法。随后我们将研究三量子点中的电荷量子比特与谐振腔的耦合特性。在本章的最后，我们通过谐振腔探测了三量子点的电荷稳定性图谱，并展示了四相点<sup>[161]</sup>和量子元胞自动机现象<sup>[162-163,168]</sup> 。
+
+## 4.2 杂化器件基本性质表征
+
+## 4.2.1 器件结构
+
+我们使用了图2.4（a）中所示的 Si/SiGe 异质结作为量子点与谐振腔耦合器件的制备基底。在进行低温实验之前，我们通常会使用光学和扫描电子显微镜（scanning electron microscope, SEM）观察器件结构，以评估是否存在结构缺陷。需要注意的是，SEM的高压电子会对基片产生一定损伤，因而使用SEM观察过的器件通常不会进行低温测试，而是选用同一批次中未经 SEM 检测的其他器件进行实验。根据我们的经验，同一批次的器件在性能上具有较高的一致性。
+
+图4.1（a）给出了用光学显微镜观察的器件整体结构图。该器件由一个高阻抗的 TiN 超导共面波导谐振腔和两个三量子点组成。由于这个器件中的右侧三量子点（right triple quantum dot，RTQD）调控性能不佳，在本章的实验研究中，仅使用了左侧的三量子点（left triple quantum dot，LTQD）。因此除非特殊说明，本章所提到的 TQD 都特指 LTQD。图4.1（b）展示了用 SEM 观察到的量子点的纳米电极结构示意图。这些电极采用第3章介绍的电子束光刻（electronbeamlithography，EBL）工艺制备，共分为三层铝电极（图中不同颜色标注）。各层电极通过原子层沉积（atomic layer deposition，ALD）设备中的氧等离子体热氧化进行绝缘处理。这些电极用于形成重叠栅极结构，其中第一层电极 SCU、SCD被称为上、下屏蔽电极，通常情况是接地的，用于形成一条宽度约为（100 nm）的狭窄导电通道。位于第二层的电极 Llead和 Rlead被称为引导电极，通过在电极上施加正电压，用于打开量子点和离子注入区之间的导电通道。和引导电极位于同一层的电极 P1，P2 和 P3 被称为势阱栅极（plunger gate），用于控制量子点的电化学势，量子点QD1，QD2和QD3也形成于这些电极下方。为了方便起见，QD1 和 QD2 的组合被称为左双量子点（left doble quantum dot, LDQD），而 QD2和 QD3 的组合被称为右双量子点（right double quantum dot，RDQD）。这个组合命名我们会在后续章节持续使用，不再重新定义。其中栅极 P3 连接到谐振腔的中心导体，并通过谐振腔波节位置的电极施加直流偏置以调节 QD3。位于第三层的电极B1，B2，B3和B4被称为势垒栅极（barriergate），用于调节量子点之间或者量子点与源漏之间的势垒大小，进而控制隧穿耦合速率。
+
+(a)  
+![](images/57ab80e2a4929242a937de120787786b88d802e69d6780e2ce75ce236c779e10.jpg)
+
+(b)  
+![](images/b6aec86dba9ece2bfe4acfe876b52edc6dbe4b3361c3b117554daacceb400200.jpg)
+
+(c)  
+![](images/2d92da57fe8257e60f32d54137f91ca6d09a6e1ac7b624fadef57c4b74198454.jpg)  
+图 4.1 杂化系统的器件结构与表征。（a）量子器件的光学显微结构图。一个超导谐振腔耦合两个三量子点，谐振腔中心导体连接一个直流电极 P3，用于调节量子点。（b）三量子点的电子显微镜伪色图。不同颜色表示不同的电极层，量子点形成于电极 P1，P2 和 P3 下方的异质结中，并通过 P3 电极和谐振腔相连。（c）谐振腔透射谱线。这里去除了一个小的本底，并进行了归一化。
+
+
+
+谐振腔的局部放大图由图4.1（a）中的插图给出。该谐振腔是由厚度为10nm的高动态电感TiN薄膜通过刻蚀工艺制备而成<sup>[169]</sup>。TiN薄膜通过磁控溅射方法进行沉积，其超导温度约为3.5K，在低温下的方块动态电感为 $L _ { \mathrm { k } } = 2 6 5 . 9 \ : \mathrm { p H / \mathrm { z } }$ o在所有量子点电极都接地的情况下，我们利用矢量网络分析仪（vector networkanalyzer，VNA）测量谐振腔的透射信号，得到图4.1（c）所示的透射信号数据。通过使用带有 Fano 效应<sup>[137,170]</sup>的 Lorentzian 曲线拟合后，我们确定谐振腔的中心频率为 $f _ { \mathrm { r } } = 4 . 9 9 3 \ : \mathrm { G H z }$ ，展宽为 $\kappa / 2 \pi = 2 . 2 \mathrm { M H z } _ { \circ }$ 进一步地，谐振腔的特征阻抗估算为 $Z _ { \mathrm { r } } \approx 3 . 5 \mathrm { k } \Omega$ 。相较于传统 50 Ω的谐振腔，这种高阻抗腔的设计理论上能够提升约8.4倍的耦合强度。在本章后续实验中，谐振腔通过一个频率为 $f _ { \mathfrak { p } } = f _ { \mathfrak { r } }$ 的探测信号驱动，以探测三量子点的电荷状态。
+
+## 4.2.2 通过电流测量量子点电荷分布
+
+![](images/88372bf358f34e912818edddddf6c2eac166e93aec93055f55c935979d27d68b.jpg)
+
+![](images/031737dff3b09516f034c768c10854dc70e397ceb99bf6e23d736967856f1eb1.jpg)  
+图 4.2 不同器件上量子点电极 pinchoff测试。（a）源漏电流和电极电压的关系，这里每个电极都可以关闭源漏电流。（b）这个器件存在两个电极的 pinchoff曲线基本重叠，说明这两个电极之间存在漏电的可能。
+
+在低温条件下，单独表征谐振腔的过程相对简单，通过矢量网络分析仪就即可完成。但是量子点器件的测试通常较为复杂，需要经历多个步骤才能确定其性质并继续找到合适的工作区域。直接测量量子点的源漏电流是最简单的获取量子点性质的途径，我们会给量子点源漏施加 $5 0 \mu \mathrm { V }$ 的交流偏置电压，用以形成源漏电流。一般使用锁相放大器（lock-inamplifier）来实现这一测量过程，因为其具有较高的信号测量精度，以及抗噪声能力。测试的第一步是确定量子点通道是否可以正常开启（turn on）。在此过程中，我们将量子点的引导电极、势垒电极以及势阱电极都施加相同的电压，并将电极电压持续增加，直到源漏电流达到1 nA左右。需要注意的是，由于界面态和表面隧穿效应的存在，达到 1 nA电流后电压不可以继续增加，否则可能会损坏器件。接下来是测试量子点电极对量子点的调控能力，这一过程称为关断（pinchoff）测试。通过逐步调低电极电压并
+
+(b)
+
+观察源漏电流是否完全关闭，评估量子点电极的调控性能。图4.2展示了实验中得到的 pinchoff曲线。图4.2（a）表面所有电极都可以调控量子点，这表明了量子点电极处于正常工作状态。然而图4.2（b）中量子点电极B2和B3的pinchoff几乎完全重合，这表明电极之间可能存在漏电现象。漏电一般是由于制备工艺缺陷或者电压击穿导致，这种情况下难以形成量子点。
+
+在确认量子点电极可以正常工作后，下一项工作是确定能否形成稳定工作的双量子点。这里要说明的是，三量子点器件中的电化学势由三个独立电极控制，因此无法通过单次二维图的测量获取全部信息。因而，对于三量子点的表征通常是从双量子点开始的。如前文所示，我们会分别对两个双量子点进行独立表征，以获取全部三个量子点的性质。在这个过程中，未被测量的量子点的势阱电极电压和引导电极保持一致，用作量子点的源漏端。图4.3给出了实验中获得的双量子点电荷稳定性图谱，其形状与图2.6中的示意图相似。通过调节量子点势垒电极的电压可以调节量子点之间的隧穿耦合速率，当隧穿耦合速率较大时，这两个量子点会形成了一个大的单量子点，其电荷稳定性图谱如图4.3（a）所示。相比之下，图4.3（b）和（c）展示了双量子点耦合强度减弱后的电荷稳定性图谱。为了更好地描述量子点的工作区域，图4.3中展示了不同器件上测量得到的量子点信号。
+
+(a)  
+![](images/9c71160ef4280d172f3795d842425789631c322cb548363e24c344fc9e54a69b.jpg)
+
+![](images/3c8a435d2ffa9a28f94e7c49647e0eb0bb8aa68844045d6ead56f746e9f0a071.jpg)
+
+(c)  
+![](images/6e61a32f83ddb2b5389f59c771cece35e319bfe05517fd66b46238d71d21c509.jpg)  
+图 4.3 使用源漏电流测量量子点稳定性图谱。（a）-（c）分别对应双点之间隧穿耦合从大到小的情况，此处数据来源于不同器件。
+
+## 4.2.3 Lever arm 测量
+
+如第2章所述，我们采用电化学势来描述量子点能级和源漏能级。然而，在实际实验中，可以直接调节的参数是量子点电极的电压。这二者的数学关系并不能通过简单的计算得出，因其受到异质结结构、电极材料及尺寸、绝缘层厚度以及种类等多种因素的影响。为了定量描述量子点中的电化学势与电极电压之间的关系，通常引入杆臂因子（leverarm）𝛼，其定义为<sup>[146]</sup>：
+
+(a)  
+![](images/50438615e74383d67201bf3aa1e9fb5cf9af822cca65baa287636a44e622b78e.jpg)
+
+(b)  
+![](images/c4793501e0e62307b36b1ad1e386bd1dfcb86d8d02ffa2c58e8c87d4c4dfacc3.jpg)
+
+(c)  
+![](images/7ffee75c88bdf555fcd33d67da0087acf1c031007f1f9ca2dafc8f540d102d86.jpg)
+
+(d)  
+![](images/1d2a2f3d97d5a1edadc61a24380ba19aaf1fa2fdb168fe914f441e984897f01c.jpg)  
+图 4.4 利用库仑菱形测量量子点电极的 lever arm。𝒏 表示量子点中的电子数目， $\pmb { { \Delta V _ { \mathrm { G } } } }$ 和$\pmb { { \Delta V } } _ { \mathbf { s D } }$ 分别表示栅极和源漏偏置电压的变化量。紫色和橙色虚线标识出了量子点的电化学势和源漏电化学势对齐的情况。（b）-（d）分别给出了（a）中红色圆形、三角形、五角星标识位置的电化学势情况。
+
+$$
+\alpha = \frac { E _ { \mathrm { a d d } } } { \varDelta V _ { \mathrm { G } } } ,\tag{4.1}
+$$
+
+其中 $E _ { \mathrm { a d d } }$ 表示量子点的增加能， $\Delta V _ { \mathrm { G } }$ 表示量子点中增加一个电子时栅极电压的变化量。电极的leverarm可以通过库仑菱形图测得，通常以meV/V为单位。
+
+图4.4（a）展示了单个量子点的库仑菱形图，反映了源漏电流与栅极电压 $V _ { \mathrm { G } }$ 以及电压源输出电压 $V _ { \mathrm { S D } }$ 的关系。由于在源漏电流的测量过程中，电路中的线路电阻远小于量子点的电阻，可以近似认为源漏偏置电压与 $V _ { \mathrm { S D } }$ 相等。因此，满足以下关系：
+
+$$
+| \mu _ { \mathrm { S } } - \mu _ { \mathrm { D } } | = e ( V _ { \mathrm { S D } } + V _ { 0 } ) ,\tag{4.2}
+$$
+
+其中 𝜇 和 𝜇 分别为源极和漏极的电化学势， $\mu _ {  { \mathrm { S } } }$ $\mu _ { \mathrm { D } }$ $V _ { 0 }$ 是电压偏移量， $e$ 是基本电荷量。图4.4（b）至（d）展示了量子点处于不同位置下的电化学势关系图。其中图4.4（d）对应的位置是量子点的源漏电化学势的差 $| \mu _ { \mathrm { S } } - \mu _ { \mathrm { D } } |$ 与量子点的增加能 $E _ { \mathrm { a d d } } = \mu ( n + 1 ) - \mu ( n )$ 相等的情况。因此在这个位置有 $E _ { \mathrm { a d d } } = e ( V _ { \mathrm { S D } } + V _ { 0 } )$ 。考
+
+
+
+虑到对称性，图4.4（a）中标注的 $\Delta V _ { \mathrm { S D } }$ 与增加能的关系为：
+
+$$
+E _ { \mathrm { a d d } } = \frac { e \varDelta V _ { \mathrm { S D } } } { 2 } .\tag{4.3}
+$$
+
+$\Delta V _ { \mathrm { G } }$ 和 $\Delta V _ { \mathrm { S D } }$ 的值可以通过库仑菱形图4.4进行提取，再结合公式4.1和4.3我们可以计算得出当前电极的 lever arm 为 126 meV/V。此外还有其他方法可以测量leverarm<sup>[171]</sup>，但这里我们就不再进行介绍。
+
+## 4.2.4 电子温度的测量
+
+![](images/6f7f40fba080f58542e0ecf5419324f2df584da325499633655254d5b04292aa.jpg)
+
+![](images/2ff591e37b697c4dad621b3e89cf3a5ee6d5733b9985b0599e315fc40a0bdda7.jpg)  
+图 4.5 电子温度的提取。（a）源漏电流和栅极电压的关系，这里我们提取出了库仑峰的半高宽为2.5mV。（b）库仑峰的半高宽和和制冷机MC层温度 $T _ { \mathrm { M C } }$ 的关系。我们通过拟合两段展宽，得到了电子温度为282mK，对应于两条线的交点。
+
+另一个对于量子点研究非常重要的参数是量子点中电子的实际温度，通常称为电子温度 $T _ { e }$ 。虽然稀释制冷机的最低温度可以低至 $T _ { \mathrm { M C } } \sim 1 0 \ : \mathrm { m K }$ ，但由于器件直接与制冷机中更高温度的部件相连，如直流线以及高频线等，电子温度通常会显著高于 $T _ { \mathrm { M C } }$
+
+实验上可以通过测量库仑峰的半高全宽来确定电子温度<sup>[172-173]</sup>。在本实验中测量得到的库仑峰如图4.5（a）所示，为提高测量精度，我们显著降低了源漏偏压。提取的半高全宽约为2.5mV，对应的电子温度约1K，这里使用了杆臂因子进行计算。这一结果显著高于通常实验所报道的电子温度，这种差异主要源于输运电流测量方法的固有缺陷<sup>[172,174]</sup>。若采用电荷感应器进行测量，则可以获得更好的测量精度。
+
+此外，我们采用了另一种方法来确定电子温度。具体而言，在不同的制冷机温度下，对同一个库仑峰的宽度进行测量，并得到库仑峰宽度随制冷机温度的变化关系，如图4.5（b）所示。由于源漏偏置以及隧穿速率导致的展宽受制冷机温度影响较小，因而第一部分的曲线斜率较缓慢<sup>[172]</sup>。当制冷机温度大于量子点的电子温度的时候，库仑峰的展宽会显著受到影响，斜率也相应增加。对这两段直线分别拟合，其交点对应的横坐标就是我们需要测量的电子温度。最终我们得到了这个器件的电子温度为 282 mK。通过制冷机线路改造，有望进一步降低电子温度。
+
+## 4.3 三量子点中的电荷比特与谐振腔的耦合
+
+## 4.3.1 利用谐振腔探测量子点信号
+
+-  
+![](images/7c7af2f7b220ed03a71e3d4724cb3de3298adbe3b7d50818da342ce518d700ad.jpg)
+
+![](images/4b1ffb158a7639410a42c8ab35857114f53a5c916fe2644862de9ffce887e3e8.jpg)
+
+  
+![](images/392439dacd95a151928925178e9664a4fcd43b92efe6ed734c2f24b23af6320f.jpg)
+
+  
+![](images/fcebb9697030ebc5e691a0fb4446fe783dbf443a7f43d3fe0bbd302de8ee5ed5.jpg)  
+图4.6 用谐振腔测量得到的RDQD稳定性图谱。（a）谐振腔归一化幅值 $\pmb { A } / A _ { \mathbf { 0 } }$ 与量子点电极电压 $V _ { \mathbf { P } 2 }$ 和 $V _ { \mathbf { P 3 } }$ 的关系。（b）谐振腔相位响应 $\pmb { \Delta \phi }$ 与量子点电极电压 $V _ { \mathbf { P } 2 }$ 和 $V _ { \mathbf { P 3 } }$ 的关系。（c）-（d）为去除本底后的谐振腔响应信号，数字标识了该区域的电子数目。
+
+谐振腔与量子点之间存在耦合，当量子点中的电子状态发生变化时，谐振腔的幅值或相位响应也会随之改变，从而使谐振腔信号能够反映量子点的状态<sup>[95]</sup>。具体来说，受到量子点的影响，谐振腔的频率和展宽都会发生变化，分别对应色散耦合（dispersive coupling）与耗散耦合（dissipative coupling）。通过探测谐振腔相位和幅值的变化，可以得到与图4.3相似的量子点电荷稳定性图谱。由于使用谐振腔测量量子点时无需依赖源漏信号，因此源漏两端是接地的，这个做法会显著提高信噪比。在电荷稳定区域（即库仑阻塞区），量子点对谐振腔的影响非常小，因而谐振腔的频率标定会在量子点的库仑阻塞区进行。
+
+如图4.6（a）和（b）所示，展示了实验中通过谐振腔探测获得的 RDQD 电荷稳定性图谱，其中幅值和相位响应信号具有类似的结果。但对与特定信号来说，二者的信号强度是不同的，后续的实验我们会根据需要选取其中一种用于展示实验结果，而不再同时展示两种信号。从图4.6（a）和（b）可以看出，电极P3 的电压对谐振腔信号的影响非常明显，表现为平行于横轴的条纹信号，这种条纹可能是由系统中的二能级效应引起的<sup>[129]</sup>。由于这些条纹会严重干扰实验现象的观察，我们会对每个 $V _ { \mathrm { P 3 } }$ 对应的谐振腔响应进行本底去除。具体来说，本文采用两种去除本底的方法：第一种是减去第一个数值，第二种是减去平均值。处理后的结果如图4.6（c）-（d）所示，量子点的隧穿线信号变得更加清晰。这两种本底去除方法在本文的后续都会使用。
+
+通过观察4.6（c）和（d）我们发现，第 2 章提到的量子点源漏隧穿线和点间隧穿线都可以通过谐振腔进行有效探测。在研究利用谐振腔探测量子源漏隧穿线信号时，前文所述的二能级模型并不能描述这一现象，相关理论可以参考文献<sup>[175]</sup>。对量子点源漏隧穿线的探测是至关重要的，因为它能够帮助我们确定量子点中实际的电子数目。在图4.6（d）中，源漏隧穿线（2，0）↔（3，0）对应于$V _ { \mathrm { P 3 } }$ 从664mV降低到560mV。这一范围内，我们未观察到点间隧穿线。这一范围远远大于 QD3 的电子充电能，据此我们推断 QD3 中的电子已经被完全排空。采用同样的方法，我们还能确定 QD2 中的电子数目，从而推导出整个电荷稳定性图谱上的电子分布。
+
+## 4.3.2 谐振腔与电荷量子比特耦合强度的提取
+
+电荷量子比特编码在量子点的点间隧穿线附近，在本研究中我们选择在隧穿线（1，0）↔（0，1）。图4.7（a）和（b）给出了我们用谐振腔探测得到的隧穿线相图。为了减小源漏对量子点信号的干扰，我们降低了量子点与源漏之间的耦合，因此这该图中未观测到量子点的源漏隧穿线。在此区域附近编码的量子比特其哈密顿量已经由式2.31给出：
+
+$$
+\hat { H } = \frac { 1 } { 2 } \varepsilon \hat { \sigma } _ { z } + t _ { \mathrm { c } } \hat { \sigma } _ { x } ,\tag{4.4}
+$$
+
+其中失谐量 𝜀 可以通过调节电极电压 $V _ { \mathrm { P } 2 }$ 和 $V _ { \mathrm { P 3 } }$ 进行控制。图4.7（a）中箭头标识了在双量子点总能量不变的情况下，𝜀的变化方向。为了实验的简便性，有时仅通过调节 $V _ { \mathrm { P } 2 }$ 或 $V _ { \mathrm { P 3 } }$ 其中的一个来调节 𝜀。双量子点之间的隧穿耦合 $2 t _ { \mathrm { c } }$ 可以被电极电压 $V _ { \mathrm { B } 3 }$ 所调节，而隧穿耦合速率与谐振腔的频率之间的关系决定了隧穿线的形式。当 $V _ { { \mathrm B } 3 } = 9 0 \mathrm { m V }$ 时， $2 t _ { \mathrm { c } } < \omega _ { \mathrm { q } }$ ，此时改变 𝜀 谐振腔频率和量子比特频率存在两个共振点，如图4.7（c）所示。这种现象在隧穿线相图4.7（a）中表现为谐振腔相位信号发生两次跳跃。当 $V _ { \mathrm { B } 3 } = 2 3 0 \mathrm { m V }$ 时，隧穿耦合速率 $2 t _ { \mathrm { c } } > \omega _ { \mathrm { q } }$ 这时改变𝜀不会出现共振点，能级情况如图4.7（d）所示。
+
+-  
+![](images/78888a4cc8ae2ba215b0fb1a73ed6e2842746c0c609e88cd0abcdd3f3b637a67.jpg)
+
+![](images/6621e2618924e710ff70fc3934e40d85141314c7a8ab60e83e50de25e76695ee.jpg)
+
+  
+![](images/0035743581b82f3d80b73443ff0135e8a8c7cd5c96902f279771e003b0bbcdde.jpg)
+
+  
+![](images/d3c46c33c3c4a73fe8899def2b26991e9a4fd5599b193cc2a57fed300f000966.jpg)  
+图 4.7 使用谐振腔探测量子点点间隧穿线（1，0）↔（0，1）。（a）谐振腔相位响应关于电极电压 $V _ { \mathbf { P } 2 }$ 和 $V _ { \mathbf { P 3 } }$ 的关系，对应于隧穿耦合速率 $2 t _ { \mathrm { c } } { < } \omega _ { \mathbf { q } \circ } \ \left( \mathbf { b } \right)$ 隧穿耦合速率满足 $2 t _ { \mathrm { c } } > \omega _ { \mathbf { q } }$ 时，谐振腔的相位响应。（c）-（d）量子比特和谐振腔的能量关系，虚线代表谐振腔能量，当 $2 t _ { \mathrm { c } } < \omega _ { \mathbf { q } }$ 时（c）存在两个交点，当 $2 t _ { \mathrm { c } } > \omega _ { \mathbf { q } }$ 时不存在交点。
+
+为了测量量子比特与谐振腔的耦合强度，我们在改变 𝜀 的同时测量了谐振腔的透射信号，得到了图4.8（a）所示的谱线。谐振腔的信号分裂为两条明显的分支，这就是通常所说的真空 Rabi 劈裂图谱<sup>[176]</sup>。为了定量确定耦合强度以及量子比特的退相干速率，我们使用Lorentzian曲线对每个失谐量下的谐振腔透射谱线进行拟合，提取了不同量子比特失谐量下的谐振腔频率以及展宽。在这里我们用 $\omega _ { \mathrm { r } } ^ { * }$ 和 $\kappa ^ { * }$ 来表示耦合量子比特后谐振腔的频率和展宽。图4.8（c）和（d）中蓝色点是我们提取出的实验数据点。根据第2章介绍的J-C模型，我们知道谐振腔频率和线宽满足以下公式<sup>[108,176]</sup>：
+
+$$
+\begin{array} { l } { \omega _ { \pm } ^ { * } = \omega _ { \mathrm { r } } \pm \frac { 1 } { 2 } \sqrt { 4 g ^ { 2 } + \left( \omega _ { \mathrm { r } } - \omega _ { \mathrm { q } } \right) ^ { 2 } } , } \\ { \kappa _ { \pm } ^ { * } = \gamma _ { \mathrm { c } } + \frac { \kappa } { 2 } \mp \left( \gamma _ { \mathrm { c } } - \frac { \kappa } { 2 } \right) \cos \theta , } \end{array}\tag{4.5}
+$$
+
+其中 $g = g _ { \mathrm { 0 } } ( 2 t _ { \mathrm { c } } / \omega _ { \mathrm { q } } )$ 表示有效耦合强度，𝑔 则表示全局耦合强度，𝛾 则表示量子 $g _ { 0 }$ $\gamma _ { \mathrm { c } }$ 比特退相干速率， $\theta = ( 1 / 2 ) \tan ^ { - 1 } \left( 2 g / ( \omega _ { \mathrm { q } } - \omega _ { \mathrm { r } } ) \right)$ 。使用公式4.5对图中的数据进行拟合，提取出的量子比特与谐振腔的全局耦合强度为 $g _ { 0 } / ( 2 \pi ) = 1 7 5 \ : \mathrm { M H z }$ 以及量子比特退相干 $\gamma _ { \mathrm { c } } / ( 2 \pi ) = 9 9 ~ \mathrm { M H z }$ 。由此，我们得到了 $g _ { 0 } > \gamma _ { \mathrm { c } } , \kappa ^ { * }$ ，这表明我们的系统能够实现电荷量子比特与谐振腔的强耦合。此外，通过输入-输出理论<sup>[110]</sup>，我们还对这一现象进行了模拟，得到了图4.8（b）所示的结果，这与图4.8（a）高度一致，进一步验证了我们系统的强耦合特性。
+
+![](images/cac23cc75ad5095fe3b01bc201a80fe087705efc9eaa934cb37f559452713c76.jpg)  
+(a)
+
+![](images/0e2e52aa45a39ee00814ce646eb268baa3d0dde65cc1ea89b7b4d3ae5d6608a3.jpg)
+
+(c)  
+![](images/a4f446c350154c341498808d2c1bc1c98fa1a1d1a1ad6844e09f74577de4b2cf.jpg)
+
+(d)  
+![](images/5c21709f86bc14bc6a807fef19e687579f5bd2c4439c2c9c38f1ca4d8c69ad45.jpg)  
+图 4.8 量子点耦合强度的测量。（a）谐振腔透射信号 $\pmb { A } / A _ { \mathbf { 0 } }$ 关于探测频率 $f _ { \mathfrak { p } }$ 和电极电压$V _ { \mathbf { P } 2 }$ 之间的关系，能够观测到清晰的真空 Rabi 劈裂图谱。（b）使用输入-输出理论对谐振腔透射信号进行模拟。 ${ \bf \Pi } ( { \bf c } ) \mathrm { ~ - ~ } ( { \bf d } )$ 对图（b）中每个电压对应的谐振腔信号进行拟合，并提取谐振频率和展宽。再对这些数据进行拟合得到通过拟合得到耦合强度 $g _ { \mathrm { c } } / ( 2 \pi ) = 1 7 5 ~ \mathrm { M H z }$ 和量子点退相干 $\gamma _ { \mathrm { c } } / ( 2 \pi ) = 9 9 ~ \mathrm { M H z }$ o
+
+电荷量子比特与谐振腔的强耦合对于我们进行电路量子电动力学相关实验至关重要，虽然我们使用了高阻抗谐振腔，但在实验上实现强耦合仍然是不容易的，通常我们需要筛选大量的器件，才能得到一个强耦合器件。我们多年积累的经验指出，主要有以下几个因素限制了强耦合：
+
+1.量子点电极与谐振腔连接不佳。
+
+2.量子点电极的差分杆臂因子过小，这通常与电极结构、量子点形成位置以及量子阱深度有关。
+
+3.电荷量子比特退相干过大，这通常与制冷机线路，异质结质量以及氧化层有关。
+
+4.谐振腔的本底信号过大。严格来说，这一点不影响耦合强度，但当谐振腔与量子点耦合之后，谐振腔信号会进一步降低，导致无法观察 Rabi 劈裂的实验现象。这个问题可以通过增加参量放大器、增加滤波器，或者改进谐振腔结构设计来解决。
+
+## 4.4 三量子点性质的研究
+
+## 4.4.1 三量子点中的电子数目确定
+
+完成了对耦合强度的表征后，我们将研究重点转向三量子点系统。为了在三量子点中编码量子比特，研究三量子点基本性质是极为重要的。我们首先需要测量三量子点的稳定性图谱，先前的研究大多数是通过源漏或者单电子晶体管完成探测的，这些方法通常可以探测到非常好的量子点的源漏隧穿线信号。然而在本研究中，我们将使用谐振腔作为探测器。与传统探测方法相比，谐振腔对量子点点间隧穿线的探测更加灵敏，使得我们能够从新的角度深入探讨三量子点的输运特性。
+
+双量子点系统的电荷稳定性图谱是一个二维空间，能够直接确定每个量子点中的电子数目。与此不同的是，三量子点系统的电荷稳定性图谱由三个栅极电压 $V _ { \mathrm { P l } }$ ， $V _ { \mathrm { P } 2 }$ 和 $V _ { \mathrm { P 3 } }$ 所定义的三维空间所构成<sup>[160-161]</sup>。在实验上无法通过一次测量获取三个量子点的全部信息。通常固定其中一个电极电压，改变其他两个电极的电压，从而获得部分信息。一个特殊情况是，当 QD1 或者 QD3 中具有大量电子时（通常需要在 10 个电子以上），整个系统可以近似视为双量子点系统。在图4.6中我们展示了确定 RDQD 中电子数目的方法。我们将同样的方法应用于 LDQD，用以确定 LDQD 中的电子数目。图4.9（a）展示了 LDQD 的电荷稳定性图谱，这里我们选择了信号最佳的源漏隧穿线用于确定 QD1 电子数，这里QD2的电子数通过先前实验获得。至此，三个量子点中的电子数目都被确定。图4.9（b）和（c）给出了在电子数目确定的情况下，我们从 $V _ { \mathrm { P l } }$ 和 $V _ { \mathrm { P } 2 }$ 张成的空间，以及 $V _ { \mathrm { P } 2 }$ 和 $V _ { \mathrm { P 3 } }$ 张成的空间中探测到的量子点电荷稳定性图谱。图4.9（b）是在 $V _ { \mathrm { P 3 } } = 7 7 6 \mathrm { m V }$ 时测量的，其中顶部的粉色虚线对应 $V _ { \mathrm { P l } } = 7 4 0 \mathrm { m V }$ 。而图4.9（c）则是在 $V _ { \mathrm { P l } } = 7 4 0 \mathrm { m V }$ 时进行测量的，其中粉色虚线对应 $V _ { \mathrm { P 3 } } = 7 7 6 \mathrm { m V }$ 。这两条虚线表示相同的位置，利用它们可以在分离的相图之间建立联系，从而更清晰地分析量子点中的电子分布情况。
+
+(a)  
+![](images/144906bf583686eae88fd2a69cb6adf44b87e5c327252c2f1efa8e3bf2c96ff8.jpg)
+
+![](images/d8d17b8965a48881bce3009537f3a7d41aae66650522beabb17c05adc125a349.jpg)
+
+![](images/576353c758789da6ebbebaa222ad6c5f5137c99225501e956fcea5c127156d9f.jpg)  
+图 4.9 三量子点中电子数目的确定。（a）LDQD 电荷稳定性图谱，用于确定 QD1 中的电子数目。（b）谐振腔相位响应和电极电压 $V _ { \mathbf { P 1 } }$ 与 $V _ { \mathbf { P 1 } }$ 的关系，全部量子点中电子数目都是确定的。（c）从 $V _ { \mathbf { p } _ { 2 } }$ 和 $V _ { \mathbf { P 3 } }$ 的角度看量子点相图，此处粉色虚线与（b）中相对应。
+
+## 4.4.2 量子元胞自动机和四相点
+
+一个可以用于编码量子比特的量子点阵列，不仅要求能够精确控制量子点中的电子数目，还要求具备良好的可调性。接下来我们将通过三量子点相图的测量来说明量子点的良好可调性。在实验中，我们选择 $V _ { \mathrm { P l } }$ 和 $V _ { \mathrm { P 3 } }$ 作为变量，测量三量子点的电荷稳定性图谱。在这种情况下，不同量子点的源漏隧穿线较容易区分，便于我们观察每个量子点中电荷态的演化。图4.10（a）展示了通过谐振腔测到的三量子点电荷稳定性图谱。实验中我们扫描 $V _ { \mathrm { P l } }$ 和 $V _ { \mathrm { P 3 } }$ 并固定 $V _ { \mathrm { P } 2 } = 8 4 2 ~ \mathrm { m V } .$ 从图4.10（a）中我们可以观察到三种具有不同负斜率的线，他们分别对应三个量子点的源漏隧穿线。其中用黄色虚线标记的是 QD2 的源漏隧穿线，其在图中的具体位置主要受到 $V _ { \mathrm { P } 2 }$ 控制。
+
+在图4.10（a）中黑色方框内部区域，三个量子点的源漏隧穿线相互靠近，其电荷态分布与其他区域表现出显著差异。为了进一步分析该区域的电荷态演化，我们保持电极 P2 的电压恒定，稍微调整势垒电极的电压，并用更小的扫描间隔进行测量，得到了图4.10（b）所示的电荷分布图。在这个区域中，我们观察到隧穿线围成了两个区域，即电荷态为（1，5，3）的区域Ⅰ和电荷态为（2，4，4）的区域Ⅱ。在当前条件下，区域Ⅰ和区域Ⅱ分别是四边形和六边形，通过区域形状的不同，我们可以迅速判断出三个量子点之间的能级关系<sup>[159]</sup>。此外，这些隧穿线相交形成了八个交汇点A-H，这些点表示了三个不同电荷态的简并。类似于双量子点，我们将这些点称为三相点。我们在图4.10（c）中我们展示了这八个三相点处量子点电化学势的对齐情况，共存在四种不同类型。例如在三相点B，QD1的能级与源漏能级对齐，同时QD2的能级与QD3的能级对齐，但三个量子点的能级并不相同。
+
+在平衡输运条件下，三量子点中的三相点不会发生连续的电子隧穿过程<sup>[161]</sup>。只有当三个量子点的电化学势同时和源漏对齐时，这种连续的隧穿过程才能发图4.10 三量子点电荷稳定性图以及能级关系。（a）谐振腔相位响应与电极电压 $V _ { \mathbf { P 1 } }$ 和 $V _ { \mathbf { p 3 } }$ 的关系。图中倾斜的黑色虚线表示QD1的源漏隧穿线，黄色虚线表示QD2的源漏隧穿线。（b）在三个源漏隧穿线相交的区域观测到的电荷稳定性图谱。粉色标记了图中存在的八个三相点。区域Ⅰ和区域Ⅱ分别表示电荷态（1，5，3）和（2，4，4）。（c）用谐振腔测量的四相点$\pmb { \alpha }$ 和 $\beta .$ 。原本的八个三相点变为四个三相点，两个四相点。（d）模拟得到了三相点附近谐振腔的相位响应。（e）对应于（c）中八个四相点的能级图。（f）对应于图（c）中四相点时的能级关系图。
+
+![](images/852eabfe1b92c99c327ff97a8495b881d495bf99403d388ecfcebf1f86c51cba.jpg)  
+三相点（Triple points）
+
+(a)  
+![](images/c2292a4e56dd0847698654c9c1cadf6ac48271676f4bee583cb799d92297a3b9.jpg)  
+(b)
+
+![](images/673fa8a71419c46f04dfd711f5bf7b69434cd9f00a616fea6212db24ff1ed0a2.jpg)
+
+(c)  
+![](images/248b48804393980b57baa4190958057b0e2a84430116973a7c531874a04e84ff.jpg)  
+(d)
+
+![](images/018838b25d56323e0cfb869e9edd06da945eba90b3799a4f07efca5eb0780e50.jpg)
+
+(e)  
+![](images/f1e3e7fd3b067001a726267f6df77faa753d927a607d1567054db9efd213966b.jpg)
+
+![](images/fc06663e563c0d2c2de7cc7a99b5c4b2d6a831eae14a272ac9e89ddd62b65f91.jpg)  
+(f)
+
+![](images/9006c0fc4cf0269b159b5fb328e4f1ae649b82d1cf4288757ad3891acfbb9130.jpg)  
+B
+
+![](images/75dba5231fb0b590dba98964756c875ddc363f6b37e89fa129d8ed3694eac55c.jpg)  
+D
+
+生。这种情况在电荷稳定性图中表现为三条源漏隧穿线相交于一个点。在该点处四个电荷态的能量是简并的，这个点被称为四相点（quadruplepoints， $\mathbf { Q P s } )$ ）。与双量子点中的三相点可以轻松在相图上找到不同，三量子点的相图是一个三维空间，因此四相点在二维图中较难显现。要在二维图中观测到四相点，需要多个电极电压的精确调节。因此，能够在二维图中发现四相点表明量子点系统具有较好的调节能力。在实验中，我们将P2的电压固定到 $V _ { \mathrm { P 2 } } = 8 4 2 \ : \mathrm { m V }$ ，并仔细调节势垒电极B3和B4的电压使得三相点B（D）和E（F）合并为四相点 $\alpha \ ( \beta )$ 。最终我们得到了图4.10（c），此时区域Ⅰ和Ⅱ都演化成了四边形。在这里我们选择调节势垒电极 B3 和 B4 是因为这二者对量子点具有更小的 lever arm，能够实现更精细的调节。在四相点处，电子的跃迁过程可以表示为：
+
+$$
+\alpha : ( 1 , 4 , 4 )  ( 2 , 4 , 4 )  ( 1 , 5 , 4 )  ( 1 , 5 , 3 ) ,\tag{4.6}
+$$
+
+$$
+\beta : ( 1 , 5 , 3 )  ( 2 , 5 , 3 )  ( 2 , 4 , 4 )  ( 2 , 4 , 3 ) .\tag{4.7}
+$$
+
+对应的量子点能级关系我们放在了图4.10（f）中，每个量子点的能级都与源漏相平齐。当然，还存在其他形式的四相点<sup>[177]</sup>，本文对此不做进一步探讨。此外，我们利用 Hubbard 模型<sup>[178]</sup>模拟了三量子点的输运过程，并结合输入-输出理论计算出了四相点附近的谐振腔相位响应，结果如图4.10（d）所示。模拟结果与图4.10（c）中的实验结果符合较好。由于观测四相点的条件非常严格，在一般的三量子点相图中四相点并不一定出现，因而四相点的成功测量，证明了我们三量子点系统优良的调节性能，还为后续实验的开展提供了重要依据。
+
+两个四相点 $\alpha$ 和 $\beta$ 的连线（图4.10（b）中对应的是点B和D的连线），构成了区域Ⅰ和Ⅱ的边界。我们观察到这条线的斜率与所有其他过程都不相同，预示着这是一个新的隧穿过程。在这条线上电荷态（1，5，3）和（2，4，4）的能量是简并的，这个过程涉及三个量子点和两个电子的跃迁，因此是一个高阶过程。其物理模型可以描述如下：当系统处于（1，5，3）态时，若QD1从源漏电子库获取一个电子，这会改变 QD2 和 QD3 的能级，从而导致 QD2 中的电子隧穿到QD3，这两个过程是近乎是同时发生的。反之，当系统处于（2，4，4）态时，若QD3 中的一个电子隧穿到 QD2，会同时导致 QD1 中的一个电子会隧穿到源漏。这个现象是三量子点体系所特有的，被称为量子元胞自动机现象，利用这一现象可以设计经典和量子逻辑门<sup>[162-163,168]</sup>。
+
+## 4.5 本章小结
+
+本章以三量子点与谐振腔的耦合器件为研究对象，首先对量子点的基本性质进行了系统表征，包括量子点电荷稳定性图谱、量子点电极的杆臂因子以及电子温度。随后，详细介绍了利用谐振腔探测量子点的基本方法和相关实验现象。在此基础上，我们展示了在该三量子点系统中实现电荷量子比特与谐振腔强耦合的实验结果。
+
+此外，通过将谐振腔作为探测器，我们成功确定了三个量子点中的各量子点中的电子数目，并利用谐振腔研究了三量子点的电荷稳定性图谱。在实验中，我们探测到三量子点中的四相点和量子元胞自动机现象，验证了该系统的高可调性。
+
+通过拟合分析，我们得到了电荷量子比特的退相干速率 $\gamma _ { \mathrm { c } } / ( 2 \pi ) = 9 9 ~ \mathrm { M H z }$ 这一较高的退相干速率对量子计算的实现存在不利影响。因此，在接下来的章节中，我们将研究重心转向退相干速率更低的自旋量子比特，为实现高性能量子比特提供更优的物理平台。
+
+## 第5章 硅基自旋量子比特与谐振腔耦合
+
+在上一章中，我们探讨了三量子点中电荷量子比特的性质及其与谐振腔的耦合机制。本章将进一步研究三量子点中编码的翻转模式自旋量子比特（flopping-modespinqubit）<sup>[29,151]</sup>。相比电荷量子比特，翻转模式自旋量子比特因其更长的相干时间和较高的操作灵活性，成为实现高效量子信息处理的理想候选者。在本章中，我们依次在不同位置编码了两个翻转模式自旋量子比特，并且成功实现了其与谐振腔的强耦合，耦合强度分别为 21.8 MHz和 13.8 MHz。此外我们在实验中实现了翻转模式自旋量子比特的快速操作，其 Rabi 振荡频率达到 16.9 MHz，相干时间则高达152ns。这些特性不仅提高了量子比特的操作效率，同时在量子信息传输过程中能有效保证信息的保真度，为量子计算的可靠性提供了坚实保障。
+
+## 5.1 研究背景
+
+量子比特是量子计算的基本单元，其性能直接决定了量子计算机的计算能力和效率。然而，传统的Loss-DiVincenzo（LD）量子比特由于缺乏电偶极矩，难以实现与谐振腔的高效耦合。相比之下，翻转模式自旋量子比特通过结合自旋与电荷的特性，能够实现与谐振腔的有效耦合。具体来说，翻转模式自旋量子比特编码在双量子点中，并利用材料的自旋轨道耦合或者微磁体<sup>[179]</sup>产生的梯度磁场实现自旋-电荷杂化。由于这种杂化效应，翻转模式自旋量子比特能够借助电荷量子比特的电偶极矩实现与谐振腔产生耦合。此外，自旋-电荷杂化的存在还大大增强了翻转模式自旋量子比特的操控灵活性<sup>[149]</sup>，使其可以实现快速的电学单比特操作<sup>[151]</sup>。与此同时，利用自旋与谐振腔的耦合，还可以实现对量子比特状态的高保真度读取<sup>[124,126]</sup>。这种特性使翻转模式自旋量子比特成为量子信息处理与传输的理想选择。
+
+在现有研究中翻转模式自旋量子比特已经被广泛运用于 Si/SiGe 体系中的实验中，并实现了其与谐振腔的强耦合<sup>[112-113]</sup>。更进一步地，通过微磁体角度的设计，不仅实现了两个量子比特的长程耦合<sup>[114-115]</sup>，还实现了基于谐振腔介导的两比特门<sup>[116]</sup>。这些成果验证了翻转模式自旋量子比特在量子比特扩展架构中的潜力。此外，空穴型翻转模式自旋量子比特也实现了和谐振腔的强耦合<sup>[117]</sup>。在$\mathrm { S i } / \mathrm { S i O } _ { 2 }$ 系统中，研究者实现了对翻转模式自旋比特的快速电学操作<sup>[180]</sup>，在这个工作中他们使用了单电子晶体管作为探测器。相关理论文章也给出了使用翻转模式量子比特进行两比特门的方案<sup>[181]</sup>。这些实验成果与相关理论预测相符<sup>[29]</sup>，进一步巩固了翻转模式量子比特作为高性能量子比特的研究价值。
+
+尽管先前的研究已在双量子点中实现了翻转模式量子比特与谐振腔的耦合，但针对更多量子点与谐振腔耦合的研究仍较为稀缺，主要受制于器件制备上的难题。Petta研究组成功制备出了Si/SiGe三量子点与谐振腔的耦合器件，并研究了三量子点中的能谷态<sup>[129]</sup>，同时利用其中一个辅助比特进行了高保真度量子比特读取<sup>[124]</sup>。但由于耦合强度的限制，他们未能进一步探究三量子点中翻转模式量子比特与谐振腔的耦合特性。在本章的研究中，我们通过实验验证了三量子点中翻转模式自旋量子比特的强耦合特性。我们的研究证明了即便编码量子比特的量子点与谐振腔之间不存在直接电极连接的情况下，也可以实现量子比特与谐振腔的强耦合，让自旋强耦合实验突破了双量子点的限制，为量子比特阵列之间的耦合提供了更多可能的途径。
+
+## 5.2 三量子点中翻转模式自旋比特编码
+
+## 5.2.1 器件结构
+
+如图5.1所示，这里使用到的器件是与第4章中具有相似结构的另一个器件。在这个器件中，谐振腔频率为 $f _ { \mathrm { r } } = 7 . 3 3 2 \ : \mathrm { G H z }$ 。在量子点电极和源漏都接地的情况下，测得谐振腔展宽为 $\kappa / 2 \pi = 5 . 1 3 ~ \mathrm { M H z }$ ，阻抗为 $Z _ { \mathrm { r } } = 2 . 5 \mathrm { k } \Omega$ o
+
+由于电子自旋无电偶极矩，为了实现对自旋的电学操作以及实现其与谐振腔的耦合，需要将自旋态与电荷态杂化，即自旋轨道耦合。在一些材料中，存在天然的自旋轨道耦合效应，如锗空穴体系<sup>[182]</sup>，纳米线体系<sup>[34]</sup>等，这种耦合效应使得自旋可以被电场操作，这种操作方法也叫做电偶极自旋共振（electric-dipolespin resonance，EDSR）<sup>[183]</sup>。然而，对于硅/硅锗异质结中的电子来说，其自身的自旋轨道耦合效应非常弱，难以满足对比特操作的要求。
+
+通常，微磁体被设计用来产生人工自旋轨道耦合<sup>[179]</sup>，其原理如图5.1（c）所示。在外加磁场的作用下，微磁体被磁化，产生非均匀磁场，通常也叫做梯度磁场，使得量子点附近的总磁场与位置相关。总磁场 $B _ { \mathrm { t o t } }$ 由两部分组成，外加磁场$B _ { \mathrm { e x t } }$ 和微磁体产生的磁场 $B _ { \mathrm { M } }$ 。在磁场作用下，自旋|↑⟩和自旋|↓⟩被解简并，其能级间隔为 $E _ { z } = g \mu _ { \mathrm { B } } B _ { \mathrm { t o t } }$ ，这里的 𝑔 是朗德 𝑔 因子，𝜇 是玻尔磁子。自旋比特 $\mu _ { \mathrm { B } }$ 的频率由公式 $h f = E _ { z }$ 给出，这就决定了电子自旋翻转频率与电子的位置相关，也即实现了自旋轨道耦合。微磁体会在𝑥𝑦𝑧三个方向产生磁场，其中沿着外磁场方向的分量最大。如图5.1（c）所示，在对称双量子点的情况下，微磁体产生的𝑥方向的磁场在两个量子点中的方向相反，从而使双量子点之间的磁场差达到最大值。当电子在双点之间运动时，会发生自旋状态翻转。除了比特操作外，利用微磁体带来的自旋轨道耦合，谐振腔和自旋的耦合也得以实现<sup>[149]</sup>。
+
+微磁体结构在图5.1（a）中用黄色虚线所标记，该磁体由250nm的两块Co薄膜构成，并且与量子点方向成 $1 5 ^ { \circ }$ 夹角，这是为了将来进行多比特实验时，可以使用旋转全局磁场的方法差异化调节不同位置的量子比特频率<sup>[114-115]</sup>。在图5.1（c）给出了微磁体的空间结构示意图，对于这里的三量子点来说，我们将量子点2 放在了中心位置，在这个情况下，𝑥 方向的梯度磁场在量子点 1 和量子点 3 中是方向相反的。
+
+![](images/7337ed2edb8f46779b3c770c81c8ce87162401794bde17a02482535b77788b47.jpg)
+
+(b)  
+![](images/8ccd6d81180e22fa76208b9ca18b7e0a200920d9d056e402e84fb85ca90fffc2.jpg)
+
+![](images/fa8dade587d34bdfa9a0c615e81fde68fd09d431395f5b98efcd04998e540692.jpg)  
+图 5.1 量子器件结构示意图。（a）三层结构量子点器件 SEM 照片图，黄色虚线的区域标识了微磁体的位置。（b）图（a）中粉色曲线处的截面图，外磁场沿着量子点方向。（c）使用谐振腔耦合双点中翻转模式自旋量子比特的示意图，这里电子自旋通过微磁体产生的梯度磁场与电荷态产生杂化。图片引自文献<sup>[110]</sup>。
+
+## 5.2.2 能级结构
+
+翻转模式量子比特编码需要编码在双量子点中，本节将以三量子点中的LDQD为例，探讨在考虑自旋的情况下双量子点中电子的能级结构。由于梯度磁场的存在，系统的哈密顿量可以表示为以下形式<sup>[110]</sup>：
+
+$$
+\hat { H } _ { 0 } = \frac { 1 } { 2 } \left( \varepsilon \hat { \tau } _ { z } + 2 t _ { c } \hat { \tau } _ { x } + B _ { z } \hat { \sigma } _ { z } + A B _ { x } \hat { \sigma } _ { x } \hat { \tau } _ { z } \right) ,\tag{5.1}
+$$
+
+其中 $\hat { \tau } _ { \alpha }$ 和 $\hat { \sigma } _ { \alpha }$ 分别表示电荷空间和自旋空间的泡利算符。 $B _ { z }$ 表示 𝑧 方向的磁场大小， $\varDelta B _ { x } = ( B _ { x } ^ { \mathrm { R } } - B _ { x } ^ { \mathrm { L } } ) / 2$ 则表示两个量子点𝑥方向的磁场差。哈密顿量的前两项表示电荷态，第三项表示自旋态，第四项表示自旋和轨道的耦合。以{|+,↑⟩,|−,↑
+
+⟩,|+,↓⟩,|−,↓⟩} 为基矢，可以将哈密顿量写成
+
+$$
+\begin{array} { r } { \hat { H } _ { 0 } = \frac { 1 } { 2 } \left( \begin{array} { c c c c } { \Omega + B _ { z } } & { 0 } & { A B _ { x } \sin \theta } & { - A B _ { x } \cos \theta } \\ { 0 } & { - \Omega + B _ { z } } & { - A B _ { x } \cos \theta } & { - A B _ { x } \sin \theta } \\ { A B _ { x } \sin \theta } & { - A B _ { x } \cos \theta } & { \Omega - B _ { z } } & { 0 } \\ { - A B _ { x } \cos \theta } & { - A B _ { x } \sin \theta } & { 0 } & { - \Omega - B _ { z } } \end{array} \right) , } \end{array}\tag{5.2}
+$$
+
+这里的 $\varOmega = 2 E _ { + } = \sqrt { \varepsilon ^ { 2 } + 4 t _ { \mathrm { c } } ^ { 2 } } , E _ { + }$ 是公式2.34给出的电荷态能量。 $\begin{array} { r } { \theta = \arctan \left( \frac { \varepsilon } { 2 t _ { c } } \right) } \end{array}$ 是混合角。通过计算可以得到图5.2所示的四个本征态的能量，在这里隧穿耦合速率 $2 t _ { \mathrm { c } }$ 和 $E _ { z } / h$ 的相对大小决定了能级图的形状。在失谐量𝜀较大的情况下，这四个本征态近似于四个基矢量 $\{ | + , \uparrow \rangle , | - , \uparrow \rangle , | + , \downarrow \rangle , | - , \downarrow \rangle \}$ 。
+
+这里考虑一个特殊情况，即 $\varepsilon = 0$ ，此时，电荷态与自旋态处于最大杂化的状态，哈密顿量被简化，我们可以直接计算出相应的本征能量：
+
+$$
+\begin{array} { r } { E _ { 3 , 0 } = \pm \frac { 1 } { 2 } \sqrt { \left( 2 t _ { \mathrm { c } } + B _ { z } \right) ^ { 2 } + \Delta B _ { x } ^ { 2 } } , } \\ { E _ { 2 , 1 } = \pm \frac { 1 } { 2 } \sqrt { \left( 2 t _ { \mathrm { c } } - B _ { z } \right) ^ { 2 } + \Delta B _ { x } ^ { 2 } } , } \end{array}\tag{5.3}
+$$
+
+以及本征态：
+
+$$
+\begin{array} { l } { \displaystyle | 0 \rangle \simeq | - , \downarrow \rangle , } \\ { \displaystyle | 1 \rangle = \cos \frac { \phi } { 2 } | - , \uparrow \rangle + \sin \frac { \phi } { 2 } | + , \downarrow \rangle , } \\ { \displaystyle | 2 \rangle = \sin \frac { \phi } { 2 } | - , \uparrow \rangle - \cos \frac { \phi } { 2 } | + , \downarrow \rangle , } \\ { \displaystyle | 3 \rangle \simeq | + , \uparrow \rangle , } \end{array}\tag{5.4}
+$$
+
+这里 $\begin{array} { r } { \phi = \arctan \frac { A B _ { x } } { 2 t _ { \mathrm { c } } - B _ { z } } [ \phi \in ( 0 , \pi ) ] } \end{array}$ 是自旋轨道混合角。
+
+## 5.2.3 比特编码
+
+我们在第2章中介绍了LD自旋量子比特，其利用单个量子点中的电子自旋进行编码。这里我们介绍另一种自旋量子比特的编码，即翻转模式自旋量子比特。这种量子比特编码在双量子点中，利用了电荷与自旋的特性，具体来说，是利用了前文所述的 $E _ { 0 }$ 和 $E _ { 1 }$ 这两个能级。从能级可以看出，当 $| \varepsilon | \gg 0$ 的时候，翻转模式量子比特与LD量子比特是等价的，实际上对应于电子自旋主要分布与单个量子点。当 $\varepsilon = 0$ 时，如图5.3（a）所示，电子可以分布于两个量子点中，因而，翻转模式量子比特耦合了更多的电荷态成分，这与LD量子比特是不相同的。在本章中，我们主要研究的情况就是 $\varepsilon = 0$ o
+
+由于我们实验中的 $B _ { x }$ 一般为 15 mT 左右<sup>[113]</sup>，相对于外磁场是一个小量，其在 $\varepsilon = 0$ 处引起的 $E _ { 1 }$ 能量变化通常可以忽略，因而我们仍然认为量子比特的频率 $f _ { \mathrm { q } } = ( E _ { 1 } - E _ { 0 } ) / h \approx g \mu _ { \mathrm { B } } B _ { \mathrm { t o t } } \circ$
+
+-  
+![](images/326eb0a15d54d0d4b6f563f4b0df6b11ffa3f6fb90260c09968d696a4664ef99.jpg)
+
+  
+![](images/e94fa0242f50822ae76528f9d88f0e2eb6d1e3e06434f439d418f43c0e8d0c92.jpg)  
+图5.2 存在外磁场情况下的单个电子能级 $E _ { n }$ 示意图。这里取 $\mathbf { B } _ { z } = 2 \mathbf { 0 0 } \mathbf { m } \mathbf { T }$ $\pmb { \Delta B _ { x } } = \mathbf { 8 0 } \mathbf { m T }$ 为了观察到梯度磁场的影响，我们采用了显著高于实验的 $\pmb { \Delta B _ { x } }$ 值（a） $t _ { \mathrm { c } } = 3 . 7$ GHz 时翻转模式量子比特能级结构，满足 $2 t _ { \mathrm { c } } > E _ { z } / h$ 。灰色虚线显示了 $\pmb { \Delta B _ { x } } = \pmb { 0 }$ 的情况。（b） ${ \pmb t } _ { \mathrm { c } } = 2 \bf G H z$ 时翻转模式量子比特能级结构，满足 $2 t _ { \mathrm { c } } < E _ { z } / h$
+
+对于双量子点来说，这种编码翻转模式自旋量子比特的方式是唯一的。但是对于一个三量子点来说，QD1 和 QD2 可以组成 LDQD，而 QD2 和 QD3 则能组成 RDQD，这两种情况都可以进行量子比特的编码。对于本文涉及到的实验来说，我们分别在这两个双点中进行了比特编码，其势阱如图5.3（b）和5.3（c）所示，当其中一个双点工作的情况下，另一个量子点的能级则被调节开。
+
+![](images/259ac359ba4490ac476e1c0b893d57df95292d698071622fe2ae42c4bf8a53ec.jpg)
+
+![](images/70524f808adc3ced3132f6c5a75ad4e3658a5d12d2ed57d08c0277137bee25b1.jpg)
+
+![](images/31639c82ded9dd17115a15ecbc0cd32722902e40eb5b13def825d732388d7475.jpg)  
+图5.3 翻转模式量子比特编码示意图。（a）双量子点模型下翻转模式量子比特示意图。（b）将翻转模式量子比特编码在右侧双量子点，这时量子比特有直接的电极相连。（c）量子比特编码在左侧双量子点的情况，不存在电极直接相连。
+
+## 5.3 翻转模式自旋比特与谐振腔的耦合
+
+## 5.3.1 电荷态测量
+
+为了更加有效地测量自旋状态，我们先从电荷态的测量开始。图5.4（a）展示了通过谐振腔探测获得的右侧双量子点中存在单个电子时的相图，此时我们保持 $V _ { \mathrm { p 1 } } = V _ { \mathrm { L l e a d } }$ ，这意味着QD1处于多电子区域。箭头给出了双量子点能量固定不变时 𝜀 的变化方向，在量子点的点间隧穿线处有 $\varepsilon = 0$ ，我们将量子点电极的电压 $V _ { \mathrm { P } 2 }$ 和 $V _ { \mathrm { P 3 } }$ 固定在红色圆圈标记的位置。
+
+![](images/f0e3c626edc1a23ab3b805c4a1fe561d76486a09182a8fe8886035fa2e61a21e.jpg)
+
+(b)  
+![](images/4517f583e189c6cea5b271e179f9c8ae178b32cef0e28514efd09385c2f0a6d3.jpg)  
+图5.4 双量子点电荷态双色调制谱测量。（a）RDQD单电子区域电荷稳定性图谱，这里的信号已经进行了本底去除。（b）通过双色调制谱测量得到的电荷比特展宽以及隧穿耦合速率。
+
+首先我们要确定的是电荷量子比特的频率，这通常是使用双色调制谱（two-tonespectroscopy）来完成的。在这个实验中需要使用两路微波，一路施加在谐振腔上，用来探测和驱动谐振腔，我们称探测微波 $f _ { \mathrm { p } } = \omega _ { \mathrm { p } } / ( 2 \pi )$ 。在用谐振腔测量量子点相图时，我们固定探测频率 $f _ { \mathfrak { p } } = f _ { \mathfrak { r } }$ 。另一路微波用于激发量子比特，通常称为驱动微波其频率为 $f _ { \mathrm { d } } = \omega _ { \mathrm { d } } / ( 2 \pi )$ 。驱动微波施加在量子点电极上的，在我们的器件中，电极 P1 和 P2 均可以用于施加高频微波。一般情况下，电荷量子比特是处于基态的，此时稳态的布居数 $\langle \sigma _ { z } \rangle$ 为 −1，当比特处于激发态时 $\langle \sigma _ { z } \rangle$ 为+1。当施加的驱动频率 $f _ { \mathrm { d } }$ 和比特频率相同时，量子比特会被微波激发，从而比特的稳态布局发生变化，写成<sup>[144]</sup>：
+
+$$
+\langle \hat { \sigma } _ { z } \rangle = - \left( 1 + \frac { 4 g ^ { 2 } n _ { \mathrm { d } } } { \gamma _ { 1 } } \frac { \gamma } { \left( \omega _ { \mathrm { q } } - \omega _ { \mathrm { d } } \right) ^ { 2 } + \gamma ^ { 2 } } \right) ^ { - 1 } ,\tag{5.5}
+$$
+
+其中 $\gamma = \gamma _ { 1 } / 2 + \gamma _ { \phi }$ 表示量子比特的退相干速率， $\gamma _ { 1 }$ 和 $\gamma _ { \phi }$ 分别表示比特驰豫和退相位速率，𝑛 表示光子数，𝜔 是量子比特频率。在稳态情况下，透射式谐振腔 $n _ { \mathrm { d } }$ $\omega _ { \mathsf { q } }$ 的响应由下式给出：
+
+$$
+S _ { 2 1 } = \frac { - \mathrm { i } \sqrt { \kappa _ { 1 } \kappa _ { 2 } } } { \left( \omega _ { \mathrm { r } } - \omega _ { \mathrm { p } } \right) - \mathrm { i } \kappa / 2 - g _ { \mathrm { e f f } } \chi } ,\tag{5.6}
+$$
+
+其中 $\begin{array} { r } { \chi = \frac { g _ { \mathrm { e f f } } } { \mathrm { i } ( \omega _ { \mathrm { q } } - \omega _ { \mathrm { p } } ) + \gamma } } \end{array}$ 为双量子点内电子的磁化系数， $g _ { \mathrm { e f f } }$ 是有效耦合强度。量子比特布居的变化，也会导致谐振腔频率发生改变<sup>[184]</sup>：
+
+$$
+\begin{array} { r l } & { \varDelta \omega _ { \mathrm { r } } = \mathrm { R e } \left( g _ { \mathrm { e f f } } \chi \right) \left. \sigma _ { z } \right. } \\ & { \quad = \frac { g _ { \mathrm { e f f } } ^ { 2 } \left( \omega _ { \mathrm { q } } - \omega _ { \mathrm { p } } \right) } { \left( \omega _ { \mathrm { q } } - \omega _ { \mathrm { p } } \right) ^ { 2 } + \gamma ^ { 2 } } \times \frac { - 1 } { 1 + \frac { 4 g _ { \mathrm { e f f } } ^ { 2 } n _ { \mathrm { d } } } { \gamma _ { 1 } } \frac { \gamma } { \left( \omega _ { \mathrm { q } } - \omega _ { \mathrm { d } } \right) ^ { 2 } + \gamma ^ { 2 } } } , } \end{array}\tag{5.7}
+$$
+
+从谐振腔的透射谱来看，谐振腔的响应是一个洛伦兹曲线，我们可以通过提取峰值得到量子比特频率，以及相应的量子比特展宽。特别地，当 $\varepsilon = 0$ 时， $\omega _ { \mathrm { q } } = 2 t _ { \mathrm { c } }$ 从而通过双色调制谱实验，我们可以得到量子点的点间隧穿耦合速率。图5.4（b）展示了在 $\varepsilon = 0$ 时的双色调制信号，基于此，我们提取得到 $2 t _ { \mathrm { c } } / ( 2 \pi ) = 9 . 0 \mathrm { G H z }$ 相应的比特退相干为 $\gamma _ { \mathrm { c } } / ( 2 \pi ) = 4 7 . 2 \ : \mathrm { M H z }$
+
+根据我们的结构设计，量子点之间的隧穿耦合速率 $2 t _ { \mathrm { c } }$ 可以被电极 B3 所调节。图5.5（a）给出了不同 $V _ { \mathrm { B } 3 }$ 下的双色调制谱线，由于电极之间存在串扰， $V _ { \mathrm { B 3 } }$ 不仅会改变隧穿耦合速率，也会改变量子点的工作位置。为了准确测量隧穿耦合速率，我们需要保证量子点工作在 $\varepsilon = 0$ 的位置。因此在改变 $V _ { \mathrm { B } 3 }$ 后，我们会对𝜀进行校准，具体步骤见于5.4.2。对图中每个 $V _ { \mathrm { B } 3 }$ 的值，我们利用洛伦兹拟合提取了隧穿耦合速率，从而给出了图所示的隧穿耦合速率与 $V _ { \mathrm { B 3 } }$ 的关系。这里隧穿耦合速率与 $V _ { \mathrm { B } 3 }$ 近似成线性关系，这为我们后续改变不同的 $2 t _ { \mathrm { c } }$ 进行实验提供便利。
+
+(a)  
+![](images/19989fef8538cd39960b6a0923ac6b5ac7ae35b916028204efdfad6dc4e9aa0e.jpg)
+
+(b)  
+![](images/ceedfd6b005edecf8baa669aa679f52d57c76141dfd6ab86b4989d016ea8036a.jpg)  
+图 5.5 隧穿耦合速率和电极电压的关系。（a）谐振腔相位响应信号与驱动频率和电极电压$V _ { \mathbf { B } 3 }$ 之间的关系，具有明显的峰值信号。（b）隧穿耦合速率和 $V _ { \mathbf { B } 3 }$ 之间的关系。每个 $V _ { \mathbf { B } 3 }$ 对应的数据点都是通过对（a）中相应曲线进行洛伦兹拟合得到的，数据呈现出非常好的线性特征。
+
+## 5.3.2 自旋与谐振腔耦合的理论描述
+
+由于翻转模式量子比特编码在双量子点中，因而在这里我们用双量子点模型进行计算。在电偶极近似下，谐振腔与量子比特的相互作用哈密顿量由下式给$\mathbb { H } ^ { [ 1 1 0 ] }$ ：
+
+$$
+\hat { H } _ { \mathrm { I } } = g _ { \mathrm { c } } \left( \hat { a } + \hat { a } ^ { \dagger } \right) \sum _ { n , m = 0 } ^ { 3 } d _ { n m } \left| n \right. \left. m \right| ,\tag{5.8}
+$$
+
+![](images/e29d128ac8cb0cebf7a1a6c7e315fe8259af75edff9d6162a1818e6496ed0a28.jpg)
+
+(b)  
+![](images/8acf146fa600e803024fc35a36fc8c3ce5d386cf0ca180a3bc4713671723ae1d.jpg)  
+图5.6 理论计算的 ${ \pmb g } _ { \bf s }$ 与 ${ \pmb g } _ { \mathbf c }$ 比值关系。（a）比值与失谐量和隧穿耦合速率的关系。（b）在失谐量 $\varepsilon = 0$ 时比值与隧穿耦合速率的关系，在近共振的时候取得最大值。图片引自文献<sup>[110]</sup>。这里的 $d _ { n m }$ 为电偶极矩阵，具有以下形式：
+
+$$
+\hat { d } = \left( \begin{array} { c c c c } { { 0 } } & { { d _ { 0 1 } } } & { { d _ { 0 2 } } } & { { 0 } } \\ { { d _ { 0 1 } } } & { { 0 } } & { { 0 } } & { { d _ { 1 3 } } } \\ { { d _ { 0 2 } } } & { { 0 } } & { { 0 } } & { { d _ { 2 3 } } } \\ { { 0 } } & { { d _ { 1 3 } } } & { { d _ { 2 3 } } } & { { 0 } } \end{array} \right) ,\tag{5.9}
+$$
+
+当满足条件 $\sqrt { \left( \varOmega - B _ { z } \right) ^ { 2 } + B _ { x } ^ { 2 } } \ll \left( \varOmega + B _ { z } \right)$ 时，矩阵元可以近似为：
+
+$$
+\begin{array} { r } { d _ { 0 1 } = d _ { 2 3 } \simeq - \cos \theta \sin \frac { \phi } { 2 } , } \\ { d _ { 0 2 } = - d _ { 1 3 } \simeq \cos \theta \cos \frac { \phi } { 2 } , } \end{array}\tag{5.10}
+$$
+
+通过输入-输出理论<sup>[110]</sup>，谐振腔的响应信号可以计算出来：
+
+$$
+S _ { 2 1 } = \frac { - \mathrm { i } \sqrt { \kappa _ { 1 } \kappa _ { 2 } } } { - A _ { 0 } - \mathrm { i } \frac { \kappa } { 2 } + g _ { \mathrm { c } } \left( \chi _ { 0 1 } d _ { 0 1 } + \chi _ { 0 2 } d _ { 0 2 } \right) } ,\tag{5.11}
+$$
+
+其中 $\varDelta _ { 0 } = \omega _ { \mathrm { d } } - \omega _ { \mathrm { r } }$ 是驱动频率和谐振腔频率的失谐振量， $\chi _ { 0 1 }$ 和 $\chi _ { 0 2 }$ 是量子点的极化率，其具体形式为：
+
+$$
+\begin{array} { r } { \chi _ { 0 1 } = \frac { g _ { \mathrm { c } } \cos \theta \sin ( \phi / 2 ) } { \delta _ { 1 } - \mathrm { i } \gamma _ { \mathrm { e f f } } ^ { ( 2 ) } } , } \\ { \chi _ { 0 2 } = \frac { - g _ { \mathrm { c } } \cos \theta \cos ( \phi / 2 ) } { \delta _ { 2 } - \mathrm { i } \gamma _ { \mathrm { e f f } } ^ { ( 1 ) } } , } \end{array}\tag{5.12}
+$$
+
+其中由电荷导致的有效自旋退相干速率为:
+
+$$
+\gamma _ { \mathrm { e f f } } ^ { ( 1 , 2 ) } = \gamma _ { \mathrm { c } } \left( \delta _ { 2 } \sin ^ { 2 } \frac { \phi } { 2 } + \delta _ { 1 } \cos ^ { 2 } \frac { \phi } { 2 } \right) / \delta _ { 1 , 2 } ,\tag{5.13}
+$$
+
+其中 $\delta _ { n } \equiv E _ { n } - E _ { 0 } - \omega _ { \mathrm { p } } ( n = 1 , 2 )$ ， $\gamma _ { \mathrm { c } }$ 是电荷退相干速率。当谐振腔与量子点恰好共振的时候，外磁场需要满足以下条件：
+
+$$
+B _ { z } ^ { \mathrm { r e s } } = \omega _ { \mathrm { r } } \sqrt { 1 - \frac { \varDelta B _ { x } ^ { 2 } } { \omega _ { \mathrm { r } } ^ { 2 } - 4 t _ { \mathrm { c } } ^ { 2 } } } ,\tag{5.14}
+$$
+
+在 $2 t _ { \mathrm { c } } > g {  { \mu _ { \mathrm { B } } } } B _ { z }$ 的情况下，由电荷退相干率引起的有效自旋退相干率变为 $\gamma _ { \mathrm { s } } \approx$ $\gamma _ { \mathrm { e f f } } ^ { ( 2 ) }$ 。有效的自旋-光子耦合强度由以下公式给出：
+
+$$
+g _ { \mathrm { s } } = g _ { \mathrm { e f f } } \frac { g \mu _ { \mathrm { B } } A B _ { x } | A _ { \tau } | \cos \theta } { 2 \hbar ( A _ { \tau } ^ { 2 } + \gamma _ { \mathrm { c } } ^ { 2 } ) } ,\tag{5.15}
+$$
+
+其中 $A _ { \tau } = ( \omega _ { \mathrm { q } } - g \mu _ { \mathrm { B } } B _ { z } / \hbar ) / 2 - E _ { 0 } / \hbar - \omega _ { \mathrm { r } }$ 。在 $\varepsilon = 0$ 且 $| \boldsymbol { \varDelta } _ { \tau } | \gg \gamma _ { \mathrm { c } }$ 的情况下，有效的自旋-光子耦合强度可以简化为：
+
+$$
+g _ { \mathrm { s } } \approx g _ { \mathrm { c } } \frac { g \mu _ { \mathrm { B } } \varDelta B _ { x } } { 2 ( 2 t _ { \mathrm { c } } - \hbar \omega _ { \mathrm { r } } ) } .\tag{5.16}
+$$
+
+需要强调的是，强电荷-光子耦合并不是强自旋-光子耦合的必要条件，因为$g _ { \mathrm { s } }$ 和 $\gamma _ { \mathrm { c } }$ 的比例随自旋-电荷混合程度的比例不同而发生变化。更具体地说：
+
+$$
+\frac { g _ { \mathrm { s } } } { g _ { \mathrm { c } } } \propto \frac { \varDelta B _ { x } } { 2 t _ { \mathrm { c } } - \hbar \omega _ { \mathrm { r } } } ,\tag{5.17}
+$$
+
+而
+
+$$
+\frac { \gamma _ { \mathrm { s } } } { \gamma _ { \mathrm { c } } } \propto \left( \frac { \varDelta B _ { x } } { 2 t _ { \mathrm { c } } - \hbar \omega _ { \mathrm { r } } } \right) ^ { 2 } .\tag{5.18}
+$$
+
+因此在足够小的 $\frac { \varDelta B _ { x } } { 2 t _ { \mathrm { c } } - \hbar \omega _ { \mathrm { r } } }$ 时，可以实现 $\begin{array} { r } { \frac { g _ { \mathrm { s } } } { \gamma _ { \mathrm { s } } } > \frac { g _ { \mathrm { c } } } { \gamma _ { \mathrm { c } } } } \end{array}$ ，这种情况在图5.6中进行了理论计算。然而，这种情况下的缺点是 $g _ { \mathrm { s } }$ 较小，可能会小于腔线宽。需要注意的是，系统中强自旋-光子耦合的条件为 $g _ { \mathrm { s } } > \kappa ^ { * }$ ， $\gamma _ { \mathrm { s } }$ ，其中 $\kappa ^ { * }$ 是与电荷量子比特耦合后的谐振腔展宽。
+
+(a)  
+![](images/8809a1ad27f720fb39869d2d6742283e94c4dd34b8a24e7ecee8f0553d3d0738.jpg)
+
+![](images/4a393abc1ff7ccf2e3823957a49afa6a2a3684b26ca1f4ac66e83497ecbe8bf6.jpg)
+
+(c)  
+![](images/c0edc7f27ccbc5669f5e57f8ff62940bcfd0c4c80ad9f6aca6a4a3bb7997be90.jpg)
+
+(d)  
+![](images/9f498918ebdad8674d64a8d1dd3225912fcc6fd33391a808da108c85d6e5ff0b.jpg)  
+图 5.7 RDQD 中自旋量子比特与谐振腔的强耦合。（a）RDQD 单电子区域电荷稳定性图谱，黄色圆圈表示 𝜺 =0 的工作位点。（b）谐振腔幅值信号关于外磁场和谐振腔探测频率的关系，图中展现出了相互分离的两支。（c）两个不同外磁场下，谐振腔的响应信号，棕色$\mathbf { \mathit { B } } _ { \mathrm { e x t } } = 4 9 1 . 0 \mathbf { \mathit { m } } \mathbf { T }$ 以及蓝色 $\mathbf { \mathit { B } } _ { \mathrm { e x t } } = 5 0 8 . 0$ mT，与（b）图中虚线所示的位置相对应。其中蓝色线表示了量子比特与谐振腔共振的情况，这里可以明显观察到两个峰，这就是真空 Rabi 劈裂。（d）通过双色调制谱测量得到的自旋比特展宽以及自旋频率。
+
+## 5.3.3 自旋比特与谐振腔的强耦合
+
+现在我们将从实验上确定自旋比特与谐振腔的耦合强度。由于 RDQD 直接与腔相连，我们先研究 RDQD 中量子比特的性质。在这个实验中，我们让电极P1，B1的电压与Llead保持一致，这样QD1处于多电子区域，相当于源漏的作用，在我们的实验过程中，也没有观察到QD1的影响。图5.7（a）给出了量子点工作时的电荷态分布，我们让系统工作于黄色圆圈的位置，这里 $\varepsilon = 0$ 。在实验中我们是先保持 $V _ { \mathrm { P 3 } }$ 固定，再扫描 $V _ { \mathrm { P } 2 }$ 和谐振腔幅值的关系，得到工作位点。此时我们已经通过双色调制谱确定了量子点的隧穿耦合速率为 $2 t _ { \mathrm { c } } / ( 2 \pi ) = 9 . 4 \ : \mathrm { G H z }$
+
+为了研究自旋和光子的耦合，我们保持电荷态参数不变，且电荷量子比特与谐振腔保持在色散耦合区间。如前文所述翻转模式自旋量子比特的能量受到外磁场的控制，从而改变磁场大小可以让比特和谐振腔达到共振状态。实验中，如图5.1所标注的那样，我们沿着量子点方向施加外磁场（图中𝑧方向）。我们在扫描外磁场的同时探测谐振腔的传输信号，得到了图5.7（b）所示的谱线。这里要说明的是，我们的器件并不在磁场中央，导致磁场存在衰减，因而实际的施加的磁场偏大，这点我们会在后续详细介绍。当自旋和谐振腔具有较大失谐的情况下，谐振腔的谱线基本不随外磁场 $B _ { \mathrm { e x t } }$ 变化。当自旋频率与谐振腔接近的时候，谐振腔谱线变化明显，出现免交叉现象。图中红色虚线的斜率为 $g \mu _ { \mathrm { B } } / h$ ，对应于$f _ { \mathfrak { p } } / B _ { \mathrm { t o t } }$ 。这条虚线把谐振腔信号分成了独立的两个分支，这也是自旋比特与微波光子相干杂化的重要特征<sup>[176]</sup>。
+
+为了更清晰地展现谐振腔的谱线特征，我们在图5.7（c）中给出了共振状态和失谐情况下的谱线，分别对应两个不同的外磁场值：棕色线表示 $B _ { \mathrm { e x t } } = 4 9 1 . 0 \mathrm { m T }$ 蓝色线表示 $B _ { \mathrm { e x t } } = 5 0 8 . 0 \ : \mathrm { m T }$ ，与图5.7（b）中虚线位置相对应。蓝色数据点给出了共振的情况，可以明显观察到两个峰信号，这个现象被称为真空Rabi劈裂，是强自旋-光子耦合的预期结果。这两个峰的间距对应于自旋-光子的耦合强度$2 g _ { \mathrm { s } } / ( 2 \pi ) = 4 3 . 5 ~ \mathrm { M H z }$ 。而棕色数据点为自旋与光子失谐的情况，仅存在一个峰，是正常的谐振腔信号，从这个信号中我们提取出了在杂化了电荷比特后，谐振腔的展宽为 $\kappa ^ { * } / ( 2 \pi ) = 7 . 5 \mathrm { M H z }$
+
+翻转模式量子比特的展宽同样可以使用前文介绍的双色调制谱进行测量，与测量电荷类似，我们将微波施加在电极 P2 上。图5.7（d）蓝色点给出了我们测量得到的数据，棕色线是我们用洛伦兹曲线对数据进行的拟合，最终得到比特频率为 $\omega _ { \mathrm { q } } / ( 2 \pi ) = 7 . 5 2 \ : \mathrm { G H z }$ ，比特展宽为 $\gamma _ { \mathrm { s } } / ( 2 \pi ) = 4 . 6 \ : \mathrm { M H z }$ 。由此，我们可以得到，$g _ { \mathrm { s } } > \kappa ^ { * }$ ，𝛾 ，说明我们的系统已经达到了强耦合区间。 $\gamma _ { \mathrm { s } }$
+
+由于我们使用的是一个三量子点器件，如前文所描述，我们可以在两个双量子点中依次进行比特编码，这里我们将探讨在 LDQD 中编码的量子比特与谐振腔耦合的情况。由于 QD3 的电极 P3 直接与谐振腔相连，QD3 中存在大量电子时，会导致谐振腔信号不稳定，因而在研究LDQD性质的时候，我们将QD3中的电子全部排空。即让量子点工作于隧穿线（0，1，0）↔（1，0，0）附近，图5.8（a）给出了这个隧穿线的相图，同时通过双色调制谱，我们确定了量子点的隧穿耦合速率为 $2 t _ { \mathrm { c } } ^ { \mathrm { L } } / ( 2 \pi ) = 8 . 0 \mathrm { G H z }$ 。LDQD 量子点隧穿线的成功测量，说明 LDQD中的电荷量子比特与谐振腔具有一定的耦合，这为我们后续研究翻转模式自旋比特奠定了基础。
+
+与RDQD的实验类似，我们得到了图5.8（b）所示的谐振腔响应谱图。这里需要说明的是，结束了 RDQD 的实验之后，整个器件经过了一次重冷，所以微磁体的磁化程度并不相同，因而施加的外磁场也有一定的区别。利用在 RDQD中使用的同样方法，我们提取得到了耦合强度 $2 g _ { \mathrm { s } } ^ { \mathrm { L } } / ( 2 \pi ) = 2 7 . 6 \mathrm { M H z } ,$ ，谐振腔展宽$\kappa ^ { * } / ( 2 \pi ) = 6 . 8 \mathrm { M H z }$ 以及比特退相干 $\gamma _ { \mathrm { s } } ^ { \mathrm { L } } / ( 2 \pi ) = 2 . 2 \ : \mathrm { M H z }$ 。这里 $g _ { \mathrm { s } } ^ { \mathrm { L } } > \kappa ^ { * } , ~ \gamma _ { \mathrm { s } } ^ { \mathrm { L } }$ ，说明我们也实现了 LDQD 中翻转模式量子比特与谐振腔的强耦合。两个量子比特参数的对比可以通过表格5.1查询。
+
+(a)  
+![](images/4129f6c698d954b61170bd2c8e10fed0ba4be1bacef68277cdc5d4122be3bdf0.jpg)
+
+![](images/41e5ee0e333a005a5c5c94c5914fbefd8065480631d2d9eefb764a6558341e4a.jpg)
+
+(c)  
+![](images/f0c11ff5a32faeb527b0bcbaf8b6612ca353d58fd3989e670efddb9e2539bce3.jpg)
+
+(d)  
+![](images/cb9b9a7d8e8b3721b787a3aa880e1c5445197e4395de23a83bbbc04d578fa90a.jpg)  
+图 5.8 LDQD 中自旋量子比特与谐振腔的强耦合。（a）LDQD 单电子区域电荷稳定性图谱，黄色圆圈表示𝜺 =0的工作位点，在这里我们排空了QD3中的电子。（b）谐振腔幅值信号关于外磁场和谐振腔探测频率的关系。（c）对应于（b）中虚线所示的两个不同磁场，棕色 $B _ { \mathrm { e x t } } = 5 5 1 . 0 ~ \mathrm { m T }$ 以及蓝色 $B _ { \mathrm { e x t } } = 5 6 0 . 3 \ : \mathrm { m T }$ ，给出了谐振腔的响应谱线。（d）通过双色调制谱测量得到的LDQD 中翻转模式自旋比特展宽以及量子比特频率。
+
+构成 LDQD 势阱的电极全部未与谐振腔直接相连，这表明我们通过谐振腔实现了不与其具有直接电极连接的量子比特的强耦合。证明了谐振腔可以耦合更远距离的量子比特，有助于通过谐振腔进一步扩展量子比特数目。
+
+## 5.3.4 磁场大小的校准
+
+前面提到了我们的器件没有放在磁场中心，这导致了施加的磁场与器件处实际的磁场之间有一个衰减因子 $\alpha .$ 。从而量子点处的总磁场为 $B _ { \mathrm { t o t } } = \alpha B _ { \mathrm { e x t } } + B _ { \mathrm { M } } ,$ 我们假设微磁体在量子点处产生的磁场 $B _ { \mathrm { M } }$ 在我们实验范围内保持不变。量子比特的频率为 $f _ { \mathrm { q } } = E _ { z } / h$ ，考虑到塞曼劈裂能 $E _ { z } = g \mu _ { \mathrm { B } } B _ { \mathrm { t o t } }$ ，比特频率可以由下式
+
+给出：
+
+$$
+f _ { \mathrm { q } } = \alpha g \mu _ { \mathrm { B } } B _ { \mathrm { e x t } } / h + g \mu _ { \mathrm { B } } B _ { \mathrm { M } } / h ,\tag{5.19}
+$$
+
+为了确定衰减因子，我们进行了双色调制谱实验。图5.9（a）给出了在改变磁场
+
+(a)  
+![](images/14a00b886e459ba1cd54c0c878f5c298d39af0c5f591ffff225421060eb5c8ea.jpg)
+
+(b)  
+![](images/9bbb88849c243f3ef6f3a6dc155e1cc692bee36f2be3653aacebaf3d943dada7.jpg)  
+图5.9 RDQD电子自旋共振谱。（a）归一化腔体传输幅值 $\pmb { A } / A _ { \mathbf { 0 } }$ 随驱动频率（施加在P2栅极）和外磁场的变化关系。当驱动频率与量子比特频率共振时，量子比特的稳态占据数发生变化。考虑到量子比特与光子之间的耦合，这种变化导致谐振腔幅值的下降。在我们移除了小的背景信号，并对数据进行了归一化处理。（b）从（a）中提取的共振点如图蓝色点所示，随后对这些共振点进行了线性拟合。
+
+的同时测定翻转模式自旋比特的双色调制实验的结果。对每个磁场下的实验数据进行拟合，能够得到自旋比特频率和施加磁场的关系图。从图中可以看出，比特频率和外磁场呈现线性关系。这与我们公式5.19给出的结果是一致的。对提取的数据进行线性拟合，拟合曲线在图5.9（b）中用棕色实线表示。拟合得到的斜率，即磁场衰减因子为 $\alpha = 0 . 3 2$ ，微磁体产生的磁场大小为 $B _ { \mathrm { M } } = 9 5 . 7 \ : \mathrm { m T }$
+
+## 5.4 翻转模式自旋比特的操作
+
+在前文中，我们讨论了翻转模式自旋量子比特与谐振腔之间的耦合特性，这种耦合为量子比特的状态读取提供了重要的手段。接下来，我们将进一步介绍如何利用这一耦合机制实现对量子比特的读取和操作。
+
+在本节中，我们将通过微波脉冲序列对量子比特进行操作，包括Rabi振荡、Ramsey 干涉。这些操作不仅验证了量子比特的可控性，还为量子相干特性及退相干机制的研究提供了实验支撑。以下将详细介绍这些操作的具体实现及测量结果。
+
+![](images/9b95e95d0d7546216503b046946c53afbaa844a813a317f4790567c0c68afd9a.jpg)  
+图5.10 量子比特操作线路示意图，在进行操作之前，需要对量子点进行校准。这里可以通过施加不同的微波序列来实现对量子比特的不同操作。这里的等待时间 $\pmb { \tau _ { \mathbf { w } } }$ ，测量时间 $\pmb { \tau _ { \mathbf { M } } } :$ 以及施加微波 $\pmb { \tau _ { \mathbf { B } } }$ 的时间根据不用的实验需求而确定。图中 M 和 N 表示当前循环的执行次数，也会根据实际情况选取合适的值。
+
+## 5.4.1 操作线路
+
+与进行量子比特耦合实验不同，为了实现通过谐振腔对量子比特的读取，这里我们不再采用微波源 + 矢量网络分析仪的搭配进行测量。而是搭建了一套基于 SHFQC 测控一体机的微波驱动与测量系统。SHFQC 一体机可以同时实现微波源，任意波形发生器以及矢量网络分析仪的功能，此外该设备还可以很好地控制各个通道的时序，非常契合量子比特操作实验的各项要求。
+
+图5.10给出了我们实验中使用的操作线路示意图。整个操作流程需要进行多次重复测量从而获得较好的信噪比。通常一个实验扫描的过程会超过一个小时，如果进行大范围的参数扫描，则会耗时数天。在这样长的时间中，由于量子点表面电荷的扰动以及其他的因素，量子点的工作位点会发生一定漂移。这种漂移，一方面会让谐振腔测量信号不稳定，另一方面也会让量子比特的频率、操作速度发生变化，这些都会降低我们实验的准确性。为了解决这一问题，我们在每次操作前对失谐零点的工作位置进行自动校准。
+
+我们对翻转模式量子比特的操作都是在 $\varepsilon = 0$ 点进行的，我们的校准也是围绕这一点进行展开，通俗来说，校准就是将电极电压设定到图5.8（a）所示的黄色圆点位置。具体而言，对 RDQD 进行校准时，我们保持所有其他电极电压不变，唯独调节P2并测量腔的相位信号作为 $V _ { \mathrm { P } 2 }$ 的函数，记录所得数据，如图5.11（a）所示。通过对数据进行Lorentz曲线拟合，我们确定与失谐零点对应的电压，并将其用于更新量子点的工作位置，补偿漂移引起的偏移。除 P2 以外的其他电极不进行校准，因为它们不会影响测量结果；这些电极引起的任何漂移均可通过调节P2完全补偿。为提高校准精度，每次数据采集过程重复两次，并取平均值，以确保失谐零点 $\varepsilon = 0$ 的精准确定。如图5.11所示，展示了两条间隔半小时采集的失谐数据，其中对应 $\varepsilon = 0$ 的电压发生了约 $2 0 \mu \mathrm { V }$ 的漂移。要说明的是，在对LDQD 进行校准时，选用P1 电极执行相同的操作。
+
+-  
+![](images/6be243b109ddac33f315eecd8672be73e3b335960b3bc9870e5611ea7f31e896.jpg)
+
+  
+![](images/ddf607170c3b47017a8ea5b7e160287f6551471d66dd321a3fe4f10bc56506cb.jpg)  
+图 5.11 量子比特工作位点的校准。（a）谐振腔相位响应随 $V _ { \mathbf { P } 2 }$ 的变化关系。通过 Lorentz曲线拟合，得到失谐零点对应的电压 $V _ { \mathrm { P 2 } } = 6 0 4 . 0 1 \ : \mathrm { m V }$ 。（b）与（a）中相同条件下测量的数据，但测量时间为（a）测量结束后的30分钟。
+
+## 5.4.2 设备延时校准
+
+由于量子比特的相干时间是有限的，对量子比特完成操作后，需要立即进行测量，否则将无法获取量子比特的真实信息。在我们的实验中，测量是通过一体机的矢量网络分析仪完成的，而操作是通过任意波形发生器进行的，这就要求两个模块之间进行时序同步。此外，两路微波经过的线路并不相同，到器件上需要的时间也是不相同的，这就需要我们对延时进行标定。在这里我们对时序的要求是，两路微波到达器件上的时间差是已知可控的。我们并不区分仪器两个模块的时间差和延时时间差，并将其作为一个变量来处理，统称为线路延时。
+
+![](images/dc1e25d409f54db7cbeeb72ee3d1959ac8fa445219e75b4c57896141cdac6bae.jpg)
+
+![](images/11bd98a8345254a1b92c1e9d65bac07065c5b0ba2b230b79c2edfa75061e5e61.jpg)
+
+![](images/e19bc4b1e1716bc47237298d8e507386ac1ed50959c2ca04c1b40bc71d9d1bc4.jpg)  
+图 5.12 微波时序同步示意图。（a）延时校准线路。下方线路表示驱动微波持续时间为 $\tau _ { \mathbf { B } } ,$ 上方线路则表示谐振腔的探测微波持续时间为 $\pmb { \tau _ { \mathbf { M } } }$ 。黑色箭头标识出了驱动微波发出的触发信号位置，其与微波结束时间时刻的延时记作 $\tau _ { \mathrm { d e } } \circ \mathrm { ~ } \tau _ { \mathrm { w } }$ 则表示两次微波的时间间隔。（b）测量微波结束位置与驱动微波结束位置对齐。（c）谐振腔幅值信号关于触发延迟的关系，圆圈所示幅值下降位置对应（b）中所展示的情况。
+
+![](images/773175649c4c328a2c660054f94de162084affb09f5cbcdbf9af7f8b164ae13c.jpg)  
+图 5.13 Rabi 操作示意图。（a）用于 Rabi 操作的波形示意图，在 Rabi 实验中，对 RDQD（LDQD）我们设定等待时间 $\pmb { \tau _ { \mathrm { w } } } = 3 ( 4 ) \mu \mathbf { s }$ 。（b）Bloch球，Rabi操作过程中量子比特状态沿着图中蓝色曲线进行演化。
+
+如图5.12（a）所示，我们给出了测量线路延时的示意图。我们通过驱动微波的通道发出信号脉冲，用于触发矢量网络分析仪。矢量网络分析仪接收到信号后会发出长度为𝜏 ，频率 $\tau _ { \mathrm { M } }$ $f _ { \mathrm { p } } = f _ { \mathrm { r } }$ 的探测微波，并读取谐振腔信号。在这里测量延时方案的具体步骤是：将驱动脉冲的频率设置为 $f _ { \mathrm { d } } = f _ { \mathrm { r } }$ ，当驱动信号进入谐振腔后，谐振腔的透射信号会得到增强。当没有微波进入谐振腔的时候，谐振腔透射信号则保持不变。图5.12（c）给出了实验测量的谐振腔幅值信号关于延时时间的关系，在这里我们设定了 $\tau _ { \mathrm { B } } = 2 0 ~ \mu \mathrm { s }$ 。从图5.12（c）的曲线中我们可以观察到后半段信号出现了明显的下降，表明驱动微波和探测微波并不是同步的。图5.12（c）中紫色圆圈所示的位置对应于图5.12（b）中展示的探测微波末端与驱动微波末端对齐的情况，继续增加延时将导致谐振腔幅值信号的下降。我们最终得到了延时为−100ns。
+
+## 5.4.3 Rabi 振荡实验
+
+当我们完成了线路的校准，我们就可以对量子比特进行Rabi振荡实验了。我们在图5.13（a）中给出了具体的测量波形。首先将量子比特制备在基态，这里我们采用的是等待的方法，当我们的等待时间 $\tau _ { \mathrm { w } }$ 远大于量子比特驰豫时间 $T _ { 1 }$ 时，我们就认为量子比特处于基态。然后我们会在电极 P2 上施加微波，进行比特操作。如图5.13的Bloch球所示，当我们施加的驱动微波频率和量子比特频率相等的时候，量子比特会驱动微波激发而围绕着𝑥轴旋转。控制施加微波的时间，可以让量子比特处于其在bloch球运动轨迹上的不同位置，因而可以观察到量子比特状态在|0⟩和|1⟩之间来回振荡，这就是所谓的Rabi振荡。完成操作后，我们会向谐振腔施加一路微波用于探测量子比特状态，在这里我们使 $\tau _ { \mathrm { M } } = 2 0 0 \mathrm { n s }$ o
+
+图5.14（a）给出了我们实验测量得到的 Rabi 振荡的谱线，这里的驱动频率范围通过前文所述的双色调制谱实验所确定。需要说明的是通过谐振腔进行单次测量获得的信号信噪比较差，因而我们需要对操作-测量循环进行重复，正如图5.13（a）中波形所示，在这里我们让重复次数 $N = 1 0 ^ { 7 }$ 。此外，由于完成每个驱动频率的实验数据需要的时间较长，在这个过程中 𝜀 也会发生漂移。为了降低测量过程中 ε 抖动带来的噪声，我们还将包括校准在内的完整过程重复了$M = 3$ 次，这极大地提高了我们实验的信噪比。图5.14（b）展示了驱动频率$f _ { \mathrm { d } } = 7 . 4 9 1 0 \mathrm { G H z }$ 下的Rabi振荡曲线，这里为了获取更好的信号，相较于5.14（a）在这里我们让 $M = 5$ o
+
+(a)  
+![](images/a9c2ff6b8d0258970be6dd5c22e7f6b16ecbed2c9bdaf2d34ae5620724d8c33e.jpg)
+
+(b)  
+![](images/d8daf842dea6c775c2704487c02e0675de14679084f157196107315af91f729e.jpg)
+
+(c)  
+![](images/a18d7e576c0e5ff5a4df4633d0c2d2adafc6d5d280cd1355796e80092c92de92.jpg)
+
+(d)  
+![](images/f08e4a46eaeab4c9326bdb267a70324cb572ae762317dd689bec6b43dcb9752e.jpg)  
+图 5.14 Rabi 操作实验演示。（a）谐振腔相位响应 $\pmb { \Delta \phi ( \mathring { \mathbf { \Gamma } } } )$ 关于驱动频率和驱动时间的关系，呈现出典型的人字型图谱。（b）根据图（a）中的黑色虚线，在驱动频率 $f _ { \mathrm { d } } = 7 . 4 9 1 0$ GHz 下获得的Rabi 振荡曲线。（c）-（d）对LDQD 中翻转模式量子比特进行的Rabi 操作。
+
+翻转模式自旋量子比特的 Rabi 振荡曲线中的谐振腔相位响应可以由下式所描述<sup>[29]</sup> ：
+
+$$
+\phi \left( \tau _ { \mathrm { B } } \right) = A \cdot \exp \left( - \tau _ { \mathrm { B } } / T _ { 2 } ^ { \mathrm { R a b i } } \right) \cdot \sin \left( \Omega _ { \mathrm { R a b i } } \tau _ { \mathrm { B } } \right) + \phi _ { 0 } ,\tag{5.20}
+$$
+
+这里 $\phi _ { 0 }$ 表示初始基础相位， $T _ { 2 } ^ { \mathrm { R a b i } }$ 则表示 Rabi 实验的退相干时间， $\Omega _ { \mathrm { R a b i } }$ 表示
+
+Rabi操作速率，A表示振荡幅值。通过对数据进行拟合，我们得到了图中的棕色曲线，其于实验数据符合相当好。我们提取出了Rabi频率 $\Omega _ { \mathrm { R a b i } } ^ { \mathrm { R } } / ( 2 \pi ) = 1 6 . 9 \ : \mathrm { M H z }$ 以及Rabi实验退相干时间 $T _ { 2 } ^ { \mathrm { R a b i } } = 1 5 2 \mathrm { n s }$ 0
+
+类似于 RDQD 中的实验，我们同样对 LDQD 中的翻转模式自旋量子比特进行了操作。由于LDQD中自旋量子比特的寿命更长，我们增加了操作过后的等待时间 $\tau _ { \mathrm { w a i t } }$ 到 4 $\mu \mathrm { s }$ 。相应的Rabi振荡实验数据由图5.14（c）和（d）给出。这里我们提取出了 Rabi 频率和相干时间为别为 $\Omega _ { \mathrm { R a b i } } ^ { \mathrm { L } } / ( 2 \pi ) = 1 3 . 7 \ : \mathrm { M H z }$ 和 $T _ { 2 } ^ { \mathrm { R a b i } } = 3 0 4 ~ \mathrm { n s } .$ 此外，由于 LDQD 与谐振腔耦合较弱，为了得到更好的实验数据，我们让量子比特工作在距离谐振腔较近的位置 $f _ { \mathrm { q } } = 7 . 3 8 0 2 \ : \mathrm { G H z }$ 。两个量子比特参数的对比可以从表格5.1中获取。
+
+## 5.4.4 Ramsey 干涉实验
+
+(a)  
+![](images/c34277d543f8c877ec0a9a76a673f6b9725f53fd65383070f1f81845f0c3182b.jpg)  
+(b)
+
+![](images/414a717b35e3c58aca37e9b1e8dd00a8f109eae9171903e9ef32317a570e8813.jpg)
+
+(c)  
+![](images/a11b9ebb90ce37c2d9e24beabab1f744d4dbe7b81b049dd2b00d1db7759b83a7.jpg)  
+(d)
+
+![](images/b9583acb652446371f7c13785db5db73d9b0dda0d238ef8d8fa059231b8cabb9.jpg)  
+图 5.15 在 RDQD 上进行的 Ramsey 干涉实验。（a）用于 Ramsey 干涉实验的微波波形示意图。（b）Ramsey 实验中，量子比特状态在 bloch 球上的演化轨迹。（c）谐振腔相位响应与等待时间 $\pmb { \tau _ { \mathrm { w a i t } } }$ 和驱动频率的关系图。（d）在驱动频率 $f _ { \mathrm { d } } = 7 . 4 9 5$ GHz时（对应（b）中粉色虚线），谐振腔相位响应和等待时间 $\pmb { \tau _ { \mathrm { w a i t } } }$ 的关系图。此时，量子比特频率和驱动微波的频率差值为 10 MHz。
+
+量子相干性是量子计算中至关重要的特性，Ramsey 干涉实验作为一种相干性测量方法，通过操控量子态在布洛赫球上的演化轨迹，提供了对量子比特退相位时间 $T _ { 2 } ^ { * }$ 的精确测量<sup>[185]</sup>。如图5.15（a）和（b）分别给出了我们实验中使用的操作波形和Ramsey实验下，量子比特状态在Bloch球上的演化。Ramsey干涉实验的基本流程分为五个步骤：第一步，先制备量子比特到基态 |0⟩。第二步，施加一个微波脉冲，将量子比特绕𝑥轴旋转 $\pi / 2$ 到达赤道面上。第三步，关闭微波，等待一段时间𝜏 ，在这段时间里，量子比特会在自身哈密顿量的作用下绕着𝑧 $\tau _ { \mathrm { w a i t } }$ 轴旋转。第四步，继续施加绕𝑥轴旋转的π/2微波。最后一步是使用谐振腔对量子比特进行测量。如果整个操作过程都不存在退相干，那么这段时间量子比特将一直在球面上运动。根据等待时间的不同，量子比特会处于不同的态，从而会形成周期性的振荡。在存在退相干的情况下，量子比特会逐渐向球内运动。相应地，会形成衰减振荡。在Ramsey干涉实验中，谐振腔的相位响应可以用如下公式描述<sup>[185]</sup> ：
+
+$$
+\phi \left( \tau _ { \mathrm { w a i t } } \right) = A \cdot \exp \left( - \tau _ { \mathrm { w a i t } } / T _ { 2 } ^ { * } \right) \cdot \cos \left( \Omega _ { \mathrm { R a m s e y } } \tau _ { \mathrm { w a i t } } \right) + \phi _ { 0 } ,\tag{5.21}
+$$
+
+这里 𝐴 是相位的振荡范围， $\Omega _ { \mathrm { R a m s e y } }$ 表示驱动频率和量子比特频率之间的差值，$\phi _ { 0 }$ 表示基础相位。
+
+在图5.15（c）中，我们研究了不同驱动频率下的 Ramsey 干涉实验的图样。驱动频率不同的时候，振荡速率 $\Omega _ { \mathrm { R a m s e y } }$ 也相应发生变化。图5.15（d）则给出了驱动频率 $f _ { \mathrm { d } } = 7 . 4 9 5 \ : \mathrm { G H z }$ 下的Ramsey干涉图谱，对应于5.15（c）中的粉色虚线。这里我们使用公式5.21进行拟合，得到了 $\Omega _ { \mathrm { R a m s e y } } = 1 0 \ : \mathrm { M H z }$ 。这与驱动频率和量子比特频率之间的差值是一致的。此外，通过这个实验，我们还提取出量子比特退相干时间为 $T _ { 2 } ^ { * } = 8 9 \mathrm { n s }$ o
+
+表 5.1 表格显示了在实验测量过程中的耦合强度 ${ \pmb g } _ { \pmb s }$ 、隧穿耦合 $\pmb { 2 } t _ { \mathbf { c } }$ ，通过自旋双色调制谱实验得到的量子比特退相干速率 $\gamma _ { \mathsf { s } }$ ，Rabi 振荡频率 $\Omega _ { \mathsf { R a b i } }$ ，以及 Rabi 振荡的自旋相干时间$T _ { 2 } ^ { \mathbf { R a b i } }$
+<table><tr><td></td><td> $g _ { \mathrm { s } } / 2 \pi$ </td><td> $2 t _ { \mathrm { c } } / 2 \pi$ </td><td> $\gamma _ { \mathrm { s } } / 2 \pi$ </td><td> $\varOmega _ { \mathrm { R a b i } } / 2 \pi$ </td><td> $T _ { 2 } ^ { \mathrm { R a b i } }$ </td></tr><tr><td>RDQD</td><td>21.8 MHz</td><td>8.0 GHz</td><td>4.6 MHz</td><td>16.9 MHz</td><td>152 ns</td></tr><tr><td>LDQD</td><td>13.8 MHz</td><td>9.4 GHz</td><td>2.2 MHz</td><td>13.7 MHz</td><td>304 ns</td></tr></table>
+
+## 5.5 AC Stark 效应
+
+对于一个二能级量子比特系统，在其与微波光场相互作用的过程中，量子比特的频率会发生变化，这个现象被称为交流-斯塔克效应（ACStarkshift）<sup>[144]</sup>。这种频率移动现象会随着光场强度的增加而变大，故我们可以利用这个效应，探测谐振腔中的光子数目。图5.16（a）给出了谐振腔的 EDSR 谱线随着驱动频率的变化关系，这里我们的横轴是一体机SHFQC的输出功率。我们可以看到量子比特的频率随着功率增大而逐渐增加，此时谐振腔的频率小于量子比特频率。通过对 EDSR 共振点信号的提取，我们得到了图中的量子比特频率关于输出功率的关系图，量子比特频率和谐振腔中的光子数满足如下关系<sup>[144]</sup>：
+
+$$
+f _ { \mathrm { q } } = f _ { \mathrm { q } } ( P = 0 ) + \left( 2 n _ { \mathrm { p h } } g _ { \mathrm { s } } ^ { 2 } / \varDelta \right) / ( 2 \pi ) ,\tag{5.22}
+$$
+
+这里的 $f _ { \mathrm { q } }$ 表示通过EDSR实验提取到的量子比特频率，𝑛 则表示腔内光子数,𝛥 $n _ { \mathrm { p h } }$ 表示自旋和光子的失谐。而施加到谐振腔上的功率和谐振腔中的光子数有如下关系：
+
+$$
+\left. n \right. = 4 W Q ^ { 2 } / \left( \hbar \omega _ { \mathrm { r } } ^ { 2 } Q _ { \mathrm { e } } \right) ,\tag{5.23}
+$$
+
+这里的 𝑊 表示谐振腔上的微波功率单位是瓦特，𝑄 和 $Q _ { \mathrm { e } }$ 分别表示谐振腔的总品质因子和外部品质因子。显然，以瓦特为单位时，光子数和功率成正比。现在我们将公式5.22和5.23结合起来，并使用（dBm）作为功率的单位，可以得到实验使用的一体机输出功率和量子比特频率的关系：
+
+$$
+f _ { \mathrm { q } } = f _ { 0 } + \chi \cdot 1 0 ^ { \frac { P } { 1 0 } } ,\tag{5.24}
+$$
+
+这里 𝑃 是一体机输出的功率，单位是 dBm， $\chi$ 是拟合系数， $f _ { 0 }$ 表示没有微波输入时量子比特的频率。我们希望得到光子数和输出功率之间的关系，他们满足:
+
+$$
+\langle n \rangle = { \frac { \chi } { \lambda } } \cdot 1 0 ^ { \frac { P } { 1 0 } } ,\tag{5.25}
+$$
+
+这里 $\lambda = g _ { \mathrm { s } } ^ { 2 } / ( \pi \varDelta )$ 是已知量。在我们的实验中，我们选取的输入功率是−30dBm，对应约0.4个光子。
+
+![](images/d684f40a2437b017da01fe000ff78ebe910d0daa00df2c6fd9fa41bcf7eefda6.jpg)
+
+![](images/407fbd3b31a09f70d4071646be0416586bb4a183bb42cd7b2817f644b141b77e.jpg)
+
+![](images/f534487a567f932352e69d69f1a8f7bbdd585b49f0f78c5c99087b15a27c1791.jpg)  
+图5.16 ACStarkshift 实验。（a）谐振腔相位响应关于驱动功率和一体机输出功率P的关系，这里使用 dBm 作为单位。（b）从（a）中提取的量子比特频率关于一体机输出功率 P的关系，这里使用瓦特作为单位，呈现出明显的线性关系，棕色实线是对数据的拟合。（c）绘制出的我们实验线路配置下一体机的输出功率和谐振腔光子的对应关系，对于 −30 dBm，我们预计谐振腔中存在0.4个光子。
+
+## 5.6 本章小结
+
+本章主要研究了硅/硅锗异质结三量子点体系中翻转模式自旋量子比特与谐振腔耦合以及对量子比特的操作。我们在这样一个三量子点中，分别编码了两个不同的翻转模式量子比特，并且都成功实现了与谐振腔的强耦合。这里要说明的是，LDQD与谐振腔之间没有直接的电极连接，这证明了谐振腔与量子比特可以在更大的范围实现耦合，这有助于将来实现用谐振腔耦合更多量子比特。我们通过电学方法调节了量子比特与谐振腔的耦合强度，这种可调耦合有望在实现谐振腔介导的量子比特门时发挥重要作用。
+
+在另一方面，我们还研究了对量子比特的操作。我们以Rabi和Ramsey实验为例，演示了单量子比特门的操作过程。在操作实验中，我们使用谐振腔作为探测器，探测量子比特状态。这里 LDQD 中自旋比特状态的成功读取，说明谐振腔可以实现更远距离的自旋比特读取，利用这一技术，有望在大规模量子计算中减少电荷探测器的数目，从而简化器件结构。
+
+通过本章的研究，我们可以认为，翻转模式量子比特非常适合与谐振腔进行耦合。但这种方式有没有什么缺陷呢？答案是肯定的，首先继续提高耦合强度变得非常困难，这就给实现谐振介导的高保真度的两比特门蒙上了一层阴影。其次，翻转模式量子比特的频率依赖于外部磁场，不能够通过电学方式进行调节，这就让多个翻转模式量子比特与谐振腔耦合变得难以实现。因此在接下来的章节中我们将介绍一种新的量子比特编码方式，有望解决上述两个难题。
+
+## 第6章 共振交换量子比特与谐振腔的耦合
+
+上一章的最后讨论了翻转模式量子比特在大规模扩展中频率不可独立调节的问题。在本章中，我们将介绍另一种量子比特——共振交换（resonantexchange，RX）量子比特<sup>[157,186]</sup>。RX量子比特的频率不依赖于外磁场，可通过电学方法灵活调节。此外，RX量子比特具有较大的电偶极矩，这使其非常适合与谐振腔进行耦合。因此，RX 量子比特有望在大规模扩展中发挥作用。
+
+本章首先介绍 RX 量子比特的理论基础，并通过三量子点器件编码一个 RX量子比特，研究其能谱特性。紧接着，我们分析了RX量子比特与谐振腔的耦合情况。最后，我们从理论和实验两个方面分析了RX 量子比特的退相干机制。
+
+## 6.1 研究背景
+
+如前文所述，翻转模式自旋量子比特的频率受到全局磁场的控制，然后通过施加局部微波来实现对量子比特的操控。这种方式的的问题在于：若所有比特依赖相同的全局磁场，自旋频率会非常接近；要想把每个比特的频率分开，只能在每个量子点附近加入微磁体或精确调整局部磁场分布，这大幅增加了工艺复杂度和布线难度。另外，一旦芯片规模增大，如何做到对每一个比特频率的独立调节、保持其长相干时间以及重复可靠的读出与控制，成为了相当困难的任务。
+
+为了克服上述电学不可调的难题，研究者们提出了基于交换相互作用（ex-change interaction）的自旋量子比特方案<sup>[187]</sup>。交换相互作用是指量子点中电子波函数重叠或相邻时，自旋态因库仑斥力和泡利不相容原理的共同作用而在能量上产生分裂。这种能量分裂（即交换能𝐽）可通过电学手段——例如在量子点的栅极上施加电压脉冲、改变量子点势阱大小与相对位置——来进行快速且局部的调控。利用这一作用，研究者设计了多电子的量子比特编码方式，而不仅仅局限于单电子自旋。例如，两电子情形下，可以使用单态-三重态（singlet-triplet）量子比特<sup>[188]</sup>；在三电子情形下，可以编码出“共振交换量子比特”或者“交换（exchange-only，EO）量子比特”等。这样做的好处在于，量子比特的频率能通过栅极电压进行调节，而无需依赖在每个量子点局部施加不同磁场，减少了对微磁体和微波天线的需求。
+
+在众多基于多电子编码的自旋量子比特中，共振交换量子比特无疑是非常特殊的。总结来说，这种量子比特具有以下几点优势：
+
+1. 量子比特频率电学可调，有望降低操作复杂度，简化结构设计。
+
+2. 在共振交换量子比特的编码下，自旋和电荷态相互杂化<sup>[121]</sup>。因而其具有较大的电偶极矩，容易实现与谐振腔的强耦合。这对用微波谐振腔构建量子总线并实现长距离量子信息传输、读出与操控尤其重要。
+
+3. 不依赖于微磁体，结构设计简单。无需在纳米尺度上布置复杂的微磁体，也不用逐一校准每个量子点的局部磁场方向与强度，器件设计更易于扩展。同时减少了金属杂质、外部寄生耦合等因素引起的退相干机制。
+
+4. 在零磁场下也可编码，可与超导量子比特等体系耦合<sup>[189]</sup>，这显著增加了量子比特的可扩展性能。
+
+5. 共振交换量子比特的编码位于无退相干子空间，对全局噪声不敏感，可显著提高相干时间。
+
+近些年，共振交换量子比特的研究取得了显著进展。在理论研究中，已提出单比特和两比特操作方案<sup>[189]</sup>，并深入研究了RX量子比特与谐振腔的耦合机制，包括单比特与谐振腔的耦合方案<sup>[190]</sup>以及基于谐振腔介导的两比特方案<sup>[189]</sup>。此外，基于参量驱动的RX量子比特方案也被提出，不需要比特频率和谐振腔频率的精确匹配，给量子比特扩展提供了灵活性<sup>[191]</sup>。在实验方面，单比特操作已经在 GaAs 体系被演示，并且成功实现了与谐振腔的强耦合<sup>[111]</sup>。此外，实验还实现了基于谐振腔介导的 RX 量子比特与超导 transmon 量子比特之间的长程耦合，为不同种类量子比特系统的集成与互联提供了新的思路<sup>[189]</sup>。然而先前的研究主要集中在GaAs体系，对于核自旋较少的硅基体系，共振交换量子比特的研究尚未展开。本章将研究Si/SiGe异质结中的RX量子比特能谱及其与谐振腔的耦合，并从实验和理论两个方面分析RX 量子比特的退相干机制。
+
+## 6.2 共振交换量子比特理论
+
+## 6.2.1 共振交换量子比特的编码
+
+RX量子比特编码于三量子点系统，其中总共包含3个电子，可用以下Hub-bard 模型描述<sup>[186,192]</sup> ：
+
+$$
+\hat { H } _ { \mathrm { T Q D } } = \sum _ { i = 1 } ^ { 3 } \mu _ { i } \hat { n } _ { i } + \sum _ { i = 1 } ^ { 3 } \frac { U _ { i } } { 2 } \hat { n } _ { i } ( \hat { n } _ { i } - 1 ) + \sum _ { i \neq j } U _ { i j } \hat { n } _ { i } \hat { n } _ { j } + \sum _ { i \neq j , \sigma } ( t _ { i j } \hat { c } _ { i \sigma } ^ { \dagger } \hat { c } _ { j \sigma } + \mathrm { H . c . } ) ,\tag{6.1}
+$$
+
+其中 $\begin{array} { r } { \hat { n } _ { i } = \sum _ { \sigma } \hat { c } _ { i \sigma } ^ { \dagger } \hat { c } _ { i \sigma } } \end{array}$ 为第 $\textit { i } \left( { i } = 1 , 2 , 3 \right)$ 个量子点的电子数算符， $\hat { c } _ { i \sigma } ^ { \dagger }$ 和 $\hat { c } _ { i \sigma }$ 分别表示在量子点 𝑖 上产生和湮灭具有自旋为 $\sigma = \uparrow , \downarrow$ 的电子的算符。 $\mu _ { i }$ 和 $U _ { i }$ 分别表示量子点𝑖的化学势和充电能。 $U _ { i j ( i \neq j ) }$ 表示量子点𝑖和𝑗 之间的相互作用能，而$t _ { i j ( i \neq j ) }$ 则表示隧穿耦合。
+
+为了更精确刻画三量子点的电荷态分布，引入两个失谐参量， $\varepsilon = [ \mu ( 2 , 0 , 1 ) -$ $\mu ( 1 , 0 , 2 ) ] / 2$ 和 $A = \mu ( 1 , 1 , 1 ) - [ \mu ( 2 , 0 , 1 ) + \mu ( 1 , 0 , 2 ) ] / 2$ ，其中 $\mu ( n _ { 1 } , n _ { 2 } , n _ { 3 } )$ 表示对应电荷态 $( n _ { 1 } , n _ { 2 } , n _ { 3 } )$ 的电化学势。图6.1（a）给出了失谐参量和量子点电化学势之间的关系。这两个失谐参量与电极电压之间的关系为：
+
+$$
+\varepsilon = \alpha _ { \varepsilon } V _ { \varepsilon } + \varepsilon _ { \mathrm { o f f s e t } } , A = \alpha _ { \scriptscriptstyle A } V _ { \scriptscriptstyle A } + A _ { \mathrm { o f f s e t } } ,\tag{6.2}
+$$
+
+这里 $V _ { \varepsilon } = ( V _ { \mathrm { P 1 } } - V _ { \mathrm { P 3 } } ) / 2 , V _ { A } = V _ { \mathrm { P 2 } } - ( V _ { \mathrm { P 1 } } + V _ { \mathrm { P 3 } } ) / 2 , \alpha _ { \varepsilon }$ 和 $\alpha _ { \varDelta }$ 是对应的杆臂因子，$\varepsilon _ { \mathrm { o f f s e t } }$ 和 $\pmb { \varDelta } _ { \mathrm { o f f s e t } }$ 是失谐量偏移。由于 $V _ { \varepsilon }$ 和 $V _ { \varDelta }$ 不是真实的电极电压，通常也被称为虚拟电极电压，在实验过程中，通常保证平均电压 $V _ { \mathrm { { A } } } = ( V _ { \mathrm { { P l } } } + V _ { \mathrm { { P 2 } } } + V _ { \mathrm { { P 3 } } } ) / 3$ 不变。
+
+量子点的电荷稳定性图谱是研究其特性的重要工具。图6.1（b）给出了我们通过理论计算得到的电荷稳定性图谱。与之前章节不同的是，这里我们主要研究固定电子数为3的情况，这就导致图6.1（b）中不存在量子点的充电线。
+
+(a)  
+![](images/859ed61aaea9e6782229901892072ee9f84dbf803626713cc67817f01fce80e7.jpg)  
+(b)
+
+![](images/f686cc0846a6b0ed0676d9c9406f8c5e162ed92600205aff963c4be1b3b2c22a.jpg)  
+图6.1 （a）三量子点能级图，这里我们给出了两个失谐参量𝜺和𝜟的定义。（b）理论模拟的仅存在三个电子时，系统的稳定性图谱，这里的 U 表示量子点的充电能，并且假设三个量子点的充电能完全相同。我们将 $\pmb \varepsilon = \pmb { \Delta } = \pmb 0$ 设定在图中红色圆圈位置。
+
+这里我们将两个失谐量的零点定义在了电荷态（2，0，1），（1，1，1）和（1，0，2）的交点位置，在图6.1（b）中用红色圆圈表示。在图6.1（b）所示的电荷稳定性图中，中心区域对应电荷态（1，1，1），此时三个量子点中各包含一个电子。该区域被六种不对称电荷态包围，即（2，0，1）、（1，0，2）、（1，2，0）、（0，2，1）、（2，1，0）和（0，1，2），这些状态具有相同的总电子数。除了最后两种电荷态外，这些不对称状态都可以通过一次电子隧穿与（1，1，1）态耦合，而在线性量子点中，最后两种状态则需要两次电子隧穿。图6.1（b）中没有展示 3个电子都在同一个量子点中的情况，因为这种量子态需要的参数比较极端，也不在我们文章讨论的范围之内。
+
+假设每个量子点仅包含一个轨道态，则考虑自旋后共有 20 种可能状态。对称态（1，1，1）共有8个不同的量子态，而其他电荷态各包含两个不同的量子态。进一步从自旋状态分析，整个自旋空间可以表示为 $\hat { H } _ { 3 \mathrm { s p i n } } = \hat { H } _ { 1 / 2 } \otimes \hat { H } _ { 1 / 2 } \otimes \hat { H } _ { 1 / 2 }$ o$\hat { H } _ { 3 \mathrm { s p i n } }$ 可以分为两个自旋 1/2 的空间和一个自旋 3/2 的空间，即 $\hat { H } _ { 3 \mathrm { s p i n } } = \hat { H } _ { 1 / 2 }$ ⊕$\hat { H } _ { 1 / 2 } \oplus \hat { H } _ { 3 / 2 }$ 。在磁场梯度和自旋轨道耦合比较弱的时候，总自旋 $S = 3 / 2$ 的态在能量上与总自旋 $S = 1 / 2$ 的态具有较大差异，通常可以不做考虑<sup>[193]</sup>。总自旋为$S = 1 / 2$ 的态可以进一步分为 $S _ { z } = \pm 1 / 2$ ，这两种态在没有磁场的情况下是简并的。对于 $S _ { z } = + 1 / 2$ 有以下几种态：
+
+$$
+\left| 0 \right. \equiv \left| s \right. _ { 1 3 } \left| \uparrow \right. _ { 2 } ,\tag{6.3}
+$$
+
+$$
+\left| 1 \right. \equiv \sqrt { \frac { 2 } { 3 } } \left| t _ { + } \right. _ { 1 3 } \left| \downarrow \right. _ { 2 } - \frac { 1 } { \sqrt { 3 } } \left| t _ { 0 } \right. _ { 1 3 } \left| \uparrow \right. _ { 2 } ,\tag{6.4}
+$$
+
+$$
+| 2 \rangle \equiv | s \rangle _ { 1 1 } | \uparrow \rangle _ { 3 } ,\tag{6.5}
+$$
+
+$$
+\vert 3 \rangle \equiv \vert \uparrow \rangle _ { 1 } \left. s \right. _ { 3 3 } ,\tag{6.6}
+$$
+
+$$
+\begin{array} { r } { | 4 \rangle \equiv | \uparrow \rangle _ { 1 } | s \rangle _ { 2 2 } , } \end{array}\tag{6.7}
+$$
+
+$$
+| 5 \rangle \equiv | s \rangle _ { 2 2 } | \uparrow \rangle _ { 3 } ,\tag{6.8}
+$$
+
+$$
+\begin{array} { r } { | 6 \rangle \equiv | s \rangle _ { 1 1 } | \uparrow \rangle _ { 2 } , } \end{array}\tag{6.9}
+$$
+
+$$
+| 7 \rangle \equiv | \uparrow \rangle _ { 2 } | s \rangle _ { 3 3 } ,\tag{6.10}
+$$
+
+这里 $| s \rangle _ { i j } \equiv ( | \uparrow \rangle _ { i } | \downarrow \rangle _ { j } - | \downarrow \rangle _ { i } | \uparrow \rangle _ { j } ) / \sqrt { 2 } , | t _ { 0 } \rangle _ { i j } \equiv ( | \uparrow \rangle _ { i } | \downarrow \rangle _ { j } + | \downarrow \rangle _ { i } | \uparrow \rangle _ { j } ) / \sqrt { 2 }$ 和 $| t _ { + } \rangle _ { i j } \equiv$ $\vert \uparrow \rangle _ { i } \left. \uparrow \right. _ { j }$ 分别表示两个电子的单重态和三重态，而𝑖和𝑗 则表示对量子点𝑖和𝑗 的占据。在这里|6⟩和|7⟩如前文所述需要经过两次隧穿才能与（1，1，1）产生耦合，在我们将要讨论的范围内可以忽略。仅考虑前 6 个态时，公式6.1中的哈密顿量可以简化为：
+
+$$
+\hat { H } = \left( \begin{array} { c c c c c c } { 0 } & { 0 } & { t _ { 1 } / 2 } & { t _ { \mathrm { r } } / 2 } & { t _ { \mathrm { r } } / 2 } & { t _ { 1 } / 2 } \\ { 0 } & { 0 } & { \sqrt { 3 } t _ { 1 } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } & { \sqrt { 3 } t _ { 1 } / 2 } \\ { t _ { 1 } / 2 } & { \sqrt { 3 } t _ { 1 } / 2 } & { E _ { 2 } } & { 0 } & { 0 } & { 0 } \\ { t _ { \mathrm { r } } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } & { 0 } & { E _ { 3 } } & { 0 } & { 0 } \\ { t _ { \mathrm { r } } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } & { 0 } & { 0 } & { E _ { 4 } } & { 0 } \\ { t _ { 1 } / 2 } & { \sqrt { 3 } t _ { 1 } / 2 } & { 0 } & { 0 } & { 0 } & { E _ { 5 } } \end{array} \right) ,\tag{6.11}
+$$
+
+在这里我们考虑系统是对称的，即 $t _ { 1 2 } = t _ { 2 1 } \equiv t _ { 1 } / \sqrt { 2 } , t _ { 2 3 } = t _ { 3 2 } \equiv t _ { \mathrm { r } } / \sqrt { 2 }$ 。并且这里我们假设 QD1 和 QD3 之间不存在隧穿耦合，即 $t _ { 1 3 } = t _ { 3 1 } = 0$ ，这个假设在我们的研究过程中是正确的。相关参量表示为：
+
+$$
+E _ { 2 } = \varepsilon - \varDelta + U ,\tag{6.12}
+$$
+
+$$
+E _ { 3 } = - \varepsilon - \varDelta + U ,\tag{6.13}
+$$
+
+$$
+E _ { 4 } = \varepsilon + \varDelta + U ,\tag{6.14}
+$$
+
+$$
+E _ { 5 } = - \varepsilon + \varDelta + U ,\tag{6.15}
+$$
+
+其中 𝑈 表示充电能。
+
+接下来讨论量子比特的编码，量子比特需要一个二能级系统，通常会选择能量最低的两个能级。这里我们考虑电荷态（1，1，1）并将目光转向能量最低的两个能级|0⟩和|1⟩上，其存在两种情况，对应于自旋为 $S _ { z } = + 1 / 2$ 的一组：
+
+$$
+\begin{array} { l } { { \displaystyle | 0 _ { + } \rangle \equiv | s \rangle _ { 1 3 } | \uparrow \rangle _ { 2 } = \displaystyle \frac { 1 } { \sqrt { 2 } } ( | \uparrow , \uparrow , \downarrow \rangle - | \downarrow , \uparrow , \uparrow \rangle ) , } } \\ { { \displaystyle | 1 _ { + } \rangle \equiv \sqrt { \displaystyle \frac { 2 } { 3 } } | t _ { + } \rangle _ { 1 3 } | \downarrow \rangle _ { 2 } - \displaystyle \frac { 1 } { \sqrt { 3 } } | t _ { 0 } \rangle _ { 1 3 } | \uparrow \rangle _ { 2 } } } \\ { { \displaystyle \qquad = \displaystyle \frac { 1 } { \sqrt { 6 } } ( 2 | \downarrow , \downarrow , \uparrow \rangle - | \uparrow , \downarrow , \downarrow \rangle - | \downarrow , \uparrow , \downarrow \rangle ) , } } \end{array}\tag{6.16}
+$$
+
+(6.17)
+
+以及对应于自旋 $S _ { z } = - 1 / 2$ 的一组：
+
+$$
+\begin{array} { l } { { \displaystyle | 0 _ { - } \rangle \equiv | s \rangle _ { 1 3 } | \downarrow \rangle _ { 2 } = \displaystyle \frac { 1 } { \sqrt { 2 } } ( | \downarrow , \downarrow , \uparrow \rangle - | \uparrow , \downarrow , \downarrow \rangle ) , } } \\ { { \displaystyle | 1 _ { - } \rangle \equiv \sqrt { \frac { 2 } { 3 } } | t _ { - } \rangle _ { 1 3 } | \uparrow \rangle _ { 2 } - \displaystyle \frac { 1 } { \sqrt { 3 } } | t _ { 0 } \rangle _ { 1 3 } | \downarrow \rangle _ { 2 } } } \\ { { \displaystyle \qquad = \displaystyle \frac { 1 } { \sqrt { 6 } } ( 2 | \uparrow , \uparrow , \downarrow \rangle - | \downarrow , \uparrow , \uparrow \rangle - | \uparrow , \downarrow , \uparrow \rangle ) , } } \end{array}\tag{6.18}
+$$
+
+(6.19)
+
+由于存在四个态，这里就存在两种量子比特编码的方式<sup>[187]</sup>。方式一：利用子空间编码，即选择 $S _ { z } = \pm 1 / 2$ 中的一个能量更低的空间进行编码。这通常要求存在一个较大的全局磁场，使得 $S _ { z } = + 1 / 2$ 和 $S _ { z } = - 1 / 2$ 解简并。方式二：利用子系统编码，这种情况是利用总自旋 $S = 1 / 2$ 的所有态进行编码，即 $| 0 \rangle = | 0 _ { \pm } \rangle$ 以及$| 1 \rangle = | 1 _ { \pm } \rangle$ 。这种情况下量子比特具有一个额外的自由度，其实现的要点是没有相互作用会有区别地耦合 $| 0 _ { \pm } \rangle$ 和 $| 1 _ { \pm } \rangle$ 。在这个条件下，二能级系统之间不会发生纠缠，额外的自由度可以被重写为一个全局自由度，从而实现一个良好定义的量子比特<sup>[194]</sup>。
+
+根据失谐参量的不同，我们可以编码不同类型的量子比特，处于 $\varepsilon = 0$ 且$\varDelta = U$ 位置附近的量子比特被称为交换量子比特。从电荷稳定性图谱6.1（b）上看，EO 量子比特编码在稳定性图谱的中间位置，这意味着 EO 量子比特通常情况下不与其他态产生耦合。当需要对量子比特进行操作的时候会打开交换相互作用，这是通过改变失谐参量 $\varepsilon$ 和 𝛥 或者隧穿耦合 $t _ { \mathrm { l } }$ 和 $t _ { \mathrm { r } }$ 来实现的，并且仅通过电学方法就可以完成。EO 量子比特就是因为可以仅依赖交换相互作用实现通用量子门操作而得名。但是由于EO量子比特的电荷状态几乎不发生变化，因而难以与谐振腔进行耦合。
+
+当 $( \Delta + U ) \gg \varepsilon$ 时，我们可以编码共振交换量子比特。由于 RX 量子比特的编码位置靠近电荷态（2，0，1）和（1，0，2），因而RX量子比特与这两个电荷态存在耦合。这导致了两个效果，首先是RX量子比特的交换相互作用始终是打开的，这给量子比特操作带来了极大的方便。其次，由于RX量子比特和电荷态存在耦合，这让RX量子比特更容易与谐振腔实现耦合，也是我们本章研究的重点内容。考虑到RX量子比特编码位置与其他电荷态相距较远，在计算精度要求不高的情况下，我们可以仅考虑电荷态（1，1，1），（2，0，1）和（1，0，2），因此，公式6.11给出的哈密顿量可以进一步简化为：
+
+-  
+![](images/10e554d79bd62e029d11b24f925ab33fa10abd610d85b9ee149c6b724fcd72af.jpg)
+
+  
+![](images/56434f698a6a41a68b2c42ad25dfeeb592c175730f6edf465271033c00ee47f9.jpg)  
+图 6.2 RX 量子比特的能级图。（a）哈密顿量 $H _ { \mathrm { e f f } }$ 中各能级与 𝜺 的关系，此处我们保持了𝜟 为固定值，且 $t _ { \mathrm { l } } = t _ { \mathrm { r } }$ 。RX 量子比特定义在能量最低的两个能级上，在图中分别用红色和蓝色表示。（b）RX 量子比特能量与 𝜟 和 𝜺 的等高线关系，这里的能量是（a）两个能级的能量差。
+
+$$
+H _ { \mathrm { e f f } } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { t _ { 1 } / 2 } & { t _ { \mathrm { r } } / 2 } \\ { 0 } & { 0 } & { \sqrt { 3 } t _ { 1 } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } \\ { t _ { 1 } / 2 } & { \sqrt { 3 } t _ { 1 } / 2 } & { - \varepsilon - \varDelta } & { 0 } \\ { t _ { \mathrm { r } } / 2 } & { - \sqrt { 3 } t _ { \mathrm { r } } / 2 } & { 0 } & { \varepsilon - \varDelta } \end{array} \right) ,\tag{6.20}
+$$
+
+相应的四个基矢量为：
+
+$$
+| 0 \rangle = \frac { 1 } { \sqrt { 2 } } \big ( | { \uparrow \downarrow \uparrow } \rangle - | { \downarrow \uparrow \downarrow } \rangle \big ) ,\tag{6.21}
+$$
+
+$$
+| 1 \rangle = \frac { 1 } { \sqrt { 6 } } \big ( 2 | \uparrow \downarrow \uparrow \rangle - | \uparrow \uparrow \downarrow \rangle - | \downarrow \downarrow \uparrow \rangle \big ) ,\tag{6.22}
+$$
+
+$$
+| 2 \rangle = | { \uparrow \downarrow \uparrow } \rangle ,\tag{6.23}
+$$
+
+$$
+\left| 3 \right. = \left| \uparrow \downarrow \uparrow \right. ,\tag{6.24}
+$$
+
+参量𝜀，𝛥， $t _ { \mathrm { l } }$ 和 $t _ { \mathrm { r } }$ 共同决定了RX量子比特的性质，图6.2（a）给出了固定𝛥并且在 $t _ { \mathrm { l } } = t _ { \mathrm { r } } = t$ 情况下的量子比特能级图。能量最低的两个能级 $| 0 \rangle _ { \mathrm { R X } }$ 和 $| 1 \rangle _ { \mathrm { R X } }$ 被用于编码量子比特，因而RX 量子比特的哈密顿量可以表示为：
+
+$$
+\begin{array} { r } { \hat { H } _ { \mathrm { R X } } = E _ { | 1 \rangle _ { \mathrm { R X } } } | 1 \rangle _ { \mathrm { R X } } \langle 1 | _ { \mathrm { R X } } + E _ { | 0 \rangle _ { \mathrm { R X } } } | 0 \rangle _ { \mathrm { R X } } \langle 0 | _ { \mathrm { R X } } , } \end{array}\tag{6.25}
+$$
+
+对应量子比特的能量为：
+
+$$
+E _ { \mathrm { R X } } = E _ { | 1 \rangle _ { \mathrm { R X } } } - E _ { | 0 \rangle _ { \mathrm { R X } } } ,\tag{6.26}
+$$
+
+这里 $E _ { | 1 \rangle _ { \mathrm { R X } } }$ 和 $E _ { | 0 \rangle _ { \mathrm { R X } } }$ 分别表示 $| 1 \rangle _ { \mathrm { R X } }$ 态和 $| 0 \rangle _ { \mathrm { R X } }$ 的能量。量子比特态与基矢的关系为：
+
+$$
+| 0 \rangle _ { \mathrm { R X } } = \sum _ { k = 0 } ^ { 3 } c _ { | 0 \rangle _ { \mathrm { R X } } } ^ { k } \left| k \right. , \quad | 1 _ { \mathrm { R X } } \rangle = \sum _ { k = 0 } ^ { 3 } c _ { | 1 \rangle _ { \mathrm { R X } } } ^ { k } \left| k \right. ,\tag{6.27}
+$$
+
+这里 ${ | k \rangle } \left( { k = 0 , 1 , 2 , 3 } \right)$ 表示基矢，而 $c _ { \vert 0 \rangle _ { \mathrm { R X } } } ^ { k }$ 和 $c _ { \vert 1 \rangle _ { \mathrm { R X } } } ^ { k }$ 则表示相应基矢下的展开系数。
+
+图6.2（a）显示 $\varepsilon$ 会显著影响量子比特的能级分布。为了更加清楚地看到失谐参量对比特能量的影响，我们绘制了图6.2（b）所示的 $E _ { \mathrm { R X } }$ 和失谐参量的关系，我们也称图6.2（b）为 RX 量子比特的能谱图。从这里我们可以看到， $E _ { \mathrm { R X } }$ 的等高线具有两种不同的形态，当𝜀较大时会分成左右两支，当𝜀偏小时则会分成上下两支，这个分支由隧穿耦合 $t _ { \mathrm { l } }$ 和 $t _ { \mathrm { r } }$ 决定。由于在一个特定的实验中，隧穿耦合是固定的，因此，量子比特频率是 𝜀 和 𝛥 的函数，记作 $\omega _ { \mathrm { R X } } ( \varepsilon , \varDelta )$ 。特别地，当 $\varepsilon = \varDelta = 0$ 且 $t _ { \mathrm { l } } = t _ { \mathrm { r } } = t$ 时，量子比特的频率 $\omega _ { \mathrm { R X } } \approx 0 . 5 2 t$ 0
+
+## 6.2.2 共振交换量子比特与谐振腔的耦合
+
+![](images/fdfa206aec6710d73b7851fb2b3719552ec71a9cbd3455a61e653077f5a510e1.jpg)  
+图6.3 量子点与谐振腔耦合示意图。
+
+介绍完RX量子比特的编码后，现在我们将研究RX量子比特与谐振腔的耦合。如图6.3所示，描述了谐振腔与量子点的耦合关系。量子点与谐振腔的相互作用哈密顿量可以写成<sup>[190]</sup>：
+
+$$
+\hat { H } _ { \mathrm { I } } = \hbar g _ { \mathrm { c 0 } } \left( \hat { n } _ { 3 } + \nu \hat { n } _ { 2 } - \hat { n } _ { 1 } \right) ( \hat { a } ^ { \dagger } + \hat { a } ) ,\tag{6.28}
+$$
+
+其中 $g _ { \mathrm { c 0 } }$ 表 $\overline { { \overline { { \mathbf { \Omega } } } } }$ 电荷与谐振腔的全局耦合强度， $\hat { n } _ { 1 }$ ， $\hat { n } _ { 2 }$ ， $\hat { n } _ { 3 }$ 分别表示 QD1、QD2 和QD3中的电子数算符，𝜈 是衡量电容串扰效应的参数。当 $\nu = 0$ 时，与双量子点
+
+系统的情况相同。如前文所述，在我们的实验过程中，三个量子点中总电子数目是固定的，相互作用哈密顿量可以进一步写成<sup>[111]</sup>：
+
+$$
+\hat { H } _ { \mathrm { I } } = 2 \hbar g _ { \mathrm { c 0 } } \left( \hat { n } _ { 3 } + \alpha \hat { n } _ { 2 } \right) ( \hat { a } ^ { \dagger } + \hat { a } ) ,\tag{6.29}
+$$
+
+这里 $\alpha = ( \nu + 1 ) / 2$ ，并且省去了一个常数项。利用旋转波近似，并在 RX 量子比特的本征基矢 $| 0 \rangle _ { \mathrm { R X } }$ 和 |1⟩ 下表示，RX 量子比特与谐振腔的耦合形式为：
+
+$$
+\begin{array} { r } { \hat { H } _ { \mathrm { I , R X } } = \hbar g _ { \mathrm { R X } } ( \hat { a } ^ { \dagger } \hat { \sigma } _ { - } + \hat { a } \hat { \sigma } _ { + } ) , } \end{array}\tag{6.30}
+$$
+
+这就是之前介绍的 JC 模型，其中 $g _ { \mathrm { R X } }$ 表示 RX 量子比特与谐振腔的耦合强度。该耦合强度与电荷量子比特耦合强度之间的关系为：
+
+$$
+g _ { \mathrm { R X } } = \left[ c _ { 2 } ^ { | 1 \rangle _ { \mathrm { R X } } } \left( c _ { 2 } ^ { | 0 \rangle _ { \mathrm { R X } } } \right) ^ { * } - \alpha \left( c _ { 3 } ^ { | 1 \rangle _ { \mathrm { R X } } } \left( c _ { 3 } ^ { | 0 \rangle _ { \mathrm { R X } } } \right) ^ { * } + c _ { 2 } ^ { | 1 \rangle _ { \mathrm { R X } } } \left( c _ { 2 } ^ { | 0 \rangle _ { \mathrm { R X } } } \right) ^ { * } \right) \right] g _ { \mathrm { c 0 } } ,\tag{6.31}
+$$
+
+这里的 $c _ { 2 } ^ { \mathrm { | 1 \rangle _ { R X } } }$ 表示本征态的展开系数，其物理含义是电荷态（1，0，2）和（2，0，1）对量子比特态的贡献。现在我们讨论几个特殊情况，第一种情况是 $\varepsilon = 0$ 且$t _ { \mathrm { l } } = t _ { \mathrm { r } } = t$ ，此时量子比特的性质主要由𝛥决定，耦合强度关系为：
+
+$$
+g _ { \mathrm { R X } } = \frac { \sqrt { 3 } t ^ { 2 } } { \left[ \left( 2 t ^ { 2 } + { \varDelta } ^ { 2 } - { \varDelta } \sqrt { 2 t ^ { 2 } + { \varDelta } ^ { 2 } } \right) \left( 6 t ^ { 2 } + { \varDelta } ^ { 2 } - { \varDelta } \sqrt { 6 t ^ { 2 } + { \varDelta } ^ { 2 } } \right) \right] ^ { 1 / 2 } } g _ { \mathrm { c 0 } } ,\tag{6.32}
+$$
+
+第二种情况是， $\varDelta = 0$ 且 $t _ { \mathrm { l } } = t _ { \mathrm { r } } = t$ ，此时量子比特的性质主要由𝜀决定，相应的耦合强度关系为：
+
+$$
+{ { g } _ { \mathrm { R X } } } = \frac { { { t } ^ { 2 } } } { \varepsilon ^ { 2 } + 2 { { t } ^ { 2 } } } \left[ 1 - \alpha \left( 1 + \frac { \varepsilon ^ { 2 } } { \varepsilon ^ { 2 } + 2 { { t } ^ { 2 } } } \right) \right] { { g } _ { \mathrm { c 0 } } } ,\tag{6.33}
+$$
+
+由耦合强度公式可知，计算RX量子比特与谐振腔的耦合，首先需要知道全局的耦合强度 $g _ { \mathrm { c 0 } }$ ，然后是确定五个参量𝜀，𝛥， $t _ { \mathrm { l } }$ ， $t _ { \mathrm { r } }$ 以及𝛼 的值。这些参量可通过量子点的电荷稳定性图谱及RX 量子比特的能谱图获取。
+
+## 6.3 实验部分
+
+## 6.3.1 共振交换量子比特工作位置的确定
+
+我们如何从实验上编码一个RX量子比特呢？首先我们需要找到RX量子比特的工作位置，这通常来说并不容易，因为在3个电子的情况下，通过谐振腔同时探测量子点的充电线和点间隧穿线具有较大挑战。在第 4 章的最后我们介绍了使用谐振腔探测到三量子点四相点，这里我们将从找到四相点开始。首先，我们需要确定了量子点中的电子数目。然而，与第4章的实验不同的是，为了确保谐振腔的正常工作，此处我们无法使用 Rlead，并将其电压设置为 0 V，这就形成了事实上的单源漏结构。
+
+(a)  
+![](images/18ba9752474c5d30573708d779eaba3445238052585e35f8e98fb9a403bf7983.jpg)
+
+(b)  
+![](images/9f98d0daab896a5ddee93cd0ed8ed440d270301fd2728d9225b472c39b9cec71.jpg)
+
+![](images/67ea348fadcfd71a6f750c5ec1904e26fdeb7376775632a1fc829fd2a44f4f29.jpg)  
+图 6.4 三量子点稳定性图谱。（a）谐振腔相位响应与电极电压 $V _ { \mathbf { P 1 } }$ 和 $V _ { \mathbf { P 3 } }$ 的关系，我们找到了（1，1，1）电荷态位置。（b）四相点附近的三量子点电荷稳定性图谱。（c）在总电子数为3时，三量子点的电荷稳定性图谱，隧穿线的数量由（c）中的四条降低到两条。
+
+由于我们的量子比特编码于（1，1，1）电荷态，在确定电子数后，我们需要找到对应的（1，1，1）态，图6.4（a）给出了使用谐振腔测量的具有多种电荷态的三量子点电荷稳定性图谱。通过调节量子点间的隧穿耦合，并将测量区域进一步聚焦到（1，1，1）电荷态附近，获得了图6.4（b）所示的电荷稳定性图谱，这里存在两个四相点𝛼 和 $\beta _ { \odot }$ 。与图4.10（c）相比，由于实验中没有量子点的充电线，观测到的信号线相比图4.10（b）显著减少。在这个区域内，量子点系统可能存在3个或者4个电子。
+
+但是，RX量子比特编码在3个电子的区域。为更好地满足这一条件，我们关闭了三量子点系统与源漏的电子交换。具体来说，在关闭Rlead的基础上，我们进一步降低了Llead的电压。最终，我们得到图6.4（c）所示的电荷稳定性图，该图与理论预期的图6.1（b）一致（未使用虚拟电极，存在角度差）。图中虚线表示电荷态（2，0，1）和（1，0，2）直接发生隧穿的情况，这需要很大的量子点之间的隧穿耦合，因而在图中我们没有直接观测到。图6.4（c）中的黄色方框给出了我们需要的RX量子比特的工作区域。至此我们最终确定了量子比特的工
+
+作位置。
+
+## 6.3.2 共振交换量子比特能谱
+
+显然，从图6.1（b）中我们测量得到的隧穿线是电荷跃迁线，并没有RX量子比特的信号。这是因为使用谐振腔测量量子比特时，需要量子比特的频率与谐振腔频率相匹配。这里我们可以做一个简单的估算：在双点中（以RDQD为例）编码的电荷量子比特，其频率为 $\omega _ { \mathrm { c h } } = 2 t _ { 1 2 } = 2 t$ ，而当 $\varepsilon = \Delta = 0$ 且 $t _ { \mathrm { l } } = t _ { \mathrm { r } } = t$ 时共振交换比特的频率为 $\omega _ { \mathrm { R X } } = 0 . 5 2 t$ ，在相同的隧穿耦合下， $\omega _ { \mathrm { R X } } \ll \omega _ { \mathrm { c h } }$ 。由于谐振腔的频率为 $\omega _ { \mathrm { r } } / ( 2 \pi ) = 7 . 3 3 2 \ : \mathrm { G H z }$ ，需要进一步增强量子点之间的隧穿耦合以观察RX 量子比特信号。
+
+量子点之间的隧穿耦合主要由势垒电极所控制，其中 $t _ { 1 2 }$ 受电极B2控制， $t _ { 2 3 }$ 受电极 B3 控制。我们这里对隧穿耦合的要求是 $t _ { 1 2 } \approx t _ { 2 3 }$ ，这需要我们同时增加$V _ { \mathrm { B } 2 }$ 和 $V _ { \mathrm { B } 3 }$ 。但是这里存在一个矛盾，由于存在串扰，当我们试图增加 B2 提高$t _ { 1 2 }$ 的时候， $t _ { 2 3 }$ 就会降低，这在一定程度上限制了我们持续提高量子比特频率。除了调节势垒电极B2和B3的电压外，还可通过调整B1和B4的电压优化隧穿耦合。当降低 $V _ { \mathrm { B l } }$ 和 $V _ { \mathrm { B 4 } }$ 时，量子点之间距离会减小，这将有效提高量子点之间的隧穿耦合。
+
+(a)  
+![](images/d27edb87ab79d6bbbdc241d51e964673a8cff6cf801baface5109ead2c4fa8b6.jpg)  
+(b)
+
+![](images/d78de98114c6d443cf7df4c3bd24ada78ad23ee06f764716c8bf0798e74e217e.jpg)  
+(c)
+
+![](images/13fe82c255ef6cf414ec8c6390924af6e991690ce365044093a09c7569074656.jpg)  
+图6.5 RX量子比特的能谱。（a）谐振腔幅值响应和两个失谐参量𝜺以及𝜟的关系,橙色三角形区域标记了 RX 量子比特的工作位置。（b） $\pmb { \Delta } = \pmb { 0 }$ 时，谐振腔幅值响应关于失谐参量 𝜺的关系。（c）从（a）中提取的比特—谐振腔共振点，棕色实线是对数据的拟合。
+
+图6.5（a）给出了我们调优之后得到的量子比特能谱图，为了与理论结果相对应，这里我们使用了虚拟电极进行测量。图中 $\varepsilon$ 和 𝛥 是之前定义的失谐参量，它们与量子点电压之间的关系为:
+
+$$
+\varepsilon = \alpha _ { \varepsilon } V _ { \varepsilon } , \varDelta = \alpha _ { \varDelta } V _ { \varDelta } ,\tag{6.34}
+$$
+
+这里的 $\alpha _ { \varepsilon }$ 和 $\alpha _ { \varDelta }$ 与相应失谐参量相关的杆臂因子， $V _ { \varepsilon }$ 和 $V _ { \varDelta }$ 则是我们之前定义的虚拟电极。图6.5（b）展示了在 𝛥 = 0 时，谐振腔幅值响应随失谐参量 𝜀 的变化关系。在图6.5（b）中，我们观察到幅值信号出现两个极小值，这两个极小值对应于谐振腔和量子点的共振位置。进一步分析图6.5（a）中的幅值响应数据，我们发现对于每一个固定的𝛥，均存在两个共振位置。提取这些共振位置后，我们得到了图6.5（c）中的蓝色数据点，这些点表示此处的 RX 量子比特频率为 $\omega _ { \mathrm { r } ^ { \circ } }$ 这些数据点分布在左右两支上，通过之前的分析，这表明我们的量子点之间的隧穿耦合处于较小的值。
+
+我们利用公式6.20给出的哈密顿量进行拟合，得到了量子点间的耦合速率为 $t _ { \mathrm { l } } = 1 2 . 1 5 \ \mathrm { G H z }$ 和 $t _ { \mathrm { r } } = 1 2 . 3 5 \mathrm { G H z }$ 。据此，我们可以计算得出 RX 量子比特在 $\varepsilon = \Delta = 0$ 处的频率为 $\omega _ { \mathrm { R X } } ^ { \mathrm { s } } / ( 2 \pi ) = 6 . 2 2 ~ \mathrm { G H z }$ ，这个频率显著低于谐振腔频率$\omega _ { \mathrm { r } } / ( 2 \pi ) = 7 . 3 3 2 \ : \mathrm { G H z }$ 。继续提高量子比特频率需要调节量子点电极之间的间距，这是从根本上解决问题的方法，当然在我们现有的器件上，这是不现实的。
+
+## 6.3.3 耦合强度的提取
+
+在图6.5（a）中 $\varDelta = 0$ 的情况下，量子比特频率由 𝜀 控制。在扫描谐振腔透射谱线并改变失谐参量𝜀的过程中，获得了图6.6（a）所示的劈裂谱线。对于每一个𝜀我们提取出了谐振腔的谐振频率，在图6.5（b）中用蓝色数据点表示。使用第4章给出的方法，这里我们对这些数据进行拟合，得到了电荷与谐振腔的耦合强度 $g _ { \mathrm { c 0 } } / ( 2 \pi ) = 1 6 8 ~ \mathrm { M H z }$ 。这里的隧穿耦合速率是通过前文的能谱图提取得到的。在此基础上，我们通过公式6.31进一步得到了 $g _ { \mathrm { R X } } / ( 2 \pi ) = 6 5 ~ \mathrm { M H z }$
+
+(a)  
+![](images/320da51c4dc66148ab2b30a0826c397bde1c01a8db40fbe0ecdf906b13830ba5.jpg)
+
+(b)  
+![](images/2997f1e6c5267572077fe1d379180d1d999a661f9717e392f06bfdb6b46d3494.jpg)  
+图6.6 RX量子比特与谐振腔耦合强度的提取。（a）谐振腔透射谱关于失谐量𝜺的关系。这里我们固定了𝜟 =0。（b）耦合强度拟合。对应每个𝜺，我们提取出了谐振腔的谐振频率。棕色虚线是对数据的拟合，通过拟合得到 $g _ { \mathrm { c 0 } } / ( 2 \pi ) = 1 6 8 \ : \mathrm { M H z }$
+
+## 6.4 共振交换量子比特的退相干
+
+## 6.4.1 退相干的实验测量
+
+类似于前面两章的研究，需要进一步测定RX量子比特的退相干速率，这里我们仍然使用双色调制谱来探测耦合强度。在这里我们将驱动微波施加在电极P2 上，谐振腔的探测频率为 $\omega = \omega _ { \mathrm { r } }$ 。由于 𝛥 决定量子比特的工作状态，并且量子比特频率也会随 𝛥 发生变化。这里我们固定失谐参量 $\varepsilon = 0$ ，并在不同驱动频率下测量谐振腔相位响应随失谐参量𝛥的变化关系，最终结果如图6.7（a）所示。
+
+图6.7（b）给出了在 $\varDelta = 0$ 附近的情况双色调制谱情况，即图6.7（a）中黑色虚线位置。使用包含 Fano 效应修正的洛伦兹线型进行拟合，我们得到了量子比特的退相干为 $\gamma _ { \mathrm { R X } } / ( 2 \pi ) = 1 6 . 9 ~ \mathrm { M H z }$ 。结合此前得到的耦合强度和谐振腔展宽，确认 $g _ { \mathrm { R X } } > \gamma _ { \mathrm { R X } }$ 且 $g _ { \mathrm { R X } } > \kappa$ ，即系统实现了强耦合。
+
+## 6.4.2 退相干机制分析
+
+与第5章中翻转模式量子比特进行对比，RX量子比特的退相干速率相对较大。为了将来能够得到更好的量子比特，我们有必要分析这里量子比特退相干的形成机制。
+
+通常来说，量子比特的退相干主要源于其与环境的相互作用。通常的噪声源有电荷噪声，磁噪声，电声相互作用等。其中磁噪声包括三个部分，外加磁场的抖动，核自旋以及微磁体的杂散场。先前的理论和实验都已经证明了在硅基量子点体系中，磁噪声的影响通常较小<sup>[195]</sup>。此外，在我们第5章中讨论的翻转模式量子比特也具有磁噪声，但退相干速率仍然可以达到 4.6 MHz。这些结果表明，磁噪声并非本系统的主要噪声来源。我们主要考虑另外两种退相干机制：电荷噪声和电声相互作用。
+
+通常情况下，电荷噪声来源于电场波动，其时间尺度大概是毫秒量级。因此，电荷噪声在低频范围占据主导地位，并导致量子比特的退相位速率 $\gamma _ { \phi }$ 。我们假设电荷噪声使两个失谐参数 𝛥 和 𝜀 发生偏移 $\delta q ( q = \varepsilon , \Delta )$ ，其均值为零 $\langle \delta q ( t ) \rangle = 0$ 并且 $\delta \boldsymbol { q }$ 服从高斯分布。将哈密顿量展开到二阶，我们得到：
+
+$$
+\hat { H } _ { \mathrm { R X } } = \frac { \hbar } { 2 } \left[ ( \omega _ { \mathrm { R X } } + \delta \hat { \omega } _ { x } ) \hat { \sigma } _ { x } + \delta \hat { \omega } _ { x } \hat { \sigma } _ { x } + \delta \hat { \omega } _ { y } \hat { \sigma } _ { y } \right] ,\tag{6.35}
+$$
+
+这里
+
+$$
+\delta \omega _ { x } = \ \frac { \partial \omega _ { \mathrm { R X } } } { \partial \varepsilon } \delta \varepsilon + \frac { \partial \omega _ { \mathrm { R X } } } { \partial A } \delta A + \frac { 1 } { 2 } \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial \varepsilon ^ { 2 } } \delta \varepsilon ^ { 2 } + \frac { 1 } { 2 } \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial A ^ { 2 } } \delta A ^ { 2 } + \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial \varepsilon \partial A } \delta \varepsilon \delta A + \cdots .
+$$
+
+由于电荷噪声在低频域占主导地位，我们关注导致量子比特退相干的纵向项。假设所有电荷涨落具有 $1 / f$ 频谱 $\begin{array} { r } { S _ { \mathrm { q } } ( \omega ) = \frac { 2 \pi A _ { \mathrm { q } } } { | \omega | } } \end{array}$ ，其中 $A _ { \mathfrak { q } }$ 为噪声频率在 1 Hz
+
+(a)  
+![](images/32ea18abd7df1ed0f5b7f9585440dda00462a9b633adb44a2431211cfed51aa0.jpg)
+
+(b)  
+![](images/ebda5172ff421e6e7ab53d3b3067c3484519f909aac4dc3330f743a2d4cbded8.jpg)
+
+(c)  
+![](images/cc86ea6b531e35dbc3daff13486bc13722b668f6c3b049b798172ad7c0a562e7.jpg)
+
+(d)  
+![](images/5cb9c17f034813689309220929edc36743d121a14b2f30cf97eb79523365782d.jpg)  
+图6.7 RX量子比特的退相干。（a）RX量子比特的双色调制谱，这里的每个数据点都是在$\pmb { \varepsilon = } \mathbf { 0 }$ 处测到的。（b） $\pmb \varepsilon = \pmb { \Delta } = \mathbf { 0 }$ 处的双色调制谱线。为提高信号质量，实验数据平均25次后提取量子比特频率及展宽。（c）提取出的量子比特频率和失谐量 𝜟 的关系。（d）提取出的量子比特展宽和失谐量𝜟的关系，实线是通过电荷噪声模型进行的拟合。
+
+时的功率。退相干率可以近似表示为<sup>[186,193,196]</sup>：
+
+$$
+\begin{array} { l } { { \displaystyle \gamma _ { \phi } = \frac { 1 } { 2 \pi \hbar } \biggl [ \underbrace { \sum _ { q = \pm , d } \left( \frac { 1 } { 4 } \left( \frac { \partial \omega _ { \mathrm { R X } } } { \partial q } \right) ^ { 2 } \mathrm { v a r } ( q ) + \frac { 1 } { 1 6 } \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial q ^ { 2 } } \right) ^ { 2 } \mathrm { v a r } ( q ) ^ { 2 } \right) } } } \\ { { \displaystyle \qquad + \frac { c } { 2 } \left( \frac { \partial \omega _ { \mathrm { R X } } } { \partial \varepsilon } \right) \left( \frac { \partial \omega _ { \mathrm { R X } } } { \partial A } \right) \sigma _ { \varepsilon } \sigma _ { A } + \frac { ( 1 + c ^ { 2 } ) } { 8 } \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial \varepsilon \partial A } \right) ^ { 2 } \mathrm { v a r } ( \varepsilon ) \mathrm { v a r } ( A ) } } \\ { { \displaystyle \qquad + \frac { c ^ { 2 } } { 8 } \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial \varepsilon ^ { 2 } } \right) \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial A ^ { 2 } } \right) \mathrm { v a r } ( \varepsilon ) \mathrm { v a r } ( A ) } }  \\  { \displaystyle \qquad + \sum _ { \alpha \neq , A } \frac { c } { 4 } \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial q ^ { 2 } } \right) \left( \frac { \partial ^ { 2 } \omega _ { \mathrm { R X } } } { \partial \varepsilon \partial A } \right) \mathrm { v a r } ( q ) \sigma _ { \varepsilon } \sigma _ { A } } \end{array}\tag{6.36}
+$$
+
+其中 $\mathrm { v a r } ( q ) = \sigma _ { q } ^ { 2 }$ 是失谐参数 𝑞 的标准差， $\begin{array} { r } { c = \frac { \cos ( \varepsilon , \varDelta ) } { \sigma _ { \varepsilon } \sigma _ { A } } } \end{array}$ ，cov(𝜀,𝛥) 是两个参数之间的协方差。我们对退相干率进行了拟合，拟合曲线在图6.7（d）中用黑色曲线表示。这个拟合结果与实验数据符合较好，揭示了电荷噪声是系统的主要噪声。
+
+除了电荷噪声外，我们还估算了由材料中的声子通过耦合到量子点的电偶极矩引起的量子比特弛豫。硅中的电子-声子相互作用的哈密顿量表达式为<sup>[187,197]</sup>：
+
+$$
+V _ { \mathbf { e } - \mathbf { p } } ^ { \mathrm { S i } } = \sum _ { \mu , k } \sqrt { \frac { \hbar } { 2 \rho _ { 0 } V _ { 0 } c _ { \mu } k } } \left( \boldsymbol { k } \cdot \hat { \boldsymbol { \varepsilon } } _ { ( \mu , k ) } \boldsymbol { \Xi } _ { d } + \boldsymbol { k } _ { z } \hat { \boldsymbol { z } } \cdot \hat { \boldsymbol { \varepsilon } } _ { ( \mu , k ) } \boldsymbol { \Xi } _ { u } \right) \times \left( \boldsymbol { a } _ { ( \mu , k ) } + \boldsymbol { a } _ { ( \mu , - k ) } ^ { \dagger } \right) e ^ { i \boldsymbol { k } \cdot \mathbf { r } } ,\tag{6.37}
+$$
+
+其中 $a _ { ( \mu , - k ) } ^ { \dag } \left( a _ { ( \mu , k ) } \right)$ 分别表示产生（湮灭）一个波矢为𝒌、偏振为 $\mu$ 的声子，声子速度为𝑐 ，偏振矢量为 $c _ { \mu }$ $\hat { \pmb { \varepsilon } } _ { ( \mu , \pmb { k } ) } \circ \ \rho _ { 0 }$ 为质量密度， $V _ { 0 }$ 为体积， $\Xi _ { d }$ 和 $\Xi _ { u }$ 分别表示膨胀形变势和单轴形变势，这些是与材料相关的参数。在以下讨论中，我们忽略应变引起的单轴形变项，式(6.37)用费米子产生和湮灭算符的二次量子化表示为：
+
+$$
+\begin{array} { l } { { \displaystyle \hat { H } _ { \mathrm { e - p } } ^ { \mathrm { S i } } = \sum _ { \mu , k } \sqrt { \frac { \hbar } { 2 \rho _ { 0 } V _ { 0 } c _ { \mu } k } } \left( { k \cdot \hat { \varepsilon } _ { ( \mu , k ) } } \Xi _ { d } + k _ { z } \hat { z } \cdot \hat { \varepsilon } _ { ( \mu , k ) } { \Xi _ { u } } \right) } } \\ { { \displaystyle \qquad \times \left( \hat { a } _ { ( \mu , k ) } + \hat { a } _ { ( \mu , - k ) } ^ { \dagger } \right) M _ { k } = \sum _ { \mu , k } \hat { F } _ { k } ^ { ( \mu ) } M _ { k } , } } \end{array}\tag{6.38}
+$$
+
+其中
+
+$$
+\begin{array} { r c l } { { } } & { { } } & { { \hat { M } _ { k } = \displaystyle \sum _ { n , n ^ { \prime } } \sum _ { \sigma , \sigma ^ { \prime } } \langle n ^ { \prime } \sigma ^ { \prime } | e ^ { i k \cdot \mathbf { r } } | n \sigma \rangle \hat { c } _ { n ^ { \prime } \sigma ^ { \prime } } ^ { \dagger } \hat { c } _ { n \sigma } } } \\ { { } } & { { } } & { { = \displaystyle \sum _ { n , n ^ { \prime } } \sum _ { \sigma } \langle n ^ { \prime } | e ^ { i k \cdot \mathbf { r } } | n \rangle \hat { c } _ { n ^ { \prime } \sigma } ^ { \dagger } \hat { c } _ { n \sigma } , } } \end{array}\tag{6.39}
+$$
+
+其中 $\langle \mathbf { r } | n \rangle = \phi _ { n } ( \mathbf { r } )$ 表示第𝑛个位置的单电子波函数。为了简化，我们假设高斯形状的波函数<sup>[198-199]</sup> ：
+
+$$
+\phi _ { 1 } ( \mathbf { r } ) = \frac { 1 } { \sqrt { 2 \pi a ^ { 2 } } } A ( z ) \exp \left( - \frac { ( x - l ) ^ { 2 } + y ^ { 2 } } { 4 a ^ { 2 } } \right) ,\tag{6.40a}
+$$
+
+$$
+\phi _ { 2 } ( \mathbf { r } ) = \frac { 1 } { \sqrt { 2 \pi a ^ { 2 } } } A ( z ) \exp \left( - \frac { x ^ { 2 } + y ^ { 2 } } { 4 a ^ { 2 } } \right) ,\tag{6.40b}
+$$
+
+$$
+\phi _ { 3 } ( \mathbf { r } ) = \frac { 1 } { \sqrt { 2 \pi a ^ { 2 } } } A ( z ) \exp \left( - \frac { ( x + l ) ^ { 2 } + y ^ { 2 } } { 4 a ^ { 2 } } \right) ,\tag{6.40c}
+$$
+
+其中𝑎和𝑙 分别表示每个量子点的大小和相邻两个量子点之间的距离。因此，耦合矩阵元可以精确积分为：
+
+$$
+\langle 1 | e ^ { i k \cdot \mathbf { r } } | 1 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } e ^ { i k _ { x } l } ,\tag{6.41a}
+$$
+
+$$
+\langle 2 | e ^ { i k \cdot { \bf r } } | 2 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } ,\tag{6.41b}
+$$
+
+$$
+\langle 3 | e ^ { i k \cdot { \bf r } } | 3 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } e ^ { - i k _ { x } l } ,\tag{6.41c}
+$$
+
+$$
+\langle 1 | e ^ { i k \cdot \mathbf { r } } | 2 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } e ^ { i k _ { x } l / 2 } e ^ { - l ^ { 2 } / ( 8 a ^ { 2 } ) } ,\tag{6.41d}
+$$
+
+$$
+\langle 2 | e ^ { i k \cdot { \bf r } } | 3 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } e ^ { - i k _ { x } l / 2 } e ^ { - l ^ { 2 } / ( 8 a ^ { 2 } ) } ,\tag{6.41e}
+$$
+
+$$
+\langle 1 | e ^ { i k \cdot \mathbf { r } } | 3 \rangle = e ^ { - a ^ { 2 } / 2 ( k _ { x } ^ { 2 } + k _ { y } ^ { 2 } ) } e ^ { - l ^ { 2 } / ( 2 a ^ { 2 } ) } ,\tag{6.41f}
+$$
+
+退相干率可以使用费米黄金定则计算<sup>[200]</sup>：
+
+$$
+\gamma _ { a b } = \sum _ { \mu } \sum _ { k , k ^ { \prime } } \langle b | \hat { M } _ { k } ^ { \dagger } | a \rangle \langle a | \hat { M } _ { k ^ { \prime } } | b \rangle S _ { k k ^ { \prime } } ^ { ( \mu ) } ( \omega _ { b } - \omega _ { a } ) ,\tag{6.42}
+$$
+
+这里我们的功率谱函数定义为：
+
+$$
+S _ { k k ^ { \prime } } ^ { ( \mu ) } ( \omega ) = \frac { 1 } { \hbar ^ { 2 } } \int _ { - \infty } ^ { \infty } d \tau e ^ { i \omega \tau } \mathrm { T r } _ { B } \left[ \hat { F } _ { k } ^ { ( \mu ) } ( \tau ) \hat { F } _ { k ^ { \prime } } ^ { ( \mu ) } ( 0 ) \rho ^ { B } \right] ,\tag{6.43}
+$$
+
+其中 $\rho ^ { B }$ 是声子浴的密度算符。对于各向同性模型，相互作用哈密顿量 (6.38) 可分为纵向声学（LA）和横向声学（TA）声子两部分的贡献：
+
+$$
+\begin{array}{c} \begin{array} { r l } & { \sqrt { \frac { \hbar } { 2 \rho _ { 0 } V _ { 0 } c _ { \mu } k } } \left( \boldsymbol { k } \cdot \boldsymbol { \hat { \varepsilon } } _ { ( \mu , k ) } \boldsymbol { \Xi } _ { d } + k _ { z } \boldsymbol { \hat { z } } \cdot \boldsymbol { \hat { \varepsilon } } _ { ( \mu , k ) } \boldsymbol { \Xi } _ { u } \right) } \\ & { = \left\{ \sqrt { \frac { \hbar k } { 2 \rho _ { 0 } V _ { 0 } c _ { \iota } } } ( \boldsymbol { \Xi } _ { d } + \boldsymbol { \Xi } _ { u } \cos ^ { 2 } \theta ) , \quad \mathrm { L A ~ } ^ { \dagger } \boldsymbol { \sharp } _ { \sf E } ^ { \dagger } \boldsymbol { \hat { \boldsymbol { z } } } \right.} \\ & { \sqrt { \frac { \hbar k } { 2 \rho _ { 0 } V _ { 0 } c _ { \iota } } } \boldsymbol { \Xi } _ { u } \sin \theta \cos \theta , \quad \quad \mathrm { T A ~ } ^ { \dagger } \boldsymbol { \sharp } _ { \sf E } ^ { \dagger } \boldsymbol { \hat { \boldsymbol { z } } } \boldsymbol { \hat { \boldsymbol { z } } } } \end{array}   \end{array}\tag{6.44}
+$$
+
+因此，假设声子处于热平衡状态，可以得到谱函数的简化形式：
+
+$$
+\begin{array} { l } { { S _ { k k ^ { \prime } } ^ { ( l ) } ( \omega ) = \displaystyle \frac { 2 \pi } { \hbar } \frac { k } { 2 \rho _ { 0 } V _ { 0 } c _ { l } } ( \Xi _ { d } + \Xi _ { u } \cos ^ { 2 } \theta ) ^ { 2 } A _ { k , - k ^ { \prime } } \times \left[ ( n _ { k } + 1 ) A ( \omega - \nu _ { k } ) + n _ { k } A ( \omega + \nu _ { k } ) \right] , } } \\ { { S _ { k k ^ { \prime } } ^ { ( t ) } ( \omega ) = \displaystyle \frac { 2 \pi } { \hbar } \frac { k } { 2 \rho _ { 0 } V _ { 0 } c _ { t } } ( \Xi _ { u } \sin \theta \cos \theta ) ^ { 2 } A _ { k , - k ^ { \prime } } \times \left[ ( n _ { k } + 1 ) A ( \omega - \nu _ { k } ) + n _ { k } A ( \omega + \nu _ { k } ) \right] , } } \end{array}\tag{6.45a}
+$$
+
+其中 $\begin{array} { r } { \bar { n } _ { k } = \left[ \exp \left( \frac { \hbar \nu _ { k } } { k _ { B } T } \right) - 1 \right] ^ { - 1 } } \end{array}$ 表示温度为𝑇 时的平均声子数。由此，声子诱导的量子比特弛豫率可以表示为：
+
+$$
+\begin{array} { l } { { \displaystyle \gamma _ { 0 1 } = \sum _ { \mu } \sum _ { k } \left| \langle \bar { 0 } | \hat { M } _ { k } | \bar { 1 } \rangle \right| ^ { 2 } S _ { k , - k } ^ { ( \mu ) } ( \omega _ { 1 0 } ) } } \\ { { \displaystyle \quad = \frac { V _ { 0 } } { ( 2 \pi ) ^ { 3 } } \sum _ { \mu } \int d ^ { 3 } k \left| \langle \bar { 0 } | \hat { M } _ { k } | \bar { 1 } \rangle \right| ^ { 2 } S _ { k , - k } ^ { ( \mu ) } ( \omega _ { 1 0 } ) } . } \end{array}\tag{6.46}
+$$
+
+计算 𝛾 所使用的参数为 𝑇 = 200 mK， $\gamma _ { 0 1 }$ $a = 3 0 \ \mathrm { n m }$ $l = 1 0 0 \ \mathrm { n m }$ 。其他与材料相关的参数包括纵向声子速度 $c _ { 1 } = 9 . 3 3 ~ \mathrm { k m / s }$ ，横向声子速度 $c _ { \mathrm { t } } = 5 . 4 2 ~ \mathrm { k m / s }$ $\rho _ { 0 } = 2 . 3 3 \mathrm { g } / \mathrm { c m } ^ { 3 }$ ，膨胀形变势 $\Xi _ { d } = 5 \mathrm { e V }$ 和单轴形变势 $\mathcal { E } _ { u } = 8 . 7 7 ~ \mathrm { e V } ^ { [ 1 9 0 , 2 0 1 ] }$ 。我们的结果表明，与电荷噪声相比，声子对硅中量子比特退相干的贡献可以忽略不计。作为对比，我们在图中给出了计算得到了GaAs中电声相互作用引起的退相干速率和失谐量的关系，退相干速率的数值占据了相当大的比例，因而在 GaAs体系中，电声相互作用则不能忽略。
+
+-  
+![](images/2f552630c8331f66167f0d9ff0ad9318a1aecd14b1b355e967f447794b8611ac.jpg)
+
+  
+![](images/5689c962b96922cccde7d9db53b2d1a6bf1601018aec97b58e1b450b2123a0fc.jpg)  
+图 6.8 电声相互作用对退相干的影响。（a）硅基体系中，电声相互作用对退相干的影响远小于电荷噪声的贡献，因此可忽略不计。（b）GaAs 中电声相互作用对退相干的影响。
+
+## 6.5 本章小结
+
+在本章中，我们主要研究了 Si/SiGe 三量子点器件中共振交换量子比特与谐振腔的耦合。我们从共振交换量子比特的基本概念出发，介绍了共振交换量子比特的定义，以及基本性质。我们找到了共振交换量子比特的工作位置，并完成其能谱的测量。
+
+更为重要的是，我们提取了RX量子比特与谐振腔的耦合强度，该耦合强度远大于翻转模式量子比特与谐振腔的耦合强度。此外，我们从理论和实验两个方面分析了RX量子比特的退相干机制。我们的结论表明，电荷噪声是我们系统的主要噪声来源，降低电荷噪声后，有望显著提高量子比特的退相干时间。
+
+## 第 7 章 总结与展望
+
+## 7.1 总结
+
+本论文针对硅/硅锗三量子点与高阻抗超导微波谐振腔这一杂化系统展开研究。重点介绍了不同种类量子比特与谐振腔的耦合情况，这里我们将回顾整个文章，并进行总结：
+
+在绪论中，本文从量子计算的基本概念出发，介绍了用于实现量子计算的物理体系，从而引出本文要讨论的半导体量子计算体系，并对其当前的发展状况进行了概述。随后，本文阐述了半导体量子计算中的量子比特扩展问题，并提出了本文的研究课题，即基于 $\mathrm { c Q E D }$ 的半导体量子比特扩展架构。
+
+第二章主要对几个重要的概念进行阐述并给出基本原理。介绍了通过高阻抗谐振腔提高量子比特与谐振腔耦合强度的方法，其次介绍了半导体量子点的基本概念以及如何用半导体量子点编码量子比特。最后，将二者结合起来，阐述了耦合系统的基本理论，尤其是常用的J-C 模型。
+
+在第三章中，详细介绍了所使用的量子器件的制备与测量过程。全章分为两个部分，首先是工艺制造部分，基于实验室的微纳加工平台，建立了一套用于器件制备流程，包括薄膜沉积、高精度图形发生、刻蚀、封装等工艺环节。此外，还对这些工艺的基本原理和对应的实验设备进行了说明，并分析了部分工艺的局限性。第二部分，主要介绍用于器件表征的低温系统，包括稀释制冷机，以及相应的电学测量设备、测量电路等。
+
+从第四章到第六章，是本论文的核心实验内容，基于制备完成的两个器件进行了三个关键实验。首先是第四章内容，聚焦三量子点的基本概念和基本参数提取方法，重点研究了三量子点中的电荷量子比特与谐振腔的耦合，通过谐振腔探测了不同电压配置下的三量子点电荷稳定性图谱。这部分研究积累的经验为后续实验奠定了基础。
+
+第五章探讨了翻转模式自旋量子比特与谐振腔的耦合情况。这种耦合效应是通过微磁体的梯度磁场杂化自旋和电荷而实现的。在一个新的器件中，我们依次在两个不同位置编码了两个翻转模式自旋量子比特并实现了与谐振腔的强耦合。编码其中一个量子比特的量子点与谐振腔没有直接的电极连接，这扩展了谐振腔在量子比特耦合中的应用场景。此外，我们演示了对翻转模式自旋量子比特的操作，包括Rabi和Ramsey实验，并提供了磁场和光子数的标定方案。
+
+第六章重点研究了共振交换量子比特与谐振腔的耦合。首先，讨论了这种量子比特在大规模量子比特扩展中的优势。随后，本章详细介绍了这种量子比特的编码原理及其与谐振腔的耦合机制。最后，从实验和理论两个方面分析了共振交换量子比特的退相干机制，确认电荷噪声是主要噪声源。
+
+综上，本文从量子比特扩展的需求出发，围绕谐振腔与三量子点耦合的cQED系统，研究了三量子点系统中的电荷量子比特、翻转模式量子比特、共振交换量子比特与谐振腔的耦合特性。表7.1显示了本文研究的量子比特的退相干特性以及它们与谐振腔的耦合强度。从表格中可以看出，电荷型量子比特在具有最大耦合强度的同时也表现出最大的退相干速率。翻转模式自旋量子比特具有最小的退相干速率和最小的耦合强度。相比之下，共振交换量子比特的各项性能介于二者之间。从耦合强度和退相干速率的比值来看，电荷量子比特表现最差，而翻转模式自旋量子比特表现最佳，共振交换量子比特依然处于中间水平。综合结果表明，翻转模式自旋量子比特和共振交换量子比特在实现高性能量子计算方面具有较大的发展潜力。
+
+结合本文的研究成果，可以得出结论：利用谐振腔耦合量子比特及量子比特阵列是一种具有广阔前景的扩展方案，在未来的量子计算应用中具有重要潜力。
+
+表 7.1 量子比特性质比较。
+<table><tr><td></td><td>耦合强度</td><td>退相干</td><td>耦合强度/退相干</td></tr><tr><td>电荷量子比特</td><td>175.0 MHz</td><td>99.0 MHz</td><td>1.77</td></tr><tr><td>LDQD 中翻转模式量子比特</td><td>13.8 MHz</td><td>2.2 MHz</td><td>6.27</td></tr><tr><td>RDQD 中翻转模式量子比特</td><td>21.8 MHz</td><td>4.6 MHz</td><td>4.54</td></tr><tr><td>共振交换量子比特</td><td>65.0 MHz</td><td>16.9 MHz</td><td>3.85</td></tr></table>
+
+## 7.2 展望
+
+经过本文的相关介绍与研究，基本建立了通过谐振腔耦合与扩展半导体量子比特方面的基本概念。综合国际研究进展、当前关键问题以及实验室实际情况，本文提出以下几点展望。
+
+## 7.2.1 制造工艺改进
+
+器件制备通常需要耗费研究人员大量时间和精力，结合实际经验，本文对器件工艺的改进提出以下几点展望：
+
+1. 使用先进半导体制造工艺。本文使用的器件最小特征尺寸通常在几十纳米量级，制备步骤较为复杂。从基片准备开始，约需两周时间才能完成一次器件制备，耗时较长。此外，由于工艺过程的复杂性以及环境的不稳定性，导致器件的良品率较低。而先进半导体制造工艺凭借着设备稳定和高工艺可靠性，在生产复杂芯片时，仍然能保证良品率超过 90%<sup>[77]</sup>。例如，intel，imec 等公司和研究机构已经开发出基于先进半导体工艺制备的量子点器件。除去良率优势，先进工艺还允许使用多层电极结构，能在一定程度上解决布线的困难<sup>[202]</sup>。然而，这些器件尚未整合谐振腔结构。未来工业化制备这种杂化器件将成为一个重要方向，有望充分发挥半导体量子计算的潜力。
+
+2.使用3D封装架构。当前国际主流架构与本文研究中的架构类似，即在单个基片上集成谐振腔和量子点。这种架构在目前少量量子比特应用时问题不大，但随着量子比特数目增加，布线与串扰问题将逐渐显现。一种改进方案是采用倒装焊的3D结构，将量子点和谐振腔器件分为独立器件进行制备，最终通过倒装焊连接。这种方法能够减少器件之间的相互干扰，并保持谐振腔地平面的完整性，同时缓解布线问题。目前已有研究团队实现了这种架构中的量子比特与谐振腔耦合<sup>[123]</sup>，但强耦合实验尚未演示。
+
+## 7.2.2 高温量子比特
+
+稀释制冷机在常用的 10 mK 温度下制冷功率有限，限制了量子比特的进一步集成。而在约 1 K 的环境下，不需要依赖稀释制冷机，制冷功率可以大大提高。目前已经有部分研究团队实现了在1K左右工作的自旋量子比特，并获得了较高的操作保真度。研究表明，量子比特的读取是高温量子比特发展的重要限制因素<sup>[72-73]</sup>。将谐振腔耦合的量子点器件应用于 1 K 温度下，或许能够为解决该问题提供新的思路，但仍面临以下挑战：
+
+1.谐振腔材料限制。本文实验采用的是TiN材料超导临界温度超过3K，但在1K左右仍然难以探测到谐振腔信号。当然，这个问题可以通过更换材料来解决。例如超导临界温度超过10K的NbTiN材料，该材料在液氦环境（4.2K）下依然可以测到谐振腔信号。
+
+2.耦合强度问题。谐振腔与量子比特的耦合强度会随着温度升高而降低，这对于进行相关实验是非常不利的<sup>[117]</sup>。解决的办法包括进一步增加动态电感（温度升高后动态电感也会提高），或者优化设计提高杆臂因子<sup>[145]</sup>。
+
+## 7.2.3 多腔结构
+
+目前研究中采用的是单个谐振腔耦合多个量子点阵列的结构。谐振腔同时用于量子比特信号的读取和量子比特之间的耦合。信号读取与量子比特耦合的双重功能限制了谐振腔的扩展能力，尤其在量子比特数量增加后，耦合远距离量子比特的效率明显降低。例如，在第5章的实验中，LDQD与谐振腔的耦合强度显著弱于 RDQD。根据现有结果推测，单个谐振腔可以有效耦合 5 个线性排列的量子点，进一步扩展需要引入多腔结构，以分离读取和耦合功能，为谐振腔介导的量子比特门实验提供支持。
+
+## 7.2.4 新材料体系
+
+硅/硅锗异质结由于缺乏自旋轨道耦合，需要借助微磁体或共振交换量子比特等特殊编码方式来实现自旋与谐振腔的耦合，从而增加了系统设计和实现的复杂性。而近年来兴起的锗/硅锗异质结体系利用空穴编码，具有较强的自旋轨道耦合效应<sup>[65]</sup>。这种体系可以直接编码翻转模式自旋量子比特，无需微磁体，从而可以简化结构设计。此外，锗空穴量子比特还具备较大的电偶极矩，可实现更大的耦合强度。锗基量子比特近年来发展迅猛，是一个值得深入探索的方向。
+
+## 参考文献
+
+[1] Shor P W. Algorithms for quantum computation: discrete logarithms and factoring[C]// Proceedings 35th annual symposium on foundations of computer science. IEEE, 1994: 124- 134.
+
+[2] Grover L K. Quantum mechanics helps in searching for a needle in a haystack[J]. Physical Review Letters, 1997, 79(2): 325-328.
+
+[3] Burkard G, Ladd T D, Pan A, et al. Semiconductor spin qubits[J]. Reviews of Modern Physics, 2023, 95(2): 025003.
+
+[4] Liu Y, Guan S, Luo J W, et al. Progress of gate-defined semiconductor spin qubit: Host materials and device geometries[J]. Advanced Functional Materials, 2024, 34(19): 2304725.
+
+[5] Blais A, Grimsmo A L, Girvin S M, et al. Circuit quantum electrodynamics[J]. Reviews of Modern Physics, 2021, 93(2): 025005.
+
+[6] Feynman R P. Simulating physics with computers[J]. International Journal of Theoretical Physics, 1982, 21(6): 467-488.
+
+[7] Deutsch D. Quantum theory, the Church-Turing principle and the universal quantum computer[J]. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 1985, 400(1818): 97-117.
+
+[8] Preskill J. Quantum computing in the NISQ era and beyond[J]. Quantum, 2018, 2: 79.
+
+[9] Cerezo M, Arrasmith A, Babbush R, et al. Variational quantum algorithms[J]. Nature Reviews Physics, 2021, 3(9): 625-644.
+
+[10] Crosson E J, Lidar D A. Prospects for quantum enhancement with diabatic quantum annealing [J]. Nature Reviews Physics, 2021, 3(7): 466-489.
+
+[11] DiVincenzo D P. The physical implementation of quantum computation[J]. Fortschritte der Physik, 2000, 48(9): 771-783.
+
+[12] Cirac J I, Zoller P. Quantum computations with cold trapped ions[J]. Physical Review Letters, 1995, 74(20): 4091-4094.
+
+[13] Mooij J E, Orlando T P, Levitov L, et al. Josephson persistent-current qubit[J]. Science, 1999, 285(5430): 1036-1039.
+
+[14] Knill E, Laflamme R, Milburn G J. A scheme for efficient quantum computation with linear optics[J]. Nature, 2001, 409(6816): 46-52.
+
+[15] Bluvstein D, Levine H, Semeghini G, et al. A quantum processor based on coherent transport of entangled atom arrays[J]. Nature, 2022, 604(7906): 451-456.
+
+[16] Loss D, DiVincenzo D P. Quantum computation with quantum dots[J]. Physical Review A,
+
+1998, 57(1): 120-126.
+
+[17] Preskill J. Quantum computing and the entanglement frontier[A/OL]. arXiv:1203.5813, 2012. https://doi.org/10.48550/arXiv.1203.5813.
+
+[18] Arute F, Arya K, Babbush R, et al. Quantum supremacy using a programmable superconducting processor[J]. Nature, 2019, 574(7779): 505-510.
+
+[19] Acharya R, Abanin D A, Aghababaie-Beni L, et al. Quantum error correction below the surface code threshold[J]. Nature, 2024.
+
+[20] Zhong H S, Deng Y H, Qin J, et al. Phase-programmable Gaussian Boson sampling using stimulated squeezed light[J]. Physical Review Letters, 2021, 127(18): 180502.
+
+[21] Wu Y, Bao W S, Cao S, et al. Strong quantum computational advantage using a superconducting quantum processor[J]. Physical Review Letters, 2021, 127(18): 180501.
+
+[22] Guo S, Sun J, Qian H, et al. Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz[J]. Nature Physics, 2024, 20(8): 1240-1246.
+
+[23] Gao D, Fan D, Zha C, et al. Establishing a new benchmark in quantum computational advantage with 105-qubit zuchongzhi 3.0 processor[A/OL]. arXiv:2412.11924, 2024. https: //doi.org/10.48550/arXiv.2412.11924.
+
+[24] Van Der Wiel W G, De Franceschi S, Elzerman J M, et al. Electron transport through double quantum dots[J]. Reviews of Modern Physics, 2002, 75(1): 1-22.
+
+[25] Foxman E B, McEuen P L, Meirav U, et al. Effects of quantum levels on transport through a Coulomb island[J]. Physical Review B, 1993, 47(15): 10020-10023.
+
+[26] Gorman J, Hasko D G, Williams D A. Charge-qubit operation of an isolated double quantum dot[J]. Physical Review Letters, 2005, 95(9): 090502.
+
+[27] Fujisawa T, Hayashi T, Cheong H D, et al. Rotation and phase-shift operations for a charge qubit in a double quantum dot[J]. Physica E: Low-dimensional Systems and Nanostructures, 2004, 21(2): 1046-1052.
+
+[28] Kim D, Shi Z, Simmons C B, et al. Quantum control and process tomography of a semiconductor quantum dot hybrid qubit[J]. Nature, 2014, 511(7507): 70-74.
+
+[29] Benito M, Croot X, Adelsberger C, et al. Electric-field control and noise protection of the flopping-mode spin qubit[J]. Physical Review B, 2019, 100(12): 125430.
+
+[30] Laird E A, Taylor J M, DiVincenzo D P, et al. Coherent spin manipulation in an exchange-only qubit[J]. Physical Review B, 2010, 82(7): 075403.
+
+[31] Petta J R, Johnson A C, Taylor J M, et al. Coherent manipulation of coupled electron spins in semiconductor quantum dots[J]. Science, 2005, 309(5744): 2180-2184.
+
+[32] Kane B E. A silicon-based nuclear spin quantum computer[J]. Nature, 1998, 393(6681): 133-137.
+
+[33] Scappucci G, Kloeffel C, Zwanenburg F A, et al. The germanium quantum information route [J]. Nature Reviews Materials, 2021, 6(10): 926-943.
+
+[34] Nadj-Perge S, Frolov S M, Bakkers E P A M, et al. Spin-orbit qubit in a semiconductor nanowire[J]. Nature, 2010, 468(7327): 1084-1087.
+
+[35] Pla J J, Tan K Y, Dehollain J P, et al. A single-atom electron spin qubit in silicon[J]. Nature, 2012, 489(7417): 541-545.
+
+[36] Petersson K D, Petta J R, Lu H, et al. Quantum coherence in a one-electron semiconductor charge qubit[J]. Physical Review Letters, 2010, 105(24): 246804.
+
+[37] Hanson R, Awschalom D D. Coherent manipulation of single spins in semiconductors[J]. Nature, 2008, 453(7198): 1043-1049.
+
+[38] Koppens F H L, Buizert C, Tielrooij K J, et al. Driven coherent oscillations of a single electron spin in a quantum dot[J]. Nature, 2006, 442(7104): 766-771.
+
+[39] Johnson A C, Petta J R, Marcus C M, et al. Singlet-triplet spin blockade and charge sensing in a few-electron double quantum dot[J]. Physical Review B, 2005, 72(16): 165308.
+
+[40] Taylor J M, Petta J R, Johnson A C, et al. Relaxation, dephasing, and quantum control of electron spins in double quantum dots[J]. Physical Review B, 2007, 76(3): 035315.
+
+[41] Petta J R, Taylor J M, Johnson A C, et al. Dynamic nuclear polarization with single electron spins[J]. Physical Review Letters, 2008, 100(6): 067601.
+
+[42] Itoh K M, Watanabe H. Isotope engineering of silicon and diamond for quantum computing and sensing applications[J]. MRS Communications, 2014, 4(4): 143-157.
+
+[43] Coish W A, Loss D. Hyperfine interaction in a quantum dot: Non-Markovian electron spin dynamics[J]. Physical Review B, 2004, 70(19): 195340.
+
+[44] Tyryshkin A M, Tojo S, Morton J J L, et al. Electron spin coherence exceeding seconds in high-purity silicon[J]. Nature Materials, 2012, 11(2): 143-147.
+
+[45] Petta J R, Johnson A C, Marcus C M, et al. Manipulation of a single charge in a double quantum dot[J]. Physical Review Letters, 2004, 93(18): 186802.
+
+[46] Fujisawa T, Austing D G, Tokura Y, et al. Allowed and forbidden transitions in artificial hydrogen and helium atoms[J]. Nature, 2002, 419(6904): 278-281.
+
+[47] Camenzind L C, Yu L, Stano P, et al. Hyperfine-phonon spin relaxation in a single-electron GaAs quantum dot[J]. Nature Communications, 2018, 9(1): 3454.
+
+[48] Hsueh Y L, Keith D, Chung Y, et al. Engineering spin-orbit interactions in silicon qubits at the atomic-scale[J]. Advanced Materials, 2024, 36(26): 2312736.
+
+[49] Ciriano-Tejel V N, Fogarty M A, Schaal S, et al. Spin readout of a CMOS quantum dot by gate reflectometry and spin-dependent tunneling[J]. PRX Quantum, 2021, 2(1): 010353.
+
+[50] Borjans F, Zajac D M, Hazard T M, et al. Single-spin relaxation in a synthetic spin-orbit field
+
+[J]. Physical Review Applied, 2019, 11(4): 044063.
+
+[51] Yang C H, Rossi A, Ruskov R, et al. Spin-valley lifetimes in a silicon quantum dot with tunable valley splitting[J]. Nature Communications, 2013, 4(1): 2069.
+
+[52] Stano P, Loss D. Review of performance metrics of spin qubits in gated semiconducting nanostructures[J]. Nature Reviews Physics, 2022, 4(10): 672-688.
+
+[53] Sigillito A J, Loy J C, Zajac D M, et al. Site-selective quantum control in an isotopically enriched $^ { 2 8 } \mathrm { S i } / \mathrm { S i } _ { 0 . 7 } \mathrm { G e } _ { 0 . 3 }$ quadruple quantum dot[J]. Physical Review Applied, 2019, 11(6): 061006.
+
+[54] Hansen I, Seedhouse A E, Chan K W, et al. Implementation of an advanced dressing protocol for global qubit control in silicon[J]. Applied Physics Reviews, 2022, 9(3): 031409.
+
+[55] Laucht A, Kalra R, Simmons S, et al. A dressed spin qubit in silicon[J]. Nature Nanotechnology, 2017, 12(1): 61-66.
+
+[56] Jung M, Schroer M D, Petersson K D, et al. Radio frequency charge sensing in InAs nanowire double quantum dots[J]. Applied Physics Letters, 2012, 100(25): 253508.
+
+[57] Crippa A, Ezzouch R, Aprá A, et al. Gate-reflectometry dispersive readout and coherent control of a spin qubit in silicon[J]. Nature Communications, 2019, 10(1): 2776.
+
+[58] Kiyama H, van Hien D, Ludwig A, et al. High-fidelity spin readout via the double latching mechanism[J]. npj Quantum Information, 2024, 10(1): 95.
+
+[59] Harvey-Collard P, D’Anjou B, Rudolph M, et al. High-fidelity single-shot readout for a spin qubit via an enhanced latching mechanism[J]. Physical Review X, 2018, 8(2): 021046.
+
+[60] Blumoff J Z, Pan A S, Keating T E, et al. Fast and high-fidelity state preparation and measurement in triple-quantum-dot spin qubits[J]. PRX Quantum, 2022, 3(1): 010352.
+
+[61] Takeda K, Noiri A, Nakajima T, et al. Rapid single-shot parity spin readout in a silicon double quantum dot with fidelity exceeding 99%[J]. npj Quantum Information, 2024, 10(1): 22.
+
+[62] Mills A R, Guinn C R, Gullans M J, et al. Two-qubit silicon quantum processor with operation fidelity exceeding 99%[J]. Science Advances, 2022, 8(14): eabn5130.
+
+[63] Noiri A, Takeda K, Nakajima T, et al. Fast universal quantum gate above the fault-tolerance threshold in silicon[J]. Nature, 2022, 601(7893): 338-342.
+
+[64] Xue X, Russ M, Samkharadze N, et al. Quantum logic with spin qubits crossing the surface code threshold[J]. Nature, 2022, 601(7893): 343-347.
+
+[65] Hendrickx N W, Lawrie W I L, Russ M, et al. A four-qubit germanium quantum processor [J]. Nature, 2021, 591(7851): 580-585.
+
+[66] Philips S G J, Madzik M T, Amitonov S V, et al. Universal control of a six-qubit quantum processor in silicon[J]. Nature, 2022, 609(7929): 919-924.
+
+[67] George H C, Madzik M T, Henry E M, et al. 12-spin-qubit arrays fabricated on a 300 mm
+
+semiconductor manufacturing line[J]. Nano Letters, 2024, 25(2): 793-799.
+
+[68] John V, Yu C X, van Straaten B, et al. A two-dimensional 10-qubit array in germanium with robust and localised qubit control[A/OL]. arXiv:2412.16044, 2024. https://doi.org/10.48550 /arXiv.2412.16044.
+
+[69] Leon R C C, Yang C H, Hwang J C C, et al. Bell-state tomography in a silicon many-electron artificial molecule[J]. Nature Communications, 2021, 12(1): 3228.
+
+[70] Yoneda J, Takeda K, Otsuka T, et al. A quantum-dot spin qubit with coherence limited by charge noise and fidelity higher than 99.9%[J]. Nature Nanotechnology, 2018, 13(2): 102- 106.
+
+[71] Song Y, Yun J, Kim J, et al. Coherence of a field gradient driven singlet-triplet qubit coupled to multielectron spin states in <sup>28</sup>Si/SiGe[J]. npj Quantum Information, 2024, 10(1): 77.
+
+[72] Petit L, Russ M, Eenink G H G J, et al. Design and integration of single-qubit rotations and two-qubit gates in silicon above one Kelvin[J]. Communications Materials, 2022, 3(1): 82.
+
+[73] Yang C H, Leon R C C, Hwang J C C, et al. Operation of a silicon quantum processor unit cell above one Kelvin[J]. Nature, 2020, 580(7803): 350-354.
+
+[74] Petit L, Eenink H G J, Russ M, et al. Universal quantum logic in hot silicon qubits[J]. Nature, 2020, 580(7803): 355-359.
+
+[75] Petit L, Boter J M, Eenink H G J, et al. Spin lifetime and charge noise in hot silicon quantum dot qubits[J]. Physical Review Letters, 2018, 121(7): 076801.
+
+[76] Huang J Y, Su R Y, Lim W H, et al. High-fidelity spin qubit operation and algorithmic initialization above 1 K[J]. Nature, 2024, 627(8005): 772-777.
+
+[77] Neyens S, Zietz O K, Watson T F, et al. Probing single electrons across 300-mm spin qubit wafers[J]. Nature, 2024, 629(8010): 80-85.
+
+[78] Steinacker P, Stuyck N D, Lim W H, et al. A 300 mm foundry silicon spin qubit unit cell exceeding 99% fidelity in all operations[A/OL]. arXiv: 2410.15590, 2024. https://arxiv.org/ abs/2410.15590.
+
+[79] Huckemann T, Muster P, Langheinrich W, et al. Industrially fabricated single-electron quantum dots in Si/Si-Ge heterostructures[A/OL]. arXiv: 2410.16913, 2024. https://arxiv.org/ab s/2410.16913.
+
+[80] Kiczynski M, Gorman S K, Geng H, et al. Engineering topological states in atom-based semiconductor quantum dots[J]. Nature, 2022, 606(7915): 694-699.
+
+[81] Meyer M, Déprez C, Meijer I N, et al. Single-electron occupation in quantum dot arrays at selectable plunger gate voltage[J]. Nano Letters, 2023, 23(24): 11593-11600.
+
+[82] Mortemousque P A, Chanrion E, Jadot B, et al. Coherent control of individual electron spins in a two-dimensional quantum dot array[J]. Nature Nanotechnology, 2021, 16(3): 296-301.
+
+[83] Mortemousque P A, Jadot B, Chanrion E, et al. Enhanced spin coherence while displacing electron in a two-dimensional array of quantum dots[J]. PRX Quantum, 2021, 2(3): 030331.
+
+[84] Chanrion E, Niegemann D J, Bertrand B, et al. Charge detection in an array of CMOS quantum dots[J]. Physical Review Applied, 2020, 14(2): 024066.
+
+[85] Hsiao T K, Cova Fariña P, Oosterhout S D, et al. Exciton transport in a germanium quantum dot ladder[J]. Physical Review X, 2024, 14(1): 011048.
+
+[86] Borsoi F, Hendrickx N W, John V, et al. Shared control of a 16 semiconductor quantum dot crossbar array[J]. Nature Nanotechnology, 2023, 19(1): 21-27.
+
+[87] Vandersypen L M K, Bluhm H, Clarke J S, et al. Interfacing spin qubits in quantum dots and donors—hot, dense, and coherent[J]. npj Quantum Information, 2017, 3(1): 34.
+
+[88] Hermelin S, Takada S, Yamamoto M, et al. Electrons surfing on a sound wave as a platform for quantum optics with flying electrons[J]. Nature, 2011, 477(7365): 435-438.
+
+[89] McNeil R P, Kataoka M, Ford C J, et al. On-demand single-electron transfer between distant quantum dots[J]. Nature, 2011, 477(7365): 439-442.
+
+[90] Manenti R, Kockum A F, Patterson A, et al. Circuit quantum acoustodynamics with surface acoustic waves[J]. Nature Communications, 2017, 8(1): 975.
+
+[91] Künne M, Willmes A, Oberländer M, et al. The SpinBus architecture for scaling spin qubits with electron shuttling[J]. Nature Communications, 2024, 15(1): 4977.
+
+[92] Zwerver A M J, Amitonov S V, de Snoo S L, et al. Shuttling an electron spin through a silicon quantum dot array[J]. PRX Quantum, 2023, 4(3): 030303.
+
+[93] De Smet M, Matsumoto Y, Zwerver A M J, et al. High-fidelity single-spin shuttling in silicon [A/OL]. arXiv:2406.07267, 2024. https://doi.org/10.48550/arXiv.2406.07267.
+
+[94] Childress L, Sørensen A S, Lukin M D. Mesoscopic cavity quantum electrodynamics with quantum dots[J]. Physical Review A, 2004, 69(4): 042302.
+
+[95] Petersson K D, Smith C G, Anderson D, et al. Charge and spin state readout of a double quantum dot coupled to a resonator[J]. Nano Letters, 2010, 10(8): 2789-2793.
+
+[96] Burkard G, Petta J R. Dispersive readout of valley splittings in cavity-coupled silicon quantum dots[J]. Physical Review B, 2016, 94(19): 195305.
+
+[97] Mi X, Péterfalvi C G, Burkard G, et al. High-resolution valley spectroscopy of Si quantum dots[J]. Physical Review Letters, 2017, 119(17): 176803.
+
+[98] Stehlik J, Liu Y Y, Eichler C, et al. Double quantum dot Floquet gain medium[J]. Physical Review X, 2016, 6(4): 041027.
+
+[99] Gullans M J, Stehlik J, Liu Y Y, et al. Sisyphus thermalization of photons in a cavity-coupled double quantum dot[J]. Physical Review Letters, 2016, 117(5): 056801.
+
+[100] Delbecq M R, Schmitt V, Parmentier F D, et al. Coupling a quantum dot, fermionic leads,
+
+and a microwave cavity on a chip[J]. Physical Review Letters, 2011, 107(25): 256804.
+
+[101] Ranjan V, Puebla-Hellmann G, Jung M, et al. Clean carbon nanotubes coupled to superconducting impedance-matching circuits[J]. Nature Communications, 2015, 6(1): 7165.
+
+[102] Petersson K D, Mcfaul L W, Schroer M D, et al. Circuit quantum electrodynamics with a spin qubit[J]. Nature, 2012, 490(7420): 380-383.
+
+[103] Frey T, Leek P J, Beck M, et al. Dipole coupling of a double quantum dot to a microwave resonator[J]. Physical Review Letters, 2012, 108(4): 046807.
+
+[104] Ruckriegel M J, Gächter L M, Kealhofer D, et al. Electric dipole coupling of a bilayer graphene quantum dot to a high-impedance microwave resonator[J]. Nano Letters, 2024, 24(24): 7508-7514.
+
+[105] Deng G W, Wei D, Johansson J R, et al. Charge number dependence of the dephasing rates of a graphene double quantum dot in a circuit QED architecture[J]. Physical Review Letters, 2015, 115(12): 126804.
+
+[106] Devoret M, Girvin S, Schoelkopf R. Circuit-QED: How strong can the coupling between a josephson junction atom and a transmission line resonator be?[J]. Annalen der Physik, 2007, 519(10-11): 767-779.
+
+[107] Lin T, Gu S S, Xu Y Q, et al. Collective microwave response for multiple gate-defined double quantum dots[J]. Nano Letters, 2023, 23(10): 4176-4182.
+
+[108] Stockklauser A, Scarlino P, Koski J V, et al. Strong coupling cavity QED with gate-defined double quantum dots enabled by a high impedance resonator[J]. Physical Review X, 2017, 7 (1): 011030.
+
+[109] Van Woerkom D J, Scarlino P, Ungerer J H, et al. Microwave photon-mediated interactions between semiconductor qubits[J]. Physical Review X, 2018, 8(4): 041018.
+
+[110] Benito M, Mi X, Taylor J M, et al. Input-output theory for spin-photon coupling in Si double quantum dots[J]. Physical Review B, 2017, 96(23): 235434.
+
+[111] Landig A J, Koski J V, Scarlino P, et al. Coherent spin-photon coupling using a resonant exchange qubit[J]. Nature, 2018, 560(7717): 179-184.
+
+[112] Samkharadze N, Zheng G, Kalhor N, et al. Strong spin-photon coupling in silicon[J]. Science, 2018, 359(6380): 1123-1127.
+
+[113] Mi X, Benito M, Putz S, et al. A coherent spin-photon interface in silicon[J]. Nature, 2018, 555(7698): 599-603.
+
+[114] Borjans F, Croot X G, Mi X, et al. Resonant microwave-mediated interactions between distant electron spins[J]. Nature, 2020, 577(7789): 195-198.
+
+[115] Harvey-Collard P, Dijkema J, Zheng G, et al. Coherent spin-spin coupling mediated by virtual microwave photons[J]. Physical Review X, 2022, 12(2): 021026.
+
+[116] Dijkema J, Xue X, Harvey-Collard P, et al. Cavity-mediated iSWAP oscillations between distant spins[J]. Nature Physics, 2024, 21(1): 168-174.
+
+[117] Yu C X, Zihlmann S, Abadillo-Uriel J C, et al. Strong coupling between a photon and a hole spin in silicon[J]. Nature Nanotechnology, 2023, 18(7): 741-746.
+
+[118] De Palma F, Oppliger F, Jang W, et al. Strong hole-photon coupling in planar Ge for probing charge degree and strongly correlated states[J]. Nature Communications, 2024, 15(1): 10177.
+
+[119] Janík M, Roux K, Borja Espinosa C, et al. Strong charge-photon coupling in planar germanium enabled by granular aluminium superinductors[A/OL]. arXiv:2407.03079, 2024. https://doi.org/10.48550/arXiv.2407.03079.
+
+[120] Ungerer J H, Pally A, Kononov A, et al. Strong coupling between a microwave photon and a singlet-triplet qubit[J]. Nature Communications, 2024, 15(1): 1068.
+
+[121] Bøttcher C G L, Harvey S P, Fallahi S, et al. Parametric longitudinal coupling between a high-impedance superconducting resonator and a semiconductor quantum dot singlet-triplet spin qubit[J]. Nature Communications, 2022, 13(1): 4773.
+
+[122] Corrigan J, Harpt B, Holman N, et al. Longitudinal coupling between a $\mathrm { S i } / \mathrm { S i } _ { 1 - x } \mathrm { G e } _ { x }$ double quantum dot and an off-chip TiN resonator[J]. Physical Review Applied, 2023, 20(6): 064005.
+
+[123] Holman N, Rosenberg D, Yost D, et al. 3D integration and measurement of a semiconductor double quantum dot with a high-impedance TiN resonator[J]. npj Quantum Information, 2021, 7(1): 137.
+
+[124] Borjans F, Mi X, Petta J R. Spin digitizer for high-fidelity readout of a cavity-coupled silicon triple quantum dot[J]. Physical Review Applied, 2021, 15(4): 044052.
+
+[125] Lin T, Gu S S, Xu Y Q, et al. Circuit-QED based time-averaged dispersive readout of a semiconductor charge qubit[J]. Applied Physics Letters, 2022, 121(18): 184004.
+
+[126] Zheng G, Samkharadze N, Noordam M L, et al. Rapid gate-based spin read-out in silicon using an on-chip resonator[J]. Nature Nanotechnology, 2019, 14(8): 742-746.
+
+[127] Harpt B, Corrigan J, Holman N, et al. Ultra-dispersive resonator readout of a quantum-dot qubit using longitudinal coupling[J]. npj quantum information, 2025, 11(1): 5.
+
+[128] Chen M B, Jiang S L, Wang N, et al. Microwave-resonator-detected excited-state spectroscopy of a double quantum dot[J]. Physical Review Applied, 2021, 15(4): 044045.
+
+[129] Borjans F, Zhang X, Mi X, et al. Probing the variation of the intervalley tunnel coupling in a silicon triple quantum dot[J]. PRX Quantum, 2021, 2(2): 020309.
+
+[130] Burkard G, Gullans M J, Mi X, et al. Superconductor-semiconductor hybrid-circuit quantum electrodynamics[J]. Nature Reviews Physics, 2020, 2(3): 129-140.
+
+[131] Simons R N. Wiley series in microwave and optical engineering: Coplanar waveguide cir-
+
+cuits, components, and systems[M]. New York: John Wiley & Sons, Inc., 2001.
+
+[132] Xu G, Li Y, Gao F, et al. Dipole coupling of a hole double quantum dot in germanium hut wire to a microwave resonator[J]. New Journal of Physics, 2020, 22(8): 083068.
+
+[133] Stockklauser A. Strong coupling circuit QED with semiconductor quantum dots[D]. Zürich: Eidgenössische Technische Hochschule Zürich, 2017.
+
+[134] Mazin B A, Eckart M E, Bumble B, et al. Optical/UV and X-Ray microwave kinetic inductance strip detectors[J]. Journal of Low Temperature Physics, 2008, 151(1): 537-543.
+
+[135] Zheng G. Circuit quantum electrodynamics with single electron spins in silicon[D]. Delft: Delft University of Technology, 2021.
+
+[136] 张苗磊. 谐振腔与量子点耦合体系的研究[D]. 合肥: 中国科学技术大学,2014.
+
+[137] Kroner M, Govorov A O, Remi S, et al. The nonlinear Fano effect[J]. Nature, 2008, 451 (7176): 311-314.
+
+[138] Samkharadze N, Bruno A, Scarlino P, et al. High-kinetic-inductance superconducting nanowire resonators for circuit QED in a magnetic field[J]. Physical Review Applied, 2016, 5(4): 044004.
+
+[139] Frasca S, Arabadzhiev I N, de Puechredon S Y B, et al. NbN films with high kinetic inductance for high-quality compact superconducting resonators[J]. Physical Review Applied, 2023, 20(4): 044021.
+
+[140] Shearrow A, Koolstra G, Whiteley S J, et al. Atomic layer deposition of titanium nitride for quantum circuits[J]. Applied Physics Letters, 2018, 113(21): 212601.
+
+[141] Stafford C A, Das Sarma S. Collective Coulomb blockade in an array of quantum dots: A Mott-Hubbard approach[J]. Physical Review Letters, 1994, 72(22): 3590-3593.
+
+[142] Thijssen J M, Van der Zant H S J. Charge transport and single-electron effects in nanoscale systems[J]. physica status solidi (b), 2008, 245(8): 1455-1470.
+
+[143] Kim D, Ward D R, Simmons C B, et al. Microwave-driven coherent operation of a semiconductor quantum dot charge qubit[J]. Nature Nanotechnology, 2015, 10(3): 243-247.
+
+[144] Schuster D I, Wallraff A, Blais A, et al. ac Stark shift and dephasing of a superconducting qubit strongly coupled to a cavity field[J]. Physical Review Letters, 2005, 94(12): 123602.
+
+[145] Borjans F, Croot X, Putz S, et al. Split-gate cavity coupler for silicon circuit quantum electrodynamics[J]. Applied Physics Letters, 2020, 116(23): 234001.
+
+[146] Hanson R, Kouwenhoven L P, Petta J R, et al. Spins in few-electron quantum dots[J]. Reviews of Modern Physics, 2007, 79(4): 1217-1265.
+
+[147] Zwerver A M J, Krähenmann T, Watson T F, et al. Qubits made by advanced semiconductor manufacturing[J]. Nature Electronics, 2022, 5(3): 184-190.
+
+[148] Nishimura Y, Yano K, Itoh M, et al. Flat panel display manufacturing[M/OL]. John Wiley &
+
+Sons, Ltd, 2018: 287-310. https://doi.org/10.1002/9781119161387.ch13.
+
+[149] Hu X, Liu Y x, Nori F. Strong coupling of a spin qubit to a superconducting stripline cavity [J]. Physical Review B, 2012, 86(3): 035314.
+
+[150] Wang C A, John V, Tidjani H, et al. Operating semiconductor quantum processors with hopping spins[J]. Science, 2024, 385(6707): 447-452.
+
+[151] Croot X, Mi X, Putz S, et al. Flopping-mode electric dipole spin resonance[J]. Physical Review Research, 2020, 2(1): 012006.
+
+[152] Friesen M, Ghosh J, Eriksson M A, et al. A decoherence-free subspace in a charge quadrupole qubit[J]. Nature Communications, 2017, 8(1): 15923.
+
+[153] Zhang C, Chan G X, Wang X, et al. Coupling two charge qubits via a superconducting resonator operating in the resonant and dispersive regimes[J]. Physical Review A, 2022, 106 (3): 032608.
+
+[154] West J R, Fong B H. Exchange-only dynamical decoupling in the three-qubit decoherence free subsystem[J]. New Journal of Physics, 2012, 14(8): 083002.
+
+[155] Gaudreau L, Granger G, Kam A, et al. Coherent control of three-spin states in a triple quantum dot[J]. Nature Physics, 2011, 8(1): 54-58.
+
+[156] Eng K, Ladd T D, Smith A, et al. Isotopically enhanced triple-quantum-dot qubit[J]. Science Advances, 2015, 1(4): e1500214.
+
+[157] Medford J, Beil J, Taylor J M, et al. Quantum-dot-based resonant exchange qubit[J]. Physical Review Letters, 2013, 111(5): 050501.
+
+[158] Pan A, Keating T E, Gyure M F, et al. Resonant exchange operation in triple-quantumdot qubits for spin-photon transduction[J]. Quantum Science and Technology, 2020, 5(3): 034005.
+
+[159] Gaudreau L, Studenikin S A, Sachrajda A S, et al. Stability diagram of a few-electron triple dot[J]. Physical Review Letters, 2006, 97(3): 036807.
+
+[160] Schröer D, Greentree A D, Gaudreau L, et al. Electrostatically defined serial triple quantum dot charged with few electrons[J]. Physical Review B, 2007, 76(7): 075306.
+
+[161] Rogge M C, Haug R J. The three dimensionality of triple quantum dot stability diagrams[J]. New Journal of Physics, 2009, 11(11): 113037.
+
+[162] Lent C S, Tougaw P D, Porod W, et al. Quantum cellular automata[J]. Nanotechnology, 1993, 4(1): 49.
+
+[163] Amlani I, Orlov A O, Toth G, et al. Digital logic gate using quantum-dot cellular automata [J]. Science, 1999, 284(5412): 289-291.
+
+[164] Busl M, Granger G, Gaudreau L, et al. Bipolar spin blockade and coherent state superpositions in a triple quantum dot[J]. Nature Nanotechnology, 2013, 8(4): 261-265.
+
+[165] Emary C. Dark states in the magnetotransport through triple quantum dots[J]. Physical Review B, 2007, 76(24): 245319.
+
+[166] Pöltl C, Emary C, Brandes T. Two-particle dark state in the transport through a triple quantum dot[J]. Physical Review B, 2009, 80(11): 115313.
+
+[167] Hensgens T, Fujita T, Janssen L, et al. Quantum simulation of a Fermi-Hubbard model using a semiconductor quantum dot array[J]. Nature, 2017, 548(7665): 70-73.
+
+[168] Tóth G, Lent C S. Quantum computing with quantum-dot cellular automata[J]. Physical Review A, 2001, 63(5): 052315.
+
+[169] Amin K R, Ladner C, Jourdan G, et al. Loss mechanisms in TiN high impedance superconducting microwave circuits[J]. Applied Physics Letters, 2022, 120(16): 164001.
+
+[170] Miroshnichenko A E, Flach S, Kivshar Y S. Fano resonances in nanoscale structures[J]. Reviews of Modern Physics, 2010, 82(3): 2257-2298.
+
+[171] 林霆. 微波谐振腔与半导体量子点的杂化系统研究[D]. 合肥: 中国科学技术大学,2023.
+
+[172] Rossi A, Ferrus T, Williams D A. Electron temperature in electrically isolated Si double quantum dots[J]. Applied Physics Letters, 2012, 100(13): 133503.
+
+[173] Foxman E B, McEuen P L, Meirav U, et al. Effects of quantum levels on transport through a coulomb island[J]. Physical Review B, 1993, 47(15): 10020-10023.
+
+[174] Beenakker C W J. Theory of Coulomb-blockade oscillations in the conductance of a quantum dot[J]. Physical Review B, 1991, 44(4): 1646-1656.
+
+[175] 李炎. 锗硅自组织纳米线量子点和微波谐振腔的复合结构的实验研究[D]. 合肥: 中国科学技术大学, 2018.
+
+[176] Blais A, Huang R S, Wallraff A, et al. Cavity quantum electrodynamics for superconducting electrical circuits: An architecture for quantum computation[J]. Physical Review A, 2004, 69(6): 062320.
+
+[177] 周正, 黄少云. 串联耦合三量子点的电荷稳态研究[J]. 物理学报, 2023, 72(01): 273-286.
+
+[178] Das Sarma S, Wang X, Yang S. Hubbard model description of silicon spin qubits: Charge stability diagram and tunnel coupling in Si double quantum dots[J]. Physical Review B, 2011, 83(23): 235314.
+
+[179] Pioro-Ladrière M, Tokura Y, Obata T, et al. Micromagnets for coherent control of spin-charge qubit in lateral quantum dots[J]. Applied Physics Letters, 2007, 90(2): 024105.
+
+[180] Hu R Z, Ma R L, Ni M, et al. Flopping-mode spin qubit in a Si-MOS quantum dot[J]. Applied Physics Letters, 2023, 122(13): 134002.
+
+[181] Cayao J, Benito M, Burkard G. Programable two-qubit gates in capacitively coupled floppingmode spin qubits[J]. Physical Review B, 2020, 101(19): 195438.
+
+[182] Hendrickx N W, Franke D P, Sammak A, et al. Fast two-qubit logic with holes in germanium
+
+[J]. Nature, 2020, 577(7791): 487-491.
+
+[183] Golovach V N, Borhani M, Loss D. Electric-dipole-induced spin resonance in quantum dots [J]. Physical Review B, 2006, 74(16): 165319.
+
+[184] Schuster D I, Houck A A, Schreier J A, et al. Resolving photon number states in a superconducting circuit[J]. Nature, 2007, 445(7127): 515-518.
+
+[185] Veldhorst M, Hwang J C C, Yang C H, et al. An addressable quantum dot qubit with faulttolerant control-fidelity[J]. Nature Nanotechnology, 2014, 9(12): 981-985.
+
+[186] Russ M, Burkard G. Asymmetric resonant exchange qubit under the influence of electrical noise[J]. Physical Review B, 2015, 91(23): 235411.
+
+[187] Russ M, Burkard G. Three-electron spin qubits[J]. Journal of Physics: Condensed Matter, 2017, 29(39): 393001.
+
+[188] Maune B M, Borselli M G, Huang B, et al. Coherent singlet-triplet oscillations in a siliconbased double quantum dot[J]. Nature, 2012, 481(7381): 344-347.
+
+[189] Landig A J, Koski J V, Scarlino P, et al. Virtual-photon-mediated spin-qubit-transmon coupling[J]. Nature Communications, 2019, 10(1): 5037.
+
+[190] Srinivasa V, Taylor J M, Tahan C. Entangling distant resonant exchange qubits via circuit quantum electrodynamics[J]. Physical Review B, 2016, 94(20): 205421.
+
+[191] Srinivasa V, Taylor J M, Petta J R. Cavity-mediated entanglement of parametrically driven spin qubits via sidebands[J]. PRX Quantum, 2024, 5(2): 020339.
+
+[192] Taylor J M, Srinivasa V, Medford J. Electrically protected resonant exchange qubits in triple quantum dots[J]. Physical Review Letters, 2013, 111(5): 050502.
+
+[193] Russ M, Ginzel F, Burkard G. Coupling of three-spin qubits to their electric environment[J]. Physical Review B, 2016, 94(16): 165411.
+
+[194] Kempe J, Bacon D, Lidar D A, et al. Theory of decoherence-free fault-tolerant universal quantum computation[J]. Physical Review A, 2001, 63(4): 042307.
+
+[195] Hung J T, Fei J, Friesen M, et al. Decoherence of an exchange qubit by hyperfine interaction [J]. Physical Review B, 2014, 90(4): 045308.
+
+[196] Koski J V, Landig A J, Russ M, et al. Strong photon coupling to the quadrupole moment of an electron in a solid-state qubit[J]. Nature Physics, 2020, 16(6): 642-646.
+
+[197] Mahan G D. Many-particle physics 3rd ed[M]. New York: Springer, 2000.
+
+[198] Vorojtsov S, Mucciolo E R, Baranger H U. Phonon decoherence of a double quantum dot charge qubit[J]. Physical Review B, 2005, 71(20): 205322.
+
+[199] Fedichkin L, Fedorov A. Error rate of a charge qubit coupled to an acoustic phonon reservoir [J]. Physical Review A, 2004, 69(3): 032311.
+
+[200] Nathan F, Rudner M S. Universal Lindblad equation for open quantum systems[J]. Physical
+
+Review B, 2020, 102(11): 115109.
+
+[201] Tahan C, Joynt R. Relaxation of excited spin, orbital, and valley qubit states in ideal silicon quantum dots[J]. Physical Review B, 2014, 89(7): 075302.
+
+[202] Bohuslavskyi H, Ronzani A, Hätinen J, et al. Scalable on-chip multiplexing of silicon single and double quantum dots[J]. Communications Physics, 2024, 7(1): 323.
+
+## 致谢
+
+时光荏苒，我的博士研究生活即将画上圆满的句号。在这段求学的岁月里，我得到了许多人的帮助与支持。回顾这一路走来的艰辛与收获，我心中充满了感激之情。在此，我要向所有给予我帮助的老师、同学以及亲朋致以最诚挚的感谢。
+
+首先，我要深深感谢中国科学院量子信息重点实验室的创办人郭光灿院士。正是由于郭院士的远见卓识和辛勤付出，才为我们这些后来的学者提供了如此优越的科研条件和充满活力的学术氛围。郭院士的榜样力量，激励我不断追求卓越，勇于面对科研道路上的各种挑战。
+
+感谢半导体量子计算研究室的负责人郭国平教授。郭教授是国内率先开展半导体量子计算研究的领军人物，在他的带领下，研究室不断发展壮大，取得了一系列具有重要影响的科研成果。郭教授不仅具备卓越的专业能力，更拥有强烈的科研热情。在与郭教授的交流中，我深深感受到了他对科研的无限热忱和坚定信念，这种激情和力量深深感染了我，也促使我最终做出加入实验室的决定。
+
+衷心感谢我的导师曹刚教授。曹老师不仅是我学术上的引路人，教会了我严谨的科研方法。他严谨的治学态度、深邃的学术视野和无私的教诲，深刻地影响了我。尤其是在论文撰写过程中，曹老师给予了我极大的帮助和指导，曹老师耐心细致地一次次与我讨论、修改，帮我捋顺文章逻辑，让我受益匪浅。无论在学术研究还是个人成长方面，曹老师的教诲都将永远助益着我。
+
+感谢陈明博师兄、林霆师兄以及顾思思师姐，他们在我刚进实验室的时候给我提供了无私的帮助，让我快速学会了实验仪器的使用以及样品测量的基本方法。感谢与我同级的小伙伴们，他们是王宁、李方阁、马荣龙、倪铭、郭亮亮、陶浩然、陈勇、张海峰、应钺、张庆航、程子原、李栋。在与他们的相处过程中我不仅学习到了很多知识，还获得了丰厚的友谊。
+
+感谢我的师弟师妹们。感谢蒋天翼师弟，师弟和我共同做硅/硅锗量子点中量子比特与谐振腔耦合的项目，师弟全方位的帮助让我的研究得以快速展开。尤其是师弟具有非常好的理论功底，在理论分析方面给我提供了较多帮助。感谢李宗沪师弟，他具有较好的微电子与半导体相关知识，在器件制备上和他的讨论也让我收获良多。感谢徐永强师弟、吴睿师弟、邓松宴师弟，多次帮我修改文章，让我的文章变得更加出彩。感谢郝天岳师弟和康原师弟，他们在测量程序上给予了我很大的帮助，显著提高了我的实验效率。感谢叶澍坤师弟和黄子庆师弟，他们在谐振腔工艺上的改进帮助我制备出了性能更优越的器件。感谢杨杰诚师弟在微磁体设计上提供的帮助。
+
+感谢我的父母，父母是我永远的后盾。在漫长的求学生涯中，父母始终给予了我无私的爱与支持。你们的理解与包容让我在追求学术的道路上能够专心致志，毫无后顾之忧。无论何时何地，你们的支持都是我最强大的动力源泉。感谢你们无怨无悔的付出，我将永远珍惜并铭记你们的爱与教诲。
+
+## 在读期间取得的科研成果
+
+## 已发表论文：
+
+（1） Shun-Li Jiang, Tian-Yi Jiang, Yong-Qiang Xu, Rui Wu, Tian-Yue Hao, Shu-Kun Ye, Ran-Ran Cai, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Chinese Phys B, 33, 090311 (2024).
+
+（2） Ming-Bo Chen, Shun-Li Jiang, Ning Wang, Bao-Chuan Wang, Ting Lin, Si-Si Gu, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Microwave-Resonator-Detected Excited-State Spectroscopy of a Double Quantum Dot, Physical Review Applied, 15, 044045 (2021).
+
+（3） Ting Lin, Si-Si Gu, Yong-Qiang Xu, Shun-Li Jiang, Shu-Kun Ye, Bao-Chuan Wang, Hai-Ou Li, Guang-Can Guo, Chang-Ling Zou, Xuedong Hu, Gang Cao, and Guo-Ping Guo, Collective Microwave Response for Multiple Gate-Defined Double Quantum Dots, Nano Letters, 23, 4176 (2023).
+
+（4） Si-Si Gu, Sigmund Kohler, Yong-Qiang Xu, Rui Wu, Shun-Li Jiang, Shu-Kun Ye, Ting Lin, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Probing Two Driven Double Quantum Dots Strongly Coupled to a Cavity, Physical Review Letters, 130, 233602 (2023).
+
+（5） Si-Si Gu, Yong-Qiang Xu, Rui Wu, Shun-Li Jiang, Shu-Kun Ye, Ting Lin, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Gain ofa High-Impedance Cavity Coupled to Strongly Driven Semiconductor Quantum Dots, Physical Review Applied, 19, 054020 (2023).
+
+（6） Ting Lin, Si-Si Gu, Yong-Qiang Xu, Shun-Li Jiang, Ning Wang, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Circuit-QED based time-averaged dispersive readout of a semiconductor charge qubit, Applied Physics Letters, 121 (2022).
+
+（7） Yong-Qiang Xu, Rui Wu, Shun-Li Jiang, Shu-Kun Ye, Zi-Qing Huang, Ze-Cheng Wei, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, On-chip high kinetic inductance LC filters modeled with a distributed circuit model, The European Physical Journal B, 97, 199 (2024).
+
+## 待发表论文：
+
+（1） Shun-Li Jiang, Tian-Yi Jiang, Shu-Kun Ye, Ran-Ran Cai, Tian-Yue Hao, Yong-Qiang Xu, Zong-Hu Li, Yuan Kang, Bao-Chuan Wang, Hai-Ou Li, Guang-Can Guo,
+
+Gang Cao, and Guo-Ping Guo, Coupling between a Si/SiGe resonant exchange qubit and a high impedance microwave resonator(Physical Review Letters, under review).
+
+（2） Shun-Li Jiang, Tian-Yi Jiang, Tian-Yue Hao, Yong-Qiang Xu, Rui Wu, Bao-Chuan Wang, Hai-Ou Li, Gang Cao, and Guo-Ping Guo, Strong coupling between cavity and flopping-mode qubit beyond direct gate connection in a Si/SiGe triple quantum dot(Applied Physics Letters, under review).
+
+## 会议：
+
+（1） 第一作者会议墙报。第二十三届全国半导体物理学术会议，中国，西安，2021 年 7 月 8 日—7 月 11 日。
+
+（2） 第一作者会议墙报。中国物理学会2023秋季学术会议，中国，宁夏，2023年8月17日—8月20日。
+
+（3） 英文口头报告。硅量子电子学研讨会 (Silicon Quantum Electronics Work-shop)，日本，京都，2023 年 10 月 31 日—11 月 2 日。
+
+（4） 口头报告（闪报）。第三届全国半导体物理青年论坛，中国，延吉，2024年9月20日—9月22日。

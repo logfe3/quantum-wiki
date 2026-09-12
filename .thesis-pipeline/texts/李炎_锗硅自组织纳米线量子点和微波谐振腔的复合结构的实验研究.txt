@@ -1,0 +1,4025 @@
+ 中国科学技术大学
+
+博士学位论文
+
+
+
+锗硅自组织纳米线量子点和微波
+谐振腔的复合结构的实验研究
+
+作者姓名：   李炎
+学科专业：   光学
+导师姓名：   郭国平 教授 李海欧 特任研究员
+完成时间：   二零一八年五月四日
+University of Science and Technology of China
+ A dissertation for doctor’s degree
+
+
+
+
+Experimental study of Ge hut wire
+  quantum dot and microwave
+    resonator hybrid system
+
+
+
+  Author：       Yan Li
+  Speciality：   Optics
+  Supervisors： Prof. Guo-Ping Guo，
+                R. P. Hai-Ou Li
+  Finished time：May 4th, 2018
+        中国科学技术大学学位论文原创性声明
+
+  本人声明所呈交的学位论文,是本人在导师指导下进行研究工作所取得的成
+果。除已特别加以标注和致谢的地方外，论文中不包含任何他人已经发表或撰写
+过的研究成果。与我一同工作的同志对本研究所做的贡献均已在论文中作了明确
+的说明。
+
+
+
+ 作者签名：___________        签字日期：_______________
+
+
+
+
+        中国科学技术大学学位论文授权使用声明
+
+  作为申请学位的条件之一，学位论文著作权拥有者授权中国科学技术大学拥
+有学位论文的部分使用权，即：学校有权按有关规定向国家有关部门或机构送交
+论文的复印件和电子版，允许论文被查阅和借阅，可以将学位论文编入《中国学
+位论文全文数据库》等有关数据库进行检索，可以采用影印、缩印或扫描等复制
+手段保存、汇编学位论文。本人提交的电子文档的内容和纸质论文的内容相一致。
+  保密的学位论文在解密后也遵守此规定。
+
+  □公开   □保密（____年）
+
+  作者签名：_______________    导师签名：_______________
+
+  签字日期：_______________    签字日期：_______________
+                   摘 要
+
+
+
+               摘         要
+
+  随着半导体产业的飞速发展和微纳米加工工艺的不断进步，前沿科学研究已
+经进入微观量子调控领域。纳米尺度的量子点可以精确调控单个载流子的隧穿。
+量子点的电荷态或者自旋态形成的二能级系统可以用于制备量子比特。量子比特
+的量子态已经可以实现探测和操作,量子芯片和量子计算展现了广阔的应用潜能。
+但是可应用的量子芯片需要量子比特在保持相干性的前提下实现精确测量和可
+扩展集成。国际上认为利用超导微波谐振腔不仅可以实现对量子比特的灵敏测量，
+而且可以作为量子总线实现多个量子比特的长距离耦合，是量子芯片集成化的可
+行方案。本论文主要研究了基于锗硅自组织纳米线量子点以及量子点和超导微波
+谐振腔的复合结构，同时还研究了利用超导微波谐振腔对量子点状态的灵敏测量
+的理论机制和实验实现。
+
+  本论文的主要内容有：
+
+  1.简要介绍了量子计算的产生背景和实现体系，半导体门控量子点体系，多
+种新型半导体材料体系，腔量子电动力学和电路量子电动力学以及量子点中的电
+荷态和自旋态和超导微波谐振腔的强耦合的最新进展；
+
+  2.制备了锗硅自组织纳米线空穴型单量子点和双量子点，以及介绍了样品制
+备所用到的微纳制备设备和工艺。详细介绍了单量子点的电极设计、能级结构以
+及完整的加工工艺流程。实验研究了锗硅自组织纳米线空穴型单量子点的接触性
+质，库仑震荡图和库仑菱形图等输运性质，以及磁场下的能级劈裂表现和朗德 g
+因子；
+
+  3.设计和制备了锗硅自组织空穴型单量子点和超导微波谐振腔的复合结构，
+包括样品结构和测量系统。研究了微波的幅值和相位用于单量子点电荷态的灵敏
+测量，并从幅值和相位信号中提取了频率移动和频率展宽信息用于解释微波测量
+的理论机制。以运动方程理论为基础利用量子点的载流子压缩系数以及量子点和
+谐振腔的耦合电容确定了单量子点和谐振腔体系中空穴-谐振腔的耦合强度，并
+进一步评估了自旋-谐振腔的耦合强度接近于强耦合水平；
+
+  4.研究了利用超导微波谐振腔探测量子点的性质。幅值和相位读取量子点复
+导纳信息。幅值和相位信号推算出反射式微波谐振腔和量子点耦合体系中的频率
+移动和频率展宽信息，并以此为基础论证了幅值和相位和直流输运的定量对应和
+转换关系。
+
+  5.设计和制备了锗硅自组织空穴型双量子点和超导微波谐振腔的复合结构。
+
+                    I
+                   摘 要
+
+
+
+并且比较了双量子点-谐振腔的耦极耦合模式和单量子点-谐振腔的耦合模式。基
+于不同的理论模型解释了微波的幅值和相位信号对于双量子点中空穴在左点和
+右点之间以及在量子点和电极之间隧穿的不同反应；
+
+  本文的创新点有：
+
+  1.设计和制备了锗硅自组织纳米线单量子点和双量子点；
+
+  2.实现锗硅自组织空穴型单量子点和双量子点与超导微波谐振腔的耦合，利
+用谐振腔的幅值和相位信号实现量子点电荷态的灵敏测量；
+
+  3.从微波谐振腔的幅值和相位信号中分别利用奇偶部分积分的方法以及理
+论推导的方法得到频率移动和频率展宽信息，并以此为基础建立了幅值和相位与
+直流输运信号的定量对应和转换关系。并且利用微波的幅值和相位信号测量量子
+点的复导纳以及评估隧穿率。
+
+  4.基于量子点的载流子压缩系数以及量子点和谐振腔的耦合电容提取了锗
+硅自组织纳米线空穴型单量子点和谐振腔体系中空穴-谐振腔的耦合强度，更进
+一步评估了该体系的自旋-谐振腔的耦合强度;
+
+  5.比较和解释了双量子点-谐振腔和单量子点-谐振腔的耦合机制的不同，基
+于不同的理论模型探索了双量子点-谐振腔模型之中空穴在左点和右点之间以及
+量子点和电极之间隧穿的不同反应；
+
+  关键词：量子点，量子计算，量子比特，锗硅自组织纳米线，空穴，微波，
+谐振腔，灵敏探测，频率移动，频率展宽
+
+
+
+
+                    II
+                                         Abstract
+
+
+
+                                    ABSTRACT
+
+     With the rapid development of semiconductor industry and sustaining process of
+micro- and nano-fabrication techniques, advanced sciences have stepped into the
+microcosmic quantum field. The nano-scale quantum dot (QD) ensures the precise
+manipulation the tunneling of single carrier. The charge states and spin states of QD are
+two level systems and can be used as the quantum bit (qubit). Measuring and
+manipulating the quantum states of qubit have been achieved，and quantum information
+processing and quantum computation have shown their promising potential of powerful
+and capacious applications. However, an applied quantum information processing need
+sensitive measurement and scalability with the qubit simultaneously maintains
+coherence. The superconducting microwave resonator is regarded as the useful tool for
+sensitive readout of qubit and as a quantum bus for mediating multiple distant qubits,
+indicating as a feasible scheme of scalable quantum information processing. In this
+thesis, we mainly study the Ge hut wire QD, as well as the QD/microwave resonator
+hybrid structure. Furthermore, we investigate the theoretical mechanism and
+experimental realization of sensitively probe the QD states using the microwave
+resonator with exquisite details.
+
+     The main contents of this thesis are listed below:
+
+     1. A brief introduction of the background and realizing systems of quantum
+computation, gate-defined QD of semiconductor systems, various novel semiconductor
+materials, cavity quantum electrodynamics and circuit quantum electrodynamics, the
+latest process of the strong coupling the charge/spin states of QD to a microwave
+resonator;
+
+     2. We experimentally fabricate the Ge hut wire hole SQD and DQD, and introduce
+the instruments and techniques related to the micro- and nano-fabrication, and introduce
+the electrode structure, energy level, and fabrication process of Ge hut wire SQD in
+detail. We experimentally study the contact properties, Coulomb oscillations diagram
+and Coulomb diamonds diagram, energy level splitting behavoir under magnetic field,
+and lande g-factor;
+
+    3. We design and fabricate the hybrid device in which the Ge hut wire SQD is
+coupled to a superconducting microwave resonator. The amplitude and phase of the
+microwave resonator can be used as the sensitive sensors to probe the charge states of
+
+                                           III
+                                        Abstract
+
+
+
+the SQD. The frequency shift δfR and frequency width broadening δfD can be
+
+extracted from the microwave single, and used to interpret the measuring mechanism.
+On the basis of Equation of Motion theory, we determine the hole-resonator coupling
+rate and evaluate the spin-resonator coupling rate in the Ge hut wire SQD and
+microwave resonator hybrid system;
+
+    4. We investigate the probing the properties of QD using the superconducting
+microwave resonator. The amplitude and phase can be used to detect the complex
+admittance of QD. The δfR and δfD can be deduced from the amplitude and phase
+
+responses. The quantitative models are built between the DC transport signal with
+amplitude and phase. The amplitude and phase can also applied as the sensitive tools to
+evaluate the tunneling rate of Ge hut wire hole SQD;
+
+     5. We design and fabricate the hybrid device in which the Ge hut wire DQD is
+coupled to a superconducting microwave resonator. The coupling mechanism of DQD-
+resonator is compared between that in SQD-resonator system. And we employ the
+different theoretical models to explain the microwave response with hole tunneling
+between the left dot and right dot, and between the dot and lead;
+
+     The main innovations of this thesis are:
+
+  1. Designing and fabricating the SQD and DQD based on Ge hut wire;
+
+  2. We realize the coupling between the Ge hut wire SQD or DQD with a microwave
+resonator, and the amplitude and phase responses can be used as the sensitive sensors
+of charge states of QD;
+
+  3. The δfR and δfD can be obtained by integrating the odd and even parts of
+
+amplitude and phase signal, or by deducing from amplitude and phase. The quantitative
+models are built between the DC transport signal with amplitude and phase responses.
+The complex admittance and tunneling rate of QD are probed by means of amplitude
+and phase of the microwave resonator;
+
+  4. On the basis of compressibility of QD as well as the coupling capacitance between
+the QD and resonator, we can determine the hole-resonator coupling rate in SQD-
+resonator system, and further evaluate the spin-resonator coupling rate;
+
+  5. We compare and explain the different coupling mechanisms between SQD-
+resonator system and DQD-resonator system. And the hole tunneling between the left
+                                          IV
+                                       Abstract
+
+
+
+dot and right dot as well as between the dot and lead are interpreted by means of
+different theoretical models;
+
+  Key words：quantum dot, quantum computation, qubit, Ge hut wire, hole, microwave,
+resonator, sensitive measurement, frequency shift, frequency broadening
+
+
+
+
+                                          V
+Abstract
+
+
+
+
+  VI
+                          目 录
+
+
+
+                      目         录
+
+摘要 ……………………………………………………………………..……..……I
+Abstract ……………………………………………………………..………….……III
+目录…………………………………………………………………..…..……..…....VI
+第 1 章 绪论…………………….…………………..…………….………………1
+  1.1   量子计算…………………………………………….………………………1
+
+  1.2   半导体门控量子点体系……………………………………….……………2
+
+  1.3   新型半导体材料………………..…………………………….………..……5
+
+    1.3.1 锗硅核壳型纳米线…………..……………...…………….………..……5
+
+    1.3.2 锗硅纳米晶…………..……………...…………….………………..……6
+
+    1.3.3 锗硅自组织纳米线……..……………...………….………………..……8
+
+  1.4   量子电动力学……..………………….…...………….…..……………..…10
+
+    1.4.1 腔量子电动力学……..……………...………….………………………10
+
+    1.4.2 电路量子电动力学……..……………...………….………………..…10
+1.5 量子点和微波谐振腔的强耦合……..……………...………….…….......……10
+
+    1.5.1 电荷和微波谐振腔的强耦合…..……………...………...….…….…....10
+
+    1.5.2 自旋和微波谐振腔的强耦合…..……………...………….……………11
+
+  1.6   本章小结………………………………………………………...…………12
+
+  参考文献…..……………...………….…….…………...………….………….…13
+第 2 章 样品加工和制备…………………………………….….………….…18
+  2.1   光刻…………………………………………………..…………….………18
+  2.2   扫描电子显微镜和电子束曝光………………………...…………………22
+  2.3   电子束曝光的邻近效应………………………………...…………………27
+  2.4   湿法刻蚀和等离子体刻蚀……………………………...…………………28
+  2.5   镀膜……………………………………………………………...…………30
+  2.6   原子层沉积……………………………………………………...…………31
+  2.7   其他设备………………………………………………………...…………31
+  2.8   低温测量平台…………………………………………………...…………33
+  2.9   本章小结………………………………………………………...…………33
+第 3 章 锗硅自组织纳米线空穴型单量子点………………………….…34
+                          VI
+                       目 录
+
+
+
+ 3.1   单量子点的结构…………………………………..…………………….…34
+ 3.2   锗硅自组织纳米线单量子点的能级结构…………………...……………35
+ 3.3   锗硅自组织纳米线单量子点的制备…………………...…………………36
+ 3.4   锗硅自组织纳米线单量子点的表征…………………...........……………39
+   3.4.1   接触性质………………………………………………………………39
+   3.4.2   库仑震荡………………………………………………………………40
+   3.4.3   库仑菱形………………………………………………………………41
+ 3.5   磁场下量子点能级的劈裂……………………………………….………42
+ 3.6   朗德 g 因子的提取……………………….………………………………43
+ 3.8   本章小结…………………..……………….………………………………44
+ 参考文献……………….………………….……………………..………………45
+第 4 章 单量子点和超导微波谐振腔的耦合………………………….…49
+ 4.1   量子点和谐振腔的复合结构……………………………………...………48
+ 4.2   样品的结构和测量……………………………………….………..………49
+ 4.3   微波谐振腔的本征参数………………………………….………..………51
+ 4.4   谐振腔对单量子点的读取…………………………….…………..………52
+ 4.5   单量子点和谐振腔的耦合模型……………………….…….…….………54
+   4.5.1 复导纳模型以及腔和量子点的复合模型……………..………………54
+   4.5.2 频率移动和频率展宽………………………………….……….………54
+ 4.6   空穴和谐振腔的耦合强度………………………….……….…….………57
+   4.6.1 量子点的压缩系数和运动方程理论……………………….….………57
+   4.6.2 基于压缩系数获取空穴和谐振腔的耦合强度………….……….……59
+   4.6.3 基于耦合电容评估空穴和谐振腔的耦合强度…………….…….……60
+ 4.7   评估自旋和谐振腔的耦合强度………………….……………….….……61
+ 4.8   本章小结…………………………………………….……………..………62
+ 参考文献…………….…………………………………….……………..………63
+第 5 章 谐振腔测量量子点的复导纳和隧穿率性质………………...…68
+ 5.1   样品的结构和测量系统…………………………….……………..………68
+ 5.2   测量结果…………………………………………….……………..………69
+ 5.3   探测量子点的复导纳……………………………….……………..………71
+ 5.4   谐振腔信号和微分电导的模型………………………………..….………72
+ 5.5   探测量子点的隧穿率………………….…………….…………….………73
+ 5.6   本章小结…………….……………………………….…………….………75
+ 参考文献……………………………………..…………….…………….………76
+
+                       VII
+                      目 录
+
+
+
+第 6 章 双量子点和超导微波谐振腔的耦合………………………….…80
+ 6.1   双量子点…………………………………………………..…………….…81
+ 6.2   样品的结构和测量系统…………………………….……………..………82
+ 6.3   谐振腔对双量子点的读取…………………………….……………..……83
+ 6.4   左点和右点间隧穿对应的谐振腔反应………………………..…….……85
+   6.4.1 Tavis−Cummings 模型…………………………….…………….………85
+   6.4.2 测量结果………………………………………….…………….………86
+   6.4.3 模型的验证……………………………………….…………….………87
+ 6.5   量子点和电极间隧穿对应的谐振腔反应…………..…………….………87
+   6.5.1 量子点-电极耦合模型………….………………………..…….….……87
+   6.5.2 测量结果和模型验证………….………………………..……..….……87
+ 6.6 本章小结………….…………………………………………..…….….……89
+ 参考文献…………………………………………………………………………90
+第 7 章 总结和展望.. ………………………………………………………….93
+ 7.1   总结…………………………………………………………………...……93
+ 7.2   展望…………………………………………………………………...……94
+   7.2.1 量子点体系的优化…………………………...…………………...……94
+   7.2.2 腔和量子点复合体系的优化……………………………………..……96
+   7.3.3 量子芯片的可扩展……………………………………………......……97
+
+ 参考文献………………………………………………………….………...……99
+
+致谢…………………………………………………………………………………103
+
+在读期间发表的学术论文与取得的其他研究成果………………………………105
+
+
+
+
+                       VIII
+目 录
+
+
+
+
+IX
+                   第1章    绪论
+
+
+
+                第1章        绪论
+1.1 量子计算
+  电子计算机的诞生标志着人类进入信息化和智能化的时代，电子计算机深刻
+地改变了人们生活、学习、工作的方式，成为不可或缺的部分。半导体晶体管是
+电子计算机的基本组成单元，电子计算机的运算速度和存储容量依赖于芯片上的
+晶体管的数目。随着科技的飞速发展，为了提升计算机的运算速度和存储容量，
+我们在不断缩小晶体管尺度的同时，也在不断提升芯片上晶体管的集成度。单位
+面积的芯片的晶体管数量是电子计算机性能的一个重要的参数。过去几十年，芯
+片的集成度按着 G. Moore 提出的著名的“摩尔定律”发展，即芯片单位面积上的
+集体管数目每隔 18 个月翻一番，性能也增加一倍[1]。但是近年来，半导体产业
+的发展速度有明显放缓的趋势。目前半导体产业已经进入 7 nm 的节点，晶体管
+的尺度已经接近物理极限。一方面，当晶体管的尺度继续缩小，芯片的加工越来
+越难，并且其部分物理特性逐渐超出经典理论的范围，“量子效应”会逐渐显现，
+会导致漏电流的产生从而产生影响计算的精确性。另一方面，高集成度带来的发
+热问题会影响器件的稳定性。半导体产业已经进入“后摩尔时代”，通过缩小晶体
+管尺度和提升集成度来继续提升计算速度和存储容量可能在不久的将来遇到发
+展的瓶颈。
+
+
+
+
+图 1.1 摩尔定律，芯片单位面积上的集体管数目每隔 18 个月翻一番，性能也增加一倍。
+
+
+
+                      1
+                    第1章    绪论
+
+
+
+   量子计算机是解决经典电子计算机遇到的问题的可能方案。1982 年，R. P.
+Feynman 指出量子计算在某些特点的问题上将会有比经典计算更高的效率[2]。
+随后 Shor 大数因子分解算法和 Grover 量子搜索算法的出现证实了在特定领域，
+量子计算有超越经典计算的能力[3-5]。量子比特（quantum bit，qubit）是量子芯
+片和量子计算机的基本单元。量子比特以其叠加态和纠缠态特性区别于经典比特。
+叠加态是指量子比特不仅可以处于|0⟩态和|1⟩态，还可以处于二者之间的叠加态
+α|0⟩ + β|1⟩，其中α2 + β2=1。纠缠态是指两个量子比特可以处于纠缠态，不能在
+不依赖另一个量子比特的前提下完整地描述一个量子比特。随着比特数目的增长，
+经典计算机的计算能力呈线性增长趋势，而量子计算机的计算能力呈指数增长趋
+势。另外，量子计算的过程是幺正变换，幺正变换的可逆性使得处理过程的能耗
+较低，解决了经典计算机的高能耗这一关键问题。
+   为了构建量子比特和实现量子计算机，D. P. DiVincenzo 提出的五条判据[6]：
+1. 合适的二能级系统作为量子比特，并且这个量子比特具有可扩展性；
+2. 系统能够实现任意的幺正变换变换，即门操作；
+3. 量子比特能够制备到基准态，即初态；
+4. 系统能够保持良好的相干性，有足够的相干时间来完成各种量子逻辑门操作；
+5. 量子比特的末态可以被测量。能够准确的读取系统幺正演化后的状态。
+   基于以上判据，研究者在不同的体系上尝试构建量子比特和进行初步的量子
+计算。诞生了线性光学系统、腔量子电动力学系统、电路量子电动力学系统、超
+导系统、核磁共振系统、离子阱系统、金刚石色心系统、半导体量子点系统等[8-
+14]。
+
+1.2 半导体门控量子点体系
+   基于半导体门控量子点体系的量子计算因为能够和现代半导体工业中的材
+料生长、成熟的微纳加工设备和工艺相结合，被认为是实现量子计算的一个可行
+方案。目前在全世界范围由多个国家的三十支科研团队利用不同的材料体系和构
+架方案研发基于半导体门控量子点体系的量子计算。近年，包括 Google、IBM、
+Intel、Microsoft 等国际科技巨头企业的加入，也进一步推进了这个领域的蓬勃发
+展。
+   量子点（quantum dot，QD）是对于材料中的载流子（电子、空穴等）在三
+个维度上进行束缚形成准零维结构的载流子团。量子点内部的载流子能级和基本
+性能和原子相似，所以可视为“人造原子”。以量子点为基础的量子计算需要构建
+量子比特。目前，研究者提出多种方案，包括：单电子自旋量子比特[23]、空穴
+自旋量子比特[24-26]、电荷量子比特[27-28]、以及多载流子操作的杂化量子比特
+[29,30]自旋单态-三重态量子比特[31,32]、交换量子比特等多种形式[33,34]。
+                       2
+                  第1章    绪论
+
+
+
+
+图 1.2 二维材料体系的量子点结构。
+                  （a）砷化镓。
+                        （b）硅。
+                            （c）二硫化钼。
+                                   （d）石墨烯。图
+片引自[35-38]。
+   新型半导体材料的门控量子点则是利用材料本身的结构和能级束缚结合施
+加在电极上的电势作为束缚手段。对于二维材料，比如砷化镓[35]、硅[36]、石墨
+烯[37]、二硫化钼[38]等，材料本身在垂直于材料平面的维度上对载流子的输运
+有限制，所以只需要在另外两个维度增加一系列电极并施加电势，即可形成量子
+点；对于一维材料，比如锗硅核壳型纳米线[39]、锗硅自组织纳米线[40]、铟砷纳
+米线[41]、碳纳米管[42]、铟锑纳米线[43]等，材料本身在材料的横截面的两个维
+度限制载流子的输运，所以只需要在沿着纳米线维度施加电极电势即可得到量子
+点；对于如锗硅纳米晶[44]这类的零维材料，材料本身在三个维度已有限制，但
+是仍然需要加上电极调节载流子的输运。
+
+
+
+
+                     3
+                    第1章   绪论
+
+
+
+
+图 1.3 一维和零维材料体系的量子点结构。
+                     （a）锗硅核壳型纳米线。
+                                （b）锗硅自组织纳米线。
+（c）铟砷纳米线。（d）碳纳米管。（e）铟锑纳米线。
+                         （f）锗硅纳米晶。图片引自[39-44]。
+  通常，量子点由源电极（Source）、漏电极（Drain）和单个或一组栅极电极
+（Gate）构成。量子点和源电极、漏电极通过隧穿势垒（Tunnel barriers）相连，
+通过电容与栅极电极相连。栅极可分为顶栅极、背栅极和侧栅极三种类型。通过
+调节施加在栅极电极上的电压改变量子点内载流子的填充状态。隧穿势垒也可以
+通过对应的控制电极进行调节，当源电极和漏电极两端施加偏置电压（Bias
+Voltage）,量子点内的载流子的填充状态可以通过测量源电极和漏电极之间的输
+运电流检测。
+  量子点的形成还需要满足两个基本条件。第一，隧穿势垒等效电阻 R≫ ℎ⁄𝑒 2 ，
+这个条件保证了能够分辨载流子是在量子点中还是源漏电极的载流子库中。第二，
+                      4
+                      第1章    绪论
+
+
+
+量子点总电容 C 满足𝑒 2 ⁄𝐶 ≫ 𝐾𝐵 𝑇 ,这个条件保证了避免外界温度提供的能量导
+致的热噪声不足以影响载流子的隧穿[45]。
+  量子点与源电极和漏电极的几何结构和连接方式不同，可将量子点分为横向
+量子点和纵向量子点两种类型。根据量子点的数目的不同，又可将量子点分为单
+量子点（Single QD,SQD）和双量子点（Double QD，DQD）等[46]。
+
+
+
+
+图 1.4（a）横向量子点结构。灰色圆柱体代表量子点和源漏电极中的载流子库。黑色箭头代
+表载流子通过隧穿势垒在量子点和接触电极之间传输。
+                       （b）纵向量子点结构。
+                                 （c）单量子点
+的常相互模型。
+      （d）双量子点的常相互模型。图片引用自引文[46]。
+
+1.3 新型半导体材料
+1.3.1 锗硅核壳型纳米线
+  锗硅核壳型纳米线（Ge/Si core/shell nanowire）是典型的新型的以空穴为载
+流子的一维半导体材料，2002 年首次用化学气相沉积方法（Chemical Vapor
+Deposition, CVD）制备。其横截面基本结构如图所示，包含 10 nm 的非掺杂锗内
+核和 2-5 nm 的非掺杂硅外壳，硅外壳表面由于自然氧化会形成二氧化硅层。锗
+和硅之间在异质结内有约为 500 meV 的价带（Valence Band）能级差可以用作量
+子阱（Quantum Well）。费米面（Fermi Level）位于锗价带以下，空穴会积累在锗
+内核之中。
+
+
+
+
+                         5
+                          第1章    绪论
+
+
+
+
+图1.5 （a）锗硅核壳型纳米线的横截面图，黑色为锗内核，灰色为硅外壳。（b）能带结构
+示意图，锗和硅的价带有500 meV的能级差。空穴束缚在费米面和锗的价带之间的量子阱之
+中。（c）透射电子显微镜照片，可以清楚分辨出硅外壳层和锗内核层。
+   锗硅核壳型纳米线拥有广阔的应用领域和巨大的应用潜能，是量子芯片的候
+选材料。对于锗硅核壳型纳米线，研究者做了输运、场效应管、量子点、自旋态、
+弱反局域化和超导电流等方面的研究[47-50]。相关的理论和实验工作证实锗材料
+中的空穴载流子拥有相对较强的自旋-轨道耦合强度（Spin-Orbit coupling strength）
+[50,51]。我们组郝晓杰等人利用弱反局域化的方法测量得到锗硅核壳型纳米线的
+自旋-轨道耦合强度高达 1 meV，是铟砷纳米线自旋-轨道耦合的 4 倍[52]。
+   但是，锗硅核壳型纳米线由于横截面是圆形对称结构，这样的结构导致了空
+穴是由轻空穴（Light Hole，LH）和重空穴（Heavy Hole，HH）的混杂。因此，
+锗硅核壳型纳米线中的超精细相互作用[53-55]不是非伊辛型，减弱了自旋退相干
+时间。尽管如此，锗硅核壳型纳米线的自旋弛豫时间仍然达到 600 μs[56],自旋退
+相干时间达到 200 ns[57]。另外，锗硅核壳型纳米线生长完成后需要用干法或者
+湿法转移到基片上，纳米线的位置和长度等性质不容易控制，是在未来量子芯片
+的规模化和集成化研究中需要解决的问题。
+
+1.3.2 锗硅自组织纳米晶
+   研 究 者 用 分 子 外 延 生 长 （ Molecular Beam Epitaxy ， MBE ） 技 术 的
+Stranski−Krastanow 模式生长出锗硅纳米晶（GeSi nanocrystal）[58,59]。锗硅纳米
+晶是一种准零维半导体异质结材料。其基本生长步骤为：在重掺杂的硅衬底上生
+长硅缓冲层，然后生长一层锗，然后进行热退火处理。由于不匹配的硅和锗的晶
+格导致基片表面产生点状的锗，用作内核。锗晶的高度约为 20 nm，直径约为 80
+nm。然后在表面生长出一层 2 nm 的硅覆盖层做外壳。最后硅表面由于自然氧化
+                             6
+                      第1章    绪论
+
+
+
+会形成二氧化硅层。不同的生长参数对应着不同的形状、尺度。通常锗硅纳米晶
+有棚顶型（Hut）、圆顶型（Dome）和金字塔型（Pyramid）三种典型的形状。值
+得注意的是,锗硅纳米晶可以通过位置控制技术（Cite-control technique）控制纳米
+晶的位置，生长出模块化有序化的纳米晶阵列[60-62]。这意味着锗硅纳米晶不需
+要转移步骤，并且可以大规模集成化应用，对于量子芯片的扩展有重要的意义。
+  2010 年,Katsaros 等人在锗硅纳米晶上用铝电极制备半导体-超导结构的单量
+子点，测量得到 g 因子具有各向异性，平行 g 因子为 1.21，垂直 g 因为 2.71[44]，
+预测了平行自旋轨道耦合强度∆𝑠𝑜 为 34 μeV，垂直∆𝑠𝑜 为 42 μeV[63]。并且后续
+的实验预测了锗硅纳米晶中拉比震荡（Rabi Oscillation）频率高达 100 MHz[64]。
+  但是锗硅纳米晶过小的零维尺度在也带来了两个弊端：第一、纳米晶的微纳
+加工难度很大；第二、纳米晶的空间有限，很难制备复杂的样品结构。这两点极
+大地限制了锗硅纳米晶的应用前景。至今在这种材料上只做出单量子点结构。
+
+
+
+
+图 1.6 （a）不同生产条件下生长出的棚顶型、圆顶型和金字塔型的锗硅纳米晶结构。（b）
+利用可控生长技术可以生长出有序排布的锗硅纳米晶整列。图片引自文献[44]。
+
+
+
+
+                         7
+                   第1章    绪论
+
+
+
+
+图 1.7（a）锗硅纳米晶单量子点的侧面结构和能级图。基片为重掺杂的硅，用来形成背栅极
+调节量子点化学能。
+        （b）单量子点扫描电子显微镜照片。利用重掺杂硅基片用作背栅极调节
+空穴在量子点和接触电极之间的隧穿。
+                （c）单量子点的示意图以及测量和磁场系统图。图片
+引自文献[44]。
+
+1.3.3 锗硅自组织纳米线
+
+   为了克服锗硅自组织纳米晶的尺度的限制，2012 年张建军等人调整生长条
+件，将棚顶型团簇（Hut Cluster）延展成一维的棚顶型纳米线[65]。锗硅自组织纳
+米线在基片表片沿着（100）或者（010）方向生长，横截面为类三角形结构。相
+比于锗硅核壳型纳米线，三角形的横截面的锗硅自组织纳米线有更大的重空穴和
+轻空穴能级分离，Katsaros 等人证实低能态的锗硅自组织纳米线几乎是纯重空穴，
+也因此锗硅自组织纳米线被预测有更长的自旋退相干时间。值得注意的是，同样
+作为第四族元素的硅经过同位素纯化后退相干时间由 360±30 ns 提升到令人震
+惊的 270 μs，提升 5500 倍[66,67]，所以核自旋是退相干的主要因素。锗目前已
+经实现了成熟的同位素纯化[68,69],纯化的锗用于纳米线的生长也在积极地探索
+之中。锗中的空穴由于比硅更强的自旋轨道强度，保证了全电控量子比特的操作
+速度。另外，和锗硅纳米晶类似，锗硅自组织纳米线在位置可控方面实现了实质
+性的突破,在未来的集成化量子芯片的研究中有着非常重要的意义。
+
+                      8
+                    第1章   绪论
+
+
+
+
+图 1.8 锗硅自组织纳米线的（a）原子力显微镜图（b）投射电子显微镜图片。
+                                     （c）纳米线沿
+着（100）或者（010）方向生长。（d-f）不同生长条件下得到的金字塔型锗硅纳米晶（d）、
+棚顶型团簇（e）和棚顶型纳米线（f）
+                 。图片引用自[65]。
+
+
+
+
+图 1.9（a-b）位置控制技术生长出有序排列的锗硅自组织纳米晶（a）和纳米线（b）
+                                         。（c-d）
+L 型和 T 型锗硅自组织纳米线。图片来自于张建军的报告。
+                      9
+                        第1章     绪论
+
+
+
+1.4 量子电动力学
+1.4.1 腔量子电动力学
+   腔量子电动力学（Cavity quantum electrodynamics,CQED）可用于探究单个原
+子和光子之间的反应。原子可以被视为二能级系统，能级为ћ𝜔𝑎 ，自发辐射速率
+为𝛾，法布里波罗腔光场中光子的损耗速率为κ，原子与光学腔的反应速率为
+g coupling。当两个系统的反应速率大于原子的自发辐射速率以及光子的损耗速率
+时，原子能够和光子完成有效的能量交换，系统仍然保持相干状态，此时腔量子
+电动力学体系处于强耦合区域。当两个系统的反应速率小于原子的自发辐射速率
+或者光子的损耗速率时，此时体系处于色散耦合区域。原子的状态可以利用光场
+的变化读取，并且这种色散读取是非破坏读取[70]。
+
+1.4.2 电路量子电动力学
+   研究者用库伯对盒（Cooper pair box）构成超导电路取代自然原子，并且用
+共平面波导微波谐振腔（On-chip waveguide microwave resonator）代替法布里波
+罗腔。腔量子电动力学结构被扩展到电路量子电动力学结构（circuit quantum
+electrodynamics，cQED）。在这种电路量子电动力学结构中，库伯对盒和共平面
+波导微波谐振腔都可以用成熟的微纳加工工艺制备，相对容易调整和控制体系参
+数，自发辐射时间较长，并且和微波谐振腔的耦合强度较大，另外微波谐振腔采
+用超导材料有效的降低了耗散[71]。
+   T. Kontos 组的 M. R. Delbecq 等人利用碳纳米管体系的门控单量子点耦合到
+超导微波谐振腔，实现了利用谐振腔对量子点状态的灵敏探测[42,70]。紧接着，
+ETH 的 K. Ensslin、A. Wallraff 和 T. Ihn 等人实现了砷化镓体系中腔和双量子点
+的耦合[72]。J. R. Petta 组 K.D.Petersson 等人在硅体系腔分别硅体系[73]以及铟砷
+纳米线体系[74]的微波腔和双量子点的偶极耦合（dipolar coupling）。我们组的邓
+光伟等人在石墨烯体系实现了微波腔和双量子点的偶极耦合[37]。
+
+
+1.5 量子点和微波谐振腔的强耦合
+1.5.1 电荷和微波谐振腔的强耦合
+   在超导微波谐振腔和量子点耦合的复合体系中，实现量子点中的电荷态或者
+自旋态与微波腔之间的强耦合是一个至关重要的目标，强耦合意味着微波腔和量
+子点之间的耦合强度g c 大于谐振腔中光子的损耗速率κ和量子点电荷态或者自旋
+态的退相干速率γ[71]。
+   2016 年，量子点中的电荷态和微波谐振腔的强耦合取得了多个突破性的进
+
+                           10
+                           第1章     绪论
+
+
+
+展。J. R. Petta 组在硅量子点体系通过提高硅锗异质结的质量来降低电荷噪声从
+而降低了量子点的退相干速率，并且滤波器的加入也有效的降低了光子在谐振腔
+的损耗速率，从而实现了硅量子点和谐振腔的强耦合[75]。A. Wallraff 组在砷化
+镓量子点体系利用新型 SQUID 腔（superconducting quantum interference device）
+提高了谐振腔的匹配阻抗，从而提升了量子点和谐振腔的耦合强度实现强耦合
+[76]。T. Kontos 组在碳纳米管量子点体系也是通过减小量子点的退相干速率实现
+强耦合[77]。
+
+
+
+
+图 1.10 量子点的电荷态和微波谐振腔的强耦合。（a）T. Kontos 组在碳纳米管体系。
+                                              （b）J.
+R. Petta 组在硅量子点体系。（c）A. Wallraff 组砷化镓量子点体系。图片引用自[75-77]。
+
+1.5.2 自旋和微波谐振腔的强耦合
+   量子点的自旋比特的退相干时间远长于电荷比特的退相干时间，是更好的量
+子比特的载体。但是微波腔的磁耦合强度很弱，直接将单个的自旋磁性偶极子耦
+合到微波腔的磁场中得到的耦合强度只有g M /2π ≈ 10 Hz 量级无法用于量子芯片
+[36]。这个问题可以通过杂化量子点的自旋态和电荷态从而将单光子的电场耦合
+到单个自旋解决。2018 年，L. M. K. Vandersypen 组在硅量子点体系实现了自旋
+和谐振腔的强耦合。其中自旋和光子的耦合强度约为 10 MHz，光子的损耗速率
+和自旋退相干速率分别为 4.1 MHz 和 1.8 MHz[78]；几乎同时，J. R. Petta 组也报
+道了在硅量子点体系的强耦合工作。自旋和光子的耦合强度、光子的损耗速率和
+
+                              11
+                        第1章     绪论
+
+
+
+自旋退相干速率分别为 11 MHz、1.8 MHz 和 2.4 MHz[79]；K. Ensslin 组在砷化
+镓量子点体系中实现了强耦合，自旋和光子的耦合强度和自旋退相干速率分别为
+31 MHz 和 20 MHz[80]。
+
+
+
+
+图 1.11 量子点的自旋态和微波谐振腔的强耦合。（a）J. R. Petta 组在硅量子点体系。
+                                                （b）L.
+M. K.Vandersypen 组在硅量子点体系。（c）K. Ensslin 组在砷化镓量子点体系。图片引用自
+[78-80]。
+
+1.6 本章小结
+    本章简单介绍了量子计算和半导体材料的门控量子点的研究背景和基本概
+念。然后介绍了多种半导体材料的门控量子点体系，并介绍了应用于本文的锗硅
+自组织纳米线以及与之密切相关的锗硅核壳型纳米线、锗硅纳米晶的基本性质。
+接着介绍了腔量子电动力学和电路量子电动力学的背景知识和发展过程。最后介
+绍了量子点中的电荷态和自旋态和超导微波谐振腔的耦合以及最新突破性进展。
+
+                           12
+                                           第1章        绪论
+
+
+
+                                      参 考 文 献
+
+[1] G. E. Moore. Gramming more components onto integrated circuits. Electronics 38, 114-117
+(1965).
+[2] R. P. Feynman. Simulating physics with computers.Int. J. Theor. Phys. 21, 467-488 (1981).
+[3] D. Deutsch R. Jozsa. Rapid solution of problems by quantum computation. Proceedings of the
+Royal Society of London Series a-Mathematical Physical and Engineering. Science 439, 553-558
+(1992).
+[4] P. W. Shor. Algorithms for quantum computation: discrete logarithms and factoring. IEEE 124-
+134 (1994).
+[5] L. K. Grover. A fast quantum mechanical algorithm for database search. Proc. 28th Annual ACM
+Symposium on Theory of Computing, 212-219 (1996).
+[6] D. P. DiVincenzo. The physical implementation of quantum computation. Fortschritte Der
+Physik-Progress of Physics 48, 771-783 (2000).
+[7] G. J. Knill, R. Laflamme, G. J. Milburn, A scheme for efficient quantum computation with linear
+optics. Nature 409 (6816): 46–52 (2001).
+[8] A. Das , B. K. Chakrabarti. Quantum Annealing and Analog Quantum Computation. Rev. Mod.
+Phys. 80 (3) 1061–1081 (2008).
+[9] C. Nayak, S. Simon, A. Stern, S. Das, Sankar. Non-abelian Anyons and Quantum Computation.
+Rev. Mod. Phys. 80 (3) 1083 (2008).
+[10] G. J. Knill, R. Laflamme, G. J. Milburn. A scheme for efficient quantum computation with
+linear optics. Nature 409, 6816 46–52 (2001).
+[11] A. P. Nizovtsev. A quantum computer based on NV centers in diamond: Optically detected
+nutations of single electron and nuclear spins. Optics and Spectroscopy 99 (2): 248–260 (2005).
+[12] Neumann, P. et al. Multipartite Entanglement Among Single Spins in Diamond. Science 320
+(5881): 1326–1329 (2008).
+[13] A. Imamoğlu, D. D. Awschalom, G. Burkard, D. P. DiVincenzo, D. Loss, M. Sherwin, A.
+Small,. Quantum information processing using quantum dot spins and cavity-QED. Phys. Rev. Lett.
+83 (20), 4204 (1999).
+[14] L. Fedichkin, M. Yanchenko, K. Valiev, Novel coherent quantum bit using spatial quantization
+levels in semiconductor quantum dot. Quantum Computers and Computing 1: 58–76 (2000).
+[15] J. Clarke, F. Wilhelm,. Superconducting quantum bits. Nature 453 (7198): 1031–1042 (2008).
+[16] W. M. Kaminsky, S. Lloyd, and T. P. Orlando, quant-ph/ 0403090; M. Grajcar, A. Izmalkov,
+and E. Il’ichev, Phys. Rev. B 71, 144501 (2005).
+[17] W. G. van der Wiel, S. De Franceschi, J. M. Elzerman, T. Fujisawa, S. Tarucha, and L. P.
+                                                 13
+                                            第1章        绪论
+
+
+
+Kouwenhoven. Electron transport through double quantum dots, Rev. Mod. Phys. 75, 1 (2003).
+[18] Pablo Jarillo-Herrero, Sami Sapmaz, Cees Dekker, Leo P. Kouwenhoven and Herre S. J. van
+der Zant, Electron-hole symmetry in a semiconducting carbon nanotube quantum dot. nature 429,
+389 (2004).
+[19] J. R. Petta, A. C. Johnson , J. M. Taylor , E. A. Laird , A. Yacoby , M. D. Lukin , C. M. Marcus ,
+M. P. Hanson, and A. C. Gossard. Coherent Manipulation of Coupled Electron Spins
+inSemiconductor Quantum Dots. Science 309, 2180 (2005).
+[20] H. Bluhm, S. Foletti, D. Mahalu, V. Umansky, and A. Yacoby. Enhancing the Coherence of a
+Spin Qubit by Operating it as a Feedback Loop That Controls its Nuclear Spin Bath. Phys. Rev.
+Lett.105 (21), 216803 (2010).
+[21] H. O. Churchill, F. Kuemmeth, J. W. Harlow, A. J. Bestwick, E. I. Rashba, K. Flensberg, C. H.
+Stwertka, T. Taychatanapat, S. K. Watson, and C. M. Marcus, Relaxation and Dephasing in a Two-
+Electron 13C Nanotube Double Quantum Dot. Phys. Rev. Lett. 102, 166802 (2009).
+[22] E. A. Laird, F. Pei and L. P. Kouwenhoven. A valley–spin qubit in a carbon nanotube. Nat.
+Nanotech. 8, 565–568(2013)
+[23] D. Loss and D. P. DiVincenzo. Quantum computation with quantum dots. Phys. Rev. A 57, 120-
+126 (1998).
+[24] D. Brunner, B. D. Gerardot, P. A. Dalgarno, G. Wüst, K. Karrai, N. G. Stoltz, P. M. Petroff, R.
+J. Warburton. A coherent single-hole spin in a semiconductor. Science, 325 70-72 (2009).
+[25] M. H. Kolodrubetz, J. R. Petta. Coherent Holes in a Semiconductor Quantum Dot. Science, 325
+42-43 (2009).
+[26] R. Maurand, X. Jehl, D. Kotekarpatil, et al. A CMOS silicon spin qubit. Nat Communs, 7, 13575
+(2016).
+[27] G. Cao, H. O. Li, T. Tu, L. Wang, C. Zhou, M. Xiao, G. C. Guo, H. W. Jiang, G. P. Guo. Ultrafast
+universal quantum control of a quantum-dot charge qubit using Landau-Zener-Stuckelberg
+interference. Nat Communs, 2013, 4 1401.
+[28] H. O. Li, G. Cao, G. D. Yu, M. Xiao, G. C. Guo, H. W. Jiang, and G. P. Guo. Conditional
+rotation of two strongly coupled semiconductor charge qubits. Nat. Communs, 6 7681 (2015).
+[29] H. O. Li, G. Cao, G. D. Yu, M. Xiao, G. C. Guo, H. W. Jiang, and G. P. Guo. Controlled
+Quantum Operations of a Semiconductor Three-Qubit System. arXiv: 1610.06704 (2016).
+[30] D. Kim, Z. Shi, C. B. Simmons, D. R. Ward, J. R. Prance, T. S. Koh, J. K. Gamble, D. E. Savage,
+M. G. Lagally, M. Friesen, S. N. Coppersmith and M. A. Eriksson. Quantum control and process
+tomography of a semiconductor quantum dot hybrid qubit. Nature, 511 70-74 (2014).
+[31] B. M. Maune, M. G. Borselli, B. Huang, T. D. Ladd, P. W. Deelman, K. S. Holabird, A. A.
+
+
+                                                  14
+                                             第1章      绪论
+
+
+
+Kiselev, I. Alvarado-Rodriguez, R. S. Ross, A. E. Schmitz, M. Sokolich, C. A. Watson, M. F. Gyure
+and A. T. Hunter Coherent singlet-triplet oscillations in a silicon-based double quantum dot. Nature,
+481, 344-347 (2012).
+[32] M. D. Shulman, O. E. Dial1, S. P. Harvey, H. Bluhm, V. Umansky, A. Yacoby. Demonstration
+of Entanglement of Electrostatically Coupled Singlet-Triplet Qubits. Science, 336 202-205 (2012).
+[33] J. Medford, J. Beil, J. M. Taylor, S. D. Bartlett, A. C. Doherty, E. I. Rashba, D. P. DiVincenzo,
+H. Lu, A. C. Gossard and C. M. Marcus. Self-consistent measurement and state tomography of an
+exchange-only spin qubit. Nat. Nanotechnol, 8, 654-659 (2013).
+[34] J. Medford, J. Beil, J. M. Taylor, S. D. Bartlett, A. C. Doherty, E. I. Rashba, D. P. DiVincenzo,
+H. Lu, A. C. Gossard and C. M. Marcus. Isotopically enhanced triple-quantum-dot qubit. Sci. Advs.
+1, e1500214-e1500214 (2015).
+[35] J. M. Elzerman, R. Hanson, J. S. Greidanus, L. H. Willems van Beveren, S. De Franceschi, L.
+M. K. Vandersypen, S. Tarucha, and L. P. Kouwenhoven. Few-electron quantum dot circuit with
+integrated charge read out. Phys. Rev. B, 67: 161308 (2003).
+[36] K. D. Petersson, J. R. Petta, H. Lu, A. C. Gossard. Quantum coherence in a one-electron
+semiconductor charge qubit. Phys. Rev. Letts., 105 246804 (2010).
+[37] G. W. Deng, D. Wei, J. R. Johansson, M. L. Zhang, S. X. Li, H. O. Li, G. Cao, M. Xiao, T. Tu,
+G. C. Guo, H. W. Jiang, F. Nori, G. P. Guo, Charge number dependence of the dephasing rates of a
+graphene double quantum dot in a circuit QED architecture. Phys. Rev. Lett. 115, 126804 (2015).
+[38] X. X. Song, Z. Z. Zhang, J. You, D. Liu, H. O. Li, G. Cao, M. Xiao, and G. P. Guo, Temperature
+dependence of Coulomb oscillations in a few-layer two-dimensional WS2quantum dot. Sci. Rep. 5,
+16113 (2015).
+[39] A. P. Higginbotham , T. W. Larsen , J. Yao , H. Yan , C. M. Lieber , C. M. Marcus , and F.
+Kuemmeth , Hole Spin Coherence in a Ge/Si Heterostructure Nanowire,Nano Lett. 14 (6), 3582
+(2014)
+[40] Y. Li, S. X. Li, F. Gao, H. O. Li, G. Xu, K. Wang, D. Liu, G. Cao, M. Xiao, T. Wang, J. J. Zhang,
+G. C. Guo, and G. P. Guo. Coupling a Germanium Hut Wire Hole Quantum Dot to a
+Superconducting Microwave Resonator. Nano Lett. 18, 2091–2097 (2018).
+[41] S. Nadj-Perge, S. M. Frolov, E. P. A. M. Bakkers and L. P. Kouwenhoven. Spin–orbit qubit in
+a semiconductor nanowire. Nature 468, 1084–1087 (2010).
+[42] M. R. Delbecq, V. Schmitt, F. D. Parmentier, N. Roch, J. J. Viennot, G. Fève,; B. Huard, C.
+Mora, A. Cottet, T. Kontos, Coupling a quantum dot, fermionic leads, and a microwave cavity on a
+chip. Phys. Rev. Lett. 107, 256804 (2011).
+[43] R. Wang, R. S. Deacon, D. Car, E. P. A. M. Bakkers, K. Ishibashi, InSb nanowire double
+
+
+                                                 15
+                                            第1章        绪论
+
+
+
+quantum dots coupled to a superconducting microwave cavity. Appl. Phys. Lett. 108, 203502 (2016).
+[44] G. Katsaros, P. Spathis, M. Stoffel, F. Fournel, M. Mongillo, V. Bouchiat, F. Lefloch, A. Rastelli,
+O. G. Schmidt, S. D. Franceschi, Hybrid superconductor–semiconductor devices made from self-
+assembled SiGe nanocrystals on silicon. Nat. Nanotechnol. 5, 458−464 (2010).
+[45] E.B. Foxman, P. L. McEuen, U. Meirav, N.S. Wingreen, Y. Meir, P.A. Belk, N. R. Belk, M. A.
+Kastner and S. J. Wind, Effects of quantum levels on transport through a Coulomb island, Physical
+Review B, 47,10020-10023 (1993).
+[46] L. P. Kouwenhoven, C. M. Marcus, P. L. Mceuen, S. Tarucha, R. M. Westervelt, and N. S.
+Wingreen, Electron transport in quantum dots, Proceedings of the NATO Advanced Study Institute
+on Mesoscopic Electron Transport, 105-214 (1997).
+[47] G. Liang, J. Xiang, N. Kharche, G. Klimeck, C. M. Lieber, and M. Lundstrom, Performance
+Analysis of a Ge/Si Core/Shell Nanowire Field-Effect Transistor. Nano Lett. 7 (3):642–646 (2007).
+[48] S. Roddaro, A. Fuhrer, P. Brusheim, C. Fasth, H. Q. Xu, L. Samuelson, J. Xiang, and C. M.
+Lieber, Spin States of Holes in Ge/Si Nanowire Quantum Dots. Phys. Rev. Lett. 101 (18), 186802,
+2008.
+[49] J. Xiang, A. Vidan, M. Tinkham, R. M. Westervelt, and C. M. Lieber, Ge/Si nanowire
+mesoscopic Josephson junctions. Nature Nanotech. 1(3):208–213 (2006).
+[50] X. J. Hao, H. O. Li, T. Tao,C. Zhou, G. Cao, G. C. Guo,G. P. Guo, W. Y. Fung, Z. Q. Ji, W. Lu,
+Andreev tunneling enhanced by Coulomb oscillations in superconductor-semiconductor hybrid
+Ge/Si nanowire devices, Phys. Rev. B 84, 195448 (2011).
+[51] A. P. Higginbotham, F. Kuemmeth, T. W. Larsen, M. Fitzpatrick, J. Yao, H. Yan, C. M. Lieber,
+C. M. Marcus, Antilocalization of Coulomb Blockade in a Ge/Si Nanowire. Phys. Rev. Lett. 112,
+216806 (2014).
+[52] C. Fasth, A. Fuhrer, L. Samuelson, V. N. Golovach, and D. Loss, Direct Measurement of the
+Spin-Orbit Interaction in a Two-Electron InAs Nanowire Quantum Dot, Phys. Rev. Lett. 98 (26),
+266801 (2007).
+[53] P. C. Sercel, K. J. Vahala, Analytical formalism for determining quantum-wire and quantum-
+dot band structure in the multiband envelope-function approximation. Phys. Rev. B 42, 3690 (1990).
+                                                                    3
+[54] D. Csontos, P. Brusheim, U. Zu.licke, H. Q. Xu, Spin- 2 physics of semiconductor hole
+nanowires: Valence-band mixing and tunable interplay between bulk-material and orbital bound-
+state spin splittings. Phys. Rev. B 79, 155323 (2009).
+[55] M. Brauns, J. Ridderbos, A. Li, P. A. M. E. Bakkers, F. A. Zwanenburg, Electric-field dependent
+g-factor anisotropy in Ge-Si core-shell nanowire quantum dots. Phys. Rev. B: Condens. Matter
+Mater. Phys. 93, 121408 (2016).
+
+
+                                                  16
+                                            第1章        绪论
+
+
+
+[56] Y. Hu, F. Kuemmeth, C. M. Lieber, C. M. Marcus, Hole spin relaxation in Ge–Si core–shell
+nanowire qubits. Nat. Nanotechnol. 7, 47-50 (2012).
+[57] A. P. Higginbotham, T. W. Larsen, J. Yao, H. Yan, C. M. Lieber, C. M. Marcus, F. Kuemmeth,
+Hole spin coherence in a Ge/Si heterostructure nanowire, Nano Lett. 14, 3582-3586, (2014).
+[58] D. J. Eaglesham, and M. Cerullo, Dislocation-free Stranski–Krastanow growth of Ge on
+Si(100). Phys. Rev. Lett. 64, 1943–1946 (1990).
+[59] Y. W. Mo, D. E. Savage, B. S. Swartzenruber, and M. G. Lagally. Kinetic pathway in Stranski–
+Krastanov growth of Ge on Si(001). Phys. Rev. Lett. 65, 1020–1023 (1990).
+[60] O. G. Schmidt, , Ed. Lateral Alignment of Epitaxial QuantumDots, Springer (2007).
+[61] G. Katsaros, J. Tersoff, M. Stoffel, A. Rastelli, P. Acosta-Diaz, G. S. Kar, G. Costantini, O. G.
+Schmidt, K. Kern, Positioning of Strained Islands by Interaction with Surface Nanogrooves. Phys.
+Rev. Lett. 101, 096103 (2008).
+[62] J. J. Zhang, M. Stoffel, A. Rastelli, O. G. Schmidt, V. Jovanović, L. K. Nanver, G. Bauer, SiGe
+growth on patterned Si(001) substrates: Surface evolution and evidence of modified island
+coarsening. Appl. Phys. Lett. 91, 173115 (2007).
+[63] N. Ares, V. N. Golovach, G. Katsaros, M. Stoffel, F. Fournel, L. I. Glazman, O. G. Schmidt, S.
+De Franceschi, Nature of tunable hole g factors in quantum dots. Phys. Rev. Lett. 110, 046602 (2013).
+[64] N. Ares, G. Katsaros, V. N. Golovach, J. J. Zhang, A. Prager, L. I. Glazman, O. G. Schmidt, S.
+De Franceschi, SiGe quantum dots for fast hole spin Rabi oscillations. Appl. Phys. Lett. 103, 263113
+(2013).
+[65] J. J. Zhang, G. Katsaros, F. Montalenti, D. Scopece, R. O. Rezaev, C. Mickel, B. Rellinghaus,
+L. Miglio, S. De Franceschi, A. Rastelli, O. G. Schmidt, Monolithic growth of ultrathin Ge
+nanowires on Si (001). Phys. Rev. Lett. 109, 085502 (2012).
+[66] J. Yoneda, K. Takeda, T. Otsuka, T. Nakajima, M. R. Delbecq, G. Allison, T. Honda, T. Kodera,
+S. Oda, Y. Hoshi, N. Usami, K. M. Itoh, S. Tarucha, A >99.9%-fidelity quantum-dot spin qubit with
+coherence limited by charge noise. arXiv:1708.01454 (2017).
+[67] K. Takeda, J. Kamioka T. Otsuka, J. Yoneda, T. Nakajima, M. R. Delbecq, S. Amaha, G. Allison,
+T. Kodera, S. Oda, S. Tarucha, A fault-tolerant addressable spin qubit in a natural silicon quantum
+dot. Sci. Adv., 2, e1600694 (2016).
+[68] M. F. Churbanov, V. A. Gavva, A. D. Bulanov, N. V. Abrosimov, E. A. Kozyrev, I. A.
+Andryushchenko, V. A. Lipskii, S.A. Adamchik, O. Y. Troshin, A. Y. Lashkov, A. V. Gusev, Cryst.
+Res. Technol. 52, 1700026. 500 (2017).
+[69] S. A. Adamchik, A. D. Bulanov, P. G. Sennikov, M. F. Churbanov, A. Y. Sozin, O. Y. Chernova,
+I. A. Kosheleva, O. Y. Troshin, Ultrapurification of 76Ge-enriched GeH4 by distillation. Inorg. Mater.
+
+
+                                                  17
+                                            第1章       绪论
+
+
+
+47 (7), 694−696 (2011).
+[70] M. R. Delbecq, Coupling quantum dot circuits to microwave cavities. PhD thesis. 2012.
+[71] A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.- S. Huang, J. Majer, S. Kumar, S. M. Girvin
+and R. J. Schoelkopf. Strong coupling of a single photon to a superconducting qubit using circuit
+quantum electrodynamics. Nature 431, 162–167 (2004).
+[72] T. Frey, P. J. Leek, M. Beck, J. Faist, A.Wallraff, K. Ensslin, T. Ihn, M. Büttiker, Quantum dot
+admittance probed at microwave frequencies with an on-chip resonator. Phys. Rev. B 86, 115303
+(2012).
+[73] X. Mi, J. V. Cady, D. M. Zajac, P. W. Deelman, J. R. Petta, Strong coupling of a single electron
+in silicon to a microwave photon. Science 355,156-158 (2017).
+[74] K. D. Petersson, L. W. McFaul, M. D. Schroer, M. Jung, J. M. Taylor, A. A. Houck, Petta, J. R.
+Circuit quantum electrodynamics with a spin qubit. Nature 490, 380-383 (2012).
+[75] X. Mi, J. V. Cady, D. M. Zajac, P. W. Deelman, J. R. Petta, Strong coupling of a single electron
+in silicon to a microwave photon. Science 355,156-158 (2017).
+[76] A. Stockklauser, P. Scarlino, J. V. Koski, S. Gasparinetti, C. K. Andersen,; C. Reichl, W.
+Wegscheider, T. Ihn, K. Ensslin, A. Wallraff. Strong Coupling Cavity QED with Gate-Defined
+Double Quantum Dots Enabled by a High Impedance Resonator. Phys. Rev. X 7, 011030 (2017).
+[77] L.E. Bruhat, T. Cubaynes, J.J. Viennot, M. C. Dartiailh, M.M. Desjardins, A. Cottet, T. Kontos.
+Strong coupling between an electron in a quantum dot circuit and a photon in a cavity. arXiv:
+1612.05214 (2016).
+[78] Mi, X. M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A coherent spin-
+photon interface in silicon. Nature, 555, 599–603 (2018).
+[79] N. Samkharadze, G. Zheng, N. Kalhor, D. Brousse, A. Sammak, U. C. Mendes, A. Blais, G.
+Scappucci, L. M. K. Vandersypen, Strong spin-photon coupling in silicon. Science, 359, 1123-1127
+(2018).
+[80] A. J. Landig, J. V. Koski, P. Scarlino, U. C. Mendes, A. Blais, C. Reichl, W. Wegscheider, A.
+Wallraff, K. Ensslin and T. Ihn, arXiv:1711 01932 (2017).
+
+
+
+
+                                                 18
+                    第二章 样品加工和制备
+
+
+
+                 第二章 样品加工和制备
+  本章将介绍论文中涉及到的样品的微纳米级芯片加工和制备所用到的仪器
+设备、工艺流程和技术要点。目前，半导体工业界已发展出成熟且高效率的芯片
+的微纳米级加工设备和技术，被广泛的应用到手机、电脑、航天、汽车、精密仪
+器等电子产品的生产和制造中，极大了提升了芯片的精度、集成度以及生产成本
+和效率。
+  实验室中的半导体芯片的微纳米级加工和制备旨在于在新材料上探索研发
+相应的工艺技术。所用到的新材料包括硅、砷化镓、石墨烯、铟砷纳米线、碳纳
+米管、铟锑纳米线等，所涉及到的微纳米加工技术包括：紫外光刻、电子束光刻、
+等离子体刻蚀、湿法刻蚀、电子束蒸发镀膜、热蒸发镀膜、原子层沉积和稀释制
+冷等。实验室中，这些材料的研究需要对于单个微米甚至纳米级的材料进行精确
+定位和加工。实验人员依托于为实验定制的小型化、专业化的仪器以及不同材料
+的特点研发出特殊工艺。而物理、电子、低温、化学、材料、机械和生物等交叉
+技术的应用，使得研究者将研究范畴扩展到新型材料的合成、结构、光学、电学
+甚至量子力学范围内的特性。
+
+2.1 光刻
+   光学光刻技术（Photo-lithography）就是在基片表面均匀涂抹烘烤一层光致抗
+蚀剂（即光刻胶）。利用光刻胶的感光性，使用一定波长的光对光刻胶进行曝光，
+不可溶性光致抗蚀剂变成可溶性，再基于光刻胶的耐腐蚀性，利用显影液溶解曝
+光区域的光刻胶，这种光刻胶叫做正型光致抗蚀剂或者正胶；或者可溶性光致抗
+蚀剂变成不可溶性，利用显影液溶解未曝光区域的光刻胶，这种光刻胶叫做负型
+光致抗蚀剂或者反胶。从而，光刻掩膜版上的微细图案得以复印到基片，形成光
+刻胶掩膜。
+  光学光刻技术是半导体工艺中最为关键的技术之一。衡量光刻技术的一个重
+             1
+要参数是分辨率 R=2𝐿(mm−1)，及每毫米能分辨出的线对数（可清晰分辨的线条
+
+                                  1
+和间隔）。理论上，光刻技术的极限分辨率为𝑅max ≤ 𝜆，𝜆为采用光的波长。通常，
+
+光刻技术常用到的光源为波长在 310-450 nm 的紫外光，基于光刻技术的最高分
+辨率和波长成反比的关系，所用光源也由光逐步发展为准分子激光光源。令人欣
+   ASML 公司已经生产出波长为 154 nm 的极紫外(extra ultra violet，EUV)，
+慰的是，
+实现了光刻技术的质的飞越，将极大推动光刻技术的精度和效率。由于实验中所
+用到的新型半导体材料位置需要单独精确定位，无法定制高成本的光刻掩膜版，
+所以在我们实验室采用小型化光刻仪器设备进行微米级别的光学曝光，包括
+
+                          18
+                      第二章 样品加工和制备
+
+
+SUSS 公司的 MJB3 型接触式光刻机，中国电子集团公司 45 所的 BG-401A 型接
+近式光刻机，尼康公司的 NSR i9 型步进式光刻机，Advantool 公司的 ATD 1500
+型激光直写。后续纳米级别的精确加工采用电子束曝光套刻和曝光技术，可以根
+据材料的位置形状定制出曝光图案，将在后文中详细阐述。紫外光刻技术和电子
+束曝光技术相结合可以在达到曝光精度的前提下节约曝光成本提升曝光的效率。
+
+
+
+
+图 2.1 （a）SUSS 公司的接触式光刻机 MJB3。
+                            （b）中国电子集团公司 45 所的接近式光刻
+机 BG-401A。
+         （c）尼康公司的步进式光刻机 NSR i9。
+                              （d）Advantool 公司的 ATD 1500 激光
+直写。
+   MJB-3 型接触式光刻机主要由对准工作台、显微镜观察和控制系统、扫描系
+统、超高压直流汞灯电源、紫外曝光光源和电气控制系统等组件构成。光刻机所
+用光源为波长为 365 nm 的高压汞灯。理论的曝光精度是 0.5 μm，但是实际使用
+中的曝光精度为 2-3 μm，并且我们定制的光刻掩膜版通常为 5 μm，也限制了曝
+光的精度（光刻板定制厂商也可以定制 1 μm的光刻板）。汞灯发出的紫外光依次
+经过椭球反射镜、冷光镜、负透镜、柱型蝇眼镜、场镜、全反射镜、聚光镜达到
+掩膜版。系统的光路设计保证了紫外光能够均匀的照射在样品表面的光刻胶上，
+保证各项同性。对准工作台可在三个维度进行调节，并可旋转载物台的角度，用
+于调整和套刻操作。显微镜拥有 10x 的目镜和 10 x、20 x、50 x 和 100 x 的物镜。
+并且扫描系统可外接 CCD 显示，用于教学演示。电路控制系统用于对整台仪器
+的曝光参数。气路控制系统利用压缩空气调节和对准工作台，以及利用氮气冷却
+高压汞灯。
+
+                            19
+                 第二章 样品加工和制备
+
+
+
+  所用的光学胶型号为 AZ5214E，可用作正型胶或者反型胶。光刻胶用滴管涂
+抹在基片表面后，用匀胶机以 4000 rmp（转/分钟）高速旋转匀胶，，得到约 1.4 μm
+厚的光刻胶。然后放置在烤胶台以 95℃烘烤 90-100 s,使得光刻胶中的液体得以
+蒸发。曝光时，正胶需要的曝光时间为 10-12 s。反胶曝光的工艺相对复杂，先在
+掩膜版下曝光 6s，再在 95℃烘烤 2 min，最后移除掩膜版曝光 60 s。曝光结束后，
+使用体积比例为 1:6 的 AZ400K 显影液和去离子水混合稀释液进行显影，正胶的
+显影时间为 90 s，然后在去离子水中定影；反胶的显影时间为 60 s。需要注意的
+是，光刻的图案设计、光源强度、基片与光刻板的距离等外界条件都会对曝光效
+果。
+
+
+
+
+图 2.2（a）光刻工艺流程。
+              （b）正型胶工艺与反型胶工艺的曝光效果。图片来源于河北工业
+大学微电子研究所课件。
+  MJB-3 型光刻机是接触式光刻机，光刻掩膜版和胶表面直接接触，一定程度
+上会损伤光刻板也会影响曝光效果。BG-401A 型为接近式紫外光刻机，掩膜版和
+胶表面有 0-50 μm的微分离间隙。可有效减小对光刻胶和光刻板的损伤。以及光
+刻板对曝光图案带来的损伤。除此之外，其他光刻曝光原理和工艺流程和 MJB-
+3 型光刻机基本一致。
+
+                      20
+                    第二章 样品加工和制备
+
+
+
+  尼康 NSR i9 型投影式光刻机，因为其加工精度优良、自动化操作以及高效
+率等特点曾广泛应用于半导体工业界。超高压汞灯发出的 i 线（365 nm 波长）紫
+外光照明到光刻板之上，再通过缩小投影镜头 180°回转后，把光刻掩膜版的图案
+缩小五倍投影在基片上，光刻板和基片不直接接触，增加了光刻掩膜版的使用寿
+命。相比于以上介绍的接触式或者接近式 1:1 放大的光刻模式，NSR i9 可以对光
+刻掩膜版的细节图案进行更为精确细致的设计。并且 NSR i9 引入激光步进式校
+准模式 LSA、激光干涉校准模式 LIA、场图像校准模式 FIA 等有效的保证了曝
+光套刻的精确度。NSR i9 可设计曝光程序，仪器利用机械手臂和传递系统重复
+曝光多个基片，提升了光刻的效率。
+  ATD1500 是基于数字微镜装置（Digital Micro-mirror Device，DMD）的无掩
+模直写式光刻机。首先利用电脑设计和生成数字掩模图形并输出到数字微镜，光
+源发出的光线照射到数字微镜后会被反射进入光学投影系统，投影到基片和掩模
+板表面相对应的成像位置进行曝光成像。无掩膜激光直写不需要光刻掩膜版，节
+约了曝光成本。并且可以曝光大面积图案，通常也可用于光刻板图案的曝光。其
+基本流程包括：
+（a）数据准备，将 IC 版图文件，如 GDSⅡ文件，转换成适合 ATD 系列设备曝
+光的数据文件，输出为曝光数据文件。；
+（b）制作程式(或称 recipe)，设置能量、离焦量、功率等工艺参数，曝光位置，
+晶圆/掩模板和掩模板尺寸等一些曝光参数，输出为程式；
+（c）曝光，将 GDSⅡ分图数据（或者使用实时分图模式直接调用 GDSⅡ）、程
+式放在产品曝光信息中，进行曝光操作等，输出为曝光结果。
+
+
+
+
+图 2.3 （a）接触式光刻机。（b）接近式光刻机。（c）步进可重复式光刻机。
+                                      （d）无掩膜激
+光直写。图片来源于河北工业大学微电子研究所课件。
+
+
+
+
+                          21
+                         第二章 样品加工和制备
+
+
+
+2.2 扫描电子显微镜和电子束曝光
+   在制备纳米尺度的样品时，紫外光刻技术的曝光精度已经满足不了使用需求。
+并且光刻掩膜版的制作成本较大，不适合实验室级别的研发使用。取而代之的是
+电子束曝光刻蚀，即利用电子束取代紫外、极紫外等源，电子束胶取代光刻胶。
+扫描电子显微镜发出的电子束打到样品上，散射出的二次电子经过探测器扫描。
+根据散射电子的能量不同，会呈现出不同灰度的图像，就可以得到样品表面形貌
+和结构等信息。电子束曝光刻蚀曝光的区域会被显影液腐蚀，没有被电子束曝光
+的区域用于掩膜图案。目前曝光精度可以达到 10 nm 精度，复杂结构需要考虑到
+电子束的邻近效应的影响能达到 20 nm。相比于光刻技术，电子束曝光精度很高，
+但是曝光的曝光时间较长，效率较低。扫描电子显微镜用于材料表面结构的观察、
+精准定位、形貌表征和纳米尺度电极的研究。我们实验室拥有两套集成了扫描电
+子显微镜功 能和电子 束曝光刻蚀 功能的仪 器，分别是 FEI 公 司的 Inspect
+F50+NPGS 以及 Raith 公司的 E-line+E-line plus。
+   电子束曝光胶有很多不同的种类，也有正型胶和反型胶两种类型。我们所用
+的电子束曝光胶是聚甲基丙烯酸甲 PMMA（polymethyl methacrylate），型号主要
+有 950K A2，950K A4，950K A6。感光分子的分子是苯甲醚（anisole，CH3OC6H5）
+溶剂是氯苯（chlorobenzene，C6H5Cl）中的浓度，分别为 2 %，4 %和 6 %。在基
+片表面涂抹电子束曝光胶，在匀胶机上以 4000 转/分钟甩胶均匀后并在烤胶台以
+180°烘烤后，单层 950K A2，950K A4，950K A6 的厚度分别为 50 nm，200 nm
+和 320 nm。我们常用的两层 PMMA 胶，所用到匀胶和烤胶也需要两次。第一次
+烤胶 5 min，第二次烤胶 10 min。下层的 PMMA 胶因为电子束的二次反射作用
+会比上层 PMMA 胶更加敏感，曝光显影后会形成下方较大、上方较小的窗口，
+这样后续的金属剥离工艺也会更加顺利。
+   需要注意的是，因为高电压电子发生枪会产生大量的电子持续轰击样品表面，
+所以样品本身必须导电，这样电子能通过导电的碳胶带传输到样品固定底座上，
+从而样品的表面不会积累大量的电子。如果是金刚石或者碳化硅这类不导电的材
+料，样品的表面需要涂抹一层导电胶或者使用电子束镀膜机蒸镀一层约 5 nm 的
+金。
+   电子束曝光刻蚀是一项高精度的工艺，其对图案设计、电子束能量、光圈大
+小、束斑大小和工作距离等关键参数以及中温度、湿度、震动等外界环境因素都
+有严格的要求。其基本操作流程为：
+（a）打开真空腔体，将样品放入，并抽真空值 5*10−3 Pa 以下。打开电子束开
+关，SEM 功能 30 keV，光阑为 10 μm。移至法拉第杯位置调节像散，放大后多
+次微调以达到最清晰的状态。并测定电流，多次测定电流，以保证电流的稳定性。
+                                22
+                      第二章 样品加工和制备
+
+
+
+（b）选择样品边缘一个物体进行聚焦。我们会选取基片的两个对角测定焦距，
+然后取两个焦距的平均值作为基片中心的焦距。
+（c）调节放大倍数，选择合适的材料。调节焦距、亮度、对比度等对材料进行
+电子束拍照。拍照区域内需包含事先制作好的电极用于材料的定位。
+（d）根据扫描电子显微镜拍照得到的材料的位置和形状等表面信息用 Design
+CAD 图形的绘制电极图案。并利用 NPGS（Nanometer Pattern Generation System）
+设置曝光运行程序 runfile 的参数。NPGS 用于控制曝光的方式、图形位置校准、
+曝光文件选择和曝光剂量设定等。
+（e）取出样品进行匀胶、烤胶。一般我们在放入腔体之前会在电子束曝光胶上
+点上一滴用异丙醇稀释的镍粉或者金粉用于聚焦。再次放入腔体中。
+（f）电子束曝光功能则选择电子束能量为 10 keV，光阑为 30 μm。如果图案过
+大则需要调整电子束能量和光阑大小。再次测定电流并调整束班、焦距、像散等
+参数以获得仪器的最佳曝光状态。
+（g）依次选择用于校准的定位大电极和定位小电极，使得材料的设计曝光图案
+和材料的实际位置完全匹配。切换至 NPGS 模式，设定曝光剂量、曝光区域等参
+数，然后模拟曝光程序，执行曝光程序。
+
+
+
+
+图 2.3 Inspect F50+NPGS 的构成。(1)高电压电子发射源；(2)光阑；(3)NPGS 控制系统；
+(4)CCD 探头；(5)样品台方向调节旋钮；(6)SEM 控制电脑；(7)NPGS 控制电脑。
+
+
+
+
+                            23
+                               第二章 样品加工和制备
+
+
+
+   E-line 与 Inspect F50 功能相似，E-line plus 与 NPGS 功能相似。E-line 可实
+现 SEM 和 EBL 功能，在功能和结构的设计上更加注重细节。E-line 有多处改
+进的功能，提升了曝光的精度和效率。
+   第一、相比于 Inspect F50 的单腔体结构，E-line 采用三腔体结构，包含灯丝
+腔、样品腔和换样腔。需要放入或者取出样品时，这样的设计使得换样腔起到了
+样品腔和外界大气环境的一个过渡的功能，这样的实际保证了不破坏样品腔真空，
+也节省了抽真空的时间。
+   第二、E-line 采用三套坐标系统，可以完成大范围高精度的定位，包括一套
+绝对坐标系 stage（X,Y），以及 Global （U,V）和 local（U,V）两套相对坐标系。
+在 Global （U,V）用作整体定位的基础上，local（U,V）用作局部精确定位。三
+套坐标系相互配合可以实现精确、高效和多任务的定位功能。
+   第三、E-line 有手动校准功能和自动识别校准功能。在材料与基片分辨率相
+差微弱的情况下，自动识别定位功能可以有效的保证了定位的准确性，也进一步
+保证了曝光和套刻的精度。
+   第四、E-line 有三种成像模式。Inlens 模式用于 20 KV 以下 ETH 电压成像；
+SE2 模式用于 20 KV 以上 ETH 电压成像；TV 模式用于 CCD 成像，监控样品腔
+内部状态。
+   第五、E-line 采用两种模式进行不同尺度下的控制移动。第一种编码（coder）
+模式，采用步进式马达控制，主要用于微米级及以上尺度的移动。第二种激光
+（laser）模式，用激光干涉定位样品台位置，采用压电马达控制，可实现 1-2 nm
+尺度的精确移动。
+   第六、E-line 增加了邻近效应校准功能。在后文中会详细阐述电子束领近相
+应的产生和修正。
+   第七、E-line 可采用面曝光、线曝光和点曝光三种模式，每种模式都可以选
+择剂量（dose）和步长（step）。然后系统会计算曝光的停留时间。不同曝光模式
+下停留时间 t（dwell time）的计算公式为：
+                 dose∗(stepsize)2
+面（Area）曝光：t =                        100 μC/(cm)2
+                           I
+
+                 dose∗stepsize
+线（Line）曝光：t =                        100 pC/cm
+                       I
+
+                dose
+点（Dot）曝光： t =                            0.1 pC
+                  I
+
+
+
+
+                                    24
+                       第二章 样品加工和制备
+
+
+
+
+图 2.4（a）E-line+E-line plus 模块，包括样品腔、灯丝腔、隔离阀、换样室、换
+样杆、样品台控制等组件。
+E-line 使用流程如下：
+1. 装载样品（Load sample）
+a) 确认样品腔内没有其他样品，激光样品台的位置在 Z=1 mm；
+b) 将样品固定在专用样品托盘，打开换样腔，将托盘放在换样杆上并关闭换样
+     腔；
+c) 对换样腔抽真空，打开隔离阀，用换样杆将样品送入样品腔。样品腔抽真空；
+d) 样品台升至 Z=18 mm。
+e) 并拔出换样杆至原始位置，关闭隔离阀。此时，装载样品完成；
+2. 电子束参数调节
+a) 在 stage（X,Y）坐标系下，将样品托盘升至工作距离（Working distance）Z=25.8
+     mm；
+b) 在控制系统设置加速电场（EHT）、光圈（aperture）、监视器模式；
+c) 在 E-line plus 中打开或者重新绘制曝光图案，并根据曝光图案选择写场大小
+     （writefield）；
+d) 将电子束束流中心移至 Faraday 杯位置，测量目前模式下的电流。需多次测
+     量，确认电流处于稳定状态；
+e) 移动电子束束斑中心至样品边缘的镍粉或者脏点处，放大并调节束斑的焦距；
+f)   调节光圈的准直度（aperture alingment）。选取一个接近圆形的镍粉或者脏点，
+     放在合适放大倍数下。勾选 focus wobble 选项，上下和左右两个方向上调节，
+     使得图像向四周均匀扩散，勾掉 focus wobble 选项；
+g) 调节像散。进一步放大镍粉细节图像，选择 stigmation 选项，上下和左右两
+     个方向调节，直至图像在最清晰的状态。移至没有镍粉区域，选择烧点选项
+
+                           25
+                    第二章 样品加工和制备
+
+
+
+  （自动或手动模式）。如果像散已经调节到最佳状态，则烧出来的点为正圆，
+  如不是正圆，则需重复像散调节步骤；
+3. 设置坐标系
+a) global（U,V）坐标系建立。一般一块基片上包含多个样品，选取靠近基片顶
+  角的三个预先制备的大的校准标记，建立 global（U,V）坐标系，用于快速移
+  动至每块样品目标位置，减少移动过程中电子束的曝光对图案的破坏；
+b) 移动电子束束斑到单块样品的预先制备的三个小校准标记处，建立 local（U,V）
+  坐标系，用于图案校准、拍照和套刻；
+4. 图层设计和校准
+a) E-line plus 中可新建绘制 csf 格式的曝光图案文件，也可用 L-edit 软件绘制后
+  转换成 csf 格式；
+b) 设置校准标记。校准标记至少包含不在一条线上的三个图案，才能做 U 和 V
+  两个方向的校准。为了更精确的校准，一般将校准标记绘制成十字形状；
+c) 设置手动校准层。E-line 默认 63 层为手动校准层，需要绘制包含校准标记的
+  矩形图案。手动校准时，系统会扫描 63 层区域，然后手动选择四个校准标记
+  图案的中心完成校准；
+d) 设置自动校准层。E-line 默认 61 层为自动校准层，需要设置 U 和 V 两个方
+  向的扫描线参数。自动校准时，系统会分别扫描这两条扫描线，提取对比度，
+  自动计算两条线的中心位置，从而完成自动校准；
+5. 任务列表设置
+a) 新建校准任务列表（position list），用于校准写场；
+b) 新建曝光任务列表，用于曝光任务用于曝光设计图案。执行时，需设置曝光
+  参数；
+6. 材料定位拍照
+a) 校准后，移至目标材料位置（纳米线材料通常覆盖整个基片表面），然后设置
+  拍照参数进行拍照，包括像素、扫描次数和拍照区域等。通常拍照区域内也
+  同时包含用于校准材料位置的定位标记，用于后续校准材料的位置进行定位
+  拍照和套刻曝光等操作；
+b) 拍照得到的照片包含位置信息，将照片导入到 gds 设计图层中，照片中的定
+  位标记会和 gds 图层对应，但是会出现纳米级别的偏差，需要微调位置信息
+  并保存；
+7. 卸载样品（Unload sample），操作和装载样品相反；
+8. 根据材料的位置形貌等信息，绘制源漏电极和顶栅极的图案；
+9. 匀胶、烤胶和点镍粉,重新装载样品；
+
+                         26
+                  第二章 样品加工和制备
+
+
+
+10. 校准和曝光。
+a) 重新校准；
+b) 将曝光图案放入曝光列表中，修改曝光文件的性质参数，包括层、工作区域、
+  中心位置、曝光剂量等，计算曝光时间；
+c) 执行曝光；
+11. 卸载样品。
+
+2.3 电子束曝光的邻近效应
+  当电极的尺度或者电极之间的间距过小时，电子束曝光的邻近效应会影响到曝
+光的精度，成为不得不考虑的重要因素。电子束曝光的邻近效应与光刻邻近效应
+类似。ASML 子公司 Brion 科技是光学领近效应修正领域的领导者。E-line 加入
+了电子束曝光的邻近效应校准模块。中国科学技术大学微纳研究和制造中心的型
+号 JEOL 6300fs 的 EBL 加入 BEAMER 模块进行修正邻近效应。其基本原理都是
+极小束斑入射的电子束轰击到电子束胶和基片上时，会产生前反射电子和背反射
+的二次反射电子。相对于入射电子束的孔径，二次反射的电子有很大的影响面积，
+覆盖了周围区域。对于原本的未设计曝光的区域，由于周围曝光区域内每个点的
+二次反射电子影响的积累，电子束胶也发生了曝光反应，从而产生邻近效应。
+
+
+
+
+                       27
+                  第二章 样品加工和制备
+
+
+
+图 2.5 电子束曝光领近效应产生。（a）入射的电子束产生前反射电子和背反射电子。（b-c）
+10 kV（c）和 20 kV 的 ETH 电压下二次反射电子在电子束和基片中的电子背反射情况。图
+片来自于中国科学技术大学微纳研究和制造中心的培训资料。
+  如图 2.6（a）可以看出，如果曝光图案设置单一曝光剂量，由于前反射和被
+反射的综合作用，实际图案的曝光剂量并不是在设计的曝光图案上均匀分布，并
+且曝光图案之外也会受到二次反射电子的影响。领近效应的修正是基于不同的基
+片层以及不同种类、厚度的电子束胶的实验参数对曝光图案的进行电子曝光模拟，
+然后根据模拟结果多次修正设计曝光区域每个点的剂量，从而减弱甚至抵消电子
+束曝光领近相应，在电子束胶上获得设计曝光图案。
+
+
+
+
+图 2.6 （a）曝光图案以相同的曝光剂量进行曝光产生领近效应，纳米级图案出现变形。
+                                         （b）
+进行领近效应修正后，曝光图案的修正剂量。
+
+2.4 湿法刻蚀和等离子体刻蚀
+  刻蚀是半导体工艺中另一个至关重要并且被广泛应用的技术。通过刻蚀的方
+法腐蚀掉光刻胶或者电子束胶没有覆盖的基片表面，实现胶上的光刻图案向基片
+表面转移，以实现选择性注入、扩散、栅极、金属布线和表面钝化等后续工艺。
+通常，刻蚀分为湿法刻蚀和干法刻蚀。
+                       28
+                        第二章 样品加工和制备
+
+
+
+   湿法刻蚀即利用液态化学试剂或者溶液刻蚀基片表面材料。例如用稀释的氢
+氟酸（Buffered Hydrofluoric acid，BHF）刻蚀 SiO2 或者硅晶圆表面进行化学清
+洗。反应原理为 SiO2 + 4HF = SiF4 + 2H2O，产物为气态的 SiF4 和水。我们实验
+中用到的 BHF 是 20%的稀释溶液，刻蚀二氧化硅的速率 1 nm/s，BHF 对于光刻
+胶或者电子束胶掩膜几乎没有刻蚀作用。但是，化学刻蚀具有各向同性的刻蚀特
+性，在纵向腐蚀的同时也会沿着侧壁横向腐蚀材料，其刻蚀的精度对于纳米尺度
+的器件是难以接受的。
+   最常见的干法刻蚀为等离子体刻蚀，即利用低压放电产生的等离子体中的离
+子或游离基(处于激发态的分子、原子及各种原子基团等)与材料发生化学反应或
+通过轰击等物理作用而实现刻蚀。等离子体刻蚀可以认为是各向异性刻蚀，即沿
+着晶圆深度纵向的刻蚀远强于晶圆横向的刻蚀。半导体工业界刻蚀领域有两大主
+要的设备研发生产商 Applied Materials 和 Lam Research。Oxford Instruments 研发
+了多种实验用途的刻蚀设备，被广泛应用于国内外优秀实验室。另外，国内厂商
+中微半导体设备公司在刻蚀领域凭借人才储备和研发投入在近年来取得令人瞩
+目的成就。
+
+
+
+
+图 2.7（a）反应离子刻蚀机 RIE。（b）电感耦合刻蚀机 ICP。
+   等离子体刻蚀分为反应离子刻蚀（Reactive Ion Etch，RIE）和电感耦合刻蚀
+（Inductive Coupled Plasma，ICP）。RIE 仪器中只有单一的射频源。射频加在阴
+极上，产生负偏压，硅片晶圆也放在阴极。在该电场作用下，电离的正离子对硅
+片进行各向异性的物理性轰击，同时游离到硅片的一些活性离子也发生各向同性
+的化学反应刻蚀，由于物理轰击远强于化学反应，所以整体表现是各向异性刻蚀。
+
+                               29
+                        第二章 样品加工和制备
+
+
+
+   更大的 RIE 的刻蚀速率需要加大射频功率，但是这样会导致的刻蚀选择性
+不好控制，并且更大的射频功率对于光刻胶和基片表面的损伤也很大。为了解决
+这个问题，人们研发了 ICP。ICP 拥有两个射频源，一个环形的射频源加到电感
+或者线圈上用于产生交变电磁场。当交变电压高于一定值，腔体内的气体通过辉
+光放电产生等离子态电子在交变的磁场作用下做螺旋运动，能够电离出更多的离
+子，也加快了刻蚀的速率，并且不会对胶和基片造成损伤。另一个射频源与 RIE
+相似，用于产生偏置电压。相对于 RIE，ICP 控制精度高，选择比好，刻蚀均匀
+性好，刻蚀的垂直度和光洁度较高。
+
+
+
+
+图 2.8 电感耦合刻蚀机结构示意图。
+                  （b）刻蚀反应过程。图片来源于 Oxford 公司培训材料。
+
+2.5 镀膜
+   金属镀膜技术主要有电子束蒸发镀膜（Ebeam Evaporation）、热蒸发镀膜
+（Thermal Evaporation）以及磁控溅射镀膜（Magnetron Spurtting Evaporation）。
+每个镀膜机可以蒸镀多种金属材料，如钛（Ti）、金（Au）、铬（Ge）、铍金（AuBe）、
+铝（Al）。电子束经过电磁场加速后高速轰击金属靶材，将靶材气化或者升华，
+以较好的准直性附着到样品表面。热蒸发镀膜是通过电阻丝（钨丝）的电流加热
+将靶材金属先融化再气化，然后弥散在腔体空间，附着在样品表面。相比于电子
+束蒸发镀膜，热蒸发镀膜的准直性不好。我们的实验中热蒸发镀膜用于蒸镀超导
+微波谐振腔金属。磁控溅射是指电子在电磁场的作用下与氩原子发生高速碰撞，
+电离出氩离子和新的电子。新的电子飞向基片，氩离子在电场作用下加速飞向阴
+极靶，并以高能量轰击靶表面，使靶材发生溅射，溅射的靶材金属在样品表面沉
+积完成镀膜。
+
+                              30
+                第二章 样品加工和制备
+
+
+
+
+图 2.9 （a-b）电子束蒸发镀膜机。（c）热蒸发镀膜机。（d）磁控溅射镀膜机。
+
+
+
+
+图 2.10 （a）热型原子层沉积机。
+                  （c-d）热型和等离子体型双功能的原子层沉积机。
+
+
+                     31
+                  第二章 样品加工和制备
+
+
+
+2.6 原子层沉积
+ 原子层沉积生长（Atomic Layer Deposition，ALD）用于制备沉积绝缘性的三氧化
+二铝、氧化铪和二氧化硅等金属。能够进行单原子厚度生长绝缘层材料，精确控制
+厚度，并有很好的稳定性能。主要分为热生长 ALD 和等离子体 ALD。
+
+2.7 其他设备
+
+
+
+
+图 2.11 （a）原子力显微镜。
+                （b）光学显微镜。
+                        （c）键合机。
+                              （d）等离子体清洗机。
+（e）退火炉。（f）探针台。
+                       32
+                    第二章 样品加工和制备
+
+
+
+2.8 低温测量平台
+  本文中的实验室基于量子力学的基本原理，需要在极低温的环境下进行。实验
+中所用的低温系统包括传统的插杆式（Top-loading）稀释制冷机、He3 稀释制冷
+机、He3/He4 混合器稀释制冷机。插杆式稀释制冷机的最低温度是 10 mK，并配
+置最高 16 T 的磁体。He3 稀释制冷机的最低温度是 240 mK，并配置最高 8T 的磁
+体 He3/He4 混合器稀释制冷机的最低温度是 10 mK。
+
+
+
+
+图 2.12 （a-b）传统 He3 稀释制冷机。（c）带自冷凝杜瓦 He3 稀释制冷机（d）插杆式稀释
+制冷机。（e）He3/He4 混合器稀释制冷机。
+
+2.9 本章小结
+   第二章介绍了样品微纳米加工以及低温测量用到的设备和技术。样品的微纳
+米加工包括了光刻、扫描电子显微镜和电子束曝光、刻蚀、电子束镀膜、热蒸发
+镀膜、原子层生长以及其他设备。光刻部分我们介绍了光刻的原理以及接触式光
+刻机、接近式光刻机、投影式光刻机和无掩膜直写式光刻机四种光刻机；扫描电
+子显微镜和电子束曝光部分介绍了电子束用于拍照和曝光的原理，FEI Inspect
+F50 和 E-line 两种仪器，以及电子束邻近效应的产生和修正；刻蚀部分我们介绍
+了湿法刻蚀、反应离子刻蚀和电感耦合刻蚀三种刻蚀技术。低温设备包括传统的
+插杆式稀释制冷机、He3 稀释制冷机、He3/He4 混合器稀释制冷机。
+
+                           33
+                 第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+
+      第三章 锗硅自组织纳米线空穴型单量子点
+   锗硅自组织纳米线拥有较强的自旋轨道耦合强度和较长的自旋退相干时间，是
+制备自旋量子比特潜质材料体系。相关的理论和实验工作证实锗材料中的空穴载
+流子拥有相对较强的自旋-轨道耦合强度（Spin-Orbit coupling strength），自旋轨道
+耦合强度保证了自旋量子比特的操控速度[1,2]。与锗硅自组织纳米线相近的锗硅
+核壳型纳米线拥有高达 1 meV 的自旋-轨道耦合强度[3]。锗硅核壳型纳米线由于
+横截面是圆形对称结构，这样的结构导致了空穴是由轻空穴（Light Hole，LH）
+和重空穴（Heavy Hole，HH）的混杂。因此，锗硅核壳型纳米线中的超精细相互
+作用[4, 5]不是非伊辛型，减弱了自旋退相干时间。尽管如此，锗硅核壳型纳米线
+的自旋弛豫时间仍然达到 600 μs[6],自旋退相干时间达到 200 ns[7]。横截面是三
+角形的锗硅自组织纳米线有更大的重空穴和轻空穴能级分离，Katsaros 等人证实
+低能态的锗硅自组织纳米线几乎是纯重空穴，也因此锗硅自组织纳米线被预测有
+更长的自旋退相干时间，自旋推相干时间保证了自旋量子比特的操控时间。[8-10]
+目前研究者已经对包括 GaAs[11,12]、InAs[13]、InSb[14]、碳纳米管[15,16]、Si[17-
+20]及 Si/Ge[21]等不同材料的自旋相干时间以及自旋轨耦合强度[22-26]进行了测量
+研究。
+
+3.1 单量子点的结构
+   单量子点由源电极、漏电极和单个栅极电极束缚形成，绝缘电介质层将源漏
+电极和栅极隔绝。其中，源漏电极采用钯电极，厚度为 30 nm；缘层为三氧化二
+铝，厚度为 16.5-33 nm；栅极采用钛/钯，厚度为 3/25 nm，其中钛作为粘附层。
+量子点和两端接触电极通过隧穿势垒连接，量子点与栅极电极由于绝缘层的存在
+以电容方式连接。
+   源漏电极上施加一个偏置电压 VSD，用于调节源漏电极费米面的相对高度，
+栅极上施加电压 VG 用于调节量子点的能级。由于势垒的存在，量子点与接触电
+极上的电荷库并不是直接相通，带电荷的载流子必须隧穿过势垒完成量子点和接
+触电极上的电荷库进行电荷交流。隧穿的带电荷的载流子经过前置放大器可以通
+过连接在接触电极上的万用表检测。另外，实验中在垂直于基片的方向施加磁场
+用于产生塞曼劈裂（Zeeman Splitting）。
+
+
+
+
+                            34
+            第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+
+图 3.1（a）锗硅自组织纳米线的基片以及量子点的电极三维示意图。
+                                （b）自组织纳米线和源
+             （c）基片和量子点电极的横截面图。自下而上分别是本征硅，
+漏电极的扫描电子显微镜照片。
+硅缓冲层，锗层和硅包覆层以及硅自然氧化层。
+
+3.2 锗硅自组织纳米线单量子点的能级结构
+  锗硅纳米线的横截面是一个硅-锗-硅的三明治式的纳米结构，如图 3.3（a）
+所示，由于锗的导带和价带都相对于硅更高，所以在锗硅自组织纳米线量子点横
+截面的二维能级结构中，锗核的导带和价带都向上凸起，锗和硅的价带有高达
+500 meV 的能级差。这种特殊的能带结构与其他一维材料不同，不需要利用细电
+极将局部能带顶起来束缚载流子。我们调节 VG 把费米面调节到锗和硅的价带之
+间。空穴会被束缚在锗的价带和费米面之间，即图 3.2（a）的黄色区域。沿着纳
+米线方面，源漏电极和纳米线接触部位会形成势垒，如图 3.2（b）。因此，受到
+三个维度束缚的量子点形成。
+
+
+
+                     35
+              第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+
+图 3.2（a）锗硅自组织纳米线空穴型单量子点横截面的能级结构。锗和硅的价带有高达 500
+meV 的能级差，费米面位于锗硅价带之间。
+                    （b）空穴型单量子点的能级结构。横截面上，空
+穴被束缚在锗价带和费米线之间纳米线方向，空穴受到两个势垒限制。
+
+3.3 锗硅自组织纳米线单量子点的制备
+（1）切片
+  将晶圆（wafer）用切片机或者金刚石切片刀切成约 1 cm*1 cm 的基片
+（Substrate），上面可加工最多 9 个芯片；
+（2）洗片
+  将基片依次放入丙酮和异丙醇中洗涤，超声震荡效果会更好，最后用氮气吹
+干；
+（3）匀胶烤胶
+  清洗干净的样品表面涂上电子束胶。电子束胶采用双层 PMMA（聚甲基丙
+烯酸甲酯）胶，型号为 950 A2。先在 4000 转/秒的匀胶机上匀上第一层胶，烤胶
+时间为 5 min，然后匀第二次胶，烤胶时间为 10 min，烤胶温度为 180 度。双层
+的 PMMA 胶的厚度约为 120 nm。采用双层 PMMA 胶是为了更好的金属剥离。
+如果采用光刻胶，采用的 AZ400K 型光刻胶，匀胶操作一样，烤胶时间为 90 s，
+温度为 95 度。
+（4）曝光外围大电极
+  外围大电极的设计的最小尺度为 5 μm，采用紫外曝光的时间相对电子束曝
+光短了很多，并且可以同时曝光多块样品，效率高很多。但是对于锗硅自组织纳
+米线基片来说，光刻胶容易在基片表面附着，不容易清洗干净，这会影响后续的
+加工。在正胶曝光模式下，曝光的时间为 12 s。光刻胶的显影液为 AZ5214l:去离
+子水=1:6，显影时间为 90 s,去离子水定影时间为 15 s。
+
+                        36
+              第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+  如果采用电子束胶，E-line 的 EHT 电压为 10 kV，光圈大小为 60 μm，因为
+此环节对曝光精度要求不高，为了节约曝光时间曝光步长设为 11.67 nm。单个样
+品的曝光时间约为 10 min。对应的显影液为 MIBK（4-甲基-2-戊酮）：异丙醇=1:3，
+显影液的显影时间为 1 min,让后利用异丙醇清洗显影液，时间约为 15s。此环节
+的曝光图案上包括一组四个的大定位标记，用于小定位标记的加工。
+（5）定位标记加工
+  基片表面分布着密集的纳米线，为了精确的定位筛选的纳米线，需要借助定
+位标记。定位标记为线宽为 100 nm 的十字形的标记，四个为一组。如采用电子
+束曝光，则在上一步显影之后直接进行在大电极定位标记基础上曝光。模式为
+EHT 电压为 10 kV，光圈大小为 10 μm。如果采用光刻曝光，则需要蒸镀完金属
+后重新在 PMMA 胶上采用电子束曝光。
+（6）电子束镀膜
+  放入电子束蒸发镀金属膜机中蒸镀电极，用作外围大电极。蒸镀环境需保持
+在高真空状态。蒸镀金属为 5/45 nm 的钛/金。钛用作粘附剂，金也可用铬代替。
+（7）金属剥离
+  将镀上金属的样品放入丙酮或者 Remove PG 中放置数小时（Remove PG 需
+在 80 度加热）。丙酮或者 Remove PG 会把基片表面的光刻胶或者电子束胶掩膜
+去掉，这样有掩膜的区域的金属就可以很容易剥离，曝光的区域保留蒸镀金属。
+然后用丙酮和异丙醇清洗干净。
+（8）SEM 定位拍照
+  利用小的定位标记校准，然后在 EHT 电压为 10 kV，光圈大小为 30 μm模
+式下，拍出包含四个定位标记的纳米线区域。照片包括位置信息，但是会有几纳
+米的偏差，需要手动校准后重新保存位置信息。
+（9）设计曝光图案
+  筛选出纳米线，设计接触电极和栅极的结构。接触电极的宽度为 100 nm，电
+极之间的纳米线长度为 80-100 nm。顶栅极宽度为 180-200 nm，覆盖源漏电极之
+间的纳米线和部分源漏电极。
+（10）源漏接触电极加工
+  在基片上匀胶甩胶和烤胶，点上异丙醇稀释的镍（Ni）粉或者金（Au）粉后
+放入 E-line 中。在 EHT 电压为 30 kV，光圈大小为 10 μm模式下曝光，为了提
+高曝光精度，曝光写场设为最小的 100 μm，步长设为 1.6 nm。利用小定位标记
+校准后，曝光出设计的源漏电极。然后显影。
+（11）氢氟酸刻蚀
+  锗硅自组织纳米线基片表面由于氧化会产生二氧化硅，会严重影响接触性质。
+
+                       37
+               第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+二氧化硅可以利用湿法刻蚀去除。刻蚀液浓度为 20 %的稀释氢氟酸（Buffered
+Hydrofluoric Acid, BHF），刻蚀时间为 18-20 s。需要注意的是，二氧化硅层欠刻
+会影响接触效果，过刻会破坏纳米线结构。需要根据接触效果调整刻蚀的时间。
+（12）电子束镀膜
+   刻蚀后的纳米线仍然容易被空气氧化，刻蚀完之后需立刻放入电子束蒸发镀
+膜机中，抽上真空蒸镀电极，为了防止硅的快速氧化并且这次的镀膜真空度的要
+求低于正常镀膜。蒸镀金属为钯，厚度为 30 nm。
+（13）金属剥离
+   操作如上。在金属剥离后放入 SEM 中观察电极是否搭接到纳米线上。因为
+电子束有能量会对纳米线本身造成一定损伤，所以要尽量较少电子束照射时间。
+（14）绝缘层生长
+   利用原子层生长仪生长 150-300 周期（cycle），每个周期的厚度约为 1.1 Ȧ。
+（15）匀胶烤胶镍粉
+（16）曝光栅极图案
+   利用第二套小电极标记套刻栅极小电极，曝光模式如步骤（10）。切换曝光
+模式，曝光尺度较大的栅极大电极，曝光模式如步骤（4）。
+（17）显影
+（19）镀膜.蒸镀金属为钛/钯，厚度为 3/25 nm。
+（20）金属剥离
+
+
+
+
+图 3.3 （a）锗硅自组织纳米线横截面图。
+                     （b）用电子束或者光刻曝光出接触电极的掩膜图
+                （c）利用电子束蒸发镀膜机蒸镀 30 nm 的钯，制备纳
+案，在稀释的氢氟酸试剂中刻蚀之后，
+米线和源漏接触电极结构。
+           （d）生长三氧化二铝绝缘层。
+                        （e）用电子束曝光套刻栅极电极的
+电子束掩膜，并蒸镀 3/25 nm 的钛/钯。（f）制备完成的单量子点结构。
+
+
+                         38
+                 第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+3.4 锗硅自组织纳米线单量子点的表征
+3.4.1 接触性质
+（1）源漏接触电极直接没有断路，源漏电极和栅极没有形成短路；
+（2）纳米线和两端的源漏金属没有肖特基势垒（Schottky barrier），I-V 曲线呈线
+性。这个势垒主要由二氧化硅层没有刻蚀干净导致。VSD 在−10 mV 到 10 mV 内，
+仍然有明显的电流变化。不能出现 I-V 曲线在零偏压附近有数十毫伏以上的电流
+截止区，锗硅自组织纳米线单量子点的充电能通常在 5-10 meV，过大的电流截
+止区会导致量子点的能级结构完全淹没在截止区之中。
+（3）有良好的接触，即足够小的电阻（足够大的电导）。良好的接触是性能优良
+的量子点的前提。一般，1 V 的 VSD 下，有μA级别的电流。如图 3.4（a-b）,随着
+接触电阻变大，库仑峰的会变矮并且变宽。我们拟合了不同源漏电极两端电阻对
+应的库仑峰的变化。
+（4）I-V 特性曲线在左右两侧基本对称，纳米线和两侧的源电极和漏电极都可以
+保证有良好的接触。
+（5）在较大的 VSD 下，电流会随着 VG 单调变小，并在完全截止。这是因为锗硅
+自组织纳米线量子点为空穴导电。
+
+
+
+
+图 3.4（a）在 4.2 K 液氮温度下，-100 mV 到 100 mV 的 I-V 特性曲线。在大的偏置电压下，
+进入源漏电极费米面能级差窗口量子点能级很多，导电通道很多，I-V 特性曲线近似线性。
+（b）-10 mV 到 10 mV 的 I-V 特性曲线。参与导电的量子点能级变小，电导也变小，I-V 特
+性曲线变得平缓。在更低的温度下，电流呈现台阶状变化，量子特性显现。
+                                （c）在量子点上
+                            39
+                 第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+串联不同的接触电阻，量子点微分电导信号的变化。
+                      （d）当量子点的接触电阻变大，库仑峰
+变得更矮更宽。
+
+3.4.2 库仑震荡
+   量子点中的空穴隧穿过程利用电化学势解释[27,28]。量子点中的空穴对着不
+一样的化学势。源电极和漏电极的费米能级分别为𝜇S 和𝜇D 。施加在源漏电极上的
+偏压 Vsd 用于调节化学势或者能级差。调节 VG，当量子点中的电化学势没有落入
+源漏偏压中，微观表现为空穴不能在量子点和源漏电极之间隧穿，宏观表现为没
+有电流的变化，这被称为库仑阻塞（Coulomb Blockade）现象如图 3.5（a）所示。
+当量子点的第 N 个空穴的化学势𝜇 (N)被包含在偏压窗口𝜇S − 𝜇D 之中，即𝜇S ≥
+𝜇 (N)≥ 𝜇D ,空穴会从源空穴库越过势垒进入量子点再进入漏空穴库。量子点内的
+空穴数目发生变化，万用表可以检测到电流的变化，这称为库仑谐振（Coulomb
+Reserence）现象,这个过程为单空穴隧穿（Single Hole Tunneling），如图 3.5（b）。
+   我们调节偏压 VSD，隧穿会有不同的模式。如图 3.5（c）所示，当有更大的
+VSD，空穴的基态（黑线）和激发态（灰线）都进入偏压窗口之中，空穴既可以通
+过基态又可以激发态两种路径隧穿，但是只能选择其中的一个路径。当 VSD 进一
+步变大，偏压窗口内同时包含第 N 个第 N+1 个空穴的化学势，此时量子点中的
+两个空穴都可发生隧穿，这种现象叫共隧穿现象（Cotunneling），如图 3.5（b）。
+
+
+
+
+图 3.5（a）库仑阻塞区域，量子点中的任何一个化学势都没有落入偏压窗口之内，没有输运
+  （b）库仑谐振区域，第 N 个空穴的化学势落入源漏偏压窗口中，发生输运发生。
+发生。                                    （c）
+改变偏压窗口的大小，第 N 个空穴的基态和激发态都落入窗口内，空穴可以在两个路径之
+                           40
+                第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+一发生隧穿。（d）偏压窗口内包含第 N 个和第 N+1 个空穴的化学势，发生共隧穿现象。图
+片引用自[28]。
+   当我们持续改变 VG 的值，量子点的状态在库仑谐振和库仑阻塞之间变化，
+宏观表现为一系列电流或者微分电导峰，这种现象叫做库仑震荡（ Coulomb
+Oscillation）。图 3.6（a）分别是通过直流（Direct Current，DC）模式测量的库仑
+震荡图。图 3.6（b）分别是通过交流（Alternating Current，AC）模式测量的库仑
+震荡图。峰的区域对应于库仑谐振，谷的区域对应着库仑阻塞。峰的高度对应着
+隧穿的空穴的数目，或隧穿率大小。
+
+
+
+
+图 3.6（a）直流输运方法测量得到的库仑震荡图。
+                        （b）同样条件下，交流输运方法测量得到
+的库仑震荡图。
+
+3.4.3 库仑菱形
+   通过改变 VSD 和 VG 两个参数来调节量子点的状态。量子点在零偏置电压下
+处于库仑阻塞区域时，当我们增大偏置电压，更高的能级的电化学势也会被包含
+在偏压窗口之内。当空穴的激发态也落入窗口之中时，空穴可以选择基态或者激
+发态完成隧穿过程。位于这个能级的空穴可以在量子点和接触电极之间隧穿，从
+而输运电流产生。实际的实验中，我们会程序设定一个 VG，然后扫描 VG 和电流
+I 的 I-V 特性曲线，然后每次增加一个 VG 步长，重复扫描 I-V 特性曲线。最后就
+得到了以 VSD 和 VG 为自变量以 I 为因变量的三维信息图。图中出现一系列菱形
+图案，所以被称为库仑菱形图（Coulomb Diamond）[30]。菱形范围内，量子点处
+于库仑阻塞区域，菱形范围外，量子点处于库仑谐振区域。菱形正斜率的边对应
+着量子点和源电极之间的隧穿，负斜率的边对应着量子点和漏电极之间的隧穿。
+   库仑菱形的示意图如图 3.7（a）。量子点体系是一个很复杂的系统，为了更
+简单的分析，我们采用常相互作用模型（Constant Interaction Model，CI model）
+[27]。从图中我们可以得到单量子点的基本性质。充电能 EC 代表一个空穴进去量
+子点所需要克服的能量，等于源漏偏置电压 VSD 乘以元电荷 e。从𝐸C 可以得到量
+子点的总电容 C∑=𝑒 2 ⁄𝐸C 。量子点两边的斜率 k1 和 k2 分别对应着量子点和源漏电
+                          41
+                      第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+极的耦合电容 CS 和 CD。量子点的总电容 C∑=CS+CD+CG。库仑菱形的宽度∆𝑉对
+应着栅极和点之间的耦合电容 CG=𝑒⁄∆𝑉 。我们用能量转换因子α =𝐸C ⁄∆𝑉 ，
+α=1⁄(1⁄𝑘1 + 1⁄𝑘2 )。
+
+
+
+
+图 3.7（a）改变 VSD 和 VG 得到的库仑菱形图案。
+                             （b）相邻的两个库仑菱形。黑线代表基态，
+虚线代表激发态。（c）N 和 N+1 个空穴的基态能级和激发态能级。
+                                 （d）实验测量得到的输
+运电流的库仑菱形图。
+
+3.5 磁场下量子点的能级劈裂
+    量子点内包含的空穴数目可能是奇数，也可能是偶数。当量子点内空穴数目
+不同，空穴的基态和激发态在磁场下的劈裂表现也不同。
+    对于基态来说，只有当量子点中包含奇数个空穴，其能级线才可以发生劈裂，
+生成自旋向上（spin up）和自旋向下（spin down）两个能级。原始能级衍化为新
+的基态和激发态的能级。我们可以以此确定量子点中包含奇数个空穴。偶数个空
+穴则不能发生基态劈裂。对于激发态来说，奇数个空穴的激发态会劈裂成两个。
+而对于偶数个空穴的激发态施加外界磁场，单重基态（Singlet state）因为自选交
+换对称不发生劈裂，由于自旋交换反对称的原因三重激发态会劈裂，所以两个空
+                              42
+               第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+穴的激发态会劈裂为三个。
+  图 3.8（a）为不加磁场时获得的连续的库仑菱形图，我们施加垂直于基片的
+磁场观察不同空穴数下的基态和激发态能级的劈裂现象。对于左边的库仑菱形
+（黄线位置），如图 3.8（b）所示，随着磁场的增大，基态不发生劈裂，激发态
+发生劈裂，所以包含偶数个空穴。对于右边的库仑菱形（红线位置），如图 3.8（b）
+所示，随着磁场的增大，基态和激发态都发生劈裂，所以包含偶数个空穴。
+
+
+
+
+图 3.8（a）不加磁场下，连续两个库仑菱形图像。左边的库仑菱形内包含奇数个空穴，右边
+的库仑菱形内包含偶数个空穴。
+             （b）在左边菱形的的黄线位置，随着磁场的增大，基态不发
+生劈裂，激发态发生劈裂，所以包含偶数个空穴。
+                     （c）在右边菱形的红线位置，随着磁场的
+增大，基态和激发态都发生劈裂，所以包含奇数个空穴。
+
+3.6 朗德 g 因子的提取
+  随着磁场强度的不断变大，能级劈裂的程度也会对应变大。在以上的研究基
+础上，更进一步，我们利用磁场下的能级劈裂来研究一个重要的参数朗道 g 因子
+（lande g-factor）。我们在 0T 到 6T 的磁场下分别沿着图 3.8（a）的黄线和红线
+附近测量了局部库仑菱形图。图 3.9（a-d）奇数空穴能级分别在 0T、2T、4T 和
+6T 下能级劈裂图。零磁场下，能够观察到清晰基态和激发态的线。在外加磁场
+作用下，能级线产生塞曼劈裂（Zeeman Splitting），变成自旋向上和自旋向下两
+个能级线。我们在 0-6 T 范围内多个等间距点测量，能级间距Ez 随着磁场强度 B
+的关系。如图 3.9（c-d）所示，可以看出Ez 与 B 是线性对应的。基于Ez =gµB B,其
+中g代表朗德g因子，µB 代表玻尔兹曼常量。通过拟合我们得到了奇数个空穴的
+                        43
+               第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+g=4.34±0.04。我们在图 3.8（a）中红线位置重复偶数空穴在磁场下的塞曼劈裂测
+量，可以得到偶数空穴的g=4.25±0.04，和奇数空穴的g因子基本一致。
+
+
+
+
+图 3.9（a-d）分别在 0T，2T，4T 和 6T 垂直磁场下，能级的塞曼劈裂。在垂直磁场下，能级
+分裂成两个能级。
+       （e）随着磁场强度的变大，分裂的能级间距逐渐变大。
+                               （f）劈裂能级间距
+随着磁场的变化。
+
+3.7 本章小结
+  本章我们介绍了单量子点的结构和能级，以及完整的制备工艺和测量电路。
+基于直流输运方法对单量子点的输运性质测量，我们介绍了一个优良的单量子点
+接触性质、库仑震荡和库仑菱形图。量子点的基态和激发态能级在外界磁场下会
+发生能级塞曼分裂，实验中观察到奇数空穴和偶数空穴有着不同的劈裂。并且，
+能级劈裂与施加磁场的大小成线性关系，从这个关系中，我们提取出锗硅自组织
+纳米线的朗德 g 因子约为 4.3。
+                        44
+                               第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+                                            参考文献
+[1] X. J. Hao, H. O. Li, T. Tao,C. Zhou, G. Cao, G. C. Guo,G. P. Guo, W. Y. Fung, Z. Q. Ji, W. Lu,
+Andreev tunneling enhanced by Coulomb oscillations in superconductor-semiconductor hybrid
+Ge/Si nanowire devices, Phys. Rev. B 84, 195448 (2011).
+[2] A. P. Higginbotham, F. Kuemmeth, T. W. Larsen, M. Fitzpatrick, J. Yao, H. Yan, C. M. Lieber,
+C. M. Marcus, Antilocalization of Coulomb Blockade in a Ge/Si Nanowire. Phys. Rev. Lett. 112,
+216806 (2014).
+[3] X. J. Hao, T. Tu, G. Cao, C. Zhou, H. O. Li, G. C. Guo, W. Y. Fung, Z. Ji, G. P. Guo, W. Lu,
+Strong and Tunable Spin−Orbit Coupling of One-Dimensional Holes in Ge/Si Core/Shell
+Nanowires. Nano Lett. 10, 2956-2960 (2010).
+
+[4] P. C. Sercel, K. J. Vahala, Analytical formalism for determining quantum-wire and quantum-dot
+band structure in the multiband envelope-function approximation. Phys. Rev. B 42, 3690 (1990).
+[5] M. Brauns, J. Ridderbos, A. Li, P. A. M. E. Bakkers, F. A. Zwanenburg, Electric-field dependent
+g-factor anisotropy in Ge-Si core-shell nanowire quantum dots. Phys. Rev. B: Condens. Matter
+Mater. Phys. 93, 121408 (2016).
+[6] Y. Hu, F. Kuemmeth, C. M. Lieber, C. M. Marcus, Hole spin relaxation in Ge–Si core–shell
+nanowire qubits. Nat. Nanotechnol. 7, 47-50 (2012).
+[7] A. P. Higginbotham, T. W. Larsen, J. Yao, H. Yan, C. M. Lieber, C. M. Marcus, F. Kuemmeth,
+Hole spin coherence in a Ge/Si heterostructure nanowire, Nano Lett. 14, 3582-3586, (2014).
+[8] H. Watzinger, C. Kloeffel, L. Vukušić, M. D. Rossell, V. Sessi, J. Kukučka, R. Kirchschlager, E.
+Lausecker, A. Truhlar, M. Glaser, A. Rastelli, A. Fuhrer, D. Loss, G. Katsaros, Nano Lett. 16, 6879-
+6885 (2016).
+[9] S. X. Li, Y. Li, F. Gao, G. Xu, H. O. Li, G. Cao, M. Xiao, T. Wang, J. J. Zhang, G. P. Guo,
+Measuring hole spin states of single quantum dot in germanium hut wire. Appl. Phys. Lett. 110,
+133105 (2017).
+
+[10] H. Watzinger , C. Kloeffel , L. Vukusic , M. D. Rossell , V. Sessi , J. Kukucka , R. Kirchschlager ,
+E. Lausecker , A. Truhlar , M. Glaser , A. Rastelli , A. Fuhrer , D. Loss , and G. Katsaros , Heavy-
+Hole States in Germanium Hut Wires, Nano Lett. 16, 6879 (2016).
+[11] J. R. Petta , A. C. Johnson , J. M. Taylor , E. A. Laird , A. Yacoby , M. D. Lukin , C. M. Marcus ,
+M. P. Hanson , and A. C. Gossard. Coherent Manipulation of Coupled Electron Spins
+inSemiconductor Quantum Dots. Science 309, 2180 (2005).
+[12] H. Bluhm, S. Foletti, D. Mahalu, V. Umansky, and A. Yacoby. Enhancing the Coherence of a
+Spin Qubit by Operating it as a Feedback Loop That Controls its Nuclear Spin Bath. Phys. Rev. Lett.
+105 (21), 216803 (2010).
+
+                                                   45
+                               第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+[13] S. Nadj-Perge , S. M. Frolov , E. P. Bakkers , and L. P. Kouwenhoven. Spin–orbit qubit in a
+semiconductor nanowire. Nature 468 (7327), 1084 (2010).
+[14] J. W. van den Berg , S. Nadj-Perge , V. S. Pribiag , S. R. Plissard , E. P. Bakkers , S. M. Frolov ,
+and L. P. Kouwenhoven. Fast Spin-Orbit Qubit in an Indium Antimonide Nanowire. Phys. Rev. Lett.
+110 (6), 066806 (2013).
+[15] H. O. Churchill, F. Kuemmeth, J. W. Harlow, A. J. Bestwick, E. I. Rashba, K. Flensberg, C. H.
+Stwertka, T. Taychatanapat, S. K. Watson, and C. M. Marcus, Phys. Rev. Lett. 102(16), 166802
+(2009).
+[16] E. A. Laird, F. Pei and L. P. Kouwenhoven. A valley–spin qubit in a carbon nanotube. Nature
+Nanotechnology 8, 565–568 (2013)
+[17] J. J. Pla , K. Y. Tan , J. P. Dehollain , W. H. Lim , J. J. Morton , D. N. Jamieson , A. S. Dzurak ,
+and A. Morello , A single-atom electron spin qubit in silicon, Nature 489 (7417), 541 (2012).
+[18] J. J. Pla , K. Y. Tan , J. P. Dehollain , W. H. Lim , J. J. Morton , F. A. Zwanenburg , D. N.
+Jamieson , A. S. Dzurak , and A. Morello , High-fidelity readout and control of a nuclear spin qubit
+in silicon, Nature 496 (7445), 334 (2013).
+[19] J. P. Dehollain , J. T. Muhonen , K. Y. Tan , A. Saraiva , D. N. Jamieson , A. S. Dzurak , and
+A. Morello , Single-Shot Readout and Relaxation of Singlet and Triplet Statesin Exchange-Coupled
+31P Electron Spins in Silicon, Phys. Rev. Lett. 112 (23), 236801 (2014).
+[20]J. T. Muhonen , J. P. Dehollain , A. Laucht , F. E. Hudson , R. Kalra , T. Sekiguchi , K. M. Itoh ,
+D. N. Jamieson , J. C. McCallum , A. S. Dzurak , and A. Morello , Storing quantum information for
+30 seconds in a nanoelectronic device, Nat. Nanotechnol. 9 (12), 986 (2014).
+[21] B. M. Maune , M. G. Borselli , B. Huang , T. D. Ladd , P. W. Deelman , K. S. Holabird , A. A.
+Kiselev , I. Alvarado-Rodriguez , R. S. Ross , A. E. Schmitz , M. Sokolich , C. A. Watson , M. F.
+Gyure , and A. T. Hunter , Coherent singlet-triplet oscillations in a silicon-based double quantum
+dot. Nature 481(7381), 344 (2012).
+[22] C. Kloeffel , M. Trif , and D. Loss , Strong spin-orbit interaction and helical hole states in Ge/Si
+nanowires, Phys. Rev. B 84 (19), 195314 (2011).
+[23] C. Fasth , A. Fuhrer , L. Samuelson , V. N. Golovach , and D. Loss , Direct Measurement of
+the Spin-Orbit Interaction in a Two-Electron InAs Nanowire Quantum Dot,Phys. Rev. Lett. 98(26),
+266801 (2007).
+[24] D. Q. Wang , A. R. Hamilton , I. Farrer , D. A. Ritchie , and O. Klochan. Double-layer-gate
+architecture for few-hole GaAs quantum dots. Nanotechnology 27, 334001 (2016).
+[25] D. Q. Wang , O. Klochan , J.-T. Hung , D. Culcer , I. Farrer , D. A. Ritchie , and A. R. Hamilton.
+Anisotropic Pauli Spin Blockade of Holes in a GaAs Double Quantum Dot. Nano Lett. 16 (12),
+
+
+                                                   46
+                              第三章 锗硅自组织纳米线空穴型单量子点
+
+
+
+7685 (2016).
+[26] E. Marcellina , A. R. Hamilton , R. Winkler , and D. Culcer. Spin-orbit interactions in inversion-
+asymmetric two-dimensional hole systems: A variational analysis. Phys. Rev. B 95, 075305 (2017).
+[27] L. P. Kouwenhoven, C. M. Marcus, P. L. Mceuen, S. Tarucha, R. M. Westervelt, and N. S.
+Wingreen, Electron transport in quantum dots, Proceedings of the NATO Advanced Study Institute
+on Mesoscopic Electron Transport, 105-214 (1997).
+[28] R. Hanson, Ph. D. Thesis, Electron Spin in Semiconductor Quantum Dots. University of Delft,
+Netherlands. (2005).
+[29] W. G. van derWiel, S. De Franceschi, J. M. Elzerman, T. Fujisawa, S. Tarucha, and L. P.
+Kouwenhoven, Rev. Mod. Phys. 75, 1 (2002).
+[30] P. Jarillo-Herrer, S. Sapmaz, C. Dekker, L. P. Kouwenhoven, and H. S. J. van der Zant, Electron-
+hole symmetry in a semiconducting carbon nanotube quantum dot. Nature 429, 389 (2004).
+
+
+
+
+                                                  47
+                  第四章 单量子点和微波谐振腔的耦合
+
+
+
+       第四章 单量子点和微波谐振腔的耦合
+
+4.1 量子点和谐振腔的复合结构
+   近年来，超导微波谐振腔的作为腔电动力学领域的一个重要的工具被广泛应
+用于量子芯片的多个领域[1]。
+   第一、超导微波谐振腔可以用作灵敏探测器读取量子点的输运性质。在输运
+信号无法测量的区域，超导微波谐振腔可以获得有效信号，并且可以转换成直接
+输运信号。并且对于发生双量子点中的左点和右点之间的电荷态或者自旋态之间
+改变，微波腔的读取是非破坏性测量（quantum non-demolition measurement, QND）。
+研究者实现了碳纳米管单量子点[2-5]，以及硅[6-8]、铟砷纳米线[9,10]、砷化镓
+[11-14]、铟锑纳米线[15]、石墨烯[16-18]的双量子点和超导微波谐振腔的耦合。
+   第二、超导微波谐振腔可以作为媒介，即量子总线，可以实现两个或者多个
+量子比特之间的长距离耦合，这对于量子芯片的集成化有重要意义。T. Kontos 组
+实现了透射腔作为媒介耦合两个长程碳纳米管单电子点[3]我们组实现了反射腔
+耦合两个石墨烯双量子点[16]。
+   但是微波腔的磁耦合强度很弱，直接将单个的自旋磁性偶极子耦合到微波腔
+的磁场中得到的耦合强度只有g M /2π ≈ 10 Hz 量级无法用于量子芯片[19-20]，这
+个问题可以借助超导微波谐振腔解决。在谐振腔和量子点耦合的复合体系中，实
+现量子点中的电荷态或者自旋态与微波腔之间的强耦合是一个至关重要的目标，
+强耦合意味着微波腔和量子点之间的耦合强度g c 大于谐振腔中光子的损耗速率κ
+和量子点的退相干速率γ，可以实现量子比特之间的有效信息交换。X. D. Hu 和
+P. Q. Jin 等人做了腔和自旋之间耦合的理论工作[21,22]，但是在实验中实现这个
+目标有很大的技术难度。
+   最近微波腔和量子点的强耦合取得了多个突破性的进展。2016 年，量子点
+中电荷态和谐振腔的强耦合在砷化镓[12]、硅[6]和碳纳米管[5]体系中的实现。
+2018 年，我们组实现了锗硅自组织纳米线单量子点和谐振腔的耦合，并基于
+M.Trif 等人的理论估算了该材料自旋和腔的耦合强度可以达到 2-4 MHz，接近于
+腔的损耗速率和量子点的退相干速率。在我们的工作之后量子点中电荷态和谐振
+腔的强耦合在硅[23,24]和砷化镓[25]体系得到实现。
+   为了实现量子点中的自旋态和微波谐振腔的腔耦合以及长程耦合，所用的材
+料体系需要满足更长的退相干时间或者更大的自旋轨道耦合强度[20, 26-28]。这
+两个关键参数已经在锗硅核壳型纳米线已经得到了理论预测以及实验证明[29-
+32]。新型的锗硅自组织纳米线由于非圆形对称的横截面结构会产生材料内重空
+穴和轻空穴的分离，被预测拥有和核壳型纳米线相似的自旋轨道耦合强度以及更
+                           48
+             第四章 单量子点和微波谐振腔的耦合
+
+
+
+长的自旋退相干时间[34-35]。因此，锗硅自组织纳米线被认为是实现全电控自旋
+比特和自旋-腔强耦合的候选材料。锗硅自组织纳米线可以利用位置控制技术[36-
+38]实现纳米线有序的整列排列，避免了其他纳米线材料中需要的精确转移或者
+在基片上利用化学气相沉积生长步骤，对于未来量子芯片的规模化和集成化有关
+键的意义。
+
+4.2 样品的结构和测量系统
+  图 4.1 是锗硅自组织纳米线单量子点和超导微波谐振腔耦合的复合结构以及
+测量装置图。单量子点结构已在第三章做过详细的介绍，本章将重点介绍微波谐
+振腔以及量子点和腔的耦合结构。
+
+
+
+
+图 4.1（a）微波谐振腔和四个量子点的复合结构的光学显微镜照片。红色矩形是其中的一个
+单量子点所在区域。（b）量子点通过源电极与微波腔耦合的扫描电镜照片。（c）单量子点
+结构的扫描电子显微镜照片。
+
+                     49
+               第四章 单量子点和微波谐振腔的耦合
+
+
+
+  图 4.2 是量子点的等效电路图和测量系统。实验中采用的是我们实验室拥有
+自主知识产权的半波长反射式超导微波谐振腔[39]。反射腔由两根铝制超导带状
+传输线（Stripline）构成，传输线设计成平滑的弯曲状是为了节省基片空间。两
+个长条状 AC 版（AC pads）分别用作微波的输入和输出端，并通过指电容（Finger
+Capacitance）和超导传输线连接。传统的透射式超导微波谐振腔需要大面积的地
+平面设计，测量的是透过腔的微波信号。反射腔测量的是谐振腔反射的微波信号，
+并且不需要地平面，这种设计有效的避免了较大的地平面带来的额外的能量泄露，
+基片表面也因此有更大的面积用来设计和制备更多更为复杂量子点电路。网络分
+析仪(Agilent E5071C)端口 1 产生连续的微波信号，经过两个 30 dB 的衰减器之
+后减弱微波能量。然后，微波信号被环形器 (Pasternack PE8402)后传输到 180°混
+合环。输入的微波信号会被 180°混合环劈裂成两路差分微波信号。差分信号幅值
+相等相位相反，可以减弱噪声带来的负面的影响。分别施加在两根超导传输线上，
+在两根传输线之间形成稳定的电磁场。
+
+
+
+
+图 4.2（a）量子点等效电路和测量装置。蓝色条带为超导传输线和 AC 板。传输线之间形成
+稳定的电磁场强度。（b）测量装置的详细说明以及样品装载台。
+  图 4.3 是利用 HFSS 软件反射式超导微波谐振腔谐振器部分电磁场分布的仿
+真。量子点分别位于传输线的两端，也就是设计电磁场的波腹（antinode）位置，
+这个位置有最大的量子点和微波腔的耦合强度，本文只考虑其中的一个量子点和
+
+                       50
+               第四章 单量子点和微波谐振腔的耦合
+
+
+
+腔的耦合。量子点可以通过源电极和腔耦合，也可以通过顶栅极或者额外加的电
+极耦合，本章选择的是第一种方案。源电极结在传输线的中间，这个位置是电磁
+场的波结（node）的位置，所以源电极的加入不会对传输线中间的电磁场产生影
+响。量子点的变化会影响微波的场，这些变化会反映在反射的微波的幅值和相位
+信号之中。反射的微波信号经过经过环形器之后进入隔离器（Pasternack PE8402）,
+隔离器能够阻止放大器的本底噪声进去样品中。然后微波信号经过 4 K 低温放大
+器和常温放大器(Caltech CITCRY01-12)放大后返回到网络分析仪端口 2。这样我
+们就从实验上得到了完整的反射传输系数S11 ())并提取反射的幅值和相位信号。
+同时量子点的直流输运信号同时经过低噪声电流放大器后被数字万用表读取。测
+量过程中，样品被放置在基础温度为 26 mK 的干式稀释制冷机中。经过层层衰
+减，最终施加在谐振腔的微波功率约为−110 dBm。较低的微波功率为了降低辐射
+噪声以及匹配电路阻抗。这种腔和量子点的复合结构能够扩展成其他结构，比如
+双量子点、单原子激射器或者其他更复杂的电路[40-43]。
+
+
+
+
+图 4.3 反射式超导微波谐振腔谐振器部分设计和仿真。利用 HFSS 软件对谐振器的电磁场
+模拟。可以看出电磁场主要集中在两根超导传输线之间。在波腹的位置电磁场的强度最
+大，在波结的位置电磁场强度几乎为零。
+
+4.3 谐振腔的本征参数
+  我们首先表征出微波谐振腔的基本参数，这个过程中量子点上所有电极保持
+接地。图 4.4（a-b）展示了提取的腔的幅值和相位和微波频率的关系，即频率谱
+函数。可以很明显的观察到在谐振频率附近，幅值信号出现一个明显的凹陷，同
+时相位信号发生翻转。说明谐振腔和量子点电路产生谐振。
+
+                      51
+                     第四章 单量子点和微波谐振腔的耦合
+
+
+
+   我们采用半波长开路传输腔模型（λ/2 open-circuit microstrip resonator model）
+[44]描述单量子点和腔的复合结构。腔的反射系数可以基于腔的谐振频率ω0 、探
+测频率ω，以及谐振腔的内部损耗κi 和外部损耗κe 表示为：
+                                            1
+                         j(ω0 - ω) + (κi - κe )
+                                     2
+                S11 (ω)=−            1          ,                             (4-1)
+                          j(ω0 -ω) + 2(κi +κe )
+从反射系数提取出来谐振腔的幅值和相位信号：
+                                                κe (ω0 -ω)
+            ϕ= arctan(S11)=arctan[                                   ],       (4-2)
+                                      (ω0 -ω)2 + 0.25(κi 2 -κe 2 )
+
+                        √[(ω0 -ω)2 +0.25(κi 2 -κe 2 )]2 +κe 2 (ω0 -ω)2
+            A=∣S11∣=
+                                [(ω0 -ω)2 +0.25(κi 2 -κe 2 )]2
+                                                                          .   (4-3)
+
+
+当我们用这个模型去拟合幅值和相位的实验值，可以得到腔的谐振频率为
+ω0 ⁄2π= 5.972 GHz，谐振频率主要由传输线的设计长度决定；腔的内部损耗速率
+和外部损害损耗分别为κi /2π= 5.18 MHz 和κe /2π= 2.19 MHz，所以腔的总损耗速
+率为κ⁄2π=(κi +κe )/2π=7.37 MHz，对应的谐振腔中的光子平均生命时间(1/κ)约为
+130 ns。由此，我们得到腔的品质因数 Q=ω0 ⁄κ=810。腔的谐振频率主要由传输
+线的长度决定，同样结构的腔的谐振频率差别很小，所以谐振腔的 Q 值能够直
+观反映腔的内部损耗和外部损耗，也一定程度上可以体现腔的工作性能。本文中
+810 的 Q 值足够用来实现对量子点的探测，但是为了提升探测的效果以及实现强
+耦合，一个高品质的腔是必须。在我们之前的石墨烯和反射腔的实验中，在平整
+的硅片上加工的反射式谐振腔通常在 3000-4000 范围，最高可以达到 10000。但
+是在锗硅自组织纳米线的基片上覆盖密集的纳米线，基片表面起伏很大，这可能
+是降低腔 Q 值的最大的因素。
+
+4.4 谐振腔对单量子点的读取
+   我们首先利用调节出锗硅自组织纳米线的单量子点。当量子点被调节到库仑
+阻塞区域时，腔的反应如同其本征状态，量子点对于谐振腔的影响几乎可以忽略，
+我们把库仑阻塞区域的微波信号作为参考基准信号，如图 4.4（a-b）黑线所示。
+当量子点的状态发生轻微变化时，幅值和相位信号表现如图 4.4（a-b）红线，我
+们观察到明显的幅值和相位信号变化 Δϕ和 ΔA。在库伦谐振区域，量子点中的
+空穴能级和源电极或者漏电极能级平行，空穴在量子点和外界空穴库之间发生隧
+穿。腔和量子点之间的色散耦合（dispersive coupling）和损耗耦合（dissipative
+coupling）导致了腔和幅值和相位的变化。谐振腔的幅值和相位的变化能够用来
+探测量子点的性能。反之，我们能够从谐振腔的幅值和相位的变化中提取出量子
+点的有效信息。
+                                       52
+                   第四章 单量子点和微波谐振腔的耦合
+
+
+
+
+图 4.4（a-b）微波谐振腔的幅值（a）和相位信号（b）的频率谱函数。黑色曲线对应于库仑
+阻塞区（c 图 B 点处）的幅值和相位信号，红色色曲线对应于库仑谐振区（c 图 A 点处）的
+幅值和相位信号。(c-d) 直流输运信号（c）和腔的幅值信号（d）得到单量子点的库仑菱形
+图。测量过程中，探测频率被固定在腔的本征谐振频率。(e-g) 在零偏置电压下直流输运信
+号、幅值信号和相位信号得到库仑震荡图。插图：直流输运信号很难辨识区域的放大图。这
+些区域直流输运信号很微弱，幅值和相位信号仍然很明显。
+   我们将腔的探测频率被固定在腔的谐振频率，改变源漏的 VSD 和 VG，利用
+幅值和相位的变化去探测量子点的性质，同时记录量子点和源漏之间的直流输运
+信号。我们从直流信号以及腔的幅值信号获得了相似的单量子点的库仑菱形图，
+如图 4.4（c-d）。从库仑菱形图上可以获取单量子点的基本性质，如充电能 EC 在
+4-6 meV，杠杆因子 α 为 0.20–0.25 eV/V。
+   为了定量地分析直流输运信号和微波腔的幅值和相位反应之间的对应关系，
+接下来我们关注零偏置电压下，幅值和相位信号以及直流信号随着顶栅极电压的
+变化。图 4.4（e）展示了直流输运信号的库仑震荡图，对应的幅值和相位信号的
+库仑震荡图如图 4.4（f-g）所示。我们可以看出，库仑峰的位置在由三种测量方
+法获得的库仑震荡图上一一对应。幅值和相位对于空穴的隧穿过程有灵敏的反应。
+另外，三组图上的库仑峰的高度并不是呈现线性成比例对应关系，这说明了直流
+输运测量和微波幅值和相位测量是不同的测量机制。并且当直流输运信号已经不
+明显或者完全测量不到时，如图中黄色区域和两个圆形虚线标记的区域所示，腔
+的幅值和相位的库仑峰信号依然很明显。
+   上述测量结果证实了微波谐振腔可以作为一个灵敏探测器测量量子点中的
+状态。相比于传统的直流输运测量，本文中微波读取表现出更好的灵敏性，特别
+是当信号过小没法用直流输运测量的时候。并且谐振腔和量子点的复合结构保证
+                             53
+                             第四章 单量子点和微波谐振腔的耦合
+
+
+
+了样品和电极之间有相对弱的耦合，可以减弱和费米库（Fermionic reservoirs）耦
+合引入的退相干的影响[45]。并且，传统的直流输运测量方法无法探测量子点在
+少电子/空穴区或者最后一个电子/空穴区的性质，通常要借助分离电荷探测器，
+如量子点接触（quantum point contact，QPC）或者单电子晶体管（single electron
+transistor，SET）。但是由于锗硅自组织纳米线特殊的结构和分布，引入分离电
+荷探测器有很大的技术难度。超导微波谐振腔的出现有效的解决了这个困难，更
+适用于锗硅自组织纳米线。J. R. Petta 组 和 K. Ensslin 组利用谐振腔实现了双量
+子点最后一个电子的谷劈裂和退相干速率的测量[14, 8]。
+
+4.5 单量子点和谐振腔的耦合模型
+4.5.1 复导纳模型以及腔和量子点的复合模型
+   我们引入复导纳模型（admittance model）[11,46,47]以及腔和量子点的复合模
+型[16,17]去描述和分析谐振腔和单量子点的复合结构。以上模型分别基于散射理
+论（scattering theory）[48] 和输入输出理论（input-output theory）[49]。在复导纳
+模型中，量子点可以等效为并联的电容电阻电路，量子点拥有复导纳Ydot (ω) ≈
+1/Rdot + jωCdot ，Cdot 和Rdot 分别代表量子点的等效电容和电阻，谐振腔可以视为拥
+有电容Cres 电阻Rres 电感Lres 的等效并联电路。
+
+4.5.2 频率移动和频率展宽
+    根据谐振腔的 RLC 等效模型[44]，腔的有效阻抗能够表示为：
+
+                                                      1                1
+                       Zeff-1 = jωCres + jωL                     + R                                     (4-4)
+                                                          res          res
+
+
+当我们把腔外接的量子点电路的复导纳
+                         Ydot (ω) ≈1/Rdot + jωCdot
+考虑进入腔的模型来描述谐振腔和量子点的复合系统，腔的有效阻抗变为：
+
+                                           1                    1            1
+                  Zeff-1 = jωCres + jωL               + R             + R             + jωCdot           (4-5)
+                                               res              res          dot
+
+
+腔的谐振频率和线宽都能够反映在𝑍eff 的正极中，即：
+
+                              1            C                                1              f0 Cdot
+              𝑧= f0 + j 2R              − 2Cdot f0 + j(2C                              −             )   (4-6)
+                             res Cres           res                        res Rdot        2Q Cres
+
+              1
+其中f0 + j 2R          描述腔的本征状态,方程（4-6）中的其他部分是由量子点的变化
+          res Cres
+
+引入。量子点的电容变化Cdot 通过影响腔和量子点之间的色散耦合导致了频率移
+动δfR （frequency shift）。量子点的电阻变化Rdot 通过影响腔和量子点之间的损耗
+
+                                                           54
+                                         第四章 单量子点和微波谐振腔的耦合
+
+
+
+耦合导致了频率展宽δfD（frequency broadening）[2,3,45,50]。δfR 和δfD 在腔的幅值
+
+和相位信号上都有体现。
+                                                                C
+                                                   δfR ≈ − 2Cdot f0                                                    (4-7)
+                                                                    res
+
+                                                           1              f C
+                                                                       0 dot
+                                             δfD ≈ 2C               − 2Q                                               (4-8)
+                                                         res Rdot        C      res
+
+
+因为 Q 通常很大，δfD 可以简化为：
+                                                                    1
+                                                    δfD ≈ 2C                                                           (4-9)
+                                                                res Rdot
+
+                                 ̃ 0=ω0+δωR ,
+       当我们量子点给腔的信号带来的谐振频率和内部损耗变为：𝜔
+𝜅̃ i=κi+2δωD , 其中δωR =2πδfR , δωD =2πδfD 。受量子点的影响，谐振腔的反射系数
+变为：
+                                                                1
+                                                j[(ω0 +δωR )-ω]+ [(κi +2δωD )-κe ]
+                              𝑆̃11(ω) = −                       2
+                                                                1                          .                          (4-10)
+                                                j[(ω0 +δωR )-ω]+ [(κi +2δωD )+κe ]
+                                                                2
+
+此方程可以用作描述腔和量子点的复合结构。腔的幅值和相位信号也随之改变
+δϕ = arctan(𝑆̃11) − arctan(S11), δA=│𝑆̃11│−│S11│。下面我们以相位为例。
+
+            κe [-(ω0 - ω)2 + 0.25(κi 2 - κe 2 )]                          κe κi (ω0 - ω)
+ δϕ =                                       2      δωR −                                       2   δωD + O(ω2) (4-11)
+             [(ω0 - ω)2 + 0.25(κi2 - κe 2 )]               [(ω0 - ω)2 + 0.25(κi2 - κe 2 )]
+
+                                                                             κ [-(ω0 - ω)2 + 0.25(κi 2 - κe 2 )]
+从上式中可以明显看出，考虑式子的第一部分 e                                                                                       2     δωR 是以纯
+                                                                              [(ω0 - ω)2 + 0.25(κi 2 - κe 2 )]
+
+腔的谐振频率为中心的偶函数变化，即 δϕ(ω0 + δω) =δϕ(ω0 - δω)。式子的第二部
+             κe κi (ω0 - ω)
+分                                   2   δωD 是 以 纯 腔 的 谐 振 频 率 为 中 心 的 奇 函 数 变 化 ， 即
+    [(ω0 - ω)2 + 0.25(κi 2 - κe 2 )]
+
+δϕ(ω0 + δω) =−δϕ(ω0 - δω)。因此，δfR 影响相位变化的偶数部分（图 4.5d 的蓝线），
+δfD 影响相位变化的奇数部分（图 4.5d 的红线）。需要注意的是，这个推导过程根
+据实际数值做了部分简化。腔的幅值信号也可以同类似的方法推导出来。但是δfR
+影响幅值变化的奇数部分（图 4.5e 的蓝线），δfD 影响幅值变化的偶数部分（图
+4.5e 的红线），这个和相位变化正好相反。因此我们可以从测量得到的幅值或者
+相位信号中获得频率移动和频率展宽信息[2,3,45,50]。
+
+
+
+
+                                                               55
+                 第四章 单量子点和微波谐振腔的耦合
+
+
+
+
+图 4.5（a）量子点和谐振腔复合结构的等效电路图。（b-c）模拟的频率移动和展宽对幅
+值（b）和相位（c）信号的影响。黑线是参考线。蓝（红）线是增加了一定的δfR（δfD）
+后的信号，其与参考线的差值是δfR（δfD）导致的幅值或者相位的变化。（d）δfR 影响
+相位变化的偶数部分，δfD 影响相位变化的奇数部分。（e）δfR 影响幅值变化的奇数部
+分，δfD 影响幅值变化的偶数部分。
+                 （f-g）VG=−0.638V 时，蓝（红）点代表由δfR 和（δfD）
+导致的相位和幅值的变化值，绿（橙）线代表理论模拟值。实验值和理论值有非常好的
+对应。
+   为了证实所使用的模型的可靠性，我们在 VG=−0.638V 下，我们首先将幅值
+和相位信号分别提取出其中的奇数和偶数部分。通过对相位（幅值）变化中的偶
+数（奇数）部分关于频率的积分中可以提取出随着 VG 的变化，在库仑谐振处δfR~50
+kHz。通过对相位（幅值）变化中的奇数（偶数）部分关于频率的积分中可以提
+取出δfD~25 kHz。将所获得的δfR 和δfD 值带入理论模型可以获得拟合的幅值和相
+位的变化值，如图 4.6（a-b），理论值和实验值对应得非常好，这也验证了我们模
+式的合理性和可靠性。
+
+
+
+
+                         56
+                    第四章 单量子点和微波谐振腔的耦合
+
+
+
+
+图 4.6 (a) 在不同 VG 电压下从幅值和相位信号中提取出δfR 值。(b) 在不同 VG 电压下从幅值
+和相位信号中提取出δfD 值。黑线代表对应的直流输运信号。
+  接着我们以 1 mV 的测量间距改变 VG 值，并重复上述方法提取出在不同 VG
+电压下从幅值和相位信号中提取出δfR 和δfD 的值，如图 4.6（a）和（b）所示。对
+应的直流输运信号如黑线所示。可以看出，δfR 和δfD 与直流输运型号呈现对应的
+震荡峰，δfR 和δfD 均受到量子点的调控，也验证了我们的对于谐振腔幅值和相位
+的探测原理的解释。
+
+4.6 空穴和谐振腔的耦合强度
+4.6.1 量子点的压缩系数与运动方程理论
+
+   从上文中得到的频率移动δfR 中，我们可以提取出单量子点和谐振腔体系的
+
+空穴和腔的耦合强度。量子点处于不同的状态时，量子点中的空穴团有着不同的
+压缩状态，对应着不同的压缩系数 χ（compressibility）。如图 4.7（b）所示，在库
+仑谷（Coulomb valley）区域，空穴不能在量子点和源漏电极之间隧穿，量子点
+中空穴数目 N 保持不变，量子点的空穴库的压缩系数 χ 没有发生改变。同时，腔
+的幅值和相位信号表现得和纯腔一样（图 4.7d 的黑线）。与之相反，如图 4.7c 所
+示，在库仑谐振区域，当量子点的某个能级与空穴库的能级齐平时，空穴在量子
+点和源漏电极之间发生隧穿，量子点的中空穴数目发生变化，压缩系数也发生变
+                                               𝜕𝑁   𝜕𝑁
+化，压缩系数表示为空穴数目随着化学势的变化 χ= 𝜕𝜖 [51]。χ= 𝜕𝜖 在实验数据基
+
+础上利用运动方程理论（Equation of motion theory，EOM）推导。
+
+   根据周期性电导震荡理论，量子点的电导表示为：
+                     1−〈𝑁 〉           〈𝑁 〉
+                         ∓
+            𝐺± (ω)=ћ𝜔−𝜖 +𝑖Γ/2         ∓
+                              + ћ𝜔−𝜖 −𝑈+𝑖Γ/2             （4-12）
+                       ±              ±
+
+𝑁∓ 代表量子点中载流子数目，𝛤是隧穿率，U 是充电能，化学势𝜖± 可由杠杆因子
+α和栅极电压 VG 转换得到。根据 self-consistency 方程, 我们可以得到量子点中电
+荷的平均数目是：
+
+
+                                 57
+                               第四章 单量子点和微波谐振腔的耦合
+
+
+                                          1    +∞
+                             〈𝑁∓ 〉 = − ∫−∞ 𝑑ωf(ω)Im𝐺± (ω)                    (4-13)
+                                      𝜋
+
+其中 f 是费米方程。
+                                  1        2𝜖    𝛽       1       2𝜖
+                           0.5−     𝑎𝑟𝑐𝑡𝑎𝑛( ± ) + ± (0.5− 𝑎𝑟𝑐𝑡𝑎𝑛( ∓ ))
+                                  𝜋         Γ     𝜋      𝜋        Γ
+                  〈𝑁∓ 〉=                                 𝛽 𝛽                 (4-14)
+                                                    1− + 2 −
+                                                          𝜋
+
+                     2𝜖                       2𝜖± +2𝑈
+其中 𝛽±= 𝑎𝑟𝑐𝑡𝑎𝑛 ( Γ±) − 𝑎𝑟𝑐𝑡𝑎𝑛 (                          )。
+                                                Γ
+
+从实验测得的库仑菱形图可以得到𝛤=1.5 meV, U=5 meV 以及α=0.20–0.25 eV/V。
+因此，我们得到了量子点压缩系数的表达式
+                          1         2𝑒α𝑉𝐺    𝛽       1        2𝑒α𝑉𝐺
+                   0.5−     𝑎𝑟𝑐𝑡𝑎𝑛(       ) + ± (0.5− 𝑎𝑟𝑐𝑡𝑎𝑛(       ))
+   𝜕𝑁     ∂               𝜋           Γ       𝜋      𝜋          Γ
+ χ= 𝜕𝜖 = ∂𝑒α𝑉 {2                                 𝛽 𝛽                     }   (4-15)
+              𝐺                                1− + 2 −
+                                                  𝜋
+
+
+
+
+                                                    58
+                                       第四章 单量子点和微波谐振腔的耦合
+
+
+                                                          𝜕𝑁
+图 4.7 （a）量子点中空穴库的压缩系数 χ= 𝜕𝜖 和空穴数目 N 以及化学势𝜖有关，可以简
+
+单等效成费米能级的态密度[51]。（b）在库仑谷区域，空穴不能隧穿，压缩系数保持
+不变，量子点处于关闭状态（“off”state）。（c）在库仑谐振区域，空穴在量子点和源
+漏电极之间隧穿，压缩系数发生变化，量子点处于开启状态（“on”state）。（d）量子
+点的压缩系数发生变化时，谐振腔的幅值和相位信号发生改变，从而导致产生一个频
+           ћg 2 χ
+率移动δfR= 2𝜋
+         𝑐
+           。（e）单量子点-腔复合样品的电容等效模型。CAC 是量子点和腔之间
+
+的耦合电容。（f-g）蓝点（红色三角）代表从幅值和相位信号中提取出的δfR。橙线和
+                          ћg 2 χ
+蓝线分别是基于δfR= 2𝜋
+             𝑐
+               和运动方程理论的拟合。
+
+
+4.6.2 基于压缩系数获取空穴和谐振腔的耦合强度
+   多年来，研究者将主要的精力聚焦在双量子点和谐振腔的偶极耦合模式之上，
+与此同时，单量子点和腔的耦合鲜有实验研究。在我们的实验之前，只有 T. Kontos
+组在碳纳米管体系中电子型单量子点-腔的复合结构展开，揭示了单量子点-腔的
+耦合与双量子点-腔的耦合的差异，并发展出两套相应的方法和理论去研究单量
+子点-腔的耦合原理以及耦合强度[51-53]。在本文中，我们这两套方法和理论应
+用于解释和分析锗硅自组织纳米线空穴型单量子点和腔的耦合。在双量子点之中，
+量子点-腔的耦合强度是基于左点和右点之间的偶极子，这种偶极子在单量子点
+之中对应于隧穿的瞬间单量子点和源/漏电极之间产生的偶极子（图 4.7 a）。在这
+个过程中，量子点之中增加或者减少一个载流子，源漏之中的载流子库中会相应
+减少或增加一个载流子。但是单量子点之中的这种偶极子因为发生的时间过短，
+目前没有被任何理论和实验研究所报道。取而代之，我们利用光场势𝜖（photonic
+potential）的变化去研究单点之中的量子点和谐振腔的耦合。量子点的空穴和腔
+的耦合强度是利用库仑阻塞现象从频率移动中提取[51-53]。
+  不同的压缩系数对应着不同的腔的谐振频率，因而相对于作为纯腔谐振频率
+             𝑐           ћg 2 χ
+产生频率移动δfR = 2𝜋 与空穴和腔的耦合强度g𝑐 相关，其中ћ代表普朗克常量。结
+
+合 EOM 理论，我们可以得到δfR 的理论模拟，如下：
+                                                   1         2𝑒α𝑉𝐺    𝛽       1        2𝑒α𝑉𝐺
+                                            0.5−     𝑎𝑟𝑐𝑡𝑎𝑛(       ) + ± (0.5− 𝑎𝑟𝑐𝑡𝑎𝑛(       ))
+           ћgc 2 χ       ћgc 2     ∂               𝜋           Γ       𝜋      𝜋          Γ
+   δfR =             =                 {2                              𝛽 𝛽                        }(4-16)
+            2𝜋           2𝜋 ∂𝑒α𝑉𝐺                                   1− + 2 −
+                                                                        𝜋
+
+
+我们从实验获取的幅值和相位中提取δfR，如图 4.6（a-b）所示。通过将δfR 的理论
+模拟和实验数据相拟合，我们提取出单量子点-腔体系中空穴-腔的耦合强度为
+~148 MHz。这个数值和在碳纳米管单量子点-腔复合体系中获得的电子-腔的耦合
+强度 140 MHz 类似[2,3,50]。
+
+                                                          59
+                                      第四章 单量子点和微波谐振腔的耦合
+
+
+
+4.6.3 基于耦合电容评估空穴和谐振腔的耦合强度
+    在单量子点-谐振腔体系中获取电荷-腔的耦合强度的第二种方法是基于量
+子点和腔之间的耦合电容CAC 的变化。需要注意的是这是一种非直接的评估方法。
+量子点中的电荷数目的变化会引起电荷的重新分布，从而改变了每个电容板的电
+容值。量子点在每个电容板上的电荷由每个电容板的电荷组成，表示为：
+                            〈𝑄i 〉=−𝛼i e〈𝑁〉 + 𝑉i 𝐶i + 𝛼𝑖 (∑j 𝐶j 𝑉j )                          （4-17）
+对应的等效电容表示为：
+          𝐶̃i = ∂𝑉 i =𝛼i 𝑒 𝜕𝜖 𝜕𝑉 + 𝐶i (1 + 𝛼i )=(𝛼i 𝑒)2 𝜕𝜖 + 𝐶i (1 + 𝛼𝑖 )
+               ∂〈𝑄 〉      𝜕〈𝑁〉 𝜕𝜖                      𝜕〈𝑁〉
+                                                                                             （4-18）
+                    i                      i
+
+根据运动方程理论，由腔影响的量子点的耦合电容部分是
+                                            𝜕〈𝑁〉
+                             𝐶̃𝐴𝐶 = (𝛼AC 𝑒)2 𝜕𝜖 +𝐶𝐴𝐶 (1+𝛼AC )                                （4-19）
+
+             𝜕〈𝑁〉
+其中 (𝛼AC 𝑒)2 𝜕𝜖            代表量子点变化的电容∆CAC ，是由于腔的影响带来量子点总
+
+电容的变化量。𝐶𝐴𝐶 (1+𝛼AC ) 则是保持不变的电容。量子点电容的变化会在腔的反
+                                                                                          𝜕〈𝑁〉
+应中引入频率移动 δfR =−Cdot f0 /(2Cres )。我们基于运动方程理论获取 𝜕𝜖 ，并得到
+
+δfR的理论值。
+                                                                                 𝜕〈𝑁〉
+                                δfR ≈ −Cdot f0 /(2Cres ) =−(𝛼AC 𝑒)2 𝜕𝜖 f0 /(2Cres )               (4-20)
+
+
+其中𝛼AC =CAC ⁄C∑ 代表量子点-谐振腔耦合电容在量子点总体有效电容中占据比
+例。[2,3,45,50]
+    基于单量子点-腔复合体系的Anderson-Holstein哈密顿量：
+                                   ̂ (â+ â+)
+                H = 𝐻res + 𝐻dot + λ𝑁                   (4-21)
+𝐻res 和𝐻dot 分别是谐振腔和量子点的哈密顿量。𝑁             ̂ 和λ分别代表量子点的电荷数目
+以及腔和电荷的耦合强度。â和 â+分别是光场的湮灭和产生算符。量子点和腔的
+         ̂ (â + â+)可以经典等效为量子点和腔之间的电容板上的电
+耦合反应哈密顿量λ𝑁
+荷 QAC 乘以量子点的势Vrms 。
+                                  Q      Vrms    Q                      Q
+          λ= AC𝑁 =N QAC Qdot Vrms = e QAC Vrms = e𝛼AC Vrms (4-22)
+                      dot              dot
+       如第一种方法一样，我们将δfR理论值和从幅值和相位获得的δfR
+相拟合，可以拟合出𝛼AC 为0.32，空穴-量子点的耦合强度为148 MHz。我们很惊
+奇的发现两种拟合方法获取的耦合强度完全一致，再进一步研究我们发现两种方
+法是等效的，经过简单推导是可以相互转化的，过程如下：
+                            𝜕〈𝑁〉                     𝜕〈𝑁〉                     𝜕〈𝑁〉
+                 (𝛼AC 𝑒)2        f       (𝛼AC 𝑒)2         ω0       (𝛼AC 𝑒)2        ω0 ћ
+                             𝜕𝜖 0                    𝜕𝜖                       𝜕𝜖
+         δfR ≈                       =                         =                                 (4-23)
+                        2𝐶res                  2𝐶res 2𝜋              2𝐶res 2𝜋 ћ
+
+
+
+             ћω
+因为 ћVrms =√2C 0 ,
+                  res
+                                                           60
+                               第四章 单量子点和微波谐振腔的耦合
+
+
+                          𝜕〈𝑁〉                                  𝜕〈𝑁〉
+               (𝛼AC 𝑒)2        ћ(Vrms )2        (𝑒𝛼AC Vrms )2        ћ       (𝑒𝛼AC Vrms )2 χћ
+       δfR =              𝜕𝜖
+                                            =                   𝜕𝜖
+                                                                         =                      （4-24）
+                          2𝜋                            2𝜋                         2𝜋
+                                      gc 2 χћ
+和基于压缩系数χ得到的δfR =                                相比较, 可以从上式中单量子点-腔的体系中，
+                                           2𝜋
+
+电荷-腔的耦合强度为 gc =e𝛼AC Vrms [2,3,50]。
+
+4.7 评估空穴自旋和谐振腔的耦合强度
+   基于实验上获取的单量子点-腔体系中的空穴-腔的耦合强度，结合D. Loss、
+T. Mircea和 C. Kloeffel等人提出基于单量子点-腔耦合强度去评估自旋-腔的耦合
+强度理论，[20,30] 我们对锗硅自组织纳米线中空穴自旋和谐振腔的耦合强度进
+行评估。
+   单量子点中的自旋和谐振腔的耦合强度由下式估算。[20, 30]
+                 gs = gc (Ez /∆E0 )(l/𝜆so )                                                     （4-25）
+
+实验中量子点的尺寸为 l 为 70 nm。在第三章的工作中已经测得锗硅自组织纳米
+线单量子点的轨道能级间距（orbital level spacing，∆E0）为 1 meV，g 因子为 4.3[34]。
+假设施加 50 mT 的垂直磁场，塞曼劈裂为Ez =gµB B=13.1 µeV。自旋轨道耦合长
+度𝜆so 由λso =ћ⁄√(2m∗ ∆so )求得，其中重空穴的有效质量为电子质量的 0.28 倍，即
+m*=0.28me 。[20, 26, 27, 31] 在我们正在锗硅自组织纳米线上展开的双点的电偶
+极自旋共振实验中，初步获得自旋轨道耦合强度在 35-50 µeV 范围，因此，𝜆so 在
+28-57 nm 范围。基于方程（4-25），锗硅自组织纳米线的自旋轨道耦合强度为
+𝑔s ⁄2π=2–4 MHz。这个𝑔s ⁄2π是单个自旋磁耦极子和腔的磁场直接耦合强度的 5
+个量级[28]，也比铟砷纳米线体系中评估的𝑔s ⁄2π大一个量级[20]。
+   强耦合的标志是耦合强度𝑔s 大于退相干速率γ和光子在谐振腔的损耗速率κ。
+本章中κ⁄2π=7.37 MHz，锗硅自组织纳米线的自旋退相干速率γ⁄2π没有实验报道，
+但是如上文介绍，其比锗硅核壳纳米线的自旋退相干速率 6 MHz [54, 55]要小。
+[33, 34] 在 50 mT 的磁场下，本文评估的𝑔s 虽然和γ、κ在同一个量级，但是仍然
+小于γ、κ，因而强耦合并没有达到。但是需要强调的是，这只是一个基于𝑔c 实验
+值从理论上评估的𝑔s ，在未来的实验中，仍然可以从多方面进行对实验进行优化
+和改进。κ可以通过改进基片和腔的结构设计进行优化。γ可能通过对锗的纯化进
+行优化。同样是第四族元素的硅经过纯化后，γ提升了惊人的 5500 倍。锗已经相
+应的纯化技术[56, 57]，相信不久能纯化的锗有望应用于量子点体系。利用 SQUID
+腔更大匹配阻抗提升𝑔s 从原理上是一个可行的方案。Wallraff 组在砷化镓体系中
+利用 SQUID 腔将耦合强度是传统透射腔的 6 倍[12]。本文的𝑔s 采用的假设磁场
+只有 50 mT，低于铝的失超阈值磁场。如果采用铌腔，能够承受更大的磁场。因
+
+                                                      61
+             第四章 单量子点和微波谐振腔的耦合
+
+
+
+此，未来的自旋和腔的实验中采用多种优化方案，锗硅自组织纳米线空穴自旋和
+腔的强耦合是可行的。
+
+4.8 本章小结
+  我们将微波超导谐振腔耦合到锗硅自组织纳米线空穴型单量子点。超导微波
+谐振腔的幅值和相位信号可以用作灵敏探测器读取量子点的电荷态。这种耦合机
+制可以用复导纳模型和谐振腔-单量子点的复合量子模型去解释。我们将两种理
+论和方法应用于分析出单量子点和谐振腔的复合模型中的空穴和谐振腔的耦合
+强度为𝑔c ⁄2π=148 MHz，并且以此为基础可以评估出自旋和谐振腔的耦合强度在
+2–4 MHz 范围。评估得到的自旋和谐振腔的耦合强度接近但是仍然小于量子点电
+荷态的退相干时间和谐振腔中光子的损耗时间，显示了锗硅自组织纳米线空穴型
+量子点体系中的自旋和谐振腔的耦合强度接近但是仍然没有达到强耦合。本章提
+出了相应的实验优化方案，后续的实验中利用这些方案，锗硅自组织纳米线体系
+中旋和谐振腔的强耦合是可行的。
+
+
+
+
+                    62
+                                第四章 单量子点和微波谐振腔的耦合
+
+
+
+                                           参考文献
+[1] Z. L. Xiang, S. Ashhab, J. Q. You, F. Nori, Hybrid quantum circuits: Superconducting circuits
+     interacting with other quantum systems. Rev. Mod. Phys. 85, 623-653 (2013).
+[2] M. R. Delbecq, V. Schmitt, F. D. Parmentier, N. Roch, J. J. Viennot, G. Fève,; B. Huard, C.
+     Mora, A. Cottet, T. Kontos, Coupling a quantum dot, fermionic leads, and a microwave cavity
+     on a chip. Phys. Rev. Lett. 107, 256804 (2011).
+[3] M. R. Delbecq, L. E. Bruhat, J. J. Viennot, S. Datta, A. Cottet, T. Kontos, Photon-mediated
+     interaction between distant quantum dot circuits. Nat. Commun. 4, 1400 (2013).
+[4] J. J. Viennot, M. C. Dartiailh, A. Cottet, T. Kontos, Coherent coupling of a single spin to
+     microwave cavity photons. Science 349, 408-411 (2015).
+[5] L. E. Bruhat, T. Cubaynes, J. J. Viennot, M. C. Dartiailh, M. M. Desjardins, A. Cottet, T. Kontos,
+     Strong coupling between an electron in a quantum dot circuit and a photon in a cavity.
+     arXiv:1612.05214 (2016).
+[6] X. Mi, J. V. Cady, D. M. Zajac, P. W. Deelman, J. R. Petta, Strong coupling of a single electron
+     in silicon to a microwave photon. Science 355,156-158 (2017).
+[7] X. Mi, J. V. Cady, D. M. Zajac, J. Stehlik, L. F. Edge, J. R. Petta, Circuit quantum
+     electrodynamics architecture for gate-defined quantum dots in silicon. Appl. Phys. Lett. 110,
+     043502 (2017).
+[8] X. Mi, C. G. Péterfalvi, G. Burkard, J. R. Petta, High-resolution valley spectroscopy of si
+     quantum dots. Phys. Rev. Lett. 119, 176803 (2017).
+[9] Y. Y. Liu, J. Stehlik, C. Eichler, M. J. Gullans, J. M. Taylor, J. R. Petta. Semiconductor double
+     quantum dot micromaser. Science 347, 285-287. (2015)
+[10] Y. Y. Liu, K. D. Petersson, J. Stehlik, J. M. Taylor, J. R. Petta, Photon emission from a cavity-
+     coupled double quantum dot. Phys. Rev. Lett. 113, 036801 (2014).
+[11] T. Frey, P. J. Leek, M. Beck, J. Faist, A.Wallraff, K. Ensslin, T. Ihn, M. Büttiker, Quantum dot
+     admittance probed at microwave frequencies with an on-chip resonator. Phys. Rev. B 86,
+     115303 (2012).
+[12] A. Stockklauser, P. Scarlino, J. V. Koski, S. Gasparinetti, C. K. Andersen,; C. Reichl, W.
+     Wegscheider, T. Ihn, K. Ensslin, A. Wallraff. Strong Coupling Cavity QED with Gate-Defined
+     Double Quantum Dots Enabled by a High Impedance Resonator. Phys. Rev. X 7, 011030 (2017).
+[13] T. Frey, P. J. Leek, M. Beck, A. Blais, T. Ihn, K. Ensslin, A. Wallraff, Dipole coupling of a
+     double quantum dot to a microwave resonator. Phys. Rev. Lett. 108, 046807 (2012).
+[14] J. Basset, D. D. Jarausch, A. Stockklauser, T. Frey, C. Reichl, W. Wegscheider, T. M. Ihn, K.
+     Ensslin, A. Wallraff, Single-electron double quantum dot dipole-coupled to a single photonic
+     mode. Phys. Rev. B 88, 125312 (2013).
+
+                                                 63
+                                第四章 单量子点和微波谐振腔的耦合
+
+
+[15] R. Wang, R. S. Deacon, D. Car, E. P. A. M. Bakkers, K. Ishibashi, InSb nanowire double
+     quantum dots coupled to a superconducting microwave cavity. Appl. Phys. Lett. 108, 203502
+     (2016).
+[16] G. W. Deng, D. Wei, S. X. Li, J. R. Johansson, W. C. Kong, H. O. Li, G. Cao, M. Xiao, G. C.
+     Guo, F. Nori, H. W. Jiang, G. P. Guo, Coupling two distant double quantum dots with a
+     microwave resonator. Nano Lett. 15, 6620-6625 (2015).
+[17] G. W. Deng, D. Wei, J. R. Johansson, M. L. Zhang, S. X. Li, H. O. Li, G. Cao, M. Xiao, T. Tu,
+     G. C. Guo, H. W. Jiang, F. Nori, G. P. Guo, Charge number dependence of the dephasing rates
+     of a graphene double quantum dot in a circuit QED architecture. Phys. Rev. Lett. 115, 126804
+     (2015).
+[18] M. L. Zhang, D. Wei, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H.
+     W. Jiang, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 105, 073510 (2014).
+[19] Mi, X. M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A Coherent Spin-
+     Photon Interface in Silicon. arXiv:1710.03265 (2017).
+[20] K. D. Petersson, L. W. McFaul, M. D. Schroer, M. Jung, J. M. Taylor, A. A. Houck, Petta, J. R.
+     Circuit quantum electrodynamics with a spin qubit. Nature 490, 380-383 (2012).
+[21] X. D. Hu, Y. X. Liu, F. Nori, Strong coupling of a spin qubit to a superconducting stripline
+     cavity. Phys. Rev. B 86, 035314 (2012).
+[22] P. Q. Jin, M. Marthaler, A. Shnirman, G. Schön, Strong coupling of spin qubits to a
+     transmission line resonator. Phys. Rev. Lett. 108, 190506. (2012).
+
+[23] Mi, X. M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A coherent spin-
+     photon interface in silicon. Nature, 555, 599–603 (2018).
+[24] N. Samkharadze, G. Zheng, N. Kalhor, D. Brousse, A. Sammak, U. C. Mendes, A. Blais, G.
+     Scappucci, L. M. K. Vandersypen, Strong spin-photon coupling in silicon. Science, 359, 1123-
+     1127 (2018).
+[25] L.E. Bruhat, T. Cubaynes, J.J. Viennot, M. C. Dartiailh, M.M. Desjardins, A. Cottet, T. Kontos.
+     Strong coupling between an electron in a quantum dot circuit and a photon in a cavity. arXiv:
+     1612.05214 (2016).
+[26] A. Imamoğlu, Cavity-QED based on collective magnetic dipole coupling: spin ensembles as
+     hybrid two-level systems. Phys. Rev. Lett. 102, 083602 (2009).
+[27] C. Kloeffel, M. Trif, D. Loss, Strong spin-orbit interaction and helical hole states in Ge/Si
+     nanowires, Phys. Rev. B 84, 195314 (2011).
+[28] M. Trif, V. N. Golovach, D. Loss, Spin dynamics in InAs nanowire quantum dots coupled to a
+     transmission line. Phys. Rev. B, 77, 045434 (2008).
+
+                                                64
+                                 第四章 单量子点和微波谐振腔的耦合
+
+
+[29] J. T. Hung, E. Marcellina, B. Wang, A. R. Hamilton, D. Culcer, Phys. Rev. B 95, 195316 (2017).
+[30] X. J. Hao, T. Tu, G. Cao, C. Zhou, H. O. Li, G. C. Guo, W. Y. Fung, Z. Ji, G. P. Guo, W. Lu,
+     Strong and Tunable Spin−Orbit Coupling of One-Dimensional Holes in Ge/Si Core/Shell
+     Nanowires. Nano Lett. 10, 2956-2960 (2010).
+[31] S.Joe, T. Mengyang, R. Sven, C. Dimitrie, Quantum computing with acceptor spins in silicon.
+     Nat. Nano. 27, 244001 (2016).
+[32] A. P. Higginbotham, F. Kuemmeth, T. W. Larsen, M. Fitzpatrick, J. Yao, H. Yan, C. M. Lieber,
+     C. M. Marcus, Antilocalization of Coulomb Blockade in a Ge/Si Nanowire. Phys. Rev. Lett.
+     112, 216806 (2014).
+[33] E. Marcellina, A. R. Hamilton, R. Winkler, D. Culcer, Spin-orbit interactions in inversion-
+     asymmetric two-dimensional hole systems: A variational analysis. Phys. Rev. B 95, 075305
+     (2017).
+[34] H. Watzinger, C. Kloeffel, L. Vukušić, M. D. Rossell, V. Sessi, J. Kukučka, R. Kirchschlager,
+     E. Lausecker, A. Truhlar, M. Glaser, A. Rastelli, A. Fuhrer, D. Loss, G. Katsaros, Nano Lett.
+     16, 6879-6885 (2016).
+[35] S. X. Li, Y. Li, F. Gao, G. Xu, H. O. Li, G. Cao, M. Xiao, T. Wang, J. J. Zhang, G. P. Guo,
+     Measuring hole spin states of single quantum dot in germanium hut wire. Appl. Phys. Lett. 110,
+     133105 (2017).
+[36] H. Watzinger , C. Kloeffel , L. Vukusic , M. D. Rossell , V. Sessi , J. Kukucka , R. Kirchschlager ,
+     E. Lausecker , A. Truhlar , M. Glaser , A. Rastelli , A. Fuhrer , D. Loss , and G. Katsaros ,
+     Heavy-Hole States in Germanium Hut Wires, Nano Lett. 16, 6879 (2016).
+[37] Zhong, Z.; Bauer, G. Site-controlled and size-homogeneous Ge islands on prepatterned Si (001)
+     substrates. Appl. Phys. Lett. 2004, 84, 1922.
+[38] J. J. Zhang, G. Katsaros, F. Montalenti, D. Scopece, R. O. Rezaev, C. Mickel, B. Rellinghaus,
+     L. Miglio, S. De Franceschi, A. Rastelli, O. G. Schmidt, Monolithic growth of ultrathin Ge
+     nanowires on Si (001). Phys. Rev. Lett. 109, 085502 (2012).
+[39] M. L. Zhang, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H. W. Jiang,
+     I. Siddiqi, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 104, 083511 (2014).
+[40] G. Katsaros, J. Tersoff, M. Stoffel, A. Rastelli, P. Acosta-Diaz, G. S. Kar, G. Costantini, O. G.
+     Schmidt, K. Kern, Positioning of Strained Islands by Interaction with Surface Nanogrooves.
+     Phys. Rev. Lett. 101, 096103 (2008).
+[41] J. J. Zhang, M. Stoffel, A. Rastelli, O. G. Schmidt, V. Jovanović, L. K. Nanver, G. Bauer, SiGe
+     growth on patterned Si(001) substrates: Surface evolution and evidence of modified island
+     coarsening. Appl. Phys. Lett. 91, 173115 (2007).
+
+                                                   65
+                                第四章 单量子点和微波谐振腔的耦合
+
+
+[42] M. L. Zhang, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H. W. Jiang,
+     I. Siddiqi, G. P. Guo, Symmetric reflection line resonator and its quality factor modulation by
+     a two-dimensional electron gas. Appl. Phys. Lett. 104, 083511 (2014).
+[43] J. Basset, A. Stockklauser, D. D. Jarausch, T. Frey, C. Reichl, W. Wegscheider, A. Wallraff, K.
+     Ensslin, T. Ihn, Evaluating charge noise acting on semiconductor quantum dots in the circuit
+     quantum electrodynamics architecture. Appl. Phys. Lett. 105, 063105 (2014).
+[44] D. M. Pozar, Microwave Engineering. (2004,Wiley)
+[45] J. J. Viennot, M. R. Delbecq, L. E. Bruhat, M. C. Dartiailh, M. M. Desjardins, M. Baillergeau,
+     A. Cottet, T. Kontos, Towards hybrid circuit quantum electrodynamics with quantum dots. Com.
+     Ren. Phy. 17, 705-717 (2016).
+[46] S. J. Chorley, J. Wabnig, Z. V. Penfold-Fitch, K. D. Petersson, J. Frake, C. G. Smith, M. R.
+     Buitelaar, Measuring the complex admittance of a carbon nanotube double quantum dot. Phys.
+     Rev. Lett. 108, 036802 (2012).
+[47] A. Cottet, C. Mora, T. Kontos, Mesoscopic admittance of a double quantum dot. Phys. Rev. B
+     83, 121311 (2011).
+[48] A. Prêtre, H. Thomas, M. Büttiker, Dynamic admittance of mesoscopic conductors: Discrete-
+     potential model. Phys. Rev. B 54 (1996).
+[49] R. Li, J. Q. You, C. P. Sun, F. Nori, Controlling a nanowire spin-orbit qubit via electric-dipole
+     spin resonance. Phys. Rev. Lett. 111, 086805. (2013)
+[50] M. R. Delbecq, Coupling quantum dot circuits to microwave cavities, PhD thesis. (2012).
+
+[51] M. M. Desjardins, J. J. Viennot, M. C. Dartiailh, L. E. Bruhat, M. R. Delbecq, M. Lee, M. S.
+     Choi, A. Cottet, T. Kontos, Observation of the frozen charge of a Kondo resonance. Nature 545,
+     71 (2017).
+[52] C. Audrey, C. D. Matthieu, M. D. Matthieu, C. Tino, C. C. Lauriane, D. Matthieu, J. V. Jérémie,
+     E. B. Laure, D. Benoit, K. Takis, J. Phys.: Condens. Matter 29, Cavity QED with hybrid
+     nanocircuits: from atomic- like physics to condensed matter phenomena. J. Phys.: Condens.
+     Matter, 29, 433002 (2017).
+[53] L. E. Bruhat, J. J. Viennot, M. C. Dartiailh, M. M. Desjardins, T. Kontos, A. Cottet, Cavity
+     Photons as a Probe for Charge Relaxation Resistance and Photon Emission in a Quantum Dot
+     Coupled to Normal and Superconducting Continua. Phys. Rev. X 6, 021014 (2016).
+[54] Y. Hu, F. Kuemmeth, C. M. Lieber, C. M. Marcus, Hole spin relaxation in Ge–Si core–shell
+     nanowire qubits. Nat. Nanotechnol. 7, 47-50 (2012).
+[55] A. P. Higginbotham, T. W. Larsen, J. Yao, H. Yan, C. M. Lieber, C. M. Marcus, F. Kuemmeth,
+     Hole spin coherence in a Ge/Si heterostructure nanowire, Nano Lett. 14, 3582-3586, (2014).
+[56] J. Yoneda, K. Takeda, T. Otsuka, T. Nakajima, M. R. Delbecq, G. Allison, T. Honda, T. Kodera,
+                                                 66
+                              第四章 单量子点和微波谐振腔的耦合
+
+
+
+    S. Oda, Y. Hoshi, N. Usami, K. M. Itoh, S. Tarucha, A >99.9%-fidelity quantum-dot spin qubit
+    with coherence limited by charge noise. arXiv:1708.01454, (2017).
+[57] K. Takeda, J. Kamioka, T. Otsuka, J. Yoneda, T. Nakajima, M. R. Delbecq, S. Amaha, G.
+    Allison, T. Kodera, S. Oda, S. Tarucha, A fault-tolerant addressable spin qubit in a natural
+    silicon quantum dot. S. Sci. Adv. 2, e1600694 (2016).
+
+
+
+
+                                               67
+            第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+
+第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+  锗硅自组织纳米线由于较强的自旋轨道耦合强度和长退相干时间以及控制
+生长潜能吸引了研究者的目光[1-4]。在这种材料上制备的量子点中的电荷态和自
+旋态可以用作构建量子芯片中的量子比特，用于快速电控自旋比特[5,6]和自旋-
+谐振腔的强耦合[7-10]等应用。作为一种新型半导体材料，很多性质都未被探索。
+  一种灵敏的测量手段是探索锗硅自组织纳米线中的性质最为基础的也是必
+须的。在初期的实验中，量子点中的电荷或者自旋态通常通过传统的直流输运方
+法读出。但是很多实验量子点需要工作在少空穴/电子区甚至是最后一个空穴/电
+子区，这些区域通常表现出较小的隧穿率、较小的电容和较大的电阻等特点很难
+被直流输运方法探测。然后，研究者通过在量子点附近的分离电荷探测器
+（Separated Charge Sensors）实现了对量子点中电荷态和自旋态的探测。量子点
+接触 QPC [11-12]或者单电子晶体管 SET [13-15] 是代表性的此类探测器。但是
+锗硅自组织纳米线由于其特殊的生长结构和分布特点，不易在纳米线附近构建分
+离电荷探测器[1-4,16]。如第四章所示，研究者利用与量子点耦合的超导微波谐振
+腔实现对在多种材料体系制备的双量子点最后一个电子/空穴中电荷态和自旋态
+的灵敏的非破坏性测量探测[17-22]。谐振腔和量子点的复合结构保证了样品和电
+极之间有相对弱的耦合，可以避免和费米库耦合引入的退相干[23]。在石墨烯双
+点体系中已经正式即使量子点处于与外界几乎隔离的状态，直流输运方法没有信
+号时，微波谐振腔仍然能实现灵敏探测功能[24]。这种复合结构能够减弱量子点
+所处的环境中复杂的电荷噪声对于量子比特退相干的负面影响，有利于进一步提
+升退相干时间。
+  在第四章介绍了谐振腔和单量子点的耦合之后，本章我们在锗硅自组织纳米
+线空穴量子点和超导微波谐振腔的复合结构中，利用反射的微波幅值和相位信号
+探测量子点中复导纳和隧穿率。谐振腔的幅值和相位能够应用于确定量子点的量
+子点复导纳和电阻电容，即便是在直流输运方法无法探测的区域，谐振腔信号依
+旧展现了良好的灵敏性。微波的反应进一步评估空穴在量子点和源漏电极之间的
+隧穿率。我们基于谐振腔微波信号的频率移动和频率展宽建立了一个理论模型用
+于解释探测原理，并且这个模型被实验结果所验证。这项技术实现了对锗硅自组
+织纳米线量子点性质的灵敏探测，在未来的研究中可望应用于自旋态的探测中。
+
+5.1 样品结构和测量系统
+  图 5.1（a）展示了改进的谐振腔和量子点耦合的复合结构，和第四章中采用
+的结构类似，量子点仍然位于传输线的两端，即微波电磁场最强的位置，通过源
+                       68
+             第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+电极和谐振腔耦合到一起。谐振腔设计以及量子点和腔的耦合原理我们已详细叙
+述。关于量子点，我们在结构设计上做了改进，本章中的单量子点是由三个顶栅
+极调节形成。其中 G2 电极调节量子点的化学势，G1 电极和 G3 电极做了势垒电
+极调节空穴在量子点和源漏电极之间的隧穿。每一个顶栅极都接入 SRS830 锁相
+（Lock-in）放大器的 Auxout 输出端口，并调节顶栅极电压。
+
+
+
+
+图5.1（a） 量子点和谐振腔复合结构的三维示意图。谐振腔由两个超导传输线组成，并通过
+AC板连接到微波的输入和输出端口。一个量子点位于红色矩形框区域。（b）锗硅自组织纳
+米线量子点的结构三维示意图，由源漏电极和三个顶栅极以及一层绝缘层构成。图中可以看
+出锗硅自组织纳米线的三角形横截面。
+                （c）复合结构的直流输运测量和微波测量电路系统。
+两个超导传输线上的差分微波信号构建了稳定的电磁场。（d）单量子点的扫描电子显微镜
+照片。
+
+5.2 测量结果
+   图5.2（a）展示了当量子点所有电极都接地时，纯腔的幅值和相位信号。利
+用半波长开路传输线腔模型，我们可以确定纯腔的谐振频率是ω0 /2π=5.92 GHz，
+腔的内部损耗为κi /2π=5.30 MHz，外部损耗为κe /2π= 4.50 MHz。我们注意到这一
+块样品的腔的内损和外损都偏大。腔的内损主要是基片损耗以及量子点电路带来
+的损耗。外部损耗则是由腔的传输线和AC板之间的指电容设计决定。谐振腔的
+品质因子为610，寄生电容为Ccav =0.54 pF。
+
+                         69
+             第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+  接下来，我们基于库仑阻塞现象[20,25-27]利用谐振腔定量地测量量子点的
+复导纳以及隧穿率。我们在用直流输运测量方法记录流过源漏电极的直流微分电
+导的同时，也用网络分析仪记录谐振腔反射的微波的幅值和相位信号。如图 2b
+所示，微分电导的库仑震荡图包括一系列高度不一的库仑峰（Coulomb Peaks），
+库仑峰源自于携带电荷的空穴在量子点和源漏电极之间的隧穿产生的电流。之前
+的研究已经证实库仑峰的高度不均等是由基态波函数和电极之间的耦合模式决
+定的，库仑峰的高度符合随机矩阵理论（Random Matrix Theory）[28-30]。我们
+定性的分析，图 5.2（b-d）分别是直流微分电导、相位和幅值三种测量通道获得
+了对应的库仑震荡图（Coulomb Oscillation Diagram）。很明显，库仑峰的位置在
+三种测量通道获得的库仑震荡图上有着很好的对应，这说明幅值和相位信号产生
+的变化是由直流信号引起的。
+
+
+
+
+图5.2 (a) 谐振腔的幅值和相位的频率谱函数，从中可以提取出谐振腔的特征参数。（b）库
+仑震荡图表示微分电导和加上顶栅极G2上的电压的关系。一系列高度不均一的库仑峰是由
+于空穴在量子点和源漏电极之间隧穿产生。源漏电极上施加的偏置电压为Vsd =50 μV。（c-
+d）与微分电导同时测量的谐振腔的幅值移动（c）和相位移动（d）。谐振腔的探测频率固
+定在纯腔的谐振频率ω0 ⁄2π= 5.92 GHz。
+                         （e）量子点和谐振腔复合结构的集成等效电路模型。
+
+
+                        70
+               第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+   但是，库仑峰的高度在三种测量通道获得的库仑震荡图并不是线性对应的。
+特别是在Vsd >0.37 V的区域，传统的微分电导的测量已经探测不到明显的信号，
+但是在幅值和相位上仍然有额外三个明显的库仑峰，并且库仑峰在幅值和相位图
+上还可以完全对应，也排除了是噪声信号的可能。最后三个图在相位图上变化很
+明显，但是在幅值图上近乎变化非常微弱。实际上 1.07 %，1.20 % 和 1.37 %，
+幅值能够探测到非常微弱的变化，这也显示谐振腔可以很灵敏的感应微弱的变化。
+只是当VG2 在(0 V, 0.28 V)时，幅值变化接近 8 %很大的变化，掩盖了最后三个峰
+的变化值。
+   谐振腔测量和直流输运测量的这种区别显示了两种方法拥有不同的测量机
+理。一方面，我们可以从幅值和相位信号上获取量子点的性质。幅值和相位能够
+更加方便也更加灵敏地测量出如复导纳和隧穿率等量子点性质。另一方便，怎样
+将谐振腔的幅值和相位信号能够定量的转换成等效的直流输运信号是一个重要
+的课题。接下来，我们将详细讨论直流输运和谐振腔测量的相同和不同之处。
+
+5.3 探测量子点复导纳
+   根据《微波工程》[31]中的标准电路分析，量子点和谐振腔复合结构的集成
+等效电路模型（Lumped Circuit Model），如图5.2（e）所示。其中量子点等效为
+并联的电容电阻电路，其复导纳为 Ydot (ω) ≈ 1/Reff + jωCeff ，电阻Reff 和电容 Ceff
+分别是复导纳的实部和虚部。谐振腔则等效为并联的电容电阻和电感的电路。腔
+的匹配阻抗通常设计为Z0 = 50 Ω[32-34]。
+   当调节中间的顶栅极电压VG2 ，空穴在量子点和源漏空穴库之间隧穿，量子
+点的电荷态以及空穴数目都会发生改变，从而量子点的等效电容和等效电阻也会
+随之改变。受量子点和谐振腔之间的色散耦合以及损耗耦合的影响[20, 22, 25-27]，
+谐振腔的幅值和相位信号会随之发生改变。根据之前的复导纳的理论以及实验研
+究工作[32-34],量子点的等效电容的改变会在反射谱相位信号上产生一个相位移
+动∆Φ：
+                   ∆Φ⁄Ceff ~ 2Q⁄Ccav                   (5-1)
+同时，量子点的等效电阻的改变会在反射谱的幅值信号上产生一个幅值移动
+∆│𝐴│：
+                   ∆│𝐴│⁄𝐴=2𝑄 2 𝑍0 ⁄Reff                (5-2)
+综上所述，从谐振腔的幅值和相位信号的移动可以转换得到量子点的等效电容和
+电阻信息，也就是复导纳。接下来我们用具体的实验数据展示这个过程。从量子
+点的库仑震荡图中，当VG2 =0.02 V时，图5.2（c）中相位变化∆Φ约为0.7 度，意
+味着量子点的有效电容为0.053 fF。图5.2（d）幅值变化∆│𝐴│⁄𝐴约为7.5 %，意味
+着量子点的有效电阻约为480 MΩ，这个值和图5.2（b）中的直流输运测量的值相
+                               71
+               第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+近。当VG2 >0.4 V，直流输运检测不到有效微分电导信号，但是谐振腔的幅值和
+相位仍有明显的反应。VG2 =0.42 V时，∆Φ约为0.14度，∆│𝐴│⁄𝐴约为1.2 %，所以
+这个位置的量子点的有效电容为0.011 fF，有效电阻为3.1 GΩ。如此大的有效电
+容和如此小的有效电阻也能够解释在Vsd =50 μV 的偏置电压下，直流输运探测
+不到有效信号的原因。
+
+5.4 谐振腔信号和微分电导的模型
+  更进一步，我们基于频率移动∆ω和频率展宽∆κ定量的研究谐振腔的反应和
+直流微分电导的关系。基于半波长开路传输线谐振腔模型[35-37]，单量子点和谐
+振腔的复合结构的反射系数为：
+                                          1
+                               j[(ω0 +δωR )-ω]+ [(κi+2δωD )-κe ]
+               𝑆̃11(ω) = −                2
+                                          1                             .        (5-3)
+                          j[(ω0 +δωR )-ω]+ [(κi +2δωD )+κe ]
+                                          2
+
+谐振腔的幅值和相位分别为
+                                               1
+                          j[(ω0 +δωR)-ω]+2[(κi +2δωD )-κe ]
+                𝐴=│                           1                   │              (5-4)
+                       j[(ω0 +δωR )-ω]+2[(κi+2δωD )+κe]
+
+                                       1
+                           j[(ω0 +δωR )-ω]+ [(κi+2δωD )-κe ]
+                                       2
+               Φ= arg[                 1                 ]                       (5-5)
+                       j[(ω0 +δωR )-ω]+ [(κi +2δωD )+κe ]
+                                       2
+
+在一个单量子点和谐振腔的复合结构中，ω0 , κi , κe 可以认为是常数，探测频率ω
+被设定为一个固定值，本章中ω=ω0 。所以𝐴和Φ可以认为是关于变量δfR和δfD的方
+程。在实验测量得到𝐴和Φ基础上，更进一步可以推导得到δfR和δfD，表示为：
+                       1
+                         (𝜅 2 −κe 2 )∆Φ
+                       4 𝑖
+                δfR=                                                            (5-6)
+                               κe
+
+                                                         2
+                                         (𝜅𝑖 2 −κe 2 )∆Φ    (∆𝐴+1) 2
+                       1 √(∆𝐴−1)[              4κe
+                                                        ] +
+                                                               4
+                                                                  κe     1
+                δf D= 2                                                − 2 κe    (5-7)
+                                              1−∆𝐴
+
+需要注意的是，上面两个表达式只针对单量子点和反射腔复合结构有效。单量子
+点和透射腔复合结构的表达式可参阅T. Kontos组M. R. Delbecq的工作[27]。δfR和
+δfD完整表达式是非常复杂的，了方便计算，我们在实际实验条件下做了部分项近
+似处理。
+  量子点的电容变化Cdot 影响腔和量子点之间的色散耦合导致了频率移动
+                               C
+                   δfR ≈ −2Cdot f0                                              （5-8）
+                                   res
+
+量 子 点 的 电 阻 变 化 Rdot 影 响 腔 和 量 子 点 之 间 的 损 耗 耦 合 导 致 了 频 率 展 宽
+                              1
+                 δfD≈ 2C                                                        （5-9）
+                             res Rdot
+
+其中1⁄Rdot =dI/dV。从方程（5-9）可以看出，∆κ和微分电导是线性对应关系。之
+
+                                              72
+                       第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+前的工作证实了δfD和(δfR)2 成比例变化。δfD和(δfR)2 与微分电导成正比例的关系
+也被运动方程理论证实[20,23,27]。ω0 , κi , κe 在特定的样品上可视为常数，因此
+幅值移动∆│𝐴│和相位移动∆Φ可以表示以微分电导为变量的函数为：
+∆│𝐴│=│𝑆̃11(δfR,δfD,ω,ω0 ,κi ,κe )│ − 𝐴0 =│𝑆̃11(𝑑𝐼 ⁄𝑑𝑉 ,ω0 ,κi ,κe )│ − 𝐴0     (5-10)
+∆Φ=−arg[𝑆̃11(δfR,δfD,ω,ω0 ,κi ,κe )]−Φ0=−arg [𝑆̃11(𝑑𝐼 ⁄𝑑𝑉 ,ω0 ,κi ,κe )]−Φ0   (5-11)
+其中𝐴0 和Φ0 是纯腔在谐振频率出幅值和相位的信号，作为参考值。
+     从图5.2（b-d）库仑震荡图的12组对应的库仑峰位置，我们提取了微分电导
+与谐振腔的相位和幅值信号的对应关系，分别用图5.3（a）的红色三角和图5.3（b）
+的蓝色五角星表示。以方程（5-8）和（5-9）为基础结合实验数据以微分电导为
+自变量拟合了∆│𝐴│和∆Φ，分别如图5.3（a）和（b）中的黑线所示，与实验值有
+很好的对应，这也验证了谐振腔的幅值和相位信号的反应与微分电导的关系。图
+中可以看出，谐振腔的幅值和相位信号与直流微分电导信号不是线性对应关系，
+但是需要注意的是，量子点和腔的复合结构中，量子点或者腔或者二者的耦合中
+参数的变化可能导致幅值和相位信号反应产生很大的改变，这一点可以用方程
+（5-8）和（5-9）验证。因为谐振腔的幅值和相位信号的改变本质上说都是源自
+于反射系数𝑆̃11(ω)的改变，所以幅值和相位中包含的信息本质上也是一样的，二
+者可以相互作为验证。但是在实际的实验中，可能会出现只探测到幅值或者相位
+信号中的一个，另一个信号很微弱或者完全探测不到。
+
+
+
+
+图5.3（a）相位变化和微分电导的关系。黑线是基于方程（8）结合实验数据的理论拟合。红
+色三角是从图5.2（b）和（c）的库仑峰位置提取的实验值。)/2π=)0 /2π=5.92 GHz, κi /2π=
+5.30 MHz, κe /2π= 4.50 MHz。（b）相位变化和微分电导的关系。黑线是基于方程（9）结合
+实验数据的理论拟合。红色三角是从图5.2（b）和（d）的库仑峰位置提取的实验值。
+
+5.5 探测量子点的隧穿率
+     我们还可以用电荷隧穿对复导纳的变化给出一个物理的解释。如图5.4（a）
+所示，在没有谐振腔的影响下，量子点和源漏电极之间的电势能差为ϵ0 。当探测
+                                           73
+              第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+频率固定，谐振腔的传输线之间电磁场会在量子点的源漏偏置电压上产生电势震
+荡VRF (t)，也随之改变量子 点和源电极或者漏电 极之间的电势能差 δϵ(t) =
+ϵ0 −e𝛼VRF (t)[21,32-34]。这里，e是元电荷电量，𝛼是形容顶栅极的栅极电压和势
+能之间转化的杠杆因子。当量子点能级与源电极/漏电极的能级齐平，即δϵ(t)=0，
+空穴在量子点和源漏空穴库之间发生隧穿。空穴隧穿会产生两种贡献：一方面会
+改变量子点的有效电阻，另一方面电荷的重新分布会改变量子点的有效电容
+[27,32-34]。与此同时，Ceff 会影响量子点和谐振腔之间的色散（损耗）耦合，Reff
+会影响量子点和谐振腔之间的损耗耦合，从而导致谐振腔反射信号的幅值移动和
+相位移动，如图5.4（c）所示。
+
+
+
+
+图5.4（a）谐振腔的传输线之间电磁场会在量子点的源漏偏置电压上产生电势震荡VRF (t)，
+也随之影响量子点和源漏电极之间的电势能差 δϵ(t)= ϵ0 −e𝛼VRF (t)。（b）在库仑谐振区域，
+δϵ(t)=0，空穴在量子点和源电极/漏电极之间隧穿。（c）在固定G2时，调节G1和G3会改变空
+穴的隧穿。谐振腔的幅值和相位信号对于隧穿率的变化有灵敏的反应。（d-e）调节势垒电极
+的电压VG3，从而调节隧穿率时，对应的相位和幅值变化的库仑峰。
+   接着，我们基于利用谐振腔幅值和相位信号得到的量子点的有效电阻电容来
+估算空穴在量子点和源漏电极之间的隧穿率。为了验证这种方法的灵敏性，我们
+利用VG2 调节空穴隧穿的同时，也逐步改变隧穿势垒电压VG1 和VG3 然后测量幅值
+和相位信号对于隧穿率改变的反应。对于特定的一个库仑峰来说，当在隧穿电极
+的上施加更大的电压，隧穿率会减小。在非相干极限（incoherent limit, h𝛤 ≪ 𝑘𝐵 𝑇）
+                         74
+                  第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+以及绝热极限条件下（opaque limit, 𝛤 ≪ ω0 ）,之前的实验工作[32-34]证实量子点
+的有效电容和电阻与隧穿率𝛤近似为：
+                            4𝑘 𝑇            𝛤2
+                   Reff = 𝑒 2 𝛼𝐵2 𝛤(1+ω 2 ),                  (5-12)
+                                            0
+                             𝑒 2 𝛼2     1
+                    Ceff = 4𝑘 𝑇         ω 2
+                                                .             (5-13)
+                               𝐵      1+ 02
+                                        𝛤
+
+当 隧 穿 率 减 小 ， 1⁄Reff 和 Ceff 会 随 之 减 小 。 结 合 ∆│𝐴│⁄𝐴 = 2𝑄 2 𝑍0 ⁄Reff 和
+∆Φ⁄Ceff ~ 2Q⁄Ccav，相信的∆│𝐴│和 ∆Φ也会减小，这和图4（d）和（e）的实验
+结果一致。锗硅自组织纳米线的𝛼=0.2-0.25 eV/V，[1-3]有效电荷温度可以从库仑
+电导中拟合出，为𝑇=135 mK[21,33,34]。当VG3 从0.59 V（图4e和f的红色曲线）逐
+步减小到0.55 V（图4e和f的蓝色曲线）时，隧穿率相应的从12.1 MHz 逐步增加
+到15.1 MHz。可见，谐振腔的幅值和相位信号对空穴隧穿非常敏感，能够用作灵
+敏探测的手段去评估空穴在量子点和源漏电极之间隧穿的隧穿率。
+
+5.6 本章小结
+   我们将一个超导微波谐振腔耦合到一个隧穿率可调的锗硅自组织空穴量子
+点。当传统的输运测量方法很难探测到有效信号时，谐振腔的幅值和相位信号仍
+然可以被用作灵敏探测器测量量子点的复导纳和隧穿率。我们基于频率移动和频
+率展宽给出了谐振腔探测原理的解释，以及幅值和相位信号与直流微分电导的定
+量对应关系，进一步被实验结果证实。这种微波谐振腔技术在未来的研究中可以
+用作探测量子点电荷态和自旋态的灵敏方法。
+
+
+
+
+                                            75
+                          第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+                                          参考文献
+[1] H. Watzinger, C. Kloeffel, L. Vukušić, M. D. Rossell, V. Sessi, J. Kukučka, R. Kirchschlager,
+     E. Lausecker, A. Truhlar, M. Glaser, A. Rastelli, A. Fuhrer, D. Loss, G. Katsaros, Nano Lett.
+     16, 6879-6885 (2016).
+[2] S. X. Li, Y. Li, F. Gao, G. Xu, H. O. Li, G. Cao, M. Xiao, T. Wang, J. J. Zhang, G. P. Guo,
+     Measuring hole spin states of single quantum dot in germanium hut wire. Appl. Phys. Lett. 110,
+     133105 (2017).
+[3] L. Vukušić, J. Kukučka, H. Watzinger, and G. Katsaros. Fast Hole Tunneling Times in
+     Germanium Hut Wires Probed by Single-Shot Reflectometry. Nano Lett., 17, 5706–5710
+     (2017).
+[4] C. Kloeffel, M. Trif, D. Loss, Strong spin-orbit interaction and helical hole states in Ge/Si
+     nanowires, Phys. Rev. B 84, 195314 (2011).
+[5] P. Zhang, Z. L. Xiang, and F. Nori, Spin-orbit qubit on a multiferroic insulator in a
+     superconducting resonator. Phys. Rev. B 89, 115417 (2014).
+[6] R. Li, J. Q. You, C. P. Sun, F. Nori, Controlling a nanowire spin-orbit qubit via electric-dipole
+     spin resonance. Phys. Rev. Lett. 111, 086805. (2013)
+[7] Mi, X. M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A coherent spin-
+     photon interface in silicon. Nature, 555, 599–603 (2018).
+[8] A. J. Landig, J. V. Koski, P. Scarlino, U. C. Mendes, A. Blais, C. Reichl, W. Wegscheider, A.
+     Wallraff, K. Ensslin, T. Ihn, Coherent spin-qubit photon coupling, arXiv:1711.01932 (2017).
+[9] N. Samkharadze, G. Zheng, N. Kalhor, D. Brousse, A. Sammak, U. C. Mendes, A. Blais, G.
+     Scappucci, L. M. K. Vandersypen, Strong spin-photon coupling in silicon. Science, 359, 1123-
+     1127 (2018).
+[10] M. Trif, V. N. Golovach, D. Loss, Phys. Rev. B 77, Spin dynamics in InAs nanowire quantum
+     dots coupled to a transmission line. Phys. Rev. B, 77, 045434 (2008).
+[11] L. P. Kouwenhoven, D. G. Austing, and S. Tarucha, Few-electron quantum dots. Rep. Prog.
+     Phys. 64, 701 (2001).
+[12] W. Lu, Z. Q. Ji, L. Pfeiffer, K. W. West, and A. J. Rimberg, Real-time detection of electron
+     tunnelling in a quantum do. Nature 423, 422 (2003).
+[13] J. M. Elzerman, R. Hanson, L. H. W. van Beveren, B. Witkamp, L. M. K. Vandersypen, and L.
+     P. Kouwenhoven, Single-shot read-out of an individual electron spin in a quantum dot. Nature
+     430, 431 (2004).
+[14] T. Meunier, I. T. Vink, L. H. Wi. Van Beveren, F. H. L. Koppens, H. P. Tranitz, W. Wegscheider,
+     L. P. Kouwenhoven, and L. M. K. Vandersypen, Nondestructive measurement of electron spins
+
+
+                                                 76
+                          第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+     in a quantum dot. Phys. Rev. B 74 195303 (2006),.
+[15] S. Gustavsson, R. Leturcq, B. Simovic, R. Schleser, T. Ihn, P. Studerus, K. Ensslin, D. C.
+     Driscoll, and A. C. Gossard, Counting statistics of single electron transport in a quantum dot.
+     Phys. Rev. Lett. 96, 076605 (2006).
+[16] J. J. Zhang, G. Katsaros, F. Montalenti, D. Scopece, R. O. Rezaev, C. Mickel, B. Rellinghaus,
+     L. Miglio, S. De Franceschi, A. Rastelli, O. G. Schmidt, Monolithic growth of ultrathin Ge
+     nanowires on Si (001). Phys. Rev. Lett. 109, 085502 (2012).
+[17] Mi, X. M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A coherent spin-
+     photon interface in silicon. Nature, 555, 599–603 (2018).
+[18] J. Basset, D. D. Jarausch, A. Stockklauser, T. Frey, C. Reichl, W. Wegscheider, T. M. Ihn, K.
+     Ensslin, A. Wallraff, Single-electron double quantum dot dipole-coupled to a single photonic
+     mode. Phys. Rev. B 88, 125312 (2013).
+[19] X. Mi, C. G. Péterfalvi, G. Burkard, J. R. Petta, High-resolution valley spectroscopy of si
+     quantum dots. Phys. Rev. Lett. 119, 176803 (2017).
+[20] M. R. Delbecq, V. Schmitt, F. D. Parmentier, N. Roch, J. J. Viennot, G. Fève,; B. Huard, C.
+     Mora, A. Cottet, T. Kontos, Coupling a quantum dot, fermionic leads, and a microwave cavity
+     on a chip. Phys. Rev. Lett. 107, 256804 (2011).
+[21] T. Frey, P. J. Leek, M. Beck, J. Faist, A.Wallraff, K. Ensslin, T. Ihn, M. Büttiker, Quantum dot
+     admittance probed at microwave frequencies with an on-chip resonator. Phys. Rev. B 86,
+     115303 (2012).
+[22] M. R. Delbecq, L. E. Bruhat, J. J. Viennot, S. Datta, A. Cottet, T. Kontos, Photon-mediated
+     interaction between distant quantum dot circuits. Nat. Commun. 4, 1400 (2013).
+[23] J. J. Viennot, M. R. Delbecq, L. E. Bruhat, M. C. Dartiailh, M. M. Desjardins, M. Baillergeau,
+     A. Cottet, T. Kontos, Towards hybrid circuit quantum electrodynamics with quantum dots. Com.
+     Ren. Phy. 17, 705-717 (2016).
+[24] M. L. Zhang, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H. W. Jiang,
+     I. Siddiqi, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 104, 083511 (2014).
+[25] M. M. Desjardins, J. J. Viennot, M. C. Dartiailh, L. E. Bruhat, M. R. Delbecq, M. Lee, M. S.
+     Choi, A. Cottet, T. Kontos, Observation of the frozen charge of a Kondo resonance. Nature 545,
+     71 (2017).
+[26] L. E. Bruhat, J. J. Viennot, M. C. Dartiailh, M. M. Desjardins, T. Kontos, A. Cottet, Cavity
+     Photons as a Probe for Charge Relaxation Resistance and Photon Emission in a Quantum Dot
+     Coupled to Normal and Superconducting Continua. Phys. Rev. X 6, 021014 (2016).
+
+
+                                                 77
+                           第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+[27] M. R. Delbecq, Coupling quantum dot circuits to microwave cavities. PhD thesis (2012)。
+[28] A. P. Higginbotham, F. Kuemmeth, T. W. Larsen, M. Fitzpatrick, J. Yao, H. Yan, C. M. Lieber,
+     C. M. Marcus, Antilocalization of Coulomb Blockade in a Ge/Si Nanowire. Phys. Rev. Lett.
+     112, 216806 (2014).
+[29] I. L. Aleiner and Vladimir I. Fal'ko1, Spin-Orbit Coupling Effects on Quantum Transport in
+     Lateral Semiconductor Dots. Spin-orbit coupling effects on quantum transport in lateral
+     semiconductor dots. Phys. Rev. Lett. 87, 256801 (2001).
+[30] Y. Ahmadian and I. L. Aleiner. Antilocalization in Coulomb blockade. Phys. Rev. B 73, 073312
+     (2006).
+[31] D. M. Pozar, Microwave Engineering. (2004,Wiley)
+[32] J. Gabelli, G. Feve, J. M. Berroir, B. Placais, A. Cavanna, B. Etienne, Y. Jin, and D. C. Glattli,
+     Violation of Kirchhoff's laws for a coherent RC circuit. Science 313, 499 (2006).
+[33] S. J. Chorley, J. Wabnig, Z. V. Penfold-Fitch, K. D. Petersson, J. Frake, C. G. Smith, M. R.
+     Buitelaar, Measuring the complex admittance of a carbon nanotube double quantum dot. Phys.
+     Rev. Lett. 108, 036802 (2012).
+[34] M. L. Zhang, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H. W. Jiang,
+     I. Siddiqi, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 104, 083511 (2014).
+[35] M. L. Zhang, D. Wei, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H.
+     W. Jiang, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 105, 073510 (2014).
+[36] G. W. Deng, D. Wei, S. X. Li, J. R. Johansson, W. C. Kong, H. O. Li, G. Cao, M. Xiao, G. C.
+     Guo, F. Nori, H. W. Jiang, G. P. Guo, Coupling two distant double quantum dots with a
+     microwave resonator. Nano Lett. 15, 6620-6625 (2015).
+[37] G. W. Deng, D. Wei, J. R. Johansson, M. L. Zhang, S. X. Li, H. O. Li, G. Cao, M. Xiao, T. Tu,
+     G. C. Guo, H. W. Jiang, F. Nori, G. P. Guo, Charge number dependence of the dephasing rates
+     of a graphene double quantum dot in a circuit QED architecture. Phys. Rev. Lett. 115, 126804
+     (2015).
+
+
+
+
+                                                  78
+第五章 谐振腔测量量子点的复导纳和隧穿率性质
+
+
+
+
+          79
+                  第六章 双量子点和微波谐振腔的耦合
+
+
+
+           第六章 双量子点和微波谐振腔的耦合
+   超导微波谐振腔和量子点的复合结构是一个有潜力的可扩展量子芯片方案
+[1]。其中超导微波谐振腔是量子信息领域中一个非常重要的工具，可用于灵敏探
+测[2-11]和长程耦合多个量子比特[12-13]。电极束缚的量子点是构建量子比特的
+良好的载体。在第四章中，我们已经介绍了谐振腔和锗硅自组织纳米线空穴单量
+子点的耦合。单量子点和谐振腔的复合体系迄今为止只在碳纳米管[12，14]和锗
+硅自组织纳米线[15]两种材料实现。因为双量子点体系中更容易控制能级劈裂
+（Energy-level splitting），并且能级劈裂能够被栅极调节到和谐振腔里的光子能
+量相似的水平，谐振腔和双量子点的体系吸引了研究者更多的注意力。至今，已
+经在硅[2-4]、砷化镓[5-6]、碳纳米管[7-8]、石墨烯[9]、铟砷纳米线[10]、铟锑纳
+米线[11]等体系中做了大量的工作。并且双量子点的电荷态和自旋态都已经实现
+和谐振腔的强耦合[3-8]，更适合成为量子比特的载体，展现了能够有效交换信息
+的可扩展量子芯片的可行方案。但是在已有的材料体系的研究中，长退相干时间、
+强自旋轨道耦合强度以及可扩展的能力仍然是实现可应用的量子芯片的最重要
+的限制因素[16-19]。研究者在不断优化已有的材料性能，谐振腔设计的同时，也
+在寻找新型的具有长退相干时间、强自旋轨道耦合强度以及可扩展的能力等特点
+的材料体系。
+   锗硅自组织纳米线以空穴为载流子，由于缺少核自旋的影响被预测拥有长的
+自旋相干时间，能够允许更长的操作时间；作为第四主族元素，锗拥有更长的自
+旋轨道耦合强度和朗德 g 因子，能够允许更快的操作速度；锗硅自组织纳米线利
+用控制生长技术在生长位置可控的纳米线阵列取得了突破性的进展，为未来量子
+芯片的扩展性提供了可能；锗材料已经实现了纯化技术，用纯化锗制备锗硅纳米
+线正在研发中，在此基础上制备的量子点的退相干时间预计会有大幅度的提升
+[20-24]。
+   量子点中的电荷态或者自旋态的退相干时间标志着量子比特的相干性质，是
+衡量一个量子体系能否作为可应用的量子比特的重要参数[25]。锗硅自组织纳米
+线因为非对称的结构产生了极大的重空穴和轻空穴的分离，从而拥有相对较长的
+自旋退相干时间[20-22]，这一点已经在最近的锗硅自组织纳米线双量子点的电偶
+极自旋共振(Electron dipole spin resonance, EDSR)实验中被证实[26]。但是锗硅自
+组织纳米线量子点的自旋态的退相干时间至今没有在实验中被测定。
+   本章中，我们介绍了将锗硅自组织纳米线空穴型双量子点耦合到超导微波谐
+振腔。利用微波谐振腔的反射幅值和相位信号，可以探测双量子点的库仑蜂窝图。
+我们采用了两种量子点-谐振腔的复合模型去解释库仑蜂窝图中左点-右点的隧
+
+                            80
+               第六章 双量子点和微波谐振腔的耦合
+
+
+
+穿以及量子点和电极的隧穿时幅值和相位的反应。并且，从左点-右点的输运线
+的信号中，我们可以得到包括双量子点-谐振腔的耦合强度、电荷退相干速率以
+及左点-右点能级劈裂等重要参数。
+
+6.1 双量子点
+  我们将第三章单量子点的的结构扩展到更为复杂的双量子点。五个栅极束缚
+形成两个串联的量子点，分别是左点（Left Dot，LD）和右点（Right Dot，RD）。
+左点和源电极隧穿耦合，右点和漏电极隧穿耦合。隧穿耦合可以等效为一组并联
+的电容和电阻。隧穿耦合强度分别被左右两个势垒电极（L 和 R）调控。左点和
+右点内的电化学式分别被推杆电极（Plunger Gate，LP 和 RP）调节。另外中间栅
+极（Middle Gate，MG）调节左点和右点之间的内部耦合。图 6.1（a-c）展示了不
+同条件下双量子点的电荷稳定图。图 6.1（a）时两个点之间没有电容的交叉耦合。
+当我们调节 LP（RP），空穴会在量子点和源（漏）化学势齐平时发生隧穿，会在
+竖线（横线）位置检测到输运电流信号。在竖线和横线交叉的位置，即红点处，
+量子点的化学势和源漏电极都齐平。实际上，两点之间还存在电极的交叉耦合，
+即左（右）点的门电极对右（左）点也有一定的调节效果，存在电容耦合。如图
+6.1（b）体现在电荷稳定图中，竖直和水平的线变成了负斜率的线。如图 6.1（c）
+所示，两个点之间也存在着点间电容耦合，并且这个耦合电容是可以通过 MG 调
+节。点间电容耦合使得交叉点劈裂成两个点。劈裂的每个点分别表左点和源电极
+齐平或者右点和漏电极齐平。两个点之间的这条线则代表两个点虽然不和源漏电
+极的化学势齐平，但是两个点的化学势齐平。于是空穴只在左点和右点之间隧穿，
+但是不能在量子点和源漏电极之间发生隧穿。不同位置处具体的左点、右点和源
+漏电极之间的化学势如图 6.1（d）所示。此时双量子点的电荷稳定图因为像六边
+形的蜂窝，所以被称为库仑蜂窝图。图中的（M, N）则代表左点和右点中空穴的
+数目。
+
+
+
+
+                      81
+                          第六章 双量子点和微波谐振腔的耦合
+
+
+
+
+图 6.1 （a-c）不同的栅极电压条件下双量子点的等效电路示意图和电荷稳定图。（M，N）
+分别代表左点和右点中电荷的数目。
+               （a）左点和右点只有自身的门电极调控。左右点之间只
+有等效电阻。
+     （b）左点和右点之间增加了交叉电容耦合。左（右）点的栅极对右（左）点也
+有一定的影响。
+      （c）左点和右点的门电极不仅有交叉耦合电容的影响，左右点之间还有耦合
+电容，并且这个耦合电容是可以用𝑉MP 直接调控的。
+                        （d）图（c）蓝色圆圈部分的放大图。在
+红色原点位置，量子点和源电极或者漏电极的化学势齐平。在绿线位置，量子点与源漏电极
+的化学势均不齐平，但是左点和右点之间的化学势齐平，空穴在左点和右点之间隧穿。图片
+来自于 T. Frey PhD thesis。
+
+6.2 样品的结构和测量系统
+    图 6.2（a）是锗硅自组织空穴型双量子点和半波长反射式谐振腔的复合结构。
+双量子点的扫描电子显微镜的照片如图 6.2（b）所示。微波电磁场主要形成在谐
+振腔的两根超导微波传输线之间，其等效示意图如图 6.2（d）所示，四个双量子
+点是通过源电极耦合到谐振腔的超导传输线上，源电极位于电磁场的波结位置，
+为了有更大的耦合强度，量子点位于电磁场的波腹位置。在前人的实验中，双量
+子点可以通过源电极，也可以通过栅极或者额外的电极和谐振腔耦合到一起。双
+                                 82
+              第六章 双量子点和微波谐振腔的耦合
+
+
+
+量子点的等效电路图和测量电路如图 6.2（e）所示，和第四章结构类似，但是会
+更加复杂，这里不做详细叙述。从图 6.2（c）可以看出，空穴在双量子点中隧穿，
+无论是左点和右点之间的隧穿还是量子点和电极的隧穿都会产生振动电压𝑉res (t)，
+影响双量子点和谐振腔的色散耦合或者损耗耦合。与此同时，从谐振腔反射的微
+波的幅值和相位信号收到量子点状态的变化的影响，会产生频率移动或者频率展
+宽。反射的微波信号最后会经过低温放大器和常温放大器放大之后被网络分析仪
+处理。在本章中，只考虑其中的一个双量子点，其他量子点的所有电极在测量过
+程都保持接地的状态。样品被安置在稀释制冷机的冷盘上，测量的环境温度为 26
+mK。
+
+
+
+
+图 6.2（a）双量子点和谐振腔的复合结构的光学显微镜照片。双量子点通过源电极和谐振腔
+耦合到一起。（b-c）双量子点的扫描电子显微镜照片和横截面示意图。扫描电子显微镜照片
+经过颜色处理，其中绿色为源电极和漏电极，红色为势垒电极、黄色为 plunger 电极、蓝色
+为中间电极。空穴在左点和右点之间隧穿或者量子点和电极之间隧穿都会影响到谐振腔的反
+射信号。（d）谐振腔的设计结构图。腔的两根超导传输线通过指电容和微波的输入和输出
+端相连。施加在两根传输线上幅值相同、相位相反的微波信号构建了稳定的电磁场。（e）
+双量子点的等效电路图以及复合结构的测量系统。
+
+6.3 谐振腔对双量子点的读取
+  我们首先利用纯腔的幅值和相位信号的频率谱中提取出微波谐振腔的特征
+参数。在这个过程中，量子点的所有电极均保持接地状态，施加在谐振腔上的微
+波功率低于−110 dBm。图 6.3（a-b）中的红线分别是纯腔的幅值和相位信号与微
+波功率的关系图。基于半波长开路传输线模型[27]，我们可以确定纯腔的谐振信
+
+                     83
+                   第六章 双量子点和微波谐振腔的耦合
+
+
+
+号是 6.045 GHz，谐振腔的（内部，外部、总）损耗速率分别为( κi /2π, κe /2π,
+κ/2π)~(4.5, 10.3, 14.8) MHz。谐振腔的品质因子 Q 为 410。
+   然后，我们利用微波谐振腔去探测锗硅自组织空穴型双量子点的输运性质。
+谐振腔的探测频率被设定为谐振腔的本证谐振频率，通常在这个频率附近，腔有
+较为灵敏性的反应。当量子点的电荷态发生改变时，量子点和谐振腔的色散耦合
+和损耗耦合会分别导致频率移动和频率展宽，反映在反射的幅值和相位信号当量
+子点被调节到库仑阻塞区域（Coulomb Blockade，CB），反射的幅值和相位信号
+和谐振腔的本征信号基本一致，量子点对谐振腔的影响可以忽略；当量子点被调
+节到库仑谐振区域（Coulomb Resonance，CR），反射的幅值和相位信号如图 6.3
+（a-b）的黑线所示。于是我们得到了幅值移动∆𝐴和相位移动∆ϕ。
+   在测量过程中，源电极和漏电极之间的直流输运信号经过低噪声前置放大器
+（low-noise pre-amplifier）被数字万用表测量。与此同时，反射的幅值和相位信
+号被网络分析仪提取和记录。通过幅值的移动和相位的移动，我们获取了双量子
+点的六边形的电荷稳定图-库仑蜂窝图，分别如图 6.3（c）和（d）所示，这显示
+了谐振腔的幅值和相位信号都可以用于读取锗硅自组织纳米线双量子点的电荷
+态。然而，我们发现在库仑蜂窝图的不同的边界，谐振腔的反应是不同的。在图
+6.3（c）的相位信号中，只有在内部隧穿线上有明显的变化，空穴在左点和右点
+之间输运。右点和电极之间的隧穿线信号很微弱，然而左点和电极的信号几乎不
+可测量。在图 6.3（d）的幅值信号中，幅值在右点和电极之间隧穿线最明显，其
+他的库仑蜂窝图的其他边界的反应都很微弱。
+
+
+
+
+                             84
+                  第六章 双量子点和微波谐振腔的耦合
+
+
+
+图 6.3（a-b）谐振腔幅值（a）和相位信号（b）的频率谱函数。红线代表纯腔信号或者量子
+点位于库仑阻塞区域时腔的信号，黑线代表量子点位于库仑谐振区域腔的信号。由此，我们
+可以得到幅值移动∆𝐴和相位移动∆ϕ。（c）∆ϕ与𝑉LP 和𝑉RP 的关系，利用∆𝐴可以得到双量子点
+的电荷稳定图。黑色箭头表示空穴在左点和右点之间隧穿的解调线（detuning line）。
+                                            （d）利
+用∆𝐴可以得到双量子点的电荷稳定图。空穴在左点（右点）和电极之间的隧穿过程用黄色
+（红色）虚线表示，这个过程中，左点（右点）的能级发生改变，另一个点的能级保持不变。
+∆𝑉LP (∆𝑉RP )表示在左点（右点）中增加或者减少一个空穴时，需要改变的推杆电极电压值。
+
+6.4. 左点和右点间隧穿对应的谐振腔反应
+6.4.1 Tavis−Cummings 模型
+  证明了双量子点和谐振腔的耦合之后，接下来我们分析和比较双量子点-腔耦
+合结构中的左点-右点耦合模式和量子点-电极耦合模式，以及单点-腔耦合模式。
+如图 6.4 所示。
+
+
+
+
+图 6.4 双量子点-腔耦合结构中的左点-右点耦合模式和量子点-电极耦合模式，以及单点-腔
+耦合模式的比较。
+  我们首先关注左点和右点之间的隧穿线，如图 6.5（a）。这种耦合是偶极耦
+合，通常采用 Tavis−Cummings 模型去描述这个位置的双量子点和谐振腔的复合
+结构，[28]这个模型包含了谐振腔的探测频率ω、本征频率ω0 、内部损耗速率κi 、
+                                        1
+外部损耗速率κe ，双量子点的内部隧穿率2𝑡c 、电荷退相干速率𝛾tot =2 𝛾1 +𝛾2以及双
+
+量子点和谐振腔的耦合强度 gc。双量子点和谐振腔的 Tavis−Cummings 模型在之
+前的的研究中被成功应用于石墨烯[13,14,29]、砷化镓[27]等体系中应用于研究空
+
+                          85
+                                 第六章 双量子点和微波谐振腔的耦合
+
+
+穴在左点和右点之间输运。其反射系数[13,14,29]可以表述为：
+                                                         1
+                                        j()0 - ))+geff X+ (κi - κe )
+                           S11 ())= −                    2
+                                                          1            (6-1)
+                                        j()0 -))+geff X + (κi+κe )
+                                                          2
+
+幅值和相位信号可以从S11 ( ))提取出，分别表述为 A=∣S11 ∣和ϕ =arg(S11)。
+          g
+X = j(Ω-)) eff+ 𝛾     表 征 双 量 子 点 的 电 荷 对 微 波 场 产 生 的 不 稳 定 度 （ Charge
+                tot
+
+
+susceptibility），导致频率的移动 Re(geff 𝑋)和频率展宽 2Im(geff 𝑋)。Ω=√(2𝑡c )2 + 𝜀 2
+
+代表双量子点的左点和右点的能级劈裂，2𝑡c 代表𝜀 = 0处的，即最小的能级劈裂，
+                            2𝑡
+如图 6.5（b）。geff = gc Ωc 代表不同𝜀位置双量子点和谐振腔的耦合强度，通常我
+
+                                   1
+们𝜀 = 0处的耦合强度gc 。𝛾tot =2 𝛾1 +𝛾2 是电荷的总退相干速率（其中𝛾1、𝛾2分别是
+
+电荷弛豫率和相位退相干率）。
+
+6.4.2 测量结果
+      如图 6.5（c）所示，一组蓝点是从解谐线（黑色箭头）中提取的相位移动量。
+红线是基于方程（6-1）对相位移动量的最佳拟合线。通过拟合，我们可以得到2𝑡c
+为 6.18 GHz，双量子点和谐振腔的偶极耦合强度为 gc=2.96 MHz，电荷退相干速
+率为𝛾tot =1.02 GHz，另外，我们重复了对其他位置的左点右点隧穿线进行拟合，
+得到的退相干速率在 0.9 GHz-3 GHz 范围，这个值和砷化镓、碳纳米管以及石墨
+烯等体系中得到的退相干速率近似[5-11]。
+
+
+
+
+                                                 86
+                      第六章 双量子点和微波谐振腔的耦合
+
+
+图 6.5（a）（M,N）表示左右点中的空穴数目。空穴左点和右点之间隧穿时，相位反应得到
+的电荷稳定图。黑色箭头代表解谐线，在𝜀=0（黄色点）处空穴发生隧穿，远离𝜀=0（粉色点）
+空穴被束缚在左点或者右点之中。（b）双量子点的能级劈裂Ω=√(2𝑡c)2 + 𝜀 2 和𝜀的关系的示
+意图。在𝜀=0 处，双量子点有最小的能级劈裂2𝑡c 。（c）沿着解谐线，谐振腔的相位反应与
+𝜀的关系。红色线是基于方程（6-1）对相位变化的最佳拟合线。（d）蓝色（红色）圆形点线
+                                                 geff
+是测量的δfR(δfD)。绿线（橙线）是基于𝑋=                                 拟合线。为了更好地展示，δfD 的数值
+                                         j(Ω-)) + 𝛾tot
+
+做了纵向的平移。测量值和拟合值对应的很好，说明我们这个模型的可靠性。
+
+6.4.3 模型的验证
+  为了验证上述模型的可靠性，我们在不同偏置电压下沿着解谐线测量了谐振
+腔频率反射谱。从频率反射谱中，我们可以提取出频率移动δfR 和频率展宽δfD。
+                                                                              g
+分别如图 6.5（d）中蓝色圆形点线和红色圆形点线所示。另外，基于𝑋=j(Ω-)) eff+ 𝛾
+                                                                                  tot
+
+
+和 δfR= Re(geff 𝑋), δfD= 2Im(geff 𝑋) ，我们拟合了δfR 和δfD。拟合值和测量值很好的
+
+对应也说明了这个模型的可靠性。
+
+6.5. 量子点和电极间隧穿对应的谐振腔反应
+6.5.1 量子点-电极耦合模型
+   因为 Tavis−Cummings 模型是用来描述二能级系统（two level systems，TLS），
+比如左点和右点构建的量子比特。但是空穴在量子点和电极之间隧穿不是一个典
+型的二能级系统，所以不能使用 Tavis−Cummings 模型。取而代之，我们采用量
+子点-电极复合模型和复导纳模型去描述空穴在量子点和电极之间的隧穿过程
+（图 6.3（d）的黄色和红色虚线）[14,21,30]。模型的反射系数为：
+                                        1
+                            j[(ω0 +δωR )-ω]+ [(κi+2δωD )-κe ]
+              𝑆̃11(ω) = −               2
+                                        1                       .             （6-2）
+                        j[(ω0 +δωR )-ω]+ [(κi +2δωD )+κe ]
+                                        2
+
+
+在前面章节中，我们已经介绍了复导纳模型[31,32]。如图 6.6（a）所示，复导纳
+模型中，量子点等效为并联的电容电阻电路，电容和电阻分别为量子点辅导纳的
+实部和虚部，即Ydot (ω) ≈ 1/Rdot + jωCdot 。谐振腔也可以视为电容Cres 、电阻Rres 和
+电感Lres 的并联等效电路。
+
+6.5.2 测量结果与模型验证
+  量子点的电荷态发生改变，其复导纳也会随着改变，这一点也可以从运动方
+程理论（Euqation of Motion, EOM）推导。量子点电容的变化会影响量子点和谐
+                                                                    C
+振腔的色散耦合，从而在谐振腔信号上产生频率移动δfR ≈ −2Cdot f0 。量子点的电
+                                                                        res
+
+
+
+                                            87
+                        第六章 双量子点和微波谐振腔的耦合
+
+
+阻的变化会影响量子点和谐振腔的损耗耦合，从而在谐振腔信号上产生频率展宽
+         1
+δfD≈2C          。并且δfR 和δfD 的影响会反映在谐振腔的幅值和相位信号上[12,14,15]。
+     res Rdot
+
+    我们在图 6.3（d）中沿着黄色虚线测量了在不同栅极电压下，幅值信号的频
+率谱函数，并提取了δfR 和δfD，如图 6.6（c）。基于方程（6-2）结合包括δfR 和δfD
+在内的已有的实验值，模拟了幅值移动随着电压的关系，如图 6.6（d）的圆形点
+所示。并且我们提取了幅值移动随着电压的关系，如图 6.6（d）的菱形点所示。
+    可以看出，基于方程（6-2）的理论拟合值和实验测量值有着非常好的对应，
+这也验证了量子点-电极的复合模型和复导纳模型去解释空穴在单量子点和电极
+之间隧穿的过程的可靠性。实验中，在多个样品的测量中，我们都发现谐振腔的
+幅值对左点和源电极的隧穿线反应很明显，但是对右点和漏电极的隧穿线反应很
+微弱或者完全没有反应。这个现象和我们样品的结构设计有关。谐振腔是直接耦
+合到源电极上，更靠近左点。因此，左点和谐振腔之间有一个更大的耦合反应影
+响微波的电磁场[11,32]。
+
+
+
+
+图 6.6 （a）谐振腔的双量子点复合结构的复导纳模型。双量子点可以等效为并联的电容电
+阻电路（蓝色区域），谐振腔可以等效为并联的电容电阻电感电路（黄色区域）。（b）空
+穴在量子点和电极之间隧穿的示意图。ΓL 和ΓR 分别表示左点和源之间以及右点和漏之间的
+势垒。（c）不同栅极电压下测量幅值的频率谱，然后提取出的δfR 和δfD。（d）红色的菱形
+点线是从沿着图 6.3（d）的黄色虚线测量的幅值移动的实验测量值，蓝色圆型点线是基于方
+程（6-2）结合实验测量的实验测量的δfR 和δfD 拟合的幅值移动。拟合值和实验值对应的很
+好，验证了模型的可靠性。
+
+                                88
+                                第六章 双量子点和微波谐振腔的耦合
+
+
+
+6.6 本章小结
+     本章中，我们成功在锗硅自组织纳米线材料体系中证实了双量子点和半波长
+反射式超导微波谐振腔的偶极耦合。谐振腔的幅值和相位信号可以用于探测双量
+子点的电荷稳定图，即库仑蜂窝图。在库仑蜂窝图的不同位置，幅值和相位有不
+同的反应，我们解释和比较了不同的空穴的隧穿机制。我们采用 Tavis−Cummings
+模型去解释空穴在左点和右点之间隧穿。我们采用量子点-电极复合模型去解释
+空穴在量子点和电极之间隧穿。并且两种模型都被频率移动和频率展宽的表现所
+验证。双量子点和谐振腔的复合结构提供了一种新的途径去探测锗硅自组织纳米
+线中空穴的输运性质，相比于电荷探测器，微波谐振腔更容易制备，并且还可以
+作为量子总线（Quantum Bus）功能长距离耦合多个双量子点，从而实验扩展功
+能。在未来进一步的研究中，这种复合结构能够扩展到更加复杂的量子点结构，
+用于探索电荷比特或者自旋比特的构建和信息交换，未来的研究中是可能实现的
+可扩展固态量子芯片的方案。
+
+                                          参考文献
+
+[1] Z. L. Xiang, S. Ashhab, J. Q. You, F. Nori, Hybrid quantum circuits: Superconducting circuits
+     interacting with other quantum systems. Rev. Mod. Phys. 85, 623-653 (2013).
+[2] X. Mi, J. V. Cady, D. M. Zajac, P. W. Deelman, J. R. Petta, Strong coupling of a single electron
+     in silicon to a microwave photon. Science 355,156-158 (2017).
+
+[3] X. Mi, M. Benito, S. Putz, D. M. Zajac, J. M. Taylor, G. Burkard, J. R. Petta, A coherent spin-
+     photon interface in silicon. Nature, 555, 599–603 (2018).
+[4] N. Samkharadze, G. Zheng, N. Kalhor, D. Brousse, A. Sammak, U. C. Mendes, A. Blais, G.
+     Scappucci, L. M. K. Vandersypen, Strong spin-photon coupling in silicon. Science, 359, 1123-
+     1127 (2018).
+[5] A. Stockklauser, P. Scarlino, J. V. Koski, S. Gasparinetti, C. K. Andersen,; C. Reichl, W.
+     Wegscheider, T. Ihn, K. Ensslin, A. Wallraff. Strong Coupling Cavity QED with Gate-Defined
+     Double Quantum Dots Enabled by a High Impedance Resonator. Phys. Rev. X 7, 011030 (2017).
+
+[6] A. J. Landig, J. V. Koski, P. Scarlino, U. C. Mendes, A. Blais, C. Reichl, W. Wegscheider, A.
+     Wallraff, K. Ensslin, T. Ihn, Coherent spin-qubit photon coupling, arXiv:1711.01932 (2017).
+[7] J. J. Viennot, M. R. Delbecq, L. E. Bruhat, M. C. Dartiailh, M. M. Desjardins, M. Baillergeau,
+     A. Cottet, T. Kontos, Towards hybrid circuit quantum electrodynamics with quantum dots. Com.
+     Ren. Phy. 17, 705-717 (2016).
+[8] L. E. Bruhat, T. Cubaynes, J. J. Viennot, M. C. Dartiailh, M. M. Desjardins, A. Cottet, T. Kontos,
+     Strong coupling between an electron in a quantum dot circuit and a photon in a cavity.
+
+                                                 89
+                                第六章 双量子点和微波谐振腔的耦合
+
+
+     arXiv:1612.05214 (2016).
+[9] G. W. Deng, D. Wei, J. R. Johansson, M. L. Zhang, S. X. Li, H. O. Li, G. Cao, M. Xiao, T. Tu,
+     G. C. Guo, H. W. Jiang, F. Nori, G. P. Guo, Charge number dependence of the dephasing rates
+     of a graphene double quantum dot in a circuit QED architecture. Phys. Rev. Lett. 115, 126804
+     (2015).
+[10] K. D. Petersson, L. W. McFaul, M. D. Schroer, M. Jung, J. M. Taylor, A. A. Houck, Petta, J. R.
+     Circuit quantum electrodynamics with a spin qubit. Nature 490, 380-383 (2012).
+[11] R. Wang, R. S. Deacon, D. Car, E. P. A. M. Bakkers, K. Ishibashi, InSb nanowire double
+     quantum dots coupled to a superconducting microwave cavity. Appl. Phys. Lett. 108, 203502
+     (2016).
+[12] M. R. Delbecq, L. E. Bruhat, J. J. Viennot, S. Datta, A. Cottet, T. Kontos, Photon-mediated
+     interaction between distant quantum dot circuits. Nat. Commun. 4, 1400 (2013).
+[13] G. W. Deng, D. Wei, S. X. Li, J. R. Johansson, W. C. Kong, H. O. Li, G. Cao, M. Xiao, G. C.
+     Guo, F. Nori, H. W. Jiang, G. P. Guo, Coupling two distant double quantum dots with a
+     microwave resonator. Nano Lett. 15, 6620-6625 (2015).
+[14] M. R. Delbecq, V. Schmitt, F. D. Parmentier, N. Roch, J. J. Viennot, G. Fève,; B. Huard, C.
+     Mora, A. Cottet, T. Kontos, Coupling a quantum dot, fermionic leads, and a microwave cavity
+     on a chip. Phys. Rev. Lett. 107, 256804 (2011).
+[15] Y. Li, S. X. Li, F. Gao, H. O. Li, G. Xu, K. Wang, D. Liu, G. Cao, M. Xiao, T. Wang, J. J.
+     Zhang, G. C. Guo, and G. P. Guo. Coupling a Germanium Hut Wire Hole Quantum Dot to a
+     Superconducting Microwave Resonator. Nano Lett. 18, 2091–2097 (2018).
+[16] C. Kloeffel, M. Trif, D. Loss, Strong spin-orbit interaction and helical hole states in Ge/Si
+     nanowires, Phys. Rev. B 84, 195314 (2011).
+[17] M. Trif, V. N. Golovach, D. Loss, Spin dynamics in InAs nanowire quantum dots coupled to a
+     transmission line. Phys. Rev. B, 77, 045434 (2008).
+
+[18] S.Joe, T. Mengyang, R. Sven, C. Dimitrie, Quantum computing with acceptor spins in silicon.
+     Nat. Nano. 27, 244001 (2016).
+[19] J. T. Hung, E. Marcellina, B. Wang, A. R. Hamilton, D. Culcer, Phys. Rev. B 95, 195316 (2017).
+[20] H. Watzinger, C. Kloeffel, L. Vukušić, M. D. Rossell, V. Sessi, J. Kukučka, R. Kirchschlager,
+     E. Lausecker, A. Truhlar, M. Glaser, A. Rastelli, A. Fuhrer, D. Loss, G. Katsaros, Nano Lett.
+     16, 6879-6885 (2016).
+[21] S. X. Li, Y. Li, F. Gao, G. Xu, H. O. Li, G. Cao, M. Xiao, T. Wang, J. J. Zhang, G. P. Guo,
+     Measuring hole spin states of single quantum dot in germanium hut wire. Appl. Phys. Lett. 110,
+     133105 (2017).
+
+[22] L. Vukušić, J. Kukučka, H. Watzinger, and G. Katsaros. Fast Hole Tunneling Times in
+
+                                                90
+                                第六章 双量子点和微波谐振腔的耦合
+
+
+
+     Germanium Hut Wires Probed by Single-Shot Reflectometry. Nano Lett., 17, 5706–5710
+     (2017).
+[23] G. Katsaros, J. Tersoff, M. Stoffel, A. Rastelli, P. Acosta-Diaz, G. S. Kar, G. Costantini, O. G.
+     Schmidt, K. Kern, Positioning of Strained Islands by Interaction with Surface Nanogrooves.
+     Phys. Rev. Lett. 101, 096103 (2008).
+[24] J. J. Zhang, M. Stoffel, A. Rastelli, O. G. Schmidt, V. Jovanović, L. K. Nanver, G. Bauer, SiGe
+     growth on patterned Si (001) substrates: Surface evolution and evidence of modified island
+     coarsening. Appl. Phys. Lett. 91, 173115 (2007).
+
+[25] P. H. Huang and X. D. Hu. Electron spin relaxation due to charge noise. Phys. Rev. B 89,
+     195302 (2014).
+[26] A experimental work which is to be unpublished by our group.
+[27] M. L. Zhang, D. Wei, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H.
+     W. Jiang, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Appl. Phys. Lett. 105, 073510 (2014).
+
+[28] M. Tavis, F. W. Cummings, Exact Solution for an Molecule Radiation Field Hamiltonian. Phys.
+     Rev., 170, 379 (1968).
+[29] M. L. Zhang, G. W. Deng, S. X. Li, H. O. Li, G. Cao, T. Tu, M. Xiao, G. C. Guo, H. W. Jiang,
+     I. Siddiqi, G. P. Guo, Measuring the complex admittance of a nearly isolated graphene quantum
+     dot, Applied Physics. Appl. Phys. Lett. 104, 083511 (2014).
+
+[30] M. M. Desjardins, J. J. Viennot, M. C. Dartiailh, L. E. Bruhat, M. R. Delbecq, M. Lee, M. S.
+     Choi, A. Cottet, T. Kontos, Observation of the frozen charge of a Kondo resonance. Nature 545,
+     71 (2017).
+[31] S. J. Chorley, J. Wabnig, Z. V. Penfold-Fitch, K. D. Petersson, J. Frake, C. G. Smith, M. R.
+     Buitelaar, Measuring the complex admittance of a carbon nanotube double quantum dot. Phys.
+     Rev. Lett. 108, 036802 (2012).
+[32] T. Frey, P. J. Leek, M. Beck, J. Faist, A.Wallraff, K. Ensslin, T. Ihn, M. Büttiker, Quantum dot
+     admittance probed at microwave frequencies with an on-chip resonator. Phys. Rev. B 86,
+     115303 (2012).
+[33] T. Frey, Interaction between quantum dots and superconducting microwave resonators, PhD
+     thesis (2013).
+
+
+
+
+                                                  91
+第六章 双量子点和微波谐振腔的耦合
+
+
+
+
+       92
+                 第七章 总结和展望
+
+
+
+             第七章 总结和展望
+7.1 总结
+
+  本论文以新型锗硅自组织纳米线材料为基础构建量子点和超导微波谐振腔
+的复合结构，实现了微波谐振腔的幅值和相位对量子点电荷态的灵敏探测。系统
+的分析了单量子点-谐振腔与双量子点-谐振腔的耦合以及谐振腔的幅值和相位
+变化的原理，并利用频率移动和频率展宽加以验证。
+  第一章我们首先简单介绍了量子计算和半导体材料的门控量子点的研究背
+景和基本概念。然后介绍了多种半导体材料的门控量子点体系，并介绍了应用于
+本文的锗硅自组织纳米以及与之相关的锗硅核壳型纳米线、锗硅纳米晶的基本性
+质。接着介绍了腔量子电动力学和电路量子电动力学的背景知识和发展过程。最
+后介绍了量子点中的电荷态和自旋态和超导微波谐振腔的耦合的最新突破性进
+展。
+  第二章介绍了样品微纳米加工以及低温测量用到的设备和技术。样品的微纳
+米加工包括了光刻、扫描电子显微镜和电子束曝光、刻蚀、电子束镀膜、热蒸发
+镀膜、原子层生长以及其他设备。光刻部分我们介绍了光刻的原理以及接触式光
+刻机、接近式光刻机、投影式光刻机和无掩膜直写式光刻机四种光刻机；扫描电
+子显微镜和电子束曝光部分介绍了电子束用于拍照和曝光的原理，FEI Inspect
+F50 和 E-line 两种仪器，以及电子束邻近效应的产生和修正；刻蚀部分我们介绍
+了湿法刻蚀、反应离子刻蚀和电感耦合刻蚀三种刻蚀技术。低温设备包括传统的
+插杆式稀释制冷机、He3 稀释制冷机、He3/He4 混合器稀释制冷机。
+  第三章我们介绍了单量子点的结构和能级，以及完整的制备工艺和测量电路。
+基于直流输运方法对单量子点的输运性质测量，我们介绍了一个优良的单量子点
+接触性质、库仑震荡和库仑菱形图。量子点的基态和激发态能级在外界磁场下会
+发生能级塞曼分裂，实验中观察到奇数空穴和偶数空穴有着不同的劈裂表现。并
+且，我们提取出锗硅自组织纳米线的朗德 g 因子约为 4.3。
+  第四章介绍了微波超导谐振腔耦合和锗硅自组织纳米线空穴型单量子点的
+复合结构。超导微波谐振腔的幅值和相位信号可以用作灵敏探测器读取量子点的
+电荷态。这种耦合机制可以用复导纳模型和谐振腔-单量子点的复合量子模型去
+解释。我们将两种理论和方法应用于分析出单量子点和谐振腔的复合模型中的空
+穴和谐振腔的耦合强度为𝑔c ⁄2π=148 MHz，并且以此为基础可以评估出自旋和谐
+振腔的耦合强度在𝑔s ⁄2π=2–4 MHz 范围。评估得到的自旋和谐振腔的耦合强度接
+近但是仍然小于量子点电荷态的退相干时间和谐振腔中光子的损耗时间，显示了
+
+                     93
+                 第七章 总结和展望
+
+
+
+锗硅自组织纳米线空穴型量子点体系中的自旋和谐振腔的耦合强度接近但是仍
+然没有达到强耦合。未来的研究中采取相关的优化方案，自旋和谐振腔的强耦合
+是有望在锗硅自组织纳米线体系中实现的。
+  第五章介绍了超导微波谐振腔用锗硅自组织空穴量子点复导纳的测量以及
+隧穿率的评估。当传统的输运测量方法很难探测到有效信号时，谐振腔的幅值和
+相位信号仍然可以被用作灵敏探测器测量量子点的复导纳和隧穿率。我们基于频
+率移动和频率展宽给出了谐振腔探测原理的解释，以及幅值和相位信号与直流微
+分电导的定量对应关系，进一步被实验结果证实。这种微波谐振腔技术在未来的
+研究中可以用作探测量子点电荷态和自旋态的灵敏方法。
+  第六章介绍了锗硅自组织纳米线双量子点和半波长反射式超导微波谐振腔
+的偶极耦合。谐振腔的幅值和相位信号可以用于探测双量子点的电荷稳定图，即
+库仑蜂窝图。在传统的直流输运方法探测不到信号的地方，谐振腔的幅值和相位
+信号仍然可以实现对双量子点中电荷态的灵敏探测。另外，在库仑蜂窝图的不同
+位置，我们解释和比较了不同的空穴的隧穿机制。我们采用 Tavis-Cummings 模
+型去解释空穴在左点和右点之间隧穿现象。我们采用量子点-电极复合模型和复
+导纳模型去解释空穴在量子点和电极之间隧穿。并且两种模型都被频率移动和频
+率展宽的表现所验证。双量子点和谐振腔的复合结构提供了一种新的途径去探测
+锗硅自组织纳米线中空穴的输运性质，相比于如量子点接触或者单电子晶体管连
+接的电荷探测器，微波谐振腔更容易制备，并且还可以作为量子总线功能长距离
+耦合多个双量子点，从而实验扩展功能。在未来进一步的研究中，这种复合结构
+能够扩展到更加复杂的量子点结构，用于探索电荷比特或者自旋比特的构建和信
+息交换，未来的研究中是可能实现的可扩展固态量子芯片的可行方案。
+
+7.2 展望
+7.2.1 量子点体系的优化
+（1）零维接触结构的量子点结构。
+  锗硅自组织纳米线作为新型半导体材料，我们花费了很长的时间设计很多种
+方案探索这种材料体系的量子点制备，并且持续在根据测量结果反馈优化设计方
+案。性能优良的量子点是实验的基础。我们现在测量得到了单量子点和双量子点
+的基本性质，但是必须承认的是，目前量子点的性能还是最优的水平，仍有很大
+的提升空间。
+  根据加工锗硅自组织纳米线量子点的经验总结，源漏电极和纳米线的接触是
+至关重要的环节。由于纳米线由于自然氧化会产生二氧化硅层，实验中需要用稀
+释的氢氟酸溶液刻蚀掉二氧化硅层。欠刻会有二氧化硅的残留影响接触效果，过
+
+                     94
+                  第七章 总结和展望
+
+
+
+刻会破坏纳米线结构改变异质结的性质。因为纳米线的生长、自然氧化以及刻蚀
+方法等条件的影响，精确控制二氧化硅的刻蚀是非常困难的。一维材料的零维接
+触可能是一种可行的解决方案[1]。在之前的研究中，C. R. Dean 等人实现了二维
+石墨烯和上下两层氮化硼的三明治结构的一维接触（图 7.1），Marc Bockrath 等
+人实现了一维碳纳米管和上下两层氮化硼的三明治结构的零维接触（图 7.2）[2]。
+
+
+
+
+图 7.1（a）石墨烯和上下两层氮化硼的三明治结构的一维接触工艺。插图：接触面的示意图。
+（b）透射电子显微镜图以及接触面的示意图。图片来自于[1]。
+
+
+
+
+                      95
+                      第七章 总结和展望
+
+
+
+图 7.2（a）一维碳纳米管和上下两层氮化硼的三明治结构的零维接触工艺流程。
+                                     （b）电子显
+微镜照片。
+    （c）电子显微镜放大照片。图片来自于[2]。
+   借鉴于上述两个工作，可以在锗硅自组织纳米线基片上先长一层三氧化二铝
+绝缘层，然后利用等离子体刻蚀技术制作出零维接触，然后蒸镀金属接触电极。
+这样的零维结构可以避免二氧化硅刻蚀步骤。
+
+（2）锗硅自组织纳米线的超导接触
+   半导体材料和超导材料结合有广泛和重要的应用。之前，在碳纳米管[3-5]、
+铟砷纳米线[6-8]做了很多的工作。我们组郝晓杰等人在锗硅核壳型纳米线和超导
+接触电极的结构，研究了 Andreev 反射对量子点中单空穴隧穿的增强以及
+Andreev 反射引起量子点中的共隧穿等问题[9]。在锗硅纳米晶材料体系上，也实
+现了超导电极接触的结构[10]。锗硅自组织纳米线和锗硅核壳型纳米线以及锗硅
+纳米晶在结构和性质上有很多相似之处，其超导材料接触的结构是接下来重要的
+研究内容。但是由于技术等原因，目前还没有实现，是一个重要的研究方向。
+
+（3）自旋轨道耦合强度
+   同样是以空穴为载流子的第四主族材料，锗体系比硅体系拥有更强的自旋轨
+道耦合强度。利用自旋轨道耦合强度可以实现用电场调节自旋，在保持相干性的
+同时实现快速的门操作[11-12]。郝晓杰等人利用弱反局域化方法确定锗硅核壳型
+纳米线的自旋轨道耦合强度可调，并且预测可以达到大于 1 meV[13],这个数值是
+铟砷纳米线的四倍[14]。锗硅自组织纳米线被理论预测拥有较强的自旋轨道耦合
+强度,但是这种材料的自旋轨道耦合强度目前还没有在实验中被直接测量得到，
+也是一个重要的研究课题。
+
+7.2.2 腔和量子点复合体系的优化
+
+（1）自旋态和谐振腔的耦合以及自旋退相干时间的标定
+   本文首次实现了锗硅自组织纳米线体系中单量子点的电荷态以及双量子点
+的电荷态和超导微波谐振腔的耦合。但是自旋的相干性更好，自旋比特的退相干
+时间远长于电荷比特的退相干时间，更适合做量子比特。锗硅自组织纳米线体系
+自旋态和谐振腔的耦合将会是接下来的研究重点。并且利用谐振腔可以实现对锗
+硅自组织纳米线体系自旋退相干时间这一重要参数的测量。
+
+（2）强耦合的实现。电荷-谐振腔的耦合强度𝑔c 以及自旋-谐振腔的耦合强度𝑔s 与
+腔的匹配阻抗相关𝑍𝑟 ，表现为𝑔c ∝ 𝑔s ∝ √𝑍𝑟 。A.Wallraff 组制备了新型的 SQUID
+腔，相比于传统的匹配阻抗通常 50 Ω 的透射腔或者反射腔，SQUID 腔的特征匹
+
+                          96
+                   第七章 总结和展望
+
+
+
+配阻抗达到了 1.8 kΩ，在砷化镓体系和 SQUID 腔的耦合强度提升到透射腔的 6
+倍[15]。另一方面要降低谐振腔的内部和外部损耗速率。腔的内损主要基片损耗
+以及量子点电路带来的损耗。外部损耗则是由腔的传输线和 AC 板之间的指电容
+设计决定。本文中腔的品质因子 Q 值相对偏低，都在 1000 以内。在我们之前的
+石墨烯和反射腔的实验中，在平整的硅片上加工的反射式谐振腔通常在 3000-
+4000 范围，最高可以达到 10000。因为腔的谐振频率主要有传输线长度决定，基
+本可以认为保持不变，所以 Q 值主要由总损耗速率决定。但是在锗硅自组织纳
+米线的基片上覆盖密集的纳米线，基片表面起伏很大，这可能是增大损耗速率，
+降低腔 Q 值的最大的因素。相应的改进方案也需要探索。
+
+（3）提升退相干时间。硅经过同位素纯化后自旋比特的退相干时间由 360±30 ns
+提升到令人震惊的 270 μs，提升 5500 倍[17,18]。所以核自旋是退相干的主要因
+素。同样作为第四族元素的锗也非常有可能通过同位素纯化技术大幅度提升自旋
+比特的退相干时间。目前锗已经有成熟的同位素纯化技术[19,20],纯化的锗用于
+纳米线的生长也在积极地探索之中。
+
+（4）噪声和微波加热对量子点退相干的影响。电荷噪声和微波加热效应被认为
+是电荷退相干的主要来源[21-25]。K.Ensslin 组证实了 1/f 类型的电荷噪声是砷化
+镓双量子点退相干的最主要的来源[26]。我们组也证实了 1/f 类型的电荷噪声是
+石墨烯双量子点退相干的最主要的来源。并且证实当施加在谐振腔上的微波功率
+高于−90 dBm 时，石墨烯双量子点的退相干速率会随着输入的微波功率的增大
+快速增加。当施加在谐振腔上的微波功率低于−90 dBm 时，石墨烯双量子点的退
+相干速率轻微浮动[27]。但是在锗硅自组织纳米线量子点和谐振腔的复合结构中，
+没有关于电荷噪声和微波加热现象对于退相干的影响的研究。
+
+7.2.3 量子芯片的可扩展
+
+（1）长程耦合。超导微波谐振腔和量子点的复合结构是一个有潜力的可扩展量
+子芯片方案。超导微波谐振腔可以作为媒介，即量子总线，可以实现两个或者多
+个量子比特之间的长距离耦合，这对于量子芯片的集成化有重要意义。T. Kontos
+组实现了透射腔作为媒介耦合两个长程碳纳米管单电子点[28],我们组实现了反
+射腔耦合两个石墨烯双量子点[29]。
+
+（2）量子比特的大规模集成。当芯片上有更多的量子比特耦合到单个的超导微
+波谐振腔上，腔的损耗理论上会随着量子比特数目的增加而增加，单个的超导微
+波谐振腔将丧失作为有效的量子总线的功能。为了解决这一问题，我们借鉴超导
+比特的大规模集成结构[30]，设计了如图 7.3 的结构。每一个谐振腔作为量子总
+                       97
+                   第七章 总结和展望
+
+
+线耦合到有限个量子比特，我们再利用一个超导微波谐振腔作为将多个谐振腔串
+联在一起，实现量子比特的大规模集成。
+
+
+
+
+图 7.3 一个超导微波谐振腔作为将多个谐振腔串联在一起，每一个谐振腔作为量子总线耦
+合到有限个量子比特。
+
+
+（3）控制生长技术。锗硅纳米晶可以通过位置控制技术（Cite-control technique）
+控制纳米晶的位置，生长出模块化有序化的纳米晶阵列[60-62]。目前在与本文使
+用的锗硅自组织纳米线相同的基片上利用先刻蚀凹槽图案阵列可以实现另一种
+形态的锗硅自组织纳米线的可控生长。这意味着锗硅纳米线材料不需要转移步骤，
+并且可以大规模集成化应用，对于未来量子芯片的扩展有重要的意义。
+
+
+
+
+                       98
+                                          第七章 总结和展望
+
+
+
+                                            参考文献
+
+[1] L. Wang, I. Meric, P. Y. Huang, Q. Gao, Y. Gao, H. Tran, T. Taniguchi, K. Watanabe, L. M.
+Campos, D. A. Muller, J. Guo, P. Kim, J. Hone, K. L. Shepard, C. R. Dean. One-dimensional
+electrical contact to a two-dimensional material. Science 342, 6158, 614-617. (2015)
+[2] J. W. Huang, C. Pan, S. Tran, B. Cheng, K. Watanabe, T. Taniguchi, C. Ning Lau, and M.
+Bockrath, Superior current carrying capacity of boron nitride encapsulated carbon nanotubes with
+zero-dimensional contacts. Nano Lett. 15, 6836.6840 (2015).
+[3] M. R. Buitelaar, T. Nussbaumer, and C. Schonenberger, Quantum dot in the Kondo regime
+coupled to superconductors. Phys. Rev. Lett., 89. 256801 (2002).
+[4] J. P. Cleuziou, W. Wernsdorfer, S. Andergassen, S. Florens, V. Bouchiat, T. Ondarcuhu, and M.
+Monthioux, Gate-Tuned High Frequency Response of Carbon Nanotube Josephson Junctions. Phys.
+Rev. Lett., 99. 117001 (2007).
+[5] T. Dirks, Y. F. Chen, N. O. Birge, and N. Mason, Superconducting tunneling spectroscopy of a
+carbon nanotube quantum dot. Appl. Phys. Lett., 95. 192103 (2009).
+[6] Y. J. Doh, J. A. van Dam, A. L. Roest, E. P. A. M. Bakkers, L. P. Kouwenhoven, , and S. De
+Franceschi, Tunable Supercurrent Through Semiconductor Nanowires. Science, 309 (5732):272–
+275, 2005.
+[7] L. Hofstetter, S. Csonka, J. Nygard, and C. Schonenberger, Cooper pair splitter realized in a two-
+quantum-dot Y-junction. Nature, 461, 7266, 960–963, (2009).
+[8] T. Sand-Jespersen, J. Paaske, B. M. Andersen, K. Grove-Rasmussen, H. I. Jorgensen, M.
+Aagesen, C. B. Sorensen, P. E. Lindelof, K. Flensberg, and J. Nygaard, Kondo-Enhanced Andreev
+Tunneling in InAs Nanowire Quantum Dots. Phys. Rev. Lett., 99(12), 126603 (2007).
+[9] X. J. Hao, H. O. Li, T. Tao,C. Zhou, G. Cao, G. C. Guo,G. P. Guo, W. Y. Fung, Z. Q. Ji, W. Lu,
+Andreev tunneling enhanced by Coulomb oscillations in superconductor-semiconductor hybrid
+Ge/Si nanowire devices, Phys. Rev. B 84, 195448 (2011).
+[10] G. Katsaros, P. Spathis, M. Stoffel, F. Fournel, M. Mongillo, V. Bouchiat, F. Lefloch, A. Rastelli,
+O. G. Schmidt, S. D. Franceschi, Hybrid superconductor–semiconductor devices made from self-
+assembled SiGe nanocrystals on silicon. Nat. Nanotechnol. 5, 458−464 (2010).
+[11] H. Watzinger, C. Kloeffel, L. Vukušić, M. D. Rossell, V. Sessi, J. Kukučka, R. Kirchschlager,
+E. Lausecker, A. Truhlar, M. Glaser, A. Rastelli, A. Fuhrer, D. Loss, G. Katsaros, Nano Lett. 16,
+6879-6885 (2016).
+[12] R. Li, F. E. Hudson, A. S. Dzurak, A. R. Hamilton, Pauli spin blockade of heavy holes in a
+silicon double quantum dot, Nano Lett. 15, 7314 (2015).
+[13] X. J. Hao, T. Tu, G. Cao, C. Zhou, H. O. Li, G. C. Guo, W. Y. Fung, Z. Ji, G. P. Guo, W. Lu,
+                                                  99
+                                          第七章 总结和展望
+
+
+
+Strong and Tunable Spin−Orbit Coupling of One-Dimensional Holes in Ge/Si Core/Shell
+Nanowires. Nano Lett. 10, 2956-2960 (2010).
+[14] C. Fasth , A. Fuhrer , L. Samuelson , V. N. Golovach , and D. Loss , Direct Measurement of
+the Spin-Orbit Interaction in a Two-Electron InAs Nanowire Quantum Dot,Phys. Rev. Lett. 98(26),
+266801 (2007).
+[15] A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.- S. Huang, J. Majer, S. Kumar, S. M. Girvin
+and R. J. Schoelkopf. Strong coupling of a single photon to a superconducting qubit using circuit
+quantum electrodynamics. Nature 431, 162–167 (2004).
+[16] Y. Li, S. X. Li, F. Gao, H. O. Li, G. Xu, K. Wang, H. Liu, G. Cao, M. Xiao, T. Wang, J. J. Zhang,
+and G. P. Guo. Measuring the Complex Admittance and Tunneling Rate of a Germanium Hut Wire
+Hole Quantum Dot. J. Appl. Phys. 123, 174305 (2018).
+[17] J. Yoneda, K. Takeda, T. Otsuka, T. Nakajima, M. R. Delbecq, G. Allison, T. Honda, T. Kodera,
+S. Oda, Y. Hoshi, N. Usami, K. M. Itoh, S. Tarucha, A >99.9%-fidelity quantum-dot spin qubit with
+coherence limited by charge noise. arXiv:1708.01454, (2017).
+[18] K. Takeda, J. Kamioka T. Otsuka, J. Yoneda, T. Nakajima, M. R. Delbecq, S. Amaha, G. Allison,
+T. Kodera, S. Oda, S. Tarucha, A fault-tolerant addressable spin qubit in a natural silicon quantum
+dot. Sci. Adv., 2, e1600694 (2016).
+[19] M. F. Churbanov, V. A. Gavva, A. D. Bulanov, N. V. Abrosimov, E. A. Kozyrev, I. A.
+Andryushchenko, V. A. Lipskii, S.A. Adamchik, O. Y. Troshin, A. Y. Lashkov, A. V. Gusev, Cryst.
+Res. Technol. 52, 1700026. 500 (2017).
+[20] S. A. Adamchik, A. D. Bulanov, P. G. Sennikov, M. F. Churbanov, A. Y. Sozin, O. Y. Chernova,
+I. A. Kosheleva, O. Y. Troshin, Ultrapurification of 76Ge-enriched GeH4 by distillation. Inorg. Mater.
+2011, 47 (7), 694−696.
+[21] K. D. Petersson, J. R. Petta, H. Lu, and A. C. Gossard. Quantum Coherence in a One-Electron
+Semiconductor Charge Qubit. Phys. Rev. Lett. 105, 246804 (2010).
+[22] E. Dupont-Ferrier, B. Roche, B. Voisin, X. Jehl, R. Wacquez, M. Vinet, M. Sanquer, and S. De
+Franceschi. Coherent Coupling of Two Dopants in a Silicon Nanowire Probed by Landau-Zener-
+Stückelberg Interferometry. Phys. Rev. Lett. 110, 136802 (2013).
+[23] O. E. Dial, M. D. Shulman, S. P. Harvey, H. Bluhm, V. Umansky, and A. Yacoby.              Charge
+Noise Spectroscopy Using Coherent Exchange Oscillations in a Singlet-Triplet Qubit. Phys. Rev.
+Lett. 110, 146804 (2013).
+[24] E. Paladino, Y. M. Galperin, G. Falci, and B. L. Altshuler. 1/f noise: Implications for solid-state
+quantum information Rev. Mod. Phys. 86, 361 (2014).
+[25] A. Bermeister, D. Keith, and D. Culcer. Charge noise, spin-orbit coupling, and dephasing of
+
+
+                                                  100
+                                         第七章 总结和展望
+
+
+
+single-spin qubits. Appl. Phys. Lett. 105, 192102 (2014).
+[26] J. Basset, A. Stockklauser, D. D. Jarausch, T. Frey, C. Reichl, W. Wegscheider, A. Wallraff, K.
+Ensslin, T. Ihn, Evaluating charge noise acting on semiconductor quantum dots in the circuit
+quantum electrodynamics architecture. Appl. Phys. Lett. 105, 063105 (2014).
+[27] Y. Li, S. X. Li, H. O. Li, G. W. Deng, G. Cao, M. Xiao and G. P. Guo. Charge Noise Acting on
+Graphene Double Quantum Dots in Circuit Quantum Electrodynamics Architecture. (accepted by
+Chin. Phys. B)
+[28] M. R. Delbecq, L. E. Bruhat, J. J. Viennot, S. Datta, A. Cottet, T. Kontos, Photon-mediated
+interaction between distant quantum dot circuits. Nat. Commun. 4, 1400 (2013).
+[29] G. W. Deng, D. Wei, S. X. Li, J. R. Johansson, W. C. Kong, H. O. Li, G. Cao, M. Xiao, G. C.
+Guo, F. Nori, H. W. Jiang, G. P. Guo, Coupling two distant double quantum dots with a microwave
+resonator. Nano Lett. 15, 6620-6625 (2015).
+[30] J. Kelly, R. Barends, A. G. Fowler, A. Megrant, E. Jeffrey, T. C. White, D. Sank, J. Y. Mutus,
+B. Campbell, Yu Chen, Z. Chen, B. Chiaro, A. Dunsworth, I.-C. Hoi, C. Neill, P. J. J. O’Malley, C.
+Quintana, P. Roushan, A. Vainsencher, J. Wenner, A. N. Cleland and John M. Martinis. State
+preservation by repetitive error detection in a superconducting quantum circuit. Nature 519, 66–69
+(2015).
+[31] O. G. Schmidt, Ed. Lateral Alignment of Epitaxial QuantumDots.2007.
+[32] G. Katsaros, J. Tersoff, M. Stoffel, A. Rastelli, P. Acosta-Diaz, G. S. Kar, G. Costantini, O. G.
+Schmidt, K. Kern, Positioning of Strained Islands by Interaction with Surface Nanogrooves. Phys.
+Rev. Lett. 101, 096103 (2008).
+[33] J. J. Zhang, M. Stoffel, A. Rastelli, O. G. Schmidt, V. Jovanović, L. K. Nanver, G. Bauer, SiGe
+growth on patterned Si (001) substrates: Surface evolution and evidence of modified island
+coarsening. Appl. Phys. Lett. 91, 173115 (2007).
+
+
+
+
+                                                 101
+第七章 总结和展望
+
+
+
+
+   102
+                       致 谢
+
+
+
+                       致 谢
+   这是在中国科学技术大学的第五年，也是读书的整二十年。时光飞逝，二十
+年的所有都历历在目。
+   首先感谢中国科学技术大学，这里学风务实、师资力量雄厚、科研环境优越
+并且环境十分安静。作为一所高校，中科大有独特的性格、界定以及坚守。
+   感谢中科院量子信息重点实验室的缔造者郭光灿院士。感谢郭院士几十年如
+一日坚持不懈的为国家量子信息事业奉献，也感谢郭院士为我们创造如此优越的
+科研环境、顶尖的实验平台、浓厚的研究氛围以及广泛的学术交流。
+   感谢我的导师郭国平教授。在我五年的博士期间，郭老师以他敏锐的学术洞
+察力、果断的决策力以及饱满的工作热情在科研上给予我悉心指导和教诲。构架
+了固态量子芯片的研究方向，从无到有的搭建起完整的微纳米加工和低温测量平
+台，给以我们广阔的舞台自由发挥，并且不用为实验设备、经费和合作发愁。
+   感谢李海欧教授，李老师有丰富的样品加工和低温仪器的使用经验，一直在
+默默的维护着实验平台和系统的运行。做研究严谨、耐心、负责。在我们进行新
+工艺探索的过程遇到问题时，李老师总能做出准确的判断，并且给出可行的方案，
+在科研压力做大的时候，李老师替我分担了很多。特别感谢李老师在 Nano Letters
+文章漫长的回复意见期间中事无巨细的纠错和指导。您的点拨让我茅塞顿开，并
+对包括科研在内的做事的方式方法有了更加深入的理解。
+  感谢曹刚教授，曹老师风趣幽默，以他对物理有广泛而深入的领悟教会我提
+升科研工作的表述水平。感谢加州大学洛杉矶分校的姜宏文教授，姜老师开朗热
+心，教会我耐心倾听、虚心学习、以及从另一个视角审视自己的工作。感谢邓光
+伟老师，邓老师在腔和量子点的复合体系有丰富的经历，在我的实验和文章上给
+予很多的指导和帮助。感谢肖明教授、宋骧骧老师、尚汝南老师、薛光明老师、
+邱奎霖老师、谭浩老师、汪成友老师。非常感谢中科院物理所的张建军教授和王
+霆老师、高飞提供的新型半导体材料。
+  特别感谢苏黎世联邦理工学院的 Klaus Ensslin 教授帮助我突破了预设的很多
+限定，也感谢日本理化研究所的 Franco Nori 教授、澳大利亚新南威尔士大学
+Dimitrie Culcer 教授的至关重要的帮助。感谢法国皮埃尔埃格兰实验室 Matthieu
+Delbecq 教授，你的博士论文为我的研究方向解决了很多问题，邮件的点拨也能
+让我获益匪浅，但是理解你的深奥的博士论文着实花了我一整年的时间。感谢胡
+学东教授、Mircea Trif 教授。
+  感谢尤杰师兄和李舒啸师兄。尤杰师兄手把手的教会实验仪器，也默默替我
+背下很多黑锅，是我实验和工作上的领路人。李舒啸师兄和我一起探索新材料的
+工艺，一起做了数不过来的失败的样品。即便毕业了，还免不了随时随地提供售
+                        103
+                                           致 谢
+
+
+
+后咨询服务。感谢郝晓杰、周诚、张苗磊、王力、韩天一、魏达、余国栋、陈宝
+宝、王保传、罗刚、郑智雄师兄。也感谢同级的刘頔、张拙之和孔伟成这五年的
+一起学习和成长。我们有不一样的成长轨迹，最后也选择不一样的道路，祝你们
+前程似锦，为国家的量子信息事业多做贡献。感谢来自伊朗的 Vahid Mosallanejad
+以及巴基斯坦的 Nayyar Abbas Shah。这个时候也要把李舒啸师兄留下的祝福传
+递给王柯、徐刚和刘赫三位师弟，祝你们幸福。另外感谢贾志龙、苗强、朱栋、
+段鹏、袁龙、杨晖、李思齐、张庭、张鑫、井方铭、陈明博、陈昭昀、杨鑫鑫、
+张驰、汪开龙、刘赫、胡睿梓、林霆、顾思思、周圆、周琪、薛程、苏子佳、杜
+磊、倪铭、马荣龙、江顺利、郭亮亮、王宁、应钺、陈思鸣、陶浩然等师弟师妹。
+   感谢两位好朋友李天晓和丁禹阳，怀念一起打球喝酒撸串聊天的日子，特别
+是李天晓，你会有属于自己的天空。感谢舍友陈瑞山、李根、郑勇和黄栋梁。
+   感谢在科大各个岗位上负责的段开敏老师、吴莉老师、王涛老师、朱咏梅老
+师等。感谢几位门卫大爷，经常因为十二点之后出实验室而打扰到你们的休息，
+十分抱歉。
+   这五年的博士离不开之前十五年的积累，感谢暨南大学、怀远一中、怀远实
+验中学、何圩小学、支湖小学、猴洞小学各位老师和同学的帮助，在此一并感谢。
+   作为压轴，也是最重要的，感谢父母。I become a doctor, for both of my parents
+are doctors, of internist and of outpatient, respectively.
+   最后顺便感谢一下这五年的自己。五年的时间，经历了很多，也改变了很多。
+   这篇论文是我五年工作的一个总结，我相信它给这个世界带来了一点点改
+变，哪怕只有一点点。
+
+
+
+
+                                            104
+                        攻读博士期间发表的学术论文或者其他研究成果
+
+
+
+    攻读博士期间发表的学术论文或者其他研究成果
+
+已发表的论文：
+[1] Y. Li, S. X. Li, F. Gao, H. O. Li, G. Xu, K. Wang, D. Liu, G. Cao, M. Xiao, T. Wang,
+J. J. Zhang, G. C. Guo, and G. P. Guo. Coupling a Germanium Hut Wire Hole Quantum
+Dot to a Superconducting Microwave Resonator. Nano Lett. 18, 2091–2097 (2018).
+[2] S. X. Li, Y. Li, Gao F, G. Xu, H. O. Li, M. Xiao, T. Wang, J. J. Zhang, and G. P. Guo.
+Measuring Hole Spin States of Single Quantum Dot in Germanium Hut Wire. Appl.
+Phys. Lett. 110, 133105 (2017). （共同第一作者）
+[3] Y. Li, S. X. Li, F. Gao, H. O. Li, G. Xu, K. Wang, H. Liu, G. Cao, M. Xiao, T. Wang,
+J. J. Zhang, and G. P. Guo. Measuring the Complex Admittance and Tunneling Rate of
+a Germanium Hut Wire Hole Quantum Dot. J. Appl. Phys. 123, 174305 (2018).
+[4] Y. Li, S. X. Li, H. O. Li, G. W. Deng, G. Cao, M. Xiao and G. P. Guo. Charge Noise
+Acting on Graphene Double Quantum Dots in Circuit Quantum Electrodynamics
+Architecture. Chin. Phys. B. 27. 7 (2018).
+[5] G. W. Deng, D. Zhu, X. H. Wang, C. L. Zou, J. T. Wang, H. O. Li, G. Cao, D. Liu,
+Y. Li, M. Xiao, G. C. Guo, K. L. Jiang, X. C. Dai, and G. P. Guo. Strongly coupled
+nanotube electromechanical resonators, Nano Lett. 16, 5456 (2016).
+[6] J. F Wang, W. L. Zhang, J. Zhang, J. You, Y. Li, G. P. Guo, F. P. Feng, X. R. Song,
+L. R. Lou, W. Zhua and G. Z. Wang. Coherence times of precisely depth controlled NV
+centers in diamond. Nanoscale 8, 5780-5785 (2016).
+[7] J. F Wang, Y. Zhou, X. M. Zhang, F. C. Liu, Y. Li, K. Li, Z. Liu, G. Z. Wang, W. B.
+Gao. Efficient generation of an array of single silicon-vacancy defects in silicon
+carbide. Phys. Rev. Applied 7, 064021 (2017).
+[8] D. Liu, L. Yu, X. Xiong, L. Yang, Y. Li, M. Li, H. O. Li, G. Cao, M. Xiao, B. Xiang,
+C. J. Min, G. C. Guo, X. F. Ren, and G. P. Guo, Improving the luminescence
+enhancement of hybrid Au nanoparticle-monolayer MoS2 by focusing radially-
+polarized beams, Opt. Express 24, 27554 (2016).
+
+
+待发表的论文：
+[1] Y. Li, et al, Measuring a Germanium Hut Wire Hole Double Quantum Dots in
+Circuit Quantum Electrodynamics Architecture. In preparation.
+
+
+
+                                             105
+

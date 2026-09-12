@@ -5,7 +5,10 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-npx quartz build
+# 必须用 build:site 而非裸 quartz build：后者每次构建会清空 public/，
+# 需要 prepare-local-assets 把 katex 的 css/字体、vendor 的 d3/pixi 拷回 public/static/，
+# 否则线上 katex.min.css 404，公式全部无样式。
+npm run build:site
 
 tar -C public -cf - . | ssh aliyun2 "sudo bash /opt/quantum-dot-wiki/deploy/deploy-from-tar.sh"
 echo "线上验证："

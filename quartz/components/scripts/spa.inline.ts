@@ -68,20 +68,25 @@ async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
   p = p || new DOMParser()
-  const contents = await fetchCanonical(url)
-    .then((res) => {
-      const contentType = res.headers.get("content-type")
-      if (contentType?.startsWith("text/html")) {
-        return res.text()
-      } else {
-        window.location.assign(url)
-      }
-    })
-    .catch(() => {
-      window.location.assign(url)
-    })
+  const res = await fetchCanonical(url).catch(() => {
+    window.location.assign(url)
+  })
+
+  if (!res) return
+
+  const contentType = res.headers.get("content-type")
+  if (!contentType?.startsWith("text/html")) {
+    window.location.assign(url)
+    return
+  }
+  const contents = await res.text()
 
   if (!contents) return
+
+  // fetch 会跟随 301（目录页被 nginx 规范化出尾部斜杠），用最终 URL 作为
+  // 相对链接的解析基准和地址栏地址，否则 ./x 会少一层路径
+  const finalUrl = new URL(res.url)
+  finalUrl.hash = url.hash
 
   // notify about to nav
   const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
@@ -92,7 +97,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
   cleanupFns.clear()
 
   const html = p.parseFromString(contents, "text/html")
-  normalizeRelativeURLs(html, url)
+  normalizeRelativeURLs(html, finalUrl)
 
   let title = html.querySelector("title")?.textContent
   if (title) {
@@ -129,7 +134,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   if (!isBack) {
-    history.pushState({}, "", url)
+    history.pushState({}, "", finalUrl)
   }
 
   notifyNav(getFullSlug(window))

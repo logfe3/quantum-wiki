@@ -1,10 +1,9 @@
-// Local plugin: emit a small CSS bundle that fixes CJK rendering inside KaTeX
+// Local plugin: inline a small CSS bundle that fixes CJK rendering inside KaTeX
 // math blocks (`.katex .cjk_fallback`, `.katex .mord.text`, etc.).
 // Without this, Chinese characters inside `$...$` or `\text{...}` end up in the
 // default math font and look mis-aligned with the rest of the formula.
-
-import path from "path";
-import fs from "fs/promises";
+// CSS 必须内联（inline: true）：以外部文件 + 根路径引用时在
+// baseUrl 带子路径的部署下会 404。
 
 const CSS = `
 /* --- CJK characters appearing inside KaTeX math blocks (KaTeX wraps them in
@@ -39,25 +38,16 @@ const CSS = `
 }
 `;
 
-// Mirror of the favicon emitter's write helper.
-const write = async (ctx, slug, ext, content) => {
-  const pathToPage = path.join(ctx.argv.output, slug + ext);
-  const dir = path.dirname(pathToPage);
-  await fs.mkdir(dir, { recursive: true });
-  await fs.writeFile(pathToPage, content);
-  return pathToPage;
-};
-
 export const CjkMath = () => ({
   name: "CjkMath",
-  async *emit(ctx) {
-    yield write(ctx, "static/cjk-math", ".css", CSS.trim() + "\n");
-  },
+  // 空 emit 仅用于让插件加载器把本插件归类为 emitter，
+  // 否则 externalResources 不会被收集
+  async *emit() {},
   externalResources: () => ({
     css: [
       {
-        content: "/static/cjk-math.css",
-        inline: false,
+        content: CSS.trim(),
+        inline: true,
       },
     ],
     js: [],
