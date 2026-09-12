@@ -122,3 +122,9 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 一头连着 Hubbard 模型的动能项，一头连着强耦合极限下的[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$。
 - 阵列态的感知依赖电荷传感器与[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与腔模杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
+
+
+## 参考文献
+
+- 大规模阵列与处理器的代表性演示：[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]、[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]、[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

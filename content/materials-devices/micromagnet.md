@@ -307,3 +307,9 @@ Q=\frac{d\mathbf{B}_{\mathrm{tr}}^{\mathrm{tot}}/dy}{\sqrt{\left(d\mathbf{B}_{\m
 - 在[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]方向，它把自旋与电荷杂化，使自旋比特能与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]达到[[circuit-qed/strong-coupling|强耦合]]，实现[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]与长程比特互连。
 - 在[[scaling-automation/flopping-mode-qubit|翻转模式比特]]中，微磁体的横向、纵向场差直接进入双点哈密顿量，成为 $t_{SO}$ 与 $\delta E_z$ 两个参数。
 - 器件层面，它与[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/silicon-sige|Si/SiGe]] 的栅极堆叠工艺深度耦合，是[[scaling-automation/two-dimensional-array|二维阵列]]与[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中的关键约束之一。
+
+
+## 参考文献
+
+- 微磁体辅助 EDSR 的器件实现：[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]、[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

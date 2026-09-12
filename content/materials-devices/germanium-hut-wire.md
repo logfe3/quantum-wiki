@@ -17,9 +17,9 @@ date: 2026-09-08
 
 ## 物理图像与材料生长
 
-锗棚顶纳米线（Ge hut wire）是 Si(001) 表面 Stranski–Krastanow 自组织生长的一种准一维 Ge 结构。 与 都把生长路线放在分子束外延（MBE）：先在 Si 缓冲层上生长一层 Ge，再做高温退火。应变使表面形成三种典型 Ge 团簇——棚顶型（hut）、圆顶型（dome）、金字塔型（pyramid）——高度约 20 nm、直径约 80 nm，最外层覆盖约 2 nm Si 后由自然氧化形成 SiO₂ 帽层。位置控制技术（site-control technique）可以在预光刻的 Si 凹槽边缘让棚顶型团簇沿面内 [100] 或 [010] 方向延展成微米级长线。
+锗棚顶纳米线（Ge hut wire）是 Si(001) 表面 Stranski–Krastanow 自组织生长的一种准一维 Ge 结构。其生长路线采用分子束外延（MBE）：先在 Si 缓冲层上生长一层 Ge，再做高温退火。应变使表面形成三种典型 Ge 团簇——棚顶型（hut）、圆顶型（dome）、金字塔型（pyramid）——高度约 20 nm、直径约 80 nm，最外层覆盖约 2 nm Si 后由自然氧化形成 SiO₂ 帽层。位置控制技术（site-control technique）可以在预光刻的 Si 凹槽边缘让棚顶型团簇沿面内 [100] 或 [010] 方向延展成微米级长线。
 
-棚顶型纳米线的横截面是类三角形——这是它与[锗硅核壳纳米线]([[materials-devices/strained-germanium]])最关键的形貌差异。线高约 2 nm，侧边倾斜角约 11.3°，长度可达数 μm。 还报道了"定位型（position-controlled）"变体：在预刻槽的 Si 衬底凹槽边缘，沿初始形成的 SiGe 层选择性生长，纳米线的位置、长度、间距可由光刻图形预先确定，从而可获得方形、T 形或紧密平行的阵列。
+棚顶型纳米线的横截面是类三角形——这是它与[锗硅核壳纳米线]([[materials-devices/strained-germanium]])最关键的形貌差异。线高约 2 nm，侧边倾斜角约 11.3°，长度可达数 μm。文献还报道了"定位型（position-controlled）"变体：在预刻槽的 Si 衬底凹槽边缘，沿初始形成的 SiGe 层选择性生长，纳米线的位置、长度、间距可由光刻图形预先确定，从而可获得方形、T 形或紧密平行的阵列。
 
 生长流程决定了它天然的几何与电学优势：
 
@@ -81,7 +81,7 @@ $$
 
 ### 漏电流与自旋阻塞解除：自旋轨道强度的定量提取
 
-在双量子点的泡利自旋阻塞（Pauli spin blockade, PSB）区，自旋翻转共隧穿与自旋轨道耦合都会让漏电流增大。塞曼 + 自旋轨道共同作用下，外加磁场使 $S$ 态和 $T$ 态混合，阻塞被解除，漏电流在零磁场附近呈现"谷"的双峰结构，这是强自旋轨道耦合的特征指纹。 测量了 $\varepsilon=0$ 处的漏电流 $I(B)$，并用以下公式拟合：
+在双量子点的泡利自旋阻塞（Pauli spin blockade, PSB）区，自旋翻转共隧穿与自旋轨道耦合都会让漏电流增大。塞曼 + 自旋轨道共同作用下，外加磁场使 $S$ 态和 $T$ 态混合，阻塞被解除，漏电流在零磁场附近呈现"谷"的双峰结构，这是强自旋轨道耦合的特征指纹。实验测量了 $\varepsilon=0$ 处的漏电流 $I(B)$，并用以下公式拟合：
 
 $$
 I(B)=\Gamma_{\mathrm{rel}}\,\frac{(\omega-B^2+\tau^2)\bigl[\omega(1+4\gamma)+B^2-\tau^2\bigr]}{6\gamma\omega^2+2B^2\eta^2 t^2}
@@ -101,7 +101,7 @@ $$
 
 ### 库仑菱形与参数提取
 
-联合扫描 $V_\mathrm{SD}$ 与 $V_G$ 则呈现菱形阻塞区——库仑菱形（[Coulomb diamond]([[fundamentals/coulomb-diamond]])）。在常相互作用模型（[CI 模型]([[fundamentals/constant-interaction-model]])）框架下， 对棚顶线给出标准的提取流程：
+联合扫描 $V_\mathrm{SD}$ 与 $V_G$ 则呈现菱形阻塞区——库仑菱形（[Coulomb diamond]([[fundamentals/coulomb-diamond]])）。在常相互作用模型（[CI 模型]([[fundamentals/constant-interaction-model]])）框架下，文献对棚顶线给出标准的提取流程：
 
 - 充电能 $E_C$：菱形半高对应 $E_C=e|V_\mathrm{SD}^\mathrm{tip}|$，棚顶线单点实测 $E_C=4$–$6\ \mathrm{meV}$；
 - 栅–点电容 $C_G$：菱形沿栅压方向的宽度 $\Delta V$ 给出 $C_G=e/\Delta V$；
@@ -123,13 +123,13 @@ $$
 E_Z=g\mu_B B
 $$
 
-线性拟合即可得朗德 $g$ 因子。 给出棚顶线单点的 $g\approx 4.3$； 在双量子点 EDSR 谱中得到 $g\approx 3.5$，两者一致地体现棚顶线 $g$ 因子大、各向异性强（$g_\parallel/g_\perp$ 可达 ~18）的特征。
+线性拟合即可得朗德 $g$ 因子。文献给出棚顶线单点的 $g\approx 4.3$；另一组在双量子点 EDSR 谱中得到 $g\approx 3.5$，两者一致地体现棚顶线 $g$ 因子大、各向异性强（$g_\parallel/g_\perp$ 可达 ~18）的特征。
 
 <!-- FIGURE: 不同磁场下的库仑菱形：（a）0 T 时连续菱形；（b）2 T、（c）4 T、（d）6 T 时基态/激发态的 Zeeman 劈裂（红线对应奇数空穴，黄线对应偶数空穴） -->
 
 ## 双量子点与电荷稳定图
 
-沿棚顶线制备五栅结构（G1、G2、G3、G4、G5，分别调节势垒/左点/中势垒/右点/势垒），即可定义高度可调的双量子点。 给出测量流程：在固定 $V_\mathrm{SD}=0.5\ \mathrm{mV}$ 与 $V_\mathrm{G1}$、$V_\mathrm{G5}$ 的条件下，扫描 $(V_\mathrm{G2}, V_\mathrm{G4})$ 得到电荷稳定图（[charge stability diagram]([[fundamentals/charge-stability-diagram]])）；增大中间栅压 $V_\mathrm{G3}$ 的负偏压可以把左右点间的隧穿耦合 $t_C$ 从几乎关断调到打开，相图从分立三相点演化成典型蜂窝结构；$V_\mathrm{SD}=2\ \mathrm{mV}$ 时则看到排列整齐的偏压三角形。
+沿棚顶线制备五栅结构（G1、G2、G3、G4、G5，分别调节势垒/左点/中势垒/右点/势垒），即可定义高度可调的双量子点。典型的测量流程：在固定 $V_\mathrm{SD}=0.5\ \mathrm{mV}$ 与 $V_\mathrm{G1}$、$V_\mathrm{G5}$ 的条件下，扫描 $(V_\mathrm{G2}, V_\mathrm{G4})$ 得到电荷稳定图（[charge stability diagram]([[fundamentals/charge-stability-diagram]])）；增大中间栅压 $V_\mathrm{G3}$ 的负偏压可以把左右点间的隧穿耦合 $t_C$ 从几乎关断调到打开，相图从分立三相点演化成典型蜂窝结构；$V_\mathrm{SD}=2\ \mathrm{mV}$ 时则看到排列整齐的偏压三角形。
 
 由偏压三角形可读取：
 
@@ -144,7 +144,7 @@ $$
 
 ## 空穴–微波腔耦合与电荷比特读出
 
-把棚顶线上的双量子点与反射式超导微波腔耦合，可用腔的幅值 $|S_{11}|$ 与相位 $\arg(S_{11})$ 信号探测隧穿线，得到与直流输运一致的稳定图，但在直流信号微弱区域依然清晰。 与 都采用 Jaynes–Cummings（JC）框架描写电荷–腔耦合：
+把棚顶线上的双量子点与反射式超导微波腔耦合，可用腔的幅值 $|S_{11}|$ 与相位 $\arg(S_{11})$ 信号探测隧穿线，得到与直流输运一致的稳定图，但在直流信号微弱区域依然清晰。 相关实验都采用 Jaynes–Cummings（JC）框架描写电荷–腔耦合：
 
 $$
 H=\hbar\Delta_0 a^\dagger a+\frac{\hbar\Delta}{2}\sigma_Z+\hbar g_{\mathrm{eff}}(\sigma_+ a+\sigma_- a^\dagger)
@@ -175,7 +175,7 @@ $$
 1. **混合角路径**：失谐量 $\varepsilon=0$ 处双量子点作为整体比特工作，$g_S\approx 2g_C(E_Z\Delta E_0/E_\mathrm{qb}^2)(L/\lambda_{\mathrm{SO}})^2 \eta$，其中 $E_\mathrm{qb}\approx 2t_C$，$\eta=s/\sqrt{1-s^2}$，$s=e^{-L/l}$；
 2. **大失谐路径**：$\varepsilon\neq 0$ 时每个点单独限制空穴，等效为单量子点自旋–光子耦合 $g_S\approx g_C(E_Z/\Delta E_0)(l/\lambda_{\mathrm{SO}})$。
 
- 用实验测得的 $g_C$ 与典型参数（$E_Z=13.1\ \mu\mathrm{eV}$、$\Delta E_0=1\ \mathrm{meV}$、$l=70\ \mathrm{nm}$、$\lambda_{\mathrm{SO}}=28$–$57\ \mathrm{nm}$、$m^*=0.28 m_e$）估算出 $g_S/2\pi=2$–$4\ \mathrm{MHz}$。 用同样公式在双量子点失谐量 $\varepsilon=0$ 处估算 $g_S/2\pi\sim 3\ \mathrm{MHz}$，在 $\varepsilon\neq 0$ 处 $g_S/2\pi\sim 0.22\ \mathrm{MHz}$。两者都指出目前 $g_S$ 与 $\kappa$、$\gamma$ 同量级（$\kappa/2\pi\sim 7\ \mathrm{MHz}$），但仍不足以跨过强耦合门槛 $g_S>\kappa,\gamma$。提升方向包括：高阻抗腔（SQUID 阵列腔可将耦合提升 ~6 倍）、同位素纯化（类比 ²⁸Si 把 $T_2^*$ 从 360±30 ns 提升到 270 μs，~5500 倍）、更高磁场（铝腔失超阈值 ~10 mT，铌腔可达 ~100 mT 量级）。
+所引论文用实验测得的 $g_C$ 与典型参数（$E_Z=13.1\ \mu\mathrm{eV}$、$\Delta E_0=1\ \mathrm{meV}$、$l=70\ \mathrm{nm}$、$\lambda_{\mathrm{SO}}=28$–$57\ \mathrm{nm}$、$m^*=0.28 m_e$）估算出 $g_S/2\pi=2$–$4\ \mathrm{MHz}$。另一组实验用同样公式在双量子点失谐量 $\varepsilon=0$ 处估算 $g_S/2\pi\sim 3\ \mathrm{MHz}$，在 $\varepsilon\neq 0$ 处 $g_S/2\pi\sim 0.22\ \mathrm{MHz}$。两者都指出目前 $g_S$ 与 $\kappa$、$\gamma$ 同量级（$\kappa/2\pi\sim 7\ \mathrm{MHz}$），但仍不足以跨过强耦合门槛 $g_S>\kappa,\gamma$。提升方向包括：高阻抗腔（SQUID 阵列腔可将耦合提升 ~6 倍）、同位素纯化（类比 ²⁸Si 把 $T_2^*$ 从 360±30 ns 提升到 270 μs，~5500 倍）、更高磁场（铝腔失超阈值 ~10 mT，铌腔可达 ~100 mT 量级）。
 
 <!-- FIGURE: 自旋–光子耦合路径示意：（a）双量子点 $\varepsilon=0$ 处的 JC 耦合；（b）大失谐处的单点–腔耦合；（c）空穴 g 因子、$E_Z$、$\Delta E_0$、$\lambda_{\mathrm{SO}}$ 的几何意义 -->
 
@@ -200,7 +200,7 @@ $$
 | 侧边倾斜角 | 11.3° | |
 | 纳米线长度 | 数 μm | |
 | 定位型线宽/高/长 | 80 nm / 15 nm / 4 μm | |
-| 生长方向 | [100]、[010]（面内） | 、 |
+| 生长方向 | [100]、[010]（面内） | 本站论文（定位型生长） |
 | 重空穴有效质量 | $0.28\ m_e$ | |
 | 充电能 $E_C$（单点） | 4–6 meV | |
 | 充电能 $E_C$（双点） | 4.3–5.4 meV | |
@@ -252,3 +252,9 @@ $$
 - **量子点–腔复合结构**：与 [微波谐振腔]([[circuit-qed/microwave-resonator]]) 的耦合由 [JC 模型]([[circuit-qed/jaynes-cummings-model]]) 描写，[电荷–光子耦合]([[circuit-qed/charge-photon-coupling]]) 直接来自栅极杠杆臂，[自旋–光子耦合]([[circuit-qed/spin-photon-coupling]]) 借助自旋轨道耦合间接实现，目标是把 [色散读出]([[readout-measurement/dispersive-readout]]) 与[强耦合]([[circuit-qed/strong-coupling]]) 推到空穴自旋体系；自旋–光子耦合强度按 $\sqrt{Z_r}$ 与 [高阻抗谐振腔]([[circuit-qed/high-impedance-resonator]]) 提升，[电路量子电动力学]([[circuit-qed/circuit-quantum-electrodynamics]]) 的整体框架直接适用。
 - **量子比特扩展**：定位型棚顶线把单线扩展到双线集成（量子点 + 电荷感应器），并展示了基于[交叉电容矩阵]([[scaling-automation/cross-capacitance-matrix]])与[虚拟门]([[scaling-automation/virtual-gates]])的可扩展调控前景。
 - **缺陷与噪声**：自然丰度的 ⁷³Ge 核自旋与[界面缺陷]([[materials-devices/interface-defects]])是[电荷噪声]([[materials-devices/charge-noise]])的主要来源；⁷³Ge 的同位素纯化与 SiO₂/Si 界面工程是降低低频噪声的路径。
+
+
+## 参考文献
+
+- 锗空穴体系的快速门与阵列扩展：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]、[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

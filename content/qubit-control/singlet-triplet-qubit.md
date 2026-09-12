@@ -136,3 +136,10 @@ $S$–$T_0$ 比特的退相干有两个主要来源。其一是超精细核场�
 ## 与其他概念的关系
 
 与[[qubit-control/single-spin-qubit|单自旋量子比特]]相比，$S$–$T_0$ 编码的全部操控可由栅压脉冲（全电控）完成，无需微波磁场或强局域驱动，代价是每个比特占用两个电子、且需要稳定的磁场梯度。其 $z$ 轴与本站[[exchange-interaction|交换相互作用]]词条共享同一微观起源；$x$ 轴所需的梯度与[[materials-devices/micromagnet|微磁体]]方案互通。向更多电子数推广，三电子情形给出[[resonant-exchange-qubit|共振交换量子比特]]与[[hybrid-qubit|杂化量子比特]]，其 $\{|S\rangle,|T_0\rangle\}$ 子空间结构在两重态–四重态体系中会以相似形式复现。多电子双量子点中还会出现四重态阻塞等超出两电子模型的结构（论文第 3 章），不能简单套用本词条的哈密顿量。两个 $S$–$T_0$ 比特之间可借杂化偶极矩的电容耦合实现纠缠（Yacoby 组已演示）；在硅基阵列中，同一交换哈密顿量在 $J\gg\Delta E_z$ 极限下给出 $\sqrt{\mathrm{SWAP}}$ 类两比特门，与单自旋编码的门集互补。
+
+
+## 参考文献
+
+- 单态–三重态编码的脉冲门与弛豫测量：[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
+- 两个 ST 比特的纠缠演示：[[references/shulman-2012|Shulman et al., Science 336, 202 (2012)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

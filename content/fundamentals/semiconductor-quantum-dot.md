@@ -28,7 +28,7 @@ date: 2026-09-08
 
 ### 横向与纵向
 
-根据输运方向，量子点可大致分为两类。 给出对应关系：
+根据输运方向，量子点可大致分为两类。文献给出对应关系：
 
 - **横向量子点**：在已形成[[fundamentals/two-dimensional-carrier-gas|二维电子气]]的异质结表面用金属栅极刻出势垒，载流子沿平行于晶片表面方向从源到漏；几乎所有栅控自旋量子比特实验都属于这一类；
 - **纵向量子点**：用双势垒异质结构（共振隧穿二极管、自组装量子点）沿生长方向夹出一维势阱，载流子沿垂直于晶片表面方向输运；早期单电子隧穿研究与中作为参考的共振隧穿器件属此类，但调控性差。
@@ -215,3 +215,10 @@ CI 模型在双量子点情形同样适用，其蜂窝图与三相点完全由�
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/strained-germanium|应变锗]]、[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]等平台决定量子点的载流子类型、相干时间和可调性，是同一物理结构在不同材料体系下的具体实现。
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]、[[readout-measurement/rf-reflectometry|射频反射测量]]、[[circuit-qed/microwave-resonator|微波谐振腔]]等读出方式均通过与量子点的静电或电磁耦合工作。
 - [[materials-devices/charge-noise|电荷噪声]]、[[materials-devices/interface-defects|界面缺陷]]、超精细相互作用等是量子点相干性的主要限制因素。
+
+
+## 参考文献
+
+- 栅控量子点、夹断与少电子极限的系统叙述：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]、[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+- 量子点用作自旋量子比特的开创性方案：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

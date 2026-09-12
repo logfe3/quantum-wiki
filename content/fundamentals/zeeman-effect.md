@@ -165,3 +165,9 @@ Si 量子点具有谷能级（valley）自由度。当 $E_Z < E_\mathrm{VS}$ 时
 - [[fundamentals/coulomb-blockade|库仑阻塞]]：在阻塞区内 Zeeman 频率决定 Elzerman 读出的窗口；Kondo 零偏压峰的 Zeeman 劈裂是早期验证。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]：自旋–光子耦合强度正比于 $g$，强各向异性 g 张量可用于选择耦合方向。
 - [[qubit-control/exchange-interaction|交换相互作用]] 与 [[qubit-control/lzsm-interference|LZSM 干涉]]：与 $E_Z$ 在同一能量标度上竞争，是 $S$–$T_+$ 反交叉与 Landau–Zener 跃迁概率的决定因素之一。
+
+
+## 参考文献
+
+- 量子点中 g 因子物理与塞曼能标：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

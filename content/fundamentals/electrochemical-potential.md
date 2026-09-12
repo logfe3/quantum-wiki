@@ -215,3 +215,9 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t_C$ 使三相点附近转移线弯曲，其大小既由电荷比特杂化能决定，也可从反交叉形貌直接读出。
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]中，每个量子点的电化学势同时被多个物理栅极经交叉电容调制，需要用[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]构造[[scaling-automation/virtual-gates|虚拟电极]]才能独立调节；这是阵列化电化学势调控的核心。
 - 电化学势决定阻塞区电子数严格为整数的性质，也是[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]逐个数电子、标定绝对电子数的物理基础；射频化后即[[readout-measurement/rf-reflectometry|射频反射测量]]。
+
+
+## 参考文献
+
+- 电化学势与库仑阻塞、稳定图的关系：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]、[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -176,3 +176,9 @@ $$
 - [[materials-devices/micromagnet|微磁体]]引入的梯度磁场与 Overhauser 涨落在 [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]（EDSR）中共存，是单比特 Rabi 频率与相干时间的共同决定因素。
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]的去相位由 Overhauser 涨落与电荷噪声共同贡献：纯化硅中 Rabi 振荡外推的 $T_2^*$ 远高于 GaAs。
 - [[qubit-control/exchange-interaction|交换相互作用]]与超精细梯度共同决定双量子点 S–T<sub>0</sub> 与 S–T<sub>+</sub> 反交叉的能级图，是[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/pauli-spin-blockade|泡利自旋阻塞]]读出的核心。
+
+
+## 参考文献
+
+- 核自旋与电子自旋退相干（GaAs 对比硅）的经典综述：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]；现代视角见 [[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

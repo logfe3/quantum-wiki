@@ -153,3 +153,10 @@ $N$ 个量子点的完整稳定图是 $N$ 维栅压空间中的分界面结构�
 - [[fundamentals/tunnel-coupling|隧穿耦合]] $t_C$ 使三相点附近出现量子弯曲，其大小既由[[qubit-control/charge-qubit|电荷比特]]杂化能决定，也可从反交叉形貌读出。
 - 稳定图是[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]谱、[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]测量的共同坐标系：这些实验都固定在蜂窝图的特定位置（如点间转移线中点）进行。
 - 它是[[scaling-automation/quantum-dot-array|量子点阵列]]规模化中的核心数据结构，配合[[scaling-automation/virtual-gates|虚拟电极]]与[[scaling-automation/automatic-tuning|自动调控]]算法使用。
+
+
+## 参考文献
+
+- 蜂窝图、三相点与偏压三角形的系统实验叙述：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]、[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]。
+- 稳定图作为自动调点数据结构：[[references/kalantre-2019|Kalantre et al., npj QI 5, 21 (2019)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

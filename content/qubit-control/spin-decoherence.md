@@ -142,7 +142,7 @@ $$
 
 ### $T_2^*$ 的 Ramsey 测量
 
-标准 Ramsey 序列：$\pi/2$–$t_\mathrm{wait}$–$\pi/2$，扫描 $t_\mathrm{wait}$ 得到相位振荡包络 $P(t_\mathrm{wait})=A\,\cos(\Omega_\mathrm{Ramsey}\,t_\mathrm{wait})\,\exp[-(t_\mathrm{wait}/T_2^*)^{1+\alpha'}]+B$；失谐 $\Omega_\mathrm{Ramsey}/2\pi$ 通常取 5–20 MHz，便于拟合振荡频率。 给出翻转模式单自旋比特 $\varepsilon=0$ 与 $\varepsilon=1.5\ \mathrm{meV}$ 两点的 $T_2^*\approx 0.42\ \mathrm{\mu s}$； Q1/Q2 分别为 $0.9/0.7\ \mathrm{\mu s}$，包络为高斯衰减； 在锗空穴上 $T_2^*=136\ \mathrm{ns}$（20 MHz 失谐）。
+标准 Ramsey 序列：$\pi/2$–$t_\mathrm{wait}$–$\pi/2$，扫描 $t_\mathrm{wait}$ 得到相位振荡包络 $P(t_\mathrm{wait})=A\,\cos(\Omega_\mathrm{Ramsey}\,t_\mathrm{wait})\,\exp[-(t_\mathrm{wait}/T_2^*)^{1+\alpha'}]+B$；失谐 $\Omega_\mathrm{Ramsey}/2\pi$ 通常取 5–20 MHz，便于拟合振荡频率。文献给出翻转模式单自旋比特 $\varepsilon=0$ 与 $\varepsilon=1.5\ \mathrm{meV}$ 两点的 $T_2^*\approx 0.42\ \mathrm{\mu s}$；另一组中 Q1/Q2 分别为 $0.9/0.7\ \mathrm{\mu s}$，包络为高斯衰减；另有锗空穴实验测得 $T_2^*=136\ \mathrm{ns}$（20 MHz 失谐）。
 
 ### $T_2^\mathrm{Hahn}$ 与 $T_2^\mathrm{CPMG}$
 
@@ -173,3 +173,9 @@ $$
 - [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]以交换相互作用 $J$ 为 $z$ 轴，$T_2^*$ 主要由电荷噪声决定；它的回波逻辑（DCZ）与自旋比特完全平行。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]因强自旋–轨道耦合使 $T_2^*$ 较短（数十至上百 ns），但 $T_2^\mathrm{CPMG}$ 可突破 ms 量级；DD 在该体系同时是最重要的延长手段和噪声谱诊断工具。
 - [[circuit-qed/circuit-quantum-electrodynamics|cQED]]侧利用腔介导耦合与色散读出时，腔频 $1/f$ 噪声同样会让自旋–光子相位累积；其形式与自旋比特本身的退相干可统一处理。
+
+
+## 参考文献
+
+- 自旋退相干机制（核自旋、电荷噪声、自旋轨道）的系统论述：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

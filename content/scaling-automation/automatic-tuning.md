@@ -237,3 +237,9 @@ $n$ 量子点系统完整的电荷稳定图维数为 $n$，$n\ge 4$ 时无法用
 - [[qubit-control/exchange-interaction|交换相互作用]]与隧穿耦合 $t_{ij}$ 直接相连：自动调控在势垒方向的精度直接决定双比特门参数 $J$ 的稳定性。
 - [[readout-measurement/single-shot-readout|单发读出]]与[[qubit-control/rabi-oscillation|Rabi 振荡]]等操控层概念对自动调控提出了隐含约束：少电子区定位必须满足比特工作点对 $\varepsilon$ 与 $t$ 的精度要求，否则后续比特操作无法开展。
 - [[materials-devices/charge-noise|电荷噪声]]是自动调控必须容忍的扰动源；自动调控的回跳、阈值与置信度机制都是对低频漂移与随机电报噪声的工程化应对。
+
+
+## 参考文献
+
+- 自动调点的机器学习流水线代表作：[[references/kalantre-2019|Kalantre et al., npj QI 5, 21 (2019)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -150,3 +150,9 @@ $Q$ 越高意味着在相干时间内可完成越多的旋转循环；$Q\gtrsim 
 - **Rabi 振荡 vs. 几何门**：在 [[qubit-control/geometric-quantum-gate|几何相位门]] 中，Rabi 振荡仍是底层驱动工具，但门末态由几何相位决定，对某些噪声（共振频率抖动）更鲁棒；二者并不互斥。
 - **Rabi 振荡 vs. 退相干机制**：$T_{2}^\text{Rabi}$ 与 [[materials-devices/charge-noise|电荷噪声]]、核自旋噪声、驱动幅度噪声都耦合，是诊断噪声谱的载体；通过测不同 $A_\text{MW}$ 下的 $T_{2}^\text{Rabi}$ 可把电荷噪声与纯高频去耦区分开。
 - **Rabi 振荡 vs. 真空 Rabi 振荡**：腔量子电动力学中"原子"与腔真空场交换光子给出真空 Rabi 振荡（见 [[circuit-qed/jaynes-cummings-model|JC 模型]] 与 [[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]）；这里的 Rabi 振荡特指外加经典驱动下的态占据交换。二者形式相似、驱动来源不同。
+
+
+## 参考文献
+
+- 量子点单自旋 Rabi 振荡的首次观测：[[references/koppens-2006|Koppens et al., Nature 442, 766 (2006)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

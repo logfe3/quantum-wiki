@@ -106,7 +106,7 @@ $$
 - 强弱耦合边界：$g>\kappa,\gamma$，等价于两支极化激元谱线能彼此分辨。
 - 合作因子（cooperativity）：$C=2g^2/(\kappa\gamma)$（或按某些教材定义为 $C=4g^2/(\kappa\gamma)$）；$C>1$ 表示相干交换速率超过损耗速率一次以上，但能否分辨谱线还需结合 $\kappa/2$、$\gamma$ 与拟合模型共同判定。
 
-在本站论及的强耦合实验中给出双量子点电荷比特与 NbTiN 腔的全局耦合 $2g_{0,1}/2\pi\approx 74\ \mathrm{MHz}$、$2g_{0,2}/2\pi\approx 119\ \mathrm{MHz}$； 报告单比特 $g/2\pi=81\ \mathrm{MHz}$、退相干 $\gamma/2\pi=65\ \mathrm{MHz}$； 在 Si/SiGe 三量子点中获得电荷比特 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$，翻转模式自旋比特 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$\gamma_s/2\pi=4.6\ \mathrm{MHz}$，所有这些系统都满足 $g>\kappa,\gamma$，因此真空 Rabi 劈裂可以直接在腔反射/透射谱上读出。
+在本站论及的强耦合实验中给出双量子点电荷比特与 NbTiN 腔的全局耦合 $2g_{0,1}/2\pi\approx 74\ \mathrm{MHz}$、$2g_{0,2}/2\pi\approx 119\ \mathrm{MHz}$；也有实验报告单比特 $g/2\pi=81\ \mathrm{MHz}$、退相干 $\gamma/2\pi=65\ \mathrm{MHz}$；另有工作在 Si/SiGe 三量子点中获得电荷比特 $g_0/2\pi=175\ \mathrm{MHz}$、$\gamma_c/2\pi=99\ \mathrm{MHz}$，翻转模式自旋比特 $2g_s/2\pi=43.5\ \mathrm{MHz}$、$\gamma_s/2\pi=4.6\ \mathrm{MHz}$，所有这些系统都满足 $g>\kappa,\gamma$，因此真空 Rabi 劈裂可以直接在腔反射/透射谱上读出。
 
 ## 实验特征与参数提取
 

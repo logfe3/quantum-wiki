@@ -76,7 +76,7 @@ $$
 \rho(t_\text{wait})=\rho(0)\cos\!\left(\Omega_\text{Ramsey}\,t_\text{wait}\right)\exp\!\left(-\frac{t_\text{wait}}{T_2^*}\right)+\rho_0
 $$
 
-其中 $\rho(0)$ 是等待时间趋于零时比特处于参考态的概率，$\Omega_\text{Ramsey}$ 是驱动微波与比特共振频率之间的失谐量，$\rho_0$ 是平衡占据， 的式 (2.16) 即此公式。当 $\Omega_\text{Ramsey}=0$ 时信号退化为纯指数衰减；$\Omega_\text{Ramsey}\neq 0$ 时则是以 $\Omega_\text{Ramsey}$ 为振荡频率的指数衰减包络。
+其中 $\rho(0)$ 是等待时间趋于零时比特处于参考态的概率，$\Omega_\text{Ramsey}$ 是驱动微波与比特共振频率之间的失谐量，$\rho_0$ 是平衡占据，所引论文的式 (2.16) 即此公式。当 $\Omega_\text{Ramsey}=0$ 时信号退化为纯指数衰减；$\Omega_\text{Ramsey}\neq 0$ 时则是以 $\Omega_\text{Ramsey}$ 为振荡频率的指数衰减包络。
 
 注意 $T_2^*$ 与 Hahn-Echo 测得的 $T_2^\text{H}$ 不同：$T_2^*$ 包含缓慢漂移和准静态低频噪声，而 $T_2^\text{H}$ 通过在等待时间中点插入 $\pi$ 脉冲让相位反向积累，可以抵消对称的低频扰动。两者之差
 
@@ -169,3 +169,9 @@ Ramsey 信号既可以用电荷比特传统的电荷传感器（[[readout-measur
 2. **驱动频率与比特频率需故意失谐**：纯共振时（$\Delta_{a,d}=0$）信号退化为无振荡的指数衰减，无法拟合失谐 $\Omega_\text{Ramsey}$；失谐也不宜过大，否则振荡过快、采样不足。
 3. **多次平均抑制单发读出噪声**：与 Rabi 实验一样，每次单发读出结果需要做 $10^3$–$10^4$ 次平均才能把统计误差压到 1% 以下。
 4. **判断包络形状**：若拟合后残差仍呈周期性，说明包络不只是简单指数衰减，提示存在多个噪声时间尺度（$1/f$ 电荷噪声、核自旋噪声、慢漂移并存）。此时可考虑多指数或高斯包络。
+
+
+## 参考文献
+
+- 自旋比特 Ramsey/回声表征的系统叙述：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

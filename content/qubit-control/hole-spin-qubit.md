@@ -71,7 +71,7 @@ $$
 l_\mathrm{SO}=\frac{\hbar}{m^{*}\sqrt{\alpha^{2}+\beta^{2}}}
 $$
 
-即"自旋轨道长度"。$l_\mathrm{SO}$ 越短，单位电场位移产生的有效自旋转动越大，EDSR 越快。论文中 报告锗棚顶纳米线双量子点 $t_\mathrm{SO}\sim 38\pm 4\ \mu\mathrm{eV}$、$l_\mathrm{SO}\sim 40{-}100\ \mathrm{nm}$，与 GaAs 电子体系 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ 形成鲜明对比。
+即"自旋轨道长度"。$l_\mathrm{SO}$ 越短，单位电场位移产生的有效自旋转动越大，EDSR 越快。棚顶纳米线双量子点实验给出 $t_\mathrm{SO}\sim 38\pm 4\ \mu\mathrm{eV}$、$l_\mathrm{SO}\sim 40{-}100\ \mathrm{nm}$，与 GaAs 电子体系 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ 形成鲜明对比。
 
 ### 自旋阻塞漏电流的来源
 
@@ -115,7 +115,7 @@ $$
 - **CPMG / dynamical decoupling** 把 $\pi$ 脉冲串延长到毫秒级，与电荷噪声频谱耦合；
 - **Rabi 扫描** 改变脉冲长度 $t_\mathrm{p}$，记录翻转概率随时间的正弦振荡，提取 $f_\mathrm{Rabi}$ 与 $T_{2}^\mathrm{Rabi}$。
 
-论文中 在锗棚顶纳米线单空穴比特上用 Hahn echo 把退相干从 $T_{2}^{*}\sim 65\ \mathrm{ns}$ 提升到 $T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$，并实现 $\pi$ 脉冲单比特翻转保真度超过 99%； 报告在最优工作点下 $T_2^\mathrm{Rabi}\sim 1.77\ \mu\mathrm{s}$。
+锗棚顶纳米线单空穴比特实验用 Hahn echo 把退相干从 $T_{2}^{*}\sim 65\ \mathrm{ns}$ 提升到 $T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$，并实现 $\pi$ 脉冲单比特翻转保真度超过 99%；另一组实验在最优工作点下测得 $T_2^\mathrm{Rabi}\sim 1.77\ \mu\mathrm{s}$。
 
 ### 读出：自旋–电荷转换
 
@@ -124,7 +124,7 @@ $$
 - **能量选择读出**：把 $|{\uparrow}\rangle$、$|{\downarrow}\rangle$ 调节到与漏极能级对齐的能量差处，利用 Pauli 自旋阻塞判定隧穿是否发生；
 - **PSB 读出**：在双量子点偏压三角形底部监测漏电流，漏电流大小直接反映比特态；
 - **电荷感应器**（QPC、单电子管、射频反射）：通过邻近电导变化感知比特点电荷态——若比特点中的最后一个电子自旋翻转改变了双点电荷分布，感应器立即给出电学信号；
-- **腔色散读出**：把比特耦合到超导微波腔，用比特–腔色散位移读取电荷或自旋态； 报告锗棚顶纳米线空穴双量子点–腔耦合强度 $g_C/2\pi\sim 15\ \mathrm{MHz}$。
+- **腔色散读出**：把比特耦合到超导微波腔，用比特–腔色散位移读取电荷或自旋态；已报道的锗棚顶纳米线空穴双量子点–腔耦合强度达 $g_C/2\pi\sim 15\ \mathrm{MHz}$。
 
 ## 与其他概念的关系
 
@@ -144,21 +144,22 @@ $$
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
 | 自旋轨道耦合强度 $t_\mathrm{SO}$ | $\sim 38\pm 4\ \mu\mathrm{eV}$ | （锗棚顶纳米线双量子点） |
-| 自旋轨道长度 $l_\mathrm{SO}$ | $40{-}100$ nm | ；GaAs 电子 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ |
-| 单比特 Rabi 频率（高速） | $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$ | |
-| 高速区 $T_{2}^{\mathrm{Rabi}}$ | $\sim 1.77\ \mu\mathrm{s}$（@ $f_\mathrm{Rabi}\sim 19\ \mathrm{MHz}$） | |
-| 优化工作点 $T_{2}^{*}$ 提升 | 约 5 倍（相对常规工作点） | |
-| 几何门单比特保真度 | $>99.9\%$（$f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 区间均 $>99\%$） | |
-| 动力学门优化后保真度 | 最高 $99.82\%$，超过容错阈值 | |
-| Hahn echo 提升 | $T_{2}^{*}\sim 65\ \mathrm{ns}\to T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$ | |
-| 空穴–腔耦合强度 | $g_C/2\pi\sim 15\ \mathrm{MHz}$ | |
-| 重空穴有效质量 | 比电子小（具体值与应变/限域相关，论文强调"对量子点尺寸要求相对宽松"） | |
-| 单比特门操作时间（参考） | 20 ns 单比特、75 ns 两比特（锗异质结） | 转引文献 [36] |
-| 单/两比特保真度（参考） | 99.97% 单比特、99.3% 两比特（空穴跳跃方法） | 转引文献 [41] |
-| 阵列规模（参考） | $2\times 2$、$2\times 4$、$4\times 4$、10、18 空穴比特 | 转引文献 [43–47] |
-| 长程穿梭距离 | 自旋态在 9 μm（可优化至 49 μm）穿梭后保持相干 | 转引文献 [48] |
+| 自旋轨道长度 $l_\mathrm{SO}$ | $40{-}100$ nm（棚顶纳米线） | 对比：GaAs 电子 $l_\mathrm{SO}\gtrsim 1\ \mu\mathrm{m}$ |
+| 单比特 Rabi 频率（高速） | $f_\mathrm{R}\sim 698\pm 2\ \mathrm{MHz}$ | 本站论文（平面应变锗） |
+| 高速区 $T_{2}^{\mathrm{Rabi}}$ | $\sim 1.77\ \mu\mathrm{s}$（@ $f_\mathrm{Rabi}\sim 19\ \mathrm{MHz}$） | 本站论文（平面应变锗） |
+| 优化工作点 $T_{2}^{*}$ 提升 | 约 5 倍（相对常规工作点） | 本站论文（平面应变锗） |
+| 几何门单比特保真度 | $>99.9\%$（$f_\mathrm{Rabi}=8{-}19\ \mathrm{MHz}$ 区间均 $>99\%$） | 本站论文（平面应变锗） |
+| 动力学门优化后保真度 | 最高 $99.82\%$，超过容错阈值 | 本站论文（平面应变锗） |
+| Hahn echo 提升 | $T_{2}^{*}\sim 65\ \mathrm{ns}\to T_{2}^\mathrm{Hahn}\sim 523\ \mathrm{ns}$ | 本站论文（平面应变锗） |
+| 空穴–腔耦合强度 | $g_C/2\pi\sim 15\ \mathrm{MHz}$ | 本站论文（棚顶纳米线–腔耦合） |
+| 重空穴有效质量 | 比电子小（具体值与应变/限域相关，论文强调"对量子点尺寸要求相对宽松"） | 本站论文（棚顶纳米线） |
+| 单比特门速度（锗平面异质结） | Rabi $>100\ \mathrm{MHz}$（$\pi$ 门 $10\ \mathrm{ns}$ 量级）、单比特保真度 99.3% | [[references/hendrickx-2020\|Hendrickx et al., Nature 577, 487 (2020)]] |
+| 两比特 CX 门时长（锗平面异质结） | 55–75 ns（电荷对称点、常开交换 + 频率选择） | [[references/hendrickx-2020\|Hendrickx et al., Nature 577, 487 (2020)]] |
+| 单比特保真度（噪声甜点运行） | 99.97%（各向异性噪声敏感度的甜点工作点） | [[references/ge-sweetspot-2024\|Hendrickx et al., Nat. Mater. 23, 920 (2024)]] |
+| 阵列规模 | $2\times 2$ 四比特处理器 → 10 比特二维阵列 → 18 比特模块化阵列 | [[references/hendrickx-2021\|Hendrickx 2021]]、[[references/ge-10qubit-2025\|John 2025]]、[[references/ge-18qubit-2026\|Dijkema 2026]] |
+| 长程穿梭 | 空穴自旋态经 9 点量子点链穿梭保持相干，等效输运长度达数百微米 | [[references/ge-shuttle-2024\|van Riggelen-Doelman et al., Nat. Commun. 15, 5716 (2024)]] |
 
-> [!note] 上表第三栏"参考"标记的数据来自转引的国际同行工作，不是本站 26 篇论文的原始内容，使用时请核对原文。
+> [!note] 上表"来源"栏给出可核查的原始文献；数据均为各论文自报口径，实验条件不同时不可直接横比。
 
 ## 实验特征
 
@@ -192,3 +193,11 @@ $$
 - **操控方法**：用[[qubit-control/geometric-quantum-gate|几何量子门]]等相位门降低对控制参数噪声的敏感性；
 - **工作点优化**：旋转外磁场方向、选择合适的势垒电压，让电荷噪声耦合最弱、相干时间最长；
 - **材料工程**：用臭氧钝化、自洽能带/缺陷建模与低缺陷密度的腔设计，减弱界面态对腔与比特的耦合。
+
+
+## 参考文献
+
+- 锗空穴自旋比特的快速两比特逻辑与处理器扩展：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]、[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]。
+- 噪声甜点运行与 10/18 比特阵列：[[references/ge-sweetspot-2024|Hendrickx et al., Nat. Mater. 23, 920 (2024)]]、[[references/ge-10qubit-2025|John et al., Nat. Commun. 16 (2025)]]、[[references/ge-18qubit-2026|Dijkema et al., arXiv:2604.01063 (2026)]]。
+- 空穴自旋穿梭：[[references/ge-shuttle-2024|van Riggelen-Doelman et al., Nat. Commun. 15, 5716 (2024)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

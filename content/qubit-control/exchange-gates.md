@@ -253,3 +253,10 @@ $$
 - 与[[qubit-control/geometric-quantum-gate|几何量子门]]：当旋转误差（功率失配、过冲、上升沿）成为主要错误源时，可借助几何相位或分段复合脉冲把残留误差压到二阶。
 
 <!-- FIGURE: 交换型两比特门相关概念关系图：以 J(ε,t,U) 为中心节点，向外连接三大族（√SWAP/SWAP、CPHASE/CZ、CROT/CNOT）、两种调控方式（失谐脉冲、势垒脉冲）、DCZ/解耦、虚拟栅极/电荷噪声等子模块 -->
+
+
+## 参考文献
+
+- 交换门的原始方案与相干交换实验：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]、[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
+- 交换耦合的现代门实现：[[references/watson-2018|Watson et al., Nature 555, 633 (2018)]]、[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

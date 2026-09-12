@@ -183,3 +183,9 @@ Si-MOS 中的单比特操控主要通过两种途径：
 - [[qubit-control/singlet-triplet-qubit|S–T₀]] 比特在 Si-MOS 中受惠于较高谷劈裂，初始化与读出泄漏更少。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]已在 Si-MOS 双点对称点演示，使 Rabi 频率与品质因子提高约一个数量级。
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/strained-germanium|应变锗]]、[[materials-devices/germanium-hut-wire|锗纳米线]]等其他平台在迁移率、谷简并、自旋轨道强度和制备工艺上各有取舍，Si-MOS 的独特优势是 CMOS 兼容性与较高的谷劈裂。
+
+
+## 参考文献
+
+- Si-MOS 量子点与两比特门的器件级描述：[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]、[[references/watson-2018|Watson et al., Nature 555, 633 (2018)]]；综述见 [[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

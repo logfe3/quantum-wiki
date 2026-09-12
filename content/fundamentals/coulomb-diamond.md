@@ -131,3 +131,9 @@ $$
 - [[fundamentals/constant-interaction-model|常相互作用模型]]给出菱形边界方程、斜率与尺寸的定量预言；[[fundamentals/charging-energy|充电能]] $E_C$ 决定菱形高度，[[fundamentals/electrochemical-potential|电化学势]]对齐条件决定边界位置。
 - 单点用库仑菱形，[[fundamentals/double-quantum-dot|双量子点]]则扫描两个栅压得到[[fundamentals/charge-stability-diagram|电荷稳定图]]的蜂窝结构与偏压三角形；二者都是电化学势对齐条件在不同参数平面上的切片。阻塞区电子数严格为整数的性质，也是[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]逐个数电子、标定绝对电子数的基础。
 - 强微波驱动下，阻塞区还会出现[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]边带，在菱形图内叠加与边平行的光子复制线。
+
+
+## 参考文献
+
+- 库仑菱形提取充电能、杠杆臂与激发谱的实验规范：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]、[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

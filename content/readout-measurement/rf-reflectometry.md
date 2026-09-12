@@ -191,3 +191,9 @@ $$
 - 测量频率抬升到百 MHz 后避开了低频 $1/f$ [[materials-devices/charge-noise|电荷噪声]]区，链路噪声转而由首级低温放大器决定，进一步可用[[readout-measurement/parametric-amplifier|参量放大器]]逼近量子极限。
 - 在[[materials-devices/silicon-mos|Si-MOS]] 与 Si/SiGe 增强型器件中，二维电子气（见[[fundamentals/two-dimensional-carrier-gas|二维载流子气]]）与栅极的耦合电容造成射频泄漏，是硅基射频读出的特有难题。
 - 高带宽与频分复用能力是[[scaling-automation/quantum-dot-array|量子点阵列]]规模化读出的关键技术之一。
+
+
+## 参考文献
+
+- 射频反射测量在硅体系电荷/自旋读出中的应用：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]、[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

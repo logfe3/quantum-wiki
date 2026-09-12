@@ -1,0 +1,5 @@
+node_modules/
+public/
+.quartz/
+quartz/.quartz-cache/
+.staging-papers/

@@ -195,3 +195,9 @@ $$
 - IQ 解调后的 I/Q 平面分类（阈值、模板匹配、神经网络）属于[[readout-measurement/threshold-independent-readout|阈值无关读出]]范畴；[[readout-measurement/readout-crosstalk|读出串扰]]是频分复用多比特系统中色散读出的重要误差来源。
 - 量子电容与隧穿电容描述的复导纳效应把色散读出与[[readout-measurement/gate-based-sensing|栅极射频传感]]联系起来：两者都是"量子点状态 → 阻抗 → 反射相位"链路上的不同端点。
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色。
+
+
+## 参考文献
+
+- 色散读出与自旋–光子接口的实验基础：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

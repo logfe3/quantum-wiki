@@ -192,3 +192,9 @@ $$
 - 与[[circuit-qed/jaynes-cummings-model|JC 模型]]与[[qubit-control/resonant-exchange-qubit|共振交换比特]]：常开 $J$ 的 RX 比特天然带电偶极矩，因此与微波谐振腔的耦合强度由 $g_{\mathrm{RX}}$ 描述；JC 阶梯与色散读出可以原样套用。
 
 <!-- FIGURE: 交换相互作用相关概念的关系图：以 J(t, ε, U) 为中心节点，向外连接隧穿耦合 t、充电能 U、失谐 ε、对称工作点、S–T0/单自旋/RX/杂化比特编码、DCZ/解耦、LZSM/单发读出、虚拟栅极/电荷噪声等子模块 -->
+
+
+## 参考文献
+
+- 交换能与隧穿耦合的理论与实验：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]、[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

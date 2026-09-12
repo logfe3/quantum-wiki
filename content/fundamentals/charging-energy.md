@@ -200,3 +200,9 @@ T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|(\epsilon_d+U)}{2U\Gamma}\
 - [[qubit-control/charge-qubit|电荷量子比特]]以失谐 $\varepsilon$ 操控能级移动，$\varepsilon$ 的零点定义为两个局域态的能量对齐——而这个能量对齐本质上是 $\mu_1$ 与 $\mu_2$ 的重合，需要 $E_C$、$E_{Cm}$、$t_C$ 三者共同支撑。
 - 多量子点阵列与[[scaling-automation/quantum-dot-array|量子点阵列]]研究中，充电能不均匀（QD2 与 QD4 因屏蔽板形状更"小"而 $E_C$ 更大）是均匀填充电子的核心障碍，需要按各点充电能调节扫描系数或用虚拟栅极补偿。
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]依靠阻塞区电子数整数突变引起附近电导跳变来感知电荷——本质上仍依赖 $E_C$ 大到足以稳定每个电子数。
+
+
+## 参考文献
+
+- 充电能与常相互作用模型的实验对照：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

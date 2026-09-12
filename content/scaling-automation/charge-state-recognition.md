@@ -193,3 +193,9 @@ $$
 - [[scaling-automation/automatic-tuning|自动调控]]是电荷态识别的下游用户：识别给出"当前状态 + 耦合判断"，自动调控给出"下一组栅压"；
 - 与[[readout-measurement/readout-crosstalk|多比特读出分类]]不同：这里识别的是器件工作区与电荷拓扑，而读出分类在已调好的工作点上判定单次量子态，时间尺度与误差模型均不同；
 - [[materials-devices/charge-noise|电荷噪声]]引起的图像漂移和跳变是识别系统的最大干扰源之一，必须借助[[qubit-control/dynamical-decoupling|动态解耦]]、低通滤波或多帧平均在算法侧抑制。
+
+
+## 参考文献
+
+- 稳定图识别的模拟训练 + 神经网络方案：[[references/kalantre-2019|Kalantre et al., npj QI 5, 21 (2019)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

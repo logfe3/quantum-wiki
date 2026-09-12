@@ -262,3 +262,9 @@ $$
 - [[qubit-control/dynamical-decoupling|动力学解耦]]：用于 CPhase/CZ 演化中抑制电荷噪声与核自旋噪声，论文中明确把它与非绝热 CZ 结合形成 DCZ。
 - [[readout-measurement/single-shot-readout|单发读出]]：CNOT 真值表测量依赖输入态制备与输出态单发读出；QPC 与射频反射读出都是当前的主流接口。
 - [[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-mos|Si-MOS]]：前者决定 CNOT 的最大允许门时长，后者决定 $T_2^*$ 与典型 $J$ 调谐能力——电容耦合 GaAs 路线受短 $T_2^*$ 拖累（保真度 68%），常开 Si-MOS 路线则受短 $T_2^*$ 与微波校准误差双重影响（保真度 64%）。
+
+
+## 参考文献
+
+- CNOT 经 CZ/CROT 的硅实现与保真度推进：[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]、[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

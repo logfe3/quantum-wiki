@@ -163,3 +163,9 @@ $$
 - **[[fundamentals/charge-stability-diagram|电荷稳定图]]**：初始化点的选取完全由稳定图决定——$(1,0)$、$(0,1)$、$(1,1)$、$(0,2)$ 四点的失谐顺序决定"排空→加载→等待→读出"的脉冲轨迹。
 - **[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/strained-germanium|应变锗]]、[[materials-devices/gaas-algaas|GaAs/AlGaAs]]**：四种主流材料体系中初始化方案的选择主要由 $g$ 因子、谷能级、核自旋浓度共同决定。
 - **[[fundamentals/double-quantum-dot|双量子点]]**：弛豫热点、$(0,2)$ 区基态等待、PSB 三条路径都需要双量子点能级图，是初始化与读出的共同载体。
+
+
+## 参考文献
+
+- 能量选择与 PSB 初始化的实验规范：[[references/elzerman-2004|Elzerman et al., Nature 430, 431 (2004)]]、[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

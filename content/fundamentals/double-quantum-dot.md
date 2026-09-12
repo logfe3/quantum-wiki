@@ -240,3 +240,10 @@ $$
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]：双量子点失谐上的周期驱动，PAT 图像与 LZS 图像在强微波下趋于一致；
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]：双量子点通过电偶极与微波腔耦合，有效强度 $g_\mathrm{eff}\propto\sin\theta$ 在 $\varepsilon=0$ 处最大；
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]：在蜂窝图上读出全部电荷转移线的标准手段。
+
+
+## 参考文献
+
+- 双量子点输运（稳定图、偏压三角形、赝自旋）的奠基综述：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+- 双点作为自旋比特载体的方案：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -296,3 +296,9 @@ $S_{BG}$ 为系统噪声本底。
 - [[materials-devices/interface-defects|界面缺陷]]既是电荷噪声的微观载体，也是[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]内损耗的来源，二者需一起优化才能满足[[circuit-qed/strong-coupling|强耦合]]判据。
 - 测量层面，[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]既是探测电荷噪声的工具，其自身工作点也受电荷噪声漂移影响。
 - 在[[scaling-automation/flopping-mode-qubit|翻转模式比特]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]中，比特被有意置于电荷–自旋混合区以增大偶极矩，代价正是更强的电荷噪声敏感性。
+
+
+## 参考文献
+
+- 电荷噪声对门保真度的影响与对策：[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]、[[references/ge-sweetspot-2024|Hendrickx et al., Nat. Mater. 23, 920 (2024)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

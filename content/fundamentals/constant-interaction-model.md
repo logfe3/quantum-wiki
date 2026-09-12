@@ -147,3 +147,9 @@ $$
 - 双点版本给出[[fundamentals/charge-stability-diagram|电荷稳定图]]蜂窝结构的全部几何，三相点是[[qubit-control/charge-qubit|电荷量子比特]]与[[qubit-control/singlet-triplet-qubit|单重态–三重态量子比特]]的操控基点；
 - 模型不含[[fundamentals/tunnel-coupling|隧穿耦合]]，三相点附近的反交叉弯曲正是超出本模型的信号，用于提取 $t_C$；
 - 阵列化时，交叉电容串扰由[[scaling-automation/virtual-gates|虚拟栅极]]在本模型框架内补偿，支撑[[scaling-automation/automatic-tuning|自动调控]]。
+
+
+## 参考文献
+
+- 常相互作用模型及其在输运实验中的验证：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

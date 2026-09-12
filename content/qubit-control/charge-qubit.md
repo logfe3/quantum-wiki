@@ -174,7 +174,7 @@ $$
 
 ### 相干性来源与退相干
 
-电荷比特的退相干主要来自[[materials-devices/charge-noise|电荷噪声]]——栅压的 $1/f$ 涨落直接调制失谐 $\varepsilon$，导致相位累积的不确定。对 GaAs 双量子点，直接给出"退相干时间只能保持在 100 ps 量级"的悲观判断；对 Si/SiGe， 报告的 Rabi 振荡拟合给出 $T_2^*\approx 1.5$ ns，仍只允许约 10 个门操作。
+电荷比特的退相干主要来自[[materials-devices/charge-noise|电荷噪声]]——栅压的 $1/f$ 涨落直接调制失谐 $\varepsilon$，导致相位累积的不确定。对 GaAs 双量子点，直接给出"退相干时间只能保持在 100 ps 量级"的悲观判断；对 Si/SiGe，文献报告的 Rabi 振荡拟合给出 $T_2^*\approx 1.5$ ns，仍只允许约 10 个门操作。
 
 缓解办法有几条路径：
 
@@ -221,3 +221,9 @@ $$
 - [[qubit-control/hybrid-qubit|杂化量子比特]]在三电子组态中同时含自旋与电荷分量，保留电学快速操控优势的同时把失谐一阶的电荷噪声抑制到二阶。
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]几乎不含电荷分量，相干时间最长但操控依赖微波磁场或 EDSR。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]、[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]等也可看作电荷比特的近亲，只是在不同自由度间做了取舍。
+
+
+## 参考文献
+
+- 电荷比特作为量子点最早可全电控编码的框架：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]；现代综述见 [[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

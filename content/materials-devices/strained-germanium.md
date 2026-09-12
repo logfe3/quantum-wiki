@@ -194,3 +194,9 @@ $$
 - 与 [[materials-devices/charge-noise|电荷噪声]]通过自旋轨道耦合间接相连：自旋轨道耦合越强、操控越快，但比特对电场扰动也越敏感。最优工作点策略本质上是把两者折中；
 - 与 [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]构成材料层与系统层的对接：应变锗给出强电偶极、高 $g$ 因子各向异性，谐振腔提供长程耦合媒介，二者共同支撑[[circuit-qed/spin-photon-coupling|空穴–光子杂化]]与未来的 [[circuit-qed/cavity-mediated-coupling|腔介导长程比特耦合]]；
 - 与 [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]、[[qubit-control/rabi-oscillation|Rabi 振荡]]、[[qubit-control/ramsey-interferometry|Ramsey 干涉]]、[[qubit-control/dynamical-decoupling|动力学解耦]]、[[qubit-control/geometric-quantum-gate|几何量子门]]等操控技术形成上下游：平台决定了哪些操控策略最有效。
+
+
+## 参考文献
+
+- 平面锗空穴比特的测控实验：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]、[[references/ge-10qubit-2025|John et al., Nat. Commun. 16 (2025)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

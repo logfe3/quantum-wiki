@@ -206,7 +206,7 @@ Q3 的 $E_\mathrm{sep}$ 仅 $0.001\%$，几乎全部错误来自弛豫与串扰�
 
 多比特[[readout-measurement/readout-crosstalk|联合读出]]会把所有比特同时投影到一根数据总线上，每个比特对应一个独立的中频分量。解调流程分三步：数字下变频（乘以 $\sin/\cos$）→ FIR 低通滤波 → 匹配滤波权重求平均。经典投影阈值法把 $I$–$Q$ 平面上的两个高斯圆斑向中心连线方向投影、选单一阈值；机器学习方法（KMeans, GMM, SVM, FNN）则用更多特征提升分类精度。
 
-针对多比特之间的[[readout-measurement/readout-crosstalk|读取串扰]]， 提出基于浅层神经网络的态分类器：每比特两个隐藏层、ReLU 激活；网络与数据解调流程完全匹配，可在 FPGA 上实时部署。论文报告六比特联合读出在多个比特上的平均保真度都有提升。
+针对多比特之间的[[readout-measurement/readout-crosstalk|读取串扰]]，有工作提出基于浅层神经网络的态分类器：每比特两个隐藏层、ReLU 激活；网络与数据解调流程完全匹配，可在 FPGA 上实时部署。论文报告六比特联合读出在多个比特上的平均保真度都有提升。
 
 ### 自旋–电荷转换与信号增强
 
@@ -229,3 +229,9 @@ Q3 的 $E_\mathrm{sep}$ 仅 $0.001\%$，几乎全部错误来自弛豫与串扰�
 - 多比特联合读出引入[[readout-measurement/readout-crosstalk|读取串扰]]，需用浅层神经网络分类器或独立的[[readout-measurement/purcell-filter|Purcell 滤波器]]来抑制。
 - 固定阈值对参数变化敏感时，可改用[[readout-measurement/threshold-independent-readout|阈值无关读出]]，把 $V^R$ 下降显式反推回 $P_\uparrow^I$，将 $|P_\uparrow^E/P_\uparrow^I-1|<1\%$ 的参数空间扩大约 60 倍。
 - 单发读出得到离散结果是量子纠错（如表面码，距离-3 需读取错误率 $<1\%$）和实时反馈控制的必要前提，也是测量[[materials-devices/charge-noise|电荷噪声]]和[[qubit-control/rabi-oscillation|Rabi 振荡]]等动力学过程时的基础工具。
+
+
+## 参考文献
+
+- 自旋单发读出的两条里程碑：能量选择读出 [[references/elzerman-2004|Elzerman et al., Nature 430, 431 (2004)]] 与硅施主自旋读出 [[references/morello-2010|Morello et al., Nature 467, 687 (2010)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

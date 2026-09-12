@@ -287,3 +287,9 @@ $$
 - 扩展层面：[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]是阵列可调性的前提，[[scaling-automation/two-dimensional-array|二维阵列]]是表面码纠错的物理载体。
 - 杂化层面：[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]把[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]推入[[circuit-qed/strong-coupling|强耦合]]区，为远程互连铺路。
 - 限制层面：[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是当前相干时间的主要瓶颈。
+
+
+## 参考文献
+
+- Si/SiGe 量子点测控的代表性实验：[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]、[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]；综述见 [[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

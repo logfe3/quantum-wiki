@@ -227,3 +227,10 @@ $$
 - [[qubit-control/exchange-interaction|交换相互作用]]负责两比特门；SOC 则是单比特 EDSR 与漏电流读取的核心。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]通过 SOC 把自旋态杂化到电荷态上，从而获得与腔光子的有效耦合。
 - [[scaling-automation/spin-orbit-torque-control|自旋轨道力矩操控]]是另一类基于 SOC 的基带门控机制，但作用于宏观磁体而非量子点自旋。
+
+
+## 参考文献
+
+- 自旋轨道耦合与电偶极自旋驱动的理论框架：[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+- 强自旋轨道耦合使锗空穴免微磁体电驱动的实验：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

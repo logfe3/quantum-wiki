@@ -127,3 +127,9 @@ $\beta_{ij}$ 表征该势垒栅的调控能力。在 2×2 阵列中测得四个�
 - 变换矩阵元由[[fundamentals/charge-stability-diagram|电荷稳定图]]上电荷隧穿线的斜率给出；虚拟电极生效的判据也画在同一张图上（隧穿线变正交）。
 - 电化学势方向的线性来自[[fundamentals/constant-interaction-model|常相互作用模型]]：栅压只通过电容分压平移 $\mu_i$。势垒方向则受[[fundamentals/tunnel-coupling|隧穿耦合]]的指数律支配，是虚拟电极最薄弱的一环；通过虚拟势垒设定的耦合强度直接决定[[qubit-control/exchange-interaction|交换相互作用]] $J$。
 - 虚拟电极是[[scaling-automation/quantum-dot-array|量子点阵列]]与[[scaling-automation/two-dimensional-array|二维阵列]]调控的软件底座：它把高维串扰空间对角化，使[[scaling-automation/automatic-tuning|自动调控]]可以逐点、逐双点推进，也是[[scaling-automation/charge-state-recognition|电荷态识别]]结果转化为调控动作的接口层。
+
+
+## 参考文献
+
+- 虚拟栅在对称点运行与阵列控制中的使用：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

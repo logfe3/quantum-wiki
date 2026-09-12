@@ -206,3 +206,9 @@ two-tone 谱用一路探测微波（$\omega_p=\omega_r$）和一路驱动微波�
 - **Floquet 动力学**：强周期驱动下耦合强度会被重整，对应[[circuit-qed/floquet-dynamics|Floquet 动力学]]中的"修饰耦合"与 LZSM 干涉。
 - **腔介导耦合**：两个或更多电荷比特通过共享高阻抗腔的虚拟光子交换得到有效相互作用，是[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]最直接的实验载体。
 - **色散读出与单发读出**：色散区下 $g_c^2/\Delta$ 既可作单比特读出，也可作[[readout-measurement/dispersive-readout|色散读出]]与远程比特间 iSWAP/CZ 门。
+
+
+## 参考文献
+
+- 电荷–光子耦合在硅量子点–腔体系中的测定：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

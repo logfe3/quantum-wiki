@@ -19,6 +19,7 @@ date: 2026-09-08
 | [库仑阻塞](./coulomb-blockade) | 小器件为何会停止导电？ |
 | [库仑菱形](./coulomb-diamond) | 偏压谱怎样给出激发能和充电能？ |
 | [双量子点](./double-quantum-dot) | 两个人工原子如何组合？ |
+| [夹断](./pinch-off) | 栅压何时把二维气切成绝缘区？传感器工作点如何设定？ |
 | [电荷稳定图](./charge-stability-diagram) | 蜂窝线、三重点和偏压三角形表示什么？ |
 | [隧穿耦合](./tunnel-coupling) | 两点间杂化强度如何进入比特哈密顿量？ |
 | [自旋轨道耦合](./spin-orbit-coupling) | 电场怎样被自旋"看见"，EDSR 的微观起源？ |

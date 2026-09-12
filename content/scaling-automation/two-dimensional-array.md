@@ -200,3 +200,9 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 既进入扩展 Fermi–Hubbard 模型的动能项，又在强耦合极限下决定[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$——同一个参数同时服务量子模拟和量子计算两种用途。
 - 二维阵列态的感知依赖[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET 探测器以及[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
+
+
+## 参考文献
+
+- 二维阵列的通用控制与扩展演示：[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]、[[references/ge-10qubit-2025|John et al., Nat. Commun. 16 (2025)]]、[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

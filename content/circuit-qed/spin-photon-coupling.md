@@ -230,3 +230,9 @@ $$
 - [[qubit-control/resonant-exchange-qubit|共振交换量子比特]]可与腔直接耦合，避免微磁体集成； 在 Si/SiGe 三量子点上测得 $g_\mathrm{RX}/2\pi=65\ \mathrm{MHz}$。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]利用内禀自旋–轨道耦合，可省去微磁体；、 在锗纳米线和应变锗上评估 $g_s$。
 - [[circuit-qed/strong-coupling|强耦合判据]]给出 $g_s>\kappa,\gamma_s$ 的实验指标； 论文以 $g_s>\kappa^\*,\gamma_s$ 为自旋比特的对应判据。
+
+
+## 参考文献
+
+- 硅中自旋–光子强耦合的里程碑实验：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]；空穴体系见 [[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]] 及文献库内锗–腔耦合工作。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

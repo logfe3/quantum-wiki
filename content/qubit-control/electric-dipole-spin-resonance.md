@@ -189,3 +189,9 @@ EDSR 把"驱动"与"电荷敏感性"绑在了同一条耦合通道上，工程�
 - [[readout-measurement/single-shot-readout|单发读出]]与[[readout-measurement/rf-reflectometry|射频反射测量]]：EDSR 驱动的自旋态通常经自旋–电荷转换读出；翻转模式 EDSR 的读出额外要求测量波形满足绝热条件，避免电子穿越能级反交叉导致激发态泄漏（论文第 5 章）。
 - [[materials-devices/charge-noise|电荷噪声]]：EDSR 通道也是电荷噪声注入自旋频率的通道；翻转模式中 $b_z$ 的存在使失谐电荷涨落直接表现为比特频率 $1/f$ 噪声，是 Si/SiGe 体系 $T_2^*\lesssim1\,\mu\text{s}$ 的主要限制之一。
 - [[scaling-automation/spin-orbit-torque-control|SOT 操控]]与[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]：分别是对静态微磁体与多比特栅极串扰两条工程优化方向。
+
+
+## 参考文献
+
+- EDSR 驱动的代表性实验与工作区设计：[[references/koppens-2006|Koppens et al., Nature 442, 766 (2006)]]、[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

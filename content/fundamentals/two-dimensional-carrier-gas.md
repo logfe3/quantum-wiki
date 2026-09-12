@@ -28,7 +28,7 @@ date: 2026-09-08
 
 在 GaAs/AlGaAs 中，$\mathrm{Al_{0.3}Ga_{0.7}As}$ 的禁带宽度（$\sim 1.79\ \mathrm{eV}$）大于 GaAs（$\sim 1.42\ \mathrm{eV}$），两者在异质结界面形成导带错位。当 AlGaAs 中掺入 Si 施主（典型掺杂浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$），电离施主产生的内建电场把 GaAs 侧靠近界面的导带底向下弯至费米面以下，形成深度约几百 meV 的三角势阱。低温下电子只占据量子化基态子带，分布在界面下方约 $90$–$100\ \mathrm{nm}$ 处一个薄层内，平面内自由运动。GaAs 与 AlGaAs 晶格常数几乎相同（失配 $\sim 0.1\%$），加上分子束外延可形成原子级平整界面，使杂质散射极小，因此 4.2 K 下 GaAs/AlGaAs 的 2DEG 迁移率可达 $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，远高于其他体系。
 
- 给出的本组调制掺杂 GaAs/AlGaAs 晶圆典型参数为（自表面向内）：$10\ \mathrm{nm}$ GaAs 盖帽层、$50\ \mathrm{nm}$ AlGaAs 隔离层、$20\ \mathrm{nm}$ 掺 Si 的 AlGaAs 重掺杂层（Si 浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$）、$15\ \mathrm{nm}$ AlGaAs 缓冲层、$500\ \mathrm{nm}$ GaAs 基底。该结构下 2DEG 形成在距表面约 $90\ \mathrm{nm}$ 的位置，通过 Ni/Ge/Au 合金退火形成的欧姆接触与外部读出电路相连。 给出的同类异质结自上而下依次为 $10\ \mathrm{nm}$ GaAs 盖帽层、$80\ \mathrm{nm}$ AlGaAs 层与 $500\ \mathrm{nm}$ GaAs 基底，Al 组分 30%，调制掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$，2DEG 深度同样约为 $90\ \mathrm{nm}$。
+所引论文给出的本组调制掺杂 GaAs/AlGaAs 晶圆典型参数为（自表面向内）：$10\ \mathrm{nm}$ GaAs 盖帽层、$50\ \mathrm{nm}$ AlGaAs 隔离层、$20\ \mathrm{nm}$ 掺 Si 的 AlGaAs 重掺杂层（Si 浓度 $7\times 10^{17}\ \mathrm{cm^{-3}}$）、$15\ \mathrm{nm}$ AlGaAs 缓冲层、$500\ \mathrm{nm}$ GaAs 基底。该结构下 2DEG 形成在距表面约 $90\ \mathrm{nm}$ 的位置，通过 Ni/Ge/Au 合金退火形成的欧姆接触与外部读出电路相连。文献给出的同类异质结自上而下依次为 $10\ \mathrm{nm}$ GaAs 盖帽层、$80\ \mathrm{nm}$ AlGaAs 层与 $500\ \mathrm{nm}$ GaAs 基底，Al 组分 30%，调制掺杂浓度 $7.0\times 10^{17}\ \mathrm{cm^{-3}}$，2DEG 深度同样约为 $90\ \mathrm{nm}$。
 
 ### Si/SiGe 与 Si-MOS：应变与积累
 
@@ -42,7 +42,7 @@ date: 2026-09-08
 
 ### 非掺杂 GaAs：积累型 2DEG
 
-传统调制掺杂 GaAs 量子点的退化时间 $T_2^{*}$ 通常不到 $1\ \mathrm{ns}$，主因之一是 AlGaAs 掺杂层引入的[[materials-devices/charge-noise|电荷噪声]]。 提出的解决思路是去掉掺杂：先沉积 $100\ \mathrm{nm}$ 氧化铝作为栅氧层，再斜蒸发镀 $120\ \mathrm{nm}$ 铝作为顶栅；正栅压在 GaAs/AlGaAs 界面附近感应出 2DEG（约在表面下 $45\ \mathrm{nm}$），势垒由下层细栅调节，载流子完全不经 AlGaAs 掺杂层。这类积累型结构测得的 2DEG 面密度可达 $3.2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，与传统调制掺杂水平相当，但电荷噪声显著降低。
+传统调制掺杂 GaAs 量子点的退化时间 $T_2^{*}$ 通常不到 $1\ \mathrm{ns}$，主因之一是 AlGaAs 掺杂层引入的[[materials-devices/charge-noise|电荷噪声]]。文献提出的解决思路是去掉掺杂：先沉积 $100\ \mathrm{nm}$ 氧化铝作为栅氧层，再斜蒸发镀 $120\ \mathrm{nm}$ 铝作为顶栅；正栅压在 GaAs/AlGaAs 界面附近感应出 2DEG（约在表面下 $45\ \mathrm{nm}$），势垒由下层细栅调节，载流子完全不经 AlGaAs 掺杂层。这类积累型结构测得的 2DEG 面密度可达 $3.2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$，与传统调制掺杂水平相当，但电荷噪声显著降低。
 
 ## 量子阱与子带结构
 
@@ -94,7 +94,7 @@ $$
 
 给出 $n_{2D}$ 与 $\mu$，其中 $L$、$W$ 分别是霍尔棒长、宽。 总结的本组晶圆批次典型值（4.2 K）为：批次 #28，$n=3.2\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=1.5\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #34，$n=2.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=0.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；批次 #35，$n=3.0\times 10^{11}\ \mathrm{cm^{-2}}$，$\mu=3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。
 
-积累型非掺杂 GaAs 2DEG 的迁移率随面密度上升： 测得顶栅 $V_{\mathrm{TOP}}=3.2\ \mathrm{V}$ 时 $n_{\mathrm{2DEG}}\approx 3.2\times 10^{11}\ \mathrm{cm^{-2}\,V^{-1}}$，在 $n=2$–$3\times 10^{11}\ \mathrm{cm^{-2}}$ 时 $\mu=1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。同一样品随后做量子点输运，得到总电容 $C_\Sigma=113\ \mathrm{aF}$、充电能 $E_C=1.5\ \mathrm{meV}$，与电极 RP 的杠杆臂 $\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$——这套数值既来自 2DEG 的优良输运，也来自势阱深度足以让量子点工作点稳定。
+积累型非掺杂 GaAs 2DEG 的迁移率随面密度上升：实验测得顶栅 $V_{\mathrm{TOP}}=3.2\ \mathrm{V}$ 时 $n_{\mathrm{2DEG}}\approx 3.2\times 10^{11}\ \mathrm{cm^{-2}\,V^{-1}}$，在 $n=2$–$3\times 10^{11}\ \mathrm{cm^{-2}}$ 时 $\mu=1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。同一样品随后做量子点输运，得到总电容 $C_\Sigma=113\ \mathrm{aF}$、充电能 $E_C=1.5\ \mathrm{meV}$，与电极 RP 的杠杆臂 $\alpha_{\mathrm{RP}}=0.027\ \mathrm{meV/mV}$——这套数值既来自 2DEG 的优良输运，也来自势阱深度足以让量子点工作点稳定。
 
 除密度与迁移率外，测量顶栅电压下源漏电导的非单调行为可以判断是否存在平行导通：当负栅压使电阻先升高、突然降低、再升高时，说明 AlGaAs 侧已经形成第二条子带，栅极电场被部分屏蔽。 指出这是"判断晶圆是否适合做全电控量子点"的快速甄别手段，所希望的样品应当尽量低掺杂、高迁移率。
 
@@ -118,7 +118,7 @@ $$
 
 ## 从二维到零维
 
-若平面内也施加足够强的静电限域，连续 2D 子带便分裂为零维分立轨道：表面栅极在 2DEG/2DHG 上加负偏压，在被栅极覆盖的区域把载流子排空，只留下由细栅围出的岛——这就是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]。要在少电子区观察到清晰的逐电子充电，需同时满足 $k_{B}T\ll E_C$、隧穿率 $\hbar\Gamma\ll E_C$，且 $E_C\gg \Delta E$ 时电化学势近似等间距排列，库仑峰近似等周期出现。 给出图像：在 GaAs/AlGaAs 上，"通过对电极施加负偏压将多余的二维电子气排空，并将电子束缚在一个孤岛之内"，这一过程把 2DEG 从"面"压成"点"，把连续态密度切成离散谱。
+若平面内也施加足够强的静电限域，连续 2D 子带便分裂为零维分立轨道：表面栅极在 2DEG/2DHG 上加负偏压，在被栅极覆盖的区域把载流子排空，只留下由细栅围出的岛——这就是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]。要在少电子区观察到清晰的逐电子充电，需同时满足 $k_{B}T\ll E_C$、隧穿率 $\hbar\Gamma\ll E_C$，且 $E_C\gg \Delta E$ 时电化学势近似等间距排列，库仑峰近似等周期出现。文献给出图像：在 GaAs/AlGaAs 上，"通过对电极施加负偏压将多余的二维电子气排空，并将电子束缚在一个孤岛之内"，这一过程把 2DEG 从"面"压成"点"，把连续态密度切成离散谱。
 
 零维化的好坏由 2DEG 本身的质量决定：若迁移率低、无序势涨落大，势阱底部起伏可能与栅压诱导势相当，少电子区无法稳定；若 2DEG 较深且无序度低，则可使用更弱的栅压定义更小的量子点。这一从材料生长到栅控几何的传递链把界面缺陷密度、掺杂均匀性、栅氧质量等材料问题，与量子比特相干性和门控精度直接挂钩。
 
@@ -140,3 +140,9 @@ $$
 - [[materials-devices/interface-defects|界面缺陷]]：对 2DHG 而言，氧化层界面缺陷会捕获量子阱中的空穴，造成阈值电压漂移与工作点不稳定。
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]：在 2DEG 中压出一条窄通道，把量子点附近电势涨落转换为电导信号。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]：利用应变锗 2DHG 的强自旋轨道耦合与可调 $g$ 因子实现全电操控。
+
+
+## 参考文献
+
+- GaAs/AlGaAs 与 Si/SiGe 二维气、积累型结构与迁移率的系统参考：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

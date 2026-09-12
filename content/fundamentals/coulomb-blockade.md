@@ -160,3 +160,10 @@ T_K=\sqrt{U\Gamma}\,\exp\!\left[-\frac{\pi|\epsilon_d|\,(\epsilon_d+U)}{2U\Gamma
 - [[constant-interaction-model|常相互作用模型]]给出阻塞区边界、峰周期与菱形尺寸的定量预言。
 - 有限偏压下阻塞区展开为[[coulomb-diamond|库仑菱形]]；在[[double-quantum-dot|双量子点]]中，两个点各自的阻塞条件与点间能级对齐共同编织出[[charge-stability-diagram|电荷稳定图]]的蜂窝结构。
 - 隧穿势垒的透明度由[[tunnel-coupling|隧穿耦合]]控制，它同时决定阻塞的"封闭程度"与库仑峰的高度。
+
+
+## 参考文献
+
+- 库仑阻塞与单/双点输运的权威综述：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+- 硅体系中的库仑阻塞与 charge sensing：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
