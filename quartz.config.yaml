@@ -2,7 +2,7 @@
 configuration:
   pageTitle: 量子点百科
   pageTitleSuffix: "｜学位论文知识库"
-  baseUrl: wiki.chenzhaoyun.com/quantum-dot-wiki
+  baseUrl: logfe3.github.io/quantum-wiki
   enableSPA: true
   enablePopovers: true
   analytics: null

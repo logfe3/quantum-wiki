@@ -1,55 +1,98 @@
-# 量子百科
+# 量子点百科
 
-基于 Quartz 5 的中文论文知识库。站点从 26 份本地学位论文中整理出 63 个核心概念词条、25 个独立论文来源页和 6 条主题主线，覆盖半导体量子点、量子比特操控、材料器件、读出测量、电路 QED 与阵列自动化。
+[![Deploy GitHub Pages](https://github.com/logfe3/quantum-wiki/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/logfe3/quantum-wiki/actions/workflows/deploy-pages.yml)
 
-参考站点的搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式与阅读模式均已保留；“许愿”功能未实现。
+基于 [Quartz 5](https://quartz.jzhao.xyz/) 构建的中文量子器件论文知识库，覆盖半导体量子点、量子比特操控、材料与器件、读出测量、电路 QED、阵列扩展与自动化。
 
-在线站点：https://logfe3.github.io/quantum-thesis-wiki/
+当前仓库包含 111 个 Markdown 页面：79 个主题词条、23 篇参考文献全文页、7 个栏目索引，以及首页和编写说明。站点提供全文搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式、阅读模式与本地化公式资源。
 
-## 本地常驻部署
-
-部署脚本会生成生产版静态文件，注册当前用户的 Windows 登录自启任务，并仅监听本机回环地址：
-
-    npm run deploy:local
-
-部署完成后访问 http://127.0.0.1:8088/。查看状态或卸载：
-
-    npm run status:local
-    npm run undeploy:local
-
-任务名为 QuantumThesisWiki，运行日志保存在 .local-deploy/server.log。服务不会开放给局域网设备。
-字体、KaTeX、D3 与 PixiJS 均从本机提供，部署后无需联网即可完整显示公式和关系图谱。
+- 在线站点：[https://logfe3.github.io/quantum-wiki/](https://logfe3.github.io/quantum-wiki/)
+- GitHub 仓库：[https://github.com/logfe3/quantum-wiki](https://github.com/logfe3/quantum-wiki)
+- 上游仓库：[https://git.chenzhaoyun.com/agony/quantum-dot-wiki](https://git.chenzhaoyun.com/agony/quantum-dot-wiki)
 
 ## 本地预览
 
-    npm install
-    npx quartz plugin install --from-config
-    npm run preview:local
+需要 Node.js 22 或更高版本，以及 npm 10.9.2 或更高版本。仓库通过 `.node-version` 固定推荐版本。
 
-打开 http://localhost:8089/。生产构建使用：
+```powershell
+npm ci
+npm run preview:local
+```
 
-    npm run build:site
+构建完成后访问 <http://127.0.0.1:8088/>。`preview:local` 会先生成生产版静态文件，再启动仅监听本机回环地址的服务器。
 
-静态产物会生成在 public/，该目录已被 Git 忽略。
+只生成静态网站或重新启动已有产物时，分别运行：
 
-推送到 `main` 分支后，GitHub Actions 会自动构建并更新 GitHub Pages。
+```powershell
+npm run build:site
+npm run serve:local
+```
+
+静态产物生成在 `public/`，该目录已被 Git 忽略。
+
+## GitHub Pages 部署
+
+`.github/workflows/deploy-pages.yml` 会在 `main` 分支更新后自动完成以下流程：
+
+1. 安装锁定依赖；
+2. 使用 Quartz 生成 `public/`；
+3. 上传 GitHub Pages artifact；
+4. 发布到 `https://logfe3.github.io/quantum-wiki/`。
+
+首次部署前，在仓库的 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。之后推送到 `main` 即会自动更新网站，也可以在 Actions 页面手动运行 `Deploy Quartz to GitHub Pages`。
+
+## Windows 本地常驻部署
+
+部署脚本会构建静态文件、注册当前用户的 Windows 登录自启任务，并仅监听本机回环地址：
+
+```powershell
+npm run deploy:local
+```
+
+部署完成后访问 <http://127.0.0.1:8088/>。查看状态或卸载：
+
+```powershell
+npm run status:local
+npm run undeploy:local
+```
+
+任务名为 `QuantumThesisWiki`，运行日志保存在 `.local-deploy/server.log`。字体、KaTeX、D3 与 PixiJS 均由本机提供，离线时仍可显示公式和关系图谱。
+
+## 内容结构
+
+- `content/index.md`：网站首页；
+- `content/about.md`：编写方法、取材边界与使用说明；
+- `content/fundamentals/`：量子点基础，15 个词条；
+- `content/materials-devices/`：材料与器件，8 个词条；
+- `content/qubit-control/`：量子比特与操控，23 个词条；
+- `content/circuit-qed/`：腔与电路 QED，13 个词条；
+- `content/readout-measurement/`：读出与测量，11 个词条；
+- `content/scaling-automation/`：扩展与自动化，9 个词条；
+- `content/references/`：23 篇参考文献全文页；
+- `content/assets/`：词条使用的图片与附件；
+- `quartz.config.yaml`：Quartz 插件、布局与站点基址配置；
+- `quartz/styles/custom.scss`：站点视觉样式。
 
 ## 重新抽取论文
 
-网站内容已经生成，日常预览不需要 Python。只有在论文集合变化、需要重建本地检索语料时才运行：
+网站内容已经生成，日常构建不需要 Python。只有在本地论文集合变化、需要重建检索语料时才运行：
 
-    python -m venv .venv
-    .\.venv\Scripts\python.exe -m pip install -r scripts\requirements.txt
-    .\.venv\Scripts\python.exe scripts\extract_theses.py "D:\Users\Desktop\thesis"
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r scripts\requirements.txt
+.\.venv\Scripts\python.exe scripts\extract_theses.py "D:\Users\Desktop\thesis"
+```
 
-抽取结果写入 .extracted/ 并被 Git 忽略；原始 PDF 不会被修改或复制进网站。词条中的页码指 PDF 阅读器页码。
+抽取结果写入 `.extracted/` 并被 Git 忽略；原始 PDF 不会被修改或复制进网站。词条中的页码指 PDF 阅读器页码。
 
-## 内容入口
+## 同步上游
 
-- content/index.md：首页
-- content/fundamentals/ 至 content/scaling-automation/：六类概念词条
-- content/sources/：来源论文库
-- quartz.config.yaml：Quartz 插件与中文站点配置
-- quartz/styles/custom.scss：站点视觉样式
+本地仓库保留两个远程：`origin` 指向上游 Gitea，`github` 指向本项目。需要合并上游更新时：
 
-底层生成器为 [Quartz 5](https://quartz.jzhao.xyz/)，遵循其 MIT 许可。
+```powershell
+git fetch origin
+git merge origin/main
+git push github main
+```
+
+项目代码遵循仓库中的 MIT 许可证；论文与引用内容仍受各自来源的许可和引用要求约束。

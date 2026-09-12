@@ -1,15 +1,15 @@
 {
-  "name": "quantum-thesis-wiki",
+  "name": "quantum-wiki",
   "description": "基于学位论文构建的中文量子器件 Quartz 知识库",
   "private": true,
   "version": "5.0.0",
   "type": "module",
   "author": "logfe3 <326516857+logfe3@users.noreply.github.com>",
   "license": "MIT",
-  "homepage": "https://logfe3.github.io/quantum-thesis-wiki/",
+  "homepage": "https://logfe3.github.io/quantum-wiki/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/logfe3/quantum-thesis-wiki.git"
+    "url": "https://github.com/logfe3/quantum-wiki.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
