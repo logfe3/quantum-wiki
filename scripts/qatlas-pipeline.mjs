@@ -978,6 +978,11 @@ async function commandAuto(options) {
         await commandGenerate({ run: runId, executor })
       } else {
         // The calling agent performs plan + generate between pipeline invocations.
+        // Persist state first so an interrupted round still records topic usage.
+        state.rounds += 1
+        state.usedTopics.push(chosenTopic.topic)
+        state.history.push({ round, topic: chosenTopic.topic, outcome: "in-progress" })
+        await saveAutoState(stateFile, state)
         console.log(
           `AGENT-TASK plan: read .qatlas-cache/runs/${runId}/work-order.md and write ` +
             `.qatlas-cache/runs/${runId}/editorial-plan.json (schema: scripts/qatlas-schemas/editorial-plan.schema.json), ` +
