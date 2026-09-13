@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/logfe3/quantum-wiki/blob/main/datasets/quantum-wiki-qa/schema.json",
+  "title": "Quantum Wiki QA record",
+  "description": "A source-grounded Chinese quantum-device question and answer record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "dataset",
+    "version",
+    "language",
+    "task_type",
+    "difficulty",
+    "topic",
+    "reasoning_required",
+    "expected_answer_format",
+    "system",
+    "question",
+    "answer",
+    "source",
+    "evidence",
+    "verification",
+    "split"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^qwqa_[a-f0-9]{20}$"
+    },
+    "dataset": {
+      "const": "quantum-wiki-qa"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "language": {
+      "const": "zh-CN"
+    },
+    "task_type": {
+      "enum": [
+        "short_answer",
+        "fill_in_the_blank",
+        "true_false",
+        "multiple_choice",
+        "problem_solving"
+      ]
+    },
+    "difficulty": {
+      "enum": ["undergraduate", "graduate", "research"]
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reasoning_required": {
+      "type": "boolean"
+    },
+    "expected_answer_format": {
+      "type": "string",
+      "minLength": 1
+    },
+    "system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "choices": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "text", "source_path"],
+        "properties": {
+          "label": {
+            "enum": ["A", "B", "C", "D"]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_path": {
+            "type": "string",
+            "pattern": "^content/(?!references/).+\\.md$"
+          }
+        }
+      }
+    },
+    "answer_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "title", "section", "sha256", "date", "tags"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^content/(?!references/).+\\.md$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "date": {
+          "type": ["string", "null"]
+        },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "contrast_source": {
+          "type": "string",
+          "pattern": "^content/(?!references/).+\\.md$"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["excerpt", "formulas", "images"],
+      "properties": {
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formulas": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "caption"],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "caption": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["deterministic", "physical", "semantic_audit"],
+      "properties": {
+        "deterministic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "checks"],
+          "properties": {
+            "status": {
+              "const": "pass"
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "physical": {
+          "enum": [
+            "not_formally_applicable",
+            "source_grounded_pending_semantic_audit",
+            "pass",
+            "fail"
+          ]
+        },
+        "semantic_audit": {
+          "enum": ["pending", "pass", "fail"]
+        }
+      }
+    },
+    "split": {
+      "enum": ["train", "dev", "test"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "task_type": {
+            "const": "multiple_choice"
+          }
+        }
+      },
+      "then": {
+        "required": ["choices", "answer_text", "explanation"],
+        "properties": {
+          "answer": {
+            "enum": ["A", "B", "C", "D"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "task_type": {
+            "const": "true_false"
+          }
+        }
+      },
+      "then": {
+        "required": ["explanation"],
+        "properties": {
+          "answer": {
+            "enum": ["正确", "错误"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "task_type": {
+            "const": "problem_solving"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "reasoning_required": {
+            "const": true
+          },
+          "expected_answer_format": {
+            "const": "structured_solution"
+          }
+        }
+      }
+    }
+  ]
+}

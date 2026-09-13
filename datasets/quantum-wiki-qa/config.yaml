@@ -1,0 +1,57 @@
+dataset:
+  name: quantum-wiki-qa
+  version: 0.1.0
+  language: zh-CN
+  outputDir: datasets/quantum-wiki-qa/v0.1.0
+
+source:
+  include:
+    - content/fundamentals
+    - content/materials-devices
+    - content/qubit-control
+    - content/circuit-qed
+    - content/readout-measurement
+    - content/scaling-automation
+  excludeBasenames:
+    - index.md
+  excludeDirectories:
+    - content/references
+    - content/assets
+
+generation:
+  problemSolvingPerPage: 2
+  maximumShortAnswerChars: 900
+  maximumProblemAnswerChars: 2800
+  minimumAnswerCjk: 12
+  taskTypes:
+    - short_answer
+    - fill_in_the_blank
+    - true_false
+    - multiple_choice
+    - problem_solving
+
+deduplication:
+  semanticJaccardThreshold: 0.85
+
+splits:
+  seed: quantum-wiki-qa-v0.1.0
+  train: 0.8
+  dev: 0.1
+  test: 0.1
+  groupBy: source_path
+  stratifyBy: topic
+
+verification:
+  auditRate: 0.05
+  auditStratifyBy:
+    - task_type
+    - difficulty
+  batchRejectThreshold: 0.05
+  requireSourceHash: true
+  requireBalancedMath: true
+  semanticAuditRequiredForRelease: true
+
+licensing:
+  intendedUse: research-and-education
+  datasetLicense: pending-owner-review
+  excludeReferenceFullText: true

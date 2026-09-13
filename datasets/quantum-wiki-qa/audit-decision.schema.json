@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/logfe3/quantum-wiki/blob/main/datasets/quantum-wiki-qa/audit-decision.schema.json",
+  "title": "Quantum Wiki QA audit decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "verdict",
+    "mathematical_correctness",
+    "physical_consistency",
+    "instruction_following",
+    "reviewer",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^qwqa_[a-f0-9]{20}$"
+    },
+    "verdict": {
+      "enum": ["pending", "pass", "fail"]
+    },
+    "mathematical_correctness": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "physical_consistency": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "instruction_following": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reviewer": {
+      "type": ["string", "null"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "enum": ["pass", "fail"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mathematical_correctness": {
+            "type": "number"
+          },
+          "physical_consistency": {
+            "type": "number"
+          },
+          "instruction_following": {
+            "type": "number"
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "pass"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mathematical_correctness": {
+            "minimum": 0.8
+          },
+          "physical_consistency": {
+            "minimum": 0.8
+          },
+          "instruction_following": {
+            "minimum": 0.8
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "fail"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "notes": {
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

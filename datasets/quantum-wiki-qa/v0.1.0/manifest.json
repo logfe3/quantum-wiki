@@ -1,0 +1,63 @@
+{
+  "name": "quantum-wiki-qa",
+  "version": "0.1.0",
+  "language": "zh-CN",
+  "build_id": "1df4de51142829bf",
+  "source_digest": "313e733fd3efc90ebd2ae19f520b96557e00ff70d3e6d7ff9a4ac27c63fa5044",
+  "config_sha256": "df03285761c760f5b845632903465d34472dd6cd3c7ca92a18e365a54bc4eea8",
+  "pipeline_sha256": "bc9545d936be00de897d58b698f8bc4de93492fa44945a049760df1467339c46",
+  "release_status": "draft_pending_semantic_audit",
+  "source_pages": 79,
+  "accepted_pairs": 443,
+  "rejected_pairs": 31,
+  "audit_sample_size": 24,
+  "audit_rate_actual": 0.0542,
+  "batch_reject_threshold": 0.05,
+  "counts": {
+    "split": {
+      "dev": 44,
+      "test": 45,
+      "train": 354
+    },
+    "task_type": {
+      "fill_in_the_blank": 79,
+      "multiple_choice": 78,
+      "problem_solving": 151,
+      "short_answer": 68,
+      "true_false": 67
+    },
+    "difficulty": {
+      "graduate": 57,
+      "research": 94,
+      "undergraduate": 292
+    },
+    "topic": {
+      "circuit-qed": 76,
+      "fundamentals": 84,
+      "materials-devices": 44,
+      "qubit-control": 128,
+      "readout-measurement": 63,
+      "scaling-automation": 48
+    }
+  },
+  "construction": {
+    "source": "curated Quantum Wiki concept pages",
+    "excluded": [
+      "reference full text",
+      "index pages",
+      "site metadata"
+    ],
+    "similarity_threshold": 0.85,
+    "split_group": "source_path",
+    "audit_stratification": [
+      "task_type",
+      "difficulty"
+    ],
+    "semantic_audit": "required before release",
+    "inspiration": {
+      "title": "QuantumQA: Enhancing Scientific Reasoning via Physics-Consistent Dataset and Verification-Aware Reinforcement Learning",
+      "doi": "10.18653/v1/2026.acl-long.1423",
+      "arxiv": "2604.18176"
+    }
+  }
+}

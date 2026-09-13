@@ -1,0 +1,63 @@
+name: Validate Quantum Wiki QA dataset
+
+on:
+  push:
+    branches:
+      - main
+      - feature/quantumqa-dataset
+    paths:
+      - "content/**/*.md"
+      - "scripts/qa/**"
+      - "datasets/quantum-wiki-qa/**"
+      - ".github/workflows/qa-dataset.yml"
+  pull_request:
+    paths:
+      - "content/**/*.md"
+      - "scripts/qa/**"
+      - "datasets/quantum-wiki-qa/**"
+      - ".github/workflows/qa-dataset.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check QA source formatting
+        run: >-
+          npx prettier
+          "scripts/qa/*.mjs"
+          "datasets/quantum-wiki-qa/*.json"
+          "datasets/quantum-wiki-qa/config.yaml"
+          ".github/workflows/qa-dataset.yml"
+          --check
+
+      - name: Run QA utility tests
+        run: >-
+          node --test
+          scripts/qa/qa-utils.test.mjs
+          scripts/qa/check-qa-audit.test.mjs
+
+      - name: Rebuild QA dataset
+        run: node scripts/qa/build-wiki-qa.mjs
+
+      - name: Validate QA dataset
+        run: node scripts/qa/validate-wiki-qa.mjs
+
+      - name: Reject stale generated data
+        run: git diff --exit-code -- datasets/quantum-wiki-qa/v0.1.0
