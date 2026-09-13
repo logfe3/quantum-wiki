@@ -1,0 +1,12 @@
+serverUrl: https://qatlas.hfnl.app.chenzhaoyun.com
+cacheDir: .qatlas-cache/papers
+
+publication:
+  mode: review-first
+  allowNewCategories: true
+  publishRawMarkdownByDefault: false
+  requireChineseExplanation: true
+  requireFormula: true
+  requireVisual: true
+  requireInternalLinks: true
+  requireReferences: true

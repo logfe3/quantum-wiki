@@ -1,6 +1,6 @@
 ---
 title: 参考文献库
-description: 本站引用的 arXiv / 期刊文献总目录，按测控主题分类：基础输运、单比特门、两比特门、读出、自旋-光子接口与自动调控。
+description: 本站引用的 24 篇 arXiv / 期刊文献总目录，覆盖量子点、超导量子比特、操控、读出、自旋-光子接口与自动调控。
 aliases:
  - 文献库
  - 参考文献
@@ -11,7 +11,7 @@ tags:
 date: 2026-09-12
 ---
 
-本页汇总 wiki 各词条引用的文献。每篇文献在站内有对应的**机器可读全文页**（由 [QuantumAtlas](https://qatlas.hfnl.app.chenzhaoyun.com/doc/guide/cli.html) 从 arXiv 预印本转换而来，公式与图注以原文为准），词条中的 `[[references/…]]` 双链均指向这些页面。引用请以正式出版物（DOI 链接）为准。
+本页汇总 wiki 各词条引用的 24 篇文献。每篇文献在站内有对应的**机器可读全文页**（由 [QuantumAtlas](https://qatlas.hfnl.app.chenzhaoyun.com/en) 从 arXiv 预印本转换而来，公式与图注以原文为准），词条中的 `[[references/…]]` 双链均指向这些页面。引用请以正式出版物（DOI 链接）为准。
 
 ## 综述与奠基文献
 
@@ -22,6 +22,12 @@ date: 2026-09-12
 | R. Hanson *et al.*, Rev. Mod. Phys. **79**, 1217 (2007) | 少电子量子点中的自旋：读出、驱动、耦合、退相干 | [[hanson-2007\|全文]] |
 | F. A. Zwanenburg *et al.*, Rev. Mod. Phys. **85**, 961 (2013) | 硅量子电子学：器件、夹断、传感与同位素纯化 | [[zwanenburg-2013\|全文]] |
 | G. Burkard *et al.*, Rev. Mod. Phys. **95**, 025003 (2023) | 半导体自旋比特全景：编码、门、读出、扩展 | [[burkard-2023\|全文]] |
+
+## 超导量子比特
+
+| 文献 | 主题 | 全文 |
+| --- | --- | --- |
+| J. Koch *et al.*, Phys. Rev. A **76**, 042319 (2007) | Transmon：以大 $E_J/E_C$ 指数抑制电荷色散，同时保留非谐性和强微波耦合 | [[koch-2007\|全文]] |
 
 ## 读出与单发测量
 

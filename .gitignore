@@ -1,5 +1,6 @@
 node_modules/
 public/
+.qatlas-cache/
 .quartz/
 quartz/.quartz-cache/
 *.tsbuildinfo

@@ -343,6 +343,34 @@ article h2[id="论文依据"] + ul > li {
 }
 
 @media all and (max-width: 800px) {
+  .page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .page > #quartz-body {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page > #quartz-body .sidebar.left,
+  .page > #quartz-body .page-header,
+  .page > #quartz-body .center,
+  .page > #quartz-body .center > article,
+  .page > #quartz-body .page-footer {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .page > #quartz-body .sidebar.left > * {
+    min-width: 0;
+  }
+
   .page > #quartz-body .center > article {
     border-radius: 14px;
     padding: 1.25rem 1rem 1.8rem;

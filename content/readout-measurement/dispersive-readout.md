@@ -56,7 +56,7 @@ $$
 \chi=\frac{g^2}{\Delta}
 $$
 
-是色散频移（dispersive shift）。第二项则是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为交流斯塔克频移（ac Stark shift），可用来标定腔内光子数；与光子数无关的 $\chi$ 来自真空涨落，称为兰姆频移（Lamb shift）。 在对 transmon 做色散读出建模时进一步用电路的非谐性 $\alpha$ 替换 $\Delta$，得
+是色散频移（dispersive shift）。第二项则是比特侧的两项修正：与光子数 $n=a^\dagger a$ 成正比的 $2\chi n$ 称为交流斯塔克频移（ac Stark shift），可用来标定腔内光子数；与光子数无关的 $\chi$ 来自真空涨落，称为兰姆频移（Lamb shift）。 在对[[superconducting-qubits/transmon-qubit|transmon]]做色散读出建模时进一步用电路的非谐性 $\alpha$ 替换 $\Delta$，得
 
 $$
 \chi=\frac{g^2\alpha}{\Delta(\Delta+\alpha)}\simeq\frac{g^2\alpha}{\Delta^2}
