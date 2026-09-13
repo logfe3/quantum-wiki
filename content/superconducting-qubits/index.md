@@ -10,6 +10,7 @@ date: 2026-09-13
 - [[transmon-qubit|Transmon 量子比特]]
 - [[fluxonium-qubit|Fluxonium 量子比特]]
 - [[gatemon-qubit|Gatemon 半导体纳米线量子比特]]
+- [[flowermon-qubit|Flowermon 扭转铜酸比特]]
 
 ## 跨栏目入口
 

@@ -93,6 +93,7 @@ fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型�
 - [[readout-measurement/dispersive-readout|色散读出]]是 fluxonium 的主要读出手段：fluxonium 没有严格选择定则，色散频移对各能级求和后可以很大，这既有利于快读出，也使近共振虚跃迁在磁通调谐时必须小心规避。
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的二阶微扰是色散频移求和公式的出发点：把 $\chi=g^2/\Delta$ 推广为 $\chi_{j;l}=\sum_{l'}(\chi_{j;ll'}-\chi_{j;l'l})$，即多能级色散移的一般形式。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与约瑟夫森结阵列电感同源：fluxonium 的 $E_L$ 来自超导阵列的动力学电感，这类材料也是高阻抗腔的实现基础。
+- [[superconducting-qubits/flowermon-qubit|Flowermon 扭转铜酸比特]]用 d 波序参量的宇称守恒从对称性上关闭准粒子通道——与 fluxonium 靠电路设计（大电感势阱）获得保护是两条不同的内禀保护路线。
 
 ## 参考文献
 

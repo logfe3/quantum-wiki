@@ -150,6 +150,7 @@ $$
 - [[scaling-automation/virtual-gates|虚拟电极]]与[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]关注的是同一根栅极在 cryo-electronics 的有限动态范围（典型 ±10 V、14-bit）下的电压精度分配；cryo-CMOS 可在 4 K 端做实时电压补偿，是虚拟电极的硬件实现。
 - [[readout-measurement/single-shot-readout|单发读出]]的信噪比直接受 cryo-LNA 噪声温度与带宽限制：HEMT 噪声温度 2 K 对应电荷传感器的本底噪声下限，再低就需要 cryo-CMOS 或 J-Amp。
 - [[readout-measurement/rf-reflectometry|射频反射读出]]把链路上限从 kHz 提到 100 MHz 以上，对应 cryo-electronics 切换到匹配网络 + 高频衰减 + cryo-LNA 的配置。
+- 屏蔽与滤波改进的验证由[[scaling-automation/multi-time-tomography|多时间量子过程层析]]承担：改进前后各跑一次多时间层析，过程矩阵之差即噪声通道的真实变化——准粒子、串扰等非马尔可夫关联由此定量化。
 - [[readout-measurement/parametric-amplifier|参量放大器]]（J-Amp/J-TWPA）是 cryo-electronics 在量子比特读出端的近量子极限放大，与本节 HEMT 形成代次互补。
 - [[circuit-qed/purcell-filter|Purcell filter]]把"读出链路对 qubit 退相干的影响"用 $Q_p$ 与 $\omega_p$ 解析地纳入链路设计，是 cryo-electronics 在 readout 端的设计参数。
 - [[materials-devices/charge-noise|电荷噪声]]是 cryo-electronics 必须抑制的扰动源；指出同轴线 + 热沉方案能直接降低离子注入区因加热产生的额外电荷跳变。
