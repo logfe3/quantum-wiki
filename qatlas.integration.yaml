@@ -1,6 +1,20 @@
 serverUrl: https://qatlas.hfnl.app.chenzhaoyun.com
 cacheDir: .qatlas-cache/papers
 
+autodiscovery:
+  seed_topics:
+    - "superconducting qubit"
+    - "quantum dot readout"
+    - "spin qubit control"
+    - "Josephson junction array"
+    - "microwave resonator quantum"
+    - "charge qubit"
+    - "flux qubit"
+    - "circuit quantum electrodynamics"
+  strategy: adaptive
+  stateFile: .qatlas-cache/autodiscovery-state.json
+  batchSize: 3
+
 publication:
   mode: review-first
   allowNewCategories: true

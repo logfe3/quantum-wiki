@@ -548,6 +548,144 @@ async function resolveRunId(options) {
   return runs[runs.length - 1]
 }
 
+// ---------------------------------------------------------------------------
+// Autodiscovery: topic selection + adaptive batch + state
+// ---------------------------------------------------------------------------
+
+const DEFAULT_STATE = { usedTopics: [], lastBatchSize: 3, rounds: 0, history: [] }
+
+async function loadAutoState(stateFile) {
+  const absolute = path.resolve(repositoryRoot, stateFile)
+  if (!existsSync(absolute)) return { ...DEFAULT_STATE }
+  try {
+    return { ...DEFAULT_STATE, ...(JSON.parse(await readFile(absolute, "utf8")) ?? {}) }
+  } catch {
+    return { ...DEFAULT_STATE }
+  }
+}
+
+async function saveAutoState(stateFile, state) {
+  const absolute = path.resolve(repositoryRoot, stateFile)
+  await mkdir(path.dirname(absolute), { recursive: true })
+  await writeAtomicAbsolute(absolute, `${JSON.stringify(state, null, 2)}\n`)
+}
+
+function deriveTopicsFromWikiIndex(wikiIndex, seedTopics) {
+  const seeded = new Set(seedTopics.map((topic) => topic.toLowerCase()))
+  const englishTokens = new Map()
+  for (const page of wikiIndex.pages) {
+    for (const alias of page.aliases) {
+      if (!/[a-z]{4,}/i.test(alias)) continue
+      const normalized = alias.toLowerCase().trim()
+      if (seeded.has(normalized)) continue
+      englishTokens.set(normalized, (englishTokens.get(normalized) ?? 0) + 1)
+    }
+    for (const tag of page.tags) {
+      if (!/[a-z]{4,}/i.test(tag)) continue
+      const normalized = tag.toLowerCase().trim()
+      if (seeded.has(normalized)) continue
+      englishTokens.set(normalized, (englishTokens.get(normalized) ?? 0) + 1)
+    }
+  }
+  return [...englishTokens.entries()]
+    .sort((left, right) => right[1] - left[1])
+    .map(([topic]) => topic)
+    .slice(0, 12)
+}
+
+function pickNextTopic(state, seedTopics, wikiIndex) {
+  const derived = deriveTopicsFromWikiIndex(wikiIndex, seedTopics)
+  const used = new Set(state.usedTopics.map((topic) => topic.toLowerCase()))
+  const unusedSeed = seedTopics.find((topic) => !used.has(topic.toLowerCase()))
+  if (unusedSeed) return { topic: unusedSeed, origin: "seed" }
+  const unusedDerived = derived.find((topic) => !used.has(topic.toLowerCase()))
+  if (unusedDerived) return { topic: unusedDerived, origin: "derived-from-main" }
+  // All known topics used: restart the cycle with a fresh index-derived list
+  const fallback = derived[0] ?? seedTopics[0]
+  return { topic: fallback, origin: "cycle-restart" }
+}
+
+function nextBatchSize(state, autodiscovery) {
+  const base = Number(autodiscovery?.batchSize ?? 3)
+  const last = Number(state.lastBatchSize ?? base)
+  const lastRound = state.history?.[state.history.length - 1]
+  if (!lastRound) return Math.min(5, base)
+  if (lastRound.outcome === "clean") return Math.min(5, last + 1)
+  if (lastRound.outcome === "partial" || lastRound.outcome === "failed") {
+    return Math.max(1, last - 1)
+  }
+  return last
+}
+
+async function syncMainWithRemote() {
+  const git = (args) =>
+    new Promise((resolve) => {
+      const child = spawn("git", args, { cwd: repositoryRoot, stdio: ["ignore", "pipe", "pipe"] })
+      let output = ""
+      child.stdout.on("data", (chunk) => {
+        output += chunk
+      })
+      child.stderr.on("data", (chunk) => {
+        output += chunk
+      })
+      child.on("error", (error) => resolve({ ok: false, output: `${output}${error.message}` }))
+      child.on("close", (code) => resolve({ ok: code === 0, output }))
+    })
+  const status = await git(["status", "--porcelain"])
+  if (!status.ok) throw new Error(`git status failed: ${status.output}`)
+  if (status.output.trim() !== "") {
+    throw new Error(
+      `Working tree is not clean; commit or stash before running auto:\n${status.output}`,
+    )
+  }
+  const fetch = await git(["fetch", "github"])
+  if (!fetch.ok) throw new Error(`git fetch failed: ${fetch.output}`)
+  const behind = await git(["rev-list", "--count", "main..github/main"])
+  if (behind.ok && Number.parseInt(behind.output.trim(), 10) > 0) {
+    const pull = await git(["pull", "--ff-only", "github", "main"])
+    if (!pull.ok) throw new Error(`git pull failed: ${pull.output}`)
+    console.log("Synced latest main from github.")
+  }
+}
+
+async function commitBatchToMain(topic, roundIndex, papers) {
+  const git = (args) =>
+    new Promise((resolve) => {
+      const child = spawn("git", args, { cwd: repositoryRoot, stdio: ["ignore", "pipe", "pipe"] })
+      let output = ""
+      child.stdout.on("data", (chunk) => {
+        output += chunk
+      })
+      child.stderr.on("data", (chunk) => {
+        output += chunk
+      })
+      child.on("error", (error) => resolve({ ok: false, output: `${output}${error.message}` }))
+      child.on("close", (code) => resolve({ ok: code === 0, output }))
+    })
+  const status = await git(["status", "--porcelain"])
+  if (!status.ok || status.output.trim() === "") {
+    return { committed: false, message: "nothing to commit" }
+  }
+  const add = await git(["add", "content", "package.json", "qatlas.integration.yaml", "README.md", "quartz.config.yaml"])
+  if (!add.ok) throw new Error(`git add failed: ${add.output}`)
+  const identifiers = papers
+    .map((paper) => paper.arxiv_id || paper.doi || paper.paper_id)
+    .filter(Boolean)
+    .join(", ")
+  const message = [
+    `QAtlas auto batch ${roundIndex}: topic "${topic}"`,
+    "",
+    `Papers: ${identifiers || "(none)"}`,
+    "Generated by the QAtlas auto pipeline; review gate passed",
+    "(content gate, TypeScript, tests, production build).",
+  ].join("\n")
+  const commit = await git(["commit", "-m", message])
+  if (!commit.ok) throw new Error(`git commit failed: ${commit.output}`)
+  const push = await git(["push", "github", "main"])
+  if (!push.ok) throw new Error(`git push failed: ${push.output}`)
+  return { committed: true, message: commit.output.trim().split("\n")[0] }
+}
+
 async function commandDiscover(options) {
   const query = typeof options.query === "string" ? options.query : ""
   if (!query) throw new Error("discover requires --query TEXT.")
@@ -571,7 +709,6 @@ async function commandDiscover(options) {
   void indexSummary
   return runId
 }
-
 async function writeWorkOrder(runId) {
   const runDir = path.join(runsRoot, runId)
   const candidatesDocument = JSON.parse(await readFile(path.join(runDir, "candidates.json"), "utf8"))
@@ -779,6 +916,90 @@ async function commandRun(options) {
   return runId
 }
 
+async function commandAuto(options) {
+  const config = await loadIntegrationConfig()
+  const autodiscovery = config.autodiscovery ?? {}
+  const stateFile = String(autodiscovery.stateFile ?? ".qatlas-cache/autodiscovery-state.json")
+  const totalRounds = parseNumberOption(options, "rounds", 0)
+  const executor = String(options.executor ?? "agent")
+  const topicsToTry = Math.max(1, parseNumberOption(options, "topics", 3))
+  let state = await loadAutoState(stateFile)
+
+  console.log(
+    `Auto pipeline starting: ${totalRounds > 0 ? `${totalRounds} round(s)` : "unlimited rounds"}, ` +
+      `batch ${nextBatchSize(state, autodiscovery)}, state file ${stateFile}.`,
+  )
+  const results = []
+  let round = 1
+  while (totalRounds <= 0 || round <= totalRounds) {
+    console.log(`\n=== Round ${round} ===`)
+    await syncMainWithRemote()
+    const wikiIndex = await buildWikiIndex()
+    const batchSize = nextBatchSize(state, autodiscovery)
+    console.log(`Wiki index: ${wikiIndex.pages.length} pages. Batch size: ${batchSize}.`)
+
+    let runId = null
+    let chosenTopic = null
+    let discoverOutcome = "failed"
+    try {
+      for (let attempt = 0; attempt < topicsToTry; attempt += 1) {
+        const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex)
+        console.log(`Topic (${selection.origin}): "${selection.topic}"`)
+        try {
+          runId = await commandDiscover({ query: selection.topic, max: batchSize, images: "referenced" })
+          chosenTopic = selection
+          discoverOutcome = "ok"
+          break
+        } catch (error) {
+          console.log(`Discover failed for "${selection.topic}": ${error.message}`)
+          state.usedTopics.push(selection.topic)
+        }
+      }
+    } catch (error) {
+      console.log(`Discover phase failed: ${error.message}`)
+    }
+    if (discoverOutcome !== "ok" || !runId || !chosenTopic) {
+      state.rounds += 1
+      state.history.push({ round, topic: null, outcome: "failed", reason: "no discoverable candidates" })
+      await saveAutoState(stateFile, state)
+      console.log("Round failed at discovery; continuing to the next round.")
+      results.push({ round, outcome: "failed" })
+      round += 1
+      continue
+    }
+
+    state.usedTopics.push(chosenTopic.topic)
+    let roundOutcome = "failed"
+    let failureReason = ""
+    try {
+      await writeWorkOrder(runId)
+      if (executor === "codex") {
+        await commandPlan({ run: runId, executor })
+        await commandGenerate({ run: runId, executor })
+      } else {
+        // The calling agent performs plan + generate between pipeline invocations.
+        console.log(
+          `AGENT-TASK plan: read .qatlas-cache/runs/${runId}/work-order.md and write ` +
+            `.qatlas-cache/runs/${runId}/editorial-plan.json (schema: scripts/qatlas-schemas/editorial-plan.schema.json), ` +
+            `then run: npm run qatlas:pipeline -- plan --run ${runId}`,
+        )
+        return { runId, round, topic: chosenTopic.topic, state, stateFile, awaiting: "plan" }
+      }
+      roundOutcome = "ok"
+    } catch (error) {
+      failureReason = error.message
+      console.log(`Round failed: ${failureReason}`)
+    }
+    state.rounds += 1
+    state.history.push({ round, topic: chosenTopic.topic, outcome: roundOutcome, reason: failureReason || undefined })
+    await saveAutoState(stateFile, state)
+    results.push({ round, outcome: roundOutcome, runId, topic: chosenTopic.topic })
+    round += 1
+  }
+  console.log(`\nAuto pipeline finished: ${results.length} round(s).`)
+  return results
+}
+
 function printHelp() {
   console.log(`QAtlas → Quantum Wiki content pipeline
 
@@ -789,6 +1010,7 @@ Usage:
   node scripts/qatlas-pipeline.mjs generate --run ID [--executor agent|codex]
   node scripts/qatlas-pipeline.mjs review --run ID
   node scripts/qatlas-pipeline.mjs status [--run ID]
+  node scripts/qatlas-pipeline.mjs auto [--rounds N] [--executor agent|codex] [--max N]
 
 Stages:
   discover  query QAtlas, exclude papers already in the wiki, download candidates into .qatlas-cache/papers
@@ -796,6 +1018,9 @@ Stages:
   generate  render the generation work order and verify the produced pages pass the content gate
   review    run content gate, TypeScript, tests, and production build; write review.json
   status    inspect a run's artifacts
+  auto      self-driving loop: pick a topic from the latest main, discover, plan, generate,
+            review; commit and push main after a clean review. Topic history and the adaptive
+            batch size live in the autodiscovery state file (.qatlas-cache/autodiscovery-state.json).
 
 editorial-plan.json is written by the planning agent (the calling agent, or codex with --executor codex).
 All run artifacts live under .qatlas-cache/runs/<run-id>/ (Git-ignored).`)
@@ -809,6 +1034,7 @@ async function main() {
   if (command === "review") return commandReview(options)
   if (command === "status") return commandStatus(options)
   if (command === "run") return commandRun(options)
+  if (command === "auto") return commandAuto(options)
   printHelp()
 }
 

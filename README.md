@@ -61,6 +61,18 @@ uvx --from qatlas-cli qatlas auth login `
 npm run qatlas:pipeline -- run --query "fluxonium qubit" --max 2
 ```
 
+也可以让系统自主连续扩充：`auto` 命令每轮基于**最新 main** 自动选题（种子主题 + 从 wiki 索引派生），发现论文、生成词条、过质量门禁后**直接提交并推送 main**（线上站点自动更新），一轮接一轮：
+
+```powershell
+npm run qatlas:pipeline -- auto --rounds 3
+```
+
+- 选题历史与自适应批量大小记录在 `.qatlas-cache/autodiscovery-state.json`（Git 忽略），中断后可续跑；
+- `--rounds N` 限制轮数，省略则一直循环；Ctrl-C 随时停止；
+- 每轮 review 四步（内容门禁、TypeScript、测试、生产构建）全过才提交，不过不推送。
+
+`run` 命令的阶段细节：
+
 - `discover`：查询 QAtlas、排除已导入论文、把候选论文的 Markdown 和图件缓存到 `.qatlas-cache/papers/`；
 - `plan`：渲染编辑工作单（`.qatlas-cache/runs/<run-id>/work-order.md`），由规划 agent 按候选论文产出结构化决策（supplement / new_entry / new_category / skip），写入 `editorial-plan.json` 并按 `scripts/qatlas-schemas/editorial-plan.schema.json` 校验；
 - `generate`：渲染生成工作单，由生成 agent 按决策创建或修改词条，并通过 QAtlas 内容门禁；
