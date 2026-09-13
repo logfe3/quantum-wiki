@@ -87,6 +87,24 @@ $$
 
 $\Omega$ 是量子点能级跃迁频率、$\Gamma$ 是电子隧穿率（隧穿线宽）、$\alpha$ 是杠杆臂。当隧穿率 $\Gamma$ 远小于失谐 $|{\omega-\Omega}|$ 时，$R_{\mathrm{eff}}\to\infty$、$C_{\mathrm{eff}}\to 0$，即量子点对外呈纯虚电容响应，对应隧穿电容（tunneling capacitance）/量子电容（quantum capacitance）效应：量子点的电荷涨落引入额外的电容性电纳，使谐振腔频谱发生相位偏转。把这套等效电路挂到反射式谐振腔上即可通过测 $S_{11}$ 复响应直接反推量子点的 $R_{\mathrm{eff}}$、$C_{\mathrm{eff}}$，进而估计隧穿率——在 的石墨烯量子点器件中实测约 $1.6^\circ$ 相移、$4.2\times10^{-4}\ \mathrm{aF}$ 等效电容与 $37\ \mathrm{MHz}$ 隧穿率。这种"反射腔测复导纳"与色散读出本质上是同一物理图像的不同表述：量子点的电学状态改变腔的复阻抗，复阻抗的改变落到 $S_{11}$（或 $S_{21}$）上即可读取。
 
+### fluxonium 的通量脉冲辅助读出
+
+上述 $\chi$–$\kappa$–$\eta$ 联合优化假定比特偏置点固定；fluxonium 提供了第三个自由度——用磁通脉冲把比特临时调到色散频移更大的偏置点完成读出，再脉冲回甜点保真。以典型 fluxonium 参数（$E_J/2\pi=4.75$ GHz、$E_C/2\pi=1.25$ GHz、$E_L/2\pi=1.5$ GHz）为例：甜点 $\Phi_{ext}/\Phi_0=0.5$ 处 $\chi/2\pi\approx0.53$ MHz、$\kappa/2\pi=5$ MHz，即便完美测量效率也要约 155 ns 才达到 SNR=1；而把比特脉冲调到 $\Phi_{ext}/\Phi_0\approx0.64$（此处 $\Delta_{20}$ 趋零使 $|\chi/2\pi|\approx8$ MHz）后，同样的 155 ns 内 SNR 达 9.5（100% 效率），25% 效率下也仍有甜点完美效率约 5 倍的 SNR——见下图。
+
+![[assets/figures/dispersive-readout/1113f17c6491b2a0c0426b2f4f0733a865afc5fe70ecec62edce8d06dffd12e3.jpg]]
+
+*fluxonium 与读出腔的等效电路：约瑟夫森结（$E_J$）、电容（$E_C$）、电感（$E_L$）并联成环，经耦合强度 $g$ 挂到频率 $\omega_r$ 的读出谐振腔上；外磁通 $\Phi_{ext}$ 穿环偏置，是通量脉冲的作用对象。图源：Stefanski & Andersen (2024)，Fig. 1。*
+
+![[assets/figures/dispersive-readout/89fa9ee4baeb5f3c1bc2fd40ea1c579c34e504847ef7a6e2220efb92d699691d.jpg]]
+
+*fluxonium 跃迁频率（a）、色散频移（b）与各跃迁对腔频的失谐（c–h）随 $E_J/2\pi$（横轴，4.5–5.5 GHz）与外磁通的变化；(b) 中色散频移在 $-5$～$+5$ MHz 间摆动，靠近半磁通量子点的两条暗线来自 $|3\rangle\leftrightarrow|1\rangle$ 跃迁与腔共振。读出点必须避开这些近共振区，否则比特与腔发生相干交换而非色散移动。图源：Stefanski & Andersen (2024)，Fig. 2。*
+
+![[assets/figures/dispersive-readout/fc0fc427e98bbd1b8506e7cf4f90075bb892319c444e0962b8e23192917c1a8f.jpg]]
+
+*通量脉冲辅助读出的噪声鲁棒性：(a) 在 25% 测量效率下叠加准静态磁通噪声 $\delta=\xi x\Phi_0$（$\xi$ 为噪声尺度、$x$ 为标准高斯采样），$\xi=10^{-2}$ 的极端噪声下 155 ns 的 SNR 仍接近甜点完美效率读出的 3 倍；(b) 同等噪声下甜点处 DRAG X 门误差大一个量级以上，说明读出方案不是磁通噪声的瓶颈。图源：Stefanski & Andersen (2024)，Fig. 5(a)。*
+
+代价是两类新的误差通道。其一，读出点处比特–腔失谐减小，Purcell 弛豫加快：甜点处 $T_{1,\mathrm{P}}\approx 11$ ms，脉冲点降到约 560 µs，积分时间超过约 150 ns（100% 效率）后读出误差转为 Purcell 主导——这正是上文 Purcell 极限约束 $\kappa|\chi|\leqslant\pi\alpha/T_1$ 的具体体现，可用[[readout-measurement/purcell-filter|Purcell 滤波器]]进一步抑制。其二，脉冲上升沿扫过 $|3\rangle\to|1\rangle$ 避免交叉会引入非 QND 分量：50 ns 上升沿的非 QND 度约 $4.8\times10^{-3}$，25 ns 上升沿降到 $6.5\times10^{-4}$——读出速度与 QND 性之间需要按上文 QND 条件权衡。综合 Purcell、介质损耗、热激发与信号分离四项，200 ns 积分时通量脉冲方案的总误差 $10^{-3}$ 量级仍显著优于甜点静态读出的约 0.15（SNR 主导）。
+
 ### 腔响应的散射矩阵
 
 在实验上观察到的不是哈密顿量本身，而是谐振腔的散射参数。在输入–输出形式下，透射式腔的透射系数为）
@@ -195,6 +213,7 @@ $$
 - IQ 解调后的 I/Q 平面分类（阈值、模板匹配、神经网络）属于[[readout-measurement/threshold-independent-readout|阈值无关读出]]范畴；[[readout-measurement/readout-crosstalk|读出串扰]]是频分复用多比特系统中色散读出的重要误差来源。
 - 量子电容与隧穿电容描述的复导纳效应把色散读出与[[readout-measurement/gate-based-sensing|栅极射频传感]]联系起来：两者都是"量子点状态 → 阻抗 → 反射相位"链路上的不同端点。
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色。
+- [[superconducting-qubits/fluxonium-qubit|Fluxonium 量子比特]]没有严格选择定则，色散频移对各能级求和后可远超 transmon 的 $g^2\alpha/\Delta(\Delta+\alpha)$；其通量脉冲辅助读出（见上文"fluxonium 的通量脉冲辅助读出"）把 $\chi$–$\kappa$ 优化扩展到磁通偏置这一额外维度。
 
 
 ## 参考文献

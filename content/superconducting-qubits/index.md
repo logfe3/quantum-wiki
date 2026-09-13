@@ -8,6 +8,7 @@ date: 2026-09-13
 ---
 
 - [[transmon-qubit|Transmon 量子比特]]
+- [[fluxonium-qubit|Fluxonium 量子比特]]
 
 ## 跨栏目入口
 
