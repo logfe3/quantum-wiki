@@ -214,6 +214,7 @@ $$
 - 量子电容与隧穿电容描述的复导纳效应把色散读出与[[readout-measurement/gate-based-sensing|栅极射频传感]]联系起来：两者都是"量子点状态 → 阻抗 → 反射相位"链路上的不同端点。
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色。
 - [[superconducting-qubits/fluxonium-qubit|Fluxonium 量子比特]]没有严格选择定则，色散频移对各能级求和后可远超 transmon 的 $g^2\alpha/\Delta(\Delta+\alpha)$；其通量脉冲辅助读出（见上文"fluxonium 的通量脉冲辅助读出"）把 $\chi$–$\kappa$ 优化扩展到磁通偏置这一额外维度。
+- 色散读出不只是读比特态——把测量序列做成宇称选择（$\pi$ 脉冲条件在奇宇称上），它就成了实时宇称测量计，能逐次追踪[[circuit-qed/charge-parity-fluctuation|电荷宇称涨落与准粒子隧穿]]：6 µs 一次的单发读出配合反馈复位即可记录每次隧穿事件。
 
 
 ## 参考文献
