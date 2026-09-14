@@ -14,6 +14,7 @@ date: 2026-09-12
 > F. van Riggelen-Doelman *et al.*, “Coherent spin qubit shuttling through germanium quantum dots”, Nature Communications **15**, 5716 (2024).
 > [arXiv:2308.02406](https://arxiv.org/abs/2308.02406) · [DOI:10.1038/s41467-024-49358-y](https://doi.org/10.1038/s41467-024-49358-y)
 > 原文为 arXiv 预印本版本的机器可读转换，公式与图注以原文为准；本页仅作站内索引与全文查阅，引用请以正式出版物为准。
+> 本文实测的高保真相干输运是[[scaling-automation/frequency-homogenisation|全局操控与频率均匀化]]方案的前提：电子沿 g 因子梯度快速输运获得平均 g 因子，把频率可调范围扩大到自然分散量级。
 
 ## 全文
 

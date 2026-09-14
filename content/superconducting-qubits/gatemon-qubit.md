@@ -85,7 +85,7 @@ Gatemon 电容耦合到 $\lambda/2$ 超导传输线腔，实测真空 Rabi 劈�
 - 与[[superconducting-qubits/transmon-qubit|transmon]]同属大 $E_J/E_C$ 设计，但约瑟夫森结从金属氧化结换成半导体弱连接，频率调谐从磁通换成栅压；与[[superconducting-qubits/fluxonium-qubit|fluxonium]]的"大电感重塑势阱"路线也不同——gatemon 保持 transmon 形式的势阱，只改弱连接材料。
 - [[qubit-control/hybrid-qubit|杂化量子比特]]的编码思想在半导体中实现，gatemon 则是半导体-超导体杂化在**电路量子电动力学**侧的实现：两者共同构成半导体平台"自旋比特 + 超导比特"的完整图景。
 - 硬能隙与近邻超导依赖外延生长界面的质量——这与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]等半导体纳米结构平台同属材料科学基础；栅控调谐的介观涨落也源于纳米线的普适电导涨落。
-- 因为无磁通控制，gatemon 可在大磁场下工作——这是拓扑量子计算（Majorana 器件）的必要条件，也是它与[[scaling-automation/cryo-electronics|低温电子学]]中磁通控制线设计的关键区别。
+- 因为无磁通控制，gatemon 可在大磁场下工作——这是拓扑量子计算（Majorana 器件）的必要条件，也是它与[[scaling-automation/cryo-electronics|低温电子学]]中磁通控制线设计的关键区别。自旋比特的毫米波控制信号收进制冷机的配套器件见 [[scaling-automation/frequency-homogenisation|全局操控与频率均匀化]]（60 GHz 低温放大器案例在该词条链接的低温电子学词条内）。
 
 ## 参考文献
 
