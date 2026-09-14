@@ -91,6 +91,7 @@ fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型�
 
 - 与[[superconducting-qubits/transmon-qubit|transmon]]的互补：transmon 用大电容压低电荷色散、牺牲非谐性；fluxonium 用大电感重塑势阱，在小电容下同时保住非谐性与相干性，但需要处理磁通噪声和更复杂的谱学。
 - [[readout-measurement/dispersive-readout|色散读出]]是 fluxonium 的主要读出手段：fluxonium 没有严格选择定则，色散频移对各能级求和后可以很大，这既有利于快读出，也使近共振虚跃迁在磁通调谐时必须小心规避。
+- 大电感 $E_L$ 的物理实现是[[circuit-qed/superinductance|超电感与约瑟夫森结阵列]]：JJA 动力学电感的相位滑移率（实测远低于 1 mHz）直接决定阱间隧穿幅度，也即本词条"势阱重塑"机制的可靠性。
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的二阶微扰是色散频移求和公式的出发点：把 $\chi=g^2/\Delta$ 推广为 $\chi_{j;l}=\sum_{l'}(\chi_{j;ll'}-\chi_{j;l'l})$，即多能级色散移的一般形式。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与约瑟夫森结阵列电感同源：fluxonium 的 $E_L$ 来自超导阵列的动力学电感，这类材料也是高阻抗腔的实现基础。
 - [[superconducting-qubits/flowermon-qubit|Flowermon 扭转铜酸比特]]用 d 波序参量的宇称守恒从对称性上关闭准粒子通道——与 fluxonium 靠电路设计（大电感势阱）获得保护是两条不同的内禀保护路线。
