@@ -11,6 +11,7 @@ date: 2026-09-13
 - [[fluxonium-qubit|Fluxonium 量子比特]]
 - [[gatemon-qubit|Gatemon 半导体纳米线量子比特]]
 - [[flowermon-qubit|Flowermon 扭转铜酸比特]]
+- [[csfq-decoherence|可调电容并联 flux qubit 的退相干]]
 
 ## 跨栏目入口
 

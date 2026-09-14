@@ -76,6 +76,7 @@ $$
 - 准粒子密度对辐射屏蔽敏感——这把准粒子物理与[[scaling-automation/cryo-electronics|低温电子学]]中的滤波、屏蔽设计直接联系起来。
 - 宇称开关对拓扑量子计算有额外意义：Majorana 比特的拓扑保护正是以宇称守恒为前提，隧穿事件直接威胁它（见原文引言及 [[superconducting-qubits/gatemon-qubit|gatemon]] 词条的磁场兼容性）。
 - [[superconducting-qubits/flowermon-qubit|Flowermon 扭转铜酸比特]]用 d 波序参量的宇称守恒把单准粒子隧穿的耗散通道从对称性上关掉——与本词条实测的"每次隧穿改变宇称"（s 波 transmon）形成 s 波 vs d 波的对照。
+- [[superconducting-qubits/csfq-decoherence|可调电容并联 flux qubit 的退相干]]是磁通比特侧的噪声分解对应物：1/f 磁通噪声 + 控制电子噪声 + 热噪声，与本词条（准粒子隧穿 + 宇称开关）共同构成超导比特噪声来源的完整图景。
 
 ## 参考文献
 

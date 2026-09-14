@@ -87,6 +87,16 @@ $$
 
 fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型参数（$E_J/2\pi=4.75$ GHz、$E_C/2\pi=1.25$ GHz、$E_L/2\pi=1.5$ GHz、$\omega_r/2\pi=7$ GHz、$g/2\pi=50$ MHz）为例：在半磁通量子甜点 $\Phi_{ext}/\Phi_0=0.5$，比特频率 $\omega_q/2\pi\approx1.05$ GHz、色散频移仅 $\chi/2\pi\approx0.5$ MHz——小的 $|\chi|$ 把残余腔光子引起的退相干压到 kHz 量级（$T_2$ 可达 60–220 µs），但按色散读出的信噪比定标（见[[readout-measurement/dispersive-readout|色散读出]]），这使快读出需要很长积分时间。而在 $\Phi_{ext}/\Phi_0\approx0.64$ 附近，$\Delta_{20}$ 接近零使 $|\chi/2\pi|$ 增大到约 8 MHz，同时比特频率被调到 4.6 GHz——这一"色散频移地貌"的对比正是通量脉冲辅助读出的物理基础。
 
+**跨骑区（straddling regime）的大色散频移**是"高能级贡献色散"最早期的实验证据：Inomata 等人在电容耦合的三结 flux qubit 中，把比特-腔失谐调到 $2\pi\times5$ GHz（跨骑区，$2g=2\pi\times460$ MHz），实测腔频移高达 **80 MHz**——远超标准 JC 模型（理想二能级，$\chi=g^2/\Delta$）的预期，定量解释需要广义 Rabi 模型（计入 flux qubit 高能级的贡献）。利用这个增强的色散频移做读出，Rabi 振荡对比度达到 90%（主要受比特能量弛豫限制）。
+
+![[assets/figures/fluxonium-qubit/c99c7fa21bc90c4b9569007424f413505b064ea8a669eff86a44849582d34de4.jpg]]
+
+*跨骑区实验的电路与样品：(a) 电容耦合 flux qubit 与 CPW 谐振腔的电路图；(b) 样品光学显微图。三结 flux qubit 置于跨骑区，实测 80 MHz 的腔频移远超二能级 JC 预期。图源：Inomata et al. (2012)，Fig. 1。*
+
+![[assets/figures/fluxonium-qubit/cfd5d16332354eae360de3a13a4179f8cb92fbb81acce5b75aeabd18c3783302.jpg]]
+
+*跨骑区的色散频移实测：腔频移随磁通偏置的变化——磁通调谐下频移幅度可达 80 MHz（失谐 5 GHz），广义 Rabi 模型（含高能级贡献）与实测吻合，约 10% 偏差可能来自腔的非线性。图源：Inomata et al. (2012)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 与[[superconducting-qubits/transmon-qubit|transmon]]的互补：transmon 用大电容压低电荷色散、牺牲非谐性；fluxonium 用大电感重塑势阱，在小电容下同时保住非谐性与相干性，但需要处理磁通噪声和更复杂的谱学。
