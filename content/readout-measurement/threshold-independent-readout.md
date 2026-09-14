@@ -157,6 +157,7 @@ $$
 ## 与其他概念的关系
 
 - 本方法是[[readout-measurement/single-shot-readout|单发读出]]在判决环节的一种实现：映射（自旋–电荷转换）与获取环节不变，只替换判决与后处理。
+- "利用时间轨迹结构判读"的思想与超导侧的[[readout-measurement/single-shot-readout|JC 非线性"亮态"跳变读出]]同源：都依赖对信号轨迹的建模而非固定幅度阈值（见该词条"cQED 中的腔分岔单发读出"一节）。
 - 隧穿事件的物理基础是[[fundamentals/coulomb-blockade|库仑阻塞]]下电子数的逐个变化；读出点在[[fundamentals/charge-stability-diagram|电荷稳定图]]上的位置（源漏费米面夹在两自旋能级之间）决定了"只有激发态能跳出"的选择性。
 - 电荷信号由邻近传感器拾取，如[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET；信号链的带宽与滤波（贝塞尔低通）进入 Monte-Carlo 模型，连接[[materials-devices/charge-noise|电荷噪声]]环境。
 - 待测的 $P_I^\uparrow$ 通常来自[[qubit-control/single-spin-qubit|单自旋量子比特]]的 $T_1$ 弛豫曲线或门操作末态；修正后的 $P_E^\uparrow$ 直接改善这些实验的对比度。

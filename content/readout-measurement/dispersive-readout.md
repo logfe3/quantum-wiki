@@ -215,6 +215,7 @@ $$
 - 在[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中，色散读出通过[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]同时承担读出与比特间相互作用两种角色。
 - [[superconducting-qubits/fluxonium-qubit|Fluxonium 量子比特]]没有严格选择定则，色散频移对各能级求和后可远超 transmon 的 $g^2\alpha/\Delta(\Delta+\alpha)$；其通量脉冲辅助读出（见上文"fluxonium 的通量脉冲辅助读出"）把 $\chi$–$\kappa$ 优化扩展到磁通偏置这一额外维度。
 - 色散读出不只是读比特态——把测量序列做成宇称选择（$\pi$ 脉冲条件在奇宇称上），它就成了实时宇称测量计，能逐次追踪[[circuit-qed/charge-parity-fluctuation|电荷宇称涨落与准粒子隧穿]]：6 µs 一次的单发读出配合反馈复位即可记录每次隧穿事件。
+- 腔的约瑟夫森非线性在强驱动下带来分岔与"亮态"跳变——色散读出的这两条非线性扩展是[[readout-measurement/single-shot-readout|单发读出]]在超导比特侧的实验基础（见该词条"cQED 中的腔分岔单发读出"与"JC 非线性亮态跳变读出"）。
 
 
 ## 参考文献
