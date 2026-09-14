@@ -164,3 +164,4 @@ $$
 - 把两个电荷比特同时接到 SQUID 阵列腔的电压波腹上，构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]，而多个电荷比特共享同一腔模对应[[scaling-automation/quantum-dot-array|量子点阵列]]与集体微波响应；
 - 与[[readout-measurement/dispersive-readout|色散读出]]配合时，色散频移 $\chi=g^2/\Delta$ 因 $g$ 增大而变大，但 $\kappa$ 较大又限制了读出速度；
 - 同一结构亦可作[[readout-measurement/parametric-amplifier|参量放大器]]使用，借助 SQUID 阵列的磁通可调非线性实现量子限制放大。
+- 阵列的完整表征（阻抗超过电阻量子 $R_Q$ 的定义、内耗 <20 ppm、相位滑移率 <1 mHz）见[[circuit-qed/superinductance|超电感与约瑟夫森结阵列]]；栅控可调版本则是[[scaling-automation/thouless-pumping-jja|Thouless 量子泵浦]]的拓扑量子模拟平台。

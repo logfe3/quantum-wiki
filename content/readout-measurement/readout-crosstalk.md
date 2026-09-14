@@ -132,3 +132,4 @@ $$
 - 共用[[readout-measurement/parametric-amplifier|参量放大器]]的带宽、饱和功率与互调决定了多少读出音可以共享一条放大链；[[readout-measurement/purcell-filter|Purcell 滤波器]]既保护比特免受 Purcell 衰减，也抑制非共振驱动的串扰激发。
 - 读出串扰属于"测量侧"串扰；与之并列的"控制侧"串扰在量子点阵列中表现为栅极对非目标点电化学势的牵拉，由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]定量描述并可用[[scaling-automation/virtual-gates|虚拟电极]]补偿；超导芯片中还有磁通串扰等封装与布线层面的来源。
 - 对量子纠错而言，串扰使读出误差具有空间相关性，解码器若假设独立同分布的测量误差会低估逻辑错误率。
+- 串扰与非马尔可夫噪声的定量表征由[[scaling-automation/multi-time-tomography|多时间量子过程层析]]完成：多时间过程矩阵直接捕捉门与门之间经串扰产生的时间关联，这是标准层析（马尔可夫假设）看不到的部分。

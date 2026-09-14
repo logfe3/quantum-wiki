@@ -31,6 +31,7 @@ jobs:
       - name: 构建
         run: |
           cd "$GITHUB_WORKSPACE/src"
+          npm run check:qatlas-content
           # build:site = quartz build + prepare-local-assets（补回 katex 字体/css 等静态资源）
           npm run build:site
           echo "SOURCE_SHA=$(git -C "$GITHUB_WORKSPACE/src" rev-parse --short HEAD)" >> "$GITHUB_ENV"

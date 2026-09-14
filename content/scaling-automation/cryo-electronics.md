@@ -66,6 +66,16 @@ $$
 
 当比特数扩展到 100 个以上时，每个比特独立引出几十根偏置线将撞上 Rent 规则的引脚墙。**cryo-CMOS** 指在 4 K 或更低温度下仍能正常工作的标准 CMOS 集成电路，承担直流偏置产生、波形整形与读出解调。在 4 K 冷板上，单比特操控保真度可达到 99%，并且整芯片可同时驱动多个比特，因此被国际多个小组列为多比特扩展的关键路径。当前主流架构把 cryo-CMOS 放在 4 K 冷板或 PT2 stage（典型 3 K），把传统 HEMT 推后或干脆省掉；CMOS 在 4 K 下的 $f_T$ 比室温下降约 30%–50%，但仍远高于比特操控时钟。
 
+毫米波频段的控制放大已有具体器件案例：Spasaro 等人报道了 22nm FDSOI CMOS 的低温 60 GHz 放大器，2 K 下实测 $S_{21}$ 15 dB @ 59 GHz、3 dB 带宽 52.5–67.5 GHz、功耗仅 2.16 mW，得益于无电感（inductorless）有源网络拓扑，核心面积只有 0.18×0.19 mm²——把毫米波控制信号的产生收进制冷机、贴到比特旁边，是单片硅量子处理器（电子/空穴自旋比特）控制链路的关键积木。
+
+![[assets/figures/cryo-electronics/a1b21ebb45996d700756efc5687178369659aa279ebb2f87343443f3aea7746d.jpg]]
+
+*单片集成自旋比特控制链路示例：双量子点自旋比特与 FDSOI CMOS 工艺的控制、读出电路集成在同一芯片上的构型——放大器、脉冲产生器与量子点同处低温，是 cryo-CMOS 控制链路的最终形态。图源：Spasaro et al. (2024)，Fig. 1。*
+
+![[assets/figures/cryo-electronics/81579c12eef1d76c7d6ecdb1db0d2ddf086dd96a865227805bfab2776fcf90ae.jpg]]
+
+*60 GHz 低温放大器电路：有源网络（AN）配合输入匹配网络（IMN）与输出匹配网络（OMN），匹配用螺旋变压器（T）实现——无电感拓扑省去片上大电感，换来 0.18×0.19 mm² 的紧凑核心面积与 2.16 mW 低功耗。图源：Spasaro et al. (2024)，Fig. 2。*
+
 ### 半导体量子点端的特殊考量
 
 相比 transmon，半导体量子点的链路上还有两点不同：
@@ -150,6 +160,7 @@ $$
 - [[scaling-automation/virtual-gates|虚拟电极]]与[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]关注的是同一根栅极在 cryo-electronics 的有限动态范围（典型 ±10 V、14-bit）下的电压精度分配；cryo-CMOS 可在 4 K 端做实时电压补偿，是虚拟电极的硬件实现。
 - [[readout-measurement/single-shot-readout|单发读出]]的信噪比直接受 cryo-LNA 噪声温度与带宽限制：HEMT 噪声温度 2 K 对应电荷传感器的本底噪声下限，再低就需要 cryo-CMOS 或 J-Amp。
 - [[readout-measurement/rf-reflectometry|射频反射读出]]把链路上限从 kHz 提到 100 MHz 以上，对应 cryo-electronics 切换到匹配网络 + 高频衰减 + cryo-LNA 的配置。
+- 屏蔽与滤波改进的验证由[[scaling-automation/multi-time-tomography|多时间量子过程层析]]承担：改进前后各跑一次多时间层析，过程矩阵之差即噪声通道的真实变化——准粒子、串扰等非马尔可夫关联由此定量化。
 - [[readout-measurement/parametric-amplifier|参量放大器]]（J-Amp/J-TWPA）是 cryo-electronics 在量子比特读出端的近量子极限放大，与本节 HEMT 形成代次互补。
 - [[circuit-qed/purcell-filter|Purcell filter]]把"读出链路对 qubit 退相干的影响"用 $Q_p$ 与 $\omega_p$ 解析地纳入链路设计，是 cryo-electronics 在 readout 端的设计参数。
 - [[materials-devices/charge-noise|电荷噪声]]是 cryo-electronics 必须抑制的扰动源；指出同轴线 + 热沉方案能直接降低离子注入区因加热产生的额外电荷跳变。

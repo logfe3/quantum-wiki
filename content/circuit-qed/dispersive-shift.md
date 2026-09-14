@@ -85,7 +85,7 @@ $$
 
 ### transmon 的多能级修正
 
-对 transmon 这类多能级比特，色散频移的公式需要加入非谐性 $\alpha$ 的修正。把 JC 模型替换为含三次非线性项的多能级模型
+对[[superconducting-qubits/transmon-qubit|transmon]]这类多能级比特，色散频移的公式需要加入非谐性 $\alpha$ 的修正。把 JC 模型替换为含三次非线性项的多能级模型
 
 $$
 \hat H=\hat H_{\mathrm{lin}}+\frac{\hbar\alpha}{2}\,b^\dagger b^\dagger b b

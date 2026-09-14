@@ -14,6 +14,12 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "prepare:local-assets": "node ./scripts/prepare-local-assets.mjs",
+    "qatlas:doctor": "node ./scripts/qatlas-bridge.mjs doctor",
+    "qatlas:list": "node ./scripts/qatlas-bridge.mjs list",
+    "qatlas:fetch": "node ./scripts/qatlas-bridge.mjs fetch",
+    "qatlas:import-reference": "node ./scripts/qatlas-import-reference.mjs",
+    "qatlas:pipeline": "node ./scripts/qatlas-pipeline.mjs",
+    "check:qatlas-content": "node ./scripts/check-qatlas-content.mjs",
     "build:site": "node ./quartz/bootstrap-cli.mjs build && npm run prepare:local-assets",
     "preview:local": "npm run build:site && npm run serve:local",
     "serve:local": "node ./scripts/local-server.mjs --root ./public --host 127.0.0.1 --port 8088",

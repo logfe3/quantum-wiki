@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QAtlas editorial plan",
+  "description": "One decision object per discovered candidate paper, ordered as in candidates.json.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": ["paper_id", "decision", "reason"],
+    "additionalProperties": false,
+    "properties": {
+      "paper_id": {
+        "type": "string",
+        "pattern": "^qa_[a-z0-9]+$",
+        "description": "QAtlas paper id as listed in candidates.json."
+      },
+      "decision": {
+        "enum": ["supplement", "new_entry", "new_category", "skip"],
+        "description": "supplement: extend an existing entry; new_entry: new page in an existing category; new_category: new category plus its first entry; skip: off-topic, duplicate, or insufficient evidence."
+      },
+      "target_path": {
+        "type": "string",
+        "pattern": "^content/.+\\.md$",
+        "description": "Wiki page to create or modify. Required unless decision is skip."
+      },
+      "category_path": {
+        "type": "string",
+        "pattern": "^content/.+$",
+        "description": "Category directory involved. Required for new_category; optional otherwise."
+      },
+      "proposed_title": {
+        "type": "string",
+        "description": "Chinese entry title. Required unless decision is skip."
+      },
+      "reason": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Why this decision was made, referencing the wiki index."
+      },
+      "formula_topics": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Formulas from the paper that the generated page must explain."
+      },
+      "figure_numbers": {
+        "type": "array",
+        "items": { "type": "integer", "minimum": 1 },
+        "description": "fig_no values from figures.json to reuse as page figures."
+      },
+      "links_to_update": {
+        "type": "array",
+        "items": { "type": "string", "pattern": "^content/.+\\.md$" },
+        "description": "Existing pages whose backlinks or sections must be updated."
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": { "decision": { "enum": ["supplement", "new_entry", "new_category"] } },
+          "required": ["decision"]
+        },
+        "then": { "required": ["target_path", "proposed_title"] }
+      },
+      {
+        "if": {
+          "properties": { "decision": { "enum": ["new_category"] } },
+          "required": ["decision"]
+        },
+        "then": { "required": ["category_path"] }
+      },
+      {
+        "if": {
+          "properties": { "decision": { "const": "skip" } },
+          "required": ["decision"]
+        },
+        "then": { "not": { "required": ["target_path"] } }
+      }
+    ]
+  }
+}

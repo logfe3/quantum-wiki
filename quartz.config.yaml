@@ -127,11 +127,12 @@ plugins:
       useSavedState: true
       sortFn: |
         (a, b) => {
-          const FOLDERS = ["fundamentals", "materials-devices", "qubit-control", "circuit-qed", "readout-measurement", "scaling-automation", "sources"];
+          const FOLDERS = ["fundamentals", "materials-devices", "qubit-control", "superconducting-qubits", "circuit-qed", "readout-measurement", "scaling-automation", "references"];
           const ENTRIES = {
             "fundamentals": ["two-dimensional-carrier-gas", "semiconductor-quantum-dot", "constant-interaction-model", "electrochemical-potential", "charging-energy", "zeeman-effect", "spin-orbit-coupling", "hyperfine-interaction", "valley-splitting", "coulomb-blockade", "coulomb-diamond", "double-quantum-dot", "charge-stability-diagram", "tunnel-coupling"],
             "materials-devices": ["gaas-algaas", "silicon-mos", "silicon-sige", "germanium-hut-wire", "strained-germanium", "micromagnet", "interface-defects", "charge-noise"],
             "qubit-control": ["charge-qubit", "single-spin-qubit", "hole-spin-qubit", "singlet-triplet-qubit", "hybrid-qubit", "resonant-exchange-qubit", "flopping-mode-qubit", "exchange-interaction", "exchange-gates", "landau-zener-transition", "lzsm-interference", "photon-assisted-tunneling", "rabi-oscillation", "ramsey-interferometry", "electric-dipole-spin-resonance", "dynamical-decoupling", "geometric-quantum-gate", "pauli-spin-blockade", "spin-initialization", "spin-decoherence", "cnot-gate", "toffoli-gate"],
+            "superconducting-qubits": ["transmon-qubit"],
             "circuit-qed": ["microwave-resonator", "cavity-linewidth", "circuit-quantum-electrodynamics", "jaynes-cummings-model", "strong-coupling", "vacuum-rabi-splitting", "dispersive-shift", "high-impedance-resonator", "squid-array-resonator", "charge-photon-coupling", "spin-photon-coupling", "cavity-mediated-coupling", "floquet-dynamics"],
             "readout-measurement": ["single-electron-transistor", "qpc-charge-sensor", "gate-based-sensing", "rf-reflectometry", "single-shot-readout", "energy-selective-readout", "threshold-independent-readout", "dispersive-readout", "parametric-amplifier", "purcell-filter", "readout-crosstalk"],
             "scaling-automation": ["quantum-dot-array", "virtual-gates", "cross-capacitance-matrix", "flopping-mode-qubit", "automatic-tuning", "charge-state-recognition", "two-dimensional-array", "cryo-electronics", "spin-orbit-torque-control"]

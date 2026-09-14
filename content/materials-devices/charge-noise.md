@@ -91,6 +91,22 @@ $$
 
 在 $\varepsilon=0$ 处为零、在 $|\varepsilon|\gg t_c$ 处饱和到 $1/\hbar$。这就是电荷比特"在反交叉点最抗噪、远离对称点退相干最快"的定量来源，也解释了为什么电荷比特虽有最大的电偶极矩、最容易做到[[circuit-qed/charge-photon-coupling|电荷–光子]]强耦合，相干时间却最短。
 
+上述失谐耦合描述的是**横向**噪声通道（驱动弛豫）；高频端弛豫的定量关系由约瑟夫森电荷比特的单发读出实验直接测定：若电荷噪声引起的能量涨落谱密度为 $S_U(\omega)$，弛豫率由 Fermi 黄金规则给出
+
+$$
+\Gamma_1=\frac{\pi S_U(\omega)}{2\hbar^2}\sin^2\theta,
+$$
+
+其中 $\sin^2\theta=E_J^2/(E_J^2+U^2)$ 表征比特经电荷自由度与噪声库的耦合强度。Astafiev 等人用它判定了主导弛豫机制：实测 $\Gamma_1$ 随 $E_J$ 呈清晰的 $E_J^2$ 依赖（$\Delta E/h\approx100$ GHz 处），说明弛豫是库珀对隧穿而非双准粒子序贯隧穿；在甜点处 $\Gamma_1=\pi S_U(\omega=E_J/h)/2\hbar^2$ 直接读出噪声谱的频率依赖——**高频段谱密度粗略正比于比特激发能**。这把电荷噪声的图景从低频 $1/f$（本词条主线）延伸到高频 Ohmic 型自发发射：同一个噪声库，低频端表现为退相位与图跳变，高频端表现为弛豫。
+
+![[assets/figures/charge-noise/41672d79c69dc9b4cf91c27ebc4def22f77e5e22b2b7447137673432591a7f3e.jpg]]
+
+*弛豫率与噪声谱的测量：(a) 器件示意图（SET 读出约瑟夫森电荷比特）；(b) 弛豫率 $\Gamma_1$ 的测量方案——SET 置于 JQP 峰（实心圆）与阻塞区（其他符号）的对比。图源：Astafiev et al. (2004)，Fig. 1。*
+
+![[assets/figures/charge-noise/6905ffdeecdafe3fe2aa28aba97ccbe13a93a1d1a6b4f0f0049edc9cba2b02fd.jpg]]
+
+*弛豫率随 $E_J$ 与失谐的依赖：(a) $\Gamma_1$ 在甜点（开三角）与 $\Delta E/h\approx100$ GHz（开圆）随 $E_J$ 的变化——甜点处直接给出 $S_U(\omega)$ 的频率依赖；远离甜点时 $\Gamma_1$ 随 $|\Delta E|$ 增大而下降、随 $E_J^2$ 增长，确认电荷涨落主导。图源：Astafiev et al. (2004)，Fig. 2。*
+
 ### 交换类比特：二阶展开与协方差
 
 对[[qubit-control/resonant-exchange-qubit|共振交换比特]]这类由两个失谐参数 $(\varepsilon,\Delta)$ 共同控制的比特，需要把哈密顿量展开到二阶。设电荷噪声使两个失谐各自偏移 $\delta q$（$q=\varepsilon,\Delta$），均值为零、服从高斯分布，则

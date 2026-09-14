@@ -38,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate QAtlas-backed wiki content
+        run: npm run check:qatlas-content
+
       - name: Build Quartz site
         run: npm run build:site
 

@@ -15,6 +15,8 @@ date: 2026-09-12
 
 ## 物理根源：可调交换耦合
 
+固态比特相干耦合的历史起点是电荷比特：Pashkin 等人（2003，Nature 415）在两个电容耦合的 Cooper-pair box 上用脉冲技术产生量子振荡，振荡谱直接反映比特间相互作用，指示纠缠态的存在——这是固态多比特相干操控的首次演示，此后的自旋比特两比特门沿着"可调耦合"这条线发展。
+
 两个相邻自旋电子经过点间[[fundamentals/tunnel-coupling|隧穿耦合]]杂化，得到海森堡型交换相互作用
 
 $$
@@ -23,7 +25,7 @@ $$
 
 交换能 $J$ 随[[fundamentals/charge-stability-diagram|电荷稳定图]]上的失谐 $\epsilon$（把系统推向 $(1,1)$–$(0,2)$ 电荷过渡线）与点间势垒高度指数式变化：推得越近，$J$ 越大；拉回库仑阻塞深处，$J$ 指数趋零。这一"电子学旋钮"正是量子点方案相对固定耦合体系的最大优势——**耦合可以真正关断**，闲置比特之间几乎不互相打扰。
 
-在 $(1,1)$ 子空间内，$J$ 作用在单态 $|S\rangle$ 与 $|T_0\rangle$ 之间：$H=-J|S\rangle\langle S|/2$。它既给出 ST 编码的 $z$ 旋转，也给出单自旋比特间的 Ising 型等效耦合 $J\sigma_z^{(1)}\sigma_z^{(2)}/4$（两单态能级差 $E_Z$ 远大于 $J$ 时），这是几乎所有"CZ 类"两比特门的工作机制。
+在 $(1,1)$ 子空间内，$J$ 作用在单态 $|S\rangle$ 与 $|T_0\rangle$ 之间：$H=-J|S\rangle\langle S|/2$。它既给出 ST 编码的 $z$ 旋转，也给出单自旋比特间的 Ising 型等效耦合 $J\sigma_z^{(1)}\sigma_z^{(2)}/4$（两单态能级差 $E_Z$ 远大于 $J$ 时），这是几乎所有"CZ 类"两比特门的工作机制。电容耦合电荷比特的对应演示见 [[references/li-2014-cnot-charge-qubits|Li et al. (2014) CNOT 全文页]]——5 GHz 门时钟下 CNOT 与过程层析首次在电荷比特中实现。
 
 ## 方案一：脉冲交换与 $\sqrt{\mathrm{SWAP}}$
 
@@ -95,6 +97,7 @@ $$
 
 ## 参考文献
 
+- 固态比特相干耦合起点：Pashkin et al., Nature 415, 144 (2003)（两耦合电荷比特的量子振荡，[[references/li-2014-cnot-charge-qubits|Li et al. 2014]] CNOT 演示的前身）。
 - 原始方案与脉冲物理：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]；[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]；[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
 - CZ 与 CROT 的硅首秀：[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]；常开交换处理器：[[references/watson-2018|Watson et al., Nature 555, 633 (2018)]]。
 - 越过容错阈值与系统表征：[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]；[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]；[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]。

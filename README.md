@@ -4,7 +4,7 @@
 
 基于 [Quartz 5](https://quartz.jzhao.xyz/) 构建的中文量子器件论文知识库，覆盖半导体量子点、量子比特操控、材料与器件、读出测量、电路 QED、阵列扩展与自动化。
 
-当前仓库包含 111 个 Markdown 页面：79 个主题词条、23 篇参考文献全文页、7 个栏目索引，以及首页和编写说明。站点提供全文搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式、阅读模式与本地化公式资源。
+当前仓库包含 115 个 Markdown 页面：81 个主题词条、25 篇参考文献全文页、8 个栏目索引，以及首页和编写说明。站点提供全文搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式、阅读模式与本地化公式资源。
 
 - 在线站点：[https://logfe3.github.io/quantum-wiki/](https://logfe3.github.io/quantum-wiki/)
 - GitHub 仓库：[https://github.com/logfe3/quantum-wiki](https://github.com/logfe3/quantum-wiki)
@@ -41,6 +41,77 @@ npm run serve:local
 
 首次部署前，在仓库的 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。之后推送到 `main` 即会自动更新网站，也可以在 Actions 页面手动运行 `Deploy Quartz to GitHub Pages`。
 
+## QAtlas 增量内容
+
+QAtlas 是论文发现与证据后端，最终产物仍是本仓库原有格式的中文 Wiki 词条。连接器不会把整个论文库直接发布，也不会把 PAT 写进仓库；原始 Markdown、元数据和临时图件保存在已忽略的 `.qatlas-cache/`。
+
+先通过官方 CLI 的设备码流程保存一个仅含 `papers:read` 的 PAT：
+
+```powershell
+uvx --from qatlas-cli qatlas auth login `
+  --server-url https://qatlas.hfnl.app.chenzhaoyun.com `
+  --scopes papers:read
+```
+
+### 统一流水线
+
+`npm run qatlas:pipeline` 把"发现 → 编辑决策 → 生成 → 质量检查"串成一条命令：
+
+```powershell
+npm run qatlas:pipeline -- run --query "fluxonium qubit" --max 2
+```
+
+也可以让系统自主连续扩充：`auto` 命令每轮基于**最新 main** 自动选题（种子主题 + 从 wiki 索引派生），发现论文、生成词条、过质量门禁后**直接提交并推送 main**（线上站点自动更新），一轮接一轮：
+
+```powershell
+npm run qatlas:pipeline -- auto --rounds 3
+```
+
+- 选题历史与自适应批量大小记录在 `.qatlas-cache/autodiscovery-state.json`（Git 忽略），中断后可续跑；
+- `--rounds N` 限制轮数，省略则一直循环；Ctrl-C 随时停止；
+- 每轮 review 四步（内容门禁、TypeScript、测试、生产构建）全过才提交，不过不推送。
+
+`run` 命令的阶段细节：
+
+- `discover`：查询 QAtlas、排除已导入论文、把候选论文的 Markdown 和图件缓存到 `.qatlas-cache/papers/`；
+- `plan`：渲染编辑工作单（`.qatlas-cache/runs/<run-id>/work-order.md`），由规划 agent 按候选论文产出结构化决策（supplement / new_entry / new_category / skip），写入 `editorial-plan.json` 并按 `scripts/qatlas-schemas/editorial-plan.schema.json` 校验；
+- `generate`：渲染生成工作单，由生成 agent 按决策创建或修改词条，并通过 QAtlas 内容门禁；
+- `review`：内容门禁、TypeScript、测试与生产构建四步验证，结果写入 `review.json`；
+- `status`：查看某次运行的工件与决策。
+
+也可以分阶段执行：
+
+```powershell
+npm run qatlas:pipeline -- discover --query "spin qubit" --max 3
+npm run qatlas:pipeline -- plan --run <run-id>
+# agent 生成内容后：
+npm run qatlas:pipeline -- generate --run <run-id>
+npm run qatlas:pipeline -- review --run <run-id>
+```
+
+### 单独使用连接器
+
+检查服务能力并筛选已有论文：
+
+```powershell
+npm run qatlas:doctor
+npm run qatlas:list -- --query "spin qubit" --per-page 10
+```
+
+按 arXiv ID、DOI 或 QAtlas `qa_...` ID 获取论文。`--images` 可取 `none`、`referenced` 或逗号分隔的图号：
+
+```powershell
+npm run qatlas:fetch -- --id cond-mat/0703002 --images 1,2,3
+```
+
+参考文献页由 `qatlas:import-reference` 从缓存机械生成；概念词条必须单独用中文综合，不能直接复制论文正文。所有标记为 `source: QAtlas` 的页面在构建前都会执行：
+
+```powershell
+npm run check:qatlas-content
+```
+
+质量门禁要求完整 frontmatter、中文解释、KaTeX 展示公式、论文图件或 Mermaid 图解、站内双链和参考文献，并校验图片文件真实存在。栏目数量不设上限，但新栏目必须补充现有知识图谱，而不是形成孤立的论文镜像。
+
 ## Windows 本地常驻部署
 
 部署脚本会构建静态文件、注册当前用户的 Windows 登录自启任务，并仅监听本机回环地址：
@@ -65,12 +136,17 @@ npm run undeploy:local
 - `content/fundamentals/`：量子点基础，15 个词条；
 - `content/materials-devices/`：材料与器件，8 个词条；
 - `content/qubit-control/`：量子比特与操控，23 个词条；
+- `content/superconducting-qubits/`：超导量子比特，当前包含 transmon 与 fluxonium 词条；
 - `content/circuit-qed/`：腔与电路 QED，13 个词条；
 - `content/readout-measurement/`：读出与测量，11 个词条；
 - `content/scaling-automation/`：扩展与自动化，9 个词条；
-- `content/references/`：23 篇参考文献全文页；
+- `content/references/`：24 篇参考文献全文页；
 - `content/assets/`：词条使用的图片与附件；
 - `quartz.config.yaml`：Quartz 插件、布局与站点基址配置；
+- `qatlas.integration.yaml`：QAtlas 服务地址、缓存目录与发布质量规则；
+- `scripts/qatlas-bridge.mjs`：QAtlas 健康检查、目录查询、Markdown 轮询和图件获取；
+- `scripts/qatlas-pipeline.mjs`：统一内容流水线（发现、编辑决策、生成、质量检查）；
+- `scripts/qatlas-import-reference.mjs`：从缓存生成参考文献全文页；
 - `quartz/styles/custom.scss`：站点视觉样式。
 
 ## 重新抽取论文

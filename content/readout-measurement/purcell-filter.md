@@ -37,7 +37,7 @@ $$
 \gamma^{\mathrm{Purcell}}=\kappa_r\left|\langle 0,g|\,a\,\widetilde{|0,e\rangle}\right|^2\simeq\kappa_r\frac{g^2}{\Delta^2}.
 $$
 
-对 transmon 比特，用色散频移 $\chi=g^2\alpha/[\Delta(\Delta+\alpha)]\simeq g^2\alpha/\Delta^2$（$\alpha$ 为非谐性）消去 $g$、$\Delta$，并折算到以赫兹计的频率单位，得
+对[[superconducting-qubits/transmon-qubit|transmon]]比特，用色散频移 $\chi=g^2\alpha/[\Delta(\Delta+\alpha)]\simeq g^2\alpha/\Delta^2$（$\alpha$ 为非谐性）消去 $g$、$\Delta$，并折算到以赫兹计的频率单位，得
 
 $$
 T_1^{\mathrm{Purcell}}=\frac{2\pi\Delta^2}{\kappa g^2}\simeq\frac{2\pi\alpha}{\kappa\chi}.
