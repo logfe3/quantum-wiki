@@ -9,13 +9,15 @@
 
 | 指标               |          数量 |
 | ------------------ | ------------: |
-| Wiki 来源页面      |            79 |
-| 接受的 Q/A         |           443 |
-| 生成后拒绝的候选   |            31 |
-| 人工审核样本       |   24（5.42%） |
-| train / dev / test | 354 / 44 / 45 |
+| Wiki 来源页面      |            88 |
+| 接受的 Q/A         |           493 |
+| 生成后拒绝的候选   |            35 |
+| 人工审核样本       |   27（5.48%） |
+| train / dev / test | 391 / 51 / 51 |
 
-题型分布：简答题 68、填空题 79、判断题 67、选择题 78、问题求解题 151。
+题型分布：简答题 75、填空题 88、判断题 76、选择题 87、问题求解题 167。
+
+栏目覆盖：fundamentals 84、materials-devices 44、qubit-control 128、circuit-qed 86、readout-measurement 64、scaling-automation 66、superconducting-qubits 21。来源范围现在扫描整个 `content` 目录（排除 `index.md`、`about.md`、`content/references`、`content/assets`），新增顶级栏目（如 QAtlas 集成引入的 `content/superconducting-qubits`，含 Fluxonium、Transmon、Gatemon、Flowermon 四个词条）会自动进入数据集，无需修改配置。
 
 ## 设计原则
 

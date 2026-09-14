@@ -6,14 +6,10 @@ dataset:
 
 source:
   include:
-    - content/fundamentals
-    - content/materials-devices
-    - content/qubit-control
-    - content/circuit-qed
-    - content/readout-measurement
-    - content/scaling-automation
+    - content
   excludeBasenames:
     - index.md
+    - about.md
   excludeDirectories:
     - content/references
     - content/assets
