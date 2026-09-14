@@ -112,6 +112,21 @@ npm run check:qatlas-content
 
 质量门禁要求完整 frontmatter、中文解释、KaTeX 展示公式、论文图件或 Mermaid 图解、站内双链和参考文献，并校验图片文件真实存在。栏目数量不设上限，但新栏目必须补充现有知识图谱，而不是形成孤立的论文镜像。
 
+## QA 数据集
+
+`quantum-wiki-qa` 是从本仓库 Wiki 词条构建的、可追溯的中文问答型数据集（v0.1.0，状态 `draft_pending_semantic_audit`）：88 个来源词条、493 组 Q/A，覆盖五种题型（简答 75、填空 88、判断 76、选择 87、问题求解 167），train/dev/test 按 `source_path` 隔离（391/51/51）。
+
+- 来源范围扫描整个 `content` 目录（排除 `index.md`、`about.md`、`content/references` 论文全文、`content/assets`），新增顶级栏目自动纳入；
+- 每条记录保存来源路径、章节、SHA-256、证据摘录、公式与插图引用，可回查原始词条；
+- 重建与校验：
+
+```powershell
+node scripts/qa/build-wiki-qa.mjs
+node scripts/qa/validate-wiki-qa.mjs
+```
+
+构建器是确定性的：来源摘要、配置摘要与生成管线摘要不变时输出逐字节相同；GitHub Actions 会重新生成并校验，词条或生成器更新而数据集未同步时拉取请求会失败。数据与格式细节见 `datasets/quantum-wiki-qa/README.md`。
+
 ## Windows 本地常驻部署
 
 部署脚本会构建静态文件、注册当前用户的 Windows 登录自启任务，并仅监听本机回环地址：
@@ -147,6 +162,7 @@ npm run undeploy:local
 - `scripts/qatlas-bridge.mjs`：QAtlas 健康检查、目录查询、Markdown 轮询和图件获取；
 - `scripts/qatlas-pipeline.mjs`：统一内容流水线（发现、编辑决策、生成、质量检查）；
 - `scripts/qatlas-import-reference.mjs`：从缓存生成参考文献全文页；
+- `scripts/qa/`：QA 数据集构建器、校验器与审核门禁；
 - `quartz/styles/custom.scss`：站点视觉样式。
 
 ## 重新抽取论文
