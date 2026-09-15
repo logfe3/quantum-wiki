@@ -1,5 +1,5 @@
 {
-  "source_digest": "0f3513dff2983c723175d0743a9a8c7961038112ac7c8241cf595d29671de871",
+  "source_digest": "7c7abac23429fd67cf1b5170cae7d03473a4405223ae284f0ec880e50a8e3b09",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -495,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "d873bbe28aaf5b87126ea30104e9dd137a97fbed7f69d1ca6b5adc7e445f2cce",
+      "sha256": "570722c58ae609b56d0f15c4c54a8a3a337920efc67c89f2b4a2aa10c3bb7823",
       "split": "dev"
     },
     {
@@ -572,7 +572,7 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "15204c9c4b7e184eef59b16dda43812595d8baa3eb7d566b910326cfe7989359",
+      "sha256": "93d438fa8cc80b0493504655072745ccbb4cee7ad89f30fb1a530bc7e1524251",
       "split": "train"
     },
     {
