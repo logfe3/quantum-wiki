@@ -156,6 +156,17 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 - **量子非破坏读出**：色散区测量算符与比特哈密顿量对易，投影测量不改变比特态，可重复测量提高保真度；
 - **腔作为量子总线**：多个比特共享同一腔模，在色散区经虚光子交换产生远程有效耦合 $\sim g_1g_2/\Delta$，是实现毫米级长程比特耦合与两比特门的主流方案，直接回应大规模扩展中近邻相互作用作用距离过短的难题。
 
+
+**学习路径导引**：面向初学者的全景综述（APS Reviews 类教学文）把超导比特设计谱系、耦合架构与测量方案组织成统一的学习框架——本站词条群恰好按这一框架分层展开：机制层（[[circuit-qed/jaynes-cummings-model|JC 模型]]→[[circuit-qed/strong-coupling|强耦合]]→[[circuit-qed/dispersive-shift|色散频移]]）、器件层（[[superconducting-qubits/transmon-qubit|transmon]]→[[superconducting-qubits/fluxonium-qubit|fluxonium]]→[[superconducting-qubits/gatemon-qubit|gatemon]]→[[superconducting-qubits/flowermon-qubit|flowermon]]）、应用层（[[readout-measurement/dispersive-readout|色散读出]]→[[circuit-qed/bosonic-cqed|玻色编码]]→[[scaling-automation/mmiqc-3d-integration|三维集成]]）。
+
+![[assets/figures/circuit-quantum-electrodynamics/cd2c4de4d8ede86b79a08490585e9b68c96feaddc2be697732b3567b96dfec01.jpg]]
+
+*cQED 学习框架总览：超导比特与电路量子电动力学的教学全景——器件谱系、耦合架构与测量方案的分层组织。图源：cQED 入门综述 (2018)，Fig. 1。*
+
+![[assets/figures/circuit-quantum-electrodynamics/fcaabfd46fc72fb5ab78459d337aa3cf5ef60322f303184f84f4dc0fd6459844.jpg]]
+
+*相干时间的指数提升：十五年间能量弛豫与退相干时间的演进——每代器件对应一类损耗机制的识别与压制。图源：cQED 入门综述 (2018)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 最小模型与全部能级结构见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志性观测是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。
