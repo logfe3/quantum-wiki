@@ -107,6 +107,16 @@ fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型�
 
 *擦除纠错适配：错误通道的层级——主要错误可标识为擦除（可纠正）而非比特翻转，编码级保护与纠错方案协同设计。图源：Fisher et al. (2024)，Fig. 2。*
 
+**高温运行**（>200 mK）是 fluxonium 家族的应用延伸：大能隙材料的器件把跃迁频率推到 **20 GHz 以上**，使 $k_BTllhbaromega$ 在 100~200 mK 温区依然成立——热激发被压制、相干保持。运行温度每提高一个量级，可用的冷却功率提高约两个量级（稀释制冷机 $sim$µW @10 mK vs $sim$mW @100 mK），比特数的规模化不再被制冷功率卡死。
+
+![[assets/figures/fluxonium-qubit/8073038edf24e6893ffd5a8a79f9ccaf3fe39a4e3d007e1ea64133915a78cc9c.jpg]]
+
+*20 GHz 以上运行的器件：大能隙材料的高频比特——高温运行时热激发仍被 $k_BTllhbaromega$ 压制。图源：arXiv:2402.03031，Fig. 1。*
+
+![[assets/figures/fluxonium-qubit/18f37b83556c5824225018594b8a0c45a90647bad5b885676f21901c789d1a2b.jpg]]
+
+*200 mK 以上的相干测量：高温运行的弛豫/退相干时间——制冷功率瓶颈的规模化应对。图源：arXiv:2402.03031，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 与[[superconducting-qubits/transmon-qubit|transmon]]的互补：transmon 用大电容压低电荷色散、牺牲非谐性；fluxonium 用大电感重塑势阱，在小电容下同时保住非谐性与相干性，但需要处理磁通噪声和更复杂的谱学。
