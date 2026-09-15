@@ -1,6 +1,13 @@
 {
-  "source_digest": "931f27ca2e9ca9cd5c399f70e323c152da627cb38fe1b3de19f96cae99b8f0c3",
+  "source_digest": "a2108b9ea32f41f617951fc11a5abb6d2844fcd20de6336d883bf5d11f38d2b5",
   "pages": [
+    {
+      "path": "content/circuit-qed/bosonic-cqed.md",
+      "title": "玻色 cQED 与腔编码量子计算",
+      "topic": "circuit-qed",
+      "sha256": "bea7a0bb86f46ecf25bf535f592ef5ba08e816cf407940f3538c11c7fe692517",
+      "split": "train"
+    },
     {
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
@@ -19,7 +26,7 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "bdc0f69c63c7146b5c44e9b3217ea1f98b2f449bac1506bf4223969285bb1db5",
+      "sha256": "76fbd374a6b885a16a0121a2e36e3af57b3484fd72820d2063ef7a93864f301e",
       "split": "dev"
     },
     {
@@ -33,7 +40,7 @@
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
       "title": "电路量子电动力学",
       "topic": "circuit-qed",
-      "sha256": "96f839445c0ee98a3ca492b4063365166beca887d6a1d7f7d1766140ecb2465f",
+      "sha256": "c2620e98e6c655c38f80c590b2767812d57847d379b28942115080e8c76cd042",
       "split": "train"
     },
     {
@@ -54,7 +61,7 @@
       "path": "content/circuit-qed/high-impedance-resonator.md",
       "title": "高阻抗谐振腔",
       "topic": "circuit-qed",
-      "sha256": "5d3c6a289ffa394c81222952cbca96b9f1b88fdcf14c2c94aa651bd91bef218b",
+      "sha256": "e25ecfcc5a8388a15b1dc073596c66029b7965bb5ad084106c4533992805a5d3",
       "split": "train"
     },
     {
@@ -82,7 +89,7 @@
       "path": "content/circuit-qed/spin-photon-coupling.md",
       "title": "自旋–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "3ecddf29561c1c1e93883cfcaf93047c1d204bce5b455cd99954679c534f7360",
+      "sha256": "99fdb1d61d7d1b237450458dfdace51f5c62fd88a3ec59f50f1b11eb87fa2b59",
       "split": "train"
     },
     {
@@ -166,7 +173,7 @@
       "path": "content/fundamentals/hyperfine-interaction.md",
       "title": "超精细相互作用",
       "topic": "fundamentals",
-      "sha256": "9495d9a4c0b5f7540b12049ecd0c9c2d5561a5b0e6cd32dfbc3a8819b2d16634",
+      "sha256": "c8daabc95784d72402407ce54419f66adc793d62fd4343d3096d08422cf2c722",
       "split": "train"
     },
     {
@@ -439,7 +446,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "ddb03dd7babfed5e9ce0f0422d0a42062289906eb4123e48bdb8220f8b7bb9a3",
+      "sha256": "94ba5d3a33265c5d8248fdd4c6d86e5158af5dbb22573f92cd4fb5a85337335c",
       "split": "train"
     },
     {
@@ -467,7 +474,7 @@
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "d626a1b4485dc095b94b9bab3cbb571b61f1280ed202a0a2437e46570d86ddd9",
+      "sha256": "0c84932a02cb6a56fcd3bdcaf557b059e815347b4013948dc19bd6f5b96359c1",
       "split": "train"
     },
     {
