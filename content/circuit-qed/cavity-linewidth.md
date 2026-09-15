@@ -106,6 +106,20 @@ $$
 
 <!-- FIGURE: 同一腔的时域光子数衰减（指数包络，时间常数 $1/\kappa$）与频域洛伦兹响应（半高宽 $\kappa/2\pi$）的对应关系 -->
 
+## 可调线宽：EIT 与腔线宽变窄
+
+以上讨论中 $\kappa$ 由器件几何与环境固定；**腔线宽也可以被"调窄"**——电磁诱导透明（EIT）提供了控制场调节线宽的机制。把原子系综耦合进腔模，探针场 $\Omega_p$ 与控制场 $\Omega_c$ 的 Rabi 频率构成相干布居囚禁（CPT）：出现与光场解耦的**暗态**，腔内光子变成"亮态极化子"（与激发态强耦合，表现为真空 Rabi 劈裂）与"暗态极化子"（与激发态解耦，表现为窄透射窗）的叠加。透射谱的半高全宽（FWHM，以腔衰减率 $\kappa$ 为单位）随控制场强度连续可调：$\Omega_c=5\kappa$ 时谱等价于空腔（FWHM=1），$\Omega_c=\kappa$ 时进入腔-EIT 窄谱区。Santos 等人给出了单原子区线宽变窄的**基本极限**：线宽不能无限变窄，受可控参数与原子数的制约。
+
+![[assets/figures/cavity-linewidth/1d350d2ba38ec2c2e6b4489e0ff18ce949c27222de351c8cf0cac3e44607875f.jpg]]
+
+*腔-EIT 实验设置：$N_{at}$ 个原子与腔模耦合，探针场（probe）与控制场（control）共同构成 EIT 介质——控制场强度调节腔的透射线宽。图源：Santos et al. (2024)，Fig. 1(a)。*
+
+![[assets/figures/cavity-linewidth/c81444cbc4c95a75c3b5926d6b79abccae789b940e78d498d9dd397897ab2774.jpg]]
+
+*EIT 腔线宽变窄的参数空间：FWHM（以 $\kappa$ 为单位）随 $g/\kappa$ 与 $\Omega_c/\kappa$ 的变化——控制场越弱、耦合越强，线宽越窄；$\Omega_c=5\kappa$ 时回到空腔极限（FWHM=1）。图源：Santos et al. (2024)，Fig. 2。*
+
+EIT 线宽变窄与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]的"提高 $Z_r$"是两条互补的线宽/耦合工程路线：前者靠介质相干性动态调节，后者靠器件几何静态设计；两者共同的物理基础都是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的非线性（暗态极化子与真空 Rabi 劈裂是同一哈密顿量的两个侧面）。
+
 ## 损耗通道的物理来源
 
 ### 外部损耗 $\kappa_e$
