@@ -69,6 +69,7 @@ BLG 量子点的另一独特能力是**双极性**（bipolar operation）：点�
 - [[fundamentals/charging-energy|充电能]]：既是尺寸的代理量（圆盘电容模型），也是单粒子谱提取的扣除项——本平台把"充电能 ↔ 点尺寸 ↔ $g_v$"串成一条可测链。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]：双极性操作让电子/空穴点在同一器件互变，为空穴比特的低功耗、正电压操作提供材料侧参照。
 - [[fundamentals/semiconductor-quantum-dot|半导体量子点]]：BLG 点是"无宿主掺杂、全栅定义"的极限情形——所有限制（带隙、势垒、尺寸）都由静电场而非材料生长决定。
+- [[readout-measurement/single-electron-transistor|单电子晶体管]]：单层石墨烯平台上量子点与 SET 电荷计可同材一次刻蚀集成（间距 50 nm、每电子约 30% 电导响应），是石墨烯量子点走向"无核自旋量子世界"固态比特的读出基本单元。
 
 ## 参考文献
 

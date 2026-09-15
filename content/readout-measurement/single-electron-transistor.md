@@ -12,6 +12,9 @@ tags:
  - 电荷传感
  - 库仑阻塞
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m0qv0gjdram33d5qefxgk80d
+source_updated: 2026-08-24T08:31:17Z
 ---
 
 <div class="entry-lead">单电子晶体管（single-electron transistor, SET）的核心是一只库仑岛：岛电荷改变一个电子，岛源漏电流便被周期性调制，岛外的静电计由此获得单 e 量级的灵敏度。</div>
@@ -71,6 +74,39 @@ SET 与[[readout-measurement/qpc-charge-sensor|QPC]] 的对比决定了它们的
 | 适用场景 | 超导电荷量子比特读出（早期） | 半导体量子点邻位电荷传感（主流） |
 
 总结道："单电子晶体管的探测带宽与探测灵敏度非常好，但是制作工艺比较复杂（Lu et al., 2003），而量子点接触或者量子点电荷探测器往往比较容易在量子点加工时同步制作完成，所以在实际试验中，我们往往采用后两种方式。"这一句概括了半导体量子点实验中 SET 早期盛行、QPC 后期占主导的工艺脉络。
+
+## 全石墨烯集成：一次刻蚀的 QD+SET 电荷传感
+
+传统 SET 电荷计多为金属岛（Al/AlOₓ/Al 隧道结）工艺；Wang 等人 2010 年演示了**同材料、单步工艺**的替代路线：在单层石墨烯上用电子束光刻加氧等离子体刻蚀，一次定义出直径 90 nm 的量子点和直径 180 nm 的 SET 库仑岛，二者间距仅 50 nm（传统半导体 QD+QPC 方案的典型间距约 100 nm）。间距压缩直接增大点–传感器互电容，石墨烯量子点上每加入一个电子，SET 电导出现约 30% 的台阶式变化：
+
+$$
+\frac{\Delta G_\mathrm{SET}}{G_\mathrm{SET}}\approx 30\%\ \text{每单电子（50 nm 集成间距）}
+$$
+
+其中 $\Delta G_\mathrm{SET}$ 是被测点电荷改变 $1e$ 引起的 SET 电导变化、$G_\mathrm{SET}$ 是工作点电导。这么大的相对响应正是强电容耦合的收益，可用于时间分辨电荷测量或电荷/自旋比特读出。
+
+![[assets/figures/single-electron-transistor/wang2010-fig1-graphene-qd-set-sem.jpg]]
+*器件扫描电镜图：上方为直径 90 nm 的石墨烯量子点（主器件），下方为直径 180 nm 的 SET 库仑岛（电荷传感器），二者在一次刻蚀中成型、边缘间距 50 nm；亮线为势垒与侧栅，标尺 200 nm。图源：Wang et al. (2010), Fig. 1(a)。*
+
+**锁相跨导读出。** 直流背景大时，可在侧栅上叠加方波调制脉冲，用与脉冲同步的锁相放大器直接测 SET 跨导 $dI_\mathrm{SET}/dV_{sg}$：量子点单电子充放电表现为跨导曲线上的尖锐尖峰/凹陷。该方式最重要的价值在于**直测电流失效区仍可工作**——石墨烯量子点在侧栅 0.2–0.5 V 区间输运电流小到常规手段测不到，而 SET 跨导信号依然清晰，与直接输运的库仑振荡峰完美对齐。
+
+![[assets/figures/single-electron-transistor/wang2010-fig2-charge-detection.jpg]]
+*同一侧栅扫下的三联图：(a) 量子点电导 $G_\mathrm{QD}$ 的库仑振荡；(b) SET 电导出现与之一一对应的台阶（约占总信号 30%）；(c) SET 跨导 $dI_\mathrm{SET}/dV_{sg}$ 的尖峰/凹陷，在 (a) 中无信号的 0.2–0.5 V 区间仍给出完整电荷态信息；红色虚线为对齐引导线，三幅图同一次扫描同步记录。图源：Wang et al. (2010), Fig. 2。*
+
+**带宽与灵敏度。** 以调制脉冲频率扫描 SET 跨导增益，−3 dB（0.707）点给出器件带宽约 600 Hz——受杂散电容限制，高频响应迅速下降。电荷灵敏度用标准折算法标定：在 SET 背栅上施加相当于 $5\times10^{-2}$ 个电子的信号、测到信噪比为 1 的响应，即
+
+$$
+\delta q=\frac{5\times 10^{-2}\ e}{\sqrt{\Delta f}}\bigg|_{\mathrm{SNR}=1}\;\Rightarrow\; \delta q\approx 1\times 10^{-3}\ e/\sqrt{\mathrm{Hz}}
+$$
+
+其中 $\Delta f$ 为测量带宽、$e$ 为元电荷。这一水平与此前 GaAs 量子点 + 超导 Al SET 系统的灵敏度相当，而石墨烯 SET 工艺更简单可靠、且能在液氦温度以上工作。
+
+**探测激发态谱。** 在源漏偏压–侧栅平面上，SET 跨导信号复现出量子点的库仑菱形，且菱形边旁平行线的激发态谱线在探测器信号中比直接输运测量更清晰——高偏压下多个激发能级参与隧穿的细节因此可读。这对获取[[fundamentals/coulomb-diamond|库仑菱形]]之外的量子点能级信息（进而推断电子自旋态）至关重要。
+
+![[assets/figures/single-electron-transistor/wang2010-fig4b-set-detected-diamonds.jpg]]
+*SET 跨导信号 $dI_\mathrm{SET}/dV_{sd}$–$V_{sg}$ 平面上的库仑菱形：与量子点直测菱形完全匹配，菱形边外多条平行线对应量子点激发态参与隧穿；这些谱线在探测器通道中比直接输运更醒目。图源：Wang et al. (2010), Fig. 4(b)。*
+
+石墨烯平台的物理动机在于其弱自旋轨道耦合与近乎消失的超精细相互作用（^{12}C 核自旋为零）——这正是[[materials-devices/bilayer-graphene-quantum-dot|石墨烯量子点]]走向"无核自旋量子世界"固态比特的出发点，而 QD+SET 同材集成是其中的读出基本单元。
 
 ## 直流 SET 的输出曲线
 
@@ -160,6 +196,9 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 | RF-SET 谐振频率 | 332 MHz（Schoelkopf，$L=620$ nH、$C_p=0.37$ pF） | |
 | RF-SET 带宽 | 7–24 MHz 量级 | |
 | RF-SET 电荷灵敏度 | $3.2\times 10^{-6}\,e/\sqrt{\mathrm{Hz}}$（Schoelkopf 1998）；$2.4\times 10^{-5}\,e/\sqrt{\mathrm{Hz}}$（Wei Lu） | |
+| 石墨烯集成 SET 电荷灵敏度 | $1\times 10^{-3}\,e/\sqrt{\mathrm{Hz}}$（Wang 2010，$5\times10^{-2}e$ 信号 SNR=1 折算） | |
+| 石墨烯集成 SET 带宽 | 约 600 Hz（−3 dB，杂散电容限制） | |
+| 石墨烯集成单电子响应 | $\Delta G_\mathrm{SET}/G_\mathrm{SET}\approx 30\%$（QD–SET 间距 50 nm） | |
 | 射频功率 | $-90$ dBm 量级（折中灵敏度与反作用） | |
 
 ## 实验特征与典型应用
@@ -197,3 +236,9 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 - [[readout-measurement/dispersive-readout|色散读出]]通过把电荷态映射为谐振腔频率/相位偏移实现非破坏性传感，与 SET 同样支持单发读出，但作用机制是色散频移而非源漏电流调制。
 - [[readout-measurement/single-shot-readout|单发读出]]在 SET 出现之前主要依赖 SET（早期超导比特实验），在 SET 出现后则更多依赖 QPC、栅极传感或色散读出。
 - [[materials-devices/charge-noise|电荷噪声]]既是 SET 主要噪声来源（限制灵敏度）也是 SET 可以测量的对象：工作点处 $I_\mathrm{SET}$ 的低频 $1/f$ 涨落直接反映被测点的电荷环境。
+- [[materials-devices/bilayer-graphene-quantum-dot|石墨烯量子点]]平台可实现 QD 与 SET 同材一次刻蚀集成：50 nm 近距强耦合给出每电子约 30% 的电导响应，是石墨烯自旋比特读出的基本单元。
+
+## 参考文献
+
+- Wang, L.-J. et al. A Graphene Quantum Dot with a Single Electron Transistor as Integrated Charge Sensor. *Applied Physics Letters* **97**, 262113 (2010). DOI: 10.1063/1.3533021；arXiv:1008.4868（QAtlas 缓存：1008.4868）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

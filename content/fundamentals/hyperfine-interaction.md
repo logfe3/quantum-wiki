@@ -177,6 +177,7 @@ $$
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]的去相位由 Overhauser 涨落与电荷噪声共同贡献：纯化硅中 Rabi 振荡外推的 $T_2^*$ 远高于 GaAs。
 - [[qubit-control/exchange-interaction|交换相互作用]]与超精细梯度共同决定双量子点 S–T<sub>0</sub> 与 S–T<sub>+</sub> 反交叉的能级图，是[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/pauli-spin-blockade|泡利自旋阻塞]]读出的核心。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]也受 Overhauser 场修正：超精细场移动自旋 Zeeman 频率（改变与腔的失谐）并修正有效耦合强度，III-V 体系腔介导两比特门的保真度随核态构型涨落（见该词条"超精细场对腔介导耦合的修正"一节）。
+- [[readout-measurement/qh-edge-channel-charge-sensor|量子霍尔边缘通道电荷传感器]]反向利用超精细劈裂做资源：同位素纯化 ^28Si 中单个 ^31P 施主 D⁰ 能级的 60 MHz 超精细劈裂大于光学线宽，使 12 条 D⁰→D⁰X 跃迁可以按核自旋分辨，光泵浦"选核自旋、电读电荷态"由此实现单核自旋 QND 读出。
 
 
 ## 参考文献

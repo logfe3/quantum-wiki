@@ -15,6 +15,8 @@ date: 2026-09-12
 > [arXiv:1003.2679](https://arxiv.org/abs/1003.2679) · [DOI:10.1038/nature09392](https://doi.org/10.1038/nature09392)
 > 原文为 arXiv 预印本版本的机器可读转换，公式与图注以原文为准；本页仅作站内索引与全文查阅，引用请以正式出版物为准。
 
+站内关联：本文用 SET 读出施主**电子**自旋；把施主读出推进到**核自旋**的一条理论路线见[[readout-measurement/qh-edge-channel-charge-sensor|量子霍尔边缘通道电荷传感器]]——用 IQHE 边缘态背散射探测 D⁰/D⁺ 电荷态，配合超精细分辨的 D⁰→D⁰X 光泵浦实现 QND 测量。
+
 ## 全文
 
 Andrea Morello $^ { 1 \ast }$ , Jarryd J. Pla $\cdot ^ { 1 }$ , Floris A. Zwanenburg1, Kok W. Chan1, Hans Huebl1†, Mikko M¨ott¨onen $^ { 1 , 3 , 4 }$ , Christopher D. Nugroho $^ { 1 \ddag }$ , Changyi Yang2, Jessica A. van Donkelaar2, Andrew D. C. Alves $^ 2$ , David N. Jamieson2, Christopher C. Escott $^ { 1 }$ , Lloyd C. L. Hollenberg2, Robert G. Clark $^ { 1 }$ , and Andrew S. Dzurak1

@@ -176,6 +176,7 @@ $$
 - [[readout-measurement/gate-based-sensing|栅极色散传感]]通过把 QD 串入谐振腔栅极直接读取电容变化，无需 QPC 通道，是另一种非破坏性电荷传感方式，适合多比特共用一条射频线的场景。
 - [[readout-measurement/dispersive-readout|色散读出]]把电荷态映射为微波谐振腔的频率/相位偏移，与 QPC 同为非破坏性电荷传感手段，但作用机制是色散频移而非电导调制。
 - [[materials-devices/charge-noise|电荷噪声]]是 QPC 主要噪声源之一：低频 $1/f$ 噪声既来自 QPC 自身通道也来自邻近 QD 的局域陷阱，QPC 也是测量这种噪声的工具。
+- [[readout-measurement/qh-edge-channel-charge-sensor|量子霍尔边缘通道电荷传感器]]是同一只 QPC 在强磁场 IQHE 平台下的另一副骨架：传感信号从零场电容耦合的电导调制换成对向边缘态在施主上的背散射，把灵敏度空间局域化到 QPC 下方一个施主体积内。
 
 
 ## 参考文献
