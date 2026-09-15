@@ -67,6 +67,18 @@ $$
 
 *梭运保真度测量：分离后 EPR 关联的保持——传送带模式的相干验证。图源：Struck et al. (2023)，Fig. 2。*
 
+### QuBus：微米级互联的 Si/SiGe 总线
+
+词条输送路线的第三个案例：**QuBus**（quantum bus）在 Si/SiGe 中实现**微米级距离**的单电子传输+存储——总线构型（轨道+存储节点）与输送模式互补，微米级连通性验证了跨芯片尺度的量子互联可行性。
+
+![[assets/figures/frequency-homogenisation/15e5df1d14f7cd10bcf8f51158e2017d328e85be3fa1b2a0b9ea8e30f7a7bfab.jpg]]
+
+*Si/SiGe QuBus：微米级传输+存储的单电子总线——跨芯片尺度互联的验证。图源：Xue et al. (2023)，Fig. 1。*
+
+![[assets/figures/frequency-homogenisation/d25c9218d31c41b53734363a94ac5af9b755ffa7142521ccaa1b7c5a47eeae9c.jpg]]
+
+*QuBus 传输保真度：微米级距离的单电子传输效率。图源：Xue et al. (2023)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 输运轨道的物理实现依赖[[scaling-automation/cryo-electronics|低温电子学]]的布线约束——全局操控正是为了绕开逐比特微波布线的引脚墙；均匀化后每比特所需的调谐电压也由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]决定。

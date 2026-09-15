@@ -134,6 +134,16 @@ PSB 漏电流不是噪声，它本身就是研究自旋–轨道耦合、超精�
 
 PSB 解除研究的方法学意义在于：把读出窗口反过来用作"自旋混合探测器"——能区分自旋态就意味着能测量自旋动力学。
 
+**无掺杂 Si/SiGe 的 PSB**：无掺杂架构（栅极定义、无掺杂层）的双量子点同样实现泡利自旋阻塞——对照主数据的掺杂 GaAs，无掺杂架构的 PSB 判据与漏电流特性被系统表征。
+
+![[assets/figures/pauli-spin-blockade/11fefb45264b1b69ac2f2283a25155723a2c76a07afff9da0861eed0f6d33b74.jpg]]
+
+*无掺杂 Si/SiGe 的 PSB：栅极定义架构的自旋阻塞——掺杂/无掺杂的对照。图源：Borselli et al. (2011)，Fig. 1。*
+
+![[assets/figures/pauli-spin-blockade/b700ff6bd1c5536ce5b4fb0787de22a3404c0b7e5524e48a27db3ab7d80f7c09.jpg]]
+
+*PSB 判据与漏电流：无掺杂架构的系统表征。图源：Borselli et al. (2011)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 与[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]：PSB 既是 $S$–$T_0$ 比特的读出机制（ 2.2.2 节），也是其初始化机制——在 (0,2) 区等系统弛豫到基态即得 $S(0,2)$。$S$–$T_0$ 比特的所有操控可以视为 PSB 窗口附近的精细化操作。
