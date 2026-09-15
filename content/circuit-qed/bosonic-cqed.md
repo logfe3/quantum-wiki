@@ -72,6 +72,38 @@ $$
 
 *制备保真度：共振方案的速度-退相干权衡。图源：arXiv:2310.03854，Fig. 2。*
 
+### 门族、误差预算与 Syndrome 检测的三维扩展
+
+**量子晶格门**：玻色码的普适门集新构造——单一门元件（量子晶格门）的重复组合即可实现普适量子计算，门元件的统一性大幅简化门标定。
+
+![[assets/figures/bosonic-cqed/4eed77f0328564491e51476ac30bb098b48169ae601d592c1bf45307e80ee212.jpg]]
+
+*量子晶格门：单一门元件的普适门集——玻色码门标定的极简路线。图源：arXiv:2410.17069，Fig. 1。*
+
+![[assets/figures/bosonic-cqed/625c15a18c11502abd38c763b29e54498b9712e069b67f2bdd08de118b56359e.jpg]]
+
+*门集的普适性验证：任意门的晶格门分解。图源：arXiv:2410.17069，Fig. 2。*
+
+**随机电报噪声下的性能**：双稳涨落子（RTN）对旋转对称玻色码的影响——单/多涨落子的退相干效应在连续变量码空间的完整分析，把误差预算从光子损失扩展到 RTN。
+
+![[assets/figures/bosonic-cqed/f8f2593e8ed8d10e9e2acee413e7c4c415b47394729851668cf707aaf403c3b0.jpg]]
+
+*RTN 对玻色码的影响：单/多涨落子的退相干——误差预算从光子损失扩展。图源：arXiv:2505.08670，Fig. 1。*
+
+![[assets/figures/bosonic-cqed/c7cfd484a5b18ce6b73e640a2ed068a803e28072e702bf3609daf4dd44b5aee5.jpg]]
+
+*旋转码的 RTN 错误率：码参数-涨落子强度的错误率地图。图源：arXiv:2505.08670，Fig. 2。*
+
+**相位估计的 Syndrome 检测**：自适应量子相位估计+单辅助比特——适用于一大类 Syndrome 由对称性描述的玻色码，通用错误检测框架。
+
+![[assets/figures/bosonic-cqed/206079b18cc9079f41b11c392d9c658d3b43dd9c06ae4382acf98d5c8828ec9b.jpg]]
+
+*相位估计错误检测：自适应算法+单辅助比特——通用 Syndrome 提取框架。图源：arXiv:2507.03999，Fig. 1。*
+
+![[assets/figures/bosonic-cqed/097f7c29ee96f317e2b4102699fa5743310ed1dc1614afabc01962fbb92f7b31.jpg]]
+
+*检测性能：多类玻色码上的错误检测率。图源：arXiv:2507.03999，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[circuit-qed/circuit-quantum-electrodynamics|电路 QED]]是玻色编码的硬件基础：腔-比特耦合（JC 模型）提供编码态的操控接口，[[readout-measurement/dispersive-readout|色散读出]]的宇称测量是猫码 Syndrome 提取的标准手段。
