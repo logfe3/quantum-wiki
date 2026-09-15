@@ -1,5 +1,5 @@
 {
-  "source_digest": "4f0fd14a5145ffeff9c1f5689676b33208e5e69f18a62df99ba21dfa1c532430",
+  "source_digest": "a8a3d0c6cfc707a065de1ceec638e913d919a7ecde40c7f879e4a397f4f9dccf",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -26,7 +26,7 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "837d5232a725b95f0ec67f0e21b53f76a4d85c0f71f026584a29017185421409",
+      "sha256": "12023467e9bfb4a9f7f3df61ce691d870de95646b517181c495d81fc0e5a20a6",
       "split": "dev"
     },
     {
@@ -110,14 +110,14 @@
       "path": "content/circuit-qed/strong-coupling.md",
       "title": "强耦合判据",
       "topic": "circuit-qed",
-      "sha256": "c50529437f6f3b69b4a22f28af7e1adb5baa3f056a98cd23e1eeeb16fb47af9e",
+      "sha256": "455673ff840f13cc13b1f6b0fb9ec1558efdc24e162bcaf6bf420a886bb2bfe9",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/superinductance.md",
       "title": "超电感与约瑟夫森结阵列",
       "topic": "circuit-qed",
-      "sha256": "2f133b53149cb33ab9e2c5b1d3b2edd0e1218e7a32a6827a623c6db4d0e1b6d3",
+      "sha256": "35dbdc8b1f27c371efdb798a97e7cfbd06fb0a043948f21ddb18ea4d3ca86e0e",
       "split": "train"
     },
     {
