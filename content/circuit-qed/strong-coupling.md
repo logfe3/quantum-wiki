@@ -214,6 +214,18 @@ $$
 
 *深强耦合区的模拟结果：能谱与动力学特征——与直接实现的实验数据交叉验证。图源：arXiv:2402.06958，Fig. 2。*
 
+### 超强耦合区的系统物理
+
+词条的耦合阶梯表已列超强耦合行；这一区的**系统物理**值得展开：JC 模型失效后回到量子 Rabi 模型——**A² 项**（规范不变性要求的双线性项）不可忽略，它确保能谱有下界；**真空不动点**（基态光子数为有限值——真空本身被杂化）；虚光子云的可探测签名。综述（Kockum 系）把这一区的实验与理论系统对接。
+
+![[assets/figures/strong-coupling/83af7d4dc8198cf4f43607eade6694150f5e9cef0f33c6af73a12004ab6b03d7.jpg]]
+
+*超强耦合区 cQED 的物理图景：Rabi 模型、A² 项、真空不动点——JC 失效后的完整框架。图源：Kockum et al. 综述 (2014)，Fig. 1。*
+
+![[assets/figures/strong-coupling/e025a1b7f76c86cee5cc42d327fb11d4305f9afc8e82419e7d61f3fee982933d.jpg]]
+
+*超强耦合的实验版图：各平台的耦合强度对比——从微波到光学。图源：Kockum et al. 综述 (2014)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 深强耦合的原始实验全文见 [[references/wallraff-2004|Wallraff 2004 同批 cQED 奠基文献]]与本词条引用的 Yoshihara et al. (2017)。
