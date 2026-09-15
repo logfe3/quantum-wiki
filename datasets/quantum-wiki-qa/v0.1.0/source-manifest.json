@@ -1,5 +1,5 @@
 {
-  "source_digest": "bfd86edb6809d4904e8ea8ba9cf4f17afc472e53b9f1dbb93ac300a367aeab76",
+  "source_digest": "6ffbd64de6e21d5a3ae2dabdf032dd4f99418b472eb9d31e0b1507c9c7611b7f",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -166,7 +166,7 @@
       "path": "content/fundamentals/double-quantum-dot.md",
       "title": "双量子点",
       "topic": "fundamentals",
-      "sha256": "80242714280105e8dcf6252ec88cc9ab78e94c0dcba2b3fd2ed16084a658b047",
+      "sha256": "92bd177ff7c8f72c0007a79c15a593ef3b9b0079708b2f385ce0fb2f485386b9",
       "split": "train"
     },
     {
@@ -180,7 +180,7 @@
       "path": "content/fundamentals/hyperfine-interaction.md",
       "title": "超精细相互作用",
       "topic": "fundamentals",
-      "sha256": "c8daabc95784d72402407ce54419f66adc793d62fd4343d3096d08422cf2c722",
+      "sha256": "9f91aa6c5616ac7c6f514ea99e1fab35b6c40b18ad375c7decae2a401940e77d",
       "split": "train"
     },
     {
@@ -201,7 +201,7 @@
       "path": "content/fundamentals/spin-orbit-coupling.md",
       "title": "自旋轨道耦合",
       "topic": "fundamentals",
-      "sha256": "059047c6e180963fccea19bcf530c73088387acbd67ba44ed60e4ba993964c7e",
+      "sha256": "e518cea9b0b4adfd78ae760eb0998e6e041ab4e3ca6dc748db75a9b554777bd0",
       "split": "train"
     },
     {
@@ -215,14 +215,14 @@
       "path": "content/fundamentals/two-dimensional-carrier-gas.md",
       "title": "二维载流子气",
       "topic": "fundamentals",
-      "sha256": "80338687f257acce246b5c8be04a39df78b17e344c4d0bb2b45ab2ad13a6ae5b",
+      "sha256": "69098723adf0807f5073b741390f538813a0b02ba6115daac929c0ca9d9888ba",
       "split": "test"
     },
     {
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "05d1d229d7d9d8697a7864478388aac8f738044074fb5a83bfa1e56ad8f6261a",
+      "sha256": "8302390a736c7dc3a4161b35b39bf3f7ddf79f9226774621e62e290b40991ef7",
       "split": "dev"
     },
     {
@@ -233,11 +233,18 @@
       "split": "test"
     },
     {
+      "path": "content/materials-devices/bilayer-graphene-quantum-dot.md",
+      "title": "双层石墨烯量子点",
+      "topic": "materials-devices",
+      "sha256": "908b367250fe293577264631241e6481869839126718bcfd49109decf2b2e5b2",
+      "split": "dev"
+    },
+    {
       "path": "content/materials-devices/charge-noise.md",
       "title": "电荷噪声",
       "topic": "materials-devices",
       "sha256": "314940b5d2a28e4c097ed22ccc3448127a94f5a42e4b4d3e5bcb6e9b1624aacd",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/materials-devices/gaas-algaas.md",
@@ -271,14 +278,14 @@
       "path": "content/materials-devices/silicon-mos.md",
       "title": "Si-MOS 量子点",
       "topic": "materials-devices",
-      "sha256": "d4bae1bd56c82e9035e5922b9fee9cd2646a2f0e1ffaa5b7498f485139243654",
+      "sha256": "2aa4d8fe961f97f93de1caf1af2b7fb19f65551e5ea714a63a30a24abdb55f3e",
       "split": "train"
     },
     {
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "395c2c67d184da24943001283cc5e833f8ffa677d161cb67ce10846c602164e4",
+      "sha256": "2d656f35ee7c564a8c9ce294ceb084b51123525de74978802b968e17ae8b3348",
       "split": "train"
     },
     {
@@ -313,8 +320,15 @@
       "path": "content/qubit-control/electric-dipole-spin-resonance.md",
       "title": "电偶极自旋共振",
       "topic": "qubit-control",
-      "sha256": "d0c3db34dec7e9883029a9bf8cf5fa40b07b8b59561ec59f0de6e8a8e7da1fec",
+      "sha256": "9fc90c14462516e0a768531fd1c65f60579d94c9829391d6f9924c0f9bd2a1e3",
       "split": "test"
+    },
+    {
+      "path": "content/qubit-control/electric-quadrupole-spin-resonance.md",
+      "title": "电四极自旋共振",
+      "topic": "qubit-control",
+      "sha256": "9247c423a9f43ecfb9eff5942f09f46520e3da590ab30398eba0c86e71dbbcb7",
+      "split": "train"
     },
     {
       "path": "content/qubit-control/exchange-gates.md",
@@ -404,7 +418,7 @@
       "path": "content/qubit-control/single-qubit-gate.md",
       "title": "单比特门",
       "topic": "qubit-control",
-      "sha256": "1dbb9a3e5789832fec1e3c8df68bb8ddd427653dff85cc69c20156def5719705",
+      "sha256": "352951a682acb08b14ab052e66975856047cf980ae6e81279c5be720e9a5c1ac",
       "split": "train"
     },
     {
@@ -467,7 +481,7 @@
       "path": "content/readout-measurement/gate-based-sensing.md",
       "title": "栅极射频传感",
       "topic": "readout-measurement",
-      "sha256": "de157ee9dd0fc964e02b70dd6dd76749c218c4cabe6007f7fbfb85745d0ea8b8",
+      "sha256": "473713ea6c1f25c94ff36f634bc6b25b1c3f396a055d800535f1e2cfad5d82e8",
       "split": "test"
     },
     {
@@ -485,10 +499,17 @@
       "split": "train"
     },
     {
+      "path": "content/readout-measurement/qh-edge-channel-charge-sensor.md",
+      "title": "量子霍尔边缘通道电荷传感器",
+      "topic": "readout-measurement",
+      "sha256": "45c8c8516676bfb0fc586a29014e5aa7d6554d66ee3197b8307cf7ed33d3eb6d",
+      "split": "train"
+    },
+    {
       "path": "content/readout-measurement/qpc-charge-sensor.md",
       "title": "QPC 电荷传感器",
       "topic": "readout-measurement",
-      "sha256": "de6ed39993afd1c514847df0ecdd37c2078bf12b4ca14505af88cce5a0365e1b",
+      "sha256": "da1917684450a76ed1a6425433d8f1e6688d41ab6202bbb0a1102dee5bac2e1c",
       "split": "train"
     },
     {
@@ -509,7 +530,7 @@
       "path": "content/readout-measurement/single-electron-transistor.md",
       "title": "单电子晶体管",
       "topic": "readout-measurement",
-      "sha256": "bb3eb3b3c43148d5e69b68d5e3bd445f67aeaafd7d005baf1c468a55316954ff",
+      "sha256": "addb9434c861fbfcbf3b17766f2aa9666101fd708471d7d60f9a573305652b5a",
       "split": "train"
     },
     {
@@ -530,21 +551,21 @@
       "path": "content/scaling-automation/automatic-tuning.md",
       "title": "自动调控",
       "topic": "scaling-automation",
-      "sha256": "e2db1c37432bdc6acc06be85b4c107f22cedefe83a6af5782e0c8a5ba38ee5e5",
+      "sha256": "f9817f5fb619953c7970ed54b74c7984fcfe4b9b4b093af6187685e567a6fe43",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/charge-state-recognition.md",
       "title": "电荷态识别",
       "topic": "scaling-automation",
-      "sha256": "fe4f45f588d0be95e74a6a33f10dc7e3b61309bd800f8cfd9cb091cd3c5b3e2a",
+      "sha256": "66959c117641bda73f87b8d43fc75c9af18789deed371ee8853048d8b53c31f6",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/cross-capacitance-matrix.md",
       "title": "交叉电容矩阵",
       "topic": "scaling-automation",
-      "sha256": "081f47055638e0d861a24226f3df2af67ae9843067c42652b62204c002934d45",
+      "sha256": "0c1e30a3044ccbf856fd7a3b00723e1d34aa6647e709dd0db37c7b8dfc4aa58e",
       "split": "train"
     },
     {
@@ -586,7 +607,7 @@
       "path": "content/scaling-automation/quantum-dot-array.md",
       "title": "量子点阵列",
       "topic": "scaling-automation",
-      "sha256": "b5145bef804351158a2a93d52c7290357535a4fdfd8ebc7256dab861f9ee9c38",
+      "sha256": "ef5cf4b7329ce00098692ddb034ab48904419b7fc675f82d32040842ea1ceeaa",
       "split": "train"
     },
     {
@@ -614,7 +635,7 @@
       "path": "content/scaling-automation/virtual-gates.md",
       "title": "虚拟电极",
       "topic": "scaling-automation",
-      "sha256": "c2c10a3f5cbc65b6a5dfec3c130b4a6b9405cd55cef077ed153893b62e89b965",
+      "sha256": "3579c8fe7fb57e88f580c37f38646664ef7f4a0403dff6dc4ef299da0eec1ab1",
       "split": "train"
     },
     {
