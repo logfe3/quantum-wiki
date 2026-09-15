@@ -133,6 +133,7 @@ Purcell 滤波器的仿真验证不能只算 $S$ 参数： 的做法是在电磁
 ## 与其他概念的关系
 
 - Purcell 效应是[[readout-measurement/dispersive-readout|色散读出]]的固有代价：色散频移 $\chi$ 与腔线宽 $\kappa$ 同时决定读出速度与 Purcell 弛豫，滤波器解除了二者的绑定。
+- 多比特频分复用读出中，**每谐振器独立 Purcell 滤波**是抑制离共振驱动串扰的关键（Heinsoo et al. 2018：五比特 1.2 GHz 带宽复用、非目标比特退相干 <1%）——串扰由非目标比特的退相干率定量表征，见[[readout-measurement/readout-crosstalk|读出串扰]]词条。
 - 滤波器依托[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的缀饰态图像：被抑制的正是缀饰态中 $g/\Delta$ 比例的光子成分经腔的泄漏。
 - 与[[readout-measurement/parametric-amplifier|低噪声参量放大]]互补：前者允许更开放、更快的读出腔，后者减少达到目标信噪比所需的积分时间；两者结合才能把读出推向快速高保真极限。
 - 在频分复用多比特读取中，每腔独立的滤波器同时是抑制[[readout-measurement/readout-crosstalk|读取串扰]]的手段。
