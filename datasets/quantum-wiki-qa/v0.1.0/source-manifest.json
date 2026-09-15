@@ -1,5 +1,5 @@
 {
-  "source_digest": "7c7abac23429fd67cf1b5170cae7d03473a4405223ae284f0ec880e50a8e3b09",
+  "source_digest": "19b1fa6d8df1f5fecbdd73b971199cf1ca18a834048bcc0e0b0e9e5299c16728",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -96,7 +96,7 @@
       "path": "content/circuit-qed/spin-photon-coupling.md",
       "title": "自旋–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "99fdb1d61d7d1b237450458dfdace51f5c62fd88a3ec59f50f1b11eb87fa2b59",
+      "sha256": "de0599fbcfcae5b92dbd8b157127f6f1f1437f8557b773380fe304f705c46129",
       "split": "train"
     },
     {
@@ -222,7 +222,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "375ae82c6aadfbcca874973b74886842d9bc60fef48114b3534dc8f48f894fb1",
+      "sha256": "d5a0a214ec39669d4fce8dd34bcbe027ab2b3cf2cbbbaa81e5e194c01cd2ea1f",
       "split": "dev"
     },
     {
@@ -411,14 +411,14 @@
       "path": "content/qubit-control/single-spin-qubit.md",
       "title": "单自旋量子比特",
       "topic": "qubit-control",
-      "sha256": "2589f64fb5d46f08f4f4a0a89afe4b993f7250bc219a411d922808c483d32260",
+      "sha256": "f34964847ff91287923e44bd6564e7e3f01cf428826297e5839b4f342d5310e3",
       "split": "train"
     },
     {
       "path": "content/qubit-control/singlet-triplet-qubit.md",
       "title": "单态–三重态量子比特",
       "topic": "qubit-control",
-      "sha256": "0aab12018fbe2345d538012ae24bc3def370078a4bba7baecfb9a1e20b017806",
+      "sha256": "21e020f3cc1ff2c3b477af9b9bb9e6d522dba5d24ee16b4056c0a4fd8454df3c",
       "split": "train"
     },
     {
@@ -565,7 +565,7 @@
       "path": "content/scaling-automation/frequency-homogenisation.md",
       "title": "全局操控与频率均匀化",
       "topic": "scaling-automation",
-      "sha256": "d09212f4912d5309df659c4c52b4e33d04180150e85d187627998eecafaaef11",
+      "sha256": "1152767b71a89c411b0edb2c8cfe12ef70e85a0fb0bb677748431dd22e19ad28",
       "split": "train"
     },
     {
