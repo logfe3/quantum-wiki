@@ -174,6 +174,16 @@ $$
 
 *侧信道的量化与缓解：通道间泄漏的测量与滤波隔离——安全维度的串扰治理。图源：arXiv:2405.08962，Fig. 2。*
 
+**完全解耦+最大局域化的可调耦合器**是耦合器对策的第三条路线（对照泄漏 Reduction 与 ZZ-free 门）：耦合器参数的联合设计让关断态达到**完全解耦**（剩余耦合为零）且比特保持**最大局域化**（杂化最弱）——大规模阵列中多邻居耦合的门保真度与串扰同时受益。
+
+![[assets/figures/readout-crosstalk/6e72becedaefbb6504bc2621d230e9ddcaaa21e335f2f4cf4a06015b37605807.jpg]]
+
+*完全解耦耦合器：参数联合设计达到零剩余耦合+最大局域化。图源：arXiv:2306.17007，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/580377424f18bbc8c165ec5d0126c1f2b63c8b9a2cb2a9b99365c42e6ed30a7f.jpg]]
+
+*门保真度与串扰：大规模多邻居阵列的性能验证。图源：arXiv:2306.17007，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。
