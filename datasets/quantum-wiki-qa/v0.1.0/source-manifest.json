@@ -1,5 +1,5 @@
 {
-  "source_digest": "d120ab85183bcd1ca9e9c931c2f59f99df0e27720434b5cfc44cc4140cebd7ad",
+  "source_digest": "02bc2cf530794be612f1ec4d3a8f5db61421884f4795927ca6b2e7b7edc8bf98",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -187,7 +187,7 @@
       "path": "content/fundamentals/hyperfine-interaction.md",
       "title": "超精细相互作用",
       "topic": "fundamentals",
-      "sha256": "9f91aa6c5616ac7c6f514ea99e1fab35b6c40b18ad375c7decae2a401940e77d",
+      "sha256": "0cced35d827b41848d82fe667741f67ff7ef9a788fe9f758bedb27e2cc5f23ba",
       "split": "train"
     },
     {
@@ -229,7 +229,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "8302390a736c7dc3a4161b35b39bf3f7ddf79f9226774621e62e290b40991ef7",
+      "sha256": "e38ecb6caa77a0451377163b34fd4a1c7689ea02d12a740c3de69c28b7bdf05c",
       "split": "dev"
     },
     {
@@ -250,7 +250,7 @@
       "path": "content/materials-devices/charge-noise.md",
       "title": "电荷噪声",
       "topic": "materials-devices",
-      "sha256": "314940b5d2a28e4c097ed22ccc3448127a94f5a42e4b4d3e5bcb6e9b1624aacd",
+      "sha256": "0a61b15673e0a7a4fcd6ce2e00e17b3067414a5493280a0c71e7929eae2ddd6b",
       "split": "train"
     },
     {
@@ -271,14 +271,21 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "25b0fdb3a74e3d338385f6d5505a865b0a820dcbaa9e5bc0b2262994c78e3f88",
+      "sha256": "1fdda035de958f826707d757cfdb2a8677e6e2bc1644d21599363dde4d1d0921",
+      "split": "train"
+    },
+    {
+      "path": "content/materials-devices/laser-annealing-contacts.md",
+      "title": "激光退火欧姆接触",
+      "topic": "materials-devices",
+      "sha256": "58ee0184679b9db178260469b73483bf28ff7aa8caaf52086935c3837df2780a",
       "split": "train"
     },
     {
       "path": "content/materials-devices/micromagnet.md",
       "title": "微磁体",
       "topic": "materials-devices",
-      "sha256": "1d8ac3464a4e870dea810a8d909269517f46d5ea9e2ec0dc9ad19d4c80e9a036",
+      "sha256": "65991bf10b9029ebc706d5ae29bf9ad4ed1610002b77c3ee11bb421b84855d2f",
       "split": "train"
     },
     {
@@ -292,7 +299,7 @@
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "2d656f35ee7c564a8c9ce294ceb084b51123525de74978802b968e17ae8b3348",
+      "sha256": "e708ee93d23291609a05094e2d33e0465fc74eb662199643b7b1bac84d452a51",
       "split": "train"
     },
     {
@@ -306,7 +313,7 @@
       "path": "content/qubit-control/charge-qubit.md",
       "title": "电荷量子比特",
       "topic": "qubit-control",
-      "sha256": "9ad8e94dfec7699828f6cc40dabf850991a34f29a674487b25c81f7e002a2f12",
+      "sha256": "4555282d3ddd4c6eb98806a7c4262928bf7b52beb0f36194ff0a9245931f11ce",
       "split": "train"
     },
     {
@@ -383,7 +390,7 @@
       "path": "content/qubit-control/lzsm-interference.md",
       "title": "LZSM 干涉",
       "topic": "qubit-control",
-      "sha256": "c2c90ff22a193222558ad122386cc0b542bdf60c88b9ca1bcfeb13501996d979",
+      "sha256": "77913c0a1b7e7eaf9dd8f30bfad4b8c9d56312d01033e0f28123091fdfecc5e1",
       "split": "train"
     },
     {
@@ -425,7 +432,7 @@
       "path": "content/qubit-control/single-qubit-gate.md",
       "title": "单比特门",
       "topic": "qubit-control",
-      "sha256": "352951a682acb08b14ab052e66975856047cf980ae6e81279c5be720e9a5c1ac",
+      "sha256": "a1b07f93acb3259cb8f3684183198f31cfedcc90bd6947433854ca50b7ff5b11",
       "split": "train"
     },
     {
@@ -446,7 +453,7 @@
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "fb8eaa4bfbfcbee31e40534b44a57b246cae680b3af47479eda56ff26035f0ce",
+      "sha256": "91052e579737febf914dcecff0af39374a2ebad60db8dd8b7fe6c372ec707582",
       "split": "dev"
     },
     {
@@ -607,7 +614,7 @@
       "path": "content/scaling-automation/frequency-homogenisation.md",
       "title": "全局操控与频率均匀化",
       "topic": "scaling-automation",
-      "sha256": "6c166acdf285b028b313392f7f51a378fad5eae2211d2f75dcabe3d3dee1ba8d",
+      "sha256": "acb882f2db2d8a99474c60a6c782115b161612c034c53722a77c76c5ad1c0682",
       "split": "train"
     },
     {
