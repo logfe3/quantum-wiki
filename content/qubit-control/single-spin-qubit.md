@@ -128,6 +128,16 @@ $d$ 为点间距、$E_{\mathrm{ac}}$ 为驱动电场强度；失谐增大时电�
 - **锗空穴（[[materials-devices/strained-germanium|应变锗]]）**：重空穴有效 $g$ 因子强各向异性且自旋轨道耦合强，无需微磁体即可全电驱动，Rabi 频率轻松超过 10 MHz；代价是同样的耦合把电荷噪声引入自旋通道，$T_2^*$ 较短。详见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]。
 - **GaAs（[[materials-devices/gaas-algaas|GaAs/AlGaAs]]）**：器件成熟、自旋阻塞读出窗口大，但约 $10^6$ 个核自旋的超精细噪声把 $T_2^*$ 压到约 10 ns，历史上更多用于确立自旋阻塞、交换振荡等基础物理（、论文）。
 
+**几何（holonomic）门**是门操作的另一路线：利用非绝热几何相位（Berry 相的非常规推广）实现普适量子门——门参数由循环路径的几何性质（而非动力学相位）决定，对路径变形的一类误差天然鲁棒。硅量子点单自旋的非绝热几何门演示了这条路线在实用平台的落地。
+
+![[assets/figures/single-spin-qubit/948125162a1dc14141cc597f857616e0650041c8533ce62214d37bcb3a6656cd.jpg]]
+
+*几何门的原理：非绝热循环路径的几何相位——门由路径几何决定，对变形误差鲁棒。图源：Ma et al. (2023)，Fig. 1。*
+
+![[assets/figures/single-spin-qubit/422743942956604beddb2e9a88b2bf284fa09709f39a3b780eed6d8af11a9d76.jpg]]
+
+*硅量子点的几何门演示：门保真度与鲁棒性验证——实用平台的非绝热几何门。图源：Ma et al. (2023)，Fig. 2。*
+
 ## 与其他概念的关系
 
 单自旋编码是半导体自旋比特家族的"单电子"基准：用两个电子的 $(1,1)$ 电荷区则得到[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]（以[[qubit-control/exchange-interaction|交换相互作用]]为 $z$ 轴），三个电子给出[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]与[[qubit-control/hybrid-qubit|杂化量子比特]]。两个相邻单自旋比特之间最直接的两比特门同样来自交换哈密顿量 $H=hJ\left(\mathbf{S}_1\cdot\mathbf{S}_2-\tfrac14\right)+hf_1S_{z1}+hf_2S_{z2}$：当 $J$ 远小于两点拉莫尔频率差 $|f_1-f_2|$ 时等效为受控相位（CZ 类），$J$ 较大时则趋于 $\sqrt{\mathrm{SWAP}}$ 类。操控接口方面，本词条与[[qubit-control/electric-dipole-spin-resonance|EDSR]]、[[materials-devices/micromagnet|微磁体]]互为支撑；读出侧依赖[[readout-measurement/single-shot-readout|单发读出]]与[[readout-measurement/rf-reflectometry|射频反射测量]]；退相干机制（超精细噪声与经磁场梯度进入的[[materials-devices/charge-noise|电荷噪声]]）则由[[qubit-control/dynamical-decoupling|动力学解耦]]专门处理。翻转模式所放大的自旋–电荷杂化，同时也是自旋–光子耦合（通往腔量子电动力学词条）的微观来源。
