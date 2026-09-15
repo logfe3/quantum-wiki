@@ -289,6 +289,8 @@ $$
 - 扩展层面：[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]是阵列可调性的前提，[[scaling-automation/two-dimensional-array|二维阵列]]是表面码纠错的物理载体。
 - 杂化层面：[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]把[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]推入[[circuit-qed/strong-coupling|强耦合]]区，为远程互连铺路。
 - 限制层面：[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是当前相干时间的主要瓶颈。
+- 编码层面：[[qubit-control/charge-qubit|电荷量子比特]]在非掺杂 Si/SiGe 四量子点上已实现双轴相干控制与 80 ps 条件 π 相位翻转（电容耦合 ≈18 GHz），是平台快门控动力学的实验基准。
+- 工艺层面：[[materials-devices/laser-annealing-contacts|激光退火欧姆接触]]用局部固相外延替代 700 °C 全局退火激活注入施主，保住界面锐度与 Ge 浓度剖面——热预算敏感的先进异质结的接触方案。
 
 
 ## 参考文献

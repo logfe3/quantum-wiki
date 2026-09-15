@@ -227,6 +227,7 @@ $$
 - [[circuit-qed/dispersive-readout|色散读出]] 与 [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]：用片上谐振腔探测谷态与谷能级。
 - [[materials-devices/charge-noise|电荷噪声]]：谷相位随电噪声起伏，会给 $E_\mathrm{VS}$ 引入额外低频涨落；这正是 所列"能谷劈裂及 SOC 效应的空间涨落"之一。
 - [[scaling-automation/spin-orbit-torque-control|SOT 操控]]：通过自旋轨道力矩改变杂散场方向，可在不破坏谷劈裂的前提下调节有效自旋–轨道耦合。
+- [[materials-devices/laser-annealing-contacts|激光退火欧姆接触]]：为保住单层精度 Ge 剖面与界面锐度（谷劈裂的设计资源）而生的接触工艺——把退火热预算从全局压到接触区，避免热扩散抹平谷劈裂工程。
 
 
 ## 参考文献

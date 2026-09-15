@@ -10,6 +10,9 @@ tags:
  - 材料与器件
  - 噪声
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m23aeb5ba6nswgtmjsjsm3by
+source_updated: 2026-09-09T17:26:25Z
 ---
 
 <div class="entry-lead">电荷噪声是量子点实验里最"会变形"的噪声：它既能移动电荷跃迁线，也能通过电荷混合、交换作用或自旋轨道耦合转化为比特相位噪声。</div>
@@ -67,6 +70,41 @@ $$
 $$
 
 拟合出的指数 $\beta$ 与谱指数满足 $\alpha=\beta-1$。这条关系把"波形长什么样"和"噪声谱多陡"直接联系起来，是仅凭比特实验就能读出噪声谱形的实用技巧。
+
+## Si/SiGe 的系统测量：温度与栅氧厚度依赖
+
+Connors 等人对重叠栅 Si/SiGe 量子点做了系统的噪声谱测量：在库仑峰两侧采集电流噪声功率谱，用幂律加洛伦兹项
+
+$$
+S_\varepsilon(f)=\frac{A}{f^{\beta}}+\frac{B}{f^2/f_0^2+1}
+$$
+
+拟合（$A$、$B$、$\beta$、$f_0$ 为拟合参数），在 1 Hz 处读出噪声幅值 $S_\varepsilon^{1/2}(1\,\mathrm{Hz})$ 与谱指数 $\gamma=-\partial\ln S_\varepsilon/\partial\ln f|_{1\,\mathrm{Hz}}$。三块器件的 Al₂O₃ 栅氧厚度分别为 0/15/46 nm，基温下的失谐噪声为 $0.84\pm0.04$、$0.93\pm0.18$、$1.77\pm0.09\ \mu\mathrm{eV}/\sqrt{\mathrm{Hz}}$——**噪声随栅氧厚度单调上升**，高温端尤其明显，因为更厚的氧化层把更多 TLS 缺陷放进栅–量子点电容的敏感区。
+
+温度扫描（50 mK–1 K，细至 2–10 mK 步进）给出更细的结构：平均而言噪声近似 $1/f$（$\gamma\approx1$）、幅值随温度近似线性增长；但**点间差异强烈**——单个量子点的 $S_\varepsilon(T)$ 与 $\gamma(T)$ 显著偏离平均行为，甚至同一量子点在输运峰两侧测得的温度依赖都不同。
+
+![[assets/figures/charge-noise/connors2019-fig2-noise-spectrum.jpg]]
+*噪声谱测量：库仑峰两侧的电流噪声功率谱密度经杠杆臂换算为失谐噪声谱 $S_\varepsilon(f)$，幂律 + 洛伦兹项拟合（式见正文）在 1 Hz 处读出噪声幅值与谱指数 γ。图源：Connors et al. (2019), Fig. 2。*
+
+![[assets/figures/charge-noise/connors2019-fig3-temperature-dependence.jpg]]
+*电荷噪声的温度依赖（50 mK–1 K）：三块不同栅氧厚度（0/15/46 nm）器件的平均 $S_\varepsilon(1\,\mathrm{Hz})$ 随温度上升，且噪声随栅氧厚度单调增大（高温端尤甚）；γ 的分布（色带为 ±1 标准差）围绕 1 但点间弥散显著。图源：Connors et al. (2019), Fig. 3。*
+
+**Dutta–Horn 模型**解释这种偏离：单个 TLS 的谱是洛伦兹型
+
+$$
+s_\varepsilon(f,T)=\frac{\tau_0 e^{E/k_BT}}{4\pi^2f^2\tau_0^2e^{2E/k_BT}+1}
+$$
+
+其中 $E$ 是激活能、$\tau_0$ 是特征尝试时间（切换时间 $\tau=\tau_0 e^{E/k_BT}$ 热激活）。频率远低于 $1/2\pi\tau$ 时白噪声且随温度指数下降，远高于时为 $f^{-2}$ 且随温度指数上升。总谱是所有 TLS 对激活能分布 $D(E)$ 的积分；McWhorter 的均匀分布给出严格 $1/f$ 与线性温度依赖，而 Dutta–Horn 允许 $D(E)$ 非均匀：
+
+$$
+S_\varepsilon(f,T)\propto D(\tilde{E})\,k_BT,\qquad \tilde{E}=-k_BT\ln(2\pi f\tau_0)
+$$
+
+它同时预言 $\gamma\neq1$ 与非线性温度依赖互为因果——观测到其中一个即说明 $D(E)$ 非常数。Si/SiGe 数据对两者都观测到了，且 D-H 模型用 $\gamma(T)$ 反推的 $S_\varepsilon(T)$ 与实测吻合良好。结论：每个量子点感受到**自己的 TLS 系综**（激活能分布各不相同、非均匀），点间差异由此而来——电荷噪声至少部分来自半导体表面附近非均匀分布的二能级系统。
+
+![[assets/figures/charge-noise/connors2019-fig4-dutta-horn.jpg]]
+*单点偏离与 Dutta–Horn 拟合：单个量子点的 $S_\varepsilon(1\,\mathrm{Hz})$ 温度依赖（上排，同一量子点在输运峰左/右侧不同）显著非线性，γ(T)（下排）偏离 1；黑线为 D-H 模型用 γ(T) 数据反推的 $S_\varepsilon$ 与用 $S_\varepsilon$ 反推的 γ——非均匀 TLS 分布同时解释两种偏离。图源：Connors et al. (2019), Fig. 4。*
 
 ## 噪声如何进入比特：三类耦合通道
 
@@ -260,6 +298,8 @@ $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。
 | Si-MOS 微磁体器件 $T_2^{*}$ / $T_2^{\mathrm{echo}}$ | $624\ \mathrm{ns}$ / $60.2\ \mu\mathrm{s}$ | 楚宁 2025 |
 | 电流噪声积分频段 | $1$–$9\ \mathrm{Hz}$（浅刻蚀）；$5$–$45\ \mathrm{Hz}$（非掺杂） | |
 | 温度依赖 | $250\ \mathrm{mK}\to1\ \mathrm{K}$，峰顶电流涨落上升约 $20\%$ | |
+| Si/SiGe 失谐噪声（基温，1 Hz） | 0.84 / 0.93 / 1.77 µeV/√Hz（栅氧 0 / 15 / 46 nm Al₂O₃） | Connors 2019 |
+| Si/SiGe 噪声温度依赖 | 平均近似线性、随栅氧厚度单调上升（50 mK–1 K） | Connors 2019 |
 
 ## 实验测量方法
 
@@ -317,4 +357,5 @@ $S_{BG}$ 为系统噪声本底。
 ## 参考文献
 
 - 电荷噪声对门保真度的影响与对策：[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]、[[references/ge-sweetspot-2024|Hendrickx et al., Nat. Mater. 23, 920 (2024)]]。
+- Connors, E. J., Nelson, J., Qiao, H., Edge, L. F., Nichol, J. M. Low-frequency charge noise in Si/SiGe quantum dots. *Physical Review B* 100, 165305 (2019). DOI: 10.1103/PhysRevB.100.165305；arXiv:1907.07549（QAtlas 缓存：1907.07549）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

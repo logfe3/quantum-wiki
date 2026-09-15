@@ -266,4 +266,5 @@ $$
 - 在[[qubit-control/charge-qubit|电荷量子比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/single-spin-qubit|单自旋量子比特]]中分别对应失谐反交叉、$S$–$T_+$ 反交叉与自旋翻转避免交叉的扫越操控。
 - 强微波驱动下与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]共享同一实验条件；周期驱动情形的系统化处理见[[circuit-qed/floquet-dynamics|Floquet 动力学]]；与[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]结合可由[[readout-measurement/dispersive-readout|色散读出]]直接成相图（见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]）。
 - 条纹对比度受[[materials-devices/charge-noise|电荷噪声]]限制；可见度与 LZ 概率的对应关系使其成为系统参数谱学探针。
+- 电荷比特的 LZSM 干涉还可以被"条件化"：Si/SiGe 四量子点中相邻双点的单电子转移使被控双点的 LZS 频率跳变 7–10 GHz，实现 80 ps 条件 π 相位翻转（见[[qubit-control/charge-qubit|电荷量子比特]]词条的条件动力学实验基准）。
 - LZ 跃迁概率与 KZ 机制中拓扑缺陷密度的对应，使 LZSM 干涉成为非平衡相变量子模拟的可控平台（见论文第 6 章）。

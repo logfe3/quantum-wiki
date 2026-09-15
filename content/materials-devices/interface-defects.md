@@ -342,7 +342,7 @@ flowchart LR
 
 ## 与其他概念的关系
 
-- [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状。
+- [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状——Si/SiGe 量子点的系统测量进一步表明各点感受到激活能分布不同的 TLS 系综，平均 $1/f$ 行为之下藏着显著的点间差异（Dutta–Horn 图像）。
 - [[materials-devices/strained-germanium|应变锗]]：应变锗量子阱对界面态密度尤其敏感，因为 Ge/SiO<sub>x</sub> 界面的天然氧化物溶于水，使得氧化层质量差、$D_\text{it}$ 高。钝化与界面处理是该平台的核心工艺问题。
 - [[circuit-qed/microwave-resonator|谐振腔]]与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：界面态作为 TLF 贡献介电损耗，降低 $Q_i$；高阻抗谐振腔的 $E_\text{rms}$ 更高，TLF 参与度也更强，对界面处理提出更严格的要求。
 - [[circuit-qed/jaynes-cummings-model|Jaynes-Cummings 模型]]：单个 TLF 与腔光子的耦合使用与量子比特–腔耦合相同的哈密顿量形式，因此可以用同一套强耦合判据 $g\gg\gamma,\kappa$ 来描述 TLS 对腔的影响。

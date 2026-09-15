@@ -9,6 +9,9 @@ tags:
  - 量子比特操控
  - 电荷
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m237473wvnxd2t2aefj5gm4v
+source_updated: 2026-09-09T17:46:10Z
 ---
 
 <div class="entry-lead">电荷量子比特把"电子在左点还是右点"编码成二能级。它的电偶极矩大、门操作快、易与微波腔耦合，但也因此对电场与电荷噪声敏感。</div>
@@ -163,6 +166,9 @@ $$
 | 腔耗散 $\kappa/2\pi$ | $2$–$8$ MHz（高阻抗腔） | $6.23$ GHz、$\kappa/2\pi\approx 2.2$ MHz |
 | 工作温度 | $\le 100$ mK（电子温度） | $T_e=80$ mK |
 | 工作失谐 | $|\varepsilon|$ 在 $0$ 至 $\pm 10t_c$ 范围扫描 | 由栅压控制 |
+| Si/SiGe 四量子点 Larmor/Ramsey | 约 10 GHz（$T_2^*\approx150$ ps）/ 56 GHz（$T_2^*\sim51$ ps） | Ward 2016 |
+| Si/SiGe 双 DQD 电容耦合 $\Delta\varepsilon_R$ | 约 75 µeV ≈ 18.3 GHz；条件 π 翻转约 80 ps | Ward 2016 |
+| Si/SiGe 杠杆臂 $\alpha$ | 约 135 µeV/mV（LZS 频率斜率） | Ward 2016 |
 
 ## 实验特征
 
@@ -207,6 +213,30 @@ $$
 
 更长远地，可以在两个电荷比特之间夹一个共享的高阻抗腔，由[[circuit-qed/cavity-mediated-coupling|腔光子介导]]实现长程耦合—— 第 1 章 1.5 节综述了相关进展。
 
+### Si/SiGe 四量子点：双轴控制与条件动力学的实验基准
+
+电荷比特在硅平台上的相干操控基准由 Ward 等人在非掺杂 Si/SiGe 线性四量子点上确立（右双点 RDD 作被控比特、左双点 LDD 作条件比特，两侧量子点传感器读出）。**双轴控制**用非绝热失谐脉冲（AWG 上升时间 40 ps）实现：把失谐突然拉到 $\varepsilon_R=0$，此处哈密顿量 $H=\Delta_R\sigma_x$（$\Delta_R$ 为隧穿耦合），态以 Larmor 频率 $2\Delta_R/h$ 演化——X 轴旋转；Ramsey 序列（两个 $X_{3\pi/2}$ 脉冲夹自由演化 $t_e$）则以 $E_{01,R}/h$ 绕 Z 轴进动，$E_{01,R}=\sqrt{\varepsilon_R^2+(2\Delta_R)^2}$。实测 Larmor 振荡约 10 GHz、$T_2^*\approx150$ ps；Ramsey 条纹 56 GHz、$T_2^*\sim51$ ps；LZS 干涉频率对栅压的斜率给出杠杆臂 $\alpha\approx32.5\ \mathrm{GHz/mV}\approx135\ \mu\mathrm{eV/mV}$。
+
+**电容耦合的实测标定**直接扫两个失谐量：LDD 中单电子从左点移到右点时，RDD 极化线整体平移
+
+$$
+\Delta\varepsilon_R\approx75\ \mu\mathrm{eV}\approx18.3\ \mathrm{GHz}
+$$
+
+这就是两比特门可用的失谐调制深度。在该耦合下演示**电荷态条件 LZSM 干涉**：LDD 处于 $(0,1)_L$ 或 $(1,0)_L$ 基态时 RDD 的 LZS 振荡频率相差 7–10 GHz，条件 π 相位翻转最快仅需约 **80 ps**——两比特 CPHASE 门的物理相互作用由此定标（单双轴旋转也在 10 GHz 量级，快普适逻辑门在原理上可行）。此实验中 LDD 本身的相干控制尚未实现，完整两比特门留待重叠栅几何等后续改进。
+
+![[assets/figures/charge-qubit/ward2016-fig2-two-axis-control.jpg]]
+*非掺杂 Si/SiGe 电荷比特的双轴控制：非绝热脉冲拉到 ε=0 产生绕 X 轴的 Larmor 振荡（左，约 10 GHz、T2*≈150 ps），Ramsey 序列给出绕 Z 轴的相位进动（条纹频率 56 GHz）；右图为 LZS 干涉频率对栅压的线性拟合，斜率即杠杆臂 135 µeV/mV。图源：Ward et al. (2016), Fig. 2。*
+
+![[assets/figures/charge-qubit/ward2016-fig3b-capacitive-coupling.jpg]]
+*双 DQD 电容耦合的直接测量：同时扫描左右失谐得到耦合电荷稳定图，LDD 单电子左移/右移使 RDD 极化线（灰虚线）平移 Δε_R≈75 µeV≈18.3 GHz——两比特门可用的失谐调制深度。图源：Ward et al. (2016), Fig. 3(b)。*
+
+![[assets/figures/charge-qubit/ward2016-fig4bf-conditional-lzs.jpg]]
+*电荷态条件 LZSM 干涉：扫描 LDD 失谐（纵轴）使左双点 excess 电荷在 (0,1)L 与 (1,0)L 间切换，RDD 的 LZS 干射图样随之发生突然的频率跳变——单电子的运动直接写进右比特的相位。图源：Ward et al. (2016), Fig. 4(b–f)。*
+
+![[assets/figures/charge-qubit/ward2016-fig4g-lzs-frequency-shift.jpg]]
+*条件相位速率定标：(0,1)L（黑）与 (1,0)L（红）两种 LDD 基态下 RDD 的 LZS 干涉频率之差达 7–10 GHz，对应条件 π 相位翻转约 80 ps——条件 CPHASE 门的物理上限。图源：Ward et al. (2016), Fig. 4(g)。*
+
 ## 与其他概念的关系
 
 电荷量子比特是[[fundamentals/double-quantum-dot|双量子点]]所有编码方案中最直接的一种。它的物理基础由[[fundamentals/tunnel-coupling|隧穿耦合]]、[[fundamentals/electrochemical-potential|电化学势]]（失谐 $\varepsilon$）和[[fundamentals/charging-energy|充电能]]共同支撑；[[fundamentals/charge-stability-diagram|电荷稳定图]]的蜂窝结构给出了它的"工作地图"，[[fundamentals/coulomb-blockade|库仑阻塞]]则在蜂窝图远离反交叉的格子里决定了电荷态的稳定性。
@@ -226,4 +256,5 @@ $$
 ## 参考文献
 
 - 电荷比特作为量子点最早可全电控编码的框架：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]；现代综述见 [[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+- Ward, D. R. et al. State-conditional coherent charge qubit oscillations in a Si/SiGe quadruple quantum dot. *npj Quantum Information* 2, 16032 (2016). DOI: 10.1038/npjqi.2016.32；arXiv:1604.07956（QAtlas 缓存：1604.07956）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
