@@ -189,7 +189,7 @@ $$
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]是电荷态识别的输入图像；[[fundamentals/constant-interaction-model|常相互作用模型]]给出隧穿线、反交叉点和三相点间距的解析描述，是把像素特征翻译为物理参数的共同语言；
 - [[fundamentals/electrochemical-potential|电化学势]]的简并条件定义每一条边界，[电荷隧穿线]的几何直接反映 [[fundamentals/charging-energy|充电能]] 与点间[[fundamentals/tunnel-coupling|隧穿耦合]]的大小；
 - [[fundamentals/double-quantum-dot|双量子点]]是识别算法最常用的训练场景，但[[scaling-automation/quantum-dot-array|阵列]]扩展使得识别必须从二维图升级到三维乃至更高维的相空间切片；
-- [[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]与[[scaling-automation/virtual-gates|虚拟电极]]在识别下游的自动调控中扮演"正交化控制轴"的角色，使识别结果能直接转化为可控的电压更新；
+- [[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]与[[scaling-automation/virtual-gates|虚拟电极]]在识别下游的自动调控中扮演"正交化控制轴"的角色，使识别结果能直接转化为可控的电压更新；反过来，虚拟电极快速提取（见该词条"快速提取"一节）利用跃迁线上的正倾斜梯度特征在线定位跃迁线，是识别任务在"稀疏采样"约束下的变体；
 - [[scaling-automation/automatic-tuning|自动调控]]是电荷态识别的下游用户：识别给出"当前状态 + 耦合判断"，自动调控给出"下一组栅压"；
 - 与[[readout-measurement/readout-crosstalk|多比特读出分类]]不同：这里识别的是器件工作区与电荷拓扑，而读出分类在已调好的工作点上判定单次量子态，时间尺度与误差模型均不同；
 - [[materials-devices/charge-noise|电荷噪声]]引起的图像漂移和跳变是识别系统的最大干扰源之一，必须借助[[qubit-control/dynamical-decoupling|动态解耦]]、低通滤波或多帧平均在算法侧抑制。

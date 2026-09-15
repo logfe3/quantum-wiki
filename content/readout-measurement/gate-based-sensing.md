@@ -11,6 +11,9 @@ tags:
  - 读出与测量
  - 射频
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m23atf35r96mggecrz8hgsb0
+source_updated: 2026-09-09T16:58:37Z
 ---
 
 <div class="entry-lead">栅极射频传感让同一根电极兼做"控制线"和"传感端口"：电荷重排改变栅极看到的复导纳，反射信号随之变化。</div>
@@ -208,6 +211,38 @@ $$
 
 <!-- FIGURE: 劈裂栅极结构示意图：累积栅 AL 接射频，引线栅 LL 在测量时关断，C_g 由泄漏通道变为耦合通道 -->
 
+### 积累型栅传感器的硅实证（Rossi 2017）
+
+上文"增强型器件射频泄漏"的难题在硅中的第一个系统实证与化解来自 Rossi 等人 2017 年的工作：他们在硅 MOS 器件上用**积累型栅传感器**（accumulation-mode gate sensor）实现了量子点的色散读出。器件中探测栅 GD 嵌入由贴片电感 $L=220\ \mathrm{nH}$ 与寄生电容 $C_p=979\ \mathrm{fF}$ 组成的储能电路，谐振频率 $f_R=343\ \mathrm{MHz}$、品质因子 $Q=30$，反射测量在 $340\ \mathrm{MHz}$ 用零拍探测完成（低温与室温两级放大），实验在约 $45\ \mathrm{mK}$ 的无液氦稀释制冷机中进行。
+
+![[assets/figures/gate-based-sensing/rossi2017-fig1-device.jpg]]
+
+*积累型栅传感器器件与测量链路：(a) 器件 SEM 图与测量设置，蓝色为嵌入谐振电路的栅电极，红圈标出量子点形成区域；(b)(c) 分别为探测栅工作在阈值电压以下与以上时的示意——阈值以下只有孤立电子代表量子点，阈值以上栅下形成积累层；(d) 实验所用谐振器的特征频率响应。图源：Rossi et al., APL (2017)，Fig. 1。*
+
+该工作给出的相位响应公式是栅极射频传感定量分析的标准出发点：
+
+$$
+\Delta\phi \approx -\pi Q\,\frac{\Delta C}{C_p},
+$$
+
+其中 $\Delta\phi$ 是反射信号相移、$Q$ 是谐振器品质因子、$\Delta C$ 是系统总电容变化、$C_p$ 是寄生电容。电子隧穿产生的额外电容贡献即**隧穿电容**
+
+$$
+C_t = \alpha\,\frac{\partial\langle ne\rangle}{\partial V_{\mathrm{GD}}},
+$$
+
+其中 $\alpha$ 是探测栅的杠杆臂（该器件 $\approx 0.1\ \mathrm{eV/V}$）、$\langle ne\rangle$ 是量子点平均电荷。杠杆臂越大读出灵敏度越高：FinFET 器件凭借 $1.3\ \mathrm{nm}$ 超薄高介电常数栅介质把 $\alpha$ 做到 $0.9\ \mathrm{eV/V}$，灵敏度高达 $37\ \mu e/\sqrt{\mathrm{Hz}}$。这两个公式与本词条上文从复导纳出发的推导（量子电容 $C_Q=e^2\beta\,\mathrm{Var}(N)$、隧穿电导）同源——$\partial\langle ne\rangle/\partial V_{\mathrm{GD}}$ 正是电荷涨落 $\mathrm{Var}(N)$ 的另一种写法。
+
+![[assets/figures/gate-based-sensing/rossi2017-fig2-phase-response.jpg]]
+
+*硅量子点的色散电荷稳定图：(a) 相位响应随势垒栅 $V_{\mathrm{BL}}$（纵轴）与探测栅 $V_{\mathrm{GD}}$（横轴）的变化，标注了量子点电荷占据数；(b) 关断筛选栅（$V_{\mathrm{SG}}=0$）后同一区域只剩孤立量子点的蜂窝图；(c) 两种构型下源漏直流电流的对照，验证射频相位信号与直流输运给出一致的库仑峰位置。图源：Rossi et al., APL (2017)，Fig. 2。*
+
+器件设计上，该工作还给出把"泄漏通道"转化为"传感通道"的量化方法：直接测量 MOS 电容 $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的变化，选出既不把电子加热出量子点、又能产生可分辨 $\Delta C_{\mathrm{MOS}}$ 的射频驱动幅度（峰值射频幅度与有效 $\Delta C_{\mathrm{MOS}}$ 变化在图中分别以阴影标出），并把栅探测器等效为与谐振电路串联的电路元件参与匹配设计。栅极同时工作在阈值以下（读出孤立量子点）与以上（形成积累层做欧姆接触）两种模式的能力，正是[[materials-devices/silicon-mos|Si-MOS]]线性量子点阵列做栅极读出的工艺基础。
+
+![[assets/figures/gate-based-sensing/rossi2017-fig4-mos-capacitance.jpg]]
+
+*MOS 电容法设计射频工作点：(a) $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的测量（误差棒为测量分辨率），红色阴影为峰-峰射频幅度、蓝色阴影为参与信号的有效 $\Delta C_{\mathrm{MOS}}$，插图为栅探测器与谐振电路串联的等效电路；(b)(c) 线性积累型量子点阵列的顶视图与剖面图，展示耗尽栅在点栅下方的走线（宽 $w$、长 $L$）。图源：Rossi et al., APL (2017)，Fig. 4。*
+
 ## 可变电容扩展谐振频率
 
 由于栅极端口的 $C_p$ 强烈依赖样品几何， 在砷化镓栅极探测器上引入一个变容二极管 $C_\mathrm{Diode}$（varactor），用偏置电压 $V_\mathrm{Diode}$ 调节，使谐振频率
@@ -239,6 +274,9 @@ $$
 
 | 量 | 典型值 | 来源 |
 | --- | --- | --- |
+| 硅积累型栅传感器谐振参数 | $L=220\ \mathrm{nH}$、$C_p=979\ \mathrm{fF}$、$f_R=343\ \mathrm{MHz}$、$Q=30$（$340\ \mathrm{MHz}$ 零拍读出） | Rossi 2017 |
+| 杠杆臂 $\alpha$（栅传感器） | 硅 MOS 约 $0.1\ \mathrm{eV/V}$；FinFET（$1.3\ \mathrm{nm}$ 高 k 介质）$0.9\ \mathrm{eV/V}$ | Rossi 2017 |
+| 电荷灵敏度（FinFET 栅读出） | $37\ \mu e/\sqrt{\mathrm{Hz}}$ | Rossi 2017 |
 | 谐振频率 $f_R$ | GaAs $193.8\ \mathrm{MHz}$；石墨烯 $195.75\ \mathrm{MHz}$ | , 49 |
 | 贴片电感 $L$ | GaAs $820\ \mathrm{nH}$；石墨烯 $100\ \mathrm{nH}$；栅极探测 $680\ \mathrm{nH}$（加变容二极管） | , 46, 49 |
 | 片上寄生电容 $C_p$ | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$） | |

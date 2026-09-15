@@ -221,6 +221,7 @@ $$
 - [[fundamentals/semiconductor-quantum-dot|半导体量子点]]是 SOC 的载体；SOC 强度与平台材料、生长方向、量子点几何密切相关。
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]与[[qubit-control/hole-spin-qubit|空穴自旋比特]]都依赖 SOC 实现 EDSR；后者直接利用内禀 SOC，前者需借助合成 SOC（微磁体）。
 - [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]是 SOC 把电场翻译为自旋驱动的最直接应用，$f_{\text{Rabi}}\propto l_{\text{dot}}/l_{\text{SO}}$；同一通道也把[[materials-devices/charge-noise|电荷噪声]]反向注入自旋频率。
+- [[qubit-control/electric-quadrupole-spin-resonance|电四极自旋共振（EQSR）]]用的是 SOC 的**二阶**微扰通道（系数 $b\propto\alpha^2-\beta^2$）：在 $P_x$、$P_y$ 轨道能量差逼近塞曼能时，四极驱动经二阶杂化放大 Rabi 频率——与 EDSR 的一阶通道（$a\propto\alpha+\beta$）互补。
 - [[qubit-control/pauli-spin-blockade|泡利自旋阻塞]]区域的漏电流是 SOC 强度的标准探针：通过拟合 $I(B)$ 谷–双峰结构提取 $t_{\text{SO}}$。
 - [[scaling-automation/flopping-mode-qubit|翻转模式自旋比特]]在双量子点零失谐处把电偶极矩放大，依赖 SOC 沟通自旋与电荷。
 - [[materials-devices/micromagnet|微磁体]]提供合成 SOC；[[materials-devices/strained-germanium|应变锗]]与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]提供强本征 SOC。

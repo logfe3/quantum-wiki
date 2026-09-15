@@ -189,7 +189,7 @@ $$
 ## 与其他概念的关系
 
 - [[fundamentals/constant-interaction-model|常相互作用模型]]给出"电化学势对栅压为线性"的微观根据；$\mathbf T$ 就是这条线性依赖的矩阵化表达。Hubbard 模型参数 $U_i$、$U_{ij}$ 也用 CI 模型从蜂窝图标定，串扰矩阵则是同一网络在"控制侧"的对应物；
-- [[scaling-automation/virtual-gates|虚拟电极]]就是 $\mathbf T^{-1}$ 的行向量：给定矩阵，虚拟电极立即写出来；矩阵条件数过大时控制轴近线性相关，反演会放大噪声；
+- [[scaling-automation/virtual-gates|虚拟电极]]就是 $\mathbf T^{-1}$ 的行向量：给定矩阵，虚拟电极立即写出来；矩阵条件数过大时控制轴近线性相关，反演会放大噪声。矩阵提取的测量成本可由锚点三角形+梯度特征的快速提取法压低约一个量级（真实器件上只探约 10% 数据点、提速 5.84×–19.34×，见该词条"快速提取"一节）；
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]上的隧穿线斜率直接给出 $\mathbf T$ 的非对角元；虚拟电极生效的判据也画在同一张图上（隧穿线变正交）；
 - [[fundamentals/electrochemical-potential|电化学势]]方向的线性来自 CI 模型；势垒方向由[[fundamentals/tunnel-coupling|隧穿耦合]]的指数律支配，是 $\mathbf T$ 唯一管不到的地方；
 - [[scaling-automation/quantum-dot-array|量子点阵列]]的调控难度按点数线性增长，串扰矩阵是该线性增长的"记账本"：它的维度随阵列规模线性上升，条件数随结构非对称性放大；

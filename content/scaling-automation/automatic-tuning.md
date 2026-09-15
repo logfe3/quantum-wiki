@@ -253,7 +253,7 @@ $n$ 量子点系统完整的电荷稳定图维数为 $n$，$n\ge 4$ 时无法用
 ## 与其他概念的关系
 
 - [[scaling-automation/charge-state-recognition|电荷态识别]]是自动调控的"感知层"：CNN 把图像转为"少电子/适中耦合"等标签，自动调控据此决定电压更新方向；二者差异在时间尺度——前者是一次性识别，后者是闭环迭代。
-- [[scaling-automation/virtual-gates|虚拟电极]]是自动调控在阵列上的关键代数接口：通过把[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]求逆，把高维强耦合控制空间对角化为可单独处理的低维坐标。
+- [[scaling-automation/virtual-gates|虚拟电极]]是自动调控在阵列上的关键代数接口：通过把[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]求逆，把高维强耦合控制空间对角化为可单独处理的低维坐标。其标定步骤（传统需为每对柱塞栅采整张电荷稳定图）可用锚点三角形+梯度特征的快速提取法加速（约 10% 采样、5.84×–19.34× 提速，见该词条"快速提取"一节）。
 - [[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]是虚拟电极的物理输入；条件数过大时反演会放大噪声，自动调控此时要么用正则化伪逆、要么加入额外的校准步骤。
 - [[scaling-automation/quantum-dot-array|量子点阵列]]与[[scaling-automation/two-dimensional-array|二维阵列]]是自动调控的目标器件；自动调控是它们从"实验室单件"走向"可重复批量制备"的关键技术。
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]是自动调控的"地图"：隧穿线是否存在决定少电子区位置，斜率给出串扰矩阵元素，反交叉点张开程度决定耦合强度判定。
