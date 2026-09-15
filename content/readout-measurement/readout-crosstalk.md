@@ -154,6 +154,16 @@ $$
 
 *泄漏清除效果：有/无耦合器 Reduction 的泄漏率对比——QEC 逻辑性能的直接提升。图源：Yang et al. (2024)，Fig. 2。*
 
+**电磁耦合的设计方法论**把串扰从事后测量推进到设计时预测：超导电路的全部电磁耦合（比特-腔、馈线-腔、比特-比特）组织成**耦合矩阵**——矩阵工程（设计目标→矩阵元素→版图参数）在设计阶段就预测串扰水平，配合仿真迭代收敛到达标设计。
+
+![[assets/figures/readout-crosstalk/fc6ff234963973fa3561206a460907cd3390fea5587f71e5fc104bf0419c658e.jpg]]
+
+*电磁耦合的系统设计：耦合矩阵工程——设计目标映射到矩阵元素再映射到版图参数，串扰在设计时被预测。图源：arXiv:2405.11426，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/500a0acfa0f4f4ad62da24b579bf2da60b3c77a96a401c78d46cc083b369c26b.jpg]]
+
+*设计验证：预测串扰 vs 实测——矩阵工程在设计阶段的预测能力。图源：arXiv:2405.11426，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。

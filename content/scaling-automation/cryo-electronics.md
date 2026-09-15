@@ -107,6 +107,16 @@ $$
 
 *行列寻址的门操作验证：独立寻址下的单/双比特门性能——空间复用不牺牲门保真度。图源：arXiv:2403.03717，Fig. 2。*
 
+**分布式 FPGA 架构**是控制系统的系统级设计：多 FPGA 的分布式控制（每个 FPGA 管理一组比特的实时序列，主机协调全局时序）——把集中式控制的延迟瓶颈分散掉，大规模阵列的实时反馈（QEC 解码）因此可行。Berkeley/LBNL 的实现给出从 FPGA 固件到主机软件的完整开源栈。
+
+![[assets/figures/cryo-electronics/8f2d006768d08ea29144f68bc9d7a541dbddcd5e253667581d225906e1a74063.jpg]]
+
+*分布式 FPGA 控制架构：多 FPGA 分管比特组、主机协调全局——实时序列的延迟瓶颈被分散。图源：Fruitwala et al. (2024)，Fig. 1。*
+
+![[assets/figures/cryo-electronics/711f03a25b370d872463dda2613d204a4951f5c9c7e14415fe5a78e8861e7ee0.jpg]]
+
+*开源控制栈：FPGA 固件到主机软件的完整实现——分布式控制在超导阵列上的落地。图源：Fruitwala et al. (2024)，Fig. 2。*
+
 ### 半导体量子点端的特殊考量
 
 相比 transmon，半导体量子点的链路上还有两点不同：
