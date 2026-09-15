@@ -98,6 +98,16 @@ $$
 
 $n_s$ 为库珀对密度。单位面积动态电感（方块电感，sheet inductance）$L_s=m_e/(2n_s e^2 h)$ 是选材的横向比较标准；单位长度电感 $L_0\propto1/(wh)$，因此工艺上尽量做窄中心导体、做薄薄膜（厚度受膜质量稳定性限制，典型 8–11 nm）。借助磁穿透深度 $\lambda^2(T)=m_e/(\mu_0 n_s(T) e^2)$ 可写成 $L_k(T)=\mu_0\lambda^2(T)\,l/(wh)$，故优先选择穿透深度大的材料；按 Ginzburg–Landau 关系 $n_s(T)\approx n_s(0)(1-T/T_c)$，动态电感在 $T\to T_c$ 时发散式增强。动态电感占总电感的比例 $\alpha=L_k/(L_k+L_m)$ 称动态电感分数，高阻抗腔中 $\alpha$ 可超过 90%。常用材料包括 NbTiN、TiN、NbN 与颗粒铝（granular aluminum）等。
 
+**颗粒铝的超电阻量子实现**：grAl 薄膜的方块电感可达 2 nH/□（方块电阻指数依赖氧气流量），但高阻抗薄膜的复现性曾是主要障碍——蒸发参数的微小漂移就改变电阻。Janík 等人用**无线欧姆计**在蒸发过程中原位测量薄膜电阻，首次实现了动力学电感的可控沉积：阻抗超过 $13\ \mathrm{k}\Omega$（超过电阻量子 $R_Q\approx6.5\ \mathrm{k}\Omega$，见[[circuit-qed/superinductance|超电感]]）的 grAl CPW 腔现在可以复现地制备。把 7.9 kΩ 的 grAl 反射腔与平面锗三量子点集成（按 DQD 运行），实测强电荷-光子耦合 $g_c/2\pi=(566\pm2)$ MHz——远超此前量子点 cQED 器件（无序氮化物或 JJA 腔）约 3.8 kΩ 的阻抗上限（$g_c\propto\sqrt{Z}$，见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]）。grAl 路线还兼容磁场（自旋比特必需）与剥离工艺，为高保真远程两比特门打开路径。
+
+![[assets/figures/high-impedance-resonator/59ac00e73211050c679454e6743f3e82133dfa4609fe1cd6a0ebc8e237e13a7b.jpg]]
+
+*7.9 kΩ grAl CPW 腔与锗量子点的集成：反射式谐振腔的 grAl 中心导体（深蓝，约 111 µm 长、200 nm 宽、25 nm 厚）延伸到九栅定义的三量子点区（本实验按双量子点运行）；插图为器件截面示意。图源：Janík et al. (2024)，Fig. 3(a,b)。*
+
+![[assets/figures/high-impedance-resonator/a0c36b997cd053b80bf8df9eec7518ca2f5c48fc84112b0ba270e4aaa7267237.jpg]]
+
+*强电荷-光子耦合的谱学证据：谐振腔微波谱随驱动频率与 DQD 失谐的变化——真空 Rabi 劈裂在电荷跃迁线处清晰可辨，耦合强度 $g_c/2\pi=566$ MHz 由劈裂直接读出。图源：Janík et al. (2024)，Fig. 4(a)。*
+
 <!-- FIGURE: 两条路线对比：SQUID 阵列腔（磁通可调）与 NbTiN/TiN 纳米线腔的显微结构与等效电路 -->
 
 ## 参数与量级
