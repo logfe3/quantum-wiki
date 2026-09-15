@@ -144,6 +144,16 @@ $$
 
 *门保真度验证：消杂散 ZZ 前后的两比特门基准对比。图源：arXiv:2311.01332，Fig. 2。*
 
+**耦合器辅助的泄漏 Reduction**：泄漏到非计算态（transmon 的 $|2angle$）是串扰之外的另一类确定论错误——可调耦合器在门操作后主动把泄漏布居"泵回"计算空间，泄漏错误率显著下降。这对 QEC 至关重要：泄漏错误破坏纠错码的纠错假设（比特翻转/相位翻转二分法），减少泄漏直接提升逻辑性能。
+
+![[assets/figures/readout-crosstalk/3c4f1e542fe83421af06aa71a5a403d3e4b31e9d4665a846fd56a0448252655f.jpg]]
+
+*耦合器辅助泄漏 Reduction：门后耦合器脉冲把 $|2angle$ 布居泵回计算空间——泄漏错误的主动清除。图源：Yang et al. (2024)，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/6d4bf2e6e4c9250a012ae0dd17a7b1891f1f651e64eac9291af405fdaf3b409d.jpg]]
+
+*泄漏清除效果：有/无耦合器 Reduction 的泄漏率对比——QEC 逻辑性能的直接提升。图源：Yang et al. (2024)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。

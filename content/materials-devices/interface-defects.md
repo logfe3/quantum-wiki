@@ -310,6 +310,16 @@ flowchart LR
 
 *TLS 相干光谱：2.9 GHz 跃迁的弛豫测量——单个 TLS 的量子相干行为，微观层级的直接证据。图源：同上，Fig. 2。*
 
+**工业 300mm 产线的工艺验证**：IMEC 用**工业标准先进半导体制造工艺**（300mm 晶圆产线）制出高相干超导比特——相干时间达到实验室工艺的同等水平。这是材料证据链的工艺层里程碑：TLS 损耗控制、界面钝化、真空封装等关键工艺全部在量产环境下复现，超导比特从"实验室手工艺品"跨入"晶圆厂产品"时代。
+
+![[assets/figures/interface-defects/0729e30f7b7908a2849fb1b68737afeee537d9980fca454bebda7bd415dd4ad0.jpg]]
+
+*IMEC 300mm 产线制造的超导比特：工业标准工艺（晶圆级钝化、真空封装）——实验室相干指标在量产环境复现。图源：Van Damme et al. (2024)，Fig. 1。*
+
+![[assets/figures/interface-defects/47d046d9ca3b4dd7f3c41f13d97dc0f387bb9ca6c6e61076c6a5e96d12b22a43.jpg]]
+
+*产线比特的相干测量：$T_1$、$T_2$ 分布——工业工艺的统计一致性达到实验室水平。图源：Van Damme et al. (2024)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状。
