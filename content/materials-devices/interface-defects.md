@@ -300,6 +300,16 @@ flowchart LR
 
 *氧化层的损耗对比：不同处理条件下 Ta 氧化层的介质损耗——稳定低损耗窗口为工艺优化给出方向。图源：arXiv:2305.11395，Fig. 2。*
 
+**分立电荷态的量子分辨**把 TLS 从"统计参数"升级为"可分辨量子对象"：与偏置电荷敏感 transmon 强耦合的单个介质 TLS，其两个本征态被观测到各有 **0.072e** 的分立偏置电荷（TLS 隧穿双阱的两个位置）、跃迁频率 2.9 GHz、弛豫时间超长——TLS 不再只是 $	andelta$ 里的损耗参数，而是能做相干光谱的"天然量子比特"。这一微观层级是界面缺陷词条证据链的最底层。
+
+![[assets/figures/interface-defects/90ada7211345737363f91f23c50fb252a3e5ab448a659f67deff67243c2acf57.jpg]]
+
+*TLS 分立电荷态观测：偏置电荷敏感 transmon 与单介质 TLS 强耦合——TLS 双阱的两个位置表现为 0.072e 的分立电荷差。图源：Hyalett et al. (2024)，Fig. 1。*
+
+![[assets/figures/interface-defects/51bd482d235453a2c6afe26ffb5120c4eebebcf299f6507ebf1af79259effecf.jpg]]
+
+*TLS 相干光谱：2.9 GHz 跃迁的弛豫测量——单个 TLS 的量子相干行为，微观层级的直接证据。图源：同上，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状。

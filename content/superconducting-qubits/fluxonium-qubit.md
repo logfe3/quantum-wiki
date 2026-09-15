@@ -97,6 +97,16 @@ fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型�
 
 *跨骑区的色散频移实测：腔频移随磁通偏置的变化——磁通调谐下频移幅度可达 80 MHz（失谐 5 GHz），广义 Rabi 模型（含高能级贡献）与实测吻合，约 10% 偏差可能来自腔的非线性。图源：Inomata et al. (2012)，Fig. 2。*
 
+**Floquet fluxonium 分子**是势阱工程的应用延伸：驱动的耦合 fluxonium 对经 Floquet 工程获得**不相交的态支撑域**——比特翻转率被指数压制（波函数不重叠），同时编码天然适配**擦除量子比特**（erasure qubit）纠错方案：主要错误通道可被明确标识为擦除而非翻转。这把 fluxonium 的"深势阱保护"推进到"驱动设计的编码级保护"。
+
+![[assets/figures/fluxonium-qubit/ae97d8cc306c641f6b86542a29d06d45ed49c0e5dc58ef50fe260a459f783d4b.jpg]]
+
+*Floquet fluxonium 分子：驱动的耦合 fluxonium 对——Floquet 工程制造不相交的态支撑域，比特翻转率指数压制。图源：Fisher et al. (2024)，Fig. 1。*
+
+![[assets/figures/fluxonium-qubit/20d795edb85ee605c51aecf6a46cd109ee083e3674c11517c20de6cf3de121e1.jpg]]
+
+*擦除纠错适配：错误通道的层级——主要错误可标识为擦除（可纠正）而非比特翻转，编码级保护与纠错方案协同设计。图源：Fisher et al. (2024)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 与[[superconducting-qubits/transmon-qubit|transmon]]的互补：transmon 用大电容压低电荷色散、牺牲非谐性；fluxonium 用大电感重塑势阱，在小电容下同时保住非谐性与相干性，但需要处理磁通噪声和更复杂的谱学。
