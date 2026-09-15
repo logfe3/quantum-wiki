@@ -185,6 +185,18 @@ Floquet 动力学实验有四个标志性的可观测特征：
 
 标准测量线路：稀释制冷机混合腔室 $T\approx 20\ \mathrm{mK}$（电子温度约几十至百 mK），矢量网络分析仪输出弱探测微波（$\sim -30\ \mathrm{dBm}$，经约 $70\ \mathrm{dB}$ 衰减到达样品），通过[[readout-measurement/rf-reflectometry|射频反射]]或透射测量 $S_{11}$、$S_{21}$。数据拟合时把高斯卷积宽度 $\sigma_\varepsilon\approx 2.5$–$3.3\ \mu\mathrm{eV}$ 代入以反映准静态电荷噪声。
 
+## 强驱动×强耦合：缀饰态谱的实验区
+
+词条前半聚焦半导体双点的 Floquet 理论；**强驱动的超导比特+强耦合谐振腔**给出这一框架的另一端实验区：flux qubit 强耦合到 CPW 腔（腔弱耦合到馈线做探测），磁通强驱动下透射谱 $|S_{21}|$ 直接分辨**缀饰态结构**与驱动诱导的多光子过程。数值上用 Lindblad 主方程（QuTiP）模拟——缀饰基之间的跃迁与耗散统一处理，模拟与实测透射谱定量吻合。这一交叉区（Floquet 驱动 × JC 强耦合）是词条理论向实验的衔接案例。
+
+![[assets/figures/floquet-dynamics/f7abc52f9b905f0ab0b8a843b7ada59ffb760c1dca5b0aeb9d5d177013254a42.jpg]]
+
+*强驱动强耦合系统：量子谐振器强耦合到 flux qubit（弱耦合馈线探测）——磁通强驱动的缀饰态能级在透射谱中直接分辨。图源：Ivakhnenko et al. (2025)，Fig. 1。*
+
+![[assets/figures/floquet-dynamics/1ef3acdd8bb727648c5e21fdf1602ebc46f15a8bcfcad464073e9f3bcf35d645.jpg]]
+
+*实测透射谱 $|S_{21}|$：随驱动功率演化的谱线结构——缀饰态跃迁与多光子过程，Lindblad 主方程模拟定量吻合。图源：Ivakhnenko et al. (2025)，Fig. 2。*
+
 ## 随机驱动的对偶：运动平均与窄化
 
 周期驱动（Floquet）之外，**随机驱动**给出对偶的谱学现象——运动平均（motional averaging）。NMR 中的原型：孔隙中两区域磁场不同的自旋粒子，静止时谱线劈裂为 $\omega_1$、$\omega_2$ 两峰；当粒子在两区域间往返的时间 $\Delta t$ 短于动力学阈值 $\hbar(\Delta E)^{-1}=(\omega_2-\omega_1)^{-1}$ 时，粒子无法分辨两个能量——两峰**合并**为一条位于平均频率 $\omega_0$ 的窄线（运动窄化）。相关的物理家族：Dyakonov–Perel 效应、Dicke 窄化、量子 Zeno 效应。
