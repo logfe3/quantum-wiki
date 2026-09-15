@@ -3,14 +3,14 @@ cacheDir: .qatlas-cache/papers
 
 autodiscovery:
   seed_topics:
-    - "semiconductor material quantum dot"
-    - "charge noise semiconductor"
-    - "amplifier quantum limited"
-    - "readout multiplexing scaling"
-    - "decoherence error budget"
-    - "automatic calibration qubit"
-    - "spin qubit silicon germanium"
-    - "quantum dot cavity coupling"
+    - "Si/SiGe"
+    - "silicon quantum dot"
+    - "valley splitting"
+    - "charge sensor"
+    - "quantum dot readout scaling"
+    - "parametric amplifier"
+    - "decoherence quantum dot"
+    - "spin qubit germanium"
     - "superconducting qubit"
     - "circuit quantum electrodynamics"
   strategy: knowledge-gap
