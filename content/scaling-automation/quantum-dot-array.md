@@ -115,6 +115,16 @@ $$
 - **量子模拟器**：除上述 CCB/莫特转变实验外，同类 2×2 阵列还观察过 Nagaoka 铁磁性；引入可控次近邻耦合 $t'$ 后，可模拟阻挫磁体、自旋液体乃至与高温超导相关的强关联相——这正是二维阵列相对一维链的独特价值。
 - **长程耦合总线的最小单元**：三量子点加[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]是"比特阵列 × 光子总线"的最小构型：两个点各编码一个比特、第三点作耦合中介，即可验证阵列经腔模实现长程[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]的原理。
 
+**一维阵列+集成传感器**（InAs 纳米线五点阵）：与二维阵列（词条主数据）对照的一维构型——五量子点+两个集成电荷传感器，双量子点沿阵列逐段表征。一维的隧道输运链是量子点中继/梭运（对照[[scaling-automation/frequency-homogenisation|频率均匀化]]的输送模式）的基础构型。
+
+![[assets/figures/quantum-dot-array/d7d8f18557dd72615454558b379a84a8cad85bdc995b8c1a6cc5353d4759b4b4.jpg]]
+
+*InAs 一维五点阵+双传感器：沿阵列逐段表征双量子点——一维构型的阵列基础。图源：arXiv:2407.15534，Fig. 1。*
+
+![[assets/figures/quantum-dot-array/ebbf71cd9209ee1c5edfb1a42c314ec9448ff04cd4fefedd7acf120fa30d4ac8.jpg]]
+
+*阵列的电荷传感表征：双传感器同时监测沿阵列的双点。图源：arXiv:2407.15534，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 单点的[[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/charging-energy|充电能]]是阵列一切标定的出发点；阵列模式下 $U_i$ 的不均匀性正是需要"归一化"扫描系数的原因。
