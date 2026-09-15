@@ -161,5 +161,6 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 - 最小模型与全部能级结构见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志性观测是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。
 - 腔侧的实现路线：常规[[circuit-qed/microwave-resonator|微波谐振腔]]、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]。
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）。
+- cQED 的更高层应用：腔不只是工具——[[circuit-qed/bosonic-cqed|玻色 cQED]]用谐振子的多能级空间直接编码容错量子比特，是 cQED 从"读出架构"到"计算平台"的方向延伸。
 - 多比特扩展经[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]实现；比特的"人工原子"载体是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]与[[fundamentals/double-quantum-dot|双量子点]]上的[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]、[[qubit-control/hole-spin-qubit|空穴自旋比特]]、[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]等编码。
 - 性能瓶颈主要来自[[materials-devices/charge-noise|电荷噪声]]与材料界面质量（如[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/gaas-algaas|GaAs/AlGaAs]] 平台）；强驱动修饰谱需[[circuit-qed/floquet-dynamics|Floquet 动力学]]描述。

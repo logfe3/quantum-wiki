@@ -20,3 +20,6 @@ date: 2026-09-08
 - [[spin-photon-coupling|自旋–光子耦合]]
 - [[cavity-mediated-coupling|腔介导远程耦合]]
 - [[floquet-dynamics|Floquet 驱动动力学]]
+- [[nv-center-cavity-bus|NV 色心腔总线]]
+- [[superinductance|超电感与约瑟夫森结阵列]]
+- [[bosonic-cqed|玻色 cQED 与腔编码量子计算]]
