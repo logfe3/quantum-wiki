@@ -184,6 +184,16 @@ $$
 
 <!-- FIGURE: 网络分析仪实测 S11 随传感器栅压的变化：谐振谷深度随电阻改变，匹配点附近最灵敏 -->
 
+**反馈控制扩展动态范围**：RF 反射传感器的速度-范围权衡（高带宽测量时传感器易饱和）由反馈解决——闭环控制实时调整传感器偏置，跟踪被测电荷的大幅漂移而不饱和。动态范围扩展后，传感器在高速模式下也能覆盖从单电子到多电子的宽电荷范围。
+
+![[assets/figures/rf-reflectometry/ce650aa6c9dd0e76545b66b3bd549f46ab66f689f5d0a4a4e729cc289d5c5efa.jpg]]
+
+*反馈控制的 RF 传感器：闭环偏置调整跟踪电荷漂移——速度-范围权衡的反馈解法。图源：arXiv:2307.05077，Fig. 1。*
+
+![[assets/figures/rf-reflectometry/f005a34cc70ff26c3f06896355c6e117b6d0f5569a4ae89f3959c067e0726b12.jpg]]
+
+*动态范围扩展效果：开环 vs 闭环的可测电荷范围对比。图源：arXiv:2307.05077，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 被测对象通常是[[fundamentals/coulomb-blockade|库仑阻塞]]区边缘的单电子隧穿事件；射频读出的高速率使[[readout-measurement/single-shot-readout|单发读出]]与实时电荷态追踪成为可能，扫描双栅即可高速绘制[[fundamentals/charge-stability-diagram|电荷稳定图]]。
