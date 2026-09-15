@@ -16,5 +16,9 @@ date: 2026-09-08
 - [[two-dimensional-array|二维量子点阵列]]
 - [[cryo-electronics|低温电子学]]
 - [[spin-orbit-torque-control|自旋轨道力矩操控]]
+- [[frequency-homogenisation|全局操控与频率均匀化]]
+- [[thouless-pumping-jja|Thouless 量子泵浦]]
+- [[multi-time-tomography|多时间量子过程层析]]
+- [[mmiqc-3d-integration|多层微波集成量子电路与三维集成]]
 
 扩展的难点不只是“多做几个量子点”。每个新增栅极都会带来交叉耦合、漂移和参数空间膨胀，因此需要把器件设计、快速读出和自动算法作为一个闭环系统共同考虑。

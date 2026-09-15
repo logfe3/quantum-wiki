@@ -126,9 +126,18 @@ $$
 
 <!-- FIGURE: 六比特交叉保真度矩阵热图对比：左为 MFD（近邻非对角元明显非零），右为 SNND（非对角元整体压到近零） -->
 
+![[assets/figures/readout-crosstalk/5cf7e911907117920ae5e0ff25a858e70fbc1b59ac49ea6e7db589a575a47b8a.jpg]]
+
+*ZZ-free 单比特门方案：固定频率 transmon 的静态 ZZ 相互作用使比特频率依赖邻居态——微扰分析驱动的半解析脉冲优化让门对这类频移（数 MHz 内）鲁棒。图源：Satoh et al. (2023)，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/6f1a7ad27f5c0f07b209df0cc2582010be245e2808cbd8f4e3fdd76a0a34a05e.jpg]]
+
+*优化门的鲁棒性验证：门保真度随频率失谐的变化——几 MHz 范围内保持高位，足以覆盖残余 ZZ 引起的频移。图源：Satoh et al. (2023)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。
+- **静态 ZZ 相互作用**是比特间串扰的确定论形式：固定频率 transmon 阵列中残余 ZZ 使比特频率依赖邻居态（等价于"邻居态决定的确定性串扰频移"）。Satoh 等人演示纯软件对策——基于微扰分析的半解析脉冲优化，实现 ZZ-free 单比特门且对频率涨落的鲁棒性达数 MHz，无需任何额外硬件（对照硬件对策：多路径耦合、可调耦合器等）。
 - 共用[[readout-measurement/parametric-amplifier|参量放大器]]的带宽、饱和功率与互调决定了多少读出音可以共享一条放大链；[[readout-measurement/purcell-filter|Purcell 滤波器]]既保护比特免受 Purcell 衰减，也抑制非共振驱动的串扰激发。
 - 读出串扰属于"测量侧"串扰；与之并列的"控制侧"串扰在量子点阵列中表现为栅极对非目标点电化学势的牵拉，由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]定量描述并可用[[scaling-automation/virtual-gates|虚拟电极]]补偿；超导芯片中还有磁通串扰等封装与布线层面的来源。
 - 对量子纠错而言，串扰使读出误差具有空间相关性，解码器若假设独立同分布的测量误差会低估逻辑错误率。
