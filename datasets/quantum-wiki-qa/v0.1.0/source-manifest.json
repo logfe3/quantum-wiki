@@ -1,5 +1,5 @@
 {
-  "source_digest": "6ffbd64de6e21d5a3ae2dabdf032dd4f99418b472eb9d31e0b1507c9c7611b7f",
+  "source_digest": "d120ab85183bcd1ca9e9c931c2f59f99df0e27720434b5cfc44cc4140cebd7ad",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -12,7 +12,7 @@
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
       "topic": "circuit-qed",
-      "sha256": "93848b15e37a27f28d87842cc3b1846eab4b378e031e9f0e20263700af8dce69",
+      "sha256": "da96150aaf6ab41a6d5e74dc5a5b424ed6f281835f371240fa4f59b63c0a14a2",
       "split": "test"
     },
     {
@@ -33,7 +33,7 @@
       "path": "content/circuit-qed/charge-photon-coupling.md",
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "d4c7823ab25d9ee8bca641bf3ef14daea9779334fe2c129fbf3b5349b9675121",
+      "sha256": "ee7faa8fbf2f498742be90a7604ffb505a61db550de8ce8830f42ba12c0687fc",
       "split": "dev"
     },
     {
@@ -48,6 +48,13 @@
       "title": "色散频移",
       "topic": "circuit-qed",
       "sha256": "1fb86827bf53f34861c5e7b1b8d6ddd0aa421f4149f85d1e5850682c43a53ce1",
+      "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/field-resilient-resonator.md",
+      "title": "耐磁场超导谐振腔",
+      "topic": "circuit-qed",
+      "sha256": "886ee97912314dd097359f98ce3acce40ad2557c4c1a69fcbe8474b302910289",
       "split": "train"
     },
     {
@@ -68,7 +75,7 @@
       "path": "content/circuit-qed/high-impedance-resonator.md",
       "title": "高阻抗谐振腔",
       "topic": "circuit-qed",
-      "sha256": "e25ecfcc5a8388a15b1dc073596c66029b7965bb5ad084106c4533992805a5d3",
+      "sha256": "2b34c07b8eab92093e70f2a40e61eef9cbf8203f1e55cfd55c29627758c5ed2c",
       "split": "train"
     },
     {
@@ -82,7 +89,7 @@
       "path": "content/circuit-qed/microwave-resonator.md",
       "title": "微波谐振腔",
       "topic": "circuit-qed",
-      "sha256": "50a7de80215981b034d1e701088eeab9187d651e34db11cd3860933c9fb58a43",
+      "sha256": "3633549e7f0b379bea896b0e407309634373d6f69fb5330ba01764c95e63200a",
       "split": "train"
     },
     {
@@ -96,7 +103,7 @@
       "path": "content/circuit-qed/spin-photon-coupling.md",
       "title": "自旋–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "10aafefe95eed660e8f88b925df00a5be875deb81222b19f1a4485c1aa8071c7",
+      "sha256": "9b4540efbf67c8a285a85c99685571fb180f7d165f228e0bd75843d58140274d",
       "split": "train"
     },
     {
@@ -264,7 +271,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "5aabbc1da340e3e5d3454f2463751586c67e2be1a6660d4eb7532d4a38eefa71",
+      "sha256": "25b0fdb3a74e3d338385f6d5505a865b0a820dcbaa9e5bc0b2262994c78e3f88",
       "split": "train"
     },
     {
@@ -446,7 +453,7 @@
       "path": "content/qubit-control/spin-initialization.md",
       "title": "自旋初始化",
       "topic": "qubit-control",
-      "sha256": "1073a332327417cc212e90a5e184371d3252a16e595f8878e08a1c672bce0a5f",
+      "sha256": "16c47d18fa00dca9e10354877018a3c890d47913de3fa2eea186270777592b3e",
       "split": "train"
     },
     {
@@ -485,17 +492,24 @@
       "split": "test"
     },
     {
+      "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
+      "title": "约瑟夫森行波参量放大器",
+      "topic": "readout-measurement",
+      "sha256": "10d953419a04071e2d5d0b0a2787a101230958d9dadfa38a0330f8fc94dbc1d4",
+      "split": "train"
+    },
+    {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "d541e2df858191aa0c512c9fab726282b05e5fcd831486e3fed9d16c5b518ea7",
+      "sha256": "5592c0becc969dae9c64c32fef811321b18be685794b33242b2728e12985a929",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "e819869ed7d2567f520c132cd56fadc7be446fdbfea060c576816839e1407a8d",
+      "sha256": "d8b2ee7cf142a3f296b44bc94e5f2b123da24cf0ca3c9bb42e9eac9a037d7342",
       "split": "train"
     },
     {
@@ -520,6 +534,13 @@
       "split": "dev"
     },
     {
+      "path": "content/readout-measurement/readout-induced-leakage.md",
+      "title": "读出诱导泄漏基准测试",
+      "topic": "readout-measurement",
+      "sha256": "bc22b01989549a2ede03380a4be84722295a1d265b649e02fe886e245e56bb61",
+      "split": "train"
+    },
+    {
       "path": "content/readout-measurement/rf-reflectometry.md",
       "title": "射频反射测量",
       "topic": "readout-measurement",
@@ -537,14 +558,14 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "466895f080ef35d93b3c4a290ccfb884468644f86a703fd6fe112232141aabbb",
+      "sha256": "10a89b16576c194e2ac76c703b20c2d3f5bf84ea3a252e1add94346a15ed4abc",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/threshold-independent-readout.md",
       "title": "阈值无关读出",
       "topic": "readout-measurement",
-      "sha256": "9b4deed5ccaa5f550bbeb7239716a0318584842c9c50833181639cf515b0995b",
+      "sha256": "99efaaf2e6876019c22f1d253a34641e62efd531babdc5e52afe0a52bb0682a3",
       "split": "train"
     },
     {
@@ -572,7 +593,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "7c1fb8591fb1cd4977d4b3eec1a2f93f9172498e043c2af99d11e64f7354c214",
+      "sha256": "3a0dd442ca04ff6f40b0d6772728d403e262fbe5ab9d9681b245ab80eeb5d796",
       "split": "train"
     },
     {
@@ -667,10 +688,24 @@
       "split": "train"
     },
     {
+      "path": "content/superconducting-qubits/junction-defect-modes.md",
+      "title": "约瑟夫森结强耦合缺陷模",
+      "topic": "superconducting-qubits",
+      "sha256": "38a869886897afefa367d22561f1ae764f4e027448015dfcee65de43262f89d8",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/qubit-fast-reset.md",
+      "title": "量子比特快速复位",
+      "topic": "superconducting-qubits",
+      "sha256": "03d94755d07a8b47e45d3c5e550477bcb8f1a1fb65426e46cf5340e523b76349",
+      "split": "train"
+    },
+    {
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "2bc54b7a5f201806c55b4d44cacdb21885180b77a4f9deb9661e7ad705bdb9f1",
+      "sha256": "3af91d37928ab0a83c97b6979843e53ea743a0bb6eba4191f10fb0a0577c6f80",
       "split": "train"
     }
   ]
