@@ -188,6 +188,17 @@ Purcell 滤波器的仿真验证不能只算 $S$ 参数： 的做法是在电磁
 
 *非线性 Purcell 滤波器件：含非线性滤波器的读出链芯片照片——读出谐振器经非线性元件接到测量线，实现幅值依赖的透射。图源：Sunada et al. (2024)，Fig. 2(a)。*
 
+
+**电路设计级的综合方案**（Reagor 类设计）同时解决 Purcell 抑制与快速复位：电路在宽频率范围内消除 Purcell 自发辐射，同时保持与低 Q 腔的强耦合——快速复位（把比特主动泵回基态供下次门使用）与滤波保护在同一电路里实现，实测与仿真在宽频率范围吻合。
+
+![[assets/figures/purcell-filter/12f0c0d49fa81e41d9984c12c5de25ce5d243f4e6207cea23e00265024d66177.jpg]]
+
+*滤波+复位的综合电路：消除 Purcell 自发辐射同时保持低 Q 腔强耦合——测量后立即复位比特，供算法流水线复用。图源：Reagor et al. (2013)，Fig. 1。*
+
+![[assets/figures/purcell-filter/5870ac7b257521cb651fa087201343ccf0aeb3615f9dc44cce3f2959681f1628.jpg]]
+
+*实测与仿真的宽频吻合：衰减率随频率的抑制曲线——设计模型在宽范围预测实际性能。图源：Reagor et al. (2013)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - Purcell 效应是[[readout-measurement/dispersive-readout|色散读出]]的固有代价：色散频移 $\chi$ 与腔线宽 $\kappa$ 同时决定读出速度与 Purcell 弛豫，滤波器解除了二者的绑定。
