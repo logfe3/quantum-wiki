@@ -1,5 +1,5 @@
 {
-  "source_digest": "8995eb558b4464315279f12ecddde6bff30fb923c4368bb958047d66877a0245",
+  "source_digest": "0f3513dff2983c723175d0743a9a8c7961038112ac7c8241cf595d29671de871",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -26,7 +26,7 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "bfd669f9b7bf724b1e8c068a056e7b04367c9fa00b1bb5abfb6a0a6085ffb31e",
+      "sha256": "837d5232a725b95f0ec67f0e21b53f76a4d85c0f71f026584a29017185421409",
       "split": "dev"
     },
     {
@@ -257,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "8373ac25a5319594f13a3e670739a2302d944006610e8f72127bb1944e139a81",
+      "sha256": "82dd9f7ca13e582d08bba12c79f60ef06cb584e2e658952766b18d16189b3919",
       "split": "train"
     },
     {
@@ -495,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "ccdda50408e667830cd30317e1d99ad65f7448cedb2296c0f5256116dbae8bcb",
+      "sha256": "d873bbe28aaf5b87126ea30104e9dd137a97fbed7f69d1ca6b5adc7e445f2cce",
       "split": "dev"
     },
     {
@@ -516,7 +516,7 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "f4f02b0afcb62fb63fa56b8fb2167da32cebe5acd456ae5e0b1431264158062e",
+      "sha256": "7d4473560de5c82d650b9f4341127bca71093ed4ec0df75db2c4246cab28c76d",
       "split": "train"
     },
     {
@@ -551,7 +551,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "bb127d1526cb14037ed566d70ee4319bee6f08593064bd825d6b9eec2e4e6353",
+      "sha256": "327ccba97e2f625f72f387ed10eb06705ced5de7019b464e978edf980bb3e1a8",
       "split": "train"
     },
     {
@@ -600,7 +600,7 @@
       "path": "content/scaling-automation/thouless-pumping-jja.md",
       "title": "约瑟夫森结阵列中的 Thouless 量子泵浦",
       "topic": "scaling-automation",
-      "sha256": "49568312ad39d8680b0ca426c6cde1fe6fbe6e03607aeb6b752dc1bfbd397daf",
+      "sha256": "50c179e23897e1ef4b0c9705dbc22f46140e4d127d8ef86a4b1d6eeb1c3fb9d5",
       "split": "dev"
     },
     {
