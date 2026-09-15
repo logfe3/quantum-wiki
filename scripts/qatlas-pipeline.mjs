@@ -600,8 +600,9 @@ function pickNextTopic(state, seedTopics, wikiIndex) {
   if (unusedSeed) return { topic: unusedSeed, origin: "seed" }
   const unusedDerived = derived.find((topic) => !used.has(topic.toLowerCase()))
   if (unusedDerived) return { topic: unusedDerived, origin: "derived-from-main" }
-  // All known topics used: restart the cycle with a fresh index-derived list
-  const fallback = derived[0] ?? seedTopics[0]
+  // All known topics used: restart the cycle with a fresh index-derived list,
+  // skipping topics already attempted in this cycle
+  const fallback = derived.find((topic) => !used.has(topic.toLowerCase())) ?? seedTopics[0]
   return { topic: fallback, origin: "cycle-restart" }
 }
 
