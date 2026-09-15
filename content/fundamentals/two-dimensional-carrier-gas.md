@@ -133,6 +133,7 @@ $$
 - [[materials-devices/silicon-mos|Si-MOS]]：积累型 2DEG 距表面极近、栅极响应强，但[[materials-devices/interface-defects|界面缺陷]]多、电荷噪声大。
 - [[materials-devices/strained-germanium|应变锗空穴平台]]：在 Ge/SiGe 中形成 2DHG，是空穴自旋比特与高迁移率空穴量子点的基础。
 - [[materials-devices/germanium-hut-wire|锗棚顶纳米线]]：Ge/Si 自组织核壳结构中的 2DHG。
+- [[materials-devices/bilayer-graphene-quantum-dot|双层石墨烯量子点]]：无带阶的二维平台——垂直位移场开带隙替代异质结带阶做横向限制，hBN 介电环境决定电容标度。
 - [[fundamentals/coulomb-blockade|库仑阻塞]]：当 2DEG/2DHG 被栅极切成单点后，少电子区出现的单电子输运现象，其能量根源是充电能 $E_C=e^{2}/C_\Sigma$。
 - [[fundamentals/coulomb-diamond|库仑菱形]]：把 2DEG 切割成量子点后，库仑阻塞在 $(V_G,V_{\mathrm{SD}})$ 平面展开为菱形相图。
 - [[fundamentals/constant-interaction-model|常相互作用模型]]：把 2DEG 与量子点电极之间的耦合用总电容 $C_\Sigma=C_S+C_D+C_G$ 表示，是从 2D 走向 0D 后分析电化学势与加电子能的工具。

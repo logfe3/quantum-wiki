@@ -234,6 +234,7 @@ $$
 - [[fundamentals/tunnel-coupling|隧穿耦合]] $t_c$ 使三相点附近出现量子弯曲，决定反交叉能隙 $2t_c$；
 - [[fundamentals/charge-stability-diagram|电荷稳定图]]：双量子点的标准观测图，蜂窝结构与偏压三角形是其全部信息；
 - [[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/coulomb-diamond|库仑菱形]]：在单点层面是同一阻塞条件的另一面，推广到双点变为蜂窝；
+- [[materials-devices/bilayer-graphene-quantum-dot|双层石墨烯量子点]]：加指栅即可扩展为双点的平台实例，其隧穿势垒由 p–n 结构成（势垒栅压调结的宽窄陡缓），与静电势垒双点的调控语言一一对应；
 - [[qubit-control/charge-qubit|电荷量子比特]]：以双量子点中单电子的左右局域态为逻辑基，最小哈密顿量与本词条 §理论模型一节完全相同；
 - [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]：以 $(1,1)$ 区两电子自旋态为逻辑基，使用本词条的"自旋阻塞"作为读出；
 - [[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]与[[qubit-control/lzsm-interference|LZSM 干涉]]：以双量子点的反交叉为分束器，多次穿越构成普适单比特旋转；

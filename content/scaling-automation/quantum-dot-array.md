@@ -129,6 +129,7 @@ $$
 
 - 单点的[[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/charging-energy|充电能]]是阵列一切标定的出发点；阵列模式下 $U_i$ 的不均匀性正是需要"归一化"扫描系数的原因。
 - [[scaling-automation/virtual-gates|虚拟电极]]与[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]解决"控不动"的问题，[[scaling-automation/automatic-tuning|自动调控]]解决"调不完"的问题；二维特有的版图与次近邻耦合问题见[[scaling-automation/two-dimensional-array|二维量子点阵列]]。
+- 阵列也是材料均匀性的量具：Intel Tunnel Falls 一维阵列上 21 个点的谷劈裂统计与跨栅关联（见[[fundamentals/valley-splitting|谷劈裂]]词条"介观关联"一节）给出了含 Ge 量子阱介观均匀性的首批数据。
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 一头连着 Hubbard 模型的动能项，一头连着强耦合极限下的[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$。
 - 阵列态的感知依赖电荷传感器与[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与腔模杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
