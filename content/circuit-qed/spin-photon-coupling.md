@@ -174,6 +174,24 @@ $$
 1. **裸腔线宽 vs 杂化后线宽**：当电荷比特已耦合到腔、腔线宽已从 $\kappa$ 拓宽到 $\kappa^\*$ 时，再观察自旋耦合必须用 $\kappa^\*$ 而非 $\kappa$；
 2. **Fano 修正**：高阻抗腔的细中心导体易与寄生通道耦合，谱线常偏离对称洛伦兹形，未做 Fano 修正会系统低估 $2g_s$。
 
+## 超精细场对腔介导耦合的修正
+
+III-V 量子点里的电子自旋与核自旋的超精细相互作用（见[[fundamentals/hyperfine-interaction|超精细相互作用]]）不只带来退相干——它还**改变腔介导的自旋-自旋耦合本身**。把超精细相互作用微扰展开到二阶，腔模与量子点电子自旋的有效耦合强度变为
+
+$$
+g_{\mathrm{eff}}^{i}(t)=\frac{g_c\,\Omega_L^i(t)}{2}\left(\frac{1}{\Delta_c^i(h_i)}+\frac{1}{\Delta_L^i(h_i)}\right),
+$$
+
+其中 $g_c$ 是电荷-光子耦合、$\Omega_L^i(t)$ 是含时拉比驱动幅度、$h_i$ 是第 $i$ 个点上的 Overhauser 场（核自旋有效磁场），它同时移动自旋 Zeeman 频率（改变失谐 $\Delta$）与耦合强度。两个失谐差匹配的量子点交换虚腔光子实现远程耦合——但 Overhauser 场的随机演化使两比特门的保真度随核态构型涨落：从非极化核系综出发，门保真度的分布直接反映 Overhauser 场的统计。这一修正在设计 III-V 体系的腔介导两比特门时必须计入（Si 体系核自旋小，此项可忽略）。
+
+![[assets/figures/spin-photon-coupling/311c5796ef062e4645de3b47f5a1e28154ccbf3596ea4a2a15687eaf259113fb.jpg]]
+
+*腔模介导的自旋-自旋相互作用：两个量子点的失谐差 $\Delta$ 匹配时交换虚腔光子（能量 $\omega_c$）；$\omega_L^i$ 是各点自旋的 Zeeman 频率——Overhauser 场随机移动这些频率，使有效耦合与门保真度随核态构型涨落。图源：Hildmann & Burkard (2011)，Fig. 1。*
+
+![[assets/figures/spin-photon-coupling/797e31b4318c7e7332f08f73a3b76499ccf867d778459c57bcf69c728754d0f6.jpg]]
+
+*单电子量子点与腔耦合的能级图：电子自旋经拉比驱动 $\Omega_L$ 与腔模间接耦合，失谐 $\Delta_c$、$\Delta_L$ 都依赖 Overhauser 场 $h$——超精细相互作用到二阶的修正进入有效耦合强度。图源：Hildmann & Burkard (2011)，Fig. 2。*
+
 ## 参数与量级
 
 下表汇总本站论文中所列工作中实际演示或理论评估的自旋–光子耦合参数。电荷–光子耦合 $g_c$、自旋–光子耦合 $g_s$、腔耗散 $\kappa$ 与自旋退相干 $\gamma_s$ 是四个核心参数。
