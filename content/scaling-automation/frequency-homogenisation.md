@@ -55,6 +55,18 @@ $$
 
 *输运协议的非保真度（模式 I 上、模式 II 下）：随输运距离 $d$、速度 $v$（黄线 10 m/s、红线 1 m/s）和驱动幅度 $\Omega$ 变化，由 2 万次蒙特卡洛模拟（随机 g 因子分布）得到——更快、更远的输运给出更好的均匀化，非保真度随之下降。图源：Jnane et al. (2025)，Fig. 6。*
 
+### 传送带模式：Si/SiGe 的连续轨道梭运
+
+词条前文引用的锗输运实验之外，**传送带模式**（conveyor-mode）给出 Si/SiGe 平台的对应实现：交流栅压驱动的连续轨道（S形/N形）搬运单个电子，无需停顿式装载-移动-卸载——EPR 自旋对在轨道一端生成后由传送带分离到两端，自旋关联在搬运中保持。这种连续流模式与频率均匀化的"快输运极限"直接对接：传送速度远超退相干率时，电子在轨道各段的停留对相干的影响被平均掉。
+
+![[assets/figures/frequency-homogenisation/5c83f0f0675f2ec94bd92ded91e7c9f8a765aae563a6686dc2477bcb22a3b3b9.jpg]]
+
+*传送带模式电子梭运：Si/SiGe 的交流栅压连续轨道——EPR 自旋对在轨道上生成、分离，自旋关联在搬运中保持。图源：Struck et al. (2023)，Fig. 1。*
+
+![[assets/figures/frequency-homogenisation/8e8c0b114b83e7406c9cbb63930a3e07b0442474ed0e6a85e9ab537960dc3774.jpg]]
+
+*梭运保真度测量：分离后 EPR 关联的保持——传送带模式的相干验证。图源：Struck et al. (2023)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 输运轨道的物理实现依赖[[scaling-automation/cryo-electronics|低温电子学]]的布线约束——全局操控正是为了绕开逐比特微波布线的引脚墙；均匀化后每比特所需的调谐电压也由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]决定。
