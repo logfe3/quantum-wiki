@@ -2,16 +2,16 @@
   "name": "quantum-wiki-qa",
   "version": "0.1.0",
   "language": "zh-CN",
-  "build_id": "23a81c18f0037e00",
-  "source_digest": "39316488305a812ec1eea107baded1df369233baa7c655691459121159bdd07f",
+  "build_id": "882d9eaeed3378ad",
+  "source_digest": "d89f50d4ea54dcc924cb9e6578efd8a07e1da055cefa76995c65a938c68f162a",
   "config_sha256": "d8786d2ef5295f22538f8f6bf05aec7b2a73cd8e653fd3303d0179116d4c4d3e",
   "pipeline_sha256": "bc9545d936be00de897d58b698f8bc4de93492fa44945a049760df1467339c46",
   "release_status": "draft_pending_semantic_audit",
   "source_pages": 93,
   "accepted_pairs": 520,
   "rejected_pairs": 38,
-  "audit_sample_size": 28,
-  "audit_rate_actual": 0.0538,
+  "audit_sample_size": 27,
+  "audit_rate_actual": 0.0519,
   "batch_reject_threshold": 0.05,
   "counts": {
     "split": {
@@ -27,8 +27,8 @@
       "true_false": 79
     },
     "difficulty": {
-      "graduate": 81,
-      "research": 95,
+      "graduate": 80,
+      "research": 96,
       "undergraduate": 344
     },
     "topic": {

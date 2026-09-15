@@ -1,5 +1,5 @@
 {
-  "source_digest": "39316488305a812ec1eea107baded1df369233baa7c655691459121159bdd07f",
+  "source_digest": "d89f50d4ea54dcc924cb9e6578efd8a07e1da055cefa76995c65a938c68f162a",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -26,7 +26,7 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "d103670e0bc0bf5860311c87130ffe5404b248b7d5d6114fc42dd744005f12a4",
+      "sha256": "bfd669f9b7bf724b1e8c068a056e7b04367c9fa00b1bb5abfb6a0a6085ffb31e",
       "split": "dev"
     },
     {
@@ -40,7 +40,7 @@
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
       "title": "电路量子电动力学",
       "topic": "circuit-qed",
-      "sha256": "c26a74ed0ee422e170024ebb326a09051cfd2f3c3b256c0f9fa58fae1c6ff61b",
+      "sha256": "47c28deed14966bb8e34ba6abd66f7a7e2934c520bb6ff418ff372146387be0c",
       "split": "train"
     },
     {
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "3ae5ba03744f7656c358235790f360f1d6d1e13886b9771f0799c0534aec7db1",
+      "sha256": "79abbc30a411f22d9d459455443b91787e4f6781e69ea849a027ba10f81e11b1",
       "split": "train"
     },
     {
@@ -306,7 +306,7 @@
       "path": "content/qubit-control/dynamical-decoupling.md",
       "title": "动力学解耦",
       "topic": "qubit-control",
-      "sha256": "008b6cded7bbe8c94558df240c8860488d390e2fe3e709f94e9e049b653125c8",
+      "sha256": "5c49f1d650cd1c65280c8c303ebb780e4309ad7a82754c02fe20a19d41b0932e",
       "split": "train"
     },
     {
@@ -572,7 +572,7 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "88bd35574acbf1d475215de514c4faced68e90198d2f083b0980d97ebcdb2e0f",
+      "sha256": "2db507e77f472fe4dca4392f6008204425513518b0b37e54faa21b4021b88379",
       "split": "train"
     },
     {
@@ -621,7 +621,7 @@
       "path": "content/superconducting-qubits/csfq-decoherence.md",
       "title": "可调电容并联 flux qubit 的退相干",
       "topic": "superconducting-qubits",
-      "sha256": "c0346f2623dabd94a25bd3c3dbf76b1149b2c40c91ddf6892fe2a6140a799dd3",
+      "sha256": "11ac90f171ea0983d2a909607fc528ecce4d2647ebbf338675e5abc5e47e69ba",
       "split": "test"
     },
     {
@@ -635,7 +635,7 @@
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
       "title": "Fluxonium 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "a164ba5072a8a57321950899afb000f41e2c1d9fdebebac5562022f155b73173",
+      "sha256": "acc7af616ed11494912189ded37a7395faaf8068e635265fcaf3d1ce5ae2b0f3",
       "split": "train"
     },
     {
