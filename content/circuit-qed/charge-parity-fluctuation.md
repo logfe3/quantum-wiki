@@ -157,6 +157,30 @@ Ramsey 序列的宇称检测之外，还有**不需要脉冲序列**的连续探
 
 *阵列级验证：能隙工程前后高能事件的相关错误率对比——衬底级设计显著降低阵列级相关错误。图源：McEwen et al. (2024)，Fig. 2。*
 
+### 纯退相干的理论完备：发散问题与完整 Γφ
+
+词条理论层此前覆盖弛豫（率方程）；**纯退相干**是另一条必须补的理论线：
+
+**黄金规则发散**：BCS 准粒子引起的纯退相干在黄金规则（一阶微扰）下给出**发散**的 $Gamma_phi$——隧穿振幅的奇点（BCS 态密度在能隙边发散）使微扰展开失效。解法是**重求和**（高阶图求和）或非微扰处理——发散消除后 $Gamma_phi$ 有限且正比于准粒子密度。
+
+![[assets/figures/charge-parity-fluctuation/2c2c1515517b0c88c454e19edfc8ed9a7f275d702b7c66542ce41c85c2ced8d6.jpg]]
+
+*纯退相干的发散问题：黄金规则在 BCS 态密度奇点处失效——高阶重求和的必要性。图源：Catelani et al. (2014)，Fig. 1。*
+
+![[assets/figures/charge-parity-fluctuation/37394933c707459584962b6009e463f4e734f8965a70a4dfa447301fe0abec1e.jpg]]
+
+*重求和后的有限结果：$Gamma_phi$ 正比于准粒子密度——发散消除。图源：Catelani et al. (2014)，Fig. 2。*
+
+**完整理论**（同系列第二篇）：$Gamma_phi$ 的完整表达（含温度依赖、相位偏置依赖）——与弛豫率 $Gamma_1$ 一起构成准粒子诱导退相干的**完整预算**：任何工作点的相干时间 $T_2$ 都可从准粒子密度+结参数预测。
+
+![[assets/figures/charge-parity-fluctuation/4cfdd4d248a4e436d0b4edd2c878ef1878a212cf98f7b5527dab9c1c6153d351.jpg]]
+
+*$Gamma_phi$ 的完整理论：温度与相位偏置依赖——准粒子退相干预算的解析表达。图源：Catelani et al. (2012)，Fig. 1。*
+
+![[assets/figures/charge-parity-fluctuation/9705cee2a5de0f5e3eee1d16240ce3502b98ad95d42b1e2d1c767f53d5c38dae.jpg]]
+
+*理论-实验对照：预测的 $Gamma_phi$ 与实测退相干——准粒子预算的定量验证。图源：Catelani et al. (2012)，Fig. 2。*
+
 ## 温度依赖与低温柔景
 
 在 20–170 mK 范围升温重测：宇称开关率 $\Gamma_{\mathrm{rts}}$、$\Gamma_{00}^{eo}$、$\Gamma_{11}^{eo}$、$\Gamma_{10}^{eo}$ 同步上升，$T_1$ 却对温度不敏感直到约 150 mK——之后 $R_{10}(\tau\to0)$ 变号，标志准粒子隧穿成为主导弛豫机制。用式 (2) 反推 $T_r=20$ mK 时的准粒子密度 $n_{\mathrm{qp}}=0.04\pm0.01\ \mu\mathrm{m}^{-3}$，与计量学器件中报道的最低值一致；低温下 $\Gamma_{10}^{eo}$ 的压制比热平衡分布预期的弱得多，说明残余准粒子来自红外辐射等非热来源——改进屏蔽可进一步压低。
