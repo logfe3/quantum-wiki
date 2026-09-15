@@ -348,6 +348,38 @@ $$
 
 对 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
 
+### 器件-材料-电路：三维扩展
+
+**外围电路**决定 TWPA 的实际性能上限：3WM 行波放大器嵌入双工器+混合耦合器+阻抗匹配网络——信号-泵浦分离、反射抑制、通带平坦化全部由外围完成。理想增益的 TWPA 没有外围电路就到不了量子极限。
+
+![[assets/figures/parametric-amplifier/f85fc17485d135fba72c0e81040fcb7dae782128a31dad4019f0d048a24704e7.jpg]]
+
+*TWPA 外围电路系统：双工器+混合耦合器+匹配网络——信号-泵浦分离与反射抑制。图源：arXiv:2310.11909，Fig. 1。*
+
+![[assets/figures/parametric-amplifier/46395977efdbec29e287d567aafd8db75cb8bb3ab0f413285efa1ff1f31a3b8e.jpg]]
+
+*外围电路的效果：嵌入前后的增益/噪声性能对比。图源：arXiv:2310.11909，Fig. 2。*
+
+**材料维度**：量子极限 TWPA 的 NbTiN 薄膜——高动力学电感（低损耗四波混频介质）的薄膜工艺直接影响量子极限性能；与超导比特侧的 NbTiN 高阻抗腔（词条间的材料呼应）共享工艺基础。
+
+![[assets/figures/parametric-amplifier/7b8c729f49198072bd2fa302b5213018af8d49ac5757ef7f3046e7e4a0ae7d7e.jpg]]
+
+*NbTiN 薄膜表征：高动力学电感薄膜的参数测量——量子极限 TWPA 的材料基础。图源：Mantegazzini et al. (2024)，Fig. 1。*
+
+![[assets/figures/parametric-amplifier/05f0c292747acf542d77d12a236286378c7bb4379af3b5cdf7a6e88413e92544.jpg]]
+
+*量子极限性能验证：NbTiN TWPA 的噪声测量——接近量子极限的附加噪声。图源：Mantegazzini et al. (2024)，Fig. 2。*
+
+**JPA 的宽带变体**：CPW 型阻抗变换 JPA——带宽-增益权衡的阻抗变换方案，鲁棒低噪声设计。
+
+![[assets/figures/parametric-amplifier/e926252a6f8cca35c60c10eb033f3dfeb46dd095b4d6b2abde74e11266195905.jpg]]
+
+*宽带 CPW 阻抗变换 JPA：带宽-增益权衡的新方案——鲁棒低噪声设计。图源：arXiv:2310.17084，Fig. 1。*
+
+![[assets/figures/parametric-amplifier/aed5da97d4fb7b4d33ff6b95f7830b267177bc17fb1b19a72aecfb070d5a9500.jpg]]
+
+*性能验证：增益/带宽/噪声的三维指标。图源：arXiv:2310.17084，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 参量放大器作为读出链首级，与[[readout-measurement/rf-reflectometry|射频反射测量]]共享同一反射链路：前者抬高后者输出信号的电平，让 HEMT 的噪声贡献被压制；[[readout-measurement/purcell-filter|Purcell 滤波器]]则放在腔与 JPA 之间，保护比特 $T_1$ 不因开放读出端口而缩短。
