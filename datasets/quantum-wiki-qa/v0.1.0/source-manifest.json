@@ -1,5 +1,5 @@
 {
-  "source_digest": "a8a3d0c6cfc707a065de1ceec638e913d919a7ecde40c7f879e4a397f4f9dccf",
+  "source_digest": "368685d2f5d94b87e6e1fd169638bdc19aef7ec92b15c9c2c0d86012ff1c3d12",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -222,7 +222,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "d5a0a214ec39669d4fce8dd34bcbe027ab2b3cf2cbbbaa81e5e194c01cd2ea1f",
+      "sha256": "05d1d229d7d9d8697a7864478388aac8f738044074fb5a83bfa1e56ad8f6261a",
       "split": "dev"
     },
     {
@@ -313,7 +313,7 @@
       "path": "content/qubit-control/electric-dipole-spin-resonance.md",
       "title": "电偶极自旋共振",
       "topic": "qubit-control",
-      "sha256": "a5566ff3c1af45a0a55ef0a3ffb32e53595aa794f1cd05cf38cb4b61ca5496e8",
+      "sha256": "d0c3db34dec7e9883029a9bf8cf5fa40b07b8b59561ec59f0de6e8a8e7da1fec",
       "split": "test"
     },
     {
@@ -341,7 +341,7 @@
       "path": "content/qubit-control/hole-spin-qubit.md",
       "title": "空穴自旋量子比特",
       "topic": "qubit-control",
-      "sha256": "a1e99a775c8e39b8aa2f917ecb15052f6e8f970b66c618c8bbdda4cdac50b0c5",
+      "sha256": "4a2b16b0d8d4ab3908db69ab120ad6be476b628b3b89b1a848396bae02e5b21b",
       "split": "train"
     },
     {
@@ -530,7 +530,7 @@
       "path": "content/scaling-automation/automatic-tuning.md",
       "title": "自动调控",
       "topic": "scaling-automation",
-      "sha256": "545c3e1f05e8b9a2ec295f6d075a691408679ec0397a3b5cfa8f75b2d5bfb37b",
+      "sha256": "e2db1c37432bdc6acc06be85b4c107f22cedefe83a6af5782e0c8a5ba38ee5e5",
       "split": "train"
     },
     {
@@ -551,7 +551,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "327ccba97e2f625f72f387ed10eb06705ced5de7019b464e978edf980bb3e1a8",
+      "sha256": "7c1fb8591fb1cd4977d4b3eec1a2f93f9172498e043c2af99d11e64f7354c214",
       "split": "train"
     },
     {
@@ -586,7 +586,7 @@
       "path": "content/scaling-automation/quantum-dot-array.md",
       "title": "量子点阵列",
       "topic": "scaling-automation",
-      "sha256": "b2a96c1fce9c9e31a7ff3b992a23e1c1d5823c4eeb1f241eed0578c1abf70b65",
+      "sha256": "b5145bef804351158a2a93d52c7290357535a4fdfd8ebc7256dab861f9ee9c38",
       "split": "train"
     },
     {
