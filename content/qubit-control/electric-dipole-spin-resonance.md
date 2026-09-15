@@ -176,6 +176,16 @@ EDSR 把"驱动"与"电荷敏感性"绑在了同一条耦合通道上，工程�
 
 **微波串扰与频率拥挤。** 阵列中每个比特都通过同一片上天线或栅极接收微波，物理上不可避免地引入驱动场串扰；翻转模式在大失谐点处 $f_\text{spin}$ 衰减但仍有非零背景，加剧了"关不掉"的泄漏。一种典型缓解是结合[[scaling-automation/virtual-gates|虚拟门]]与[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]对每个栅极加线性补偿，使 EDSR 脉冲期间邻近比特电荷态保持不变。
 
+**强驱动的多能级交叉**：词条主线是弱驱动（自旋-电荷混合近似）；强驱动下 EDSR 与**多能级 Landau-Zener 干涉**交叉——p 型硅的强自旋轨道使多个激发态参与动力学，LZ 干涉图样调制 EDSR 响应。这一交叉区是空穴自旋操控的"全物理"：自旋-轨道混合+多能级+非绝热跃迁共存。
+
+![[assets/figures/electric-dipole-spin-resonance/0e7b353b90a168b1c5f8cea5a5269e579aec9345c85a538683ae660ce21ffa88.jpg]]
+
+*EDSR 与多能级 LZ 干涉的交叉：强驱动下多个激发态参与——空穴自旋的全物理区。图源：Ibad et al. (2025)，Fig. 1。*
+
+![[assets/figures/electric-dipole-spin-resonance/f5b264c14f786924bf5e719a1635a02d8ad10983f334cbfd192011020e7f0a06.jpg]]
+
+*干涉图样：LZ 干涉对 EDSR 响应的调制——多能级动力学的实验签名。图源：Ibad et al. (2025)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]：EDSR 是单自旋比特在 ESR 天线之外的"全电驱动"选项；ESR 与 EDSR 的差异仅在于 $B_1$ 的来源——天线电流还是合成/本征 SOC 转换出的等效磁场。

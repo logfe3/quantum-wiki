@@ -127,6 +127,16 @@ $$
 
 *热负载与密度优势：带状线的热导更低、布线更紧凑——大规模布线的选材依据。图源：Monarkha et al. (2024)，Fig. 2。*
 
+**量子点与电子的单片集成**是 cryo-CMOS 的里程碑：硅量子点与复用色散读出电子集成在同一 CMOS 芯片——量子比特与控制/读出电路真正同片，"紧凑集成"从架构图变成实物。对照词条前文的"4K 冷板分离式"方案，单片集成消除芯片间互连。
+
+![[assets/figures/cryo-electronics/eee1555164633a832eb5d7c7969a2558f6a1a5c4ec4fe5ff11e87e5ae04b2144.jpg]]
+
+*单片集成的 cryo-CMOS：量子点+复用色散读出电子同片——"紧凑集成"的实物实现。图源：Nature Electronics (2021)，Fig. 1。*
+
+![[assets/figures/cryo-electronics/ef532fc249e518f0144fa685110a29b98b765664115fe410d5551b1ffb2f3ac8.jpg]]
+
+*集成读出性能：片上色散读出的信噪比与保真度。图源：Nature Electronics (2021)，Fig. 2。*
+
 ### 半导体量子点端的特殊考量
 
 相比 transmon，半导体量子点的链路上还有两点不同：
