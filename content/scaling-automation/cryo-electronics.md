@@ -117,6 +117,16 @@ $$
 
 *开源控制栈：FPGA 固件到主机软件的完整实现——分布式控制在超导阵列上的落地。图源：Fruitwala et al. (2024)，Fig. 2。*
 
+**布线介质的选材依据**：软带状线（flexible stripline）与同轴电缆在比特控制/读出脉冲上的等效性测量（Bluefors）——两种介质的信号完整性（衰减、色散、串扰）在实用频段内等效；带状线在热负载（热导更低）与密度（更紧凑）上占优。布线选材从此有实验依据而非经验。
+
+![[assets/figures/cryo-electronics/b12b0d1ce95b84abdaf7762fdd4d789ed4dea77b74ec07915a93fb3a98517075.jpg]]
+
+*软带状线 vs 同轴的等效性测量：控制/读出脉冲经两种介质的信号对比——实用频段内等效。图源：Monarkha et al. (2024)，Fig. 1。*
+
+![[assets/figures/cryo-electronics/e74277a53bdd2fdf127d920ace5096f9259994ba9665dbf36a95c2fbc35a3c4b.jpg]]
+
+*热负载与密度优势：带状线的热导更低、布线更紧凑——大规模布线的选材依据。图源：Monarkha et al. (2024)，Fig. 2。*
+
 ### 半导体量子点端的特殊考量
 
 相比 transmon，半导体量子点的链路上还有两点不同：

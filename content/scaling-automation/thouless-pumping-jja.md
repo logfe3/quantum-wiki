@@ -47,6 +47,18 @@ $$
 
 **Harper-Hofstadter 方案**：把额外自由度（自旋、频率或链维度）当作合成维度，让 JJA 的实空间格子与合成维度耦合，等效磁场下出现 Harper-Hofstadter 能带——拓扑平带与手性边缘态。JJA 的栅控自由度天然提供了合成维度的耦合项，是实现这类格点模型的候选平台。
 
+### 合成磁矢势：规范场工程的阵列实现
+
+与泵浦同族的拓扑物理是**合成规范场**：2D 超导比特阵列中，对比特耦合做参数调制（相位偏置随时间旋转），等效于给系统加上**人工磁场**——Hopings $J_{ij}e^{i	heta_{ij}(t)}$ 的相位因子正是矢势的佩尔斯替换。MIT/Lincoln Lab 的实现在方阵列上生成合成磁矢势，观测等效磁场下的激发谱——规范场工程从 JJA（本词条主体）推广到比特阵列。
+
+![[assets/figures/thouless-pumping-jja/8c8a03f276b81ec346b9d1f41593ff1253d1afc71136bb67784f8309d296efcf.jpg]]
+
+*合成磁矢势的实现：2D 比特阵列+参数调制耦合——佩尔斯相位等效人工磁场。图源：Rosen et al. (2024)，Fig. 1。*
+
+![[assets/figures/thouless-pumping-jja/297f3a4bf4ebf9a85a4dc01cf69b6d1a95999904535365044817f00418d4056c.jpg]]
+
+*等效磁场下的激发谱：合成矢势引起的能谱变化——规范场工程的直接观测。图源：Rosen et al. (2024)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 硬件载体是[[circuit-qed/superinductance|约瑟夫森结阵列与超电感]]的可调版本：每个岛的栅控来自[[superconducting-qubits/gatemon-qubit|gatemon]]的半导体-超导体杂化工艺，库仑阻塞物理与[[fundamentals/coulomb-blockade|库仑阻塞]]一致。

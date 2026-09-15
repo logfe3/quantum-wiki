@@ -254,6 +254,18 @@ Bishop 等人展示了另一条利用 Jaynes–Cummings 非线性的路线：强
 
 *REM 修正后的层析测试：复杂噪声源下的重建精度提升——对解析模型无法覆盖的噪声稳健。图源：arXiv:2312.04211，Fig. 2。*
 
+### 多能级（qudit）读出架构
+
+超越二能级子空间的读out：多能级比特（qudit）的可扩展读出架构——同时分辨 $|0angle$ 到 $|d-1angle$ 的 $d$ 个能级，读out硬件（腔+滤波器）设计兼容多能级色散移。与多能级读出协议（绕开弛豫极限，词条前文）衔接：协议层 + 架构层合起来支撑 qudit 计算。
+
+![[assets/figures/single-shot-readout/f86f03eaee017aea264541ce254284e3e068afcead984dc1fbd7c2cd3f0b23bc.jpg]]
+
+*多能级读出架构：$d$ 能级同时分辨的腔+滤波器设计——兼容多能级色散移。图源：arXiv:2405.08982，Fig. 1。*
+
+![[assets/figures/single-shot-readout/4b56d59834b18130cf1d4847f2bae6bd079ae25b101c6776cf392249d6c2b588.jpg]]
+
+*qudit 读出的性能：多能级判别保真度——架构层的可扩展性验证。图源：arXiv:2405.08982，Fig. 2。*
+
 ### E–L–R 三段脉冲序列
 
 硅量子点单发读出的典型时间序列由三段方波组成：
