@@ -177,6 +177,16 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 
 *方法应用示例：不同主方程在具体比特系统上的预测对比——方法选择的实践指南。图源：arXiv:2402.19241，Fig. 2。*
 
+**权威综述的二十年视角**（Blais/Schoelkopf/Girvin 系，Nature Physics 2020）：cQED 从 1999 年首次相干测量到量子纠错器件的二十年发展系统回顾——机制、器件、架构三条主线的演进脉络与每一步的驱动因素。与学习路径导引（前文）的入门综述互补：这篇是深度综述，覆盖物理细节与技术演进的完整因果链。
+
+![[assets/figures/circuit-quantum-electrodynamics/8b596841b225d051308e9c3bdb827108a53182f3db1ac879110d69b60ca1b0c6.jpg]]
+
+*cQED 二十年发展的系统框架：机制-器件-架构三条主线的演进。图源：Nature Physics 综述 (2020)，Fig. 1。*
+
+![[assets/figures/circuit-quantum-electrodynamics/644cf51cf227b6bec0f08695c048d8871054bb77301f7a62260ebfa4a0231d6c.jpg]]
+
+*技术演进因果链：相干时间提升-架构变化-纠错需求的关联。图源：Nature Physics 综述 (2020)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 最小模型与全部能级结构见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志性观测是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。

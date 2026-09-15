@@ -62,6 +62,16 @@ $$
 
 *六种主流超导腔构型与实测寿命：从 3D 腔到波导腔、共面腔的设计演进——减少电场参与的损耗界面（铌/钽表面、接头、支撑）是把光子寿命推进到毫秒量级的主线。图源：Cai et al. (2023)，Fig. 2。*
 
+**共振猫态制备**绕开色散假设：连续驱动的比特与腔共振（或近共振）耦合——不经色散近似、不需双光子驱动或工程耗散，猫态在共振动力学中直接生成。制备速度-比特退相干的权衡：共振区耦合强（快）但比特寿命消耗大，色散区反之。
+
+![[assets/figures/bosonic-cqed/ee32b76470bc648727d0446eebfa949da03446805981f7e2ceee3eb339b1b22c.jpg]]
+
+*共振猫态制备：连续驱动比特（开/关共振）——无色散假设的猫态生成方案。图源：arXiv:2310.03854，Fig. 1。*
+
+![[assets/figures/bosonic-cqed/fec434b50dba0fd53ad1d671f8723ac33012affe964e754bbeb565fabdbdafe1.jpg]]
+
+*制备保真度：共振方案的速度-退相干权衡。图源：arXiv:2310.03854，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[circuit-qed/circuit-quantum-electrodynamics|电路 QED]]是玻色编码的硬件基础：腔-比特耦合（JC 模型）提供编码态的操控接口，[[readout-measurement/dispersive-readout|色散读出]]的宇称测量是猫码 Syndrome 提取的标准手段。
