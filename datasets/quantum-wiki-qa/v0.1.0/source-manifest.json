@@ -1,5 +1,5 @@
 {
-  "source_digest": "a2108b9ea32f41f617951fc11a5abb6d2844fcd20de6336d883bf5d11f38d2b5",
+  "source_digest": "b44fa164dcdf5c57df2eb13cf1e4f78279497bb59933213cc227e543e6629e09",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -40,7 +40,7 @@
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
       "title": "电路量子电动力学",
       "topic": "circuit-qed",
-      "sha256": "c2620e98e6c655c38f80c590b2767812d57847d379b28942115080e8c76cd042",
+      "sha256": "1f74e419324b31eff5b4e2921ad64409342accb7ebfb0eeb4f8541a8eae60f39",
       "split": "train"
     },
     {
@@ -54,7 +54,14 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "0c9bdb342b687f1e24662af1738faba8627a2700dc5c9ebb6f18fcd1fec2f32f",
+      "sha256": "ad649fc13144d8b9545e7a8f01e3b35bb78e40e031c511d74e73a376878b27db",
+      "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
+      "title": "高次体声波谐振器量子声动力学",
+      "topic": "circuit-qed",
+      "sha256": "450f2c77b6237b775e3d65d352cb863ee9ce8f31fba5c7a8a98968e6d40d85b4",
       "split": "train"
     },
     {
@@ -103,7 +110,7 @@
       "path": "content/circuit-qed/strong-coupling.md",
       "title": "强耦合判据",
       "topic": "circuit-qed",
-      "sha256": "fea2136836f08f8917616461a83ae9c6d21a2fc0aabb1089da5a8fc7eaf1de6a",
+      "sha256": "138fcda405bc057342ca06b16daa2bef7e66232852c2eec31b7e1217480c5919",
       "split": "train"
     },
     {
@@ -117,7 +124,7 @@
       "path": "content/circuit-qed/vacuum-rabi-splitting.md",
       "title": "真空 Rabi 劈裂",
       "topic": "circuit-qed",
-      "sha256": "3fc1f5d832ba2e07047c7c0f1ee518f78f8afc21ba874957b652c5493f05baa0",
+      "sha256": "720689dbbfee8ef4dc9f91df036095ad56ef4f30f0993016fd2a4edb9dd2a992",
       "split": "train"
     },
     {
@@ -250,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "91a31e86bb41c4ec9a2019688e66550ff6d9e27ae36444ead76f0a09cb03cf66",
+      "sha256": "67e9c2567222a9e7c6ad232d63f03af150e67700469ece1b3422d2f373eb99fb",
       "split": "train"
     },
     {
@@ -446,7 +453,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "94ba5d3a33265c5d8248fdd4c6d86e5158af5dbb22573f92cd4fb5a85337335c",
+      "sha256": "4a58fe2b112ee02f97284dcb35b159cf102c692607107bbfa235ed6034054e9e",
       "split": "train"
     },
     {
@@ -474,7 +481,7 @@
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "0c84932a02cb6a56fcd3bdcaf557b059e815347b4013948dc19bd6f5b96359c1",
+      "sha256": "51f7174f0deef01f71dd6a47668d67a68619d57bc238d7723a7caeabe10132d1",
       "split": "train"
     },
     {
@@ -488,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "00434ba400cf4ab02c3d819b456fe691d5555b1bc1fe559479e6eb4ed8f5dea6",
+      "sha256": "3df14b1cc53f0200eae9aea116e7d73b0270c523a17c712d1b8337f4577f64d8",
       "split": "dev"
     },
     {
@@ -562,10 +569,17 @@
       "split": "train"
     },
     {
+      "path": "content/scaling-automation/mmiqc-3d-integration.md",
+      "title": "多层微波集成量子电路与三维集成",
+      "topic": "scaling-automation",
+      "sha256": "b7617e4ea2f0d09326d57fe008352db6abf697ee16688e0b909808e0707d49ba",
+      "split": "train"
+    },
+    {
       "path": "content/scaling-automation/multi-time-tomography.md",
       "title": "多时间量子过程层析",
       "topic": "scaling-automation",
-      "sha256": "1a1337b3134bb151384db05285cc5541d7378064b9925094042bb0c2bc0ec5f8",
+      "sha256": "9687dc1969e700f222307633bc8043d7d077f8d393970d29fb9883135414b0cc",
       "split": "train"
     },
     {
