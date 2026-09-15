@@ -51,6 +51,28 @@ $$
 
 *相位滑移率的测量：(a) 160 结环路谐振器最低模频率随外加磁通的变化——磁通增加时环内持久电流增大、模频率下降，一次相位滑移事件表现为频率跳变（整数个磁通量子数 $m$ 变化），磁通扫描多个量子后才发生一次滑移，典型间隔超过一小时（滑移率远低于 1 mHz）；主动复位方案（高功率脉冲激发 $k\ge2$ 模）让环路回到最低磁通态后继续追踪，离散倒抛物线可明确标定环内磁通量子数。图源：Roushan et al. (2012)，Fig. 4。*
 
+### 耦合模式扩展与材料前沿
+
+**纯动力学电感耦合**：flux qubit 与腔的耦合不经电容——纯电感通道（共享电流路径）实现，耦合强度由几何电感重叠决定。纯电感耦合对照标准电容耦合：杂化模式干净、串扰特性不同，Pop 组的实验验证其在 cQED 架构中的可行性。
+
+![[assets/figures/superinductance/0acc27970e31fbf2ef8f467f4cc0ec56f3e71ea41fbd4c2ff68341cab418196e.jpg]]
+
+*纯动力学电感耦合的 cQED：flux qubit 与腔共享电流路径——不经电容的耦合通道。图源：Geisert et al. (2024)，Fig. 1。*
+
+![[assets/figures/superinductance/4ba3acd6105c9cc1130a102c7b4136657580ec2e1453c67a82c9bdb64514b1a4.jpg]]
+
+*耦合验证：纯电感耦合的谱学与杂化模式。图源：Geisert et al. (2024)，Fig. 2。*
+
+**材料前沿**：cQED 探测魔角石墨烯的超流刚度——平带超导的配对机制研究用超导腔做探针（动力学电感测量超流响应），把超电感词条的材料范围扩展到石墨烯超导。
+
+![[assets/figures/superinductance/3b579d0c8496e704d3b99280e23c9ccaf580125c839d69df236d7f539b68f487.jpg]]
+
+*cQED 探测魔角石墨烯：超流刚度的腔测量——平带超导进入 cQED 视野。图源：arXiv:2406.13740，Fig. 1。*
+
+![[assets/figures/superinductance/0da11e6dae1bc31da117fd44a42f1c0dd59582c12ff06a03da283f12aa32aae7.jpg]]
+
+*超流响应测量：动力学电感随栅压/温度的变化——魔角石墨烯的超导参数提取。图源：arXiv:2406.13740，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[superconducting-qubits/fluxonium-qubit|Fluxonium]] 的大电感 $E_L$ 正是 JJA 动力学电感——fluxonium 的深周期势阱直接依赖本词条的超电感实现；其相位滑移率决定阱间隧穿（也即电荷色散）的幅度。
