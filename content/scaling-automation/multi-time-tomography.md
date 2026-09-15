@@ -108,6 +108,16 @@ flowchart LR
 
 *层析精度对比：物理约束网络 vs 传统方法——多比特串扰场景下重建保真度提升。图源：arXiv:2312.07958，Fig. 2。*
 
+**云平台的独立证据**：IBM Quantum 系统上时域分辨测量同样发现比特错误率的**开关式涨落**——高错误状态持续数十秒后切换回低错误状态，与 Hirasaki 的阶梯式变化（前文）同机制。云平台的规模（多器件、长时间运行）让涨落统计更充分，为后选择误差缓解提供了部署环境。
+
+![[assets/figures/multi-time-tomography/945f99e57d65be07a5a0808e6556bd7527094e3462413d990b7595e35364bc97.jpg]]
+
+*IBM Quantum 的时间涨落：时域分辨测量揭示错误率的开关式变化——高/低错误态持续数十秒。图源：arXiv:2402.05409，Fig. 1。*
+
+![[assets/figures/multi-time-tomography/8d588930ae54341728fec967bf81b0b85c577a75cc6b7dbcac0a518c505eca89.jpg]]
+
+*涨落的统计特征：多器件/长时间的开关事件统计——云平台规模的独立验证。图源：arXiv:2402.05409，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 中途测量与反馈复位的配合属于[[readout-measurement/single-shot-readout|单发读出]]的应用延伸：测量保真度直接决定每个分支的统计质量。
