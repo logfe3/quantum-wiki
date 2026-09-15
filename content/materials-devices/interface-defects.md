@@ -330,6 +330,16 @@ flowchart LR
 
 *双音谱的 TLS 检测结果：特征线形直接读出 TLS 参数——固定频率比特阵列的 TLS 表征工具。图源：arXiv:2404.14039，Fig. 2。*
 
+**铌薄膜的微波损耗直接测量**（材料证据链第四块）：Nb 是二维 transmon 的主力电极材料，但多层材料-界面的叠层使 Nb 的损耗贡献一直难以单独标定——直接测量（谐振器法）把 Nb 膜的损耗率从叠层中剥离，材料清单的铌数据补齐（综述→铝硅→钽→铌四块齐全）。
+
+![[assets/figures/interface-defects/88fcd93f43328cc481f14c5ad1564b793e79afb5ce8e87fc790ddfa246b43e7d.jpg]]
+
+*Nb 膜微波损耗的直接测量：从多层叠层中剥离 Nb 的贡献。图源：arXiv:2407.08856，Fig. 1。*
+
+![[assets/figures/interface-defects/fa6448b0a6af3e2dbb2770684f8940f76d9485701bce660481d2cf7ba1060fd6.jpg]]
+
+*损耗率的测量结果：Nb 膜的品质因子。图源：arXiv:2407.08856，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状。

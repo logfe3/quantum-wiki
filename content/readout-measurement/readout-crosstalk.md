@@ -184,6 +184,16 @@ $$
 
 *门保真度与串扰：大规模多邻居阵列的性能验证。图源：arXiv:2306.17007，Fig. 2。*
 
+**泄漏迁移率**（Leakage Reduction Unit, LRU）是泄漏对策的度量衡：LRU 定义为标准泄漏还原操作把布居从非计算空间拉回的效率单位——不同对策（耦合器 Reduction、ZZ-free 门、几何门）用统一的 LRU 标尺比较。泄漏不能被标准 QEC 处理（破坏纠错假设），LRU 让"泄漏多大、对策多有效"有了可比较的定量语言。
+
+![[assets/figures/readout-crosstalk/ec81fbde2bfff00c675e759eabffe5a354808d46526da75a40c8346a0109f7b7.jpg]]
+
+*泄漏迁移率（LRU）：泄漏还原操作的标准度量——不同对策用统一标尺比较。图源：arXiv:2406.04083，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/1b3b6afd7822a98c74e3df601dc5435630a6f40a7e46bc5579bc2ebaba157041.jpg]]
+
+*LRU 的应用：泄漏还原的效率量化。图源：arXiv:2406.04083，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。
