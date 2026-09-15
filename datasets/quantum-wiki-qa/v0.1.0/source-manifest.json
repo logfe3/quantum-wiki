@@ -1,5 +1,5 @@
 {
-  "source_digest": "d89f50d4ea54dcc924cb9e6578efd8a07e1da055cefa76995c65a938c68f162a",
+  "source_digest": "8995eb558b4464315279f12ecddde6bff30fb923c4368bb958047d66877a0245",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -19,7 +19,7 @@
       "path": "content/circuit-qed/cavity-mediated-coupling.md",
       "title": "腔介导远程耦合",
       "topic": "circuit-qed",
-      "sha256": "90b3539c6e93f7c3bab68fa3f5eef2d7ba11b5518764a94beb8a10df9b4d18cf",
+      "sha256": "28a67f890b3f81c7d736461a60ef9addb148ed00b89cb3231da804ca0e56e0d4",
       "split": "train"
     },
     {
@@ -54,7 +54,7 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "c2c81c0d7ae051ef91d6871d6467a9c78b6a5837c0dc05e5bdbc58f715c5bae4",
+      "sha256": "938a9832609d70dd43026c2a44f3ac4f39927706616fa897333811761396a3fe",
       "split": "train"
     },
     {
@@ -257,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "28af55fdf5a8c45b29f99aa37c24bb6c19e7491e55687ec8644c1b99de031099",
+      "sha256": "8373ac25a5319594f13a3e670739a2302d944006610e8f72127bb1944e139a81",
       "split": "train"
     },
     {
@@ -481,7 +481,7 @@
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "1ecf24b73e2e687c6ec81c937c20694b0b1d46c0835abf635f07e5101aa1ec84",
+      "sha256": "e819869ed7d2567f520c132cd56fadc7be446fdbfea060c576816839e1407a8d",
       "split": "train"
     },
     {
@@ -495,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "5836943e94b839f57ffe8b82a5856ada1fa198f8c6231bfbbdffbeb4716260b0",
+      "sha256": "ccdda50408e667830cd30317e1d99ad65f7448cedb2296c0f5256116dbae8bcb",
       "split": "dev"
     },
     {
@@ -551,7 +551,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "b94c039e12fd525ca24a88177ccd3359298bac0a44c9ee2d4e7696c5e1f4d317",
+      "sha256": "bb127d1526cb14037ed566d70ee4319bee6f08593064bd825d6b9eec2e4e6353",
       "split": "train"
     },
     {
@@ -572,14 +572,14 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "2db507e77f472fe4dca4392f6008204425513518b0b37e54faa21b4021b88379",
+      "sha256": "15204c9c4b7e184eef59b16dda43812595d8baa3eb7d566b910326cfe7989359",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/multi-time-tomography.md",
       "title": "多时间量子过程层析",
       "topic": "scaling-automation",
-      "sha256": "e3b40c07ac87150eb190623592fb94b94236d42fbaaae8e3a12bf6b51adf61aa",
+      "sha256": "af04466ef3bf08e36ccfd0a348012052e749a8ca5285b868deda4bd51a7b9935",
       "split": "train"
     },
     {
