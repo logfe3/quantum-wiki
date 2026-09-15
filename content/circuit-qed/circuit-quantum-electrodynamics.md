@@ -167,6 +167,16 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 
 *相干时间的指数提升：十五年间能量弛豫与退相干时间的演进——每代器件对应一类损耗机制的识别与压制。图源：cQED 入门综述 (2018)，Fig. 2。*
 
+**方法论工具箱**：开放量子系统方法综述把比特建模的主方程族系统化——Lindblad（马尔可夫、跳跃算符）、Redfield（弱耦合、非马尔可夫修正）、Floquet-Markov（周期驱动）、 generalized master equations（强耦合）——各方法适用的耦合强度/记忆时间/驱动 regime 明确划分，是学习路径导引的方法论延伸。
+
+![[assets/figures/circuit-quantum-electrodynamics/9e4e9bbfa222a786489024c75e8d351c4996b17fa9f98fa8dd4fa86ad46ab458.jpg]]
+
+*开放量子系统方法地图：Lindblad/Redfield/Floquet-Markov 等主方程方法的适用 regime 划分——耦合强度与记忆时间两个轴。图源：arXiv:2402.19241，Fig. 1。*
+
+![[assets/figures/circuit-quantum-electrodynamics/415ee6a52b2ca0ae241e8091ae39b430bb2884657be670df0e2b71b040cd8c46.jpg]]
+
+*方法应用示例：不同主方程在具体比特系统上的预测对比——方法选择的实践指南。图源：arXiv:2402.19241，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 最小模型与全部能级结构见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志性观测是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。
