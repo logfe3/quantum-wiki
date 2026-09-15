@@ -206,6 +206,18 @@ Bishop 等人展示了另一条利用 Jaynes–Cummings 非线性的路线：强
 
 *JC 非线性"亮态"读出：强驱动色散区腔透射随驱动功率的跳变——临界功率依赖比特初态，据此实现 87% 单发保真度。图源：Bishop et al. (2010)，Fig. 1。*
 
+### cQED 门锁读出的奠基实验
+
+与腔分岔、JC 亮态并列的第三条 cQED 单发路线是**门锁（latching）读出**：Siddiqi 等人在 quantronium 比特（分裂 Cooper pair box+大隧穿结）上耦合非线性约瑟夫森谐振腔——腔的开关事件**强滞后**（hysteretic）：一次翻转发生后即使驱动降低也保持状态，等于把瞬时测量结果'锁存'为可慢慢读的稳态。这一方案同时给出了比特相干（$、{echo}$）的色散测量。门锁读出是非线性腔应用于单发测量的最早演示之一，与分岔读出（Mallet 2010）、JC 亮态（Bishop 2010）同属 cQED 单发读出的奠基族谱。
+
+![[assets/figures/single-shot-readout/dcf1a032a6f156470168547c1867b59f7ea6b4672f1903e98bbb0f31f760c948.jpg]]
+
+*quantronium 与非线性谐振腔的门锁读出：约瑟夫森谐振腔的开关事件强滞后——一次翻转即锁定，驱动降低后状态保持，单发结果被'锁存'。图源：Siddiqi et al. (2006)，Fig. 1。*
+
+![[assets/figures/single-shot-readout/648b4cc2ec692677a555b5e9942610f150c7ac9f3caa60a9f74519333a5c2da4.jpg]]
+
+*门锁读出的开关统计：驱动电流-开关概率的滞后回线——两条分支对应比特两态，一次测量锁定其一。图源：Siddiqi et al. (2006)，Fig. 2。*
+
 ### E–L–R 三段脉冲序列
 
 硅量子点单发读出的典型时间序列由三段方波组成：

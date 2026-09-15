@@ -134,6 +134,16 @@ $$
 
 *优化门的鲁棒性验证：门保真度随频率失谐的变化——几 MHz 范围内保持高位，足以覆盖残余 ZZ 引起的频移。图源：Satoh et al. (2023)，Fig. 2。*
 
+**谐振腔驱动的 ZZ-free 两比特门**是另一条消除路线：驱动腔动态产生等效耦合，抵消比特间杂散 ZZ 后实现快速高保真纠缠门——与脉冲优化路线（纯软件）不同，腔辅助路线用驱动场做'可调反向耦合'，两条路线在固定频率 transmon 平台上互补。
+
+![[assets/figures/readout-crosstalk/b0443154eea1f10bf7d4e625b17cdb5e4e6bfb0851707b8b1fc7b4235c39a65e.jpg]]
+
+*谐振腔辅助 ZZ-free 纠缠门：驱动腔产生动态等效耦合抵消杂散 ZZ——两比特门保真度在消除残余耦合后提升。图源：arXiv:2311.01332，Fig. 1。*
+
+![[assets/figures/readout-crosstalk/5c3d97def0570c70e0c51233628c67a0039e55eb6be4b0e3e58480b5b302ea5b.jpg]]
+
+*门保真度验证：消杂散 ZZ 前后的两比特门基准对比。图源：arXiv:2311.01332，Fig. 2。*
+
 ## 与其他概念的关系
 
 - 读出串扰寄生在[[readout-measurement/dispersive-readout|色散读出]]的频分复用架构上；每个比特能否被[[readout-measurement/single-shot-readout|单发读出]]是讨论串扰的前提。
