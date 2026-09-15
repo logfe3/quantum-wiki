@@ -1,5 +1,5 @@
 {
-  "source_digest": "368685d2f5d94b87e6e1fd169638bdc19aef7ec92b15c9c2c0d86012ff1c3d12",
+  "source_digest": "bfd86edb6809d4904e8ea8ba9cf4f17afc472e53b9f1dbb93ac300a367aeab76",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -96,7 +96,7 @@
       "path": "content/circuit-qed/spin-photon-coupling.md",
       "title": "自旋–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "de0599fbcfcae5b92dbd8b157127f6f1f1437f8557b773380fe304f705c46129",
+      "sha256": "10aafefe95eed660e8f88b925df00a5be875deb81222b19f1a4485c1aa8071c7",
       "split": "train"
     },
     {
@@ -257,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "82dd9f7ca13e582d08bba12c79f60ef06cb584e2e658952766b18d16189b3919",
+      "sha256": "5aabbc1da340e3e5d3454f2463751586c67e2be1a6660d4eb7532d4a38eefa71",
       "split": "train"
     },
     {
@@ -369,7 +369,7 @@
       "path": "content/qubit-control/pauli-spin-blockade.md",
       "title": "泡利自旋阻塞",
       "topic": "qubit-control",
-      "sha256": "f9a5fa6b60d6acd594d0a0d5a2d0bb232fa22c2e9ecfe4a9eeef96973d2681bf",
+      "sha256": "5b16317996286bf015829650ee9fa5e4d9b87c9e2766b42816d8147e5198f30f",
       "split": "test"
     },
     {
@@ -495,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "decd671007997a98186f36ea3349765e8fd59d0baf9a391ef4b8c316635a72f1",
+      "sha256": "597ec5f0463b177afefbed9a437bd2524fa930acacfb0af2a9a332bded60b4aa",
       "split": "dev"
     },
     {
@@ -516,7 +516,7 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "7d4473560de5c82d650b9f4341127bca71093ed4ec0df75db2c4246cab28c76d",
+      "sha256": "466895f080ef35d93b3c4a290ccfb884468644f86a703fd6fe112232141aabbb",
       "split": "train"
     },
     {
@@ -565,14 +565,14 @@
       "path": "content/scaling-automation/frequency-homogenisation.md",
       "title": "全局操控与频率均匀化",
       "topic": "scaling-automation",
-      "sha256": "1152767b71a89c411b0edb2c8cfe12ef70e85a0fb0bb677748431dd22e19ad28",
+      "sha256": "6c166acdf285b028b313392f7f51a378fad5eae2211d2f75dcabe3d3dee1ba8d",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "93d438fa8cc80b0493504655072745ccbb4cee7ad89f30fb1a530bc7e1524251",
+      "sha256": "1b2d8ae84362e4802b8bc653348339a04d7c027778a7f03f9a21fd0c7ad956b7",
       "split": "train"
     },
     {
