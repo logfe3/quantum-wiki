@@ -239,6 +239,16 @@ $$
 | 六比特单发保真度 | 最高 $98.14\%$（积分 $300$–$500$ ns、120） | 含 Purcell 滤波与 JPA |
 | 量子效率 $\eta$ | transmon 仿真 $\eta\geq 0.5$ 才达阈值 SNR | 收集效率与放大效率的乘积 |
 
+**测量诱导跃迁的全表征**：提高读出功率加速测量，但读出光子的**非弹性散射**会把比特推到非计算态——$|0angle	o|2angle$、$|1angle	o|3angle$ 跃迁率随功率**线性**增长（与无参数理论定量吻合），而 $Gamma_{0	o1}$、$Gamma_{1	o0}$、$Gamma_{1	o2}$ 近似功率无关（由平衡环境的热跃迁决定，符合细致平衡 $Gamma_{1	o0}=e^{hbaromega_q/k_BT}Gamma_{0	o1}$，$Tapprox16$ mK）。这组数据把"QND 破坏的微观机制"定量化：读出功率的提高以非弹性散射跃迁为代价，最高相关功率下 $|1angle	o|4angle^+$ 跃迁仍被强抑制。
+
+![[assets/figures/dispersive-readout/6a0e513a155cf7e3915e6ecd30efa2002fa45cf20447dd41641b6fff657e2292.jpg]]
+
+*测量诱导跃迁的实验：磁通可调 transmon + 四分之一波长读出腔——单发直方图可分辨 $|0angle$ 到 $|4angle$ 全部能级，跃迁率由变时长脉冲序列提取。图源：Connolly et al. (2025)，Fig. 2(a-d)。*
+
+![[assets/figures/dispersive-readout/160da93caae4e8073914f628547d6fb44d66e5e6948f2f0ccbe42e9b4735d60e.jpg]]
+
+*跃迁率随功率的完整表征：$|0angle	o|2angle$ 与 $|1angle	o|3angle$ 线性增长（非弹性光子散射，实线为无参数理论）——读出功率的 QND 代价被定量标定。图源：Connolly et al. (2025)，Fig. 2(e)。*
+
 ## 不是完全无回作用
 
 色散读出虽然比电荷直接输运温和得多，但仍不可避免地引入三类反作用：

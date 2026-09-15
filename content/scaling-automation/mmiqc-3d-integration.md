@@ -82,6 +82,17 @@ flowchart LR
 
 *CZ 门的物理与随机化基准：两比特门的频率轨迹与保真度测量——99.0% 的 CZ 保真度超过表面码阈值要求，为超导平台"可用于容错计算"给出最早的定量证据。图源：Corcoles et al. (2014)，Fig. 3。*
 
+
+**倒装芯片（flip-chip）平台**是三维集成的另一形态：两块芯片面对面键合，比特芯片与读出芯片分层。多悬浮（multifloating）transmon 设计配合**开孔（apertures）工艺**缓解 TLS 损耗——悬浮构型减少比特电容与损耗衬底的接触面积，开孔切断衬底中的 TLS 参与通道。
+
+![[assets/figures/mmiqc-3d-integration/6374d86732e41fc24bcb3d319e78369cc1480c99acbbebfe0328ee48b1214a77.jpg]]
+
+*3D 倒装芯片平台的多悬浮 transmon：两芯片面对面构型，悬浮比特设计+开孔工艺缓解 TLS 损耗。图源：IEEE LMWT (2025)，Fig. 1。*
+
+![[assets/figures/mmiqc-3d-integration/eb5b940f2bef4fc94bf248c33fb9b1dd32de115bb25bb0b882e91f2b95830e25.jpg]]
+
+*建模与分析：悬浮比特的电磁仿真与相干参数预测。图源：IEEE LMWT (2025)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[scaling-automation/cryo-electronics|低温电子学]]管"从室温到芯片"的垂直链路，MMIQC 管"芯片内部"的立体化——两者共同构成扩展的封装维度。
