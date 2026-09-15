@@ -154,6 +154,28 @@ $$
 
 *机理与验证：窄阱增强界面波函数振幅——台阶散射效应增强的定量。图源：arXiv:2607.09570，Fig. 2。*
 
+### 计算框架的第三块与构型扩展
+
+**扩展区有效质量近似**（含应变）：第三种计算框架——有效质量近似（词条已有）在扩展区（布里渊区边界）处理谷间耦合，应变作为形变势进入。三种框架（有效质量/原子界面/扩展区+应变）对照使用，覆盖不同精度-效率权衡。
+
+![[assets/figures/fundamentals-valley/df3065fb9eef651738ff0a9e582552af589e41a2a5e2c49de1d915aefddabe18.jpg]]
+
+*扩展区有效质量近似：含应变的谷劈裂计算——第三种理论框架。图源：arXiv:2309.05219，Fig. 1。*
+
+![[assets/figures/fundamentals-valley/f22c7b08aaee3a6b85fe70228dcb6b686294cd371e40d41f4897b3ff4171ed59.jpg]]
+
+*框架验证：三种方法的劈裂预测对照。图源：arXiv:2309.05219，Fig. 2。*
+
+**硅角点的电场调谐**：纳米线角点（corner dot）构型——电场直接调谐谷劈裂，构型自由度+电场自由度的双重调控。
+
+![[assets/figures/fundamentals-valley/4a2f942a5871e7d10ae415fed65455f57c2c5670401bfc631d7597db482bef42.jpg]]
+
+*硅角点的谷劈裂电场调谐：纳米线角构型——构型+电场双重调控。图源：Ibberson et al. (2018)，Fig. 1。*
+
+![[assets/figures/fundamentals-valley/519916958e7e4a11f7968864372e18e3ba1d206ab3b989e7f7907392a9c374ee.jpg]]
+
+*角点的调谐范围：电场扫描下的劈裂变化。图源：Ibberson et al. (2018)，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[fundamentals/semiconductor-quantum-dot|半导体量子点]]：量子点是谷劈裂的实验室载体；谷劈裂属于量子点内禀属性而非电极调控量。
