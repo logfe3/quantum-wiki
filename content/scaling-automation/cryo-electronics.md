@@ -222,7 +222,7 @@ $$
 - [[readout-measurement/single-shot-readout|单发读出]]的信噪比直接受 cryo-LNA 噪声温度与带宽限制：HEMT 噪声温度 2 K 对应电荷传感器的本底噪声下限，再低就需要 cryo-CMOS 或 J-Amp。
 - [[readout-measurement/rf-reflectometry|射频反射读出]]把链路上限从 kHz 提到 100 MHz 以上，对应 cryo-electronics 切换到匹配网络 + 高频衰减 + cryo-LNA 的配置。
 - 屏蔽与滤波改进的验证由[[scaling-automation/multi-time-tomography|多时间量子过程层析]]承担：改进前后各跑一次多时间层析，过程矩阵之差即噪声通道的真实变化——准粒子、串扰等非马尔可夫关联由此定量化。
-- [[readout-measurement/parametric-amplifier|参量放大器]]（J-Amp/J-TWPA）是 cryo-electronics 在量子比特读出端的近量子极限放大，与本节 HEMT 形成代次互补。
+- [[readout-measurement/parametric-amplifier|参量放大器]]（J-Amp/J-TWPA）是 cryo-electronics 在量子比特读出端的近量子极限放大，与本节 HEMT 形成代次互补；其中行波方案（JTWPA）的器件原理与设计维度见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]专页。
 - [[circuit-qed/purcell-filter|Purcell filter]]把"读出链路对 qubit 退相干的影响"用 $Q_p$ 与 $\omega_p$ 解析地纳入链路设计，是 cryo-electronics 在 readout 端的设计参数。
 - [[materials-devices/charge-noise|电荷噪声]]是 cryo-electronics 必须抑制的扰动源；指出同轴线 + 热沉方案能直接降低离子注入区因加热产生的额外电荷跳变。
 - [[qubit-control/geometric-quantum-gate|几何量子门]]的噪声鲁棒性取决于 cryo-electronics 对共振频率噪声的注入量； 中"几何门对比传统动力学门在 1 K 噪声下表现更稳"的几何增益，部分来自 cryo-electronics 决定的噪声谱形。

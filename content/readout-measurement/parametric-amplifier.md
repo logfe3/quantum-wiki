@@ -11,6 +11,9 @@ tags:
  - 读出与测量
  - 微波
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m23b0kqng5rz8jh47zy6ztjn
+source_updated: 2026-09-09T17:00:04Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -223,6 +226,27 @@ $$
 
 低温测试时两级环形器隔离输入/反射信号，反射信号经 4 K HEMT（约 40 dB）和室温放大器（约 55 dB）两级放大后到频谱仪或网络分析仪。完整测量流程为：(1) 测调制谱确认样品正常、(2) 粗扫工作参数（信号频率、磁通偏置、泵浦频率/功率）、(3) 精细调参提取带宽、(4) 测饱和功率、(5) 用 $\Delta\mathrm{SNR}$ 法推算噪声温度。定义"增益工作带宽"为**增益不小于 $15\ \mathrm{dB}$ 的最大连续频率范围**（有别于峰值半高宽定义），以实用为导向。论文报告该 JPA 工作带宽约 $50\ \mathrm{MHz}$、饱和信号输入功率约 $-20\ \mathrm{dBm}$（算上 $-101\ \mathrm{dB}$ 线路衰减后总饱和输入 $-121\ \mathrm{dBm}$）、工作带宽范围内噪声接近量子极限。
 
+## 不换芯片扩带宽：并联 JPA 与轴子搜寻应用
+
+单只窄带宽 JPA 的频率调谐范围有限（典型几十 MHz），要覆盖更宽的目标频段通常得更换芯片重新降温——对超导比特实验只是麻烦，对需要扫过巨大未知频段的轴子（axion）搜寻实验则是致命的停机成本。Haloscope 实验把微波腔浸在高磁场中等待轴子转化为功率仅 $10^{-24}$–$10^{-22}\ \mathrm{W}$ 的光子，其频率扫描速度
+
+$$
+S\propto\frac{g_\gamma^4}{(\mathrm{SNR})^2}\,\eta\,\frac{1}{T_s^2}\,B_0^4 V^2 C^2 Q^2
+$$
+
+其中 $g_\gamma$ 是模型相关的轴子–光子耦合常数（KSVZ 取 0.97、DFSZ 取 0.36），SNR 为目标信噪比，$\eta$ 是数据获取效率，$T_s$ 是**系统噪声温度**，$B_0$ 是外磁场、$V$ 腔体积、$C$ 模式形状因子、$Q$ 腔品质因子。扫描速度对 $T_s$ 的平方反比依赖，正是轴子实验坚持把首级放大做到量子极限的原因。
+
+IBS/CAPP 的解法是**并联组合**：把三只中心频率错开、各覆盖约 50 MHz 的磁通驱动 JPA 并联在同一块 PCB 上，共用一个由 200 匝超导线绕成的直流磁通偏置线圈。由于 1–2 GHz 频段器件与封装尺寸远小于波长，长线效应可忽略，三只 JPA 互不干扰地同时工作——重叠频段选噪声温度更低的那只即可。实测三只 JPA 均有约 20 dB 峰值增益、单只带宽 48–52 MHz，并联后单次降温即可覆盖约 140 MHz（约为单只的三倍），Y-factor 法测得系统噪声温度约 150 mK、贴近量子噪声极限。这与 IMPA 的阻抗匹配路线正交：一个在**单芯片内**追求更宽带宽，一个用**多芯片组合**把调谐覆盖拼宽；更换 JPA 需两到三周降温维护的停机成本由此省去。
+
+![[assets/figures/parametric-amplifier/uchaikin2024-fig3-parallel-jpa-readout.jpg]]
+*读出方案对比：左为单 JPA 读出链（环形器分离入射/反射信号），右为三只 JPA 并联的读出方案——并联支路共享信号通路，各自独立泵浦。图源：Uchaikin et al. (2024), Fig. 3。*
+
+![[assets/figures/parametric-amplifier/uchaikin2024-fig4b-parallel-jpa-tuning.jpg]]
+*三只并联 JPA（泵浦关闭）的谐振频率随公共偏置电流的变化：三条曲线各自可调、中心频率错开，拼合后把单次降温的频率覆盖扩到约 140 MHz。图源：Uchaikin et al. (2024), Fig. 4（右）。*
+
+![[assets/figures/parametric-amplifier/uchaikin2024-fig5-system-noise-temperature.jpg]]
+*系统噪声温度随频率的变化，三只 JPA 各用一种颜色表示；输入端接 36 mK 恒温 50 Ω 噪声源（Y-factor 法），棕色线为量子噪声极限——三段拼合覆盖下噪声温度约 150 mK、紧贴量子极限。图源：Uchaikin et al. (2024), Fig. 5。*
+
 ## 阻抗匹配突破：IMPA
 
 ### 增益–带宽乘积限制
@@ -305,6 +329,9 @@ $$
 | 等效噪声温度 $T_J$ | $\sim 150\ \mathrm{mK}$（量子极限 $\hbar\omega/2 k_B$ 量级） | |
 | 链路等效输入温度 | $T_{\mathrm{eff}} = T_J + T_H/G_J + \cdots$ | |
 | JTWPA 饱和信号输入功率 | 足以同时读取约 20 个超导量子比特（一般综述） | Macklin 2015 等 |
+| 并联 JPA 单只带宽/增益 | 48–52 MHz @ 20 dB（三只中心频率错开，1.2–1.33 GHz） | Uchaikin 2024 |
+| 并联 JPA 组合覆盖 | 约 140 MHz（单次降温，约为单只 3 倍） | Uchaikin 2024 |
+| 并联 JPA 系统噪声温度 | 约 150 mK（Y-factor 法，36 mK 恒温噪声源） | Uchaikin 2024 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -341,7 +368,7 @@ $$
 
 谐振式 JPA / IMPA 的带宽受谐振带宽限制，带宽做到约 GHz 量级已接近极限。要进一步扩大带宽与饱和功率，需改用**行波结构**：
 
-- **约瑟夫结行波参量放大器（JTWPA, Josephson traveling-wave parametric amplifier）**：把上千个几乎一致的约瑟夫森结 + 谐振单元串接成传输线，靠色散工程让三波/四波混频在宽频带内同时满足相位匹配，典型可在数 GHz 范围内维持 $\sim 20\ \mathrm{dB}$ 增益，饱和功率足以同时读取约 20 个超导量子比特。代价是制备工艺复杂、对结参数均一性要求极高；
+- **约瑟夫结行波参量放大器（JTWPA, Josephson traveling-wave parametric amplifier）**：把上千个几乎一致的约瑟夫森结 + 谐振单元串接成传输线，靠色散工程让三波/四波混频在宽频带内同时满足相位匹配，典型可在数 GHz 范围内维持 $\sim 20\ \mathrm{dB}$ 增益，饱和功率足以同时读取约 20 个超导量子比特。代价是制备工艺复杂、对结参数均一性要求极高；其器件结构、电流–相位关系谐波工程与增益–稳定性权衡见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]；
 - **动力学电感行波放大器（KTWPA, kinetic-inductance TWPA）**：利用超导薄膜的非线性动力学电感实现参量放大，工艺更简单但谐波控制更难；
 - **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；
 - **Floquet 模式 TWPA**：把泵浦分解为周期调制的"模式"，可在更低泵浦功率下获得高增益。
@@ -387,3 +414,8 @@ $$
 - 多比特读出时多腔共享总线，需要[[readout-measurement/readout-crosstalk|读出串扰]]抑制；IMPA 的宽带宽让所有比特腔都落在增益带内，从而用同一台首级放大器服务整条总线——这是 FDM 的硬件前提。
 - 在物理实现层面，JPA 是[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]非线性电路的具体应用之一：SQUID 提供的非线性电感与[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]中"原子"扮演的角色类似，只不过这里是把它当作非线性介质利用而非与腔交换激发。[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线则把同样的非线性推到传输线整体的非线性电感中（KTWPA）。
 - 量子效率 $\eta$ 还可以从信息论解读：$\lim_{t\to\infty} \Gamma_m/(2\Gamma_d) = \eta$，把放大器噪声与测量诱导退相干挂钩——这与[[readout-measurement/dispersive-readout|色散读出]]的腔光场动力学分析是同一思路。
+
+## 参考文献
+
+- Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
