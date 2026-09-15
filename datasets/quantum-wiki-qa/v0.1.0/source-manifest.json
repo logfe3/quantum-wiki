@@ -1,11 +1,11 @@
 {
-  "source_digest": "f1637f5231d8ae87dfdce6907dc3ca9ebafd32518c340a41bdcb8f5a349be79d",
+  "source_digest": "4f0fd14a5145ffeff9c1f5689676b33208e5e69f18a62df99ba21dfa1c532430",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
       "title": "玻色 cQED 与腔编码量子计算",
       "topic": "circuit-qed",
-      "sha256": "bea7a0bb86f46ecf25bf535f592ef5ba08e816cf407940f3538c11c7fe692517",
+      "sha256": "0e0568279a1df69b8b50e4e149589fea2adcdddf57fac1cb3ed7a0e3762020f0",
       "split": "train"
     },
     {
@@ -40,7 +40,7 @@
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
       "title": "电路量子电动力学",
       "topic": "circuit-qed",
-      "sha256": "47c28deed14966bb8e34ba6abd66f7a7e2934c520bb6ff418ff372146387be0c",
+      "sha256": "6d85bf0f3247ebfb3af637bf23594d41eaa007a08c6fe55fc05cf350d58730d3",
       "split": "train"
     },
     {
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "79abbc30a411f22d9d459455443b91787e4f6781e69ea849a027ba10f81e11b1",
+      "sha256": "9735a2895d38799181c78e0d20958221b3f9a4dbb7036c6d08835f0d8c2fd74b",
       "split": "train"
     },
     {
