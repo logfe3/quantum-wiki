@@ -9,6 +9,9 @@ tags:
  - 量子比特操控
  - 单比特门
 date: 2026-09-12
+source: QAtlas
+qatlas_id: qa_01m237dae87mkqcz8t49z0rtg8
+source_updated: 2026-09-09T16:02:31Z
 ---
 
 <div class="entry-lead">单比特门是在布洛赫球上把一个量子比特的态旋转到任意方向的物理操作。半导体量子点中，它由"让自旋绕磁场进动"的静态哈密顿量加上"控制进动轴或进动速率"的驱动场构成；不同方案的差别在于驱动场如何耦合进来——磁的、电的，还是纯交换的。</div>
@@ -67,6 +70,41 @@ EDSR 的代价是电场同样耦合到电荷噪声通道：Rabi 频率越高、�
 
 [[references/xue-2022|Xue et al. (2022)]] 与 [[references/philips-2022|Philips et al. (2022)]] 的六比特处理器采用频率分址 + 全局/半局微波线，并系统地表征了门间串扰对保真度的影响：把串扰与闲置误差计入后，平均单比特门保真度仍保持 99% 以上。
 
+## 天然硅的容错门槛：微磁体 EDSR 的系统优化
+
+不经同位素纯化的天然硅（含 4.7% 自旋核 ^29Si）长期停在 $T_2^*<1\ \mu\mathrm{s}$、保真度不足的区间——容错演示此前只在纯化硅上实现过。Takeda 等人 2016 年用**优化设计的微磁体**补上了这块拼图：天然 Si/SiGe 双量子点上方放置 250 nm 钴微磁体，几何同时最大化斜化磁场 $dB_y^{\mathrm{MM}}/dz$（把栅极微波驱动的波函数振荡转换成有效振荡磁场 $B_{AC}$，即人工自旋轨道耦合）与两点间的局域 Zeeman 场差 $\Delta B_z$（频率分址资源）。
+
+分址与串扰由此一次到位：两点共振线劈裂 $\Delta B_z\sim30$ mT，对应约 **800 MHz** 频率差——比无微磁体硅器件的 g 因子斯塔克位移大两个量级。驱动场对闲置比特的作用按
+
+$$
+\frac{(f_\mathrm{Rabi})^2}{(\Delta f)^2+(f_\mathrm{Rabi})^2}
+$$
+
+衰减（$\Delta f$ 是闲置比特对驱动频率的失谐、$f_\mathrm{Rabi}$ 是工作 Rabi 频率）：在典型 $f_\mathrm{Rabi}=10$ MHz 下，800 MHz 劈裂把串扰压到 **0.02%**。相干性方面，Ramsey 干涉给出高斯衰减的 $T_2^*\approx2\ \mu\mathrm{s}$（核自旋涨落限制，当时天然硅最长）；对第二个微波脉冲的相位调制则演示了双轴控制。
+
+保真度的关键参量是 Rabi 振荡品质因子
+
+$$
+Q=\frac{T_2^{\mathrm{Rabi}}}{T_\pi}
+$$
+
+其中 $T_2^{\mathrm{Rabi}}$ 是 Rabi 振荡衰减时间、$T_\pi$ 是 π 翻转时长——它决定比特保真度上限。扫微波幅度发现：$f_\mathrm{Rabi}$ 先线性增长（最高约 35 MHz）后饱和，而 $T_2^{\mathrm{Rabi}}$ 在大幅度下显著缩短（加热主导、而非光子辅助隧穿——衰减不依赖库仑阻塞深度），$Q$ 因此存在最优点：$A_\mathrm{MW}\sim0.2$ 处 $f_\mathrm{Rabi}=10$ MHz、$Q\sim140$（$1/T_2^{\mathrm{Rabi}}\sim140$ kHz）。该频率比纯化硅当时报道值快两个量级而 $Q$ 同量级——"快而不失相干"。在最优工作点做基于 Clifford 的随机化基准，得到平均单比特保真度 **99.6%**：天然硅的最高值、与纯化硅量子点可比，越过容错阈值——工业标准硅材料因此进入容错比特的候选名单。
+
+![[assets/figures/single-qubit-gate/takeda2016-fig1a-device-sem.jpg]]
+*器件结构（伪色 SEM）：天然 Si/SiGe 耗尽型双量子点，250 nm 钴微磁体置于点上方（图中标注 R、L、C 三个高频栅经阻抗匹配偏置引入脉冲）；两侧欧姆接触接地、其一连接谐振传感电路。图源：Takeda et al. (2016), Fig. 1(A)。*
+
+![[assets/figures/single-qubit-gate/takeda2016-fig1d-edsr-addressability.jpg]]
+*EDSR 寻址谱：自旋翻转概率随微波频率与外磁场的二维图，蓝/红线分别为左/右点的共振条件 $hf_\mathrm{MW}=g\mu_B(B_\mathrm{ext}+B_z^{\mathrm{MM,L/R}})$——两条共振线劈裂约 800 MHz（ΔB_z≈30 mT），比 Rabi 频率高两个量级，串扰仅 0.02%。图源：Takeda et al. (2016), Fig. 1(D)。*
+
+![[assets/figures/single-qubit-gate/takeda2016-fig1e-rabi-oscillation.jpg]]
+*微磁体 EDSR 的 Rabi 振荡：$B_\mathrm{ext}=0.505$ T、$f_\mathrm{MW}=15.6055$ GHz 下测得 $f_\mathrm{Rabi}\sim9$ MHz、$T_2^{\mathrm{Rabi}}\sim8\ \mu$s（指数衰减正弦拟合），快速驱动与长相干并存。图源：Takeda et al. (2016), Fig. 1(E)。*
+
+![[assets/figures/single-qubit-gate/takeda2016-fig2b-ramsey-fringes.jpg]]
+*Ramsey 干涉条纹：π/2 脉冲—等待 $t_w$—π/2 脉冲序列下条纹幅值随 $t_w$ 高斯衰减，给出天然硅当时最长的 $T_2^*\approx2\ \mu$s（核自旋涨落限制）。图源：Takeda et al. (2016), Fig. 2(B)。*
+
+![[assets/figures/single-qubit-gate/takeda2016-fig4b-randomized-benchmarking.jpg]]
+*Clifford 随机化基准：门序列概率随序列长度的指数衰减，最优工作点（$f_\mathrm{Rabi}=10$ MHz、$Q\sim140$）下平均单比特保真度 99.6%——天然硅首次越过容错阈值。图源：Takeda et al. (2016), Fig. 4(B)。*
+
 ## 表征方法
 
 | 手段 | 测什么 | 备注 |
@@ -87,6 +125,7 @@ EDSR 的代价是电场同样耦合到电荷噪声通道：Rabi 频率越高、�
 | 平面锗，[[references/hendrickx-2021|Hendrickx 2021]] | $>99.9\%$（Q3） | 四比特处理器中的最佳值 |
 | Si/SiGe，[[references/noiri-2022|Noiri 2022]] | 99.8% | 微磁体 EDSR，越过容错阈值 |
 | Si/SiGe，[[references/xue-2022|Xue 2022]] | 平均 99.72%（单比特子空间 GST） | 计入两比特空间后平均 99.16% |
+| 天然 Si/SiGe，Takeda 2016 | 99.6%（RB） | 优化微磁体 EDSR；Q=140 @ 10 MHz、800 MHz 分址劈裂、T2*≈2 µs |
 
 ## 参数与量级
 
@@ -98,6 +137,8 @@ EDSR 的代价是电场同样耦合到电荷噪声通道：Rabi 频率越高、�
 | 锗空穴 EDSR | $>100\ \mathrm{MHz}$ | [[references/hendrickx-2020|Hendrickx 2020]] |
 | $\pi$ 门时长 | $10\ \mathrm{ns}$（快极限）–$500\ \mathrm{ns}$（保真度优先） | 越快对脉冲带宽要求越高 |
 | 频率分址间隔 | $10$–$100\ \mathrm{MHz}$ | 斯塔克位移调出 |
+| 天然硅微磁体分址劈裂 | 约 800 MHz（ΔB_z≈30 mT） | Takeda 2016，串扰 0.02% @ 10 MHz |
+| Rabi 品质因子 Q=T2^Rabi/T_π | ~140（天然硅最优工作点，f_Rabi=10 MHz；f_Rabi 最高约 35 MHz） | Takeda 2016 |
 
 ## 与其他概念的关系
 
@@ -114,3 +155,4 @@ EDSR 的代价是电场同样耦合到电荷噪声通道：Rabi 频率越高、�
 - 锗空穴强自旋轨道全电驱动：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]；四比特处理器：[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]。
 - 通用门越过容错阈值与工作区设计：[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]；GST 表征与串扰：[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]、[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]。
 - 各驱动机制的理论综述：[[references/burkard-2023|Burkard et al., Rev. Mod. Phys. 95, 025003 (2023)]]、[[references/hanson-2007|Hanson et al., Rev. Mod. Phys. 79, 1217 (2007)]]。
+- Takeda, K. et al. A fault-tolerant addressable spin qubit in a natural silicon quantum dot. *Science Advances* 2, e1600694 (2016). DOI: 10.1126/sciadv.1600694；arXiv:1602.07833（QAtlas 缓存：1602.07833）。

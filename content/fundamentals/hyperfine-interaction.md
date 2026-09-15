@@ -116,7 +116,7 @@ $$
 P_\uparrow(t_{\mathrm{evol}})=A\,\exp\!\left[-\left(\frac{t_{\mathrm{evol}}}{T_2^*}\right)^2\right]+B
 $$
 
-其中 $T_2^*$ 由 Overhauser 涨落的均方根决定。GaAs 单自旋比特 $T_2^*\sim 10$–$20\ \mathrm{ns}$；自然硅 $T_2^*\sim 0.3$–$1\ \mu\mathrm{s}$；${}^{28}\mathrm{Si}$ 同位素纯化后（${}^{29}\mathrm{Si}$ 残余 60 ppm 量级）可达数十微秒）。Hahn 回波和 CPMG 序列通过反转累积相位把准静态 Overhauser 噪声"重聚焦"掉，$T_{2,\mathrm{echo}}$、$T_2^{\mathrm{CPMG}}$ 可以远大于 $T_2^*$。
+其中 $T_2^*$ 由 Overhauser 涨落的均方根决定。GaAs 单自旋比特 $T_2^*\sim 10$–$20\ \mathrm{ns}$；自然硅 $T_2^*\sim 0.3$–$1\ \mu\mathrm{s}$；${}^{28}\mathrm{Si}$ 同位素纯化后（${}^{29}\mathrm{Si}$ 残余 60 ppm 量级）可达数十微秒）。Hahn 回波和 CPMG 序列通过反转累积相位把准静态 Overhauser 噪声"重聚焦"掉，$T_{2,\mathrm{echo}}$、$T_2^{\mathrm{CPMG}}$ 可以远大于 $T_2^*$。值得注意的是，核自旋噪声的束缚并非不可逾越：优化微磁体 EDSR 把天然硅（4.67% ${}^{29}\mathrm{Si}$）的 $T_2^*$ 推到约 2 µs、单比特保真度 99.6%（见[[qubit-control/single-qubit-gate|单比特门]]词条的天然硅容错门槛一节）——不经纯化也可越过容错阈值。
 
 <!-- FIGURE: 三种材料体系中 $T_2^*$ 的 Ramsey 包络对比：GaAs 高斯快速衰减（~10 ns）、自然硅指数衰减（~1 μs）、${}^{28}\mathrm{Si}$ 长寿命衰减（~100 μs） -->
 

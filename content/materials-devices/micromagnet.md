@@ -312,4 +312,5 @@ Q=\frac{d\mathbf{B}_{\mathrm{tr}}^{\mathrm{tot}}/dy}{\sqrt{\left(d\mathbf{B}_{\m
 ## 参考文献
 
 - 微磁体辅助 EDSR 的器件实现：[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]、[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]。
+- 微磁体几何的系统性优化（同时最大化斜化场与 ΔB_z）在天然硅上实现 800 MHz 分址劈裂、串扰 0.02%、Q=140 @ 10 MHz 与 99.6% RB 保真度：见[[qubit-control/single-qubit-gate|单比特门]]词条"天然硅的容错门槛"一节（Takeda et al., Sci. Adv. 2016）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
