@@ -1,5 +1,5 @@
 {
-  "source_digest": "b44fa164dcdf5c57df2eb13cf1e4f78279497bb59933213cc227e543e6629e09",
+  "source_digest": "a305a5bbf3e12d8b9e1439351e5822eb7f3e03c565fb2808f206b8d879d301f8",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "450f2c77b6237b775e3d65d352cb863ee9ce8f31fba5c7a8a98968e6d40d85b4",
+      "sha256": "e29ce9812004ec5ff7648df89ab63d04b50ebdf0c51a3221a22f31a639fc90e6",
       "split": "train"
     },
     {
@@ -257,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "67e9c2567222a9e7c6ad232d63f03af150e67700469ece1b3422d2f373eb99fb",
+      "sha256": "46e9aa477caa3ec7aec2764aaef12f27e9b12d8d4af3a760a93331b7e2c73d1d",
       "split": "train"
     },
     {
@@ -355,7 +355,7 @@
       "path": "content/qubit-control/landau-zener-transition.md",
       "title": "Landau–Zener 跃迁",
       "topic": "qubit-control",
-      "sha256": "9859ad8fb846e02b7ea1ed5e9c763871d358d2b748d48358a7b14e39b78ff91c",
+      "sha256": "ec82a14453adbb9f0616aad97b052b8dc53b0cafbb2b5148112adad49bf28b24",
       "split": "train"
     },
     {
@@ -495,7 +495,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "3df14b1cc53f0200eae9aea116e7d73b0270c523a17c712d1b8337f4577f64d8",
+      "sha256": "5836943e94b839f57ffe8b82a5856ada1fa198f8c6231bfbbdffbeb4716260b0",
       "split": "dev"
     },
     {
@@ -516,7 +516,7 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "c90cab67cb3d7340b9f58eba24076d13e64eba263ed43998a0650bd1777e9480",
+      "sha256": "64e964911dff511e0289a72d52bee90b4b50a416a7dc23f430eae80187f19a54",
       "split": "train"
     },
     {
@@ -530,7 +530,7 @@
       "path": "content/scaling-automation/automatic-tuning.md",
       "title": "自动调控",
       "topic": "scaling-automation",
-      "sha256": "7d887bf0046ab9b5356dcf204789d883931cf704e94663290cc95e1bfd46949c",
+      "sha256": "545c3e1f05e8b9a2ec295f6d075a691408679ec0397a3b5cfa8f75b2d5bfb37b",
       "split": "train"
     },
     {
@@ -551,7 +551,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "8dd1be4d0a057def2ad3dde04ea9ace59700d77b0f3f7e3a88dbef9c05069c4f",
+      "sha256": "d2176e88fe87777a60d5769c400affa2aa03c9785fb7a6991d1117d00b5ae11c",
       "split": "train"
     },
     {
@@ -572,14 +572,14 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "b7617e4ea2f0d09326d57fe008352db6abf697ee16688e0b909808e0707d49ba",
+      "sha256": "35b7a06317aa76fdf3887e00e5a99b6e4b2ce3494ea23b4e8aea9f83b2e8a06a",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/multi-time-tomography.md",
       "title": "多时间量子过程层析",
       "topic": "scaling-automation",
-      "sha256": "9687dc1969e700f222307633bc8043d7d077f8d393970d29fb9883135414b0cc",
+      "sha256": "ff7ede3ccb69b63e7bbf373863c5d407b3304bca16eee43e2b80025ae180bac2",
       "split": "train"
     },
     {

@@ -76,6 +76,17 @@ $$
 
 *60 GHz 低温放大器电路：有源网络（AN）配合输入匹配网络（IMN）与输出匹配网络（OMN），匹配用螺旋变压器（T）实现——无电感拓扑省去片上大电感，换来 0.18×0.19 mm² 的紧凑核心面积与 2.16 mW 低功耗。图源：Spasaro et al. (2024)，Fig. 2。*
 
+
+**SiGe BiCMOS 读出芯片**给出另一种工艺选择：低温冷却的 SiGe BiCMOS 集成电路在 6.5 GHz 谐振腔上实现 **>98% 读出保真度**、功耗仅 **6 mW**——采用零差检测与本振斩波（LO chopping）新方案抑制低频噪声与直流失调。与 60 GHz CMOS 放大器（单功能积木）不同，这是整芯片级的读出方案（放大+混频+检测），SiGe 的截止频率优势让它在更高频段保持性能。
+
+![[assets/figures/cryo-electronics/a11db749183eff712bfec1eec914687a18dfa883f19443404d2271dd632454db.jpg]]
+
+*SiGe BiCMOS 低温读出芯片：6 mW 功耗下 >98% 读出保真度——零差检测与本振斩波（LO chopping）方案。图源：IEEE TMTT (2024)，Fig. 1。*
+
+![[assets/figures/cryo-electronics/b68b2c51960e28d3d6badb44efa5802b14c4bd19ace97b6194da0f478dcd9800.jpg]]
+
+*读出保真度表征：6.5 GHz 谐振腔上零差检测的判别统计——98% 以上单发保真度在 6 mW 功耗预算内达成。图源：IEEE TMTT (2024)，Fig. 2。*
+
 ### 半导体量子点端的特殊考量
 
 相比 transmon，半导体量子点的链路上还有两点不同：
