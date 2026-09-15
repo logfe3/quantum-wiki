@@ -190,6 +190,7 @@ async function discoverPapers(config, options) {
   const perPage = 100
   const imageSelection = String(options.images ?? "referenced")
   const index = await buildWikiIndex()
+  const usedPapers = new Set((config.usedPapers ?? []).map(String))
   console.log(
     `Wiki index: ${index.pages.length} pages, ${index.categories.length} categories.`,
   )
@@ -217,6 +218,10 @@ async function discoverPapers(config, options) {
       const existing = candidateMatchesWiki(item, index)
       if (existing) {
         excluded.push({ paper_id: item.paper_id, title: item.title, reason: `already in wiki: ${existing}` })
+        continue
+      }
+      if (usedPapers.has(item.paper_id)) {
+        excluded.push({ paper_id: item.paper_id, title: item.title, reason: "already processed in an earlier auto round" })
         continue
       }
       if (candidates.some((entry) => entry.paper_id === item.paper_id)) continue
@@ -552,7 +557,7 @@ async function resolveRunId(options) {
 // Autodiscovery: topic selection + adaptive batch + state
 // ---------------------------------------------------------------------------
 
-const DEFAULT_STATE = { usedTopics: [], lastBatchSize: 3, rounds: 0, history: [] }
+const DEFAULT_STATE = { usedTopics: [], usedPapers: [], lastBatchSize: 3, rounds: 0, history: [] }
 
 async function loadAutoState(stateFile) {
   const absolute = path.resolve(repositoryRoot, stateFile)
@@ -687,12 +692,12 @@ async function commitBatchToMain(topic, roundIndex, papers) {
   return { committed: true, message: commit.output.trim().split("\n")[0] }
 }
 
-async function commandDiscover(options) {
+async function commandDiscover(options, usedPapers = []) {
   const query = typeof options.query === "string" ? options.query : ""
   if (!query) throw new Error("discover requires --query TEXT.")
   const config = await loadIntegrationConfig()
   const { candidates, excluded, wikiIndex } = await discoverPapers(
-    { query, cacheDir: config.cacheDir },
+    { query, cacheDir: config.cacheDir, usedPapers },
     options,
   )
   const runId = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "").replace("T", "-")
@@ -947,7 +952,10 @@ async function commandAuto(options) {
         const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex)
         console.log(`Topic (${selection.origin}): "${selection.topic}"`)
         try {
-          const candidateRunId = await commandDiscover({ query: selection.topic, max: batchSize, images: "referenced" })
+          const candidateRunId = await commandDiscover(
+            { query: selection.topic, max: batchSize, images: "referenced" },
+            state.usedPapers ?? [],
+          )
           const discovered = JSON.parse(
             await readFile(path.join(runsRoot, candidateRunId, "candidates.json"), "utf8"),
           )
@@ -982,6 +990,12 @@ async function commandAuto(options) {
     let roundOutcome = "failed"
     let failureReason = ""
     try {
+      const discovered = JSON.parse(
+        await readFile(path.join(runsRoot, runId, "candidates.json"), "utf8"),
+      )
+      for (const candidate of discovered.candidates ?? []) {
+        if (!state.usedPapers.includes(candidate.paper_id)) state.usedPapers.push(candidate.paper_id)
+      }
       await writeWorkOrder(runId)
       if (executor === "codex") {
         await commandPlan({ run: runId, executor })
