@@ -350,6 +350,7 @@ flowchart LR
 - [[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/coulomb-diamond|库仑菱形]]：在阻塞区量子点电子数严格为整数，界面态俘获/释放改变邻近电化学势，使库仑峰位置随时间漂移——菱形边界的时域展宽本身即可作为界面态活性的度量。
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]：界面态的存在使能级寿命延长，PAT 实验提取的电荷弛豫与退相干时间反映了界面态–载流子相互作用的强度。
 - [[qubit-control/exchange-interaction|交换作用]]与[[qubit-control/ramsey-interferometry|Ramsey 干涉]]：界面态引起的电荷涨落通过 $g$ 因子、电场梯度和交换项传递到自旋比特，是 $T_2^{*}$ 的主要限制之一。
+- [[superconducting-qubits/junction-defect-modes|约瑟夫森结强耦合缺陷模]]：超导侧的"另一族"缺陷——结区零点电场（数 kV/m）中与比特相干强耦合（$g/2\pi\geq0.5$ MHz）的分立 TLS，与本文弱耦合 TLF 系综物理可分（清洗工艺改 $Q$ 不改其谱密度），共同构成超导比特损耗的两层结构。
 
 ## 工艺对策
 

@@ -172,3 +172,4 @@ $$
 - 电荷信号由邻近传感器拾取，如[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET；信号链的带宽与滤波（贝塞尔低通）进入 Monte-Carlo 模型，连接[[materials-devices/charge-noise|电荷噪声]]环境。
 - 待测的 $P_I^\uparrow$ 通常来自[[qubit-control/single-spin-qubit|单自旋量子比特]]的 $T_1$ 弛豫曲线或门操作末态；修正后的 $P_E^\uparrow$ 直接改善这些实验的对比度。
 - 更大规模的阈值/边界自动标定属于[[scaling-automation/automatic-tuning|自动调控]]与电荷态识别问题；阈值无关思想（用模型修正代替死守最佳工作点）与之一脉相承。
+- 超导侧的对应课题是[[readout-measurement/readout-induced-leakage|读出诱导泄漏基准测试]]：当信号轨迹/直方图里混入根本不属于计算子空间的泄漏态时，任何基于 $g/e$ 模型的判决都会失明，需要在判决之外用协议级方法单独量化泄漏率。

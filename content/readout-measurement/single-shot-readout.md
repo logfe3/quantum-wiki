@@ -315,6 +315,7 @@ Bishop 等人展示了另一条利用 Jaynes–Cummings 非线性的路线：强
 - 多比特联合读出引入[[readout-measurement/readout-crosstalk|读取串扰]]，需用浅层神经网络分类器或独立的[[readout-measurement/purcell-filter|Purcell 滤波器]]来抑制。
 - 固定阈值对参数变化敏感时，可改用[[readout-measurement/threshold-independent-readout|阈值无关读出]]，把 $V^R$ 下降显式反推回 $P_\uparrow^I$，将 $|P_\uparrow^E/P_\uparrow^I-1|<1\%$ 的参数空间扩大约 60 倍。
 - 单发读出得到离散结果是量子纠错（如表面码，距离-3 需读取错误率 $<1\%$）和实时反馈控制的必要前提，也是测量[[materials-devices/charge-noise|电荷噪声]]和[[qubit-control/rabi-oscillation|Rabi 振荡]]等动力学过程时的基础工具。
+- 超导比特的重复测量场景还需额外量化[[readout-measurement/readout-induced-leakage|读出诱导泄漏基准测试]]（RILB）：保真度与重复性都无法反映的泄漏率在纠错循环中会累积为关联误差，是错误分解体系在新平台上的必要补充维度。
 
 
 ## 参考文献

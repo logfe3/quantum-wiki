@@ -163,6 +163,7 @@ $$
 - **[[fundamentals/charge-stability-diagram|电荷稳定图]]**：初始化点的选取完全由稳定图决定——$(1,0)$、$(0,1)$、$(1,1)$、$(0,2)$ 四点的失谐顺序决定"排空→加载→等待→读出"的脉冲轨迹。
 - **[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/strained-germanium|应变锗]]、[[materials-devices/gaas-algaas|GaAs/AlGaAs]]**：四种主流材料体系中初始化方案的选择主要由 $g$ 因子、谷能级、核自旋浓度共同决定。
 - **[[fundamentals/double-quantum-dot|双量子点]]**：弛豫热点、$(0,2)$ 区基态等待、PSB 三条路径都需要双量子点能级图，是初始化与读出的共同载体。
+- **[[superconducting-qubits/qubit-fast-reset|量子比特快速复位]]**：超导侧的主动初始化对应物——不靠等待弛豫而用工程化耗散通道在几十纳秒内把比特抽运回基态，与本文的被动/测量基初始化构成两个平台的初始化方案对照。
 
 
 ## 参考文献

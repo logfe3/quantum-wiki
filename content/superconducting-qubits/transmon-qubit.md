@@ -210,6 +210,7 @@ $$
 - 弱非谐性使[[circuit-qed/dispersive-shift|色散频移]]必须计入至少前三个能级，也使快速门需要显式控制泄漏。
 - 腔既提供[[readout-measurement/dispersive-readout|色散读出]]通道，也通过 Purcell 效应打开弛豫通道，因此读取速度和寿命需要由[[readout-measurement/purcell-filter|Purcell 滤波器]]共同优化。
 - 扩展到多比特后，频率分配、控制线热负载、低温放大和封装模进入[[scaling-automation/cryo-electronics|低温电子学]]与系统工程问题。
+- transmon 结势垒内还有一族[[superconducting-qubits/junction-defect-modes|约瑟夫森结强耦合缺陷模]]：结面积线性缩放的共振 TLS 数目直接进入结设计规则（小结面积 + 高临界电流密度），而结区清洗工艺的选择主导品质因子——两者共同决定 $T_1$ 的材料预算。
 
 ## 参考文献
 
