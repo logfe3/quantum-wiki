@@ -10,6 +10,9 @@ tags:
  - 电路量子电动力学
  - 强耦合
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m23778fds0mdycfmxf0668q7
+source_updated: 2026-09-09T16:49:46Z
 ---
 
 <div class="entry-lead">高阻抗腔通过增大每个光子的零点电压，让同一个量子点电偶极感受到更强微波场，是半导体量子比特进入强耦合区的关键器件。</div>
@@ -110,6 +113,32 @@ $n_s$ 为库珀对密度。单位面积动态电感（方块电感，sheet induc
 
 <!-- FIGURE: 两条路线对比：SQUID 阵列腔（磁通可调）与 NbTiN/TiN 纳米线腔的显微结构与等效电路 -->
 
+### NbN 薄膜的动态电感标定
+
+NbN 材料路线的定量地基来自 Zhang/Petta 组的系统标定：动态电感方块值可用两条独立途径提取。**直流途径**测正常态方块电阻 $R_\square^*$ 与临界温度 $T_C$，按 BCS 关系计算：
+
+$$
+L_{k,S}=\frac{\hbar R_\square^{*}}{\pi\Delta_0},\qquad \Delta_0=1.76\,k_B T_C
+$$
+
+其中 $\hbar$ 是约化普朗克常数、$\Delta_0$ 是零温超导能隙。**微波途径**用 hanger 式 λ/4 腔：一块芯片上 12 个不同长度的谐振腔共用中央传输线（中心导体 $a=10\ \mu$m、缝隙 $s=6.2\ \mu$m），总电感 $L=L_m+L_k$ 使 $f\propto1/\sqrt{L}$ 对长度 $l$ 拟合即得 $L_{k,S}$——30 nm 膜给出 20.9 pH/□，与直流值 19.3 pH/□ 一致（磁电感仅 $L_{m,S}=4.4$ pH/□）。
+
+厚度扫描给出设计曲线：$t$ 从 52 nm 减到 15 nm，$R_\square^*$ 从 75.1 升到 273.9 Ω/□、$T_C$ 从 11.1 K 缓降到 9.2 K，$L_{k,S}$ 则从 9.4 涨到 **41.2 pH/□**；12.5 nm 膜最高 58.7 pH/□。对照组 50 nm Nb 膜只有 0.5 pH/□——NbN 的动态电感高出一至两个量级。换算到耦合增益：同设计 λ/2 腔从 50 nm Nb 换到 15 nm NbN，$Z_C\times5.6$，由 $g_{c(s)}\propto\sqrt{Z_C}\propto L^{1/4}$ 预期电荷（自旋）–光子耦合 **2.4×** 增强——把过去 $g_c\approx58$ MHz 量级的器件推向更深强耦合区的直接路径（且避开 SQUID 阵列与自旋比特磁场的冲突）。
+
+![[assets/figures/high-impedance-resonator/zhang2023-fig2b-hanger-resonators-s21.jpg]]
+*hanger 式 λ/4 腔芯片的微波表征：$|S_{21}(f)|$ 上 12 个不同长度腔的谐振 dip（红色标注，30 nm NbN 膜），插图为单个 5.9 GHz 谐振的放大。图源：Zhang et al. (2023), Fig. 2(b)。*
+
+![[assets/figures/high-impedance-resonator/zhang2023-fig2c-frequency-vs-length.jpg]]
+*谐振频率对腔长的依赖：$f\propto1/l$ 的传输线模型拟合（实线，总电感含动态电感贡献）给出 30 nm NbN 膜 $L_{k,S}=20.9$ pH/□，与直流提取一致。图源：Zhang et al. (2023), Fig. 2(c)。*
+
+![[assets/figures/high-impedance-resonator/zhang2023-fig3-lks-thickness-dependence.jpg]]
+*$L_{k,S}$ 的厚度依赖：直流（跨超导转变的输运）与微波（hanger 腔拟合）两种提取途径在全部厚度上一致；低于 50 nm 后 $L_{k,S}$ 快速上升，12.5 nm 膜达 58.7 pH/□。图源：Zhang et al. (2023), Fig. 3。*
+
+高 $L_k$ 薄膜的第二个用途是**片上 LC 滤波器**：量子点直流栅线上的微波泄漏是腔 $Q$ 与比特 $T_1$ 的隐形杀手，用 NbN 薄膜做的紧凑 LC 滤波器在典型腔频 $f_c=8$ GHz 附近提供最高 60 dB 衰减，占用面积比此前设计显著缩小——材料研究直接转化为 cQED 器件的布线工程。
+
+![[assets/figures/high-impedance-resonator/zhang2023-fig4-lc-filters.jpg]]
+*两种片上 LC 滤波器设计的 $|S_{21}(f)|$（实线测量、虚线仿真）：高动态电感 NbN 使滤波器在 8 GHz 腔频附近达到最高 60 dB 衰减，同时保持紧凑脚印。图源：Zhang et al. (2023), Fig. 4。*
+
 ## 参数与量级
 
 本站论文中实际制备并用于量子点耦合实验的高阻抗腔：
@@ -120,6 +149,8 @@ $n_s$ 为库珀对密度。单位面积动态电感（方块电感，sheet induc
 | SQUID 阵列反射腔 | 约 1 kΩ | 磁通可调 | 约 30–60 MHz | 38 个 SQUID 串联，Al/AlO$_x$/Al 双角度斜蒸发 | |
 | NbTiN 透射腔 | 约 2 kΩ | GHz 量级 | 约 11 MHz | 11 nm 膜，中心导体 $w\approx0.32$ µm，距地 20 µm | |
 | TiN $\lambda/2$ 腔 | 约 3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，$T_c\approx3.5$ K，$L_k=265.9$ pH/□ | |
+| NbN hanger 式 λ/4 腔（15 nm 膜） | 由 $L_{k,S}=41.2$ pH/□ 设计 | 2–8 GHz 可设计 | — | $t$ 15–52 nm 标定：$L_{k,S}$ 41.2→9.4 pH/□；12.5 nm 最高 58.7 pH/□ | Zhang 2023 |
+| NbN 片上 LC 滤波器 | — | — | 8 GHz 附近衰减至 60 dB | 高 $L_k$ NbN 紧凑设计 | Zhang 2023 |
 
 耦合强度的实际收益：2017 年 Wallraff 组用 SQUID 阵列腔把 GaAs 双量子点的耦合从早期 $g/2\pi\approx6.7$ MHz 提升到 $g/2\pi\approx119$ MHz 并首次实现门控量子点的[[circuit-qed/strong-coupling|强耦合]]；论文的 NbTiN 高阻抗反射腔上测得两个电荷比特的 $2g_0/2\pi$ 分别为 74 MHz 与 119 MHz；论文的 3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175$ MHz 的电荷比特强耦合。半导体 cQED 对腔阻抗的典型设计目标为 $1\sim2$ kΩ。
 
@@ -152,4 +183,9 @@ $$
 
 ## 与其他概念的关系
 
-高阻抗腔是[[circuit-qed/microwave-resonator|微波谐振腔]]在半导体 cQED 中的专用形态：它放大的是[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的全局强度 $g_0$，而实际进入[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的有效耦合 $g_\mathrm{eff}=g_0\sin\theta$ 还取决于量子点的混合角。阻抗提升直接服务于[[circuit-qed/strong-coupling|强耦合]]判据 $g>\kappa,\gamma$ 的达成与[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]的观测；在色散区，它同时放大色散频移 $\chi=g^2/\Delta$，提升[[readout-measurement/dispersive-readout|色散读出]]的信噪比与灵敏度。经[[materials-devices/micromagnet|微磁体]]获得电荷混合的自旋比特（[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]，$g_s\propto g_c$）同样受益于高阻抗；多个比特共享高阻抗腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础。[[circuit-qed/squid-array-resonator|SQUID 阵列腔]]词条详述其磁通可调性与阵列电磁学。阻抗超过电阻量子的定量定义与 JJA 动力学电感的完整表征（内耗、自谐振、相位滑移率）见[[circuit-qed/superinductance|超电感与约瑟夫森结阵列]]。
+高阻抗腔是[[circuit-qed/microwave-resonator|微波谐振腔]]在半导体 cQED 中的专用形态：它放大的是[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的全局强度 $g_0$，而实际进入[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的有效耦合 $g_\mathrm{eff}=g_0\sin\theta$ 还取决于量子点的混合角。阻抗提升直接服务于[[circuit-qed/strong-coupling|强耦合]]判据 $g>\kappa,\gamma$ 的达成与[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]的观测；在色散区，它同时放大色散频移 $\chi=g^2/\Delta$，提升[[readout-measurement/dispersive-readout|色散读出]]的信噪比与灵敏度。经[[materials-devices/micromagnet|微磁体]]获得电荷混合的自旋比特（[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]，$g_s\propto g_c$）同样受益于高阻抗；多个比特共享高阻抗腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础。[[circuit-qed/squid-array-resonator|SQUID 阵列腔]]词条详述其磁通可调性与阵列电磁学。阻抗超过电阻量子的定量定义与 JJA 动力学电感的完整表征（内耗、自谐振、相位滑移率）见[[circuit-qed/superinductance|超电感与约瑟夫森结阵列]]。高临界场氮化物材料（NbTiN/NbN）同时是[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]的材料基础——高阻抗与磁场兼容两条需求在选材上合流。
+
+## 参考文献
+
+- Zhang, X., Zhu, Z., Ong, N. P., Petta, J. R. Developing high-impedance superconducting resonators and on-chip filters for semiconductor quantum dot circuit quantum electrodynamics (2023). arXiv:2306.16499（QAtlas 缓存：2306.16499）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

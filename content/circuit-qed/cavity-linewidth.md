@@ -247,7 +247,7 @@ $C>1$ 是"相干耦合占优"的前提之一。提升 $C$ 既要增大 $g$（用
 
 ## 与其他概念的关系
 
-- **腔本体物理**：腔线宽是[[circuit-qed/microwave-resonator|微波谐振腔]]的核心参数，与"$Z_r$ 越高 $\kappa_e$ 越大"、"$\kappa$ 拆为 $\kappa_i+\kappa_e$"等基本事实一起构成 cQED 实验的工程语言；
+- **腔本体物理**：腔线宽是[[circuit-qed/microwave-resonator|微波谐振腔]]的核心参数，与"$Z_r$ 越高 $\kappa_e$ 越大"、"$\kappa$ 拆为 $\kappa_i+\kappa_e$"等基本事实一起构成 cQED 实验的工程语言——$\kappa_e$ 的一端本来就是设计量：Göppl 系统标定显示过耦合区 $Q_L\propto C_\kappa^{-2}$、欠耦合端饱和于 $Q_\mathrm{int}$，0.24–56.4 fF 的耦合电容铺满约三个量级的线宽选择（见该词条"耦合电容工程"一节）；
 - **强耦合判据**：$\kappa$ 与 $g$、$\gamma$ 一起决定系统是否进入[[circuit-qed/strong-coupling|强耦合]]区；$\kappa$ 同时还是色散读出信噪比 $2\chi/\kappa$ 的分母；
 - **JC 模型与色散读出**：$\kappa$ 进入[[circuit-qed/jaynes-cummings-model|JC 模型]]的开放系统主方程；色散频移与 Purcell 展宽（[[readout-measurement/dispersive-readout|色散读出]]）都依赖 $\kappa$ 的相对大小；
 - **高阻抗腔**：（参见[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]）是同时提升 $Z_r$ 与压低 $\kappa_i$ 的硬件路线，承载了从 NbTiN 到 TiN 的多条器件工艺；

@@ -199,7 +199,7 @@ two-tone 谱用一路探测微波（$\omega_p=\omega_r$）和一路驱动微波�
 ## 与其他概念的关系
 
 - **JC 模型与真空 Rabi 劈裂**：电荷–光子耦合在 RWA 下回到[[circuit-qed/jaynes-cummings-model|JC 哈密顿量]]；$g_c$ 给出的真空 Rabi 劈裂是[[circuit-qed/strong-coupling|强耦合]]实验的标志。
-- **高阻抗腔**：耦合强度 $g_0\propto 2Z_r/\sqrt{R_Q}$，因此[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]（SQUID 阵列、动态电感薄膜）成为提升 $g_c$ 的关键路线。
+- **高阻抗腔**：耦合强度 $g_0\propto 2Z_r/\sqrt{R_Q}$，因此[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]（SQUID 阵列、动态电感薄膜）成为提升 $g_c$ 的关键路线——材料侧的定量支撑是 NbN 薄膜标定（15 nm 膜 $L_{k,S}=41.2$ pH/□，对比 50 nm Nb 仅 0.5 pH/□），同设计下预期 $Z_C\times5.6$、$g_c\times2.4$。
 - **电荷稳定图与库仑菱形**：电荷比特的 $\varepsilon$ 扫描由[[fundamentals/charge-stability-diagram|电荷稳定图]]的隧穿线标定；菱形半高与栅压周期给出[[fundamentals/coulomb-diamond|库仑菱形]]的 $E_{\rm add}$ 与 $\alpha$。
 - **双量子点与隧穿耦合**：双量子点电极间距 $\sim 100\ \mathrm{nm}$ 决定电偶极矩大小；电极间隧穿耦合 $t_c$ 决定电荷比特频率 $\omega_a$ 与混合角 $\theta$。
 - **电荷噪声与退相干**：耦合越强意味着量子点越"暴露"在电场中，[[materials-devices/charge-noise|电荷噪声]]的耦合通道也越显著，$T_2$ 越短。

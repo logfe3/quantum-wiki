@@ -10,6 +10,9 @@ tags:
  - 电路量子电动力学
  - 微波
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m23askwjjdmvv776m6y39es4
+source_updated: 2026-09-09T16:59:26Z
 ---
 
 <div class="entry-lead">微波谐振腔把连续传输线中的场压缩成一个或多个离散模式。它既是高灵敏度传感器，也能作为在相距较远量子比特之间传递相互作用的量子总线。</div>
@@ -134,6 +137,29 @@ $$
 
 其中 $\kappa=\kappa_i+\kappa_e$，$\gamma=\gamma_1/2+\gamma_\phi$。当 $g_c\chi\to0$ 时回到无加载谐振腔的洛伦兹响应。
 
+## 耦合电容工程：从 C_κ 标定到 Q_L 设计
+
+外耦合 $\kappa_e$（即 $Q_L$）不是测量出来再接受的事实，而是**用耦合电容设计出来**的自由度。Göppl 等人对 2–9 GHz 一批 Al CPW 腔（中心导体 $w=10\ \mu$m、缝隙 $s=6.6\ \mu$m，高阻硅衬底 550 nm 热氧化层）做了系统标定：耦合元件分两类——**间隙电容**（宽度 $w_g=10$–$50\ \mu$m，$C_\kappa$ 约 0.24–0.44 fF）与**指形电容**（1–8 对指，指长 $l_f=100\ \mu$m、指宽/间距 3.3 μm，$C_\kappa$ 约 4–56 fF），在 2.3 GHz 基频器件上把 $Q_L$ 从 $3.7\times10^2$ 连续铺到 $2.3\times10^5$。
+
+集总 LCR 模型给出设计规律：把 $C_\kappa$ 与馈线 $R_L$ 的串联经 Norton 变换映射为并联的 $R^*$、$C^*$，过耦合区（$Q_\mathrm{ext}\ll Q_\mathrm{int}$）的有载品质因数
+
+$$
+Q_\mathrm{ext}\approx\frac{\bar{C}}{2\omega_n\bar{R}_L\,C_\kappa^2}\qquad\Rightarrow\qquad Q_L\propto C_\kappa^{-2}
+$$
+
+其中 $\bar{C}$、$\bar{R}_L$ 是映射后的等效集总参数、$\omega_n$ 是第 $n$ 模角频率——$Q_L$ 随耦合电容平方反比下降；欠耦合区（$Q_\mathrm{ext}\gg Q_\mathrm{int}$）则饱和在内禀品质因数 $Q_\mathrm{int}\approx2.3\times10^5$（20 mK、本征损耗极限）。同一套模型同时预言频率牵引（$C^*$ 改变谐振频率）与插入损耗，ABCD 传输矩阵法更覆盖全谱（含高次谐波模式），两模型对全部 12 只器件的共振频率、品质因数与插损一致描述——设计即预言。
+
+这套标定直接对应两类应用的分工：**过耦合**（大 $C_\kappa$、低 $Q_L$、宽带）用于腔内比特态的快速测量；**欠耦合**（小 $C_\kappa$、$Q_L\to Q_\mathrm{int}$、长光子寿命）用于把腔当光子存储器。
+
+![[assets/figures/microwave-resonator/goppl2008-fig1-cpw-capacitor-geometry.jpg]]
+*电容耦合 CPW 腔的版图与截面：左侧指形电容（多对指交叠增大 $C_\kappa$）、右侧间隙电容（小 $C_\kappa$）；中心导体宽 $w=10$ µm、缝隙 $s=6.6$ µm，双层衬底上铝膜光刻成型。图源：Göppl et al. (2008), Fig. 1。*
+
+![[assets/figures/microwave-resonator/goppl2008-fig5-lcr-model-mapping.jpg]]
+*分布参数到集总 LCR 的模型映射：对称耦合传输线腔等效为并联 LCR 振子，$C_\kappa$ 与 $R_L$ 的串联经 Norton 变换变为并联 $R^*$、$C^*$——品质因数下降与频率牵引由此统一进入集总设计公式。图源：Göppl et al. (2008), Fig. 5。*
+
+![[assets/figures/microwave-resonator/goppl2008-fig6a-ql-vs-ckappa.jpg]]
+*$Q_L$ 对耦合电容 $C_\kappa$ 的实验标定（红点）与模型预言（蓝线）：过耦合区沿 $C_\kappa^{-2}$ 虚线下降（小电容端饱和于 $Q_\mathrm{int}\approx2.3\times10^5$），0.24–56.4 fF 的电容设计覆盖约三个量级的 $Q_L$。图源：Göppl et al. (2008), Fig. 6(a)。*
+
 ## 损耗通道与品质因数
 
 总耗散 $\kappa=\kappa_i+\kappa_e$ 中，外耦合 $\kappa_e$ 由耦合电容决定（$\kappa_\nu\propto\omega_r^3 Z_r Z_{0,\nu} C_{\mathrm{ext},\nu}^2$，因此阻抗越高、同样耦合电容下外耦合越强）。内耗散的主要通道是
@@ -158,6 +184,8 @@ $$
 | 高阻抗 NbTiN 腔 | ~2 kΩ | ~6 GHz | ~11 MHz | w=0.32 µm，11 nm 膜 | |
 | 高阻抗 TiN λ/2 腔 | ~3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，Lₖ=265.9 pH/□ | |
 | 高阻抗 TiN 腔（7.3 GHz） | ~2.5 kΩ | 7.332 GHz | 5.13 MHz | 用于自旋–光子耦合 | |
+| Göppl 标定型 CPW 腔（2.3 GHz 基频） | 50 Ω 级 | 2.27–2.35 GHz | $Q_L=3.7\times10^2$–$2.3\times10^5$ | $C_\kappa$ 0.24（间隙）–56.4 fF（8+8 指）；$Q_L\propto C_\kappa^{-2}$ | Göppl 2008 |
+| Göppl 器件内禀品质因数 | — | — | $Q_\mathrm{int}\approx2.3\times10^5$（20 mK） | 欠耦合饱和值 | Göppl 2008 |
 
 耦合强度的收益与之同步：50 Ω CPW 透射腔中 $g/2\pi\sim6.5$–$20\ \mathrm{MHz}$ 停留在弱耦合区；SQUID 阵列腔把 GaAs 双量子点的耦合提升到 $g/2\pi\approx119\ \mathrm{MHz}$；3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175\ \mathrm{MHz}$ 的电荷比特强耦合。
 
@@ -179,3 +207,9 @@ $$
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）；
 - 多比特共享同一腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础；
 - 性能瓶颈来自[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]，常见平台包括[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]。
+- 需要特斯拉级磁场（自旋/拓扑比特）的场景须改用[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]：涡旋钉扎与薄膜几何把 $Q_i\simeq10^5$ 保持到面内 6 T。
+
+## 参考文献
+
+- Göppl, M., Fragner, A., Baur, M., Bianchetti, R., Filipp, S., Fink, J. M., Leek, P. J., Puebla, G., Steffen, L., Wallraff, A. Coplanar waveguide resonators for circuit quantum electrodynamics. *Journal of Applied Physics* 104, 113904 (2008). DOI: 10.1063/1.3010859；arXiv:0807.4094（QAtlas 缓存：0807.4094）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

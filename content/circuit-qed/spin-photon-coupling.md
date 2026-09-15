@@ -253,7 +253,7 @@ $$
 
 - **反旋项**：当 $g_s/\omega_r\gtrsim 0.1$ 时[[circuit-qed/jaynes-cummings-model|JC 模型]]失效，需回到完整 Rabi 模型。 论文中电荷比特已达 $g_c/\omega_r\sim 0.175$ 边缘，但 $g_s/\omega_r$ 仍远小于 0.1，JC 框架仍准确。
 - **电荷噪声–耦合折中**：$g_s\propto g_c\propto V_\mathrm{zpf}\sqrt{Z_r}$，$g_c$ 越大电荷噪声引入的自旋退相干越大；强耦合要求 $\partial B_x/\partial x$ 足够大、$T_2^\*$ 足够长，二者同时由栅极结构与材料质量决定。
-- **磁场兼容性**：自旋比特需面内磁场区分自旋态；[[circuit-qed/squid-array-resonator|SQUID 阵列腔]]对磁场敏感、不兼容；TiN、NbTiN 等高 $T_c$ 超导材料腔是自旋比特实验的主流（见[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]）。
+- **磁场兼容性**：自旋比特需面内磁场区分自旋态；[[circuit-qed/squid-array-resonator|SQUID 阵列腔]]对磁场敏感、不兼容；TiN、NbTiN 等高 $T_c$ 超导材料腔是自旋比特实验的主流（见[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]），进一步用薄膜几何与涡旋钉扎孔阵把 $Q_i\simeq10^5$ 保持到面内 6 T 的工程方案见[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]。
 - **多比特共享腔**：多个自旋比特共享同一[[circuit-qed/microwave-resonator|微波腔]]时，色散区可推出有效交换作用 $J_\mathrm{eff}\sim g_{s,1}g_{s,2}/\Delta$（见[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]）；但多比特 $g_{s,i}$ 大小不一、频率拥挤时，需仔细设计失谐与[[readout-measurement/dispersive-readout|色散读出]]频点。
 - **替代路线**：[[scaling-automation/spin-orbit-torque-control|SOT 磁化翻转]]、单光子辅助的 EDSR、或借助[[qubit-control/hybrid-qubit|杂化比特]]等机制可在不同边界条件下避开微磁体，但仍要求某种形式的自旋–电荷混合。
 
