@@ -1,0 +1,71 @@
+---
+title: 高次体声波谐振器量子声动力学
+description: 用高次体声波谐振器（HBAR）的多模机械振子做量子存储与态传输的电路量子声动力学平台。
+aliases:
+ - HBAR 量子声动力学
+ - 体声波量子存储
+ - quantum acoustodynamics
+ - HBAR
+tags:
+ - 电路 QED
+ - 量子声动力学
+ - 机械振子
+ - 量子存储
+date: 2026-09-15
+source: QAtlas
+qatlas_id: qa_01m0qveprfc0qaxkg0x11ga7sa
+source_updated: 2026-09-15T05:14:08Z
+---
+
+<div class="entry-lead">微波谐振腔用电磁场存量子态，机械振子用声波存——高次体声波谐振器（HBAR）一片压电衬底上提供密集的纵向声学模，每个模都能与超导比特近共振耦合。双比特各挂一组 HBAR 时，激发可以在整个系统里"巡回"：比特 → 声学模 → 另一比特 → 另一声学模——机械模的长寿命让"存进去、走一圈、取出来"成为量子存储与中继的原型演示。</div>
+
+## 物理图像：声学模当量子存储
+
+电路量子电动力学（[[circuit-qed/circuit-quantum-electrodynamics|cQED]]）的谐振腔损耗快（µs 级光子寿命），而机械振子的声学品质因子可以极高——**量子声动力学**（quantum acoustodynamics, QAD）用机械振子替代电磁腔做量子存储：压电效应把电路的电场耦合到衬底的应变场，形成比特-声子耦合。**HBAR**（high-overtone bulk acoustic wave resonator）是纵向体声波版本：厚度模式的高次泛音给出间隔均匀的密集模列，一个器件覆盖数百 MHz 内几十个可用模——"多抽屉"的存储阵列。
+
+## 双比特 HBAR 系统的哈密顿量
+
+两个电容耦合的 transmon 各自耦合独立的 HBAR 模列。比特-模耦合服从 [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]，比特-比特为电容耦合（iSWAP 形式），系统哈密顿量
+
+$$
+\hat H=\sum_{k}\omega_{m,k}^{(1)}\hat b_{k}^{\dagger}\hat b_{k}+\sum_{l}\omega_{m,l}^{(2)}\hat c_{l}^{\dagger}\hat c_{l}+\sum_{j=1,2}\frac{\omega_{q,j}}{2}\sigma_z^{(j)}
++\sum_{j,k}g_{j,k}\left(\hat a_j^\dagger \hat b_k+\mathrm{h.c.}\right)+J\left(\sigma_+^{(1)}\sigma_-^{(2)}+\mathrm{h.c.}\right),
+$$
+
+其中 $\hat b_k$、$\hat c_l$ 是两组 HBAR 模的声子算符、$g_{j,k}$ 是比特-声学模耦合（压电换能）、$J$ 是比特间电容耦合。磁通调谐比特频率扫过模列时，在各避免交叉处出现**真空 Rabi 振荡**——激发在比特与声学模之间相干交换。
+
+![[assets/figures/hbar-quantum-acoustodynamics/67efea8bf47a83de5def39efec3f228d160033b211dafdd077f258610a9fc7d3.jpg]]
+
+*真空 Rabi 振荡实验：激发在受控比特与机械模（红箭头）及其他比特（蓝箭头）之间交换——振荡频率对应谱学中的避免交叉，直接给出耦合强度 $g$ 与 $J$。图源：Bringnetti et al. (2023)，Fig. 2。*
+
+## 跨自由度的量子态传输
+
+最引人注目的演示是**激发的全程巡回**：π 脉冲激发比特 1 → 交换到它的声学模再换回 → 经比特间耦合转到比特 2 → 再与比特 2 的声学模（以及比特 1）交换。终点测量显示真空 Rabi 振荡完好——激发带着相干性走遍了电学与声学两类自由度。
+
+一个关键的控制实验排除了"两组 HBAR 共享声学模"的可能：把激发从比特 1 换入其 3.788 GHz 声学模、调离后把比特 2 调到同频——**无响应**，证明两个比特各自耦合独立的局域声学模（任何杂散耦合弱到测不出）。
+
+```mermaid
+flowchart LR
+  A[π 脉冲激发比特 1] --> B[交换到 HBAR-1 声学模]
+  B --> C[换回比特 1]
+  C --> D[比特间耦合 iSWAP]
+  D --> E[转到比特 2]
+  E --> F[与 HBAR-2 声学模交换]
+  F --> G[终点测量: 真空 Rabi 振荡完好]
+```
+
+![[assets/figures/hbar-quantum-acoustodynamics/a72a8f62969afebb96afc2cd764c5c5e6de499798ed7816ef49f26a85fbe493c.jpg]]
+
+*跨系统量子态传输：脉冲序列让激发从比特 1 出发、经声学模与比特间耦合遍历整个系统，最终在比特 2 上测得真空 Rabi 振荡——数据与主方程解吻合，证明相干性在整个"电-声-电"路径上保持。图源：Bringnetti et al. (2023)，Fig. 3。*
+
+## 与其他概念的关系
+
+- 比特-声学模耦合的数学结构与[[circuit-qed/jaynes-cummings-model|JC 模型]]完全同源——QAD 是 cQED 在机械自由度上的平移；真空 Rabi 振荡与避免交叉的判读方法直接沿用。
+- 与[[circuit-qed/nv-center-cavity-bus|NV 色心腔总线]]的分工：色心是"长寿命自旋存储 + 电学操控"，HBAR 是"多模机械存储 + 全电学耦合"——两条量子存储路线互补。
+- 与[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]对照：腔总线用共享电磁模连接比特，HBAR 系统用声学模做节点存储、比特耦合做节点间通道——存储与通信分工的两种实现。
+- HBAR 的高品质因子声学模本质上是[[fundamentals/coulomb-blockade|压电衬底]]上的应变本征模——材料工艺（压电薄膜、换能器设计）决定模列密度与耦合强度。
+
+## 参考文献
+
+- Brighetti, F., et al. (2023). *Coupling high-overtone bulk acoustic wave resonators via superconducting qubits*. [arXiv:2307.05544](https://arxiv.org/abs/2307.05544)
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

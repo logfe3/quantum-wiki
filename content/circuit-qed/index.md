@@ -23,3 +23,4 @@ date: 2026-09-08
 - [[nv-center-cavity-bus|NV 色心腔总线]]
 - [[superinductance|超电感与约瑟夫森结阵列]]
 - [[bosonic-cqed|玻色 cQED 与腔编码量子计算]]
+- [[hbar-quantum-acoustodynamics|高次体声波谐振器量子声动力学]]
