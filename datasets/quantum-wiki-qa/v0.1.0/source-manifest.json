@@ -1,5 +1,5 @@
 {
-  "source_digest": "19b1fa6d8df1f5fecbdd73b971199cf1ca18a834048bcc0e0b0e9e5299c16728",
+  "source_digest": "f1637f5231d8ae87dfdce6907dc3ca9ebafd32518c340a41bdcb8f5a349be79d",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -19,7 +19,7 @@
       "path": "content/circuit-qed/cavity-mediated-coupling.md",
       "title": "腔介导远程耦合",
       "topic": "circuit-qed",
-      "sha256": "28a67f890b3f81c7d736461a60ef9addb148ed00b89cb3231da804ca0e56e0d4",
+      "sha256": "edf3c18f1c2edafa21f1ca7c192e8fa11f712c9221f84f4997b6e401deff8822",
       "split": "train"
     },
     {
@@ -474,7 +474,7 @@
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "40196849f7b889d19f19399c8a1f3a413e13e2bc14592d9cb438602149d7a24b",
+      "sha256": "d541e2df858191aa0c512c9fab726282b05e5fcd831486e3fed9d16c5b518ea7",
       "split": "train"
     },
     {
@@ -488,21 +488,21 @@
       "path": "content/readout-measurement/qpc-charge-sensor.md",
       "title": "QPC 电荷传感器",
       "topic": "readout-measurement",
-      "sha256": "e93353a4ca165160eb2ddad82ac13da3ce934b171ca09b880e03e1b40ad66d5b",
+      "sha256": "de6ed39993afd1c514847df0ecdd37c2078bf12b4ca14505af88cce5a0365e1b",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "570722c58ae609b56d0f15c4c54a8a3a337920efc67c89f2b4a2aa10c3bb7823",
+      "sha256": "decd671007997a98186f36ea3349765e8fd59d0baf9a391ef4b8c316635a72f1",
       "split": "dev"
     },
     {
       "path": "content/readout-measurement/rf-reflectometry.md",
       "title": "射频反射测量",
       "topic": "readout-measurement",
-      "sha256": "66b3b621b22eb1ba924a6e2322541bae775d73565a7f3fc1807de35079396006",
+      "sha256": "109f29e5d4fff56bbcdcfbb6f9d878a068316882151464a456edd5a53682e74a",
       "split": "train"
     },
     {
