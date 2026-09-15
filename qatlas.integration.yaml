@@ -3,15 +3,17 @@ cacheDir: .qatlas-cache/papers
 
 autodiscovery:
   seed_topics:
+    - "semiconductor material quantum dot"
+    - "charge noise semiconductor"
+    - "amplifier quantum limited"
+    - "readout multiplexing scaling"
+    - "decoherence error budget"
+    - "automatic calibration qubit"
+    - "spin qubit silicon germanium"
+    - "quantum dot cavity coupling"
     - "superconducting qubit"
-    - "quantum dot readout"
-    - "spin qubit control"
-    - "Josephson junction array"
-    - "microwave resonator quantum"
-    - "charge qubit"
-    - "flux qubit"
     - "circuit quantum electrodynamics"
-  strategy: adaptive
+  strategy: knowledge-gap
   stateFile: .qatlas-cache/autodiscovery-state.json
   batchSize: 3
 

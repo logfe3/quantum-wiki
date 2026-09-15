@@ -607,10 +607,11 @@ function pickNextTopic(state, seedTopics, wikiIndex) {
   if (unusedSeed) return { topic: unusedSeed, origin: "seed" }
   const unusedDerived = derived.find((topic) => !used.has(topic.toLowerCase()))
   if (unusedDerived) return { topic: unusedDerived, origin: "derived-from-main" }
-  // All known topics used: restart the cycle with a fresh index-derived list,
-  // skipping topics already attempted in this cycle
-  const fallback = derived.find((topic) => !used.has(topic.toLowerCase())) ?? seedTopics[0]
-  return { topic: fallback, origin: "cycle-restart" }
+  // All known topics used: restart the cycle with round-robin over the seed
+  // list (ordered by knowledge-gap priority) instead of always returning to
+  // seedTopics[0]. usedPapers keeps paper-level dedup across cycles.
+  state.seedCursor = ((state.seedCursor ?? 0) + 1) % Math.max(1, seedTopics.length)
+  return { topic: seedTopics[state.seedCursor], origin: "cycle-restart" }
 }
 
 function nextBatchSize(state, autodiscovery) {
