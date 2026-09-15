@@ -946,7 +946,16 @@ async function commandAuto(options) {
         const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex)
         console.log(`Topic (${selection.origin}): "${selection.topic}"`)
         try {
-          runId = await commandDiscover({ query: selection.topic, max: batchSize, images: "referenced" })
+          const candidateRunId = await commandDiscover({ query: selection.topic, max: batchSize, images: "referenced" })
+          const discovered = JSON.parse(
+            await readFile(path.join(runsRoot, candidateRunId, "candidates.json"), "utf8"),
+          )
+          if ((discovered.candidates ?? []).length === 0) {
+            console.log(`Topic "${selection.topic}" returned no candidates; trying the next topic.`)
+            state.usedTopics.push(selection.topic)
+            continue
+          }
+          runId = candidateRunId
           chosenTopic = selection
           discoverOutcome = "ok"
           break
