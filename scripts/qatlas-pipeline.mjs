@@ -235,6 +235,7 @@ async function discoverPapers(config, options) {
   )
 
   const enriched = []
+  const failedPaperIds = []
   for (const candidate of candidates) {
     const identifier = candidate.arxiv_id || candidate.doi || candidate.paper_id
     process.stdout.write(`Fetching candidate ${candidate.title ?? candidate.paper_id} … `)
@@ -279,10 +280,11 @@ async function discoverPapers(config, options) {
         title: candidate.title,
         reason: `fetch failed: ${error instanceof Error ? error.message : String(error)}`,
       })
+      failedPaperIds.push(candidate.paper_id)
       console.log("failed")
     }
   }
-  return { candidates: enriched, excluded, wikiIndex: index }
+  return { candidates: enriched, excluded, wikiIndex: index, failedPaperIds }
 }
 
 // ---------------------------------------------------------------------------
@@ -696,7 +698,7 @@ async function commandDiscover(options, usedPapers = []) {
   const query = typeof options.query === "string" ? options.query : ""
   if (!query) throw new Error("discover requires --query TEXT.")
   const config = await loadIntegrationConfig()
-  const { candidates, excluded, wikiIndex } = await discoverPapers(
+  const { candidates, excluded, wikiIndex, failedPaperIds } = await discoverPapers(
     { query, cacheDir: config.cacheDir, usedPapers },
     options,
   )
@@ -713,7 +715,7 @@ async function commandDiscover(options, usedPapers = []) {
   await writeJson(await runArtifactPath(runId, "wiki-index.json"), wikiIndex)
   console.log(`Run ${runId}: ${candidates.length} candidate(s) cached, artifacts written.`)
   void indexSummary
-  return runId
+  return { runId, failedPaperIds: failedPaperIds ?? [] }
 }
 async function writeWorkOrder(runId) {
   const runDir = path.join(runsRoot, runId)
@@ -902,7 +904,7 @@ async function commandStatus(options) {
 }
 
 async function commandRun(options) {
-  const runId = await commandDiscover(options)
+  const runId = (await commandDiscover(options)).runId
   const executor = String(options.executor ?? "agent")
   if (executor === "codex") {
     await commandPlan(options)
@@ -952,10 +954,14 @@ async function commandAuto(options) {
         const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex)
         console.log(`Topic (${selection.origin}): "${selection.topic}"`)
         try {
-          const candidateRunId = await commandDiscover(
+          const discoverResult = await commandDiscover(
             { query: selection.topic, max: batchSize, images: "referenced" },
             state.usedPapers ?? [],
           )
+          const candidateRunId = discoverResult.runId
+          for (const paperId of discoverResult.failedPaperIds) {
+            if (!state.usedPapers.includes(paperId)) state.usedPapers.push(paperId)
+          }
           const discovered = JSON.parse(
             await readFile(path.join(runsRoot, candidateRunId, "candidates.json"), "utf8"),
           )
@@ -1057,7 +1063,10 @@ All run artifacts live under .qatlas-cache/runs/<run-id>/ (Git-ignored).`)
 
 async function main() {
   const { command, options } = parseArguments(process.argv.slice(2))
-  if (command === "discover") return commandDiscover(options)
+  if (command === "discover") {
+    const discoverResult = await commandDiscover(options)
+    return discoverResult.runId
+  }
   if (command === "plan") return commandPlan(options)
   if (command === "generate") return commandGenerate(options)
   if (command === "review") return commandReview(options)
