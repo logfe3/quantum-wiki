@@ -320,6 +320,16 @@ flowchart LR
 
 *产线比特的相干测量：$T_1$、$T_2$ 分布——工业工艺的统计一致性达到实验室水平。图源：Van Damme et al. (2024)，Fig. 2。*
 
+**双音谱学**是 TLS 表征的第二种方法：不依赖比特频率调谐（对照偏置电荷敏感法），用两个微波音同时驱动——TLS 与比特的强耦合在双音谱中产生特征线形，直接读出 TLS 参数。对频率不可调的比特（如固定频率 transmon 阵列）尤其有价值。
+
+![[assets/figures/interface-defects/ddc9f566a747f25f362f9384b78ed99c55da9f0265e195bb3d9468e4955a65f2.jpg]]
+
+*双音谱学方案：两个微波音的联合扫描——TLS-比特强耦合的特征谱线，无需调谐比特频率。图源：arXiv:2404.14039，Fig. 1。*
+
+![[assets/figures/interface-defects/b80044ee2094c1d12670d0cfbfa948c69e3e8d9b374eb31ccbd0a9ad02643e93.jpg]]
+
+*双音谱的 TLS 检测结果：特征线形直接读出 TLS 参数——固定频率比特阵列的 TLS 表征工具。图源：arXiv:2404.14039，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状。
