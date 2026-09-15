@@ -1,5 +1,5 @@
 {
-  "source_digest": "cf02c413fe7c1f62a4db3a9edce2e9725e052df29ae207e2bd1aa9d3a88f8e21",
+  "source_digest": "39316488305a812ec1eea107baded1df369233baa7c655691459121159bdd07f",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -26,7 +26,7 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "76fbd374a6b885a16a0121a2e36e3af57b3484fd72820d2063ef7a93864f301e",
+      "sha256": "d103670e0bc0bf5860311c87130ffe5404b248b7d5d6114fc42dd744005f12a4",
       "split": "dev"
     },
     {
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "e29ce9812004ec5ff7648df89ab63d04b50ebdf0c51a3221a22f31a639fc90e6",
+      "sha256": "3ae5ba03744f7656c358235790f360f1d6d1e13886b9771f0799c0534aec7db1",
       "split": "train"
     },
     {
@@ -110,7 +110,7 @@
       "path": "content/circuit-qed/strong-coupling.md",
       "title": "强耦合判据",
       "topic": "circuit-qed",
-      "sha256": "138fcda405bc057342ca06b16daa2bef7e66232852c2eec31b7e1217480c5919",
+      "sha256": "c50529437f6f3b69b4a22f28af7e1adb5baa3f056a98cd23e1eeeb16fb47af9e",
       "split": "train"
     },
     {
@@ -257,7 +257,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "46e9aa477caa3ec7aec2764aaef12f27e9b12d8d4af3a760a93331b7e2c73d1d",
+      "sha256": "28af55fdf5a8c45b29f99aa37c24bb6c19e7491e55687ec8644c1b99de031099",
       "split": "train"
     },
     {
@@ -516,14 +516,14 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "e3eb2e8ec110eeab02b513c177ab0bd1765556e277aba889ecb3a276ce5d7daa",
+      "sha256": "f4f02b0afcb62fb63fa56b8fb2167da32cebe5acd456ae5e0b1431264158062e",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/threshold-independent-readout.md",
       "title": "阈值无关读出",
       "topic": "readout-measurement",
-      "sha256": "5a334f2041e0ff2d51d604ba593a9221bb623b2c72a1b6a3392b2389e3d8af01",
+      "sha256": "9b4deed5ccaa5f550bbeb7239716a0318584842c9c50833181639cf515b0995b",
       "split": "train"
     },
     {
@@ -551,7 +551,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "d2176e88fe87777a60d5769c400affa2aa03c9785fb7a6991d1117d00b5ae11c",
+      "sha256": "b94c039e12fd525ca24a88177ccd3359298bac0a44c9ee2d4e7696c5e1f4d317",
       "split": "train"
     },
     {
@@ -572,14 +572,14 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "d403ef98feed7758682dd98c78231113d90f57253f51c57e3c34b95a0db70707",
+      "sha256": "88bd35574acbf1d475215de514c4faced68e90198d2f083b0980d97ebcdb2e0f",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/multi-time-tomography.md",
       "title": "多时间量子过程层析",
       "topic": "scaling-automation",
-      "sha256": "689ecae674d876edbd96e058b7def6ddf4186b83fd3b2acccd774cc063e08508",
+      "sha256": "e3b40c07ac87150eb190623592fb94b94236d42fbaaae8e3a12bf6b51adf61aa",
       "split": "train"
     },
     {
@@ -635,7 +635,7 @@
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
       "title": "Fluxonium 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "7e20d24dc5cdfd9cbf6fdedcfb7a62b28f055333ed6c8d28a12e27088b6a9a06",
+      "sha256": "a164ba5072a8a57321950899afb000f41e2c1d9fdebebac5562022f155b73173",
       "split": "train"
     },
     {
