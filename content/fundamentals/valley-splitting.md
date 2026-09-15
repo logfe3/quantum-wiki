@@ -11,8 +11,8 @@ tags:
  - 自旋量子比特
 date: 2026-09-15
 source: QAtlas
-qatlas_id: qa_01m0qvj2bpc4tdn7bka6h8cacb
-source_updated: 2026-09-09T15:40:50Z
+qatlas_id: qa_01m0qvhd1y5pnmhzdv73qgh3ja
+source_updated: 2026-09-02T17:02:04Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -87,6 +87,38 @@ T_1^{-1}=\Gamma_\mathrm{J,SV}+\Gamma_\mathrm{ph,SV}+\Gamma_\mathrm{J,SO}+\Gamma_
 
 在 [[qubit-control/singlet-triplet-qubit|S–T₀ 比特]] 中，电子通过 $(1,1)$–$(0,2)$ 跃迁读取，读取窗口取决于左量子点中 $S(2,0)$ 与 $T(2,0)$ 的能级差。在硅量子点里，这个"轨道差"本来远大于塞曼劈裂，因此窗口远大于自旋选择性隧穿读出；但若 $(0,2)$ 态的电子被热激发到第一激发谷态，能级差被压回 $\sim E_\mathrm{VS}$ 量级，窗口立即受限——这就是 所说"在硅量子点样品中，由于谷能级的存在，仍然有可能导致读取窗口被限制"的根源。
 
+### 统一理论：应变、共振与合金无序的相互作用
+
+词条前述理论基于"$2k_0$ 理论"——只计同一布里渊区内 $\pm k_0$ 两谷的直接耦合。Thayil 等人把三类长期分立的要素（应变、非平庸共振、随机合金无序）合并进一个包络函数框架：两个谷态的包络函数 $\Psi_\pm(\mathbf{r})$ 由耦合包络方程
+
+$$
+\begin{pmatrix} H_0(\mathbf{r}) & V_c(\mathbf{r}) \\ V_c^*(\mathbf{r}) & H_0(\mathbf{r}) \end{pmatrix}\binom{\Psi_+}{\Psi_-}=E\binom{\Psi_+}{\Psi_-}
+$$
+
+描述，其中 $H_0$ 是单谷包络哈密顿量（含量子阱限制势 $U_\mathrm{QW}$、电场势 $U_F$ 与应变修正），$V_c(\mathbf{r})$ 是谷间耦合势（由异质结势与合金无序的傅里叶分量在谷间波矢处提供）；能带结构、应变与晶体对称性由经验赝势方法注入，合金无序则按 Ge 原子在原胞中的二项式抽样统计。谷劈裂等于基态与第一激发态的能量差，其统计服从瑞利分布，参数为确定性分量 $\nu=2|\Delta_\mathrm{det}|$ 与无序展宽 $\sigma=\sqrt{2\Gamma}$——**判据 $\nu\gtrless2\sigma$ 把参数空间分成"确定性增强"与"无序主导"两区**。
+
+框架的关键新物理是**剪切应变解锁低频共振**。双轴张应变（$\varepsilon_\parallel\approx1.14\%$）把六谷简并压成 $\pm z$ 两谷；沿 [110] 的剪切应变 $\varepsilon_{x,y}$ 则打破把两个 fcc 子晶格互换的非点式螺旋对称（子晶格位移由 Kleinman 内位移参数 $\zeta$ 控制），解锁 $2k_1$ 共振——$k_1$ 是导带底到布里渊区边界的倒空间距离，$2k_1$ 处势的傅里叶幅度远大于 $2k_0$ 处。后果直接改写工程判据：无剪切应变时，确定性增强要求约 1 个单层（ML）的锐界面；而 $\varepsilon_{x,y}=0.05\%$ 的温和剪切应变把该窗口扩到 **5 个 ML**——对界面锐度的苛刻要求大幅放松。
+
+对**摆动阱（wiggle well）**——阱内 Ge 浓度按 $x(z)=\tfrac12 X_\mathrm{ww}(1+\cos qz)$ 振荡——的统一分析给出三种构型的完整画像：
+
+- **均匀 Ge（$q=0$）**：白噪声型合金涨落在全波数贡献谷间耦合，平均 $E_\mathrm{VS}$ 抬升，但增强完全由无序主导（$\nu\ll2\sigma$）——低劈裂"热点"依然存在；
+- **短周期摆动阱（$q=2k_0$）**：共振随 Ge 幅度增长、与剪切应变无关，但要求 $\lambda=\pi/k_0\approx2.4$ ML $\approx0.32$ nm 的调制周期，超出现代外延技术；
+- **长周期摆动阱（$q=2k_1$）**：**工程上最有吸引力的构型**——剪切应变 $\varepsilon_{x,y}\gtrsim0.006\%$（高 Ge 幅度）或 $\gtrsim0.035\%$（微小幅度即可）就进入确定性增强区，$(q=2k_1, X_\mathrm{ww}=15\%)$ 时 $\nu/2\sigma\approx1.41$、平均谷劈裂随剪切应变线性增长，且对波数偏差鲁棒——自旋–谷热点可望被系统性压制。这正是自旋穿梭（电子被输运穿过微米级无序景观）所需要的"可靠大谷劈裂"。
+
+另有**低次谐波/Ge 尖峰**构型（$q\approx k_1$）：势与波函数各自以 $k_1$ 为主频、乘积却有效激发 $2k_1$ 机制，但需 $X_\mathrm{ww}\gtrsim12\%$ 的高 Ge 含量，增强较弱（$\nu/2\sigma\approx0.62$）且强自旋轨道副作用使比特控制复杂化——不如长周期摆动阱。
+
+![[assets/figures/valley-splitting/thayil2025-fig1-brillouin-strain.jpg]]
+*能带与对称性框架：fcc 布里渊区中六个等价导带极小被双轴应变劈裂为 $\pm z$ 两谷；剪切应变沿 [110] 进一步把晶体对称性从四方降到正交，打破映射两个 fcc 子晶格的非点式螺旋对称（子晶格位移由 Kleinman 参数 ζ 控制），解锁 2k₁ 共振。图源：Thayil et al. (2025), Fig. 1。*
+
+![[assets/figures/valley-splitting/thayil2025-fig3-interface-width.jpg]]
+*界面宽度判据的重写：无剪切应变（ε_{x,y}=0）时确定性增强（灰色区）只覆盖约 1 ML 的锐界面；ε_{x,y}=0.05% 的剪切应变把窗口扩展到约 5 ML——共振分量从 n=0 转为由 n=−1（2k₁ 机制）主导。红色区为瑞利分布的 [25%, 75%] 分位。图源：Thayil et al. (2025), Fig. 3。*
+
+![[assets/figures/valley-splitting/thayil2025-fig4-wiggle-well-resonances.jpg]]
+*摆动阱的共振地图（平均谷劈裂 vs Ge 调制波数 q 与幅度 X_ww）：无剪切应变时只在 q=2k₀ 有确定性共振；ε_{x,y}=0.1% 的剪切应变在 q=2k₁ 解锁新的长周期共振，且劈裂随剪切应变线性增长。图源：Thayil et al. (2025), Fig. 4。*
+
+![[assets/figures/valley-splitting/thayil2025-fig5a-separatrix-map.jpg]]
+*长周期摆动阱的两参数地图（剪切应变 × Ge 幅度）：虚线为 ν=2σ 分界（确定性增强区 vs 无序主导区）——大剪切应变下微小的 Ge 幅度即可进入确定性增强区，热点的统计权重被系统性压低。图源：Thayil et al. (2025), Fig. 5(a)。*
+
 ## 参数与量级
 
 | 体系 | 谷劈裂 $E_\mathrm{VS}$ | 典型测量方法 | 来源 |
@@ -99,6 +131,9 @@ T_1^{-1}=\Gamma_\mathrm{J,SV}+\Gamma_\mathrm{ph,SV}+\Gamma_\mathrm{J,SO}+\Gamma_
 | 谷劈裂空间关联长度 | $\ell_C=19.2\ \mathrm{nm}$（≈平均点半径）；局域范围衰减尺度 $6.4(6)\ \mathrm{nm}$ | 连续谷探针自相关拟合 | Marcks 2025 |
 | 阵列尺度关联 | $n=6$ 栅反关联、$n=12$ 正关联，总体约 $720\ \mathrm{nm}$ | 排列检验，$p<0.05$ | Marcks 2025 |
 | 应变锗空穴 | 应变直接解除谷简并，$E_\mathrm{VS}$ 不再是关心量 | — | |
+| 确定性增强的界面宽度窗口 | 无剪切应变约 1 ML；ε_{x,y}=0.05% 时扩至约 5 ML | 统一包络理论 | Thayil 2025 |
+| 长周期摆动阱确定性增强 | ε_{x,y}≳0.006%（高幅度）至 ≳0.035%（微幅度）；ν/2σ≈1.41 @ X_ww=15% | 统一包络理论 | Thayil 2025 |
+| SGM 台阶探针可靠性上界 | 轨道激发 2.92 meV ≫ 谷劈裂变化 | 针尖诱导点 + 紧束缚 | Cakar 2024 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -121,6 +156,23 @@ $$
 ### 通过电荷跃迁观测谷–轨道耦合
 
 隧穿线随栅压扫描的非线性偏移反映电化学势对栅压的杠杆臂，结合电子数依赖的"增加能 $E_\mathrm{add}$" 可推出谷–轨道耦合对能级重整化的贡献—— 指出"硅量子点的增加能随电子数明显下降"与谷–轨道耦合有直接关系。
+
+### 扫描栅显微探针（SGM）：可移动的单电子谷探针
+
+前述方法都基于**固定栅**定义的量子点，谷劈裂的空间测绘受栅几何限制。Cakar 等人提出并数值验证了第四条路线：把带偏压 $V_T$ 的扫描栅显微（scanning gate microscopy）针尖悬在样品上方 35 nm 处，**针尖本身诱导出一个可移动的量子点**。数值方案用薛定谔–泊松求解器加两个关键加速器——复合重叠网格（全局网格算储库电荷、子域网格算点的电荷与电子态）与把针尖位置参数化的有效边界条件算子（系数与偏置无关、只标定一次，消除移动针尖的重网格噪声）——实现了对移动点的低噪声模拟。
+
+单电子装载协议分六步完成：源漏储库先填充、plunger 栅下形成单电子点；降低源漏电压耗尽储库；针尖移近并提高 $V_T$、同时降低 plunger 电压，把电子从栅下点**绝热转移**到针尖势阱中；各栅设为等电位以平化势场；最后针尖拖着电子移动 350 nm 到远离图形化栅的区域。绝热性判据是全程单电子占据且基态保持在费米面以下、第一激发态在其上。
+
+探针演示针对上界面 $y=500$ nm 处的**单原子台阶**：针尖点沿 $y$ 扫过台阶时，波函数跟随针尖移动，紧束缚模型计算的谷劈裂在台阶正上方出现急剧凹陷——缺陷位置由此被直接成像。可靠性由能标分离保证：谷劈裂的变化远低于 2.92 meV 的第一轨道激发能，测量不会被轨道混杂污染。既然芯片上谷劈裂涨落（约 20–300 µeV）的主要来源是合金无序与原子台阶，SGM 把"谷劈裂–材料缺陷"的空间关联测量从阵列统计推进到逐点成像。
+
+![[assets/figures/valley-splitting/cakar2024-fig1-sgm-setup.jpg]]
+*实验方案示意：Si₀.₇Ge₀.₃/Si(5 nm)/Si₀.₇Ge₀.₃(50 nm) 异质结上叠层栅（screening/source/drain/plunger/barrier），SGM 针尖偏压 V_T、悬于表面上方 35 nm 并可在 xy 面自由移动，针尖诱导量子点（浅蓝）。图源：Cakar et al. (2024), Fig. 1。*
+
+![[assets/figures/valley-splitting/cakar2024-fig2b-loading-protocol.jpg]]
+*六步电子装载协议的栅压与针尖位置时序：(i–ii) 储库填充并在 plunger 栅下隔离单电子；(iii–iv) 针尖电压升高、plunger 降低，把电子转移到针尖势阱；(v) 各栅等电位平化势场；(vi) 针尖携电子移动 350 nm 到无栅区——全程保持绝热单电子占据。图源：Cakar et al. (2024), Fig. 2(b)。*
+
+![[assets/figures/valley-splitting/cakar2024-fig3-step-edge-probe.jpg]]
+*谷劈裂的空间探针演示：上界面 y=500 nm 处的单原子台阶（势阱图叠加三个针尖位置 y_T=450/500/550 nm 的波函数概率幅）；针尖点扫过台阶时谷劈裂在 y_T=500 nm 出现急剧凹陷——缺陷位置被直接成像，且变化远低于 2.92 meV 轨道激发能。图源：Cakar et al. (2024), Fig. 3。*
 
 ### 谷劈裂对单发读出的限制
 
@@ -235,4 +287,6 @@ $$
 - 硅量子点中的谷劈裂与谷物理：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
 - 跨阵列谷劈裂关联与合金无序统计：Marcks, J. C. et al. *Valley Splitting Correlations Across a Silicon Quantum Well Containing Germanium* (2025). arXiv:2504.12455（QAtlas 缓存：2504.12455）。
 - 非微扰多谷有效质量理论与单电子 Si-MOS 对照：Gamble, J. K. et al. *Valley splitting of single-electron Si MOS quantum dots* (2016). arXiv:1610.03388（QAtlas 缓存：1610.03388）。
+- Thayil, A., Ermoneit, L., Kantner, M. Theory of Valley Splitting in Si/SiGe Spin-Qubits: Interplay of Strain, Resonances and Random Alloy Disorder. *Physical Review B* (2025). DOI: 10.1103/4sdz-f9cr；arXiv:2412.20618（QAtlas 缓存：2412.20618）。
+- Cakar, E., Ercan, H. E., Fuchs, G., Denisov, A. O., Anderson, C. R. et al. Towards Utilizing Scanning Gate Microscopy as a High-Resolution Probe of Valley Splitting in Si/SiGe Heterostructures. *Applied Physics Letters* (2024). DOI: 10.1063/5.0217704；arXiv:2405.03596（QAtlas 缓存：2405.03596）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
