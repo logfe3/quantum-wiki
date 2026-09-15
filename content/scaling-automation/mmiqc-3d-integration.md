@@ -103,6 +103,16 @@ flowchart LR
 
 *仿真验证示例：谐振腔线宽 $kappa$ 随仿真收敛参数的变化——数据库内置的收敛性检查保证设计参数可靠。图源：Shanto et al. (2023)，Fig. 2(a)。*
 
+**QEC 码仿真框架**补全设计工具链的第三块：SQuADDS（器件设计库）+ InductEx（版图仿真）+ **qec_code_sim**（纠错码效果估计）——开源 Python 框架把超导比特噪声模型与 QEC 码仿真对接：给定硬件噪声参数（门错误率、测量错误、相关错误），估计各种码（表面码、重复码等）的逻辑错误率——编码选择与硬件参数之间的连接件。
+
+![[assets/figures/mmiqc-3d-integration/0197144be9149d1dbfa85c26ea45ea6d0f82e93ad293bfb2831c636b345ccfc9.jpg]]
+
+*qec_code_sim 框架：噪声模型→码仿真→逻辑错误率估计——硬件参数与编码选择的连接。图源：arXiv:2402.06745，Fig. 1。*
+
+![[assets/figures/mmiqc-3d-integration/a99abf8a0ddf184ae1b7b80e941d1987ef974f9d5d7037e89aa16119088e2742.jpg]]
+
+*码效果对比示例：不同码在同一噪声模型下的逻辑错误率——编码-硬件协同设计的量化工具。图源：arXiv:2402.06745，Fig. 2。*
+
 ## 与其他概念的关系
 
 - [[scaling-automation/cryo-electronics|低温电子学]]管"从室温到芯片"的垂直链路，MMIQC 管"芯片内部"的立体化——两者共同构成扩展的封装维度。
