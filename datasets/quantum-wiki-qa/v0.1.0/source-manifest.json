@@ -1,25 +1,25 @@
 {
-  "source_digest": "4dbd26ba2346b80d3678e918536c4c06c086e86f43dbace8758932426c8b7e03",
+  "source_digest": "931f27ca2e9ca9cd5c399f70e323c152da627cb38fe1b3de19f96cae99b8f0c3",
   "pages": [
     {
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
       "topic": "circuit-qed",
-      "sha256": "376801809b689366c320408995943e1170fb13cf69208bd327b2a14d68ba4f01",
+      "sha256": "93848b15e37a27f28d87842cc3b1846eab4b378e031e9f0e20263700af8dce69",
       "split": "test"
     },
     {
       "path": "content/circuit-qed/cavity-mediated-coupling.md",
       "title": "腔介导远程耦合",
       "topic": "circuit-qed",
-      "sha256": "204c7f4c60ee9f2edb5f3c12b621ca0c422b278afd5e052d58749d8aa7d8bce5",
+      "sha256": "90b3539c6e93f7c3bab68fa3f5eef2d7ba11b5518764a94beb8a10df9b4d18cf",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "0793d8ede45b90581b57892ec5452829040634ae2edefc9feb954cbbd6dc99ba",
+      "sha256": "bdc0f69c63c7146b5c44e9b3217ea1f98b2f449bac1506bf4223969285bb1db5",
       "split": "dev"
     },
     {
@@ -72,10 +72,17 @@
       "split": "train"
     },
     {
+      "path": "content/circuit-qed/nv-center-cavity-bus.md",
+      "title": "NV 色心腔总线",
+      "topic": "circuit-qed",
+      "sha256": "4ebcb1114ac4e5ef5aeac68b61f697dd5f1b5a4f7ba0d9d20f17c61f693f7be7",
+      "split": "train"
+    },
+    {
       "path": "content/circuit-qed/spin-photon-coupling.md",
       "title": "自旋–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "69bdab098071cefd75bc4a0bb1c61dfc490d64973a450584448ed1c9d84a014e",
+      "sha256": "3ecddf29561c1c1e93883cfcaf93047c1d204bce5b455cd99954679c534f7360",
       "split": "train"
     },
     {
@@ -432,7 +439,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "27229bff4708ccac870a27581438aa47a7cd759f31629daf0eb03f667a036aa4",
+      "sha256": "ddb03dd7babfed5e9ce0f0422d0a42062289906eb4123e48bdb8220f8b7bb9a3",
       "split": "train"
     },
     {
@@ -495,14 +502,14 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "36f3379d20df91ca664cba34ed8c5569eee5f5db1f0e11a5bbcad90f225a04d4",
+      "sha256": "c90cab67cb3d7340b9f58eba24076d13e64eba263ed43998a0650bd1777e9480",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/threshold-independent-readout.md",
       "title": "阈值无关读出",
       "topic": "readout-measurement",
-      "sha256": "7c18491a5b96fa72cb59b4e19f655ac1a5b925e7fa01719a7ea2f71927a065c1",
+      "sha256": "5a334f2041e0ff2d51d604ba593a9221bb623b2c72a1b6a3392b2389e3d8af01",
       "split": "train"
     },
     {
@@ -590,17 +597,24 @@
       "split": "train"
     },
     {
+      "path": "content/superconducting-qubits/csfq-decoherence.md",
+      "title": "可调电容并联 flux qubit 的退相干",
+      "topic": "superconducting-qubits",
+      "sha256": "c0346f2623dabd94a25bd3c3dbf76b1149b2c40c91ddf6892fe2a6140a799dd3",
+      "split": "test"
+    },
+    {
       "path": "content/superconducting-qubits/flowermon-qubit.md",
       "title": "Flowermon 扭转铜酸比特",
       "topic": "superconducting-qubits",
       "sha256": "e34449954fdae66d5322c7694e72f709e01c49bd49d566545d0c3705a3ccc7a3",
-      "split": "train"
+      "split": "dev"
     },
     {
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
       "title": "Fluxonium 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "63d22dac4c76528c37de7d58d2f7ae4fcbe0005b17490e6a15fbebbc89e9ef6e",
+      "sha256": "7e20d24dc5cdfd9cbf6fdedcfb7a62b28f055333ed6c8d28a12e27088b6a9a06",
       "split": "train"
     },
     {
