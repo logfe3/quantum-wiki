@@ -220,7 +220,7 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 - **工艺复杂**：SET 要求两个串联隧穿结、岛尺寸在数十 nm 量级，金属岛 SET 通常依赖电子束光刻与阴影蒸发的精确套刻，半导体 SET 则依赖栅极定义的静电岛；加工难度高于 QPC。
 - **工作点漂移**：随栅压、温度、磁场变化，库仑振荡位置会漂移出灵敏区，需要周期性重新标定。
 - **直流带宽极低**：受 $R_T C_p$ 限制，直流 SET 仅数十 kHz 量级。
-- **射频反作用**：过高的射频功率会向岛注入散粒噪声与热激发，破坏被测态，需要折中灵敏度与反作用）。
+- **射频反作用**：过高的射频功率会向岛注入散粒噪声与热激发，破坏被测态，需要折中灵敏度与反作用）。此外，传感库仑耦合本身的量子反作用（which-path 退相干）与功率反作用是两个独立通道——量子点型传感器的退相干能标由被测系统隧穿展宽 ħΓ 设定，与 QPC 型（k_BT）不同，见[[readout-measurement/charge-sensor-backaction|电荷传感反作用与 which-path 退相干]]。
 - **替代方案**：在半导体量子点体系中已被[[readout-measurement/qpc-charge-sensor|QPC]]取代主流地位；栅极色散读出（[[readout-measurement/gate-based-sensingate-based sensing]]）和[[readout-measurement/dispersive-readout|色散读出]]则在多比特共用射频线场景下提供了另一种非破坏性电荷传感路径。
 
 ## 与其他概念的关系
