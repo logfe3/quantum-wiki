@@ -202,6 +202,18 @@ Q3 的 $E_\mathrm{sep}$ 仅 $0.001\%$，几乎全部错误来自弛豫与串扰�
 
 *吞吐优化结果：以 Chernoff 信息为目标优化的参数组合与单发保真度优化的对比——墙钟吞吐显著提升。图源：arXiv:2602.22174，Fig. 2。*
 
+### Quarton 耦合器的超快 QND 读出
+
+色散 cross-Kerr 方案的速度受 $chi/kappa$ 比值限制；**Quarton 耦合器**用四波混合的非线性直接增强读出对比度——QND 品质保持的同时把读出时间压到色散方案之下，是继分岔、JC 亮态、门锁、通量增强之后的第五条 cQED 单发路线。
+
+![[assets/figures/single-shot-readout/6240060ff070cebdbcb92ba085a79ef4a5781c409acecd8f76e072675cacb350.jpg]]
+
+*Quarton 耦合器构型：四波混合非线性提供比特态依赖的读出增强——超越色散 cross-Kerr 的速度极限同时保持 QND。图源：arXiv:2402.15664，Fig. 1。*
+
+![[assets/figures/single-shot-readout/c1bd08b5bf51b697d0da0e8b42d434eb201f2ab2457ae115e6d64d5c27e7afd2.jpg]]
+
+*超快读出性能：读出时间-保真度权衡与 QND 品质验证。图源：arXiv:2402.15664，Fig. 2。*
+
 ### cQED 中的腔分岔单发读出
 
 超导比特侧的单发读出建立在[[readout-measurement/dispersive-readout|色散读出]]的腔响应上：Mallet 等人在 transmon-CPW 系统中实测，约瑟夫森非线性的腔在单光子量级循环功率下发生**分岔**——腔内光子数从 5–10 突然跳到 50–100，而 $T_1$ 直到分岔点以上 5 dB 都不下降（甚至略升）。比特态使两条传输 S 曲线在功率轴上分离，实测最大对比度达 **86%**——一次积分即可分辨两态，无需重复测量。
