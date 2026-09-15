@@ -1,5 +1,5 @@
 {
-  "source_digest": "02bc2cf530794be612f1ec4d3a8f5db61421884f4795927ca6b2e7b7edc8bf98",
+  "source_digest": "fea9340094c1e94f73d0529768dc5d575b2205fb9e3e4b1a5da73a7e59f44700",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -478,6 +478,13 @@
       "split": "train"
     },
     {
+      "path": "content/readout-measurement/charge-sensor-backaction.md",
+      "title": "电荷传感反作用与 which-path 退相干",
+      "topic": "readout-measurement",
+      "sha256": "408d048421e3e43b98c21d6261326a1d0da59d0fd51f68c1f08de7d71e9ae971",
+      "split": "dev"
+    },
+    {
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
@@ -530,7 +537,7 @@
       "path": "content/readout-measurement/qpc-charge-sensor.md",
       "title": "QPC 电荷传感器",
       "topic": "readout-measurement",
-      "sha256": "da1917684450a76ed1a6425433d8f1e6688d41ab6202bbb0a1102dee5bac2e1c",
+      "sha256": "ad639b365cbcd26de0a035c56c734a7650751c00d721a649cc6df975664a4619",
       "split": "train"
     },
     {
@@ -538,14 +545,14 @@
       "title": "读出串扰",
       "topic": "readout-measurement",
       "sha256": "597ec5f0463b177afefbed9a437bd2524fa930acacfb0af2a9a332bded60b4aa",
-      "split": "dev"
+      "split": "test"
     },
     {
       "path": "content/readout-measurement/readout-induced-leakage.md",
       "title": "读出诱导泄漏基准测试",
       "topic": "readout-measurement",
       "sha256": "bc22b01989549a2ede03380a4be84722295a1d265b649e02fe886e245e56bb61",
-      "split": "train"
+      "split": "dev"
     },
     {
       "path": "content/readout-measurement/rf-reflectometry.md",
@@ -558,7 +565,7 @@
       "path": "content/readout-measurement/single-electron-transistor.md",
       "title": "单电子晶体管",
       "topic": "readout-measurement",
-      "sha256": "addb9434c861fbfcbf3b17766f2aa9666101fd708471d7d60f9a573305652b5a",
+      "sha256": "0b5dc8c3b1359c2f8d3b72535e1a6a2822158c4ccc16bc7dfaef537a7872d1d0",
       "split": "train"
     },
     {
