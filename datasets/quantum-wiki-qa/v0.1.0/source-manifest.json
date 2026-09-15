@@ -1,5 +1,5 @@
 {
-  "source_digest": "a305a5bbf3e12d8b9e1439351e5822eb7f3e03c565fb2808f206b8d879d301f8",
+  "source_digest": "cf02c413fe7c1f62a4db3a9edce2e9725e052df29ae207e2bd1aa9d3a88f8e21",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -40,7 +40,7 @@
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
       "title": "电路量子电动力学",
       "topic": "circuit-qed",
-      "sha256": "1f74e419324b31eff5b4e2921ad64409342accb7ebfb0eeb4f8541a8eae60f39",
+      "sha256": "c26a74ed0ee422e170024ebb326a09051cfd2f3c3b256c0f9fa58fae1c6ff61b",
       "split": "train"
     },
     {
@@ -54,7 +54,7 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "ad649fc13144d8b9545e7a8f01e3b35bb78e40e031c511d74e73a376878b27db",
+      "sha256": "c2c81c0d7ae051ef91d6871d6467a9c78b6a5837c0dc05e5bdbc58f715c5bae4",
       "split": "train"
     },
     {
@@ -453,7 +453,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "4a58fe2b112ee02f97284dcb35b159cf102c692607107bbfa235ed6034054e9e",
+      "sha256": "06a83114f730c48ecdc64ebb5d244202b5062c9b239d73f7dfade32c1067f869",
       "split": "train"
     },
     {
@@ -481,7 +481,7 @@
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "51f7174f0deef01f71dd6a47668d67a68619d57bc238d7723a7caeabe10132d1",
+      "sha256": "1ecf24b73e2e687c6ec81c937c20694b0b1d46c0835abf635f07e5101aa1ec84",
       "split": "train"
     },
     {
@@ -516,7 +516,7 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "64e964911dff511e0289a72d52bee90b4b50a416a7dc23f430eae80187f19a54",
+      "sha256": "e3eb2e8ec110eeab02b513c177ab0bd1765556e277aba889ecb3a276ce5d7daa",
       "split": "train"
     },
     {
@@ -572,14 +572,14 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "35b7a06317aa76fdf3887e00e5a99b6e4b2ce3494ea23b4e8aea9f83b2e8a06a",
+      "sha256": "d403ef98feed7758682dd98c78231113d90f57253f51c57e3c34b95a0db70707",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/multi-time-tomography.md",
       "title": "多时间量子过程层析",
       "topic": "scaling-automation",
-      "sha256": "ff7ede3ccb69b63e7bbf373863c5d407b3304bca16eee43e2b80025ae180bac2",
+      "sha256": "689ecae674d876edbd96e058b7def6ddf4186b83fd3b2acccd774cc063e08508",
       "split": "train"
     },
     {
