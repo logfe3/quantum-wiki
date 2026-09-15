@@ -226,6 +226,7 @@ $$
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]通过 $g_0\propto\sqrt{Z_r}$ 同时放大 $g_c$ 与 $g_s$；TiN 3.5 kΩ 腔的 $\kappa/2\pi=2.2\ \mathrm{MHz}$ 是当前自旋比特强耦合演示的硬件支撑。
 - [[materials-devices/micromagnet|微磁体]]是 Si/SiGe 路线中引入自旋–电荷混合的核心元件；其梯度场是 $g_s\propto B_x$ 的物理来源。
 - [[qubit-control/electric-dipole-spin-resonance|EDSR]]是单个自旋通过自旋–电荷混合翻转的机制，与自旋–光子耦合共用同一套混合机制：两者都从 $g_c$ 经同一矩阵元 $d_{01}^{(2)}$ 转换而来。
+- [[circuit-qed/nv-center-cavity-bus|NV 色心腔总线]]是互补的磁耦合路线：量子点自旋经微磁体混入电荷走电偶极耦合，NV 色心直接用腔的微波磁场（磁偶极）——同一总线思想在两类自旋体系上的两种实现。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]在双量子点零失谐点把 $g_s$ 推高一个数量级，是目前 Si/SiGe 平台上自旋–光子强耦合的最高 $g_s$ 来源。
 - [[qubit-control/resonant-exchange-qubit|共振交换量子比特]]可与腔直接耦合，避免微磁体集成； 在 Si/SiGe 三量子点上测得 $g_\mathrm{RX}/2\pi=65\ \mathrm{MHz}$。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]利用内禀自旋–轨道耦合，可省去微磁体；、 在锗纳米线和应变锗上评估 $g_s$。

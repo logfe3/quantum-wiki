@@ -124,6 +124,22 @@ $$
 
 在 的两比特电荷比特实验中，两个比特都满足强耦合条件 $g_k>\gamma_k,\kappa/2$，单比特耦合分别为 $(g_1,\gamma_1)/2\pi=(81,65)\ \mathrm{MHz}$、$(g_2,\gamma_2)/2\pi=(80,55)\ \mathrm{MHz}$；把两个比特都调至 $\omega_{a,k}=\omega_r$，观测到的增强真空 Rabi 劈裂为 $2g_{\mathrm{eff}}/2\pi=2\times112\ \mathrm{MHz}$，与 $g_{\mathrm{eff}}'=\sqrt{g_1^2+g_2^2}/2\pi\approx 113\ \mathrm{MHz}$ 高度一致（ pp. 67–69）。这表明两比特确实是以腔内光子为媒介实现了远程相干耦合——而不是经由电极之间的杂散电容或直接库仑相互作用。
 
+![[assets/figures/cavity-mediated-coupling/3266a62d80b3d7b6eae6943c2c76d729986500fbc43168dfc702ddc3b98c50b3.jpg]]
+
+*腔总线实验的器件结构：两个磁通可调的电荷比特（SC loop qubits）电容耦合到同一 CPW 谐振腔（transmission line resonator）——腔作为"总线"分配量子信息，使任意远程比特对之间都能相干耦合。图源：Sillanpää et al. (2007)，Fig. 1。*
+
+**虚光子交换的有效交换强度**：色散极限（两比特都与腔大失谐）下绝热消去腔模，比特间获得横场交换相互作用
+
+$$
+J=\frac{g_1g_2}{2}\left(\frac{1}{\Delta_1}+\frac{1}{\Delta_2}\right),
+$$
+
+其中 $\Delta_{1,2}$ 是两比特与腔的失谐、$g_{1,2}$ 是各自的单比特-腔耦合（由真空 Rabi 劈裂标定）。实验通过把比特经 $|\downarrow\downarrow 1\rangle$（腔内单个虚光子）交换到 $|\downarrow\uparrow0\rangle\to|\uparrow\downarrow0\rangle$ 观测这一交换——Sillanpää 等人据此首次演示了任意远程比特对的腔总线耦合。
+
+![[assets/figures/cavity-mediated-coupling/65842770cf2726be70dffe39eb93275e674154d0be63ec65af8f5505ef942a58.jpg]]
+
+*腔总线的透射谱学证据：扫描比特磁通调谐其频率经过腔共振，透射谱在简并点出现真空 Rabi 劈裂——每个比特与腔的简并都可单独观测，两比特同调谐时给出增强劈裂。图源：Sillanpää et al. (2007)，Fig. 3。*
+
 ## 参数与量级
 
 下表汇总本站论文中报道的腔介导耦合实验参数与提取结果：
