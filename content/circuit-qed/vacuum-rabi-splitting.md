@@ -172,6 +172,7 @@ $$
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]：双量子点电荷比特与腔的电偶极耦合 $g_c=g_0\sin\theta$（$\theta$ 为混合角），真空 Rabi 劈裂由此变成在 $\varepsilon=0$、$2t_c=\omega_r$ 时最明显的实验特征。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]：自旋比特与微波腔的磁耦合极弱，借助自旋–轨道耦合或微磁体梯度场把电荷成分"借"给自旋，再现自旋真空 Rabi 劈裂（典型 $2g_s/2\pi$ 数 MHz 至数十 MHz）。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：把 $Z_r$ 提高到 $\mathrm{k\Omega}$ 量级，可显著增大全局耦合 $g_0$；本站多次测得的 74、81、119、175 MHz 量级都来自 NbTiN 纳米线腔或 SQUID 阵列腔。
+- [[references/wallraff-2004|Wallraff 2004 原始实验]]：cQED 真空 Rabi 劈裂的片上首次演示（单光子与 Cooper pair box 强耦合）。
 - [[readout-measurement/dispersive-readout|色散读出]]：进入色散区 $|\Delta|>10g$ 后，避免交叉让位于腔频移动 $\pm g^2/\Delta$，劈裂消失，但比特态信息保留在腔响应里。
 - [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：多比特同时处于强耦合区时，真空 Rabi 劈裂被增强为 $2g_C$；若仅一个比特处于色散区，则腔介导有效交换为 $\sim g_1g_2/\Delta$。
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]：真空 Rabi 振荡是频域真空 Rabi 劈裂的傅里叶对偶；驱动 Rabi 振荡（$\Omega_R$）则属于外部驱动项，不属于真空场物理。

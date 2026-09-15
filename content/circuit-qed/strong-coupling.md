@@ -194,7 +194,19 @@ $$
 
 在半导体 cQED 中，超强耦合尚未稳定演示。论文记录了 Wallraff 组利用约瑟夫森结阵列达到的 $g_c/\omega_r\sim 0.11\pm 0.01$，是首次进入超强耦合区的工作；该区下 JC 模型失效，反旋项贡献不可忽略，真空会出现虚光子云，是 cQED 仍待探索的物理前沿。
 
+**深强耦合区**（$g/\omega\sim1$）是这条阶梯的下一级：耦合强度与振子频率同量级时，连 Rabi 模型的微扰图像也需重新审视——能谱出现由简并点（Juddian points）组织的**绝热结构**，跃迁服从新的选择定则。Yoshihara 等人用磁通比特与 LC 振子的电感耦合实现 $g/\omega\approx1.8$（超深强耦合），在透射谱中直接分辨出绝热能级与对称点附近的选择定则变化——"深强耦合能否在真实物理系统实现"的争论由此给出实验定论。
+
+![[assets/figures/strong-coupling/be29996c125f518ffa71e990b48c17aa875de661eb692326f0e37d5710aa49ef.jpg]]
+
+*深强耦合电路的透射谱：两个电路（不同耦合强度）的计算跃迁频率与实测谱——$g/\omega\approx1$ 以上能谱组织成绝热分支，Juddian 简并点处的避免交叉清晰可见。图源：Yoshihara et al. (2017)，Fig. 2。*
+
+![[assets/figures/strong-coupling/9283c5ca4b1f8cf932c4f01b8dab7526a99ee018206c11e1e5f88a86d22781de.jpg]]
+
+*对称点附近的选择定则与透射谱：深强耦合区的跃迁强度重新分布——传统 JC 选择定则失效后，哪些跃迁可见由绝热能级的对称性决定。图源：Yoshihara et al. (2017)，Fig. 3。*
+
 ## 与其他概念的关系
+
+- 深强耦合的原始实验全文见 [[references/wallraff-2004|Wallraff 2004 同批 cQED 奠基文献]]与本词条引用的 Yoshihara et al. (2017)。
 
 - **与[[circuit-qed/jaynes-cummings-model|JC 模型]]**：强耦合是 JC 模型在共振极限下的物理后果；JC 模型给出强耦合所需的 $g>\kappa,\gamma$、真空 Rabi 劈裂 $2g\sqrt{n}$、色散极限下频移 $g^2/\Delta$。
 - **与[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]**：劈裂是强耦合最常用的频域证据；判据 $2g>\kappa+\gamma$ 要求谱线可分辨。
