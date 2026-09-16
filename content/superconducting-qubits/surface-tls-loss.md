@@ -69,7 +69,7 @@ $$
 - [[superconducting-qubits/junction-defect-modes|约瑟夫森结强耦合缺陷模]]：同一"强耦合 TLS"谱学方法测出的另一族缺陷——位于结势垒内、数目随结面积线性增长；本词条的改善主要发生在衬底–空气与结–衬底界面，两类缺陷物理可分、对工艺的响应不同。
 - [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]：其退相干叙事中"介质与界面损耗"一条的定量展开与工艺对策。
 - [[superconducting-qubits/csfq-decoherence|可调电容并联 flux qubit 的退相干]]：器件级退相干通道分解的另一个案例——那里低频段由磁通噪声主导，本词条处理的是耗散型 TLS 通道。
-- [[materials-devices/interface-defects|界面缺陷]]：半导体–介质界面缺陷的通用框架（弱耦合 TLS 系综与 $\tan\delta$ 预算）在超导侧的对应。
+- [[materials-devices/interface-defects|界面缺陷]]：半导体–介质界面缺陷的通用框架（弱耦合 TLS 系综与 $\tan\delta$ 预算）在超导侧的对应。铌表面的镜像版本——水缓冲 BCP 刻蚀 + 快速密封把铌同轴腔 TLS 损耗正切压到 $\sim10^{-10}$ 量级（氟沾污与氧化层演化主导）——见[[circuit-qed/niobium-coaxial-cavity|铌同轴谐振腔]]词条：两案对照说明刻蚀化学是跨材料的一级 TLS 设计变量。
 
 ## 参考文献
 

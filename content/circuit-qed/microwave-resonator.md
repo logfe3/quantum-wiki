@@ -111,7 +111,7 @@ $$
 \omega_{mnp}=\frac{1}{\sqrt{\mu\varepsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2+\left(\frac{p\pi}{d}\right)^2},\qquad m,n,p=0,1,2,\dots
 $$
 
-腔长 $d$ 须为半波导波长的整数倍，对应短路 $\lambda/2$ 谐振。 用 HFSS 设计了一个 $9.5\ \mathrm{GHz}$ 附近的矩形 3D 腔，并在 $20\ \mathrm{mK}$ 温度下测得全封闭铝腔 $Q\sim 2\times10^5$，开槽腔 $Q\sim 10^5$，加直流引线后 $Q$ 降至 $\sim 8\times10^3$。3D 腔的优势是没有中心细线、导体损耗极小，但同轴线 TEM 模到 3D 腔 TE 模的模式转换效率低，需要把同轴线芯直接插入腔中精细调节长度。
+腔长 $d$ 须为半波导波长的整数倍，对应短路 $\lambda/2$ 谐振。 用 HFSS 设计了一个 $9.5\ \mathrm{GHz}$ 附近的矩形 3D 腔，并在 $20\ \mathrm{mK}$ 温度下测得全封闭铝腔 $Q\sim 2\times10^5$，开槽腔 $Q\sim 10^5$，加直流引线后 $Q$ 降至 $\sim 8\times10^3$。3D 腔的优势是没有中心细线、导体损耗极小，但同轴线 TEM 模到 3D 腔 TE 模的模式转换效率低，需要把同轴线芯直接插入腔中精细调节长度。三维腔家族的两个新方向：整体铣削的铌 λ/4 同轴腔把单光子内品质因子推过 $1.4\times10^9$（transmon 集成后仍有 11.3 ms 相干），见[[circuit-qed/niobium-coaxial-cavity|铌同轴谐振腔]]；"同轴馈电矩形腔 + 偶极天线型 transmon"几何的全部量子参数可解析闭式求出、用作数值量化方法的基准，见[[circuit-qed/analytical-3d-cqed|三维 cQED 全波解析解]]。
 
 ## 散射矩阵与端口网络
 
