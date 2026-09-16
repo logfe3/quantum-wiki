@@ -83,7 +83,7 @@ $$
 
 - 输运轨道的物理实现依赖[[scaling-automation/cryo-electronics|低温电子学]]的布线约束——全局操控正是为了绕开逐比特微波布线的引脚墙；均匀化后每比特所需的调谐电压也由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]决定。
 - 频率均匀化与[[scaling-automation/automatic-tuning|自动调控]]互补：自动调控负责在给定调谐范围内闭环寻优，均匀化负责把调谐范围本身扩大到自然频率分散。
-- 电子输运的实验基础是[[references/ge-shuttle-2024|锗量子点中的相干自旋输运]]（2024 年已实测高保真输运）——本文的均匀化方案建立在输运保真度够高的前提上。
+- 电子输运的实验基础是[[references/ge-shuttle-2024|锗量子点中的相干自旋输运]]（2024 年已实测高保真输运）——本文的均匀化方案建立在输运保真度够高的前提上；硅侧的物理基础与约束（bucket-brigade 转移、$T_2^*$ 时标、谷劈裂景观）见[[scaling-automation/charge-shuttling|电荷穿梭]]。
 - 与[[fundamentals/zeeman-effect|Zeeman 效应]]的关系：跃迁频率 $\omega_q=g\mu_BB_0/\hbar$ 的 g 因子依赖是频率失配的根源，也是均匀化（平均 g 因子）生效的物理基础。
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]的 EDSR 操控通常靠微磁体梯度；全局操控把这一机制推广到阵列级——微磁体/磁性材料提供 g 因子梯度，输运提供时间平均。
 - 穿越微米级无序景观的输运还要求可靠大的[[fundamentals/valley-splitting|谷劈裂]]以避开自旋–谷热点：材料侧的确定性增强手段（长周期摆动阱 + 剪切应变解锁的 2k₁ 共振）与均匀化策略互补——一个抹平频率分散，一个抬高能隙下限。硅传送带穿梭（QuBus）上的实验进一步给出操作侧对策：逐点测得的 $E_\mathrm{VS}$ 地图上选轨迹绕开低劈裂区与自旋–谷共振，或以 >2.8 m/s 二能级式高速穿越共振、以快速往返进入运动变窄区——10 μm 累计穿梭误差 <8%（见该词条"穿梭通道的 E_VS 地图"一节）。

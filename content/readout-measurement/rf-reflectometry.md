@@ -115,7 +115,7 @@ S_g=\frac{1}{\sqrt{2}}\,dg_{\mathrm{qpc}}\,(\Delta f)^{-1/2}\,10^{-\mathrm{SNR}/
 S_q=\frac{1}{\sqrt{2}}\,dq_{\mathrm{qpc}}\,(\Delta f)^{-1/2}\,10^{-\mathrm{SNR}/20}
 $$
 
-其中 $1/\sqrt{2}$ 来自上下两个边带，$\Delta f$ 是频谱仪分辨带宽（常设 $10\ \mathrm{kHz}$），$\mathrm{SNR}$ 是边带信噪比（dB），$dq_{\mathrm{qpc}}=e\cdot\alpha$ 为一个电子电量乘以杠杆臂因子。灵敏度决定了积分时间：电荷灵敏度 $S_q\sim 10^{-4}\ e/\sqrt{\mathrm{Hz}}$ 意味着单个电子隧穿事件可在微秒量级内被分辨。
+其中 $1/\sqrt{2}$ 来自上下两个边带，$\Delta f$ 是频谱仪分辨带宽（常设 $10\ \mathrm{kHz}$），$\mathrm{SNR}$ 是边带信噪比（dB），$dq_{\mathrm{qpc}}=e\cdot\alpha$ 为一个电子电量乘以杠杆臂因子。灵敏度决定了积分时间：电荷灵敏度 $S_q\sim10^{-4}\ e/\sqrt{\mathrm{Hz}}$ 意味着单个电子隧穿事件可在微秒量级内被分辨。在大规模阵列侧，同样的物理被推到系统级指标：1:1024 多路复用农场以 $\mathrm{SNR}^2=\tau/t_{\min}$ 外推出 160 ps 的最小积分时间，5 分钟扫完 1024 个器件（见[[scaling-automation/multiplexed-qd-characterization|大规模量子点多路复用表征]]）。
 
 ### 零拍解调
 

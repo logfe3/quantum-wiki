@@ -115,7 +115,7 @@ $$
 - **量子模拟器**：除上述 CCB/莫特转变实验外，同类 2×2 阵列还观察过 Nagaoka 铁磁性；引入可控次近邻耦合 $t'$ 后，可模拟阻挫磁体、自旋液体乃至与高温超导相关的强关联相——这正是二维阵列相对一维链的独特价值。
 - **长程耦合总线的最小单元**：三量子点加[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]是"比特阵列 × 光子总线"的最小构型：两个点各编码一个比特、第三点作耦合中介，即可验证阵列经腔模实现长程[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]的原理。
 
-**一维阵列+集成传感器**（InAs 纳米线五点阵）：与二维阵列（词条主数据）对照的一维构型——五量子点+两个集成电荷传感器，双量子点沿阵列逐段表征。一维的隧道输运链是量子点中继/梭运（对照[[scaling-automation/frequency-homogenisation|频率均匀化]]的输送模式）的基础构型。
+**一维阵列+集成传感器**（InAs 纳米线五点阵）：与二维阵列（词条主数据）对照的一维构型——五量子点+两个集成电荷传感器，双量子点沿阵列逐段表征。一维的隧道输运链是量子点中继/梭运（对照[[scaling-automation/frequency-homogenisation|频率均匀化]]的输送模式）的基础构型；硅 9 点阵列上的 bucket-brigade[[scaling-automation/charge-shuttling|电荷穿梭]]（单电子 ~50 ns 穿越全阵列、$I=nef$ 泵浦电流定量验证）给出了一维输运链的定量基准。
 
 ![[assets/figures/quantum-dot-array/d7d8f18557dd72615454558b379a84a8cad85bdc995b8c1a6cc5353d4759b4b4.jpg]]
 

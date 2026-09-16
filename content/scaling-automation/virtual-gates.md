@@ -19,7 +19,7 @@ source_updated: 2026-09-09T16:05:12Z
 
 门控定义的[[fundamentals/semiconductor-quantum-dot|半导体量子点]]中，每根金属栅极产生的电场在空间上没有截断：一根柱塞栅（plunger gate）除了决定"自己的"量子点的[[fundamentals/electrochemical-potential|电化学势]]，还会通过寄生电容拉动邻近量子点的电化学势，甚至改变点间势垒的高度。这种**栅极串扰**（capacitive crosstalk）在[[fundamentals/charge-stability-diagram|电荷稳定图]]上表现为倾斜的电荷隧穿线——理想情况下某点的隧穿线应只沿自身柱塞栅方向延伸，串扰使其对另一根栅的电压也产生依赖。
 
-单点、双点时代，实验者凭经验手动"回拧"其他栅压即可补偿；但当[[scaling-automation/quantum-dot-array|量子点阵列]]扩展到数十根栅极时，串扰使控制空间变成一个高维、强耦合的电压空间，人工调节逐渐失去可行性。虚拟电极（virtual gate，又称虚拟栅极）把"同时按精确比例拧动多根物理栅"封装成一个新的软件坐标：每个虚拟电极原则上只影响一个目标参数（某点的电化学势或某势垒的隧穿耦合），而把对其他参数的一阶影响消掉。它最早由代尔夫特理工大学 Vandersypen 组在九点 Fermi–Hubbard 阵列等工作中系统化，2019 年普林斯顿大学 Petta 组又将其发展为自动校准流程的一环，如今已成为阵列级调控与[[scaling-automation/automatic-tuning|自动调控]]的标准接口。
+单点、双点时代，实验者凭经验手动"回拧"其他栅压即可补偿；但当[[scaling-automation/quantum-dot-array|量子点阵列]]扩展到数十根栅极时，串扰使控制空间变成一个高维、强耦合的电压空间，人工调节逐渐失去可行性。虚拟电极（virtual gate，又称虚拟栅极）把"同时按精确比例拧动多根物理栅"封装成一个新的软件坐标：每个虚拟电极原则上只影响一个目标参数（某点的电化学势或某势垒的隧穿耦合），而把对其他参数的一阶影响消掉。它最早由代尔夫特理工大学 Vandersypen 组在九点 Fermi–Hubbard 阵列等工作中系统化，2019 年普林斯顿大学 Petta 组又将其发展为自动校准流程的一环，如今已成为阵列级调控与[[scaling-automation/automatic-tuning|自动调控]]的标准接口。同一工作也把虚拟门推到了最戏剧性的应用：在 9 点阵列的 9 维电荷稳定空间里用 $\delta\vec\mu=e\alpha_1 R\vec V$ 变换规划[[scaling-automation/charge-shuttling|电荷穿梭]]轨迹，实现 ~50 ns 单电子穿越全阵列（见该词条）。
 
 <!-- FIGURE: 物理栅极调控与虚拟电极调控的对比示意图：(a) 物理栅极下量子点受邻近多根栅极共同影响；(b) 虚拟电极下每个量子点只与对应虚拟电极耦合 -->
 
