@@ -11,10 +11,10 @@ tags:
  - 读出与测量
  - 电荷传感
  - 库仑阻塞
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv0gjdram33d5qefxgk80d
-source_updated: 2026-08-24T08:31:17Z
+qatlas_id: qa_01m237d20vvdnh4y7bht18tg0s
+source_updated: 2026-09-09T16:03:04Z
 ---
 
 <div class="entry-lead">单电子晶体管（single-electron transistor, SET）的核心是一只库仑岛：岛电荷改变一个电子，岛源漏电流便被周期性调制，岛外的静电计由此获得单 e 量级的灵敏度。</div>
@@ -182,6 +182,34 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 
 <!-- FIGURE: RF-SET 测量电路示意图：射频源经定向耦合器、低温衰减器进入样品盒；SET 与电感 L、寄生电容构成谐振电路；反射信号经环形器、低温放大器、室温放大器后由 IQ 混频器解调 -->
 
+### 传输式 RF-SET：免定向耦合器的读出（Fattal 2025）
+
+反射式 RF-SET 的链路离不开定向耦合器（或双环形器）分离入射/反射——多通道扩展时这是可观的硬件开销。Fattal 等人（IMEC）演示了**传输式**替代：Si/SiGe 平台上与双量子点单片集成的 SET，经键合线接到**超导 Nb 螺旋电感**构成阻抗变换网络，载波经耦合电容穿过谐振器、透射信号直接检测——
+
+$$
+\text{载波} \to \text{耦合电容} \to \underbrace{L_\mathrm{Nb}\ \text{+ SET}}_{\text{阻抗变换谐振器}} \to \text{透射输出}
+$$
+
+无需任何定向耦合器件，装置显著简化，且天然适合频分复用。开启过程的三分区分析（总电容效应 $C_T$、RF 损耗 $R_\mathrm{Loss}$、SET 电阻 $R_\mathrm{SET}$ 随全局开启的演化）给出阻抗网络与器件设计的优化依据。读出基准用双量子点的两类电荷跃迁标定：IQ 平面上两高斯斑的信噪比
+
+$$
+\mathrm{SNR} = \frac{|\mu_1-\mu_2|}{\tfrac12(\sigma_1+\sigma_2)}
+$$
+
+（$\mu_i$、$\sigma_i$ 为两斑均值与标准差）。短积分区 $\mathrm{SNR}\propto t^{1/2}$（白噪声主导）、长积分区饱和（1/f 噪声）；**SNR=1 的最小积分时间做到 0.1–1 μs 量级**（点间跃迁 ICT 优于点–库跃迁 DRT，差异直接反映两类跃迁的电偶极矩大小），与最先进的反射式 RF-SET 相当。谐振器在**面内 0.5 T 磁场**下性能不受影响——兼容自旋比特的工作磁场。
+
+![[assets/figures/single-electron-transistor/fattal2025-fig1-transmission-rf-set-circuit.jpg]]
+
+*传输式 RF-SET 电路：PCB 上的共面波导经表面贴装耦合电容连接 Si/SiGe 芯片——单片集成的 SET（邻近双量子点）经键合线接到超导 Nb 螺旋电感构成阻抗变换谐振器，透射信号直接检测，无需定向耦合器。图源：Fattal et al. (2025), Fig. 1。*
+
+![[assets/figures/single-electron-transistor/fattal2025-fig5-turnon-regions.jpg]]
+
+*RF-SET 开启过程的三分区：总电容效应 C_T、RF 损耗 R_Loss 与 SET 电阻 R_SET 随全局开启电压的演化——分区行为是阻抗变换网络与器件设计的优化依据。图源：Fattal et al. (2025), Fig. 5。*
+
+![[assets/figures/single-electron-transistor/fattal2025-fig6-snr-benchmark.jpg]]
+
+*读出基准：(a)(b) 用传输式 RF-SET 监测的单点电荷稳定图（积分 1 ms）；(c)(d) 沿路径跨越点间跃迁（ICT）与点–库跃迁（DRT）的 IQ 分布——高斯斑对给出 SNR 随积分时间的标度，SNR=1 最小积分时间达 0.1–1 μs 量级，与反射式方案相当。图源：Fattal et al. (2025), Fig. 6。*
+
 ## 参数与量级
 
 | 量 | 典型值 | 来源 |
@@ -200,6 +228,7 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 | 石墨烯集成 SET 带宽 | 约 600 Hz（−3 dB，杂散电容限制） | |
 | 石墨烯集成单电子响应 | $\Delta G_\mathrm{SET}/G_\mathrm{SET}\approx 30\%$（QD–SET 间距 50 nm） | |
 | 射频功率 | $-90$ dBm 量级（折中灵敏度与反作用） | |
+| 传输式 RF-SET（Si/SiGe） | SNR=1 最小积分 0.1–1 μs（ICT 优于 DRT）；免定向耦合器；面内 0.5 T 磁场兼容 | Fattal 2025 |
 
 ## 实验特征与典型应用
 
@@ -240,5 +269,6 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 
 ## 参考文献
 
+- Fattal, I., Van Damme, J., Raes, B., Godfrin, C., Jaliel, G., Chen, K., Van Caekenberghe, T. et al. Radio frequency single electron transmission spectroscopy of a semiconductor Si/SiGe quantum dot. arXiv:2504.05016 (2025)（QAtlas 缓存：2504.05016）。
 - Wang, L.-J. et al. A Graphene Quantum Dot with a Single Electron Transistor as Integrated Charge Sensor. *Applied Physics Letters* **97**, 262113 (2010). DOI: 10.1063/1.3533021；arXiv:1008.4868（QAtlas 缓存：1008.4868）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

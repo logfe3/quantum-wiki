@@ -197,7 +197,7 @@ $$
 ## 与其他概念的关系
 
 - 被测对象通常是[[fundamentals/coulomb-blockade|库仑阻塞]]区边缘的单电子隧穿事件；射频读出的高速率使[[readout-measurement/single-shot-readout|单发读出]]与实时电荷态追踪成为可能，扫描双栅即可高速绘制[[fundamentals/charge-stability-diagram|电荷稳定图]]。
-- 传感器本体见[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]；不用专用传感器、直接读栅极复导纳的变体见[[readout-measurement/gate-based-sensing|栅极射频传感]]；读取谐振腔频移的推广形式见[[readout-measurement/dispersive-readout|色散读出]]。
+- 传感器本体见[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]；不用专用传感器、直接读栅极复导纳的变体见[[readout-measurement/gate-based-sensing|栅极射频传感]]；读取谐振腔频移的推广形式见[[readout-measurement/dispersive-readout|色散读出]]。反射测量需要定向耦合器分离入射/反射波——多通道扩展时的硬件开销可以改用**传输式**架构规避：SET 经超导电感构成阻抗变换网络、直接测透射，性能与反射式相当（见[[readout-measurement/single-electron-transistor|单电子晶体管]]的传输式 RF-SET 一节）。
 - 测量频率抬升到百 MHz 后避开了低频 $1/f$ [[materials-devices/charge-noise|电荷噪声]]区，链路噪声转而由首级低温放大器决定，进一步可用[[readout-measurement/parametric-amplifier|参量放大器]]逼近量子极限。
 - 在[[materials-devices/silicon-mos|Si-MOS]] 与 Si/SiGe 增强型器件中，二维电子气（见[[fundamentals/two-dimensional-carrier-gas|二维载流子气]]）与栅极的耦合电容造成射频泄漏，是硅基射频读出的特有难题。
 - 高带宽与频分复用能力是[[scaling-automation/quantum-dot-array|量子点阵列]]规模化读出的关键技术之一。

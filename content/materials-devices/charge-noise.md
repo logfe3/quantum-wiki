@@ -9,10 +9,10 @@ aliases:
 tags:
  - 材料与器件
  - 噪声
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m23aeb5ba6nswgtmjsjsm3by
-source_updated: 2026-09-09T17:26:25Z
+qatlas_id: qa_01m237r743za0t0gb7j8hxgxxq
+source_updated: 2026-09-09T15:54:21Z
 ---
 
 <div class="entry-lead">电荷噪声是量子点实验里最"会变形"的噪声：它既能移动电荷跃迁线，也能通过电荷混合、交换作用或自旋轨道耦合转化为比特相位噪声。</div>
@@ -105,6 +105,30 @@ $$
 
 ![[assets/figures/charge-noise/connors2019-fig4-dutta-horn.jpg]]
 *单点偏离与 Dutta–Horn 拟合：单个量子点的 $S_\varepsilon(1\,\mathrm{Hz})$ 温度依赖（上排，同一量子点在输运峰左/右侧不同）显著非线性，γ(T)（下排）偏离 1；黑线为 D-H 模型用 γ(T) 数据反推的 $S_\varepsilon$ 与用 $S_\varepsilon$ 反推的 γ——非均匀 TLS 分布同时解释两种偏离。图源：Connors et al. (2019), Fig. 4。*
+
+## 界面缺陷运动的微观模型：从位移到自旋劈裂噪声（Nowak 2023）
+
+把 1/f 电荷噪声一路追到微观源头：半导体–氧化物界面（距量子点 $z_0=102\ \mathrm{nm}$ 的平面）上的局域电荷在两个位置间随机切换（TLF），每次位移 $\delta\mathbf r$ 拖动量子点的波函数、再经**纵向磁场梯度** $\Delta B_\parallel$ 转化为 Zeeman 劈裂涨落——这就是同位素纯化 Si/SiGe 中自旋退相干的微观链条。单个缺陷对自旋劈裂的扰动 $\delta\Omega(\mathbf r)$ 有限元计算给出两个关键不对称性：**$z$ 向位移比面内位移有效约一个量级**（电荷与其金属镜像构成的偶极矩在 $z$ 向运动时变化最快），面内则沿梯度方向（$x$）的导数约为 $y$ 向的两倍。
+
+![[assets/figures/charge-noise/nowak2023-fig1-defect-spin-splitting-model.jpg]]
+
+*微观模型：界面处（z₀=102 nm）的一个电荷缺陷随机位移 δr 拖动量子点波函数，经纵向磁场梯度 ΔB∥ 转化为自旋劈裂的改变 δΩ(x,y,z₀)——单缺陷扰动的空间结构与梯度（决定位移方向的有效性）由有限元计算给出。图源：Nowak et al. (2023), Fig. 1。*
+
+多缺陷贡献近似可加（两电荷交叉验证误差 $\ll0.1$ neV），总噪声谱为各 TLF 洛伦兹谱之和。以实验观测的噪声幅度为锚点（$\sigma_\mathrm{spin}=1$ neV 对应 $T_2^{*}=1\ \mu s$；0.05–0.1 neV 对应 $T_2^{*}\approx20\ \mu s$，$\Delta B_\parallel=0.2\ \mathrm{mT/nm}$），对比两种位移模型：**各向同性**（三维高斯位移）噪声偏大、难以同时覆盖两个实验端点；**面内受限**（planar，位移限制在界面平面内）幅度约低 2 倍，在 $\rho\le10^{10}\ \mathrm{cm^{-2}}$、$\delta r\le0.5\ \mathrm{nm}$ 的合理参数区即可覆盖全部实验值，标度律为
+
+$$
+\langle\sigma_\mathrm{spin}^{(xy)}\rangle \approx \left[0.91\left(\frac{\rho}{10^{10}\,\mathrm{cm}^{-2}}\right)^{0.54}+0.030\right]\frac{\delta r}{\mathrm{nm}}\ \mathrm{neV}
+\qquad
+\left(\text{各向同性版系数 } 2.1\right)
+$$
+
+其中 $\rho$ 是界面缺陷面密度、$\delta r$ 是单次位移的 rms。两模型可由**跨器件 $T_2^{*}$ 统计的方差**区分（planar 模型方差更大）——$T_2^{*}$ 的器件间离散本身就是模型判别数据。
+
+**关联诊断预言**：同一批缺陷既驱动自旋劈裂噪声（经梯度通道）也驱动轨道/基态能量噪声（经直接库仑通道）——缺陷密度 $10^{10}\ \mathrm{cm^{-2}}$ 时两类噪声之间应出现**可见关联**。同时测自旋劈裂噪声与轨道能量噪声（如 [[qubit-control/spin-decoherence|自旋退相干]]谱与电荷传感谱）并检验其关联，由此成为界面缺陷的直接探针。
+
+![[assets/figures/charge-noise/nowak2023-fig4-correlation-prediction.jpg]]
+
+*关联预言：单个缺陷对自旋（ζ）与轨道（基态能量）两个通道的耦合乘积的空间分布——缺陷位于两通道耦合乘积大的位置时，两类噪声显著关联；缺陷密度 10¹⁰ cm⁻² 下该关联应可实测。图源：Nowak et al. (2023), Fig. 4。*
 
 ## 噪声如何进入比特：三类耦合通道
 
@@ -300,6 +324,8 @@ $t$ 为点间隧穿耦合、$U$ 为[[fundamentals/charging-energy|充电能]]。
 | 温度依赖 | $250\ \mathrm{mK}\to1\ \mathrm{K}$，峰顶电流涨落上升约 $20\%$ | |
 | Si/SiGe 失谐噪声（基温，1 Hz） | 0.84 / 0.93 / 1.77 µeV/√Hz（栅氧 0 / 15 / 46 nm Al₂O₃） | Connors 2019 |
 | Si/SiGe 噪声温度依赖 | 平均近似线性、随栅氧厚度单调上升（50 mK–1 K） | Connors 2019 |
+| 自旋劈裂噪声锚点 | $\sigma_\mathrm{spin}=1$ neV（$T_2^{*}=1\ \mu s$）；0.05–0.1 neV（$T_2^{*}\approx20\ \mu s$），$\Delta B_\parallel=0.2$ mT/nm | Nowak 2023 |
+| 界面缺陷模型参数 | planar 位移模型：$\rho\le10^{10}$ cm⁻²、$\delta r\le0.5$ nm 覆盖实验区间；$z$ 向位移比面内有效 ~10× | Nowak 2023 |
 
 ## 实验测量方法
 
@@ -356,6 +382,7 @@ $S_{BG}$ 为系统噪声本底。
 
 ## 参考文献
 
+- Nowak, B., Cywiński, Ł. Correlations of spin splitting and orbital fluctuations due to 1/f charge noise in the Si/SiGe quantum dot. *Applied Physics Letters* 122, 242001 (2023). DOI: 10.1063/5.0156358；arXiv:2305.06011（QAtlas 缓存：2305.06011）。
 - 电荷噪声对门保真度的影响与对策：[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]、[[references/ge-sweetspot-2024|Hendrickx et al., Nat. Mater. 23, 920 (2024)]]。
 - Connors, E. J., Nelson, J., Qiao, H., Edge, L. F., Nichol, J. M. Low-frequency charge noise in Si/SiGe quantum dots. *Physical Review B* 100, 165305 (2019). DOI: 10.1103/PhysRevB.100.165305；arXiv:1907.07549（QAtlas 缓存：1907.07549）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
