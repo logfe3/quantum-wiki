@@ -125,6 +125,7 @@ fluxonium 的跃迁频率与色散频移都随外磁通周期变化。以典型�
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的二阶微扰是色散频移求和公式的出发点：把 $\chi=g^2/\Delta$ 推广为 $\chi_{j;l}=\sum_{l'}(\chi_{j;ll'}-\chi_{j;l'l})$，即多能级色散移的一般形式。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与约瑟夫森结阵列电感同源：fluxonium 的 $E_L$ 来自超导阵列的动力学电感，这类材料也是高阻抗腔的实现基础。
 - [[superconducting-qubits/flowermon-qubit|Flowermon 扭转铜酸比特]]用 d 波序参量的宇称守恒从对称性上关闭准粒子通道——与 fluxonium 靠电路设计（大电感势阱）获得保护是两条不同的内禀保护路线。
+- fluxonium 也当"测量仪器"用：其退相干率对读出腔残余热光子极敏感，被用来量子级验证柔性微波带状线的热化（残余光子 <3.5×10⁻³、有效温度 26.4 mK），见[[scaling-automation/cryo-electronics|低温电子学]]词条的柔性线验证一节。
 
 ## 参考文献
 

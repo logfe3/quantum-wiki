@@ -8,7 +8,10 @@ aliases:
 tags:
  - 扩展与自动化
  - 低温电子学
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qvgzp5hmxxk93ad1vz50dn
+source_updated: 2026-09-04T16:00:08Z
 ---
 
 <div class="entry-lead">低温电子学（cryogenic electronics）指稀释制冷机内部及紧贴其冷板、为量子点提供偏置、操控和读出信号的电压-滤波-放大链路，是把宏观仪器和极低温比特连接起来的工程化层。</div>
@@ -119,6 +122,16 @@ $$
 
 **布线介质的选材依据**：软带状线（flexible stripline）与同轴电缆在比特控制/读出脉冲上的等效性测量（Bluefors）——两种介质的信号完整性（衰减、色散、串扰）在实用频段内等效；带状线在热负载（热导更低）与密度（更紧凑）上占优。布线选材从此有实验依据而非经验。
 
+**柔性线的量子级热化验证（Paluch 2024）**：信号等效之外还要回答"热上等效吗"。Paluch 等人（KIT/Pop 组）用超导 fluxonium 作量子温度计，系统检验 Delft Circuits 柔性微波带状线（内含分布式 60 dB 衰减、各级冷板分布安装）的热化：由退相干率反推**读出谐振腔残余光子数 <3.5×10⁻³**；直接加热实验测得**柔性线衰减器的热化时间 0.28 ms**；比特有效温度 **26.4 mK**，与常规半刚性同轴 setup 实质相同——布线密度提高一个量级而不牺牲器件相干性得到量子级验证。
+
+![[assets/figures/cryo-electronics/paluch2024-fig1-flex-setup.jpg]]
+
+*柔性带状线热化的测量原理与装置：微波功率经各级冷板上的分布式衰减注入柔性输入线，fluxonium 的退相干率对残余热光子敏感——用比特本身当热化探针。图源：Paluch et al. (2024), Fig. 1。*
+
+![[assets/figures/cryo-electronics/paluch2024-fig4-thermalization.jpg]]
+
+*柔性带状线的热化：对线内衰减器施加热脉冲后监测弛豫——提取热化时间常数 0.28 ms，量级上远短于典型读出/控制循环间隔，分布式衰减方案热学上自洽。图源：Paluch et al. (2024), Fig. 4。*
+
 ![[assets/figures/cryo-electronics/b12b0d1ce95b84abdaf7762fdd4d789ed4dea77b74ec07915a93fb3a98517075.jpg]]
 
 *软带状线 vs 同轴的等效性测量：控制/读出脉冲经两种介质的信号对比——实用频段内等效。图源：Monarkha et al. (2024)，Fig. 1。*
@@ -226,3 +239,8 @@ $$
 - [[circuit-qed/purcell-filter|Purcell filter]]把"读出链路对 qubit 退相干的影响"用 $Q_p$ 与 $\omega_p$ 解析地纳入链路设计，是 cryo-electronics 在 readout 端的设计参数。
 - [[materials-devices/charge-noise|电荷噪声]]是 cryo-electronics 必须抑制的扰动源；指出同轴线 + 热沉方案能直接降低离子注入区因加热产生的额外电荷跳变。
 - [[qubit-control/geometric-quantum-gate|几何量子门]]的噪声鲁棒性取决于 cryo-electronics 对共振频率噪声的注入量； 中"几何门对比传统动力学门在 1 K 噪声下表现更稳"的几何增益，部分来自 cryo-electronics 决定的噪声谱形。
+
+## 参考文献
+
+- Paluch, P., Spiecker, M., Gosling, N., Vermeulen, K., Bouman, D., Wernsdorfer, W., Pop, I. M. Thermalization of a flexible microwave stripline measured by a superconducting qubit (2024). arXiv:2410.01053（QAtlas 缓存：2410.01053）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -11,10 +11,10 @@ tags:
  - 量子声动力学
  - 机械振子
  - 量子存储
-date: 2026-09-15
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qveprfc0qaxkg0x11ga7sa
-source_updated: 2026-09-15T05:14:08Z
+qatlas_id: qa_01m0qvgzjj4wr76ha4qym6sxjg
+source_updated: 2026-09-04T16:22:02Z
 ---
 
 <div class="entry-lead">微波谐振腔用电磁场存量子态，机械振子用声波存——高次体声波谐振器（HBAR）一片压电衬底上提供密集的纵向声学模，每个模都能与超导比特近共振耦合。双比特各挂一组 HBAR 时，激发可以在整个系统里"巡回"：比特 → 声学模 → 另一比特 → 另一声学模——机械模的长寿命让"存进去、走一圈、取出来"成为量子存储与中继的原型演示。</div>
@@ -100,6 +100,20 @@ HBAR 属于'超导电路+机械振子'大家族的体声波分支；综述把整
 
 *反作用极限的定量：机械振子对的耦合可分辨度。图源：同上。*
 
+## 平面集成与声学诱导透明（Franse 2024）
+
+词条前文以三维架构为主线。平面化的价值明确——多比特同芯片、快磁通线、参量调制（[[readout-measurement/parametric-amplifier|参量放大器]]、片上环形器）——但此前 HBAR 与平面电路集成的尝试机械品质因子只有 $10^3$–$10^4$。Franse 等人用**倒装芯片**方案（压电 HBAR 芯片翻扣在标准平面 cQED 工艺的硅芯片上）跨过这道坎：比特谱线内观察到尖锐的 HBAR 共振（机械本质由 AC-Stark 调谐比特频率扫过多个共振确认），并用**声学诱导透明（AIT）**——电致透明（EIT）的声学类比，比特谱线内的窄窗口被声学模"挖穿"——表征系统。
+
+![[assets/figures/hbar-quantum-acoustodynamics/franse2024-fig1-flipchip-device.jpg]]
+
+*平面 HBAR-cQED 倒装集成：压电 HBAR 芯片翻扣在平面超导比特芯片上，经芯片间电容耦合声学模与比特——无任何压电透镜成形。图源：Franse et al. (2024), Fig. 1。*
+
+![[assets/figures/hbar-quantum-acoustodynamics/franse2024-fig3-ait-resonance.jpg]]
+
+*AIT 区提取本征机械阻尼：6.064 GHz 声学模处的比特两音谱（灰点）与平均场（蓝虚线）、主方程（红虚线）计算——(b) 为 AIT 共振特写，拟合给出 γ/2π = 6.98±0.03 kHz（Q = 9.0×10⁵）与比特-声子耦合 g_qh/2π = 197±1 kHz。图源：Franse et al. (2024), Fig. 3。*
+
+高分辨 AIT 谱经平均场/主方程联合拟合（剥离比特杂化的影响）给出**本征机械阻尼 $\gamma/2\pi=6.98\pm0.03\ \mathrm{kHz}$，即 $Q=9.0\times10^5$、比特-声子耦合 $g_{qh}/2\pi=197\pm1\ \mathrm{kHz}$**——无任何压电透镜成形即媲美 3D 架构的最好值；可能的解释是小比特电极 + 大压电圆盘的非均匀电场自带静电"透镜"。AIT 特征的线宽可在更强驱动下因单原子激光效应而窄于本征机械线宽——表征时须区分。平面高相干 HBAR 由此接入快磁通线、磁通介导参量门、SNAIL 等平面工具箱。
+
 ## 与其他概念的关系
 
 - 比特-声学模耦合的数学结构与[[circuit-qed/jaynes-cummings-model|JC 模型]]完全同源——QAD 是 cQED 在机械自由度上的平移；真空 Rabi 振荡与避免交叉的判读方法直接沿用。
@@ -110,4 +124,5 @@ HBAR 属于'超导电路+机械振子'大家族的体声波分支；综述把整
 ## 参考文献
 
 - Brighetti, F., et al. (2023). *Coupling high-overtone bulk acoustic wave resonators via superconducting qubits*. [arXiv:2307.05544](https://arxiv.org/abs/2307.05544)
+- Franse, W. J. M., Potts, C. A., Bittencourt, V. A. S. V., et al. High-Coherence Quantum Acoustics with Planar Superconducting Qubits (2024). arXiv:2410.10272（QAtlas 缓存：2410.10272）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

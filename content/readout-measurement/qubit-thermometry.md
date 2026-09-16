@@ -77,7 +77,7 @@ $$
 - [[readout-measurement/dispersive-readout|色散读出]]与[[readout-measurement/single-shot-readout|单发读出]]：布居测量的读出层，$\chi/\kappa$ 与放大器噪声直接决定与 QFI 界的距离；
 - [[circuit-qed/charge-parity-fluctuation|准粒子]]：>200 mK 的动态范围上限来自平衡 QP 对 $\tau_1$ 的压制；
 - [[readout-measurement/parametric-amplifier|参量放大器]]：量子极限首级放大是逼近 Cramér–Rao 下界的关键（关联法 + JPA 已几乎触界）；
-- [[scaling-automation/cryo-electronics|低温电子学]]：在片测温为制冷机监测与量子热力学实验提供局部温度基准。
+- [[scaling-automation/cryo-electronics|低温电子学]]：在片测温为制冷机监测与量子热力学实验提供局部温度基准；"比特当温度计"的思路也被反过来用于验证输入线热化——fluxonium 的退相干率给出柔性微波带状线的残余光子数上界（<3.5×10⁻³）与 0.28 ms 热化时间。
 
 ## 参考文献
 

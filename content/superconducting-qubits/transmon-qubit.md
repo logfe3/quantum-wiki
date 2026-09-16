@@ -189,7 +189,7 @@ $$
 \frac1{T_2}=\frac1{2T_1}+\frac1{T_\varphi}.
 $$
 
-当电荷噪声被指数压低后，实验瓶颈往往转移到材料损耗、磁通噪声、残余光子和准粒子；“对电荷不敏感”不能等同于“对环境完全不敏感”。材料侧的替代路线（如[[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物组件]]）与界面工艺优化（见[[superconducting-qubits/surface-tls-loss|表面 TLS 损耗]]）都在攻击同一瓶颈。transmon–腔系统也是可复用的计算载体：腔的 Fock 态占据概率可充当量子储备池的输出神经元，见[[circuit-qed/quantum-reservoir-computing|量子储备池计算]]。
+当电荷噪声被指数压低后，实验瓶颈往往转移到材料损耗、磁通噪声、残余光子和准粒子；“对电荷不敏感”不能等同于“对环境完全不敏感”。材料侧的替代路线（如[[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物组件]]）与界面工艺优化（见[[superconducting-qubits/surface-tls-loss|表面 TLS 损耗]]）都在攻击同一瓶颈。transmon–腔系统也是可复用的计算载体：腔的 Fock 态占据概率可充当量子储备池的输出神经元，见[[circuit-qed/quantum-reservoir-computing|量子储备池计算]]。transmon 本身还能改造成[[circuit-qed/giant-atom|人工巨原子]]：经两个相隔可比波长的点耦合波导后，干涉使它对比特单光子全反射、对强信号透明——环境工程的新构件；声学侧的平面集成（HBAR 倒装芯片，Q=9×10⁵）也把 transmon 工艺与机械振子结合起来，见[[circuit-qed/hbar-quantum-acoustodynamics|HBAR 量子声动力学]]。
 
 ## 典型参数与设计权衡
 
