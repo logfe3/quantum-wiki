@@ -1,6 +1,6 @@
 ---
 title: 量子点百科
-description: 从 240 余篇论文中提炼的量子器件、量子比特操控、读出与电路量子电动力学中文知识库，附 arXiv 文献全文库。
+description: 从 近 280 篇论文中提炼的量子器件、量子比特操控、读出与电路量子电动力学中文知识库，附 arXiv 文献全文库。
 tags:
  - 首页
 date: 2026-09-08
@@ -39,22 +39,22 @@ date: 2026-09-08
  <p>电荷、自旋、空穴与杂化编码，以及 LZSM、Rabi、Ramsey 和逻辑门。</p>
  </a>
  <a class="category-card" href="./materials-devices/">
- <span class="card-index">03 · 10 个词条</span>
+ <span class="card-index">03 · 12 个词条</span>
  <span class="card-title">材料与器件</span>
  <p>GaAs、Si/SiGe、Si-MOS、应变锗、双层石墨烯、微磁体、噪声与界面缺陷。</p>
  </a>
  <a class="category-card" href="./superconducting-qubits/">
- <span class="card-index">04 · 10 个词条</span>
+ <span class="card-index">04 · 13 个词条</span>
  <span class="card-title">超导量子比特</span>
  <p>从约瑟夫森结人工原子出发，理解 transmon 的能谱、抗噪声设计、控制与读出。</p>
  </a>
  <a class="category-card" href="./readout-measurement/">
- <span class="card-index">05 · 16 个词条</span>
+ <span class="card-index">05 · 17 个词条</span>
  <span class="card-title">读出与测量</span>
  <p>电荷传感、射频反射、单发读出、色散读出与量子极限放大。</p>
  </a>
  <a class="category-card" href="./circuit-qed/">
- <span class="card-index">06 · 19 个词条</span>
+ <span class="card-index">06 · 22 个词条</span>
  <span class="card-title">腔与电路 QED</span>
  <p>高阻抗谐振腔、强耦合、真空拉比劈裂与腔介导的远程互连。</p>
  </a>
@@ -72,7 +72,7 @@ date: 2026-09-08
 
 ## 这座知识库如何形成
 
-内容最初由本地 thesis 文件夹中的 25 篇参考论文抽取、比对后重新组织，并引入 [[references/index|参考文献库]]收录的 arXiv 文献全文。现在通过 QAtlas 论文库按需检索和增量获取新证据；首个增量是 transmon 奠基论文，首个增量是 transmon 奠基论文；截至 v0.92.0，全文来源增至 26 篇、QAtlas 累计处理论文 247 篇。概念页采用转述与综合，不把原文自动当成词条；词条末尾列出对应的参考文献双链。[[about|编写与取材说明]]记录口径和限制。
+内容最初由本地 thesis 文件夹中的 25 篇参考论文抽取、比对后重新组织，并引入 [[references/index|参考文献库]]收录的 arXiv 文献全文。现在通过 QAtlas 论文库按需检索和增量获取新证据；首个增量是 transmon 奠基论文，首个增量是 transmon 奠基论文；截至 v0.102.0，QAtlas 累计处理论文 279 篇。概念页采用转述与综合，不把原文自动当成词条；词条末尾列出对应的参考文献双链。[[about|编写与取材说明]]记录口径和限制。
 
 > [!note] 边界
 > 本站是一份论文导读型知识库，不替代原论文，也不把实验结果外推为通用结论。数值与“首次”等历史性表述均放回相应论文语境中阅读。

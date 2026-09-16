@@ -1,11 +1,11 @@
 {
-  "source_digest": "283060c0dcfb31d99fe4ab81ec1156e727f489aa9a50404b0a1de8dacb07eba2",
+  "source_digest": "3c0d9fa148e7ded5b3f9aeb63d2d173f6e8a3fa74844b47ba504508f1754901e",
   "pages": [
     {
       "path": "content/circuit-qed/analytical-3d-cqed.md",
       "title": "三维 cQED 全波解析解",
       "topic": "circuit-qed",
-      "sha256": "24a9d10a4daab9c2ec503ddbbe68f4c86a0002baf129ad40534a738f605b2a25",
+      "sha256": "8224b309cca2fa82db96437d7adeee4855248527c516f52ffa2a4027c743eacb",
       "split": "dev"
     },
     {
@@ -33,14 +33,14 @@
       "path": "content/circuit-qed/charge-parity-fluctuation.md",
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
-      "sha256": "12023467e9bfb4a9f7f3df61ce691d870de95646b517181c495d81fc0e5a20a6",
+      "sha256": "afded6e2d751da2ee89cb9405c900d5c225d2449a55b6d4cd97374d34f0c6f50",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/charge-photon-coupling.md",
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "9f260c154af64d5fd42f1636739abcae17bb9db57483c21930f03f8982c1624d",
+      "sha256": "a942ccd41c389f2011b816f9b64ff0a7d3f93b9594bf0c05b8760080e93c5000",
       "split": "train"
     },
     {
@@ -61,14 +61,14 @@
       "path": "content/circuit-qed/field-resilient-resonator.md",
       "title": "耐磁场超导谐振腔",
       "topic": "circuit-qed",
-      "sha256": "886ee97912314dd097359f98ce3acce40ad2557c4c1a69fcbe8474b302910289",
+      "sha256": "038f82b26f43fd62200452751b9a55835b74aab9840c08619aba74f466dedbba",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "d5df8b5737be21defc8f4a66e5a86e93b60200509747b68c7e4ef9e7605f3f8f",
+      "sha256": "66ac58253bce12a4a05c0285efda5dbc32dfbc3f615842c1b633c19463f8e2ee",
       "split": "train"
     },
     {
@@ -89,7 +89,14 @@
       "path": "content/circuit-qed/jaynes-cummings-model.md",
       "title": "Jaynes–Cummings 模型",
       "topic": "circuit-qed",
-      "sha256": "994dd99867370bcfa7a8b05b4203ebd6265b4929c08fa9420eb5fc541af37e37",
+      "sha256": "6e87c0c57248f4d235b1c840e5c618d974e8a63c72cc384442aeb4b42708a206",
+      "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/longitudinal-coupling.md",
+      "title": "纵向耦合",
+      "topic": "circuit-qed",
+      "sha256": "40e4f37ca06e7c89c6e937a4423f3d44165b37d342bbdfd12f1ecd464f424595",
       "split": "train"
     },
     {
@@ -243,7 +250,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "3073ad054d1989b16cf9bdb59da28d7a1a8f338079382c860f6ceeb47c5ca1cb",
+      "sha256": "c66190154474ae94afbe5178d02507cd376badd5ae4bf6522e0a69ce9fafba9c",
       "split": "dev"
     },
     {
@@ -320,7 +327,7 @@
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "1dd77d93405bbb0acc738e8cce9f85c059d58dccac5497cfaee18c3f2fdf3df6",
+      "sha256": "6133af0e5be62749241ab37b35c4268ea0236f6d83c62ef53ccc45ca9511b599",
       "split": "train"
     },
     {
@@ -523,7 +530,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "916fba721f78bf66e3bb3bf32a4c56615588beb3eceaca03d59fed66533bc2a4",
+      "sha256": "452eae8922eaba32f88922dad44e336f6b071a8eae19df16c0740b9c93854afc",
       "split": "train"
     },
     {
@@ -544,21 +551,21 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "c9973ffa4747a74eb9da9122d75cf0ec36b70c2586e3ebe38a3d0cc003ccfffc",
+      "sha256": "3e8bb4fa73c21ec33895c9d94fb714e947623c9934ae258489b496c7a89e278d",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "f4c39d416dec2410506475e01583977bbda33781f9d92f5a96217577e8eb5fe1",
+      "sha256": "6d19c6bd397b15282862a7d765084383511acacb2f47b83d8697ec3686411e99",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/pt-symmetry-parametric-amplifier.md",
       "title": "参量放大器中的 PT 对称性破缺",
       "topic": "readout-measurement",
-      "sha256": "6ce169a14016e498f2f5616a4af4d5f7a5cd0469d7f86f4b9595d2c179212a5f",
+      "sha256": "f9fe53e2d5d913f4f16f21365b51eb4c823a7b586b59fab22de401e6235f021d",
       "split": "train"
     },
     {
@@ -698,7 +705,7 @@
       "path": "content/scaling-automation/thouless-pumping-jja.md",
       "title": "约瑟夫森结阵列中的 Thouless 量子泵浦",
       "topic": "scaling-automation",
-      "sha256": "afebfadc70a13bb2dc0c9946a12836c3588e2c4e7df2bf79244464926b1471be",
+      "sha256": "bffd6b1e26d864aff538fbfef0a9d22746f8148a4919e2d46a78b24df177c4f7",
       "split": "dev"
     },
     {
@@ -786,17 +793,24 @@
       "split": "train"
     },
     {
+      "path": "content/superconducting-qubits/synthetic-flux-qubit-ring.md",
+      "title": "合成磁通与分数磁通量子",
+      "topic": "superconducting-qubits",
+      "sha256": "ecb5d7d2729517718065361cdab5cb5d51773af547e92b21e3c13f3bc76ce87f",
+      "split": "train"
+    },
+    {
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "7a14fb1429879cf20e9c8d465ad559a0144b6e7dac05db3780fb19c921cf2495",
+      "sha256": "d99a7c452efeccf52cd7d7348f3799c3aa545fb20b691f8db9a6b4114acfb447",
       "split": "train"
     },
     {
       "path": "content/superconducting-qubits/zz-coupling.md",
       "title": "ZZ 相互作用",
       "topic": "superconducting-qubits",
-      "sha256": "534d50b095cb8b6c996e23495feb4dc00dc74297d7b34bbe3a3c4b563c561ec0",
+      "sha256": "18a82d4d4c3d4d268cca4feae6491a27d8692083fd8f51833c93dd172b7ccf41",
       "split": "train"
     }
   ]
