@@ -73,6 +73,7 @@ $$
 - [[circuit-qed/floquet-dynamics|Floquet 驱动动力学]]：Leviton 协议是 Floquet 方法的一个具体工程化——用脉冲形状的谱性质（指数谱 + 量子化相位）让时间平均后的有效哈密顿量精确可控。
 - [[scaling-automation/thouless-pumping-jja|约瑟夫森结阵列中的 Thouless 量子泵浦]]：同一"超导电路模拟拓扑/规范物理"家族的另支——JJA 里用栅控做 Rice-Mele/Harper-Hofstadter 泵浦，这里用 transmon 环做吸引玻色子 + 合成磁通。
 - [[superconducting-qubits/flat-band-localization|平带局域化与 Aharonov–Bohm 笼蔽]]：Peierls 相位方案的另一应用——菱形格子中合成磁通调带色散，Φ=π 时三带全平、本征态紧致局域。
+- [[circuit-qed/line-graph-flat-band|线图格子平带与 cQED 格子]]：circuit QED 量子模拟的图论分支——谐振器网络实现布局图的线图，平带与紧致局域态由线图定理保证，受挫跳跃打开带隙。
 - [[superconducting-qubits/floquet-anisotropic-transverse-interactions|横向各向异性相互作用的 Floquet 工程]]：规范场思想在合成空间的对应物——计算基矢闭合回路的驱动相位差充当可调磁通，观测 AB 干涉与笼蔽。
 - [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：微波反射读出共享同一套散射谱学语言。
 - 展望（原文）：孤子在量子计量中的潜力、Aharonov–Bohm 振荡、格点规范理论的介观模拟——与强相互作用冷原子、拓扑光子学构成互补的合成规范场平台。

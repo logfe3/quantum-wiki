@@ -205,7 +205,7 @@ $$
 
 - 哈密顿量与全部能级结构见[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]与[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；
 - 大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量；强周期驱动下的修饰谱由[[circuit-qed/floquet-dynamics|Floquet 动力学]]描述；
-- 腔侧的实现路线：常规微波谐振腔、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]；
+- 腔侧的实现路线：常规微波谐振腔、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]；把谐振器连成网络则升级为人工紧束缚固体——布局图的线图自带 −2 平带，见[[circuit-qed/line-graph-flat-band|线图格子平带与 cQED 格子]]；
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）；
 - 多比特共享同一腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础；
 - 性能瓶颈来自[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]，常见平台包括[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]。

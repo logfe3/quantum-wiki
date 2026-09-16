@@ -81,6 +81,7 @@ $$
 - [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]与[[superconducting-qubits/floquet-anisotropic-transverse-interactions|横向各向异性相互作用的 Floquet 工程]]：同一代参数耦合/边带技术的两个应用方向——一个合成自旋模型相互作用，一个合成含规范场的紧束缚模型。
 - [[scaling-automation/thouless-pumping-jja|约瑟夫森结阵列中的 Thouless 量子泵浦]]：超导量子模拟平台上格点模型 + 规范场的另一实现，与本词条互为补充（泵浦 vs 平带）。
 - [[fundamentals/wigner-molecule|Wigner 分子]]：另一类"相互作用决定空间构型"的局域化物理；平带笼蔽则是纯干涉效应，无序与相互作用扮演破坏者的角色。
+- [[circuit-qed/line-graph-flat-band|线图格子平带与 cQED 格子]]：平带的图论底层——耦合 CPW 谐振器网络自动实现布局图的线图，线图定理保证 −2 处无穷简并平带与紧致局域态，并给出非二部/受挫跳跃的带隙判据。
 
 ## 参考文献
 
