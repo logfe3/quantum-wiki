@@ -64,7 +64,7 @@ $$
 - **泵浦偏置敏感性**：泵浦功率 0.03 dBm 的漂移可使 $P_{1\mathrm{dB}}$ 变化达 3 dBm；报告与对比饱和功率必须锁定最优泵浦条件（增益脊）。
 - **增益-带宽代价不在此处**：阵列稀释 $K$ 不改变增益-带宽乘积（该器件保持 450 MHz），但 $K$ 同时决定增益与饱和，稀释后需要更大泵浦功率。
 - **外推边界**：模型要求 $L_\mathrm{stray}\ll L_J$（器件中 30 pH vs 165 pH）。作者外推 $N=150$、$C_\mathrm{out}=50$ fF 的设计可在 20 dB 增益下得到 95 MHz 带宽与 $P_{1\mathrm{dB}}=-102\ \mathrm{dBm}$（泵浦 $-66\ \mathrm{dBm}$，与 JTWPA 量级相当），但此时近似开始失效，需进一步理论。
-- **行波器件的对应量**：3WM 行波放大器中泵浦耗散主导饱和，$P_{1\mathrm{dB}}\approx P_p/(4G_0)$（4WM 因 SPM/XPM 相位失配再减半为 $P_p/(8G_0)$），rf-SQUID 单元可解耦线性与非线性参数从而打破饱和-长度权衡——见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]词条"rf-SQUID TWPA"一节。
+- **行波器件的对应量**：3WM 行波放大器中泵浦耗散主导饱和，$P_{1\mathrm{dB}}\approx P_p/(4G_0)$（4WM 因 SPM/XPM 相位失配再减半为 $P_p/(8G_0)$），rf-SQUID 单元可解耦线性与非线性参数从而打破饱和-长度权衡——见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]词条"rf-SQUID TWPA"一节。低插损架构同时抬高饱和功率：CP-JTWPA 在 20.5 dB 增益下做到 −99 dBm（同词条"CP-JTWPA"一节）。
 - **谐振式的最新高点**：rf-SQUID 阵列 JPA（几何电感旁路 + $\beta=L_s/L_J$ 设计空间）把谐振式器件的 $P_{1\mathrm{dB}}$ 推到 $-91.5\ \mathrm{dBm}$，与结数多两个量级的 JTWPA 相当——见[[readout-measurement/parametric-amplifier|参量放大器]]词条"rf-SQUID 阵列 JPA"一节。
 - **动力学电感分支的天然优势**：非线性来自薄膜而非结的[[readout-measurement/kinetic-inductance-twpa|KI-TWPA]]在 15 dB 增益下 $P_{1\mathrm{dB}}$ 达 $-58\ \mathrm{dBm}$——比约瑟夫森式器件高约一个量级，多谐振腔阵列同时读出的功率预算因此宽裕得多（其代价是色散工程更繁重）。
 

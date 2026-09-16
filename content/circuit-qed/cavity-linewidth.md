@@ -26,7 +26,7 @@ $$
 \kappa = \kappa_i + \kappa_e
 $$
 
-即总腔耗散率，也就是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]主方程中驱动 $a$ 的耗散项。在频谱上，$\kappa$ 给出无加载腔的洛伦兹响应（见[[circuit-qed/microwave-resonator|微波谐振腔]]词条）的半高宽（full width at half maximum，FWHM），通常直接简称为"腔线宽"。
+即总腔耗散率，也就是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]主方程中驱动 $a$ 的耗散项。在频谱上，$\kappa$ 给出无加载腔的洛伦兹响应（见[[circuit-qed/microwave-resonator|微波谐振腔]]词条）的半高宽（full width at half maximum，FWHM），通常直接简称为"腔线宽"。在光机械与电机械语境里，$\kappa$ 与机械频率 $\omega_m$ 之比还决定边带分辨与量子反作用强度——进入[[circuit-qed/feedback-cooling|反馈冷却]]的反作用声子预算项 $\kappa^2/(\kappa^2+4\omega_m^2)$。
 
 工程语境中，腔线宽常被换算成无量纲的**品质因子**（quality factor）
 

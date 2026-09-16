@@ -12,8 +12,8 @@ tags:
  - 约瑟夫森结
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvht5hs5w5prfcy1mc2avv
-source_updated: 2026-09-09T14:50:41Z
+qatlas_id: qa_01m0qvhtrvv76gkn9v477swrh5
+source_updated: 2026-09-09T14:47:49Z
 ---
 
 <div class="entry-lead">谐振式 [[readout-measurement/parametric-amplifier|参量放大器]]（JPA/IMPA）的带宽被谐振腔卡死在数百 MHz 量级；把非线性元件从"一只腔"摊开成"一条线"——近千个 rf-SQUID 单元串接成的离散传输线——泵浦与信号边走边混频，就得到带宽数 GHz 的约瑟夫森行波参量放大器（JTWPA）。除了色散工程这条传统设计轴线，Guarcello 等人 2025 年的数值研究指出了第三个旋钮：约瑟夫森结**电流–相位关系（CPR）的谐波权重**。让 CPR 偏离纯正弦、带上二次谐波项，不仅能在零偏置下诱生三波混频，还把器件推入"高增益 ↔ 混沌失稳"的竞争区——最优权重 $J_{c_2}\approx-0.6$ 时，无需任何色散工程即可获得约 13 dB 增益。</div>
@@ -216,6 +216,27 @@ $$
 - **边界条件重要**：负载匹配的边界条件会显著影响传输线动力学、甚至抑制混沌——这是约瑟夫森传输线模拟的已知共性。
 - **简化假设**：模型未含硅能带谷轨道态等复杂效应，且假定结参数完全一致；实际器件的结间涨落会进一步压缩稳定区。
 
+## CP-JTWPA：低插损共面集总元件 + 窗函数调制（Chang 2025）
+
+前述各路线各有痛点：共振式色散工程要求精确的谐振结构与高密度集成（复现性差）、SNAIL 路线要磁通偏置（不利于大规模集成）、周期调制路线（KI-TWPA 的传统做法）固有增益纹波显著、而多数 JTWPA 的**插入损耗**（介质或正常导体接地带来的）直接压低有效增益与噪声地板。RIKEN 的 CP-JTWPA 同时处理这四点：
+
+- **低插损架构**：以低损耗共面波导为底座，中心线串入约瑟夫森结、用**开路短截线电容**提供所需并联电容——介质只有硅衬底与真空，彻底避开有耗介质；Manhattan 型结（~1 µm²、1 µm 宽电极，双角度蒸发）提供足够临界电流；每 5 个单元一座跨地气桥抑制槽线模、每个短截线上再加跨桥压制相邻线间串扰并降低杂散电感。>2000 个 20 µm 单元盘成 5×5 mm² 双螺旋，**插入损耗 12 GHz 内 <1 dB**（含封装，对照 50 Ω SMA 适配器校准）。
+- **窗函数阻抗调制**：相位匹配用周期阻抗调制实现（免谐振结构、免磁通），但用**窗函数包络**平滑调制强度的起止——boxcar（硬边）固有强增益纹波，Hann 窗已显著改善，Tukey 窗（锥区与平顶等长）最优。调制本身采用**结面积与短截线长度同向相关调制**：所需短截线几何变化从 16% 降到 8% 阻抗调制，蒙特卡洛模拟确认对结临界电流涨落的耐受性与纯电容调制相当。
+
+![[assets/figures/josephson-traveling-wave-amplifier/chang2025-fig1-cp-jtwpa-architecture.jpg]]
+
+*CP-JTWPA 架构：(a) 硅衬底上 5×5 mm² 双螺旋芯片；(b) 20 µm 单元——约瑟夫森结（红）、开路短截线电容（蓝/绿）、跨短截线与跨地气桥（黄）；(c) 单元集总电路模型（L_J、C_J、C_g、L_s/2）；(d) 单元三维示意；(e) ~1 µm² Manhattan 结的 SEM；(f) 12 mK 基线传输对比 50 Ω 适配器——除设计的 8.13 GHz 带隙外，4–12 GHz 插损 <1 dB（含封装）。图源：Chang et al. (2025), Fig. 1。*
+
+![[assets/figures/josephson-traveling-wave-amplifier/chang2025-fig3-window-ripple-comparison.jpg]]
+
+*窗函数对比：boxcar（硬边调制，上排）与 Hann（平滑包络，下排）窗器件的传输特性——调制强度包络的平滑过渡系统性抑制周期调制 JTWPA 的固有增益纹波。图源：Chang et al. (2025), Fig. 3。*
+
+**Tukey 窗器件（器件 C）实测**：理想匹配下 20–23 dB 增益覆盖 5 GHz 带宽；含实际阻抗失配的电路中保持 17–20 dB 增益 / 4.8 GHz 带宽，20 dB 增益处**附加噪声 0.18 量子（SQL 之上）**、饱和功率 −99 dBm，带隙频率以下反向增益为零至负——片上天然单向。综合指标已与频分复用多比特读出的工程需求对齐。
+
+![[assets/figures/josephson-traveling-wave-amplifier/chang2025-fig5-noise-performance.jpg]]
+
+*Tukey CP-JTWPA 的噪声性能（5.563 GHz）：附加噪声随增益的变化——低于 5 dB 增益时 <0.5 量子，20 dB 增益处 0.18 量子（SQL 之上）。图源：Chang et al. (2025), Fig. 5。*
+
 ## 与其他概念的关系
 
 - [[readout-measurement/parametric-amplifier|参量放大器]]：JTWPA 是其行波分支——用"一条线"换取谐振式 JPA/IMPA 拿不到的 GHz 级带宽与高饱和功率，代价是工艺复杂与对结均一性的苛刻要求；本文补充的 CPR 谐波权重是该家族的新设计维度。谐振式 JPA 一侧的高阶 Kerr 修正对量子效率与压缩的定量限制（以及用结阵列稀释非线性的对策）见该词条"高阶非线性修正"一节——同样的非线性稀释思路也适用于行波器件的单元设计。
@@ -223,7 +244,8 @@ $$
 - [[readout-measurement/rf-reflectometry|射频反射测量]]：JTWPA 作为首级近量子极限放大器嵌入反射读出链，把 HEMT 噪声贡献压到可忽略。
 - [[scaling-automation/cryo-electronics|低温电子学]]：JTWPA 是稀释制冷机读出链中 HEMT 之前的低温第一级候选，多比特频分复用读出依赖其宽带增益。
 - [[readout-measurement/dispersive-readout|色散读出]]：数 GHz 增益带宽让一台 JTWPA 同时服务整条多腔总线的频分复用读出。
-- [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：动力学电感行波放大器（[[readout-measurement/kinetic-inductance-twpa|KI-TWPA]]）与本词条器件共用"非线性电感摊开成线"的思路，只是非线性来自超导薄膜而非约瑟夫森结——动态范围高一个量级（1 dB 压缩 −58 dBm）、免结工艺，代价是需要短截线加载与周期调制做色散工程维持相位匹配。
+- [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：动力学电感行波放大器（[[readout-measurement/kinetic-inductance-twpa|KI-TWPA]]）与本词条器件共用"非线性电感摊开成线"的思路，只是非线性来自超导薄膜而非约瑟夫森结——动态范围高一个量级（1 dB 压缩 −58 dBm）、免结工艺，代价是需要短截线加载与周期调制做色散工程维持相位匹配。周期调制 + 窗函数包络的相位匹配同样适用于约瑟夫森侧：CP-JTWPA（见上文）以 Tukey 窗调制兼顾低插损与平坦增益。
+- [[circuit-qed/feedback-cooling|微波光机械反馈冷却]]：反馈环对首级放大器附加噪声的苛刻要求（环内噪声会加热被冷振子）使近量子极限 JTWPA 成为该应用的使能器件。
 
 ## 参考文献
 
@@ -232,4 +254,5 @@ $$
 - Gaydamachenko, V., Kissling, C., Grünhaupt, L. et al. An rf-SQUID-based traveling-wave parametric amplifier with −84 dBm input saturation power across more than one octave bandwidth (2025). DOI: 10.1103/1qk4-fzkq；arXiv:2503.02489（QAtlas 缓存：2503.02489）。
 - Wang, J., Peng, K., Knecht, J. M., Cunningham, G. D., Lombo, A., Yen, A., Zaidenberg, D. A., Gingras, M., Niedzielski, B. M., Stickler, H., Sliwa, K., Serniak, K., Schwartz, M. E., Oliver, W. D., O'Brien, K. P. High-Efficiency, Low-Loss Floquet-mode Traveling Wave Parametric Amplifier (2025). arXiv:2503.11812（QAtlas 缓存：2503.11812）。
 - Shin, S. H., Stanley, M., Wong, W. N., Sweetnam, T., Elarabi, A., Lindström, T., Ridler, N. M., de Graaf, S. E. In-operando microwave scattering-parameter calibrated measurement of a Josephson travelling wave parametric amplifier. *Review of Scientific Instruments* (2024). DOI: 10.1063/5.0220776；arXiv:2406.03063（QAtlas 缓存：2406.03063）。
+- Chang, C. W. S., Van Loo, A. F., Hung, C.-C., Zhou, Y., Gnandt, C., Tamate, S., Nakamura, Y. Josephson traveling-wave parametric amplifier based on low-intrinsic-loss coplanar lumped-element waveguide (2025). DOI: 10.1103/QHL6-CZ2Z；arXiv:2503.07559（QAtlas 缓存：2503.07559）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

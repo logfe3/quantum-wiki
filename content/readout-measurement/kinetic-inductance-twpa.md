@@ -117,7 +117,7 @@ $$
 
 ## 与其他概念的关系
 
-- [[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]：同属行波参量放大，非线性源不同（结 vs 薄膜动力学电感）；KI-TWPA 动态范围与磁场/温度宽容度更高，JTWPA 泵浦效率与相位匹配旋钮更丰富；
+- [[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]：同属行波参量放大，非线性源不同（结 vs 薄膜动力学电感）；KI-TWPA 动态范围与磁场/温度宽容度更高，JTWPA 泵浦效率与相位匹配旋钮更丰富——约瑟夫森侧的最新 CP-JTWPA 也借用周期调制 + 窗函数包络做相位匹配（与 KI-TWPA 的短截线调制同源），并以开路短截线电容实现 <1 dB 插损；
 - [[readout-measurement/parametric-amplifier|参量放大器]]：家族总纲——JPA 谐振窄带、TWPA 行波宽带，本词条是 TWPA 的薄膜电感分支；
 - [[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]：KI-TWPA 的 −58 dBm 压缩点是高动态范围读出（多谐振腔阵列）的关键资源；
 - [[readout-measurement/dispersive-readout|色散读出]]与[[readout-measurement/rf-reflectometry|射频反射测量]]：量子极限首级放大器是这两类测量的灵敏度天花板所在；

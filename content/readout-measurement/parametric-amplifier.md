@@ -30,7 +30,7 @@ $$
 
 其中 $T_J$、$T_H$、$T_R$ 分别为参量放大器、低温 HEMT、室温放大器的等效噪声温度，$G_J$、$G_H$ 为各级增益。当 $G_J \gtrsim 15\ \mathrm{dB}$、$T_J \approx 150\ \mathrm{mK}$ 时，链路噪声主要被首级参量放大器自身决定，这是为什么读出实验要花大力气优化 JPA / IMPA 的原因。
 
-按"是否同时放大两个正交分量"，参量放大器分为**保相（phase-preserving）**与**相敏（phase-sensitive）**两类；按"使用一个还是两个非线性元件"，又有 SQUID 或 SQUID 阵列构成的**谐振式参量放大器（JPA / IMPA）**与非线性传输线构成的**行波参量放大器（JTWPA / KIPA）**两类。行波分支还有一族不用约瑟夫森结的成员——非线性来自超导薄膜动力学电感的[[readout-measurement/kinetic-inductance-twpa|动力学电感行波参量放大器（KI-TWPA）]]，动态范围与工艺宽容度更高。本文重点放在超导量子比特读出中最常见的前者，并以 论文第四章的工作作为主线。
+按"是否同时放大两个正交分量"，参量放大器分为**保相（phase-preserving）**与**相敏（phase-sensitive）**两类；按"使用一个还是两个非线性元件"，又有 SQUID 或 SQUID 阵列构成的**谐振式参量放大器（JPA / IMPA）**与非线性传输线构成的**行波参量放大器（JTWPA / KIPA）**两类。行波分支还有一族不用约瑟夫森结的成员——非线性来自超导薄膜动力学电感的[[readout-measurement/kinetic-inductance-twpa|动力学电感行波参量放大器（KI-TWPA）]]，动态范围与工艺宽容度更高。行波路线内部也分化出三条相位匹配方案：共振色散工程、SNAIL 非线性工程与周期阻抗调制（后者加窗后可获平坦增益，见[[readout-measurement/josephson-traveling-wave-amplifier|JTWPA]]词条"CP-JTWPA"一节）。本文重点放在超导量子比特读出中最常见的前者，并以 论文第四章的工作作为主线。
 
 <!-- FIGURE: 典型低温读出链路：比特腔反射 → 20 mK 冷盘定向耦合器 → 20 mK JPA/IMPA → 4 K HEMT → 室温放大器；标出每级温度、增益与噪声贡献 -->
 
