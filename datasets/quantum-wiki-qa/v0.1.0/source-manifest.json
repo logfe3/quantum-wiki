@@ -1,5 +1,5 @@
 {
-  "source_digest": "fc122cffb42300c42f61e2dbd25401e1c80f12b959e37a1a875ba0ec4dd2733c",
+  "source_digest": "87922de42dcaae17d97eff129a909d47010f4c89713e22a31a80f41c4fb83d0b",
   "pages": [
     {
       "path": "content/circuit-qed/analytical-3d-cqed.md",
@@ -226,6 +226,13 @@
       "split": "train"
     },
     {
+      "path": "content/fundamentals/effective-2d-envelope-function.md",
+      "title": "有效二维包络函数理论",
+      "topic": "fundamentals",
+      "sha256": "c41e134e8c1af363a333bafd4698540b40fd1ed859a9d5c1925fc246328ce7a7",
+      "split": "train"
+    },
+    {
       "path": "content/fundamentals/electrochemical-potential.md",
       "title": "电化学势",
       "topic": "fundamentals",
@@ -257,14 +264,14 @@
       "path": "content/fundamentals/spin-orbit-coupling.md",
       "title": "自旋轨道耦合",
       "topic": "fundamentals",
-      "sha256": "e518cea9b0b4adfd78ae760eb0998e6e041ab4e3ca6dc748db75a9b554777bd0",
+      "sha256": "21fc49d40fa98ff5974fcdb3d940e489f0ebe97ce54504229bf307bbffa802e1",
       "split": "train"
     },
     {
       "path": "content/fundamentals/tunnel-coupling.md",
       "title": "隧穿耦合",
       "topic": "fundamentals",
-      "sha256": "6a8cfc99e27746c73b61fe278f20c7e989d06fdacb8c05f0eb12bffb8447424e",
+      "sha256": "6cabc4b1b087fd61e3f5507900ab3c3baa375e86bcbb02eef16941249d1f4a73",
       "split": "train"
     },
     {
@@ -278,7 +285,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "9249ff65ec72236a859b1eec6b2824140a6c7b30c59498926c82c389327181c9",
+      "sha256": "439081fead56176d90801e3013f21616bbd6a46387c584debb029173cba0f87d",
       "split": "dev"
     },
     {
@@ -425,7 +432,7 @@
       "path": "content/qubit-control/exchange-interaction.md",
       "title": "交换相互作用",
       "topic": "qubit-control",
-      "sha256": "874a2b0dc26aeb13ab4ab8e5ee1e7a3ffdad3fca5162e41cd160ee86669ed6ae",
+      "sha256": "395caac8a0155b986887e21f2aa0039c88ae17c5ed05ae6debdf5ad1a53e05ff",
       "split": "dev"
     },
     {
@@ -436,10 +443,17 @@
       "split": "train"
     },
     {
+      "path": "content/qubit-control/hole-excited-state-rabi.md",
+      "title": "空穴激发态巨拉比跃迁",
+      "topic": "qubit-control",
+      "sha256": "4ce7e162b8cbcf9e8ba944a336420f31365f1c0ef01994165da0179b58dc36c7",
+      "split": "train"
+    },
+    {
       "path": "content/qubit-control/hole-spin-qubit.md",
       "title": "空穴自旋量子比特",
       "topic": "qubit-control",
-      "sha256": "57c565c3951f96b145559116bebe903bc8761ae851b0c6ab01b37e21d4169a54",
+      "sha256": "fe9d801567d87c33102bb1034a96a0b124ab11bc6b2b614c00b63ca4c2d40f3f",
       "split": "train"
     },
     {
@@ -481,7 +495,7 @@
       "path": "content/qubit-control/rabi-oscillation.md",
       "title": "Rabi 振荡",
       "topic": "qubit-control",
-      "sha256": "6fd2dfb192489be68163339b5d5a5c33029f93c352f09cd35fe09a963b85b7be",
+      "sha256": "c36d8a2a8f776aa406401a3f3d17abbe0a09d22abf2bd37fd5786e28bff16eae",
       "split": "train"
     },
     {
@@ -558,7 +572,7 @@
       "path": "content/readout-measurement/amplifier-saturation-power.md",
       "title": "参量放大器饱和功率",
       "topic": "readout-measurement",
-      "sha256": "f8c2734cfb4c85782e41bddf1991f2a9e6bf146ae38dbb490d79fe463c4e7ec9",
+      "sha256": "f4945f4a44ea3238f712cd7800dc867e9f41511862c7892a4ae026e8ce05b3c8",
       "split": "train"
     },
     {
@@ -593,7 +607,7 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "f138cb2cda73d9fcf39274670ff411c437ece052f86b330115656bed770f8366",
+      "sha256": "05bb0d5f0db9e2b5833685a4284002053e86393bf4346ba9747a8d280a91bad3",
       "split": "train"
     },
     {
@@ -607,7 +621,7 @@
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "ac6992cac5b8e556b4880179b87ce810a8e73ce5d0bd3f866c71eb56199db837",
+      "sha256": "7551cc05ba1b72046edf3d4d001404cbb5aba393d669a163808940eebbb727b6",
       "split": "train"
     },
     {
