@@ -27,7 +27,7 @@ source_updated: 2026-09-02T20:44:03Z
 - **电路级耦合**：在半导体量子点中"比特"可以是[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]、或经微磁体或自旋轨道作用获得电荷成分的杂化比特；读出指针则是与该比特电偶极耦合的[[circuit-qed/microwave-resonator|微波谐振腔]]。
 - **不可避免的反作用**：探测光子既提供信息也是扰动来源——测量诱导退相干（measurement-induced dephasing）、AC Stark 频移、以及经腔辐射的[[readout-measurement/purcell-filter|Purcell 通道]]都会与读出速度、信噪比（SNR）和保真度直接挂钩。
 
-由于这套方法把比特态编码到一段独立可观测的相位或频率信号上，它在 2004 年 Wallraff 等人首次演示[[circuit-qed/circuit-quantum-electrodynamics|cQED]] 架构时就被用作主读出手段，并被沿用至半导体量子点–腔杂化体系）。
+由于这套方法把比特态编码到一段独立可观测的相位或频率信号上，它在 2004 年 Wallraff 等人首次演示[[circuit-qed/circuit-quantum-electrodynamics|cQED]] 架构时就被用作主读出手段，并被沿用至半导体量子点–腔杂化体系）。这套布居测量能力反转过来就是[[readout-measurement/qubit-thermometry|超导比特温度计]]：热平衡下三能级布居比直接编码 60–200 mK 的环境温度。
 
 <!-- FIGURE: 色散读出工作示意：比特 |g⟩、|e⟩ 与失谐 Δ 下的腔频响应曲线，两态对应腔频 ±χ 的双峰结构，标注探测频率 ω_p 选在斜坡处 -->
 

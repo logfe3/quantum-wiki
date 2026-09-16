@@ -60,7 +60,7 @@ $$
 - 增益：约 40 dB（典型平坦值）；
 - 噪声温度 $T_{\text{amp}}^{\text{noise}}\!\approx\!2.1\ \text{K}$（4 K 端测得），相对量子极限 $T_{\text{QNL}}=hf/k_{B}\!\sim\!0.5$–$1$ K 仍偏高。
 
-对半导体量子点，2 K 量级等效输入噪声已经接近高频电子学噪声地板，是 charge sensor 单发读出（SNR$\!\approx\!3$）的关键限制之一。在 transmon 读出链路中，为进一步压低噪声，在 HEMT 与量子芯片之间通常再插入**约瑟夫森参量放大器**（J-Amp，含 J-TWPA、J-IMPA 等），其增益可达 20–30 dB、噪声温度低至 300–600 mK，实测最低 800 mK。首级放大器的元件集成度直接决定制冷机内的占用体积：把偏置 tee、定向耦合器等全部微加工到放大器芯片上的 ORCK 方案（安装足迹缩小约 5 倍、系统噪声 3.4 量子）为读出链路的密集部署铺路（见[[readout-measurement/kinetic-inductance-twpa|动力学电感行波参量放大器]]）。
+对半导体量子点，2 K 量级等效输入噪声已经接近高频电子学噪声地板，是 charge sensor 单发读出（SNR$\!\approx\!3$）的关键限制之一。在 transmon 读出链路中，为进一步压低噪声，在 HEMT 与量子芯片之间通常再插入**约瑟夫森参量放大器**（J-Amp，含 J-TWPA、J-IMPA 等），其增益可达 20–30 dB、噪声温度低至 300–600 mK，实测最低 800 mK。首级放大器的元件集成度直接决定制冷机内的占用体积：把偏置 tee、定向耦合器等全部微加工到放大器芯片上的 ORCK 方案（安装足迹缩小约 5 倍、系统噪声 3.4 量子）为读出链路的密集部署铺路（见[[readout-measurement/kinetic-inductance-twpa|动力学电感行波参量放大器]]）。链路之外，芯片上介观热浴的局部温度也可用比特本身测量：transmon 三能级布居分布在 60–200 mK 区间构成一台初级温度计、精度可逼近量子 Fisher 信息下界（见[[readout-measurement/qubit-thermometry|超导比特温度计]]）。
 
 ### cryo-CMOS：把控制电子放进制冷机
 

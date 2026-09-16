@@ -81,6 +81,7 @@ $$
 ## 与其他概念的关系
 
 - [[materials-devices/interface-defects|界面缺陷]]：弱耦合 TLS 系综与 tanδ 损耗预算的框架覆盖"背景"损耗；本词条的强耦合分立缺陷模是另一族——数目稀少、单独可分辨、由结区而非大面积界面主导，两类缺陷对工艺的响应不同证明它们物理可分。结沉积前把 BOE 清洗换成 HF→NH4F 湿法刻蚀可同时压低界面 TLS 密度与中位弛豫率（T1 45→55 µs、TLS 1.9→1.1 个/GHz），微观机理指向硅表面氢钝化——见[[superconducting-qubits/surface-tls-loss|表面 TLS 损耗与湿法刻蚀]]词条。
+- [[superconducting-qubits/t1-fluctuation-statistics|比特寿命涨落统计]]：交换谱学给出 TLS 的静态画像（谱密度、缩放律），涨落统计谱学补上动力学维度——TLS-TLF 相互作用造成的 Γ₁ 低频 1/f 涨落与准粒子白噪声在同一器件上定量分离。
 - [[superconducting-qubits/transmon-qubit|transmon 量子比特]]：受害主体——固定频率 transmon 怕共振、频率可调 transmon 怕频率远征；结尺寸缩放直接进入 transmon 结设计规则。
 - [[superconducting-qubits/csfq-decoherence|可调电容并联 flux qubit 的退相干]]：频率可调比特族的退相干表征方法与噪声分解思路同源，强耦合缺陷模是其中"分立共振"型的损耗通道。
 - [[qubit-control/two-qubit-gate|两比特门]]：磁通激活门依赖频率远征，强耦合缺陷模限制路径选择并侵蚀门保真度。

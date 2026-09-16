@@ -70,6 +70,8 @@ $$
 - [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]：其退相干叙事中"介质与界面损耗"一条的定量展开与工艺对策。
 - [[superconducting-qubits/csfq-decoherence|可调电容并联 flux qubit 的退相干]]：器件级退相干通道分解的另一个案例——那里低频段由磁通噪声主导，本词条处理的是耗散型 TLS 通道。
 - [[materials-devices/interface-defects|界面缺陷]]：半导体–介质界面缺陷的通用框架（弱耦合 TLS 系综与 $\tan\delta$ 预算）在超导侧的对应。铌表面的镜像版本——水缓冲 BCP 刻蚀 + 快速密封把铌同轴腔 TLS 损耗正切压到 $\sim10^{-10}$ 量级（氟沾污与氧化层演化主导）——见[[circuit-qed/niobium-coaxial-cavity|铌同轴谐振腔]]词条：两案对照说明刻蚀化学是跨材料的一级 TLS 设计变量。
+- [[superconducting-qubits/t1-fluctuation-statistics|比特寿命涨落统计]]：界面损耗的均值效应（本词条）之外，TLS 还制造 $\Gamma_1$ 的低频 1/f 涨落——表面介质 EPR 越大的小足迹比特涨落越显著，为工艺验收增加"稳定性"维度。
+- [[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物超导组件]]：材料侧的另一条路线——用化学惰性的氮化物电极/势垒替代 Al/AlO_x，从源头减少无定形氧化物界面；溅射 AlN 势垒的缺陷谱密度与 AlO_x 的系统对比是后续关键实验。
 
 ## 参考文献
 
