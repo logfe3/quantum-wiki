@@ -2,8 +2,8 @@
 title: 扩展与自动化
 description: 从单个量子点走向多点阵列所需的校准、算法和互连技术。
 tags:
- - 分类
- - 扩展与自动化
+  - 分类
+  - 扩展与自动化
 date: 2026-09-08
 ---
 
@@ -12,13 +12,13 @@ date: 2026-09-08
 - [[cross-capacitance-matrix|交叉电容矩阵]]
 - [[automatic-tuning|自动调控]]
 - [[charge-state-recognition|电荷态识别]]
+- [[charge-shuttling|电荷穿梭]]
 - [[flopping-mode-qubit|翻转模式量子比特]]
 - [[two-dimensional-array|二维量子点阵列]]
 - [[cryo-electronics|低温电子学]]
 - [[spin-orbit-torque-control|自旋轨道力矩操控]]
 - [[frequency-homogenisation|全局操控与频率均匀化]]
-- [[thouless-pumping-jja|Thouless 量子泵浦]]
-- [[multi-time-tomography|多时间量子过程层析]]
-- [[mmiqc-3d-integration|多层微波集成量子电路与三维集成]]
+- [[hot-spin-qubit-operation|高温自旋比特运行]]
+- [[multiplexed-qd-characterization|大规模量子点多路复用表征]]
 
 扩展的难点不只是“多做几个量子点”。每个新增栅极都会带来交叉耦合、漂移和参数空间膨胀，因此需要把器件设计、快速读出和自动算法作为一个闭环系统共同考虑。

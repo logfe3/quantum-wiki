@@ -2,15 +2,15 @@
 title: 二维载流子气
 description: 异质结界面中沿生长方向量子限域、在平面内自由运动的电子或空穴系统。
 aliases:
- - 二维电子气
- - 2DEG
- - 二维空穴气
- - 2DHG
- - 二维电子系统
- - 二维空穴系统
+  - 二维电子气
+  - 2DEG
+  - 二维空穴气
+  - 2DHG
+  - 二维电子系统
+  - 二维空穴系统
 tags:
- - 量子点基础
- - 材料
+  - 量子点基础
+  - 材料
 date: 2026-09-08
 ---
 
@@ -34,7 +34,7 @@ date: 2026-09-08
 
 在 Si/SiGe 异质结中，应变 Si 量子阱被夹在弛豫 SiGe 缓冲层之间，导带错位把电子束缚在 Si 层。Si 的多能谷结构使面内有六个等价能谷，应变会移除简并从而使有效质量平均化；同时晶格失配比 GaAs/AlGaAs 大，2DEG 迁移率较低。同位素纯化 $^{28}\mathrm{Si}$ 可大幅削弱核自旋噪声，使 Si/SiGe 的自旋相干时间提升到百微秒量级。Si-MOS 是另一类常见平台：电场把电子吸引到 Si/SiO$_2$ 界面，2DEG 距表面只有几纳米，因此栅极调节能力极强；但界面陷阱较多，电荷稳定性与迁移率都不及 Si/SiGe。
 
- 在其绪论中汇总了主要体系 4.2 K 下的 2DEG 迁移率量级：Si-MOS 约为 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Si/SiGe 异质结可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Ge/SiGe 异质结载流子迁移率也已突破 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。 强调选片原则："挑选势阱较深的基片，让 2DEG 层远离含较多杂质的表面氧化层，从而减少迁移电子受杂质中心散射的影响"——这是 2DEG 迁移率与界面无序度之间的直接联系。
+在其绪论中汇总了主要体系 4.2 K 下的 2DEG 迁移率量级：Si-MOS 约为 $1\times 10^{4}$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Si/SiGe 异质结可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$；Ge/SiGe 异质结载流子迁移率也已突破 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$。 强调选片原则："挑选势阱较深的基片，让 2DEG 层远离含较多杂质的表面氧化层，从而减少迁移电子受杂质中心散射的影响"——这是 2DEG 迁移率与界面无序度之间的直接联系。
 
 ### 应变锗：2DHG 与强自旋轨道
 
@@ -54,7 +54,7 @@ $$
 
 面内色散近似为抛物线 $E_{n,\mathbf{k}_{\parallel}}=E_{n}+\hbar^{2}k_{\parallel}^{2}/(2m^{*})$。GaAs 中电子有效质量约 $0.067\,m_0$；应变锗中面内重空穴有效质量可降至 $0.05\,m_0$，但面外仍较大。
 
- 把应变锗量子阱的求解放在自洽薛定谔-泊松（Schrödinger-Poisson, S-P）框架内：一维泊松方程把静电势 $\phi(x)$ 与载流子密度 $p(x)$ 耦合
+把应变锗量子阱的求解放在自洽薛定谔-泊松（Schrödinger-Poisson, S-P）框架内：一维泊松方程把静电势 $\phi(x)$ 与载流子密度 $p(x)$ 耦合
 
 $$
 \frac{\mathrm{d}}{\mathrm{d}x}\left[\varepsilon_{r}(x)\frac{\mathrm{d}\phi(x)}{\mathrm{d}x}\right]=-\frac{e}{\varepsilon_{0}}p(x)
@@ -100,19 +100,19 @@ $$
 
 ## 参数与量级汇总
 
-| 体系 | 2DEG/2DHG 深度 | 低温面密度 $n_\mathrm{2D}$ | 低温迁移率 $\mu$ | 来源 |
-| --- | --- | --- | --- | --- |
-| GaAs/AlGaAs 调制掺杂 | 距表面 $90$–$100\ \mathrm{nm}$ | $2.0$–$3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $0.6$–$3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| GaAs/AlGaAs 4.2 K 典型 | 表面下 $90\ \mathrm{nm}$ | $\sim 10^{11}\ \mathrm{cm^{-2}}$ | $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| GaAs/AlGaAs 高阻抗腔样品（$20\ \mathrm{mK}$） | 距表面 $90\ \mathrm{nm}$ | $2.3\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| 非掺杂 GaAs 积累型 | 表面下 $\sim 45\ \mathrm{nm}$ | $\leq 3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| Si-MOS | 距 Si/SiO$_2$ 界面几 nm | 视栅压而定 | $1$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| Si/SiGe | 应变 Si 量子阱 | 视栅压而定 | 可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | |
-| Ge/SiGe 2DHG | $16\ \mathrm{nm}$ 锗量子阱 | 视栅压而定 | 可达 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$（载流子）；高质量样品 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | / |
+| 体系                                          | 2DEG/2DHG 深度                 | 低温面密度 $n_\mathrm{2D}$                  | 低温迁移率 $\mu$                                                                                                             | 来源 |
+| --------------------------------------------- | ------------------------------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---- |
+| GaAs/AlGaAs 调制掺杂                          | 距表面 $90$–$100\ \mathrm{nm}$ | $2.0$–$3.2\times 10^{11}\ \mathrm{cm^{-2}}$ | $0.6$–$3.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                      |      |
+| GaAs/AlGaAs 4.2 K 典型                        | 表面下 $90\ \mathrm{nm}$       | $\sim 10^{11}\ \mathrm{cm^{-2}}$            | $10^{5}$–$10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                             |      |
+| GaAs/AlGaAs 高阻抗腔样品（$20\ \mathrm{mK}$） | 距表面 $90\ \mathrm{nm}$       | $2.3\times 10^{11}\ \mathrm{cm^{-2}}$       | $1.6\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                            |      |
+| 非掺杂 GaAs 积累型                            | 表面下 $\sim 45\ \mathrm{nm}$  | $\leq 3.2\times 10^{11}\ \mathrm{cm^{-2}}$  | $1.5$–$2.0\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                      |      |
+| Si-MOS                                        | 距 Si/SiO$_2$ 界面几 nm        | 视栅压而定                                  | $1$–$4\times 10^{4}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                          |      |
+| Si/SiGe                                       | 应变 Si 量子阱                 | 视栅压而定                                  | 可达 $2.4\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$                                                                       |      |
+| Ge/SiGe 2DHG                                  | $16\ \mathrm{nm}$ 锗量子阱     | 视栅压而定                                  | 可达 $6.2\times 10^{5}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$（载流子）；高质量样品 $2\times 10^{6}\ \mathrm{cm^2\,V^{-1}\,s^{-1}}$ | /    |
 
-![[assets/figures/materials-devices/han-2017-fig1-4-qd-orientations.jpg]]
+![[assets/figures/fundamentals/han-2017-fig1-4-qd-orientations.jpg]]
 
-*横向与纵向量子点器件结构对比*
+_横向与纵向量子点器件结构对比_
 
 <!-- 原始占位：不同体系的 2DEG/2DHG 深度、面密度与迁移率对照示意图（柱状或点图），按 GaAs/AlGaAs、Si-MOS、Si/SiGe、Ge/SiGe 四类排开；标注深度、迁移率、面密度与典型温度 -->
 
@@ -142,8 +142,8 @@ $$
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]：在 2DEG 中压出一条窄通道，把量子点附近电势涨落转换为电导信号。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]：利用应变锗 2DHG 的强自旋轨道耦合与可调 $g$ 因子实现全电操控。
 
-
 ## 参考文献
 
 - GaAs/AlGaAs 与 Si/SiGe 二维气、积累型结构与迁移率的系统参考：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

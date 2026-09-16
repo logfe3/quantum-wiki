@@ -2,12 +2,12 @@
 title: Jaynes–Cummings 模型
 description: 描述旋转波近似下单个二能级系统与单量子谐振模式交换激发的基础模型。
 aliases:
- - JC模型
- - J-C模型
- - Jaynes-Cummings模型
+  - JC模型
+  - J-C模型
+  - Jaynes-Cummings模型
 tags:
- - 电路量子电动力学
- - 模型
+  - 电路量子电动力学
+  - 模型
 date: 2026-09-08
 ---
 
@@ -93,6 +93,7 @@ $$
 定义色散频移 $\chi=g^2/\Delta$。从腔的角度看，腔频依比特态移动 $\pm\chi$：比特处于基态（$\langle\sigma_z\rangle=-1$）与激发态（$+1$）时腔频偏移方向相反。测量腔的透射或反射相位即可推断比特态，且该测量算符与比特哈密顿量对易，构成量子非破坏测量（quantum nondemolition measurement，QND），是[[readout-measurement/dispersive-readout|色散读出]]的理论基础。
 
 把同一哈密顿量按比特项整理
+
 $$
 H_{\mathrm{disp}}/\hbar\approx\omega_r a^\dagger a
 +\frac{1}{2}\left(\omega_q+2\chi\,a^\dagger a+\chi\right)\sigma_z
@@ -104,14 +105,14 @@ $$
 
 半导体量子点 cQED 实验中的典型参数（取自本站论文中所列工作）：
 
-| 参数 | 典型量级 | 说明 |
-| --- | --- | --- |
-| 腔频 $\omega_r/2\pi$ | 约 5–7 GHz（如 4.993、7.332 GHz） | 需与比特频率匹配 |
-| 比特频率 $\omega_q/2\pi$ | 2–20 GHz | 随器件与编码方式变化 |
-| 自旋–光子耦合 $g_s/2\pi$ | 约 7–22 MHz | 劈裂 $2g_s/2\pi$ 最大测得 43.5 MHz |
-| 电荷–光子耦合 $g_c/2\pi$ | 约 175 MHz，最大 619 MHz | 619 MHz 对应 $g_c/\omega_r\sim0.11$，进入超强耦合区 |
-| 腔耗散 $\kappa/2\pi$ | 约 2–8 MHz | 高阻抗腔品质因数可达数千 |
-| 比特退相干 $\gamma/2\pi$ | 自旋约 2–5 MHz，电荷约 50–100 MHz | 决定强耦合判据 $g>\kappa,\gamma$ |
+| 参数                     | 典型量级                          | 说明                                                |
+| ------------------------ | --------------------------------- | --------------------------------------------------- |
+| 腔频 $\omega_r/2\pi$     | 约 5–7 GHz（如 4.993、7.332 GHz） | 需与比特频率匹配                                    |
+| 比特频率 $\omega_q/2\pi$ | 2–20 GHz                          | 随器件与编码方式变化                                |
+| 自旋–光子耦合 $g_s/2\pi$ | 约 7–22 MHz                       | 劈裂 $2g_s/2\pi$ 最大测得 43.5 MHz                  |
+| 电荷–光子耦合 $g_c/2\pi$ | 约 175 MHz，最大 619 MHz          | 619 MHz 对应 $g_c/\omega_r\sim0.11$，进入超强耦合区 |
+| 腔耗散 $\kappa/2\pi$     | 约 2–8 MHz                        | 高阻抗腔品质因数可达数千                            |
+| 比特退相干 $\gamma/2\pi$ | 自旋约 2–5 MHz，电荷约 50–100 MHz | 决定强耦合判据 $g>\kappa,\gamma$                    |
 
 ## 实验可观测量
 
@@ -139,4 +140,4 @@ $$
 
 ## 与其他概念的关系
 
-JC 模型是[[circuit-quantum-electrodynamics|电路量子电动力学]]的最小构件：其共振极限对应[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合]]判据；色散极限对应[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。在半导体实现中，"二能级"可以是[[qubit-control/charge-qubit|电荷比特]]（电偶极强、退相干快）、经微磁体或自旋轨道机制获得电荷混合的[[circuit-qed/spin-photon-coupling|自旋比特]]，以及多量子点杂化编码；耦合的微观大小由[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的杠杆臂、混合角与腔阻抗决定。JC 相互作用本身还可以被"按需开关"：纯纵向耦合器件用红边带驱动把纵向相互作用线性化为 g=g₀|⟨a⟩| 的有效 JC 阶梯（高开关比、耦合率由驱动设定），见[[circuit-qed/longitudinal-coupling|纵向耦合]]词条。JC 的 RWA 失效后回到量子 Rabi 模型，其 Z₂ 宇称选择定则可反过来当态制备引擎用（双光子参量过程造 Bell/W 态），见[[circuit-qed/parity-assisted-state-generation|宇称辅助的非经典光态制备]]；多模极限下的发散困难与 Caldeira–Leggett 替代见[[circuit-qed/superstrong-coupling|超强耦合]]。
+JC 模型是[[circuit-quantum-electrodynamics|电路量子电动力学]]的最小构件：其共振极限对应[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合]]判据；色散极限对应[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。在半导体实现中，"二能级"可以是[[qubit-control/charge-qubit|电荷比特]]（电偶极强、退相干快）、经微磁体或自旋轨道机制获得电荷混合的[[circuit-qed/spin-photon-coupling|自旋比特]]，以及多量子点杂化编码；耦合的微观大小由[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的杠杆臂、混合角与腔阻抗决定。JC 相互作用本身还可以被"按需开关"：纯纵向耦合器件用红边带驱动把纵向相互作用线性化为 g=g₀|⟨a⟩| 的有效 JC 阶梯（高开关比、耦合率由驱动设定），见纵向耦合词条。JC 的 RWA 失效后回到量子 Rabi 模型，其 Z₂ 宇称选择定则可反过来当态制备引擎用（双光子参量过程造 Bell/W 态），见宇称辅助的非经典光态制备；多模极限下的发散困难与 Caldeira–Leggett 替代见超强耦合。

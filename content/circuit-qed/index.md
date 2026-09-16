@@ -2,8 +2,8 @@
 title: 腔与电路 QED
 description: 半导体量子点与超导微波谐振腔构成的杂化量子系统。
 tags:
- - 分类
- - 电路量子电动力学
+  - 分类
+  - 电路量子电动力学
 date: 2026-09-08
 ---
 
@@ -20,7 +20,4 @@ date: 2026-09-08
 - [[spin-photon-coupling|自旋–光子耦合]]
 - [[cavity-mediated-coupling|腔介导远程耦合]]
 - [[floquet-dynamics|Floquet 驱动动力学]]
-- [[nv-center-cavity-bus|NV 色心腔总线]]
-- [[superinductance|超电感与约瑟夫森结阵列]]
-- [[bosonic-cqed|玻色 cQED 与腔编码量子计算]]
-- [[hbar-quantum-acoustodynamics|高次体声波谐振器量子声动力学]]
+- [[field-resilient-resonator|耐磁场超导谐振腔]]

@@ -2,14 +2,14 @@
 title: 超精细相互作用
 description: 半导体量子点中电子或空穴自旋与周围晶格核自旋集合之间的耦合，是 GaAs 等 III–V 族比特退相干的主要来源。
 aliases:
- - 核自旋相互作用
- - 超精细耦合
- - hyperfine interaction
+  - 核自旋相互作用
+  - 超精细耦合
+  - hyperfine interaction
 tags:
- - 量子点基础
- - 自旋量子比特
- - 超精细相互作用
- - 核自旋
+  - 量子点基础
+  - 自旋量子比特
+  - 超精细相互作用
+  - 核自旋
 date: 2026-09-08
 ---
 
@@ -55,6 +55,7 @@ B_{N,\max}=\frac{1}{g\mu_B}\sum_k A_k\,I_k\sim 1\text{–}5\ \mathrm{T}
 ```
 
 对 GaAs 量子点典型值。
+
 - **未极化下的均方根涨落**：核自旋取向随机时，中心极限定理给出
 
 ```math
@@ -62,6 +63,7 @@ B_{N,\mathrm{rms}}\sim \frac{B_{N,\max}}{\sqrt{N}}.
 ```
 
 对一个 $N\approx 10^6$ 的量子点，$B_{N,\mathrm{rms}}\approx 1\text{–}5\ \mathrm{mT}$）。$B_N$ 涨落的特征时间由核–核偶极相互作用决定（$\sim 10$–$100\ \mu\mathrm{s}$），与电子自旋动力学相比可视为准静态。
+
 - **双量子点之间的梯度**：左右两点各自覆盖不同的核集合，差分
 
 ```math
@@ -86,6 +88,7 @@ B_Z & 0 & 0 & \tfrac{dB_x-\mathrm{i}\,dB_y}{2}\\[3pt]
 ```
 
 其中
+
 ```math
 B_Z=B_{\mathrm{ext}}+\tfrac{1}{2}(B_{N,L}^z+B_{N,R}^z),\qquad
 \mathbf{dB}=\tfrac{1}{2}(\mathbf{B}_{N,L}-\mathbf{B}_{N,R}).
@@ -122,15 +125,15 @@ $$
 
 ## 参数与量级
 
-| 量 | GaAs（电子） | ${}^{\mathrm{nat}}\mathrm{Si}$（电子） | ${}^{28}\mathrm{Si}$（电子） | 应变 Ge（空穴） |
-| --- | --- | --- | --- | --- |
-| 宿主核自旋 | ${}^{69,71}\mathrm{Ga}$、${}^{75}\mathrm{As}$，$I=3/2$ | 4.67% ${}^{29}\mathrm{Si}$，$I=1/2$ | ${}^{29}\mathrm{Si}$ 60 ppm 级 | ${}^{73}\mathrm{Ge}$ 7.76%，$I=9/2$ |
-| 轨道特征 | s（导带） | s（导带） | s（导带） | p（价带） |
-| 耦合形式 | 接触式各向同性 | 接触式各向同性 | 接触式各向同性 | 偶极型，Ising 各向异性 |
-| $B_{N,\mathrm{rms}}$ | 1–5 mT） |
-| 典型 $T_2^*$ | ~10–20 ns | ~0.3–1 μs | >100 μs | 17.6 μs |
-| 梯度能量 $E_N$ | $g\mu_B|\Delta B_N|\sim 0.1\ \mathrm{meV}$ | ~同量级 | ~同量级 | $\sim 0.1\ \mathrm{meV}$ |
-| 残余噪声通道 | 电荷噪声 + 超精细 | 电荷噪声 + 残余超精细 | 谷间散射、电荷噪声 | Ising 各向异性 + 电荷噪声 |
+| 量                   | GaAs（电子）                                           | ${}^{\mathrm{nat}}\mathrm{Si}$（电子） | ${}^{28}\mathrm{Si}$（电子）   | 应变 Ge（空穴）                     |
+| -------------------- | ------------------------------------------------------ | -------------------------------------- | ------------------------------ | ----------------------------------- |
+| 宿主核自旋           | ${}^{69,71}\mathrm{Ga}$、${}^{75}\mathrm{As}$，$I=3/2$ | 4.67% ${}^{29}\mathrm{Si}$，$I=1/2$    | ${}^{29}\mathrm{Si}$ 60 ppm 级 | ${}^{73}\mathrm{Ge}$ 7.76%，$I=9/2$ |
+| 轨道特征             | s（导带）                                              | s（导带）                              | s（导带）                      | p（价带）                           |
+| 耦合形式             | 接触式各向同性                                         | 接触式各向同性                         | 接触式各向同性                 | 偶极型，Ising 各向异性              |
+| $B_{N,\mathrm{rms}}$ | 1–5 mT）                                               |
+| 典型 $T_2^*$         | ~10–20 ns                                              | ~0.3–1 μs                              | >100 μs                        | 17.6 μs                             |
+| 梯度能量 $E_N$       | $g\mu_B                                                | \Delta B_N                             | \sim 0.1\ \mathrm{meV}$        | ~同量级                             | ~同量级 | $\sim 0.1\ \mathrm{meV}$ |
+| 残余噪声通道         | 电荷噪声 + 超精细                                      | 电荷噪声 + 残余超精细                  | 谷间散射、电荷噪声             | Ising 各向异性 + 电荷噪声           |
 
 数字仅给量级；具体值强烈依赖器件尺寸、纯化水平、温度与外磁场方向。
 
@@ -177,10 +180,10 @@ $$
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]的去相位由 Overhauser 涨落与电荷噪声共同贡献：纯化硅中 Rabi 振荡外推的 $T_2^*$ 远高于 GaAs。
 - [[qubit-control/exchange-interaction|交换相互作用]]与超精细梯度共同决定双量子点 S–T<sub>0</sub> 与 S–T<sub>+</sub> 反交叉的能级图，是[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/pauli-spin-blockade|泡利自旋阻塞]]读出的核心。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]也受 Overhauser 场修正：超精细场移动自旋 Zeeman 频率（改变与腔的失谐）并修正有效耦合强度，III-V 体系腔介导两比特门的保真度随核态构型涨落（见该词条"超精细场对腔介导耦合的修正"一节）。
-- [[readout-measurement/qh-edge-channel-charge-sensor|量子霍尔边缘通道电荷传感器]]反向利用超精细劈裂做资源：同位素纯化 ^28Si 中单个 ^31P 施主 D⁰ 能级的 60 MHz 超精细劈裂大于光学线宽，使 12 条 D⁰→D⁰X 跃迁可以按核自旋分辨，光泵浦"选核自旋、电读电荷态"由此实现单核自旋 QND 读出。
-
+- 量子霍尔边缘通道电荷传感器反向利用超精细劈裂做资源：同位素纯化 ^28Si 中单个 ^31P 施主 D⁰ 能级的 60 MHz 超精细劈裂大于光学线宽，使 12 条 D⁰→D⁰X 跃迁可以按核自旋分辨，光泵浦"选核自旋、电读电荷态"由此实现单核自旋 QND 读出。
 
 ## 参考文献
 
 - 核自旋与电子自旋退相干（GaAs 对比硅）的经典综述：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]；现代视角见 [[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -2,12 +2,12 @@
 title: 射频反射测量
 description: 把量子器件嵌入阻抗匹配谐振电路，通过反射微波的幅值和相位快速读取状态。
 aliases:
- - 射频反射式测量
- - RF reflectometry
- - RF 反射测量
+  - 射频反射式测量
+  - RF reflectometry
+  - RF 反射测量
 tags:
- - 读出与测量
- - 射频
+  - 读出与测量
+  - 射频
 date: 2026-09-08
 ---
 
@@ -142,21 +142,21 @@ $$
 
 ## 参数与量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| 传输线特性阻抗 $Z_0$ | $50\ \Omega$ | 射频标准 |
-| 传感器灵敏区电阻 | $R_{\mathrm{QPC}}\gtrsim 50\ \mathrm{k\Omega}$（$G<0.5\,e^2/h$）；量子点电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$；Si-MOS SET 可达数百 k$\Omega$–M$\Omega$ | ； |
-| 直流引线电容 | $\sim 100$–$600\ \mathrm{pF}$（$174\ \mathrm{pF/m}$ 同轴线） | ； |
-| 直流测量带宽 $f_{RC}$ | $\sim 30\ \mathrm{kHz}$ | ； |
-| 片上寄生电容 $C_p$ | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$） | |
-| 贴片电感 $L$ | $500$–$1000\ \mathrm{nH}$（常用 $820\ \mathrm{nH}$） | |
-| 谐振频率 $f_R$ | $70$–$400\ \mathrm{MHz}$（GaAs 实测 $193.8\ \mathrm{MHz}$） | |
-| 探测带宽 | 数 MHz（GaAs RF-QPC $2.5\ \mathrm{MHz}$；石墨烯 $7.5\ \mathrm{MHz}$；RF-DGS $1.5\ \mathrm{MHz}$） | |
-| 电导灵敏度 | $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC） | |
-| 电荷灵敏度 | $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；经典实验范围 $10^{-6}$–$10^{-3}\ e/\sqrt{\mathrm{Hz}}$ | |
-| 读出保真度 | $99.86\%$（积分 $140\ \mathrm{ns}$，带宽 $>2\ \mathrm{MHz}$，Si-MOS 劈裂栅） | |
+| 量                    | 典型值                                                                                                                                                           | 来源     |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| 传输线特性阻抗 $Z_0$  | $50\ \Omega$                                                                                                                                                     | 射频标准 |
+| 传感器灵敏区电阻      | $R_{\mathrm{QPC}}\gtrsim 50\ \mathrm{k\Omega}$（$G<0.5\,e^2/h$）；量子点电阻 $\sim h/e^2\approx 25.8\ \mathrm{k\Omega}$；Si-MOS SET 可达数百 k$\Omega$–M$\Omega$ | ；       |
+| 直流引线电容          | $\sim 100$–$600\ \mathrm{pF}$（$174\ \mathrm{pF/m}$ 同轴线）                                                                                                     | ；       |
+| 直流测量带宽 $f_{RC}$ | $\sim 30\ \mathrm{kHz}$                                                                                                                                          | ；       |
+| 片上寄生电容 $C_p$    | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$）                                                                              |          |
+| 贴片电感 $L$          | $500$–$1000\ \mathrm{nH}$（常用 $820\ \mathrm{nH}$）                                                                                                             |          |
+| 谐振频率 $f_R$        | $70$–$400\ \mathrm{MHz}$（GaAs 实测 $193.8\ \mathrm{MHz}$）                                                                                                      |          |
+| 探测带宽              | 数 MHz（GaAs RF-QPC $2.5\ \mathrm{MHz}$；石墨烯 $7.5\ \mathrm{MHz}$；RF-DGS $1.5\ \mathrm{MHz}$）                                                                |          |
+| 电导灵敏度            | $1.4\times10^{-5}\ e^2/h/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）                                                                                                      |          |
+| 电荷灵敏度            | $4.7\times10^{-4}\ e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；经典实验范围 $10^{-6}$–$10^{-3}\ e/\sqrt{\mathrm{Hz}}$                                                  |          |
+| 读出保真度            | $99.86\%$（积分 $140\ \mathrm{ns}$，带宽 $>2\ \mathrm{MHz}$，Si-MOS 劈裂栅）                                                                                     |          |
 
- 附录 B 汇总了经典射频反射实验的参数对比：谐振频率从 $205\ \mathrm{MHz}$（RF-QPC）到 $1091\ \mathrm{MHz}$（RF-SET），带宽 $1$–$20\ \mathrm{MHz}$，最优电荷灵敏度 $3.2\times10^{-6}\ e/\sqrt{\mathrm{Hz}}$（Schoelkopf 的 RF-SET）。
+附录 B 汇总了经典射频反射实验的参数对比：谐振频率从 $205\ \mathrm{MHz}$（RF-QPC）到 $1091\ \mathrm{MHz}$（RF-SET），带宽 $1$–$20\ \mathrm{MHz}$，最优电荷灵敏度 $3.2\times10^{-6}\ e/\sqrt{\mathrm{Hz}}$（Schoelkopf 的 RF-SET）。
 
 ## 实验实现与特征
 
@@ -180,7 +180,7 @@ $$
 
 - **增强型器件的泄漏**：耗尽型 GaAs 中射频信号经欧姆接触的低阻通道直达 SET；而 Si-MOS、Si/SiGe 增强型器件中，二维电子气与引线栅极之间存在耦合电容 $C_g$——即使 $C_p$ 仅 $0.1\ \mathrm{pF}$，对 $100$–$200\ \mathrm{MHz}$ 载波其电抗也只有几 k$\Omega$，远小于 $R_{\mathrm{SET}}\sim 500\ \mathrm{k\Omega}$，载波大部经此低阻通道泄漏，$\Delta S_{11}$ 不足 $0.1\ \mathrm{dB}$。解法之一是采用劈裂栅（split-gate）射频架构并加入匹配电容，使离子注入区可远离 SET 中心 $150\ \mu\mathrm{m}$ 仍实现高保真读出。
 - **回作用**：读出功率过大将加热电子、驱动跃迁或饱和放大器；射频载波对二能级系统的持续驱动引入动态耗散（可用 Sisyphus 电阻建模），会明显缩短样品的纵向弛豫时间 $T_1$。
-- **互扰**：多个谐振器共用传输线时可能产生[[readout-measurement/readout-crosstalk|读出串扰]]；不同频率的谐振器挂同一根线做波分复用（wavelength-division multiplexing, WDM）是多通道并行读取的扩展路径。
+- **互扰**：多个谐振器共用传输线时可能产生读出串扰；不同频率的谐振器挂同一根线做波分复用（wavelength-division multiplexing, WDM）是多通道并行读取的扩展路径。
 
 <!-- FIGURE: 网络分析仪实测 S11 随传感器栅压的变化：谐振谷深度随电阻改变，匹配点附近最灵敏 -->
 
@@ -188,22 +188,22 @@ $$
 
 ![[assets/figures/rf-reflectometry/ce650aa6c9dd0e76545b66b3bd549f46ab66f689f5d0a4a4e729cc289d5c5efa.jpg]]
 
-*反馈控制的 RF 传感器：闭环偏置调整跟踪电荷漂移——速度-范围权衡的反馈解法。图源：arXiv:2307.05077，Fig. 1。*
+_反馈控制的 RF 传感器：闭环偏置调整跟踪电荷漂移——速度-范围权衡的反馈解法。图源：arXiv:2307.05077，Fig. 1。_
 
 ![[assets/figures/rf-reflectometry/f005a34cc70ff26c3f06896355c6e117b6d0f5569a4ae89f3959c067e0726b12.jpg]]
 
-*动态范围扩展效果：开环 vs 闭环的可测电荷范围对比。图源：arXiv:2307.05077，Fig. 2。*
+_动态范围扩展效果：开环 vs 闭环的可测电荷范围对比。图源：arXiv:2307.05077，Fig. 2。_
 
 ## 与其他概念的关系
 
 - 被测对象通常是[[fundamentals/coulomb-blockade|库仑阻塞]]区边缘的单电子隧穿事件；射频读出的高速率使[[readout-measurement/single-shot-readout|单发读出]]与实时电荷态追踪成为可能，扫描双栅即可高速绘制[[fundamentals/charge-stability-diagram|电荷稳定图]]。
 - 传感器本体见[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]；不用专用传感器、直接读栅极复导纳的变体见[[readout-measurement/gate-based-sensing|栅极射频传感]]；读取谐振腔频移的推广形式见[[readout-measurement/dispersive-readout|色散读出]]。反射测量需要定向耦合器分离入射/反射波——多通道扩展时的硬件开销可以改用**传输式**架构规避：SET 经超导电感构成阻抗变换网络、直接测透射，性能与反射式相当（见[[readout-measurement/single-electron-transistor|单电子晶体管]]的传输式 RF-SET 一节）。
-- 测量频率抬升到百 MHz 后避开了低频 $1/f$ [[materials-devices/charge-noise|电荷噪声]]区，链路噪声转而由首级低温放大器决定，进一步可用[[readout-measurement/parametric-amplifier|参量放大器]]逼近量子极限。
+- 测量频率抬升到百 MHz 后避开了低频 $1/f$ [[materials-devices/charge-noise|电荷噪声]]区，链路噪声转而由首级低温放大器决定，进一步可用参量放大器逼近量子极限。
 - 在[[materials-devices/silicon-mos|Si-MOS]] 与 Si/SiGe 增强型器件中，二维电子气（见[[fundamentals/two-dimensional-carrier-gas|二维载流子气]]）与栅极的耦合电容造成射频泄漏，是硅基射频读出的特有难题。
 - 高带宽与频分复用能力是[[scaling-automation/quantum-dot-array|量子点阵列]]规模化读出的关键技术之一。
-
 
 ## 参考文献
 
 - 射频反射测量在硅体系电荷/自旋读出中的应用：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]、[[references/veldhorst-2015|Veldhorst et al., Nature 526, 410 (2015)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

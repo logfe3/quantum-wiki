@@ -2,13 +2,13 @@
 title: 光子辅助隧穿
 description: 载流子吸收或发射一个或多个驱动光子后跨越原本失谐能量差的隧穿过程。
 aliases:
- - PAT
- - 光辅助隧穿
- - photon-assisted tunneling
- - 光子辅助隧穿过程
+  - PAT
+  - 光辅助隧穿
+  - photon-assisted tunneling
+  - 光子辅助隧穿过程
 tags:
- - 量子比特操控
- - 微波谱学
+  - 量子比特操控
+  - 微波谱学
 date: 2026-09-08
 ---
 
@@ -82,23 +82,23 @@ $$
 
 ## 参数量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| 微波频率 $f$ | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点） | |
-| 驱动功率 | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动） | |
-| 最高观测 PAT 阶数 | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs） | |
-| 微波衰减 | $-22\ \mathrm{dBm}$（设备至样品实测） | |
-| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$） | |
-| 杠杆臂 $\alpha$ | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点） | |
-| 电子温度 $T_e$ | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） | |
-| 电荷弛豫时间 $T_1$ | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度） | |
-| 电荷弛豫时间 $T_1$ | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs） | |
-| 退相干时间 $T_2^*$ | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs） | |
-| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率） | |
-| PAT 提取的耦合能 | $7\ \mathrm{GHz}$（GaAs 串联双点） | |
-| 中间电极调谐范围 | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合） | |
-| 斩波混频器 | Marki M80420MS 1120 | 、 |
-| 信号源 | Agilent E8257D（GaAs） / HP 86732B（三量子点） / Agilent 8253D | 三篇论文 |
+| 量                  | 典型值                                                                           | 来源     |
+| ------------------- | -------------------------------------------------------------------------------- | -------- |
+| 微波频率 $f$        | $9$–$20\ \mathrm{GHz}$（GaAs 双量子点）                                          |          |
+| 驱动功率            | $-5\ \mathrm{dBm}$（弱驱动）至 $12\ \mathrm{dBm}$（高驱动）                      |          |
+| 最高观测 PAT 阶数   | 14 阶（$15\ \mathrm{GHz}$，$10\ \mathrm{dBm}$，GaAs）                            |          |
+| 微波衰减            | $-22\ \mathrm{dBm}$（设备至样品实测）                                            |          |
+| 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（三组 $V_m$）                                   |          |
+| 杠杆臂 $\alpha$     | $6\%$、变化量 $<10\%$（非掺杂 GaAs 双量子点）                                    |          |
+| 电子温度 $T_e$      | $80\ \mathrm{mK}$（无微波），$280\ \mathrm{mK}$（$28\ \mathrm{GHz}$ 微波加热后） |          |
+| 电荷弛豫时间 $T_1$  | $8\ \mathrm{ns}$（GaAs，$1\ \mathrm{K}$ 以上电子温度）                           |          |
+| 电荷弛豫时间 $T_1$  | $\approx 15\ \mathrm{ns}$（非掺杂 GaAs）                                         |          |
+| 退相干时间 $T_2^*$  | $\approx 330\ \mathrm{ps}$（非掺杂 GaAs）                                        |          |
+| 一阶 PAT 峰半高全宽 | $\approx 0.42\ \mathrm{mV}$（$28\ \mathrm{GHz}$，饱和功率）                      |          |
+| PAT 提取的耦合能    | $7\ \mathrm{GHz}$（GaAs 串联双点）                                               |          |
+| 中间电极调谐范围    | $2t_c$ 从 $10\ \mu\mathrm{eV}$ 至 $100\ \mu\mathrm{eV}$（指数拟合）              |          |
+| 斩波混频器          | Marki M80420MS 1120                                                              | 、       |
+| 信号源              | Agilent E8257D（GaAs） / HP 86732B（三量子点） / Agilent 8253D                   | 三篇论文 |
 
 ## 实验特征
 
@@ -123,6 +123,7 @@ $$
 ### 弛豫与退相干
 
 PAT 共振峰的强度与宽度承载相干信息：
+
 - **弛豫时间 $T_1$**：把连续微波斩波成 50% 占空比可调周期 $\tau$ 的脉冲，PAT 峰高作为 $\tau$ 的函数按
 
 ```math
@@ -130,6 +131,7 @@ PAT 共振峰的强度与宽度承载相干信息：
 ```
 
 衰减，拟合得 $T_1$；
+
 - **退相干时间 $T_2^*$**：饱和一阶 PAT 共振峰的半高全宽（FWHM）$\Delta V_{\mathrm{FWHM}}$ 通过杠杆臂换算成能量 $\hbar\Delta\omega=\alpha\,\Delta V_{\mathrm{FWHM}}$，再除以 $\hbar$ 得 $T_2^*=1/\Delta\omega$。在非掺杂 GaAs 双量子点上，曾测得 FWHM $\approx 0.42\ \mathrm{mV}$、$\alpha=0.06\ \mathrm{meV/mV}$，对应 $\hbar\Delta\omega\approx 12.6\ \mu\mathrm{eV}$，即 $T_2^*\approx 330\ \mathrm{ps}$。
 
 微波驱动本身对样品的加热效应往往会使电子温度从 $80$ mK 升至 $280$ mK 量级，从而限制可提取的最短 $T_2^*$；改进绝缘层、把微波加热效应降到更低电子温度是延长 $T_2^*$ 的关键工程方向。
@@ -145,6 +147,7 @@ PAT 用连续微波驱动、把电荷转移过程"打开"为电流；而[[readou
 ## 与腔光子的区别
 
 经典微波源产生的 PAT 通常对应强相干驱动——驱动场相干长度远大于隧穿事件，场被视为经典周期势，[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]则要求受限腔模（相干长度可与隧穿时间相比）的少光子场。两者都遵循能量匹配 $n h f=\Delta E$，但场的量子统计和回作用不同：
+
 - **PAT（强相干驱动）**：$\alpha\gg 1$ 时进入 Floquet 准能级图像，能谱分裂成由 Bessel 函数加权的边带；
 - **腔耦合（弱、少光子）**：$\alpha\lesssim 1$，进入[[circuit-qed/jaynes-cummings-model|JC 哈密顿量]]框架，共振时出现[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，色散时出现[[readout-measurement/dispersive-readout|色散频移]]。
 
@@ -160,4 +163,3 @@ PAT 用连续微波驱动、把电荷转移过程"打开"为电流；而[[readou
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/jaynes-cummings-model|JC 模型]]：PAT 是腔量子电动力学在"经典极限"下的对应，色散读出与 PAT 共振条件在数学上接续；
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs 异质结]]：传统 GaAs 双量子点是 PAT 谱学的标准平台，非掺杂 GaAs 把 $T_2^*$ 的天花板提高到了接近传统器件的水平；
 - [[materials-devices/charge-noise|电荷噪声]]：PAT 共振峰的展宽部分源于低频电荷噪声，是测量 [[materials-devices/charge-noise|电荷噪声]]对相干时间影响的直接途径。
-- [[superconducting-qubits/subharmonic-drive|次谐波驱动]]：超导比特侧的对应物——用三个驱动光子合成一个比特光子（$\omega_q/3$ 泵浦 Kerr 项），同样是周期驱动能级的多光子共振；transmon 谱学中熟悉的 $gf/2$ 双光子峰在那里推广为 $gf/6$ 八波过程。

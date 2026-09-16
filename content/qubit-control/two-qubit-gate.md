@@ -2,12 +2,12 @@
 title: 两比特门
 description: 量子点自旋比特的两比特逻辑门实现：交换门、脉冲 CZ、CROT、常开交换与腔介导耦合，以及保真度表征路线。
 aliases:
- - 双比特门
- - 两比特逻辑门
- - two-qubit gate
+  - 双比特门
+  - 两比特逻辑门
+  - two-qubit gate
 tags:
- - 量子比特操控
- - 两比特门
+  - 量子比特操控
+  - 两比特门
 date: 2026-09-12
 ---
 
@@ -43,7 +43,7 @@ $$
 
 **CROT / 受控旋转**：交换耦合使目标比特的共振频率依赖控制比特的状态（频移 $\delta\nu\approx J/h$）。在控制比特处于 $|\!\uparrow\rangle$ 时对目标比特施加其共振 $\pi$ 脉冲，即得条件翻转（CROT）；$\sqrt{\mathrm{CROT}}$ 两次即 CNOT。[[references/veldhorst-2015|Veldhorst et al. (2015)]] 同时演示了 CROT 与 CZ 两条路径；[[references/noiri-2022|Noiri et al. (2022)]] 以 CNOT 形式把保真度推进到 99.5%（门时长 103 ns，同位素富集硅/SiGe）。
 
-**常开交换 + 频率选择**：不脉冲交换，让 $J$ 固定在较小值，用单比特门的频率选择性与交换引起的频移相配合实现纠缠门。[[references/watson-2018|Watson et al. (2018)]] 的可编程两比特处理器即采用此方案，免去高带宽脉冲工程，代价是闲置时邻居频率被"顶"开一个 $J/h$，增加[[readout-measurement/readout-crosstalk|串扰]]管理负担。
+**常开交换 + 频率选择**：不脉冲交换，让 $J$ 固定在较小值，用单比特门的频率选择性与交换引起的频移相配合实现纠缠门。[[references/watson-2018|Watson et al. (2018)]] 的可编程两比特处理器即采用此方案，免去高带宽脉冲工程，代价是闲置时邻居频率被"顶"开一个 $J/h$，增加串扰管理负担。
 
 ## 方案四：ST 编码与多比特耦合
 
@@ -65,34 +65,34 @@ $$
 
 代表性两比特门结果（文中报告值，非同条件对比）：
 
-| 文献 | 平台 | 门 / 表征 | 结果 |
-| --- | --- | --- | --- |
-| [[references/shulman-2012\|Shulman 2012]] | GaAs ST 比特 | Bell 态层析 + 动力学解耦 | 首次静电耦合纠缠 |
-| [[references/veldhorst-2015\|Veldhorst 2015]] | Si-MOS 电子 | CZ 100 ns / CROT | 首个硅两比特逻辑门 |
-| [[references/watson-2018\|Watson 2018]] | Si-MOS 电子 | 常开交换 CZ，RB | Bell 态保真度 85–89%，1Q Clifford 98.8% |
-| [[references/hendrickx-2020\|Hendrickx 2020]] | 平面锗空穴 | 交换 + $g$ 差异，交织 RB | 各别门 $F_C>99\%$，1Q 99.3% |
-| [[references/hendrickx-2021\|Hendrickx 2021]] | 平面锗空穴 $2\times2$ | CZ，RB | 四比特阵列通用控制，1Q 最高 $>99.9\%$ |
-| [[references/noiri-2022\|Noiri 2022]] | Si/SiGe 电子 | CNOT 103 ns，交织 RB | 2Q 99.5%、1Q 99.8% |
-| [[references/xue-2022\|Xue 2022]] | Si/SiGe 六比特 | 解耦 CPHASE，GST | CPHASE 99.65%，全部门 $>99.5\%$ |
-| [[references/philips-2022\|Philips 2022]] | Si/SiGe 六比特 | 全门集，RB | 1Q $\sim99.9\%$，Bell 态 89–95% |
+| 文献                                          | 平台                  | 门 / 表征                | 结果                                    |
+| --------------------------------------------- | --------------------- | ------------------------ | --------------------------------------- |
+| [[references/shulman-2012\|Shulman 2012]]     | GaAs ST 比特          | Bell 态层析 + 动力学解耦 | 首次静电耦合纠缠                        |
+| [[references/veldhorst-2015\|Veldhorst 2015]] | Si-MOS 电子           | CZ 100 ns / CROT         | 首个硅两比特逻辑门                      |
+| [[references/watson-2018\|Watson 2018]]       | Si-MOS 电子           | 常开交换 CZ，RB          | Bell 态保真度 85–89%，1Q Clifford 98.8% |
+| [[references/hendrickx-2020\|Hendrickx 2020]] | 平面锗空穴            | 交换 + $g$ 差异，交织 RB | 各别门 $F_C>99\%$，1Q 99.3%             |
+| [[references/hendrickx-2021\|Hendrickx 2021]] | 平面锗空穴 $2\times2$ | CZ，RB                   | 四比特阵列通用控制，1Q 最高 $>99.9\%$   |
+| [[references/noiri-2022\|Noiri 2022]]         | Si/SiGe 电子          | CNOT 103 ns，交织 RB     | 2Q 99.5%、1Q 99.8%                      |
+| [[references/xue-2022\|Xue 2022]]             | Si/SiGe 六比特        | 解耦 CPHASE，GST         | CPHASE 99.65%，全部门 $>99.5\%$         |
+| [[references/philips-2022\|Philips 2022]]     | Si/SiGe 六比特        | 全门集，RB               | 1Q $\sim99.9\%$，Bell 态 89–95%         |
 
 ## 参数与量级
 
-| 量 | 典型值 | 说明 |
-| --- | --- | --- |
-| 交换能 $J$ 范围 | $1\ \mathrm{kHz}$–$10\ \mathrm{GHz}$ | 随失谐/势垒指数可调，"关断"即进入闲置 |
-| CZ 门时长 | $50$–$500\ \mathrm{ns}$ | $\tau=\pi\hbar/J$；[[references/veldhorst-2015\|Veldhorst 2015]] 取 100 ns |
-| CNOT/CROT 门时长 | $\sim 100$ ns–$1\ \mu\mathrm{s}$ | 受选择性频移 $\delta\nu=J/h$ 限制 |
-| 频率选择条件 | $J/h\gg$ 线宽 | 需超过微波脉冲谱宽与 Rabi 频率 |
-| 两比特保真度现状 | 98%–99.7% | 2022 年后全面越过表面码阈值 [[references/xue-2022\|Xue 2022]] |
-| 腔介耦合距离 | $\gtrsim 10\ \mu\mathrm{m}$ | 受限干腔尺寸与[[circuit-qed/charge-photon-coupling\|电荷–光子耦合]]强度 |
+| 量               | 典型值                               | 说明                                                                       |
+| ---------------- | ------------------------------------ | -------------------------------------------------------------------------- |
+| 交换能 $J$ 范围  | $1\ \mathrm{kHz}$–$10\ \mathrm{GHz}$ | 随失谐/势垒指数可调，"关断"即进入闲置                                      |
+| CZ 门时长        | $50$–$500\ \mathrm{ns}$              | $\tau=\pi\hbar/J$；[[references/veldhorst-2015\|Veldhorst 2015]] 取 100 ns |
+| CNOT/CROT 门时长 | $\sim 100$ ns–$1\ \mu\mathrm{s}$     | 受选择性频移 $\delta\nu=J/h$ 限制                                          |
+| 频率选择条件     | $J/h\gg$ 线宽                        | 需超过微波脉冲谱宽与 Rabi 频率                                             |
+| 两比特保真度现状 | 98%–99.7%                            | 2022 年后全面越过表面码阈值 [[references/xue-2022\|Xue 2022]]              |
+| 腔介耦合距离     | $\gtrsim 10\ \mu\mathrm{m}$          | 受限干腔尺寸与[[circuit-qed/charge-photon-coupling\|电荷–光子耦合]]强度    |
 
 ## 与其他概念的关系
 
 - 两比特门的物理基础是[[qubit-control/exchange-interaction|交换相互作用]]与[[fundamentals/tunnel-coupling|隧穿耦合]]；脉冲路径的设计语言是[[fundamentals/charge-stability-diagram|电荷稳定图]]与[[fundamentals/electrochemical-potential|电化学势]]。
 - 纯交换的普适逻辑见[[qubit-control/exchange-gates|交换型两比特门]]；组合出的 CNOT 见[[qubit-control/cnot-gate|CNOT 门]]，三比特推广见[[qubit-control/toffoli-gate|Toffoli 门]]。
 - 门质量的敌人是[[qubit-control/spin-decoherence|自旋退相干]]（尤其经由电荷噪声通道），解救手段是[[qubit-control/dynamical-decoupling|动力学解耦]]与哈密顿量工程。
-- 处理器层面的读写集成、串扰管理与校准自动化见[[scaling-automation/quantum-dot-array|量子点阵列]]、[[readout-measurement/readout-crosstalk|读出串扰]]与[[scaling-automation/automatic-tuning|自动调控]]。
+- 处理器层面的读写集成、串扰管理与校准自动化见[[scaling-automation/quantum-dot-array|量子点阵列]]、读出串扰与[[scaling-automation/automatic-tuning|自动调控]]。
 - 不同编码下的两比特门实现差异见[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]与[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]。
 
 ## 参考文献

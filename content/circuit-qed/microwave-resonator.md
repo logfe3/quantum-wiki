@@ -2,13 +2,13 @@
 title: 微波谐振腔
 description: 在微波频段储存电磁能量并形成离散模式的集总、传输线或三维结构。
 aliases:
- - 微波谐振器
- - 超导谐振腔
- - 共面波导谐振腔
- - 谐振腔
+  - 微波谐振器
+  - 超导谐振腔
+  - 共面波导谐振腔
+  - 谐振腔
 tags:
- - 电路量子电动力学
- - 微波
+  - 电路量子电动力学
+  - 微波
 date: 2026-09-08
 source: QAtlas
 qatlas_id: qa_01m23askwjjdmvv776m6y39es4
@@ -25,7 +25,7 @@ source_updated: 2026-09-09T16:59:26Z
 
 ![[assets/figures/circuit-qed/gu-2023-fig1-6-cpw-cavity.jpg]]
 
-*半波长共面波导透射腔结构、横截面与等效电路*
+_半波长共面波导透射腔结构、横截面与等效电路_
 
 <!-- 原始占位：微波谐振腔的三类实现：集总 LC 元件、半波长共面波导、四分之一波长反射腔与三维矩形腔体 -->
 
@@ -33,11 +33,11 @@ source_updated: 2026-09-09T16:59:26Z
 
 按几何尺度与电磁模式划分，半导体 cQED 实验中常见的微波腔有三类：
 
-- **集总 LC 谐振器**：电感 $L$ 与电容 $C$ 在物理上可分辨，物理尺寸远小于工作波长。优点是模式体积小、零点电场强，但工艺容差与寄生参数敏感，多用于[[readout-measurement/parametric-amplifier|参量放大器]]、滤波电路等辅助器件；
+- **集总 LC 谐振器**：电感 $L$ 与电容 $C$ 在物理上可分辨，物理尺寸远小于工作波长。优点是模式体积小、零点电场强，但工艺容差与寄生参数敏感，多用于参量放大器、滤波电路等辅助器件；
 - **分布式传输线腔**：共面波导（coplanar waveguide，CPW）或带状线（stripline）被截取为有限长度 $l$，两端开路或一端短路形成驻波。典型基模是 $\lambda/2$ 透射腔或 $\lambda/4$ 反射腔，频率 $\omega_n\propto(2n+1)\pi/(2l\sqrt{L_lC_l})$，与电长度反比；
 - **三维腔体**：用整块超导金属（铝、铌）铣出矩形或圆柱形空腔，TE/TM 模式由腔长 $d$ 决定 $\omega_{mnp}$。介电参与度低、无大电流密度的细线结构，$Q$ 值可达 $10^5$–$10^6$，但与半导体器件的直流与射频引线集成更难。
 
-传输线腔的材料除了铝、铌，惰性氮化物也是活跃方向：溅射 TiN 膜谐振腔在 100 mK 的损耗角已做到 $1.5$–$6.2\times10^{-6}$（随溅射温度/压强系统变化），且全部工艺可平移到硅晶圆级 CMOS 流程，见[[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物超导组件]]。
+传输线腔的材料除了铝、铌，惰性氮化物也是活跃方向：溅射 TiN 膜谐振腔在 100 mK 的损耗角已做到 $1.5$–$6.2\times10^{-6}$（随溅射温度/压强系统变化），且全部工艺可平移到硅晶圆级 CMOS 流程，见TiN/AlN 全氮化物超导组件。
 
 这三类在本站论文中作为代表实现。
 
@@ -113,8 +113,6 @@ $$
 \omega_{mnp}=\frac{1}{\sqrt{\mu\varepsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2+\left(\frac{p\pi}{d}\right)^2},\qquad m,n,p=0,1,2,\dots
 $$
 
-腔长 $d$ 须为半波导波长的整数倍，对应短路 $\lambda/2$ 谐振。 用 HFSS 设计了一个 $9.5\ \mathrm{GHz}$ 附近的矩形 3D 腔，并在 $20\ \mathrm{mK}$ 温度下测得全封闭铝腔 $Q\sim 2\times10^5$，开槽腔 $Q\sim 10^5$，加直流引线后 $Q$ 降至 $\sim 8\times10^3$。3D 腔的优势是没有中心细线、导体损耗极小，但同轴线 TEM 模到 3D 腔 TE 模的模式转换效率低，需要把同轴线芯直接插入腔中精细调节长度。三维腔家族的两个新方向：整体铣削的铌 λ/4 同轴腔把单光子内品质因子推过 $1.4\times10^9$（transmon 集成后仍有 11.3 ms 相干），见[[circuit-qed/niobium-coaxial-cavity|铌同轴谐振腔]]；"同轴馈电矩形腔 + 偶极天线型 transmon"几何的全部量子参数可解析闭式求出、用作数值量化方法的基准，见[[circuit-qed/analytical-3d-cqed|三维 cQED 全波解析解]]。
-
 ## 散射矩阵与端口网络
 
 实际测量的对象是端口的散射参数 $S_{ij}$。对单端口反射腔，由输入–输出理论可得反射系数
@@ -154,13 +152,39 @@ $$
 这套标定直接对应两类应用的分工：**过耦合**（大 $C_\kappa$、低 $Q_L$、宽带）用于腔内比特态的快速测量；**欠耦合**（小 $C_\kappa$、$Q_L\to Q_\mathrm{int}$、长光子寿命）用于把腔当光子存储器。
 
 ![[assets/figures/microwave-resonator/goppl2008-fig1-cpw-capacitor-geometry.jpg]]
-*电容耦合 CPW 腔的版图与截面：左侧指形电容（多对指交叠增大 $C_\kappa$）、右侧间隙电容（小 $C_\kappa$）；中心导体宽 $w=10$ µm、缝隙 $s=6.6$ µm，双层衬底上铝膜光刻成型。图源：Göppl et al. (2008), Fig. 1。*
+_电容耦合 CPW 腔的版图与截面：左侧指形电容（多对指交叠增大 $C_\kappa$
+
+）、右侧间隙电容（小 $C_\kappa$
+
+）；中心导体宽 $w=10$
+
+µm、缝隙 $s=6.6$
+
+µm，双层衬底上铝膜光刻成型。图源：Göppl et al. (2008), Fig. 1。_
 
 ![[assets/figures/microwave-resonator/goppl2008-fig5-lcr-model-mapping.jpg]]
-*分布参数到集总 LCR 的模型映射：对称耦合传输线腔等效为并联 LCR 振子，$C_\kappa$ 与 $R_L$ 的串联经 Norton 变换变为并联 $R^*$、$C^*$——品质因数下降与频率牵引由此统一进入集总设计公式。图源：Göppl et al. (2008), Fig. 5。*
+_分布参数到集总 LCR 的模型映射：对称耦合传输线腔等效为并联 LCR 振子，$C_\kappa$
+
+与 $R_L$
+
+的串联经 Norton 变换变为并联 $R^*$
+
+、$C^*$
+
+——品质因数下降与频率牵引由此统一进入集总设计公式。图源：Göppl et al. (2008), Fig. 5。_
 
 ![[assets/figures/microwave-resonator/goppl2008-fig6a-ql-vs-ckappa.jpg]]
-*$Q_L$ 对耦合电容 $C_\kappa$ 的实验标定（红点）与模型预言（蓝线）：过耦合区沿 $C_\kappa^{-2}$ 虚线下降（小电容端饱和于 $Q_\mathrm{int}\approx2.3\times10^5$），0.24–56.4 fF 的电容设计覆盖约三个量级的 $Q_L$。图源：Göppl et al. (2008), Fig. 6(a)。*
+_$Q_L$
+
+对耦合电容 $C_\kappa$
+
+的实验标定（红点）与模型预言（蓝线）：过耦合区沿 $C_\kappa^{-2}$
+
+虚线下降（小电容端饱和于 $Q_\mathrm{int}\approx2.3\times10^5$
+
+），0.24–56.4 fF 的电容设计覆盖约三个量级的 $Q_L$
+
+。图源：Göppl et al. (2008), Fig. 6(a)。_
 
 ## 损耗通道与品质因数
 
@@ -168,7 +192,7 @@ $$
 
 - **超导准粒子损耗**：温度升高或磁通抑制超导能隙时增加；
 - **介质与界面二能级系统**（TLS）：电极–衬底界面、隧穿结氧化层中的非晶态缺陷，在低温下饱和为 $\tan\delta\sim 10^{-3}$–$10^{-4}$ 的介电损耗；
-- **微波辐射与泄漏**：长直流电极在微波频段如同一根天线，把腔内能量辐射进自由空间或邻近电路，常用片上[[readout-measurement/purcell-filter|Purcell 滤波]]结构抑制。
+- **微波辐射与泄漏**：长直流电极在微波频段如同一根天线，把腔内能量辐射进自由空间或邻近电路，常用片上Purcell 滤波结构抑制。
 
 对常规 CPW 腔，$Q$ 在 $10^3$–$10^4$ 之间；3D 腔可达 $10^5$–$10^6$；高阻抗动态电感腔（如 NbTiN、TiN）通常 $Q\sim 10^3$；SQUID 阵列腔受结参数离散与氧化层缺陷影响，$Q\sim 10^2$–$10^3$。本站论文中具体的内耗散/外耗散值由矢量网络分析仪拟合散射谱直接得到（如论文双量子点电荷比特实验中 $\omega_r/2\pi=6.53\ \mathrm{GHz}$，$\kappa_i/2\pi=30.0\ \mathrm{MHz}$、$\kappa_e/2\pi$ 数十 MHz 量级）。
 
@@ -176,18 +200,18 @@ $$
 
 本站论文中报道的实际腔参数（来源标记见论文依据）：
 
-| 腔型 | $Z_r$ | $\omega_r/2\pi$ | $\kappa/2\pi$ | 关键参数 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| 标准 CPW 透射腔 | 50 Ω | 5.92 GHz | κᵢ/2π ≈ 数十 MHz，κₑ 可调 | 半波长开路，CPW 标准阻抗 | |
-| 反射式超导腔（铝制） | 50 Ω | 6.045 GHz | κᵢ/2π ≈ 11.3 MHz，κₑ/2π ≈ 数十 MHz | 半波长双线，奇模激励 | |
-| 三维铝腔（20 mK） | — | 9.45 GHz | $Q\sim 2\times10^5$ | 全封闭 | |
-| 双端口透射腔耦合两个 DQD | 50 Ω | 6.53 GHz | κᵢ/2π=30.0 MHz | 测得 $g_0/2\pi\sim81\ \mathrm{MHz}$ | |
-| 高阻抗 SQUID 阵列腔 | ~1 kΩ | 磁通可调 | 30–60 MHz | 38 个 SQUID 串联 | |
-| 高阻抗 NbTiN 腔 | ~2 kΩ | ~6 GHz | ~11 MHz | w=0.32 µm，11 nm 膜 | |
-| 高阻抗 TiN λ/2 腔 | ~3.5 kΩ | 4.993 GHz | 2.2 MHz | 10 nm 膜，Lₖ=265.9 pH/□ | |
-| 高阻抗 TiN 腔（7.3 GHz） | ~2.5 kΩ | 7.332 GHz | 5.13 MHz | 用于自旋–光子耦合 | |
-| Göppl 标定型 CPW 腔（2.3 GHz 基频） | 50 Ω 级 | 2.27–2.35 GHz | $Q_L=3.7\times10^2$–$2.3\times10^5$ | $C_\kappa$ 0.24（间隙）–56.4 fF（8+8 指）；$Q_L\propto C_\kappa^{-2}$ | Göppl 2008 |
-| Göppl 器件内禀品质因数 | — | — | $Q_\mathrm{int}\approx2.3\times10^5$（20 mK） | 欠耦合饱和值 | Göppl 2008 |
+| 腔型                                | $Z_r$   | $\omega_r/2\pi$ | $\kappa/2\pi$                                 | 关键参数                                                              | 来源       |
+| ----------------------------------- | ------- | --------------- | --------------------------------------------- | --------------------------------------------------------------------- | ---------- |
+| 标准 CPW 透射腔                     | 50 Ω    | 5.92 GHz        | κᵢ/2π ≈ 数十 MHz，κₑ 可调                     | 半波长开路，CPW 标准阻抗                                              |            |
+| 反射式超导腔（铝制）                | 50 Ω    | 6.045 GHz       | κᵢ/2π ≈ 11.3 MHz，κₑ/2π ≈ 数十 MHz            | 半波长双线，奇模激励                                                  |            |
+| 三维铝腔（20 mK）                   | —       | 9.45 GHz        | $Q\sim 2\times10^5$                           | 全封闭                                                                |            |
+| 双端口透射腔耦合两个 DQD            | 50 Ω    | 6.53 GHz        | κᵢ/2π=30.0 MHz                                | 测得 $g_0/2\pi\sim81\ \mathrm{MHz}$                                   |            |
+| 高阻抗 SQUID 阵列腔                 | ~1 kΩ   | 磁通可调        | 30–60 MHz                                     | 38 个 SQUID 串联                                                      |            |
+| 高阻抗 NbTiN 腔                     | ~2 kΩ   | ~6 GHz          | ~11 MHz                                       | w=0.32 µm，11 nm 膜                                                   |            |
+| 高阻抗 TiN λ/2 腔                   | ~3.5 kΩ | 4.993 GHz       | 2.2 MHz                                       | 10 nm 膜，Lₖ=265.9 pH/□                                               |            |
+| 高阻抗 TiN 腔（7.3 GHz）            | ~2.5 kΩ | 7.332 GHz       | 5.13 MHz                                      | 用于自旋–光子耦合                                                     |            |
+| Göppl 标定型 CPW 腔（2.3 GHz 基频） | 50 Ω 级 | 2.27–2.35 GHz   | $Q_L=3.7\times10^2$–$2.3\times10^5$           | $C_\kappa$ 0.24（间隙）–56.4 fF（8+8 指）；$Q_L\propto C_\kappa^{-2}$ | Göppl 2008 |
+| Göppl 器件内禀品质因数              | —       | —               | $Q_\mathrm{int}\approx2.3\times10^5$（20 mK） | 欠耦合饱和值                                                          | Göppl 2008 |
 
 耦合强度的收益与之同步：50 Ω CPW 透射腔中 $g/2\pi\sim6.5$–$20\ \mathrm{MHz}$ 停留在弱耦合区；SQUID 阵列腔把 GaAs 双量子点的耦合提升到 $g/2\pi\approx119\ \mathrm{MHz}$；3.5 kΩ TiN 腔支撑了 $g_0/2\pi=175\ \mathrm{MHz}$ 的电荷比特强耦合。
 
@@ -205,7 +229,7 @@ $$
 
 - 哈密顿量与全部能级结构见[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]与[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；
 - 大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量；强周期驱动下的修饰谱由[[circuit-qed/floquet-dynamics|Floquet 动力学]]描述；
-- 腔侧的实现路线：常规微波谐振腔、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]；把谐振器连成网络则升级为人工紧束缚固体——布局图的线图自带 −2 平带，见[[circuit-qed/line-graph-flat-band|线图格子平带与 cQED 格子]]；
+- 腔侧的实现路线：常规微波谐振腔、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]；把谐振器连成网络则升级为人工紧束缚固体——布局图的线图自带 −2 平带，见线图格子平带与 cQED 格子；
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）；
 - 多比特共享同一腔模则构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的硬件基础；
 - 性能瓶颈来自[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]，常见平台包括[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]。
@@ -213,5 +237,6 @@ $$
 
 ## 参考文献
 
-- Göppl, M., Fragner, A., Baur, M., Bianchetti, R., Filipp, S., Fink, J. M., Leek, P. J., Puebla, G., Steffen, L., Wallraff, A. Coplanar waveguide resonators for circuit quantum electrodynamics. *Journal of Applied Physics* 104, 113904 (2008). DOI: 10.1063/1.3010859；arXiv:0807.4094（QAtlas 缓存：0807.4094）。
+- Göppl, M., Fragner, A., Baur, M., Bianchetti, R., Filipp, S., Fink, J. M., Leek, P. J., Puebla, G., Steffen, L., Wallraff, A. Coplanar waveguide resonators for circuit quantum electrodynamics. _Journal of Applied Physics_ 104, 113904 (2008). DOI: 10.1063/1.3010859；arXiv:0807.4094（QAtlas 缓存：0807.4094）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

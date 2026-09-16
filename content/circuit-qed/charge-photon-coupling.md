@@ -2,11 +2,11 @@
 title: 电荷–光子耦合
 description: 量子点电荷偶极与微波腔零点电场之间的相互作用。
 aliases:
- - 电荷光子耦合
- - charge-photon coupling
+  - 电荷光子耦合
+  - charge-photon coupling
 tags:
- - 电路量子电动力学
- - 电荷量子比特
+  - 电路量子电动力学
+  - 电荷量子比特
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qv5cqjjan72591wdvw2t98
@@ -139,23 +139,20 @@ $$
 杠杆臂 $\alpha$ 是电化学势–电压转换系数，直接决定了腔电压扰动被放大到失谐量多少倍。常用提取方法有三种：
 
 1. **库仑菱形法**：由相邻电子数对应的库仑菱形，得到加电子能 $E_{\rm add}$ 与栅压周期 $\Delta V_G$
+
 ```math
 \alpha=\frac{E_{\rm add}}{|e|\,\Delta V_G}
 ```
 
-利用菱形两条边的斜率可独立校验 $\alpha$ 的电压–能量转换关系。在 Si/SiGe 三量子点中，由库仑菱形测得电极 lever arm 约为 $126\ \mathrm{meV/V}$。
-2. **光子辅助隧穿法**：对量子点电极施加微波驱动 $f_d$，电子可吸收 $n$ 个光子（$n$ 为整数）跨越失谐量，边带间距即一个光子的能量，$h f_d$ 与电极电压周期 $\Delta V$ 之比即 $\alpha/h$。例如固定 $f_d=10\ \mathrm{GHz}$、微扰 $eV_{\rm AC}\,h f_d\ll(2t_c)^2$ 即可读出 lever arm。
-3. **two-tone 谱法**：固定失谐 $\varepsilon=0$，把驱动频率 $f_d$ 与电极电压 $V_L$ 联合扫描，bit 跃迁能与电极电压的拟合斜率 $\alpha=\Delta\varepsilon/\Delta V_L$ 同样给出杠杆臂。
+利用菱形两条边的斜率可独立校验 $\alpha$ 的电压–能量转换关系。在 Si/SiGe 三量子点中，由库仑菱形测得电极 lever arm 约为 $126\ \mathrm{meV/V}$。2. **光子辅助隧穿法**：对量子点电极施加微波驱动 $f_d$，电子可吸收 $n$ 个光子（$n$ 为整数）跨越失谐量，边带间距即一个光子的能量，$h f_d$ 与电极电压周期 $\Delta V$ 之比即 $\alpha/h$。例如固定 $f_d=10\ \mathrm{GHz}$、微扰 $eV_{\rm AC}\,h f_d\ll(2t_c)^2$ 即可读出 lever arm。3. **two-tone 谱法**：固定失谐 $\varepsilon=0$，把驱动频率 $f_d$ 与电极电压 $V_L$ 联合扫描，bit 跃迁能与电极电压的拟合斜率 $\alpha=\Delta\varepsilon/\Delta V_L$ 同样给出杠杆臂。
 
 三种方法互为校验；实验中通常先用库仑菱形给出一个粗估值，再由光子辅助隧穿或 two-tone 谱做精细校准。
 
 ## 硅 cQED 器件架构：LC 滤波与损耗工程
 
-把电荷–光子耦合搬进硅的第一个障碍不是耦合本身，而是**腔的品质因子**：超导比特 cQED 器件轻松做到 $Q>5\times10^4$，而混合量子点–腔系统此前只有 $Q=1000$–$3000$。Mi 等人 2017 年的 Si/SiGe 架构用三项工程把 $Q$ 提到 5400，为后续硅中强自旋–光子耦合铺平了硬件基础：
-
 ![[assets/figures/charge-photon-coupling/mi2017-fig1-silicon-cqed-device.jpg]]
 
-*硅混合 cQED 器件：λ/2 CPW 腔的两个电压波腹处各放一个 Si 双量子点；每条直流偏置线都串入片上 LC 低通滤波器以阻止腔光子经偏置线泄漏；剖面示出定义 DQD 的重叠 Al 栅与 Si/SiGe 层——为降低内损，腔中心极正下方的量子阱被选择性地挖除。图源：Mi et al. (2017), Fig. 1。*
+_硅混合 cQED 器件：λ/2 CPW 腔的两个电压波腹处各放一个 Si 双量子点；每条直流偏置线都串入片上 LC 低通滤波器以阻止腔光子经偏置线泄漏；剖面示出定义 DQD 的重叠 Al 栅与 Si/SiGe 层——为降低内损，腔中心极正下方的量子阱被选择性地挖除。图源：Mi et al. (2017), Fig. 1。_
 
 1. **偏置线 LC 低通滤波**。此前设计的显著微波泄漏来自腔与各直流偏置线之间的寄生电容——偏置线变成把 $Q$ 拉低的泄漏通道。对策是**每条**栅偏置线（以及腔的直流抽头）都串入片上 LC 滤波器：叉指电容 $C_f\approx1\ \mathrm{pF}$ + 螺旋电感 $L_f\approx13\ \mathrm{nH}$，足印仅 $700\times200\ \mu\mathrm{m}$，ABCD 矩阵模型与实测 $|S_{21}|$ 吻合。同型无滤波器件 $Q<1000$，加滤波后升到 5400。
 2. **量子阱挖除**。腔中心极与地之间的间隙电场最强、介质损耗最敏感——把该区域的量子阱与 $\mathrm{Al_2O_3}$ 选择性刻蚀掉可进一步压低内损。
@@ -163,7 +160,7 @@ $$
 
 ![[assets/figures/charge-photon-coupling/mi2017-fig2-lc-filter-cavity.jpg]]
 
-*LC 滤波器与腔表征：(a) 片上 LC 滤波器（螺旋电感 + 叉指电容）的光学显微、局部放大与电路模型；(b) 实测滤波器传输 |S21|²（红）与 ABCD 矩阵预测（黑）一致；(c) DQD 处于库仑阻塞时的腔传输——洛伦兹拟合给出 Q=5400（f_c/Q 对应 κ/2π=1.4 MHz）。图源：Mi et al. (2017), Fig. 2。*
+_LC 滤波器与腔表征：(a) 片上 LC 滤波器（螺旋电感 + 叉指电容）的光学显微、局部放大与电路模型；(b) 实测滤波器传输 |S21|²（红）与 ABCD 矩阵预测（黑）一致；(c) DQD 处于库仑阻塞时的腔传输——洛伦兹拟合给出 Q=5400（f_c/Q 对应 κ/2π=1.4 MHz）。图源：Mi et al. (2017), Fig. 2。_
 
 腔的品质因子分解：$f_c=7.67\ \mathrm{GHz}$、$Q=5400$ 对应总光子损耗率 $\kappa/2\pi=f_c/Q=1.4\ \mathrm{MHz}$；Sonnet 电磁仿真给出输入输出耦合各 $\kappa_{\mathrm{in}}/2\pi=\kappa_{\mathrm{out}}/2\pi=0.4\ \mathrm{MHz}$，剩余 $0.6\ \mathrm{MHz}$ 归于腔下介质层内损与 LC 滤波器的残余泄漏——实测滤波器在 $f_c$ 处提供约 20 dB 衰减（ABCD 理论预期 24 dB），多极 LC 或带阻滤波是进一步的改进方向。在该架构上，零差测量的腔透射直接显示 DQD [[fundamentals/charge-stability-diagram|电荷稳定图]]，点间电荷跃迁处的腔响应给出电荷–腔耦合 $g_c/2\pi=23\ \mathrm{MHz}$——硅中电子与微波光子有效耦合、通往相干电子–光子相互作用的第一步（同一平台随后实现强自旋–光子耦合，见[[references/samkharadze-2018|Samkharadze 2018]]）。在这一架构上把操控与读出全部搬到腔接口的全微波电荷比特方案，见[[qubit-control/charge-qubit|电荷量子比特]]的"全微波操控"一节。
 
@@ -171,20 +168,20 @@ $$
 
 本站论文与典型文献给出的电荷–光子耦合参数如下（量级仅供参考）：
 
-| 量 | 典型值 | 备注 |
-| --- | --- | --- |
-| 腔特征阻抗 $Z_r$ | $50\ \Omega$（标准共面波导）$\to$ 约 $1$–$3.5\ \mathrm{k\Omega}$（高阻抗腔） | 高阻抗腔由 SQUID 阵列、动态电感薄膜或几何 LC 实现 |
-| 杠杆臂 $\alpha$ | $\sim 0.1$ – $\sim 0.3$ | 库仑菱形、光子辅助隧穿或 two-tone 谱标定 |
-| 比特–腔失谐 $\Delta/2\pi$ | 0 – 数 GHz | 在色散极限下 $|\Delta|>10\,g_c$ |
-| 比特频率 $f_q=\omega_a/2\pi$ | $2$ – $20\ \mathrm{GHz}$ | 与腔频 $\sim 5$–$7\ \mathrm{GHz}$ 接近 |
-| 双量子点电极间距 | $\sim 100\ \mathrm{nm}$ | 决定电偶极矩大小 |
-| 有效电荷–光子耦合 $g_c/2\pi$ | $\sim 30$ – $\sim 300\ \mathrm{MHz}$ | Si/SiGe 三量子点 + TiN 腔测得 $g_0/2\pi\sim 175\ \mathrm{MHz}$ |
-| 腔耗散 $\kappa/2\pi$ | 约 $2$ – $10\ \mathrm{MHz}$ | 高品质因数高阻抗腔可达数千 $Q$ |
-| 比特退相干 $\gamma/2\pi$ | 电荷比特约 $50$ – $100\ \mathrm{MHz}$ | 受电荷噪声主导 |
-| 强耦合判据 $g_c>\kappa,\gamma$ | 典型满足于高阻抗腔 + 强混合角 | 失谐 $\varepsilon=0$ 时最易实现 |
-| 硅 cQED 架构腔品质因子 | $Q=5400$（$f_c=7.67$ GHz、$\kappa/2\pi=1.4$ MHz；无滤波同型器件 $Q<1000$） | Mi 2017 |
-| 片上 LC 偏置线滤波器 | $C_f\approx1$ pF + $L_f\approx13$ nH，$700\times200\ \mu m$，$f_c$ 处衰减约 20 dB | Mi 2017 |
-| 硅架构电荷–腔耦合 | $g_c/2\pi=23$ MHz（点间电荷跃迁处腔响应提取） | Mi 2017 |
+| 量                             | 典型值                                                                            | 备注                                                           |
+| ------------------------------ | --------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| 腔特征阻抗 $Z_r$               | $50\ \Omega$（标准共面波导）$\to$ 约 $1$–$3.5\ \mathrm{k\Omega}$（高阻抗腔）      | 高阻抗腔由 SQUID 阵列、动态电感薄膜或几何 LC 实现              |
+| 杠杆臂 $\alpha$                | $\sim 0.1$ – $\sim 0.3$                                                           | 库仑菱形、光子辅助隧穿或 two-tone 谱标定                       |
+| 比特–腔失谐 $\Delta/2\pi$      | 0 – 数 GHz                                                                        | 在色散极限下 $                                                 | \Delta | >10\,g_c$ |
+| 比特频率 $f_q=\omega_a/2\pi$   | $2$ – $20\ \mathrm{GHz}$                                                          | 与腔频 $\sim 5$–$7\ \mathrm{GHz}$ 接近                         |
+| 双量子点电极间距               | $\sim 100\ \mathrm{nm}$                                                           | 决定电偶极矩大小                                               |
+| 有效电荷–光子耦合 $g_c/2\pi$   | $\sim 30$ – $\sim 300\ \mathrm{MHz}$                                              | Si/SiGe 三量子点 + TiN 腔测得 $g_0/2\pi\sim 175\ \mathrm{MHz}$ |
+| 腔耗散 $\kappa/2\pi$           | 约 $2$ – $10\ \mathrm{MHz}$                                                       | 高品质因数高阻抗腔可达数千 $Q$                                 |
+| 比特退相干 $\gamma/2\pi$       | 电荷比特约 $50$ – $100\ \mathrm{MHz}$                                             | 受电荷噪声主导                                                 |
+| 强耦合判据 $g_c>\kappa,\gamma$ | 典型满足于高阻抗腔 + 强混合角                                                     | 失谐 $\varepsilon=0$ 时最易实现                                |
+| 硅 cQED 架构腔品质因子         | $Q=5400$（$f_c=7.67$ GHz、$\kappa/2\pi=1.4$ MHz；无滤波同型器件 $Q<1000$）        | Mi 2017                                                        |
+| 片上 LC 偏置线滤波器           | $C_f\approx1$ pF + $L_f\approx13$ nH，$700\times200\ \mu m$，$f_c$ 处衰减约 20 dB | Mi 2017                                                        |
+| 硅架构电荷–腔耦合              | $g_c/2\pi=23$ MHz（点间电荷跃迁处腔响应提取）                                     | Mi 2017                                                        |
 
 特殊情形：当耦合电容 $C_L$ 与 $C_R$ 的差可由外部电极独立调节时，$g_c\propto(C_L-C_R)/C_\Sigma$，可大范围调谐耦合；这种设计曾实现最大 $g_c/2\pi\approx 619\ \mathrm{MHz}$，对应 $g_c/\omega_r\sim 0.11$，进入[[circuit-qed/strong-coupling|超强耦合]]（ultrastrong coupling）区，RWA 失效。
 
@@ -231,10 +228,10 @@ two-tone 谱用一路探测微波（$\omega_p=\omega_r$）和一路驱动微波�
 - **腔介导耦合**：两个或更多电荷比特通过共享高阻抗腔的虚拟光子交换得到有效相互作用，是[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]最直接的实验载体。
 - **色散读出与单发读出**：色散区下 $g_c^2/\Delta$ 既可作单比特读出，也可作[[readout-measurement/dispersive-readout|色散读出]]与远程比特间 iSWAP/CZ 门。
 
-
 ## 参考文献
 
-- Mi, X., Cady, J. V., Zajac, D. M., Stehlik, J., Edge, L. F., Petta, J. R. Circuit Quantum Electrodynamics Architecture for Gate-Defined Quantum Dots in Silicon. *Applied Physics Letters* 110, 043502 (2017). DOI: 10.1063/1.4974536；arXiv:1610.05571（QAtlas 缓存：1610.05571）。
-- 横向偶极耦合的对偶通道——纵向耦合（比特频率被腔坐标调制、辐射压的电路类比，硬件级纯纵向实现 g₀=2π×11.9 MHz 进入单光子强耦合区）见[[circuit-qed/longitudinal-coupling|纵向耦合]]词条。
+- Mi, X., Cady, J. V., Zajac, D. M., Stehlik, J., Edge, L. F., Petta, J. R. Circuit Quantum Electrodynamics Architecture for Gate-Defined Quantum Dots in Silicon. _Applied Physics Letters_ 110, 043502 (2017). DOI: 10.1063/1.4974536；arXiv:1610.05571（QAtlas 缓存：1610.05571）。
+- 横向偶极耦合的对偶通道——纵向耦合（比特频率被腔坐标调制、辐射压的电路类比，硬件级纯纵向实现 g₀=2π×11.9 MHz 进入单光子强耦合区）见纵向耦合词条。
 - 电荷–光子耦合在硅量子点–腔体系中的测定：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

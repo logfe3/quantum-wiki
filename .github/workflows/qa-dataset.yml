@@ -53,6 +53,15 @@ jobs:
           scripts/qa/qa-utils.test.mjs
           scripts/qa/check-qa-audit.test.mjs
 
+      - name: Enforce quantum-dot content scope
+        run: npm run check:quantum-dot-scope
+
+      - name: Validate Wiki links and assets
+        run: npm run check:wiki-links
+
+      - name: Validate QAtlas-backed pages
+        run: npm run check:qatlas-content
+
       - name: Rebuild QA dataset
         run: node scripts/qa/build-wiki-qa.mjs
 

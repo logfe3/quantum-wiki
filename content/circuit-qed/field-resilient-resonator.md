@@ -2,14 +2,14 @@
 title: 耐磁场超导谐振腔
 description: 用高临界场薄膜、几何限制与光刻人工缺陷孔钉扎 Abrikosov 涡旋，让超导共面波导谐振腔在自旋/拓扑比特所需的特斯拉级磁场中保持高品质因子的工程方法。
 aliases:
- - 磁场兼容谐振腔
- - field-resilient resonator
- - 耐磁场 CPW 腔
- - 抗磁场谐振器
+  - 磁场兼容谐振腔
+  - field-resilient resonator
+  - 耐磁场 CPW 腔
+  - 抗磁场谐振器
 tags:
- - 电路量子电动力学
- - 超导器件
- - 磁场兼容
+  - 电路量子电动力学
+  - 超导器件
+  - 磁场兼容
 date: 2026-09-15
 source: QAtlas
 qatlas_id: qa_01m23789pac8k3zqnthn3a8b58
@@ -47,22 +47,50 @@ $$
 孔密度可以直接换算成一个"阈值场" $B_\mathrm{Th}$：垂直磁场大到每个孔都吸入一个涡旋时（$B_\mathrm{Th}\approx\rho_h\Phi_0$，本文 0–59.69 mT），多余的涡旋只能被薄膜缺陷与间隙钉扎弱钉住。场冷测量完美演示了这幅图像：$B_\perp<B_\mathrm{Th}$ 时所有涡旋都被孔捕获，$Q_i$ 保持 $10^5$；越过 $B_\mathrm{Th}$ 后 $Q_i$ 陡降——自由涡旋开始巡游。频率分数漂移 $\Delta f_r/f_r$ 呈现同样的转折。零场下加孔反而略降 $Q_i$（金属–真空界面增大了 TLS 参与面），$\rho_h\geq12.8\ \mu\mathrm{m}^{-2}$ 后涡旋间开始重叠、超导均匀性假设失效；但"孔最多"的谐振腔靠间隙钉扎把平坦响应维持到 $B_\perp\simeq35$ mT。
 
 ![[assets/figures/field-resilient-resonator/kroll2018-fig1-device-holes-sem.jpg]]
-*器件与测量：(a) 外差探测线路测复数透射 $S_{21}$；(b) 多支 λ/4 谐振腔频分复用到公共馈线、周围是图形化地平面；(c)(d) 无孔与有孔超导 CPW 腔的 SEM 显微图——孔阵在谐振腔光刻的同一步中成型。图源：Kroll et al. (2018), Fig. 1。*
+_器件与测量：(a) 外差探测线路测复数透射 $S_{21}$
+
+；(b) 多支 λ/4 谐振腔频分复用到公共馈线、周围是图形化地平面；(c)(d) 无孔与有孔超导 CPW 腔的 SEM 显微图——孔阵在谐振腔光刻的同一步中成型。图源：Kroll et al. (2018), Fig. 1。_
 
 ![[assets/figures/field-resilient-resonator/kroll2018-fig3-qi-vs-holedensity.jpg]]
-*孔钉扎的定量验证：(a) 零场下 $Q_i$ 对孔密度 $\rho_h$ 的依赖（非零 $\rho_h$ 捕获局域杂散场涡旋反而提升 $Q_i$，过高 $\rho_h$ 因界面损耗略降）；(b) $Q_i$ 随垂直磁场 $B_\perp$ 的变化，彩色竖线为各密度的阈值场 $B_\mathrm{Th}$——$B<B_\mathrm{Th}$ 时 $Q_i$ 保持 $10^5$，越过阈值陡降；(c) 频率分数漂移呈现同样转折。图源：Kroll et al. (2018), Fig. 3。*
+_孔钉扎的定量验证：(a) 零场下 $Q_i$
+
+对孔密度 $\rho_h$
+
+的依赖（非零 $\rho_h$
+
+捕获局域杂散场涡旋反而提升 $Q_i$
+
+，过高 $\rho_h$
+
+因界面损耗略降）；(b) $Q_i$
+
+随垂直磁场 $B_\perp$
+
+的变化，彩色竖线为各密度的阈值场 $B_\mathrm{Th}$
+
+——$B<B_\mathrm{Th}$
+
+时 $Q_i$
+
+保持 $10^5$
+
+，越过阈值陡降；(c) 频率分数漂移呈现同样转折。图源：Kroll et al. (2018), Fig. 3。_
 
 ## 组合结果与混合系统演示
 
-把两条对策叠加——22 nm 薄膜（减少涡旋产生）+ 优化孔密度（钉住所剩涡旋）——得到最终指标：**单光子功率下 $Q_i\simeq10^5$ 保持到 $B_\parallel\simeq6$ T 与 $B_\perp\simeq20$ mT**，谐振频率稳定、无慢漂移。同样的材料逻辑也适用于放大链前端：NbTiN 动力学电感的三级阻抗工程参量放大器（KIMPA）凭借高临界电流与高 $T_c$ 继承了强磁场/较高温工作能力，输出饱和功率比约瑟夫森结基高约 25 dB——见[[readout-measurement/parametric-amplifier|参量放大器]]"动力学电感阻抗工程"一节。
+把两条对策叠加——22 nm 薄膜（减少涡旋产生）+ 优化孔密度（钉住所剩涡旋）——得到最终指标：**单光子功率下 $Q_i\simeq10^5$ 保持到 $B_\parallel\simeq6$ T 与 $B_\perp\simeq20$ mT**，谐振频率稳定、无慢漂移。同样的材料逻辑也适用于放大链前端：NbTiN 动力学电感的三级阻抗工程参量放大器（KIMPA）凭借高临界电流与高 $T_c$ 继承了强磁场/较高温工作能力，输出饱和功率比约瑟夫森结基高约 25 dB——见参量放大器"动力学电感阻抗工程"一节。
 
 应用演示是混合 cQED 的标准场景：λ/2 谐振腔两端各集成一根 InSb 纳米线，细栅定义双量子点，Ti/Al 接触引出直流。在 $B_\parallel=1$ T 下用腔的微波响应代替直流输运做电荷传感——扫描细栅电压时，量子点与电极间的电子跃迁是耗散过程，腔响应随之出现 Honeycomb 型电荷稳定图。腔读出不需要纳米线源漏偏置，天然规避了纳米线接触电阻与无序的限制。
 
 ![[assets/figures/field-resilient-resonator/kroll2018-fig5a-nanowire-hybrid-device.jpg]]
-*混合器件的光学显微图：λ/2 谐振腔两端各键合一根 InSb 纳米线，局域细栅（Ti/Al 接触）定义双量子点——耐磁场腔与半导体量子点的集成单元。图源：Kroll et al. (2018), Fig. 5(a)。*
+_混合器件的光学显微图：λ/2 谐振腔两端各键合一根 InSb 纳米线，局域细栅（Ti/Al 接触）定义双量子点——耐磁场腔与半导体量子点的集成单元。图源：Kroll et al. (2018), Fig. 5(a)。_
 
 ![[assets/figures/field-resilient-resonator/kroll2018-fig6ab-cavity-readout-1T.jpg]]
-*$B_\parallel=1$ T 下的腔读出电荷稳定图：固定探针频率在 $f_r$、扫描纳米线细栅电压，量子点–电极跃迁的耗散使腔响应画出 Honeycomb 图样——无需直流偏置即可读取双量子点的电荷构型。图源：Kroll et al. (2018), Fig. 6(a–b)。*
+_$B_\parallel=1$
+
+T 下的腔读出电荷稳定图：固定探针频率在 $f_r$
+
+、扫描纳米线细栅电压，量子点–电极跃迁的耗散使腔响应画出 Honeycomb 图样——无需直流偏置即可读取双量子点的电荷构型。图源：Kroll et al. (2018), Fig. 6(a–b)。_
 
 ## 适用条件与边界
 
@@ -73,7 +101,6 @@ $$
 
 ## 与其他概念的关系
 
-- [[circuit-qed/microwave-resonator|微波谐振腔]]：本词条是其"损耗通道"在磁场维度的延伸——TLS 与准粒子之外，涡旋耗散是混合系统特有的第三条通道，对策（材料、几何、钉扎）互不冲突可叠加。面内磁场还有计量学用途：薄膜电极 transmon 在数百 mT 内对面内场稳健，且频率压制由 Fraunhofer 效应主导——扫 B_|| 可调 ω₁₀ 至与结能隙不对称共振以测定 ω_LR、判定准粒子非平衡区间，见[[circuit-qed/charge-parity-fluctuation|电荷宇称涨落与准粒子隧穿]]词条。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：高动态电感材料（NbTiN/NbN）天然具备高 $B_{c2}$，是耐磁场与高阻抗两条需求的共同材料基础；SQUID 阵列腔则相反，磁通敏感与强磁场根本冲突。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]：自旋比特的 Zeeman 劈裂需要约 1 T 磁场，耐磁场腔是该体系的准入硬件；本文的 1 T 纳米线读出即其直接应用。
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]：腔读出电荷稳定图（Honeycomb 耗散图样）是不依赖直流输运的电荷传感方式，与量子点–腔的电荷耦合共享同一物理。
@@ -82,5 +109,6 @@ $$
 
 ## 参考文献
 
-- Kroll, J. G., Borsoi, F., van der Enden, K. L., Uilhoorn, W., de Jong, D., Quintero-Pérez, M., van Woerkom, D. J., Bruno, A., Plissard, S. R., Car, D., Bakkers, E. P. A. M., Cassidy, M. C., Kouwenhoven, L. P. Magnetic-field resilient superconducting coplanar waveguide resonators for hybrid cQED experiments. *Physical Review Applied* 11, 064053 (2019). DOI: 10.1103/PhysRevApplied.11.064053；arXiv:1809.03932（QAtlas 缓存：1809.03932）。
+- Kroll, J. G., Borsoi, F., van der Enden, K. L., Uilhoorn, W., de Jong, D., Quintero-Pérez, M., van Woerkom, D. J., Bruno, A., Plissard, S. R., Car, D., Bakkers, E. P. A. M., Cassidy, M. C., Kouwenhoven, L. P. Magnetic-field resilient superconducting coplanar waveguide resonators for hybrid cQED experiments. _Physical Review Applied_ 11, 064053 (2019). DOI: 10.1103/PhysRevApplied.11.064053；arXiv:1809.03932（QAtlas 缓存：1809.03932）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

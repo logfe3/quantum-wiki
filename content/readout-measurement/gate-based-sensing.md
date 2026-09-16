@@ -2,14 +2,14 @@
 title: 栅极射频传感
 description: 通过连接量子点栅极的射频谐振电路探测电荷转移产生的复导纳变化。
 aliases:
- - RF-DGS
- - gate-based sensing
- - 栅极色散传感
- - 射频电极探测器
- - dispersive gate sensing
+  - RF-DGS
+  - gate-based sensing
+  - 栅极色散传感
+  - 射频电极探测器
+  - dispersive gate sensing
 tags:
- - 读出与测量
- - 射频
+  - 读出与测量
+  - 射频
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m2375hp68k6y22mbad3hr7rt
@@ -131,7 +131,7 @@ $$
 
 ## 推导梗概：射频反射读复导纳
 
- 第五章给出了利用反射式谐振腔测量近似孤立量子点复导纳的完整推导。把电容耦合的半波长反射式谐振腔等效为串联 LC，电容
+第五章给出了利用反射式谐振腔测量近似孤立量子点复导纳的完整推导。把电容耦合的半波长反射式谐振腔等效为串联 LC，电容
 
 $$
 C_R\approx\frac{1}{Q\,\omega_0\,Z_0}\approx 0.12~\mathrm{fF}
@@ -180,8 +180,7 @@ $$
 栅极射频传感相比[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]有三个直接好处，也是它成为[[scaling-automation/quantum-dot-array|量子点阵列]]主流读出方案之一的根本原因：
 
 1. **省一条传感通道**：被测量子点本身的 plunger/barrier 电极同时用作传感端口，不需要额外铺设 QPC 通道及其偏置线；一个被测点只占一根电极+一根源漏，节省芯片面积与栅极布线密度。
-2. **天然频分复用**：每个量子点配一个独立谐振频率的储能电路，把载波调到不同 $\omega_0$ 即可在一根总线上同时读出多个点，省去多通道并行放大链路；这是超导比特[[readout-measurement/dispersive-readout|色散读出]]的同一思路在半导体量子点上的复用。
-3. **不引入额外电荷噪声源**：QPC 通道的电流涨落会通过电容耦合成为被测点的电荷噪声；栅极射频传感只读取栅–点之间已有的耦合电容，不引入新通道。
+2. **不引入额外电荷噪声源**：QPC 通道的电流涨落会通过电容耦合成为被测点的电荷噪声；栅极射频传感只读取栅–点之间已有的耦合电容，不引入新通道。
 
 代价主要有三：
 
@@ -217,7 +216,7 @@ $$
 
 ![[assets/figures/gate-based-sensing/rossi2017-fig1-device.jpg]]
 
-*积累型栅传感器器件与测量链路：(a) 器件 SEM 图与测量设置，蓝色为嵌入谐振电路的栅电极，红圈标出量子点形成区域；(b)(c) 分别为探测栅工作在阈值电压以下与以上时的示意——阈值以下只有孤立电子代表量子点，阈值以上栅下形成积累层；(d) 实验所用谐振器的特征频率响应。图源：Rossi et al., APL (2017)，Fig. 1。*
+_积累型栅传感器器件与测量链路：(a) 器件 SEM 图与测量设置，蓝色为嵌入谐振电路的栅电极，红圈标出量子点形成区域；(b)(c) 分别为探测栅工作在阈值电压以下与以上时的示意——阈值以下只有孤立电子代表量子点，阈值以上栅下形成积累层；(d) 实验所用谐振器的特征频率响应。图源：Rossi et al., APL (2017)，Fig. 1。_
 
 该工作给出的相位响应公式是栅极射频传感定量分析的标准出发点：
 
@@ -235,13 +234,13 @@ $$
 
 ![[assets/figures/gate-based-sensing/rossi2017-fig2-phase-response.jpg]]
 
-*硅量子点的色散电荷稳定图：(a) 相位响应随势垒栅 $V_{\mathrm{BL}}$（纵轴）与探测栅 $V_{\mathrm{GD}}$（横轴）的变化，标注了量子点电荷占据数；(b) 关断筛选栅（$V_{\mathrm{SG}}=0$）后同一区域只剩孤立量子点的蜂窝图；(c) 两种构型下源漏直流电流的对照，验证射频相位信号与直流输运给出一致的库仑峰位置。图源：Rossi et al., APL (2017)，Fig. 2。*
+_硅量子点的色散电荷稳定图：(a) 相位响应随势垒栅 $V_{\mathrm{BL}}$（纵轴）与探测栅 $V_{\mathrm{GD}}$（横轴）的变化，标注了量子点电荷占据数；(b) 关断筛选栅（$V_{\mathrm{SG}}=0$）后同一区域只剩孤立量子点的蜂窝图；(c) 两种构型下源漏直流电流的对照，验证射频相位信号与直流输运给出一致的库仑峰位置。图源：Rossi et al., APL (2017)，Fig. 2。_
 
 器件设计上，该工作还给出把"泄漏通道"转化为"传感通道"的量化方法：直接测量 MOS 电容 $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的变化，选出既不把电子加热出量子点、又能产生可分辨 $\Delta C_{\mathrm{MOS}}$ 的射频驱动幅度（峰值射频幅度与有效 $\Delta C_{\mathrm{MOS}}$ 变化在图中分别以阴影标出），并把栅探测器等效为与谐振电路串联的电路元件参与匹配设计。栅极同时工作在阈值以下（读出孤立量子点）与以上（形成积累层做欧姆接触）两种模式的能力，正是[[materials-devices/silicon-mos|Si-MOS]]线性量子点阵列做栅极读出的工艺基础。
 
 ![[assets/figures/gate-based-sensing/rossi2017-fig4-mos-capacitance.jpg]]
 
-*MOS 电容法设计射频工作点：(a) $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的测量（误差棒为测量分辨率），红色阴影为峰-峰射频幅度、蓝色阴影为参与信号的有效 $\Delta C_{\mathrm{MOS}}$，插图为栅探测器与谐振电路串联的等效电路；(b)(c) 线性积累型量子点阵列的顶视图与剖面图，展示耗尽栅在点栅下方的走线（宽 $w$、长 $L$）。图源：Rossi et al., APL (2017)，Fig. 4。*
+_MOS 电容法设计射频工作点：(a) $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的测量（误差棒为测量分辨率），红色阴影为峰-峰射频幅度、蓝色阴影为参与信号的有效 $\Delta C_{\mathrm{MOS}}$，插图为栅探测器与谐振电路串联的等效电路；(b)(c) 线性积累型量子点阵列的顶视图与剖面图，展示耗尽栅在点栅下方的走线（宽 $w$、长 $L$）。图源：Rossi et al., APL (2017)，Fig. 4。_
 
 ## 积累栅电导传感：对高阻 2DEG 兼容的接法
 
@@ -249,7 +248,7 @@ $$
 
 ![[assets/figures/gate-based-sensing/volk2019-fig1c-accumulation-gate-reflectometry.jpg]]
 
-*积累栅反射仪电路：RF 载波（端口 1）激发 L–AG 谐振；积累栅工作电压经 R_B–C_C bias tee 加入，谐振的 RF 电压经电容耦合到硅沟道，沟道经解耦电阻 R_D 与低通滤波的低温线 W3 隔离——反射响应由传感点电导调制，定向耦合器 + 室温零拍混频（端口 2）读出。图源：Volk et al. (2019), Fig. 1(c)。*
+_积累栅反射仪电路：RF 载波（端口 1）激发 L–AG 谐振；积累栅工作电压经 R_B–C_C bias tee 加入，谐振的 RF 电压经电容耦合到硅沟道，沟道经解耦电阻 R_D 与低通滤波的低温线 W3 隔离——反射响应由传感点电导调制，定向耦合器 + 室温零拍混频（端口 2）读出。图源：Volk et al. (2019), Fig. 1(c)。_
 
 工作性能：谐振频率不随传感点调节漂移（容性/感性贡献不变），谐振处反射功率随库仑峰变化 12 dB（传感点电流同时变化 170 pA）；用 2 kHz 锯齿脉冲 + 逐行步进，**1 s 内**即可采完高分辨双点/三点电荷稳定图（直流输运需数分钟），降分辨率可到视频速率——支持"实时调点"。单发层面：对 0–1 电荷跃迁做方波脉冲，台阶 2.0 mV、噪声 0.42 mV，24 μs 积分下
 
@@ -263,11 +262,11 @@ $$
 
 ![[assets/figures/gate-based-sensing/volk2019-fig2f-rf-stability-diagram.jpg]]
 
-*RF 积累栅传感的三点电荷稳定图（V_H 经平面拟合扣除背景）：左/右 plunger 电压平面上清晰分辨 (1,1,1) 等电荷区，虚线标出三点各占单电子的区域——单栅层、未掺杂 Si/SiGe、与脉冲栅操作兼容。图源：Volk et al. (2019), Fig. 2(f)。*
+_RF 积累栅传感的三点电荷稳定图（V_H 经平面拟合扣除背景）：左/右 plunger 电压平面上清晰分辨 (1,1,1) 等电荷区，虚线标出三点各占单电子的区域——单栅层、未掺杂 Si/SiGe、与脉冲栅操作兼容。图源：Volk et al. (2019), Fig. 2(f)。_
 
 ![[assets/figures/gate-based-sensing/volk2019-fig4-singleshot-charge-spin-readout.jpg]]
 
-*单发电荷与自旋读出：(a)(b)(c) 方波脉冲跨越 0–1 跃迁，单发轨迹中逐电子进出点的台阶清晰可辨（80 次重复），200 条平均的指数拟合给出隧入/隧出时间 0.41/0.69 ms；(d)(e)(f) 三能级脉冲的单发自旋读出——自旋上电子在读出段的"先出后进"隧穿事件（箭头），1000 次平均的插图显示自旋鼓包。图源：Volk et al. (2019), Fig. 4。*
+_单发电荷与自旋读出：(a)(b)(c) 方波脉冲跨越 0–1 跃迁，单发轨迹中逐电子进出点的台阶清晰可辨（80 次重复），200 条平均的指数拟合给出隧入/隧出时间 0.41/0.69 ms；(d)(e)(f) 三能级脉冲的单发自旋读出——自旋上电子在读出段的"先出后进"隧穿事件（箭头），1000 次平均的插图显示自旋鼓包。图源：Volk et al. (2019), Fig. 4。_
 
 ## 可变电容扩展谐振频率
 
@@ -294,31 +293,31 @@ $$
 
 在[[materials-devices/silicon-mos|Si-MOS]] / [[materials-devices/silicon-sige|Si/SiGe]] 这类增强型器件中，栅极射频传感与[[readout-measurement/rf-reflectometry|射频反射读出]]都面临同一个泄漏难题，但栅极方案因为载波直接经过 $C_g$，反而比"经欧姆接触"方案更宽容——劈裂栅方法（见上文）即把泄漏变为耦合，从而在工艺宽松的条件下也能实现 $99.86\%$ 的读出保真度。
 
-最后，栅极射频传感的"宽频带+可调谐"特性使其与[[readout-measurement/single-shot-readout|单发读出]]、[[readout-measurement/readout-crosstalk|读出串扰]]、[[scaling-automation/quantum-dot-array|量子点阵列]]扩展直接挂钩：MHz–百 MHz 带宽足以追踪微秒级单电子隧穿；多频点储能电路可在一根总线上做波分复用。
+最后，栅极射频传感的"宽频带+可调谐"特性使其与[[readout-measurement/single-shot-readout|单发读出]]、读出串扰、[[scaling-automation/quantum-dot-array|量子点阵列]]扩展直接挂钩：MHz–百 MHz 带宽足以追踪微秒级单电子隧穿；多频点储能电路可在一根总线上做波分复用。
 
 ## 参数与量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| 硅积累型栅传感器谐振参数 | $L=220\ \mathrm{nH}$、$C_p=979\ \mathrm{fF}$、$f_R=343\ \mathrm{MHz}$、$Q=30$（$340\ \mathrm{MHz}$ 零拍读出） | Rossi 2017 |
-| 杠杆臂 $\alpha$（栅传感器） | 硅 MOS 约 $0.1\ \mathrm{eV/V}$；FinFET（$1.3\ \mathrm{nm}$ 高 k 介质）$0.9\ \mathrm{eV/V}$ | Rossi 2017 |
-| 电荷灵敏度（FinFET 栅读出） | $37\ \mu e/\sqrt{\mathrm{Hz}}$ | Rossi 2017 |
-| 谐振频率 $f_R$ | GaAs $193.8\ \mathrm{MHz}$；石墨烯 $195.75\ \mathrm{MHz}$ | , 49 |
-| 贴片电感 $L$ | GaAs $820\ \mathrm{nH}$；石墨烯 $100\ \mathrm{nH}$；栅极探测 $680\ \mathrm{nH}$（加变容二极管） | , 46, 49 |
-| 片上寄生电容 $C_p$ | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$） | |
-| 探测带宽 | GaAs RF-DGS 约 $1.5\ \mathrm{MHz}$（He3 平台 $250\ \mathrm{mK}$） | |
-| 灵敏匹配电阻 $R_\mathrm{match}$ | GaAs $C_p=0.3\ \mathrm{pF}$、$L=820\ \mathrm{nH}$ 时约 $53\ \mathrm{k\Omega}$ | |
-| 电荷灵敏度（栅极反射式） | $4.7\times 10^{-4}\ e/\sqrt{\mathrm{Hz}}$ 量级（与 RF-QPC 同阶） | |
-| 量子电容峰值 | $e^2/(4k_\mathrm{B}T_e)$，$T_e=100\ \mathrm{mK}$ 时约 $5\ \mathrm{fF}$ | 推导见正文 |
-| 隧穿电容半高宽 | $\hbar\Gamma$（非相干极限）/$\hbar\Gamma$（不透明极限） | 推导见正文 |
-| 读出保真度 | Si-MOS 劈裂栅 $99.86\%$，积分 $140\ \mathrm{ns}$ | |
-| 带宽 | Si-MOS 劈裂栅 $>2\ \mathrm{MHz}$（$C_p<0.6\ \mathrm{pF}$） | , 135 |
-| 等效电阻（孤立石墨烯点） | $R_\mathrm{eff}\approx 25\ \mathrm{G\Omega}$，$C_\mathrm{eff}\approx 4.2\times 10^{-4}\ \mathrm{aF}$ | |
-| 反推隧穿率 | $\Gamma\approx 37\ \mathrm{MHz}$（由 $T_e=100\ \mathrm{mK}$、$\alpha\approx 0.05$） | |
-| 积累栅电导传感（Si/SiGe） | L–AG 谐振 136 MHz + R_D 解耦；谐振处反射变化 12 dB；1 s 采完高分辨稳定图 | Volk 2019 |
-| 单发积分时间/电荷灵敏度 | 24 μs 下 SNR=3.4；最短 2.4 μs；$1.5\times10^{-3}\ e/\sqrt{\mathrm{Hz}}$、$t_{\min}=2.1\ \mu s$ | Volk 2019 |
-| 传感点–pad 电阻 | 约 20 kΩ（含欧姆接触与 2DEG 电阻率，需 R_D 解耦） | Volk 2019 |
-| PSB 点间自旋弛豫判读 | $(1,1)\to(0,2)$ 弛豫 >5 μs（脉冲三角非对称） | Volk 2019 |
+| 量                              | 典型值                                                                                                        | 来源       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------- |
+| 硅积累型栅传感器谐振参数        | $L=220\ \mathrm{nH}$、$C_p=979\ \mathrm{fF}$、$f_R=343\ \mathrm{MHz}$、$Q=30$（$340\ \mathrm{MHz}$ 零拍读出） | Rossi 2017 |
+| 杠杆臂 $\alpha$（栅传感器）     | 硅 MOS 约 $0.1\ \mathrm{eV/V}$；FinFET（$1.3\ \mathrm{nm}$ 高 k 介质）$0.9\ \mathrm{eV/V}$                    | Rossi 2017 |
+| 电荷灵敏度（FinFET 栅读出）     | $37\ \mu e/\sqrt{\mathrm{Hz}}$                                                                                | Rossi 2017 |
+| 谐振频率 $f_R$                  | GaAs $193.8\ \mathrm{MHz}$；石墨烯 $195.75\ \mathrm{MHz}$                                                     | , 49       |
+| 贴片电感 $L$                    | GaAs $820\ \mathrm{nH}$；石墨烯 $100\ \mathrm{nH}$；栅极探测 $680\ \mathrm{nH}$（加变容二极管）               | , 46, 49   |
+| 片上寄生电容 $C_p$              | GaAs $0.3$–$1\ \mathrm{pF}$；石墨烯 $4$–$6\ \mathrm{pF}$（个别 $>30\ \mathrm{pF}$）                           |            |
+| 探测带宽                        | GaAs RF-DGS 约 $1.5\ \mathrm{MHz}$（He3 平台 $250\ \mathrm{mK}$）                                             |            |
+| 灵敏匹配电阻 $R_\mathrm{match}$ | GaAs $C_p=0.3\ \mathrm{pF}$、$L=820\ \mathrm{nH}$ 时约 $53\ \mathrm{k\Omega}$                                 |            |
+| 电荷灵敏度（栅极反射式）        | $4.7\times 10^{-4}\ e/\sqrt{\mathrm{Hz}}$ 量级（与 RF-QPC 同阶）                                              |            |
+| 量子电容峰值                    | $e^2/(4k_\mathrm{B}T_e)$，$T_e=100\ \mathrm{mK}$ 时约 $5\ \mathrm{fF}$                                        | 推导见正文 |
+| 隧穿电容半高宽                  | $\hbar\Gamma$（非相干极限）/$\hbar\Gamma$（不透明极限）                                                       | 推导见正文 |
+| 读出保真度                      | Si-MOS 劈裂栅 $99.86\%$，积分 $140\ \mathrm{ns}$                                                              |            |
+| 带宽                            | Si-MOS 劈裂栅 $>2\ \mathrm{MHz}$（$C_p<0.6\ \mathrm{pF}$）                                                    | , 135      |
+| 等效电阻（孤立石墨烯点）        | $R_\mathrm{eff}\approx 25\ \mathrm{G\Omega}$，$C_\mathrm{eff}\approx 4.2\times 10^{-4}\ \mathrm{aF}$          |            |
+| 反推隧穿率                      | $\Gamma\approx 37\ \mathrm{MHz}$（由 $T_e=100\ \mathrm{mK}$、$\alpha\approx 0.05$）                           |            |
+| 积累栅电导传感（Si/SiGe）       | L–AG 谐振 136 MHz + R_D 解耦；谐振处反射变化 12 dB；1 s 采完高分辨稳定图                                      | Volk 2019  |
+| 单发积分时间/电荷灵敏度         | 24 μs 下 SNR=3.4；最短 2.4 μs；$1.5\times10^{-3}\ e/\sqrt{\mathrm{Hz}}$、$t_{\min}=2.1\ \mu s$                | Volk 2019  |
+| 传感点–pad 电阻                 | 约 20 kΩ（含欧姆接触与 2DEG 电阻率，需 R_D 解耦）                                                             | Volk 2019  |
+| PSB 点间自旋弛豫判读            | $(1,1)\to(0,2)$ 弛豫 >5 μs（脉冲三角非对称）                                                                  | Volk 2019  |
 
 ## 实验特征与标定流程
 
@@ -340,9 +339,9 @@ $$
 - **控制/射频分离要求高**：bias tee 的扼流电感与隔直电容、PCB 走线的寄生电感都会在频域引入额外谐振，需精细设计；
 - **与温度与栅压耦合**：量子电容峰高 $C_Q\propto 1/T_e$ 给出温度计用途，但反过来工作点漂移与温度漂移都会移动信号位置，需定期标定。
 
-
 ## 参考文献
 
-- Volk, C., Chatterjee, A., Ansaloni, F., Marcus, C. M., Kuemmeth, F. Fast Charge Sensing of Si/SiGe Quantum Dots via a High-Frequency Accumulation Gate. *Nano Letters* 19, 5628 (2019). DOI: 10.1021/acs.nanolett.9b02149；arXiv:1906.10584（QAtlas 缓存：1906.10584）。
+- Volk, C., Chatterjee, A., Ansaloni, F., Marcus, C. M., Kuemmeth, F. Fast Charge Sensing of Si/SiGe Quantum Dots via a High-Frequency Accumulation Gate. _Nano Letters_ 19, 5628 (2019). DOI: 10.1021/acs.nanolett.9b02149；arXiv:1906.10584（QAtlas 缓存：1906.10584）。
 - 栅极射频传感与强耦合读出的相关实验：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

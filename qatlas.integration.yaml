@@ -3,26 +3,64 @@ cacheDir: .qatlas-cache/papers
 
 autodiscovery:
   seed_topics:
-    - "Si/SiGe"
-    - "silicon quantum dot"
-    - "valley splitting"
-    - "charge sensor"
-    - "quantum dot readout scaling"
-    - "parametric amplifier"
-    - "decoherence quantum dot"
-    - "spin qubit germanium"
-    - "superconducting qubit"
-    - "circuit quantum electrodynamics"
+    - "Si/SiGe quantum dot"
+    - "silicon MOS quantum dot"
+    - "germanium hole spin quantum dot"
+    - "GaAs double quantum dot"
+    - "valley splitting quantum dot"
+    - "quantum dot charge sensor"
+    - "quantum dot readout"
+    - "quantum dot autotuning"
+    - "quantum dot array scaling"
+    - "spin photon coupling quantum dot"
+    - "charge noise quantum dot"
+    - "quantum dot shuttling"
   strategy: knowledge-gap
   stateFile: .qatlas-cache/autodiscovery-state.json
   batchSize: 3
 
 publication:
   mode: review-first
-  allowNewCategories: true
+  allowNewCategories: false
   publishRawMarkdownByDefault: false
   requireChineseExplanation: true
   requireFormula: true
   requireVisual: true
   requireInternalLinks: true
   requireReferences: true
+
+scope:
+  minimumRelevance: 0.7
+  allowedScopes:
+    - quantum-dot-core
+    - quantum-dot-enabling
+  allowedCategories:
+    - fundamentals
+    - materials-devices
+    - qubit-control
+    - circuit-qed
+    - readout-measurement
+    - scaling-automation
+  connectionTerms:
+    - quantum dot
+    - double quantum dot
+    - 量子点
+    - 双量子点
+    - spin qubit
+    - hole spin
+    - charge qubit
+    - 自旋比特
+    - 空穴自旋
+    - 电荷比特
+    - charge sensor
+    - 电荷传感
+    - QPC
+    - single-electron transistor
+    - 单电子晶体管
+    - Si/SiGe
+    - Si-MOS
+    - GaAs/AlGaAs
+    - strained germanium
+    - 应变锗
+    - valley splitting
+    - 谷劈裂

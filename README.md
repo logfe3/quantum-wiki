@@ -2,9 +2,9 @@
 
 [![Deploy GitHub Pages](https://github.com/logfe3/quantum-wiki/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/logfe3/quantum-wiki/actions/workflows/deploy-pages.yml)
 
-基于 [Quartz 5](https://quartz.jzhao.xyz/) 构建的中文量子器件论文知识库，覆盖半导体量子点、量子比特操控、材料与器件、读出测量、电路 QED、阵列扩展与自动化。
+基于 [Quartz 5](https://quartz.jzhao.xyz/) 构建的中文半导体量子点论文百科，覆盖量子点物理、材料与器件、量子比特操控、读出测量、量子点 cQED、阵列扩展与自动化。
 
-当前仓库包含 115 个 Markdown 页面：81 个主题词条、25 篇参考文献全文页、8 个栏目索引，以及首页和编写说明。站点提供全文搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式、阅读模式与本地化公式资源。
+`content` 当前包含 125 个 Markdown 页面：91 个量子点主题词条、25 篇核心参考文献全文页、7 个栏目索引，以及首页和编写说明。站点提供全文搜索、目录树、关系图谱、反向链接、悬浮预览、暗色模式、阅读模式与本地化公式资源。
 
 - 在线站点：[https://logfe3.github.io/quantum-wiki/](https://logfe3.github.io/quantum-wiki/)
 - GitHub 仓库：[https://github.com/logfe3/quantum-wiki](https://github.com/logfe3/quantum-wiki)
@@ -58,10 +58,10 @@ uvx --from qatlas-cli qatlas auth login `
 `npm run qatlas:pipeline` 把"发现 → 编辑决策 → 生成 → 质量检查"串成一条命令：
 
 ```powershell
-npm run qatlas:pipeline -- run --query "fluxonium qubit" --max 2
+npm run qatlas:pipeline -- run --query "silicon quantum dot readout" --max 2
 ```
 
-也可以让系统自主连续扩充：`auto` 命令每轮基于**最新 main** 自动选题（种子主题 + 从 wiki 索引派生），发现论文、生成词条、过质量门禁后**直接提交并推送 main**（线上站点自动更新），一轮接一轮：
+也可以让系统自主连续扩充，但 `auto` 只允许在已包含最新 `github/main` 的 `feature/qatlas-*` 分支运行。它负责发现、规划、生成和审核，不会提交或推送；审核者确认范围和内容后再创建提交与 PR：
 
 ```powershell
 npm run qatlas:pipeline -- auto --rounds 3
@@ -110,11 +110,11 @@ npm run qatlas:fetch -- --id cond-mat/0703002 --images 1,2,3
 npm run check:qatlas-content
 ```
 
-质量门禁要求完整 frontmatter、中文解释、KaTeX 展示公式、论文图件或 Mermaid 图解、站内双链和参考文献，并校验图片文件真实存在。栏目数量不设上限，但新栏目必须补充现有知识图谱，而不是形成孤立的论文镜像。
+质量门禁要求完整 frontmatter、中文解释、KaTeX 展示公式、论文图件或 Mermaid 图解、站内双链和参考文献，并校验图片文件真实存在。编辑计划必须把候选标成 `quantum-dot-core`、`quantum-dot-enabling` 或 `off-topic`；活动决策相关性必须不低于 0.7。自动创建新栏目被禁用，纯超导比特、NV 色心、玻色腔编码等内容必须跳过。
 
 ## QA 数据集
 
-`quantum-wiki-qa` 是从本仓库 Wiki 词条构建的、可追溯的中文问答型数据集（v0.1.0，状态 `draft_pending_semantic_audit`）：88 个来源词条、493 组 Q/A，覆盖五种题型（简答 75、填空 88、判断 76、选择 87、问题求解 167），train/dev/test 按 `source_path` 隔离（391/51/51）。
+`quantum-wiki-qa` 是从本仓库量子点词条构建的、可追溯中文问答数据集（v0.1.0，状态 `draft_pending_semantic_audit`）：91 个来源词条、509 组 Q/A，覆盖五种题型（简答 79、填空 91、判断 74、选择 90、问题求解 175），train/dev/test 按 `source_path` 隔离（411/48/50）。
 
 - 来源范围扫描整个 `content` 目录（排除 `index.md`、`about.md`、`content/references` 论文全文、`content/assets`），新增顶级栏目自动纳入；
 - 每条记录保存来源路径、章节、SHA-256、证据摘录、公式与插图引用，可回查原始词条；
@@ -148,19 +148,19 @@ npm run undeploy:local
 
 - `content/index.md`：网站首页；
 - `content/about.md`：编写方法、取材边界与使用说明；
-- `content/fundamentals/`：量子点基础，15 个词条；
-- `content/materials-devices/`：材料与器件，8 个词条；
-- `content/qubit-control/`：量子比特与操控，23 个词条；
-- `content/superconducting-qubits/`：超导量子比特，当前包含 transmon 与 fluxonium 词条；
-- `content/circuit-qed/`：腔与电路 QED，13 个词条；
-- `content/readout-measurement/`：读出与测量，11 个词条；
-- `content/scaling-automation/`：扩展与自动化，9 个词条；
-- `content/references/`：26 篇参考文献全文页；
+- `content/fundamentals/`：量子点基础，17 个词条；
+- `content/materials-devices/`：材料与器件，12 个词条；
+- `content/qubit-control/`：量子比特与操控，26 个词条；
+- `content/circuit-qed/`：量子点腔与电路 QED，14 个词条；
+- `content/readout-measurement/`：量子点读出与测量，9 个词条；
+- `content/scaling-automation/`：扩展与自动化，13 个词条；
+- `content/references/`：25 篇核心参考文献全文页；
 - `content/assets/`：词条使用的图片与附件；
 - `quartz.config.yaml`：Quartz 插件、布局与站点基址配置；
 - `qatlas.integration.yaml`：QAtlas 服务地址、缓存目录与发布质量规则；
 - `scripts/qatlas-bridge.mjs`：QAtlas 健康检查、目录查询、Markdown 轮询和图件获取；
 - `scripts/qatlas-pipeline.mjs`：统一内容流水线（发现、编辑决策、生成、质量检查）；
+- `scripts/qatlas-scope.mjs`：量子点相关性、栏目白名单和编辑计划范围门禁；
 - `scripts/qatlas-import-reference.mjs`：从缓存生成参考文献全文页；
 - `scripts/qa/`：QA 数据集构建器、校验器与审核门禁；
 - `quartz/styles/custom.scss`：站点视觉样式。

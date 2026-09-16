@@ -2,13 +2,13 @@
 title: QPC 电荷传感器
 description: 利用量子点接触电导对邻近单电子电荷变化的敏感性进行非侵入式探测。
 aliases:
- - 量子点接触传感器
- - QPC电荷计
- - 量子点接触电荷探测器
- - QPC 探测器
+  - 量子点接触传感器
+  - QPC电荷计
+  - 量子点接触电荷探测器
+  - QPC 探测器
 tags:
- - 读出与测量
- - 电荷传感
+  - 读出与测量
+  - 电荷传感
 date: 2026-09-08
 ---
 
@@ -121,19 +121,19 @@ $$
 
 ## 参数与量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| 工作点电导 $G_\mathrm{QPC}$ | 约 $e^2/h$（最佳灵敏区） | ； |
-| 工作点电导上限 | $G_\mathrm{QPC}<0.5\,e^2/h$（$R_\mathrm{QPC}>50\ \mathrm{k}\Omega$） | |
-| 调制信号幅度 | $2$–$3\ \mathrm{mV}$（QPC modulation） | |
-| 直流偏压（QPC 端） | 几百 $\mu\mathrm{V}$ | ； |
-| 锁相交流激励 | $20\ \mu\mathrm{V}$（SR830） | ； |
-| RF-QPC 谐振频率 | $193.8\ \mathrm{MHz}$（GaAs，$L=820\ \mathrm{nH}$，$C_p=0.82\ \mathrm{pF}$） | |
-| 寄生电容 $C_p$ | $0.3$–$1\ \mathrm{pF}$（GaAs）；$4$–$6\ \mathrm{pF}$（石墨烯） | |
-| 电导灵敏度 $\delta G$ | $1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$ | ； |
-| 电荷灵敏度 $\delta q$ | $4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；$1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（反射式超导腔） | |
-| RF-QPC 带宽 | $2.5\ \mathrm{MHz}$（GaAs）；$1$–$20\ \mathrm{MHz}$（综合文献） | ； |
-| QPC 器件尺寸 | 通道长度 $\sim 250\ \mathrm{nm}$（GaAs，2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$） | |
+| 量                          | 典型值                                                                                                                             | 来源 |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| 工作点电导 $G_\mathrm{QPC}$ | 约 $e^2/h$（最佳灵敏区）                                                                                                           | ；   |
+| 工作点电导上限              | $G_\mathrm{QPC}<0.5\,e^2/h$（$R_\mathrm{QPC}>50\ \mathrm{k}\Omega$）                                                               |      |
+| 调制信号幅度                | $2$–$3\ \mathrm{mV}$（QPC modulation）                                                                                             |      |
+| 直流偏压（QPC 端）          | 几百 $\mu\mathrm{V}$                                                                                                               | ；   |
+| 锁相交流激励                | $20\ \mu\mathrm{V}$（SR830）                                                                                                       | ；   |
+| RF-QPC 谐振频率             | $193.8\ \mathrm{MHz}$（GaAs，$L=820\ \mathrm{nH}$，$C_p=0.82\ \mathrm{pF}$）                                                       |      |
+| 寄生电容 $C_p$              | $0.3$–$1\ \mathrm{pF}$（GaAs）；$4$–$6\ \mathrm{pF}$（石墨烯）                                                                     |      |
+| 电导灵敏度 $\delta G$       | $1.4\times 10^{-5}\,e^2/h/\sqrt{\mathrm{Hz}}$                                                                                      | ；   |
+| 电荷灵敏度 $\delta q$       | $4.7\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（GaAs RF-QPC）；$1.1\times 10^{-4}\,e/\sqrt{\mathrm{Hz}}$（反射式超导腔）                |      |
+| RF-QPC 带宽                 | $2.5\ \mathrm{MHz}$（GaAs）；$1$–$20\ \mathrm{MHz}$（综合文献）                                                                    | ；   |
+| QPC 器件尺寸                | 通道长度 $\sim 250\ \mathrm{nm}$（GaAs，2DEG 密度 $2\times 10^{11}\ \mathrm{cm^{-2}}$，迁移率 $0.6\times 10^5\ \mathrm{cm^2/Vs}$） |      |
 
 ## 实验特征与典型应用
 
@@ -160,11 +160,11 @@ $$
 
 ![[assets/figures/qpc-charge-sensor/a72c9c02fb4e2b79d84537f0773eb0daaa885b78d97929571e2ea49ce4e88ee8.jpg]]
 
-*RF-QPC 散粒噪声极限：数十 MHz 带宽的电荷检测——灵敏度由 QPC 自身散粒噪声决定。图源：Roch et al. (2007)，Fig. 1。*
+_RF-QPC 散粒噪声极限：数十 MHz 带宽的电荷检测——灵敏度由 QPC 自身散粒噪声决定。图源：Roch et al. (2007)，Fig. 1。_
 
 ![[assets/figures/qpc-charge-sensor/a4dd42be775d4651369ec22ffbf90e795839060a7814cf333406bcae259950e9.jpg]]
 
-*灵敏度标定：RF-QPC 的电荷灵敏度随带宽/偏置的变化——散粒噪声极限的定量验证。图源：Roch et al. (2007)，Fig. 2。*
+_灵敏度标定：RF-QPC 的电荷灵敏度随带宽/偏置的变化——散粒噪声极限的定量验证。图源：Roch et al. (2007)，Fig. 2。_
 
 ## 与其他概念的关系
 
@@ -176,10 +176,10 @@ $$
 - [[readout-measurement/gate-based-sensing|栅极色散传感]]通过把 QD 串入谐振腔栅极直接读取电容变化，无需 QPC 通道，是另一种非破坏性电荷传感方式，适合多比特共用一条射频线的场景。
 - [[readout-measurement/dispersive-readout|色散读出]]把电荷态映射为微波谐振腔的频率/相位偏移，与 QPC 同为非破坏性电荷传感手段，但作用机制是色散频移而非电导调制。
 - [[materials-devices/charge-noise|电荷噪声]]是 QPC 主要噪声源之一：低频 $1/f$ 噪声既来自 QPC 自身通道也来自邻近 QD 的局域陷阱，QPC 也是测量这种噪声的工具。
-- [[readout-measurement/qh-edge-channel-charge-sensor|量子霍尔边缘通道电荷传感器]]是同一只 QPC 在强磁场 IQHE 平台下的另一副骨架：传感信号从零场电容耦合的电导调制换成对向边缘态在施主上的背散射，把灵敏度空间局域化到 QPC 下方一个施主体积内。
-
+- 量子霍尔边缘通道电荷传感器是同一只 QPC 在强磁场 IQHE 平台下的另一副骨架：传感信号从零场电容耦合的电导调制换成对向边缘态在施主上的背散射，把灵敏度空间局域化到 QPC 下方一个施主体积内。
 
 ## 参考文献
 
 - QPC/SET 电荷传感与自旋读出的集成：[[references/elzerman-2004|Elzerman et al., Nature 430, 431 (2004)]]、[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

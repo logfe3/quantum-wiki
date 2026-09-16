@@ -9,15 +9,15 @@
 
 | 指标               |          数量 |
 | ------------------ | ------------: |
-| Wiki 来源页面      |            88 |
-| 接受的 Q/A         |           493 |
-| 生成后拒绝的候选   |            35 |
-| 人工审核样本       |   27（5.48%） |
-| train / dev / test | 391 / 51 / 51 |
+| Wiki 来源页面      |            91 |
+| 接受的 Q/A         |           509 |
+| 生成后拒绝的候选   |            37 |
+| 人工审核样本       |   27（5.30%） |
+| train / dev / test | 411 / 48 / 50 |
 
-题型分布：简答题 75、填空题 88、判断题 76、选择题 87、问题求解题 167。
+题型分布：简答题 79、填空题 91、判断题 74、选择题 90、问题求解题 175。
 
-栏目覆盖：fundamentals 84、materials-devices 44、qubit-control 128、circuit-qed 86、readout-measurement 64、scaling-automation 66、superconducting-qubits 21。来源范围现在扫描整个 `content` 目录（排除 `index.md`、`about.md`、`content/references`、`content/assets`），新增顶级栏目（如 QAtlas 集成引入的 `content/superconducting-qubits`，含 Fluxonium、Transmon、Gatemon、Flowermon 四个词条）会自动进入数据集，无需修改配置。
+栏目覆盖：fundamentals 94、materials-devices 65、qubit-control 144、circuit-qed 81、readout-measurement 53、scaling-automation 72。来源范围扫描整个 `content` 目录，但量子点范围门禁只允许六个既有栏目，并排除 `index.md`、`about.md`、`content/references` 与 `content/assets`。纯超导比特、NV 色心、玻色腔编码等相邻平台不会进入数据集。
 
 ## 设计原则
 
@@ -88,7 +88,7 @@ node --test scripts/qa/qa-utils.test.mjs scripts/qa/check-qa-audit.test.mjs
    node scripts/qa/check-qa-audit.mjs
    ```
 
-检查器要求 24 条样本全部审核。失败率超过配置中的 5% 时整批拒绝；未审核、重复 ID、未知 ID 或格式错误同样不能通过。结果写入 `datasets/quantum-wiki-qa/audits/v0.1.0-report.json`。通过后仍应由仓库维护者确认授权和版本号，再修改发布状态或创建 Release。
+检查器要求 27 条样本全部审核。失败率超过配置中的 5% 时整批拒绝；未审核、重复 ID、未知 ID 或格式错误同样不能通过。结果写入 `datasets/quantum-wiki-qa/audits/0.1.0-report.json`。通过后仍应由仓库维护者确认授权和版本号，再修改发布状态或创建 Release。
 
 ## 已知限制
 
@@ -98,6 +98,6 @@ node --test scripts/qa/qa-utils.test.mjs scripts/qa/check-qa-audit.test.mjs
 - 公式做结构完整性和来源追踪检查；等价变形、量纲和极限情形仍需语义/物理审核。
 - 数据集许可证暂记为 `pending-owner-review`。仓库代码的 MIT 许可证不自动决定 Wiki 派生数据的许可，正式发布前需由维护者确认内容权利与数据许可证。
 
-## 与 QAtlas 分支集成
+## 量子点范围门禁
 
-本分支基于当前 `main` 构建，与 `feature/qatlas-integration` 相互隔离。推荐先把 QAtlas 分支合并到 `main`，再让本分支同步最新 `main`、重新生成 `v0.1.0` 草稿并复审，最后合并 QA 分支。这样新接入的合格词条会自动进入来源清单，也能避免提交一份已经落后于 Wiki 的数据快照。
+QAtlas 编辑计划必须标注 `quantum-dot-core` 或 `quantum-dot-enabling`，相关性不低于 0.7，并说明与量子点的直接联系。构建前会运行 `check:quantum-dot-scope`；不在允许栏目、没有明确量子点联系或试图新建栏目时直接失败。每次 Wiki 变更后必须重建本数据集，旧审核决定不会沿用到新的来源摘要。

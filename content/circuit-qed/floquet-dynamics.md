@@ -2,14 +2,14 @@
 title: Floquet 驱动动力学
 description: 用周期哈密顿量的准能级与 Floquet 态统一描述强连续驱动量子系统的方法。
 aliases:
- - Floquet 态
- - Floquet理论
- - Floquet 理论
- - 周期驱动动力学
- - Floquet 准能量
+  - Floquet 态
+  - Floquet理论
+  - Floquet 理论
+  - 周期驱动动力学
+  - Floquet 准能量
 tags:
- - 电路量子电动力学
- - 强驱动
+  - 电路量子电动力学
+  - 强驱动
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qvgnh68gm682tewwe1xpxb
@@ -87,12 +87,12 @@ $$
 
 开放系统框架下 Floquet 理论的几种常见近似之间的差别：
 
-| 理论 | 近似条件 | 适用 |
-| --- | --- | --- |
-| 纯 Floquet 定理 | 无耗散 | 理想封闭系统、谱学结构 |
-| Floquet-Bloch-Redfield | 系统–库耦合弱（Born）、记忆短（Markov） | 半导体量子点典型条件 |
-| Floquet-Lindblad | 时间局域主方程，$\mathcal{L}_F$ 为定常 Floquet-Lindbladian | 高频驱动、近简并 |
-| Floquet 速率方程 | Born–Oppenheimer 类，慢自由度近似 | 电荷隧穿主导 |
+| 理论                   | 近似条件                                                   | 适用                   |
+| ---------------------- | ---------------------------------------------------------- | ---------------------- |
+| 纯 Floquet 定理        | 无耗散                                                     | 理想封闭系统、谱学结构 |
+| Floquet-Bloch-Redfield | 系统–库耦合弱（Born）、记忆短（Markov）                    | 半导体量子点典型条件   |
+| Floquet-Lindblad       | 时间局域主方程，$\mathcal{L}_F$ 为定常 Floquet-Lindbladian | 高频驱动、近简并       |
+| Floquet 速率方程       | Born–Oppenheimer 类，慢自由度近似                          | 电荷隧穿主导           |
 
 弱耗散意味着可以把 Bloch–Redfield 张量对环境关联函数做 Fourier 分量分解，并在每个 $(n,m)$ 通道独立求和；这正是 附录 4.C 中给出的具体计算过程。
 
@@ -174,11 +174,11 @@ Funo 等人在 IBM 156 比特超导器件 ibm_fez 上对一维 $\mathbf Z_2$ 格
 
 ![[assets/figures/floquet-dynamics/funo2024-fig1-mps-prethermalization.jpg]]
 
-*经典 MPS 定标（N=13，K=m=1.0）：不同 Trotter 步长 dt 下的热化动力学——dt=0.5（忠实模拟）需 25–30 步以上才热化；dt=1.0 与 dt=1.4 分别在 8–16 与 8–25 步出现预热化平台（后者含振荡），为含噪声器件选出可执行的测量窗口。图源：Funo et al. (2024), Fig. 1。*
+_经典 MPS 定标（N=13，K=m=1.0）：不同 Trotter 步长 dt 下的热化动力学——dt=0.5（忠实模拟）需 25–30 步以上才热化；dt=1.0 与 dt=1.4 分别在 8–16 与 8–25 步出现预热化平台（后者含振荡），为含噪声器件选出可执行的测量窗口。图源：Funo et al. (2024), Fig. 1。_
 
 ![[assets/figures/floquet-dynamics/funo2024-fig4-quantum-prethermalization.jpg]]
 
-*ibm_fez 上的量子模拟（N=13 → 器件 38 比特）：配合误差缓解的 Floquet 电路最多执行 10 个 Trotter 步，观测量的演化进入预热化早期——与 MPS 定标的平台窗口一致；38/116 比特电路为格点规范理论数字模拟的规模基准。图源：Funo et al. (2024), Fig. 4。*
+_ibm_fez 上的量子模拟（N=13 → 器件 38 比特）：配合误差缓解的 Floquet 电路最多执行 10 个 Trotter 步，观测量的演化进入预热化早期——与 MPS 定标的平台窗口一致；38/116 比特电路为格点规范理论数字模拟的规模基准。图源：Funo et al. (2024), Fig. 4。_
 
 适用边界：预热化窗口的长度随步长与模型参数变化，需经典可解极限先行定标；器件噪声深度（有效保真度×电路体积）决定可走的 Trotter 步数上限——步长加大换来的窗口要大到盖过这一上限才有实验意义。
 
@@ -186,22 +186,22 @@ Funo 等人在 IBM 156 比特超导器件 ibm_fez 上对一维 $\mathbf Z_2$ 格
 
 半导体量子点 cQED 系统中 Floquet 实验的典型参数（取自本站论文中所列工作）：
 
-| 参数 | 典型量级 | 来源 |
-| --- | --- | --- |
-| 驱动频率 $f_d$ | $1.4$–$3.7\ \mathrm{GHz}$（远低于 $\nu_r$） | |
-| 腔频 $\nu_r/2\pi$ | $5.196\ \mathrm{GHz}$（NbTiN 透射腔）、$6.51\ \mathrm{GHz}$（SQUID 反射腔） | ； |
-| 失谐偏移 $\varepsilon_0$ | 扫描范围约 $\pm 100\ \mu\mathrm{eV}$ | |
-| 驱动幅度 $A_d$ | 几到几十 $\mu\mathrm{eV}$（$P=-40\ \mathrm{dBm}$ 对应 $A_d\approx 11.4\ \mu\mathrm{eV}$） | |
-| 隧穿耦合 $2t_c/h$ | $5.2$–$6.2\ \mathrm{GHz}$ | ； |
-| 电荷–腔耦合 $g/2\pi$ | $56$–$70\ \mathrm{MHz}$ | ； |
-| 腔耗散 $\kappa/2\pi$ | $11.2\ \mathrm{MHz}$（NbTiN）至 $58.9\ \mathrm{MHz}$（SQUID） | ； |
-| 比特退相干 $\gamma/2\pi$ | $50$–$100\ \mathrm{MHz}$ | ； |
-| Floquet 截断阶 $n_{\max}$ | $30$（收敛判据 $1\%$） | |
-| 失谐涨落 $\sigma_\varepsilon$ | 几 $\mu\mathrm{eV}$（准静态电荷噪声） | ； |
-| Floquet 增益峰值 $|S_{21}|_{\max}$ | 约 $1.16$（NbTiN 透射腔）；约 $1.1$（SQUID 反射腔） | ； |
-| 增益临界 $g/\kappa$ | $\gtrsim 1$（$\approx 5$ 时增益清晰可测） | |
-| 数字版预热化窗口（MPS 定标 N=13） | dt=1.0：8–16 步平台（无振荡）；dt=1.4：8–25 步（含振荡）；忠实模拟 dt=0.5 需 >25–30 步 | Funo 2024 |
-| Z₂ 规范理论器件规模 | ibm_fez 156 比特；38/116 比特电路配合误差缓解最多 10 个 Trotter 步 | Funo 2024 |
+| 参数                              | 典型量级                                                                                  | 来源      |
+| --------------------------------- | ----------------------------------------------------------------------------------------- | --------- |
+| 驱动频率 $f_d$                    | $1.4$–$3.7\ \mathrm{GHz}$（远低于 $\nu_r$）                                               |           |
+| 腔频 $\nu_r/2\pi$                 | $5.196\ \mathrm{GHz}$（NbTiN 透射腔）、$6.51\ \mathrm{GHz}$（SQUID 反射腔）               | ；        |
+| 失谐偏移 $\varepsilon_0$          | 扫描范围约 $\pm 100\ \mu\mathrm{eV}$                                                      |           |
+| 驱动幅度 $A_d$                    | 几到几十 $\mu\mathrm{eV}$（$P=-40\ \mathrm{dBm}$ 对应 $A_d\approx 11.4\ \mu\mathrm{eV}$） |           |
+| 隧穿耦合 $2t_c/h$                 | $5.2$–$6.2\ \mathrm{GHz}$                                                                 | ；        |
+| 电荷–腔耦合 $g/2\pi$              | $56$–$70\ \mathrm{MHz}$                                                                   | ；        |
+| 腔耗散 $\kappa/2\pi$              | $11.2\ \mathrm{MHz}$（NbTiN）至 $58.9\ \mathrm{MHz}$（SQUID）                             | ；        |
+| 比特退相干 $\gamma/2\pi$          | $50$–$100\ \mathrm{MHz}$                                                                  | ；        |
+| Floquet 截断阶 $n_{\max}$         | $30$（收敛判据 $1\%$）                                                                    |           |
+| 失谐涨落 $\sigma_\varepsilon$     | 几 $\mu\mathrm{eV}$（准静态电荷噪声）                                                     | ；        |
+| Floquet 增益峰值 $                | S_{21}                                                                                    | _{\max}$  | 约 $1.16$（NbTiN 透射腔）；约 $1.1$（SQUID 反射腔） | ；  |
+| 增益临界 $g/\kappa$               | $\gtrsim 1$（$\approx 5$ 时增益清晰可测）                                                 |           |
+| 数字版预热化窗口（MPS 定标 N=13） | dt=1.0：8–16 步平台（无振荡）；dt=1.4：8–25 步（含振荡）；忠实模拟 dt=0.5 需 >25–30 步    | Funo 2024 |
+| Z₂ 规范理论器件规模               | ibm_fez 156 比特；38/116 比特电路配合误差缓解最多 10 个 Trotter 步                        | Funo 2024 |
 
 ## 实验特征与测量
 
@@ -210,45 +210,39 @@ Floquet 动力学实验有四个标志性的可观测特征：
 1. **Floquet 谱条纹**：扫描 $\varepsilon_0$ 与 $A_d$（即 $P_d$），由色散读出得到的反射/透射幅值呈现沿 $A_d\ge|\varepsilon_0|$ 边界出现的干涉条纹——这是经典[[qubit-control/lzsm-interference|LZSM 干涉]]图样，在 Floquet 框架下被解释为准能量共振条件 $\mu/h=kf_d$ 时的"布居共振"。
 2. **月牙形孔洞（crescent holes）**：在半腔频 $f_d=\nu_r/2$ 附近的双共振条件下，每个 Floquet 谱条纹从中间劈开出现月牙。月牙位置、深度随 $f_d$ 平移，随 $\nu_r$ 改变而开关。这是 Floquet 态布居 $p_0\approx p_1$ 的最直接图像证据。
 3. **腔幅值增益条纹（gain strips）**：在 $g/\kappa$ 足够大的样品上，Floquet 态间电声耦合导致的等效粒子数反转使 $|S_{21}|>1$ 区域出现——颜色变深的"热斑"。典型最大增益约 $1.16$。
-5. **驱动频率依赖**：固定其它参数扫 $f_d$，增益与月牙都会随 $f_d$ 移动；这一可移动性是区分 Floquet 共振与简单电荷隧穿的关键。
+4. **驱动频率依赖**：固定其它参数扫 $f_d$，增益与月牙都会随 $f_d$ 移动；这一可移动性是区分 Floquet 共振与简单电荷隧穿的关键。
 
 标准测量线路：稀释制冷机混合腔室 $T\approx 20\ \mathrm{mK}$（电子温度约几十至百 mK），矢量网络分析仪输出弱探测微波（$\sim -30\ \mathrm{dBm}$，经约 $70\ \mathrm{dB}$ 衰减到达样品），通过[[readout-measurement/rf-reflectometry|射频反射]]或透射测量 $S_{11}$、$S_{21}$。数据拟合时把高斯卷积宽度 $\sigma_\varepsilon\approx 2.5$–$3.3\ \mu\mathrm{eV}$ 代入以反映准静态电荷噪声。
 
 ## 强驱动×强耦合：缀饰态谱的实验区
 
-词条前半聚焦半导体双点的 Floquet 理论；**强驱动的超导比特+强耦合谐振腔**给出这一框架的另一端实验区：flux qubit 强耦合到 CPW 腔（腔弱耦合到馈线做探测），磁通强驱动下透射谱 $|S_{21}|$ 直接分辨**缀饰态结构**与驱动诱导的多光子过程。数值上用 Lindblad 主方程（QuTiP）模拟——缀饰基之间的跃迁与耗散统一处理，模拟与实测透射谱定量吻合。这一交叉区（Floquet 驱动 × JC 强耦合）是词条理论向实验的衔接案例。
-
 ![[assets/figures/floquet-dynamics/f7abc52f9b905f0ab0b8a843b7ada59ffb760c1dca5b0aeb9d5d177013254a42.jpg]]
 
-*强驱动强耦合系统：量子谐振器强耦合到 flux qubit（弱耦合馈线探测）——磁通强驱动的缀饰态能级在透射谱中直接分辨。图源：Ivakhnenko et al. (2025)，Fig. 1。*
+_强驱动强耦合系统：量子谐振器强耦合到 flux qubit（弱耦合馈线探测）——磁通强驱动的缀饰态能级在透射谱中直接分辨。图源：Ivakhnenko et al. (2025)，Fig. 1。_
 
 ![[assets/figures/floquet-dynamics/1ef3acdd8bb727648c5e21fdf1602ebc46f15a8bcfcad464073e9f3bcf35d645.jpg]]
 
-*实测透射谱 $|S_{21}|$：随驱动功率演化的谱线结构——缀饰态跃迁与多光子过程，Lindblad 主方程模拟定量吻合。图源：Ivakhnenko et al. (2025)，Fig. 2。*
+_实测透射谱 $|S_{21}|$：随驱动功率演化的谱线结构——缀饰态跃迁与多光子过程，Lindblad 主方程模拟定量吻合。图源：Ivakhnenko et al. (2025)，Fig. 2。_
 
 **门操作的非马尔可夫极限**：比特保真度提高后，环境的**记忆效应**成为精度的下一个瓶颈——门脉冲期间系统与环境的关联无法瞬时消散（马尔可夫假设失效），非马尔可夫修正进入门的误差预算。基于 Floquet 开放系统方法（词条的 Floquet-Bloch-Redfield 框架）可以系统计算这些修正，为高保真门给出精度极限的定量预测。
 
 ![[assets/figures/floquet-dynamics/12f64066a999ae20f2dd84da315bb393076775b1aa781dfcb66a690409032fc6.jpg]]
 
-*门操作的非马尔可夫效应：环境记忆进入门误差预算——Floquet 开放系统方法系统计算修正。图源：arXiv:2402.18518，Fig. 1。*
+_门操作的非马尔可夫效应：环境记忆进入门误差预算——Floquet 开放系统方法系统计算修正。图源：arXiv:2402.18518，Fig. 1。_
 
 ![[assets/figures/floquet-dynamics/87404ec847893a6cc8d5b34acdc849cfa1e6060e5b9bd0d2faf04e442e87c7bd.jpg]]
 
-*非马尔可夫修正的量级：门保真度的预测 vs 实测——记忆效应在高保真区的可观测影响。图源：arXiv:2402.18518，Fig. 2。*
+_非马尔可夫修正的量级：门保真度的预测 vs 实测——记忆效应在高保真区的可观测影响。图源：arXiv:2402.18518，Fig. 2。_
 
 ## 随机驱动的对偶：运动平均与窄化
 
 周期驱动（Floquet）之外，**随机驱动**给出对偶的谱学现象——运动平均（motional averaging）。NMR 中的原型：孔隙中两区域磁场不同的自旋粒子，静止时谱线劈裂为 $\omega_1$、$\omega_2$ 两峰；当粒子在两区域间往返的时间 $\Delta t$ 短于动力学阈值 $\hbar(\Delta E)^{-1}=(\omega_2-\omega_1)^{-1}$ 时，粒子无法分辨两个能量——两峰**合并**为一条位于平均频率 $\omega_0$ 的窄线（运动窄化）。相关的物理家族：Dyakonov–Perel 效应、Dicke 窄化、量子 Zeno 效应。
 
-Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生器产生**受控伪随机电报噪声**调制磁通偏置，使能级间隔在两个离散值之间随机跳变——跳变速率快于阈值时实测谱线合并窄化；换成**正弦调制**则出现复杂边带图样（Floquet 边带的随机对应物）。关键验证：调制后的系统保持量子相干，跃迁频率、Rabi 耦合与退相干率都被修正但不破坏相干性——人工原子作为"可编程环境"模拟凝聚态现象的第一步。
-
 ![[assets/figures/floquet-dynamics/1f9e582d262f34e80e485936a756bfa314e528d6f0fb8680176be16f4ad3b6e0.jpg]]
-
-*运动平均的原理与实验装置：孔隙中自旋粒子的两域磁环境（静态=两峰谱，快速往返=平均频率窄线）；右侧为 transmon 器件——不对称 SQUID（$E_{J1}$、$E_{J2}$）受快磁通脉冲（直流偏置+受控随机分量）调制，谐振腔做谱探针。图源：Li et al. (2013)，Fig. 1。*
 
 ![[assets/figures/floquet-dynamics/c79318a5b6f5708d33e68026a7771c73cc81668d359728a64b41c86387f10120.jpg]]
 
-*运动平均的实测谱：随机跳变速率快于动力学阈值时两条谱线合并为一条窄的运动平均线——边带与线形随跳变率的变化定量符合理论。图源：Li et al. (2013)，Fig. 2。*
+_运动平均的实测谱：随机跳变速率快于动力学阈值时两条谱线合并为一条窄的运动平均线——边带与线形随跳变率的变化定量符合理论。图源：Li et al. (2013)，Fig. 2。_
 
 ## 与其他概念的关系
 
@@ -257,15 +251,14 @@ Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生�
 - [[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]是 Floquet 免交叉附近的瞬态图像；Floquet 理论则把它推广到稳态干涉与平均能量曲线。
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]描述无驱动二能级–腔耦合；含驱动时需要把 JC 模型换成 Floquet 化的耦合系统。
 - [[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]提供腔输入输出框架与色散响应公式；Floquet 动力学把这一框架的"时间依赖性"明确吸收进 Floquet 表象。
-- [[superconducting-qubits/floquet-anisotropic-transverse-interactions|横向各向异性相互作用的 Floquet 工程]]：Floquet 方法的"相互作用合成"应用——蓝/红边带驱动把原生 JC 耦合改写为幅度与复相位独立的 XX/YY 任意配比，并用合成空间 AB 干涉校准整条链。
+- 横向各向异性相互作用的 Floquet 工程：Floquet 方法的"相互作用合成"应用——蓝/红边带驱动把原生 JC 耦合改写为幅度与复相位独立的 XX/YY 任意配比，并用合成空间 AB 干涉校准整条链。
 - [[circuit-qed/strong-coupling|强耦合]]（$g>\kappa,\gamma$）是 Floquet 态消耗与增益条纹能被分辨的实验前提；$g/\kappa$ 的大小直接决定增益能否出现。
 - [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]系统中，Floquet 理论需要从单比特推广到耦合系统矩阵；色散读出近似忽略的量子点间相互作用此时进入 Floquet 响应函数。
 - [[readout-measurement/dispersive-readout|色散读出]]给出 Floquet 动力学进入实验信号的具体公式（$\chi^{(0)}$ 在 $S_{11},S_{21}$ 中的位置）。
-- [[superconducting-qubits/spin-locked-qubit|自旋锁定量子比特]]：连续失谐驱动 transmon 的缀饰态就是 Floquet 本征态；其"时钟条件"（准能级对失谐的微分灵敏度为零）把 Floquet 框架变成了相位噪声保护的工程工具。
-- [[superconducting-qubits/remote-qubit-self-testing|远程超导比特自检验]]与数字量子模拟：前者把周期驱动下的关联统计用于设备无关认证，后者（大步长 Trotter 电路 = Floquet 系统 + 预热化平台）把 Floquet 框架从连续驱动推广到数字演化——见上文"Floquet 预热化"一节。
 
 ## 参考文献
 
 - Funo, K. et al. Floquet prethermalization of $\mathbf Z_2$ lattice gauge theory on superconducting qubits. arXiv:2408.10079 (2024)（QAtlas 缓存：2408.10079）。
-- Chirolli, L., Polo, J., Catelani, G., Amico, L. Synthetic fractional flux quanta in a ring of superconducting qubits (2025). DOI: 10.1103/d3rk-kh1k；arXiv:2409.06511（QAtlas 缓存：2409.06511）——Floquet 方法的脉冲工程化分支（Leviton 协议给 hopping 加 Peierls 相位），见[[superconducting-qubits/synthetic-flux-qubit-ring|合成磁通与分数磁通量子]]词条。
+- Chirolli, L., Polo, J., Catelani, G., Amico, L. Synthetic fractional flux quanta in a ring of superconducting qubits (2025). DOI: 10.1103/d3rk-kh1k；arXiv:2409.06511（QAtlas 缓存：2409.06511）——Floquet 方法的脉冲工程化分支（Leviton 协议给 hopping 加 Peierls 相位），见合成磁通与分数磁通量子词条。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

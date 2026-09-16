@@ -2,13 +2,13 @@
 title: SQUID 阵列谐振腔
 description: 以多个超导量子干涉器件串联形成高且可调电感的高阻抗微波谐振器。
 aliases:
- - SQUID阵列腔
- - 约瑟夫森结阵列谐振腔
- - SQUID 阵列腔
- - 约瑟夫森结阵列腔
+  - SQUID阵列腔
+  - 约瑟夫森结阵列谐振腔
+  - SQUID 阵列腔
+  - 约瑟夫森结阵列腔
 tags:
- - 电路量子电动力学
- - 超导器件
+  - 电路量子电动力学
+  - 超导器件
 date: 2026-09-08
 ---
 
@@ -34,7 +34,7 @@ $$
 L_S(\Phi_m)=\frac{L_J}{2}\left|\cos\frac{\pi\Phi_m}{\Phi_0}\right|^{-1}
 $$
 
-在 $\Phi_m=0$ 处取极小、随磁通增大而单调上升。把 $N$ 个结构相同的 SQUID 串联起来组成中心导体，单个 SQUID 的强非线性被均摊到整个阵列上，阵列整体只在高光子数（高功率）下才显现明显的非线性响应；与此同时，腔的等效电感 $L_r\propto N L_S$ 与特征阻抗 $Z_r=\sqrt{L/C}$ 被显著抬高，并因 $L_S(\Phi_m)$ 的存在而成为磁通可调器件——这就是 **SQUID 阵列谐振腔**（SQUID array resonator）。同一条线路也可被用于制备[[readout-measurement/parametric-amplifier|参量放大器]]和约瑟夫森参量转换器，因此常被统称为"超导超电感"（superinductance）平台。
+在 $\Phi_m=0$ 处取极小、随磁通增大而单调上升。把 $N$ 个结构相同的 SQUID 串联起来组成中心导体，单个 SQUID 的强非线性被均摊到整个阵列上，阵列整体只在高光子数（高功率）下才显现明显的非线性响应；与此同时，腔的等效电感 $L_r\propto N L_S$ 与特征阻抗 $Z_r=\sqrt{L/C}$ 被显著抬高，并因 $L_S(\Phi_m)$ 的存在而成为磁通可调器件——这就是 **SQUID 阵列谐振腔**（SQUID array resonator）。同一条线路也可被用于制备参量放大器和约瑟夫森参量转换器，因此常被统称为"超导超电感"（superinductance）平台。
 
 <!-- FIGURE: 单个 SQUID 与 N 个 SQUID 串联阵列的等效电路图：L_J、Φ_m 与 C_S、C_0 标注；阵列整体表现高电感、低非线性 -->
 
@@ -128,17 +128,17 @@ $$
 
 ## 参数与量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| SQUID 数目 $N$ | 32 / 38 | （p. 111）；（p. 50） |
-| 阵列总长度 | 约 200 µm | （p. 50） |
-| 单 SQUID 等效电感 $L_S$ | 由 $I_c$ 与 $\Phi_m$ 决定，$\Phi_0/2I_c$ 量级 | （p. 41） |
-| 腔频 $\omega_r/2\pi$ | 5.6–6.6 GHz 可调 | （p. 61）；（p. 62）；（p. 78） |
-| 特征阻抗 $Z_r$ | 约 1 kΩ | （p. 41） |
-| 全局电荷–光子耦合 $g_0/2\pi$ | 数十至 100 MHz 量级（见文中具体实验） | ； |
-| 总腔耗散 $\kappa/2\pi$ | 30–60 MHz（SQUID 阵列路线） | （p. 41） |
-| 内部损耗 $\kappa_i/2\pi$ | 约 36.9 MHz | （p. 87） |
-| 比特退相干 $\gamma/2\pi$ | 电荷比特 22–55 MHz | （pp. 85、88） |
+| 量                           | 典型值                                        | 来源                            |
+| ---------------------------- | --------------------------------------------- | ------------------------------- |
+| SQUID 数目 $N$               | 32 / 38                                       | （p. 111）；（p. 50）           |
+| 阵列总长度                   | 约 200 µm                                     | （p. 50）                       |
+| 单 SQUID 等效电感 $L_S$      | 由 $I_c$ 与 $\Phi_m$ 决定，$\Phi_0/2I_c$ 量级 | （p. 41）                       |
+| 腔频 $\omega_r/2\pi$         | 5.6–6.6 GHz 可调                              | （p. 61）；（p. 62）；（p. 78） |
+| 特征阻抗 $Z_r$               | 约 1 kΩ                                       | （p. 41）                       |
+| 全局电荷–光子耦合 $g_0/2\pi$ | 数十至 100 MHz 量级（见文中具体实验）         | ；                              |
+| 总腔耗散 $\kappa/2\pi$       | 30–60 MHz（SQUID 阵列路线）                   | （p. 41）                       |
+| 内部损耗 $\kappa_i/2\pi$     | 约 36.9 MHz                                   | （p. 87）                       |
+| 比特退相干 $\gamma/2\pi$     | 电荷比特 22–55 MHz                            | （pp. 85、88）                  |
 
 ## 优势与局限
 
@@ -156,8 +156,6 @@ $$
 - 在强周期驱动下，磁通可调性同时意味着非线性进入非线性区，必须区分想要的量子点动力学与腔自身非线性响应；
 - 与[[materials-devices/charge-noise|电荷噪声]]共处：高频电极电压对 $\omega_r$ 的扰动约 $10$–$20$ kHz 量级，扫描时仍需注意栅压对腔频的反向耦合。
 
-同一 SQUID 平台的对称性破缺版图：把对称 SQUID 换成非对称 SQUID 并加磁通偏置，即得[[circuit-qed/superconducting-diode|超导二极管]]——动力学电感变为方向依赖（$L_\pm$），为谐振腔与耦合带来内建非互易性；与这里"互易但可调"的阵列互为补充。
-
 ## 与其他概念的关系
 
 - 在[[circuit-qed/circuit-quantum-electrodynamics|cQED 体系]]中，SQUID 阵列腔是[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]的一种实现方式，与 NbTiN/TiN 动态电感腔并列；
@@ -165,5 +163,4 @@ $$
 - 频率可调性使其在[[circuit-qed/jaynes-cummings-model|JC 模型]]的失谐 $\Delta$ 上多了一个工程自由度：可以扫 $\omega_r$ 替代扫比特频率做避免交叉、关联谱与光子辅助过程实验；
 - 把两个电荷比特同时接到 SQUID 阵列腔的电压波腹上，构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]，而多个电荷比特共享同一腔模对应[[scaling-automation/quantum-dot-array|量子点阵列]]与集体微波响应；
 - 与[[readout-measurement/dispersive-readout|色散读出]]配合时，色散频移 $\chi=g^2/\Delta$ 因 $g$ 增大而变大，但 $\kappa$ 较大又限制了读出速度；
-- 同一结构亦可作[[readout-measurement/parametric-amplifier|参量放大器]]使用，借助 SQUID 阵列的磁通可调非线性实现量子限制放大。
-- 阵列的完整表征（阻抗超过电阻量子 $R_Q$ 的定义、内耗 <20 ppm、相位滑移率 <1 mHz）见[[circuit-qed/superinductance|超电感与约瑟夫森结阵列]]；栅控可调版本则是[[scaling-automation/thouless-pumping-jja|Thouless 量子泵浦]]的拓扑量子模拟平台。
+- 同一结构亦可作参量放大器使用，借助 SQUID 阵列的磁通可调非线性实现量子限制放大。

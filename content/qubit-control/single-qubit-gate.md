@@ -2,12 +2,12 @@
 title: 单比特门
 description: 量子点自旋比特任意单比特旋转的实现方案：ESR 磁偶极、EDSR 电偶极、g 因子全电控与 ST 编码脉冲门，及其保真度表征。
 aliases:
- - 单量子比特门
- - 单比特旋转
- - single-qubit gate
+  - 单量子比特门
+  - 单比特旋转
+  - single-qubit gate
 tags:
- - 量子比特操控
- - 单比特门
+  - 量子比特操控
+  - 单比特门
 date: 2026-09-12
 source: QAtlas
 qatlas_id: qa_01m237dajertqkk22k381g93ng
@@ -38,7 +38,7 @@ $$
 
 [[references/koppens-2006|Koppens et al. (2006)]] 首次在 GaAs 双量子点中观测到单电子自旋的 Rabi 振荡：射频频率 10–750 MHz 范围内扫描出共振峰，1 μs 射频脉冲内观测到约 8 圈振荡，且 $f_R$ 与 $B_1$ 呈线性关系，确认了磁偶极驱动机制。该实验以等效自旋读出为背景，测得平均翻转角 131°（对应 180° 指令）的保真度约 73%——当时的瓶颈是核自旋噪声导致的退相干，而非驱动本身。
 
-ESR 的优点是机制干净、对电荷噪声不敏感；缺点是磁场与栅压几乎正交，耦合弱，需要毫特斯拉级的 $B_1$，天线功耗与串扰（见[[readout-measurement/readout-crosstalk|读出串扰]]）随之上升。
+ESR 的优点是机制干净、对电荷噪声不敏感；缺点是磁场与栅压几乎正交，耦合弱，需要毫特斯拉级的 $B_1$，天线功耗与串扰（见读出串扰）随之上升。
 
 ### 电偶极自旋共振（EDSR）
 
@@ -91,57 +91,79 @@ $$
 其中 $T_2^{\mathrm{Rabi}}$ 是 Rabi 振荡衰减时间、$T_\pi$ 是 π 翻转时长——它决定比特保真度上限。扫微波幅度发现：$f_\mathrm{Rabi}$ 先线性增长（最高约 35 MHz）后饱和，而 $T_2^{\mathrm{Rabi}}$ 在大幅度下显著缩短（加热主导、而非光子辅助隧穿——衰减不依赖库仑阻塞深度），$Q$ 因此存在最优点：$A_\mathrm{MW}\sim0.2$ 处 $f_\mathrm{Rabi}=10$ MHz、$Q\sim140$（$1/T_2^{\mathrm{Rabi}}\sim140$ kHz）。该频率比纯化硅当时报道值快两个量级而 $Q$ 同量级——"快而不失相干"。在最优工作点做基于 Clifford 的随机化基准，得到平均单比特保真度 **99.6%**：天然硅的最高值、与纯化硅量子点可比，越过容错阈值——工业标准硅材料因此进入容错比特的候选名单。
 
 ![[assets/figures/single-qubit-gate/takeda2016-fig1a-device-sem.jpg]]
-*器件结构（伪色 SEM）：天然 Si/SiGe 耗尽型双量子点，250 nm 钴微磁体置于点上方（图中标注 R、L、C 三个高频栅经阻抗匹配偏置引入脉冲）；两侧欧姆接触接地、其一连接谐振传感电路。图源：Takeda et al. (2016), Fig. 1(A)。*
+_器件结构（伪色 SEM）：天然 Si/SiGe 耗尽型双量子点，250 nm 钴微磁体置于点上方（图中标注 R、L、C 三个高频栅经阻抗匹配偏置引入脉冲）；两侧欧姆接触接地、其一连接谐振传感电路。图源：Takeda et al. (2016), Fig. 1(A)。_
 
 ![[assets/figures/single-qubit-gate/takeda2016-fig1d-edsr-addressability.jpg]]
-*EDSR 寻址谱：自旋翻转概率随微波频率与外磁场的二维图，蓝/红线分别为左/右点的共振条件 $hf_\mathrm{MW}=g\mu_B(B_\mathrm{ext}+B_z^{\mathrm{MM,L/R}})$——两条共振线劈裂约 800 MHz（ΔB_z≈30 mT），比 Rabi 频率高两个量级，串扰仅 0.02%。图源：Takeda et al. (2016), Fig. 1(D)。*
+_EDSR 寻址谱：自旋翻转概率随微波频率与外磁场的二维图，蓝/红线分别为左/右点的共振条件 $hf_\mathrm{MW}=g\mu_B(B_\mathrm{ext}+B_z^{\mathrm{MM,L/R}})$
+
+——两条共振线劈裂约 800 MHz（ΔB_z≈30 mT），比 Rabi 频率高两个量级，串扰仅 0.02%。图源：Takeda et al. (2016), Fig. 1(D)。_
 
 ![[assets/figures/single-qubit-gate/takeda2016-fig1e-rabi-oscillation.jpg]]
-*微磁体 EDSR 的 Rabi 振荡：$B_\mathrm{ext}=0.505$ T、$f_\mathrm{MW}=15.6055$ GHz 下测得 $f_\mathrm{Rabi}\sim9$ MHz、$T_2^{\mathrm{Rabi}}\sim8\ \mu$s（指数衰减正弦拟合），快速驱动与长相干并存。图源：Takeda et al. (2016), Fig. 1(E)。*
+_微磁体 EDSR 的 Rabi 振荡：$B_\mathrm{ext}=0.505$
+
+T、$f_\mathrm{MW}=15.6055$
+
+GHz 下测得 $f_\mathrm{Rabi}\sim9$
+
+MHz、$T_2^{\mathrm{Rabi}}\sim8\ \mu$
+
+s（指数衰减正弦拟合），快速驱动与长相干并存。图源：Takeda et al. (2016), Fig. 1(E)。_
 
 ![[assets/figures/single-qubit-gate/takeda2016-fig2b-ramsey-fringes.jpg]]
-*Ramsey 干涉条纹：π/2 脉冲—等待 $t_w$—π/2 脉冲序列下条纹幅值随 $t_w$ 高斯衰减，给出天然硅当时最长的 $T_2^*\approx2\ \mu$s（核自旋涨落限制）。图源：Takeda et al. (2016), Fig. 2(B)。*
+_Ramsey 干涉条纹：π/2 脉冲—等待 $t_w$
+
+—π/2 脉冲序列下条纹幅值随 $t_w$
+
+高斯衰减，给出天然硅当时最长的 $T_2^*\approx2\ \mu$
+
+s（核自旋涨落限制）。图源：Takeda et al. (2016), Fig. 2(B)。_
 
 ![[assets/figures/single-qubit-gate/takeda2016-fig4b-randomized-benchmarking.jpg]]
-*Clifford 随机化基准：门序列概率随序列长度的指数衰减，最优工作点（$f_\mathrm{Rabi}=10$ MHz、$Q\sim140$）下平均单比特保真度 99.6%——天然硅首次越过容错阈值。图源：Takeda et al. (2016), Fig. 4(B)。*
+_Clifford 随机化基准：门序列概率随序列长度的指数衰减，最优工作点（$f_\mathrm{Rabi}=10$
+
+MHz、$Q\sim140$
+
+）下平均单比特保真度 99.6%——天然硅首次越过容错阈值。图源：Takeda et al. (2016), Fig. 4(B)。_
 
 ## 表征方法
 
-| 手段 | 测什么 | 备注 |
-| --- | --- | --- |
-| [[qubit-control/rabi-oscillation|Rabi 振荡]] | 驱动幅度–翻转角关系、$f_R$、驱动均匀性 | 校准 $\pi$、$\pi/2$ 脉冲幅值 |
-| [[qubit-control/ramsey-interferometry|Ramsey 干涉]] | $T_2^*$、频率漂移（准静态噪声） | 快门极限下读出频率精调 |
-| Hahn 回声 / [[qubit-control/dynamical-decoupling|动力学解耦]] | $T_2$、噪声谱 | 判断噪声类型（准静态 vs 高频） |
-| 随机化基准（RB） | Clifford 门平均保真度 | 排除态制备与测量误差；衰减拟合与保真度提取公式见[[qubit-control/randomized-benchmarking|随机化基准测试]] |
-| 门集成基准 / GST | 特定门保真度及误差生成元 | [[references/xue-2022|Xue et al.]] 用 GST 分解误差来源 |
+| 手段                                             | 测什么                   | 备注                                                                                    |
+| ------------------------------------------------ | ------------------------ | --------------------------------------------------------------------------------------- |
+| [[qubit-control/rabi-oscillation                 | Rabi 振荡]]              | 驱动幅度–翻转角关系、$f_R$、驱动均匀性                                                  | 校准 $\pi$、$\pi/2$ 脉冲幅值     |
+| [[qubit-control/ramsey-interferometry            | Ramsey 干涉]]            | $T_2^*$、频率漂移（准静态噪声）                                                         | 快门极限下读出频率精调           |
+| Hahn 回声 / [[qubit-control/dynamical-decoupling | 动力学解耦]]             | $T_2$、噪声谱                                                                           | 判断噪声类型（准静态 vs 高频）   |
+| 随机化基准（RB）                                 | Clifford 门平均保真度    | 排除态制备与测量误差；衰减拟合与保真度提取公式见[[qubit-control/randomized-benchmarking | 随机化基准测试]]                 |
+| 门集成基准 / GST                                 | 特定门保真度及误差生成元 | [[references/xue-2022                                                                   | Xue et al.]] 用 GST 分解误差来源 |
 
 代表性单比特门保真度（文中报告值，非同条件对比）：
 
-| 平台 / 文献 | 单比特门保真度 | 说明 |
-| --- | --- | --- |
-| GaAs ESR，[[references/koppens-2006|Koppens 2006]] | 翻转保真度 $\sim 73\%$ | 首次演示，核自旋噪声限制 |
-| Si-MOS，[[references/watson-2018|Watson 2018]] | Clifford 平均 98.8%（RB） | 全局 ESR + 斯塔克分址 |
-| 平面锗，[[references/hendrickx-2020|Hendrickx 2020]] | 99.3% | 无微磁体 EDSR，$f_R>100\ \mathrm{MHz}$ |
-| 平面锗，[[references/hendrickx-2021|Hendrickx 2021]] | $>99.9\%$（Q3） | 四比特处理器中的最佳值 |
-| Si/SiGe，[[references/noiri-2022|Noiri 2022]] | 99.8% | 微磁体 EDSR，越过容错阈值 |
-| Si/SiGe，[[references/xue-2022|Xue 2022]] | 平均 99.72%（单比特子空间 GST） | 计入两比特空间后平均 99.16% |
-| 天然 Si/SiGe，Takeda 2016 | 99.6%（RB） | 优化微磁体 EDSR；Q=140 @ 10 MHz、800 MHz 分址劈裂、T2*≈2 µs |
-| Si-MOS 300 mm 晶圆厂，Stuyck 2024 | Clifford 99.91±0.01%（RB）；X_π/2 与 Y_π/2 均 99.97%（GST） | 工业代工路线的最高值，双基准交叉验证 |
+| 平台 / 文献                         | 单比特门保真度                                              | 说明                                                        |
+| ----------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| GaAs ESR，[[references/koppens-2006 | Koppens 2006]]                                              | 翻转保真度 $\sim 73\%$                                      | 首次演示，核自旋噪声限制               |
+| Si-MOS，[[references/watson-2018    | Watson 2018]]                                               | Clifford 平均 98.8%（RB）                                   | 全局 ESR + 斯塔克分址                  |
+| 平面锗，[[references/hendrickx-2020 | Hendrickx 2020]]                                            | 99.3%                                                       | 无微磁体 EDSR，$f_R>100\ \mathrm{MHz}$ |
+| 平面锗，[[references/hendrickx-2021 | Hendrickx 2021]]                                            | $>99.9\%$（Q3）                                             | 四比特处理器中的最佳值                 |
+| Si/SiGe，[[references/noiri-2022    | Noiri 2022]]                                                | 99.8%                                                       | 微磁体 EDSR，越过容错阈值              |
+| Si/SiGe，[[references/xue-2022      | Xue 2022]]                                                  | 平均 99.72%（单比特子空间 GST）                             | 计入两比特空间后平均 99.16%            |
+| 天然 Si/SiGe，Takeda 2016           | 99.6%（RB）                                                 | 优化微磁体 EDSR；Q=140 @ 10 MHz、800 MHz 分址劈裂、T2*≈2 µs |
+| Si-MOS 300 mm 晶圆厂，Stuyck 2024   | Clifford 99.91±0.01%（RB）；X_π/2 与 Y_π/2 均 99.97%（GST） | 工业代工路线的最高值，双基准交叉验证                        |
 
 ## 300 mm 晶圆厂路线：99.9% 单比特控制（Stuyck 2024）
 
 学术洁净室的自定义工艺流已经证明高保真控制；规模化真正关心的问题是**工业代工环境能否复现这一水平**。Stuyck 等人（Diraq + imec）在 300 mm 晶圆平面工艺上给出肯定答案：外延 800 ppm ${}^{28}\mathrm{Si}$ 衬底 + 20 nm 高质量热氧化 Si/SiO₂ 界面 + DUV/电子束混合光刻，SET 电荷传感邻接双量子点，180 mK 下经泡利自旋阻塞在 $(3,1)$–$(4,0)$ 跃迁完成初始化与读出。
 
 ![[assets/figures/single-qubit-gate/stuyck2024-fig1-foundry-device.jpg]]
-*300 mm 工艺自旋比特器件：(a) CDSEM 图像；(b) 双量子点势阱截面示意（非等比）——先在 P1/P2 栅下装载 3/1 个电子，再耗尽 J2/RES 栅下的二维电子气完成孤立。图源：Stuyck et al. (2024), Fig. 1。*
+_300 mm 工艺自旋比特器件：(a) CDSEM 图像；(b) 双量子点势阱截面示意（非等比）——先在 P1/P2 栅下装载 3/1 个电子，再耗尽 J2/RES 栅下的二维电子气完成孤立。图源：Stuyck et al. (2024), Fig. 1。_
 
 ![[assets/figures/single-qubit-gate/stuyck2024-fig3-charge-noise.jpg]]
-*电荷传感器的噪声谱密度（两个工作点）：SET 电流涨落经 dI/dV 与杠杆臂（0.04，与 12 nm SiO₂ 器件一致）换算为能级涨落，$S_0/f^\alpha$ 拟合给出 1 Hz 处仅 0.4 µeV、α=0.23——比典型 1/f（α≈1）平坦得多的界面质量指标，是 20 nm 热氧化界面的直接回报。图源：Stuyck et al. (2024), Fig. 3。*
+_电荷传感器的噪声谱密度（两个工作点）：SET 电流涨落经 dI/dV 与杠杆臂（0.04，与 12 nm SiO₂ 器件一致）换算为能级涨落，$S_0/f^\alpha$
+
+拟合给出 1 Hz 处仅 0.4 µeV、α=0.23——比典型 1/f（α≈1）平坦得多的界面质量指标，是 20 nm 热氧化界面的直接回报。图源：Stuyck et al. (2024), Fig. 3。_
 
 片上 ESR 天线在 0.7 T 全局磁场（Larmor 频率 18.89 GHz）下驱动相干翻转：Rabi 频率可达 2 MHz，Rabi 品质因子 $Q=f_\mathrm{Rabi}\cdot T_2^\mathrm{Rabi}$ 达 100。控制脉冲用**高斯单边带调制**整形以抑制对第二个电子自旋与 PSB 读出的串扰，配合 FPGA 实时反馈（含 ESR 频率跟踪）执行两种社区标准基准：
 
 ![[assets/figures/single-qubit-gate/stuyck2024-fig7-randomized-benchmarking.jpg]]
-*随机化基准：400 条随机序列、最长 5000 个 Clifford 门（每个 Clifford 由 X_π/2 与 Z_π/2 组成），拟合给出 Clifford 门保真度 99.91±0.01%；插图为高斯整形后的控制电压脉冲。图源：Stuyck et al. (2024), Fig. 7。*
+_随机化基准：400 条随机序列、最长 5000 个 Clifford 门（每个 Clifford 由 X_π/2 与 Z_π/2 组成），拟合给出 Clifford 门保真度 99.91±0.01%；插图为高斯整形后的控制电压脉冲。图源：Stuyck et al. (2024), Fig. 7。_
 
 - **RBM**：Clifford 门保真度 $99.91\pm0.01\%$；
 - **GST**：$X_{\pi/2}$ 门 $99.97^{+0.03}_{-0.04}\%$、$Y_{\pi/2}$ 门 $99.97\pm0.03\%$——两种基准一致越过 99.9%。
@@ -150,24 +172,24 @@ GST 误差分解显示**哈密顿（相干）误差低、随机误差占主导**
 
 ## 参数与量级
 
-| 量 | 典型值 | 说明 |
-| --- | --- | --- |
-| 共振频率 | $3$–$40\ \mathrm{GHz}$（$B_0=0.1$–$1.5\ \mathrm{T}$） | $f=g\mu_\mathrm{B}B_0/h\approx 28\ \mathrm{GHz/T}\times g/2$ |
-| ESR Rabi 频率 | $0.1$–$5\ \mathrm{MHz}$ | 受天线功率与发热限制 |
-| EDSR Rabi 频率 | $1$–$100\ \mathrm{MHz}$ | 微磁体/自旋轨道辅助 |
-| 锗空穴 EDSR | $>100\ \mathrm{MHz}$ | [[references/hendrickx-2020|Hendrickx 2020]] |
-| $\pi$ 门时长 | $10\ \mathrm{ns}$（快极限）–$500\ \mathrm{ns}$（保真度优先） | 越快对脉冲带宽要求越高 |
-| 频率分址间隔 | $10$–$100\ \mathrm{MHz}$ | 斯塔克位移调出 |
-| 天然硅微磁体分址劈裂 | 约 800 MHz（ΔB_z≈30 mT） | Takeda 2016，串扰 0.02% @ 10 MHz |
-| Rabi 品质因子 Q=T2^Rabi/T_π | ~140（天然硅最优工作点，f_Rabi=10 MHz；f_Rabi 最高约 35 MHz） | Takeda 2016 |
-| 300 mm 晶圆厂 Si-MOS | Clifford 99.91%（RB）/99.97%（GST X、Y 门）；0.4 µeV@1 Hz 电荷噪声（α=0.23）；f_Rabi 至 2 MHz、Q 至 100；ESR 18.89 GHz@0.7 T | Stuyck 2024 |
+| 量                          | 典型值                                                                                                                       | 说明                                                         |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 共振频率                    | $3$–$40\ \mathrm{GHz}$（$B_0=0.1$–$1.5\ \mathrm{T}$）                                                                        | $f=g\mu_\mathrm{B}B_0/h\approx 28\ \mathrm{GHz/T}\times g/2$ |
+| ESR Rabi 频率               | $0.1$–$5\ \mathrm{MHz}$                                                                                                      | 受天线功率与发热限制                                         |
+| EDSR Rabi 频率              | $1$–$100\ \mathrm{MHz}$                                                                                                      | 微磁体/自旋轨道辅助                                          |
+| 锗空穴 EDSR                 | $>100\ \mathrm{MHz}$                                                                                                         | [[references/hendrickx-2020                                  | Hendrickx 2020]] |
+| $\pi$ 门时长                | $10\ \mathrm{ns}$（快极限）–$500\ \mathrm{ns}$（保真度优先）                                                                 | 越快对脉冲带宽要求越高                                       |
+| 频率分址间隔                | $10$–$100\ \mathrm{MHz}$                                                                                                     | 斯塔克位移调出                                               |
+| 天然硅微磁体分址劈裂        | 约 800 MHz（ΔB_z≈30 mT）                                                                                                     | Takeda 2016，串扰 0.02% @ 10 MHz                             |
+| Rabi 品质因子 Q=T2^Rabi/T_π | ~140（天然硅最优工作点，f_Rabi=10 MHz；f_Rabi 最高约 35 MHz）                                                                | Takeda 2016                                                  |
+| 300 mm 晶圆厂 Si-MOS        | Clifford 99.91%（RB）/99.97%（GST X、Y 门）；0.4 µeV@1 Hz 电荷噪声（α=0.23）；f_Rabi 至 2 MHz、Q 至 100；ESR 18.89 GHz@0.7 T | Stuyck 2024                                                  |
 
 ## 与其他概念的关系
 
 - 单比特门与[[qubit-control/exchange-gates|交换型两比特门]]、[[qubit-control/cnot-gate|CNOT 门]]、[[qubit-control/toffoli-gate|Toffoli 门]]共同构成普适量子逻辑；两比特门依赖[[qubit-control/exchange-interaction|交换相互作用]]，其物理由[[fundamentals/tunnel-coupling|隧穿耦合]]与[[fundamentals/charge-stability-diagram|电荷稳定图]]上的脉冲路径决定。
 - 驱动机制的选择与[[materials-devices/micromagnet|微磁体]]、[[fundamentals/spin-orbit-coupling|自旋轨道耦合]]、[[materials-devices/charge-noise|电荷噪声]]三个词条强关联：前者提供电驱动接口，后者设定保真度上限。
 - 多电子激发轨道占据的量子点中，[[qubit-control/electric-quadrupole-spin-resonance|电四极自旋共振（EQSR）]]在轨道近简并点提供另一条全电驱动通道，是 EDSR 之外无需微磁体的候选机制。
-- [[superconducting-qubits/quantum-optimal-control|量子最优控制与机器学习表征]]：门脉冲设计的模型侧升级（平台无关）——机器学习从数据学出的可微动力学模型替代易偏的物理模型，任意门脉冲在模型上直接梯度优化。
+- 量子最优控制与机器学习表征：门脉冲设计的模型侧升级（平台无关）——机器学习从数据学出的可微动力学模型替代易偏的物理模型，任意门脉冲在模型上直接梯度优化。
 - 门脉冲的执行质量受[[qubit-control/spin-decoherence|自旋退相干]]与[[qubit-control/dynamical-decoupling|动力学解耦]]策略约束；初始化与读出见[[qubit-control/spin-initialization|自旋初始化]]、[[readout-measurement/single-shot-readout|单发读出]]。
 - 空穴自旋特有的驱动与弛豫物理见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]；两比特门与处理器层面的整合见[[qubit-control/two-qubit-gate|两比特门]]。
 
@@ -178,5 +200,5 @@ GST 误差分解显示**哈密顿（相干）误差低、随机误差占主导**
 - 锗空穴强自旋轨道全电驱动：[[references/hendrickx-2020|Hendrickx et al., Nature 577, 487 (2020)]]；四比特处理器：[[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]]。
 - 通用门越过容错阈值与工作区设计：[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]；GST 表征与串扰：[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]、[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]。
 - 各驱动机制的理论综述：[[references/burkard-2023|Burkard et al., Rev. Mod. Phys. 95, 025003 (2023)]]、[[references/hanson-2007|Hanson et al., Rev. Mod. Phys. 79, 1217 (2007)]]。
-- Takeda, K. et al. A fault-tolerant addressable spin qubit in a natural silicon quantum dot. *Science Advances* 2, e1600694 (2016). DOI: 10.1126/sciadv.1600694；arXiv:1602.07833（QAtlas 缓存：1602.07833）。
-- Stuyck, N. D., Feng, M. K., Lim, W. H., Serrano Ramirez, S., Escott, C. C., Botzem, T., Tanttu, T., Yang, C. H., Saraiva, A., Laucht, A., Kubicek, J., Jussot, J., Beyne, S., Raes, B., Li, R., Godfrin, C., Wan, D., De Greve, K., Dzurak, A. S. Demonstration of 99.9% single qubit control fidelity of a silicon quantum dot spin qubit made in a 300 mm foundry process. *IEEE Silicon Nanoelectronics Workshop (SNW)* (2024). DOI: 10.1109/snw63608.2024.10639218（QAtlas 缓存：10.1109_snw63608.2024.10639218）。
+- Takeda, K. et al. A fault-tolerant addressable spin qubit in a natural silicon quantum dot. _Science Advances_ 2, e1600694 (2016). DOI: 10.1126/sciadv.1600694；arXiv:1602.07833（QAtlas 缓存：1602.07833）。
+- Stuyck, N. D., Feng, M. K., Lim, W. H., Serrano Ramirez, S., Escott, C. C., Botzem, T., Tanttu, T., Yang, C. H., Saraiva, A., Laucht, A., Kubicek, J., Jussot, J., Beyne, S., Raes, B., Li, R., Godfrin, C., Wan, D., De Greve, K., Dzurak, A. S. Demonstration of 99.9% single qubit control fidelity of a silicon quantum dot spin qubit made in a 300 mm foundry process. _IEEE Silicon Nanoelectronics Workshop (SNW)_ (2024). DOI: 10.1109/snw63608.2024.10639218（QAtlas 缓存：10.1109_snw63608.2024.10639218）。

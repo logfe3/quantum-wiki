@@ -2,13 +2,13 @@
 title: 自旋–光子耦合
 description: 借助自旋–电荷混合，让微波腔电场与量子点自旋量子比特相互作用。
 aliases:
- - 自旋光子耦合
- - spin-photon coupling
- - 自旋-光子强耦合
- - 自旋–腔耦合
+  - 自旋光子耦合
+  - spin-photon coupling
+  - 自旋-光子强耦合
+  - 自旋–腔耦合
 tags:
- - 电路量子电动力学
- - 自旋量子比特
+  - 电路量子电动力学
+  - 自旋量子比特
 date: 2026-09-08
 ---
 
@@ -73,6 +73,7 @@ H_I=g_c\,(a+a^\dagger)\sum_{n,m=0}^{3}d_{nm}\,|n\rangle\langle m|
 $$
 
 作用于四态电荷基 $\{|\!L\uparrow\rangle,|\!L\downarrow\rangle,|\!R\uparrow\rangle,|\!R\downarrow\rangle\}$ 上，矩阵元 $d_{nm}$ 满足反对称结构。在 $\sqrt{(\Omega-B_z)^2+B_x^2}\ll\Omega+B_z$ 条件下
+
 $$
 d_{01}\simeq-\cos\theta\sin\!\left(\frac{\phi}{2}\right),\qquad
 d_{02}\simeq\cos\theta\cos\!\left(\frac{\phi}{2}\right).
@@ -136,10 +137,10 @@ $$
 
 [[scaling-automation/flopping-mode-qubit|翻转模式（flopping-mode）量子比特]]把电子轨道波函数锁定在双量子点零失谐附近的成键态，对交流电场响应最大，电偶极自然放大。 在 Si/SiGe 三量子点中依次编码两个翻转模式比特并实现与同一 TiN 高阻抗腔的强耦合：
 
-| 比特位置 | $2t_c/2\pi$ | $2g_s/2\pi$ | $\gamma_s/2\pi$ | $\kappa^\*/2\pi$ | 备注 |
-| --- | ---: | ---: | ---: | ---: | --- |
-| RDQD（直接接腔） | 9.4 GHz | 43.5 MHz | 4.6 MHz | 7.5 MHz | $g_s>\gamma_s,\kappa^\*$ |
-| LDQD（无直接电极） | 8.0 GHz | 27.6 MHz | 2.2 MHz | 6.8 MHz | $g_s>\gamma_s,\kappa^\*$ |
+| 比特位置           | $2t_c/2\pi$ | $2g_s/2\pi$ | $\gamma_s/2\pi$ | $\kappa^\*/2\pi$ | 备注                     |
+| ------------------ | ----------: | ----------: | --------------: | ---------------: | ------------------------ |
+| RDQD（直接接腔）   |     9.4 GHz |    43.5 MHz |         4.6 MHz |          7.5 MHz | $g_s>\gamma_s,\kappa^\*$ |
+| LDQD（无直接电极） |     8.0 GHz |    27.6 MHz |         2.2 MHz |          6.8 MHz | $g_s>\gamma_s,\kappa^\*$ |
 
 RDQD 中测得的 43.5 MHz 真空 Rabi 劈裂，是目前 Si/SiGe 平台自旋–光子强耦合的最高纪录之一；LDQD 没有腔电极直接相连，证明同一腔可在更大空间范围内耦合多个翻转模式比特，为[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]奠定硬件基础。
 
@@ -147,13 +148,13 @@ RDQD 中测得的 43.5 MHz 真空 Rabi 劈裂，是目前 Si/SiGe 平台自旋�
 
 锗空穴载流子由于 $P$ 轨道成分，自旋–轨道耦合强度远高于 III–V 与硅（Ge/Si 核壳纳米线 $t_\mathrm{SO}\sim 38\pm 4\ \mu\mathrm{eV}$，$\lambda_\mathrm{SO}\sim 40$–$100\ \mathrm{nm}$）。锗空穴比特因此可在不集成微磁体的情况下完成全电操控，同时为自旋–光子耦合提供另一条不依赖外加梯度场的路径。
 
-| 体系 | $g_c/2\pi$ | 评估 $g_s/2\pi$ | $\gamma_s/2\pi$ | 来源 |
-| --- | ---: | ---: | ---: | --- |
-| 锗纳米线双量子点（$\varepsilon=0$） | 15 MHz | 3 MHz | 约 10 MHz（理论预测） | |
-| 锗纳米线单量子点（$|\varepsilon|\gg 2t_c$） | 15 MHz | 0.22 MHz | 约 10 MHz | |
-| 锗硅自组织纳米线单量子点 | 几十 MHz | 接近强耦合水平 | — | |
-| 应变锗空穴–腔耦合 | — | 体系可拓展到翻转模式 | — | |
-| Si/SiGe 翻转模式（LDQD） | — | 27.6 MHz | 2.2 MHz | |
+| 体系                                |  $g_c/2\pi$ |      评估 $g_s/2\pi$ |       $\gamma_s/2\pi$ | 来源     |
+| ----------------------------------- | ----------: | -------------------: | --------------------: | -------- |
+| 锗纳米线双量子点（$\varepsilon=0$） |      15 MHz |                3 MHz | 约 10 MHz（理论预测） |          |
+| 锗纳米线单量子点（$                 | \varepsilon |          \gg 2t_c$） |                15 MHz | 0.22 MHz | 约 10 MHz |     |
+| 锗硅自组织纳米线单量子点            |    几十 MHz |       接近强耦合水平 |                     — |          |
+| 应变锗空穴–腔耦合                   |           — | 体系可拓展到翻转模式 |                     — |          |
+| Si/SiGe 翻转模式（LDQD）            |           — |             27.6 MHz |               2.2 MHz |          |
 
 首次在锗硅自组织纳米线单量子点上利用载流子压缩系数与耦合电容提取 $g_c$，并进一步评估该体系下自旋–腔耦合"接近强耦合水平"； 进一步在应变锗体系中引入镂空结构谐振腔以抑制界面缺陷引入的额外耗散，为高 $Q$ 腔上获得强自旋–光子耦合提供器件方案。
 
@@ -186,46 +187,46 @@ $$
 
 ![[assets/figures/spin-photon-coupling/311c5796ef062e4645de3b47f5a1e28154ccbf3596ea4a2a15687eaf259113fb.jpg]]
 
-*腔模介导的自旋-自旋相互作用：两个量子点的失谐差 $\Delta$ 匹配时交换虚腔光子（能量 $\omega_c$）；$\omega_L^i$ 是各点自旋的 Zeeman 频率——Overhauser 场随机移动这些频率，使有效耦合与门保真度随核态构型涨落。图源：Hildmann & Burkard (2011)，Fig. 1。*
+_腔模介导的自旋-自旋相互作用：两个量子点的失谐差 $\Delta$ 匹配时交换虚腔光子（能量 $\omega_c$）；$\omega_L^i$ 是各点自旋的 Zeeman 频率——Overhauser 场随机移动这些频率，使有效耦合与门保真度随核态构型涨落。图源：Hildmann & Burkard (2011)，Fig. 1。_
 
 ![[assets/figures/spin-photon-coupling/797e31b4318c7e7332f08f73a3b76499ccf867d778459c57bcf69c728754d0f6.jpg]]
 
-*单电子量子点与腔耦合的能级图：电子自旋经拉比驱动 $\Omega_L$ 与腔模间接耦合，失谐 $\Delta_c$、$\Delta_L$ 都依赖 Overhauser 场 $h$——超精细相互作用到二阶的修正进入有效耦合强度。图源：Hildmann & Burkard (2011)，Fig. 2。*
+_单电子量子点与腔耦合的能级图：电子自旋经拉比驱动 $\Omega_L$ 与腔模间接耦合，失谐 $\Delta_c$、$\Delta_L$ 都依赖 Overhauser 场 $h$——超精细相互作用到二阶的修正进入有效耦合强度。图源：Hildmann & Burkard (2011)，Fig. 2。_
 
 **内禀自旋轨道的横/纵耦合方法**（无微磁体路线）：硅量子点的残余自旋轨道耦合（界面 Rashba+Dresselhaus）可以直接构造横向（色散读出型 $g_spropto g_c$）与纵向（弛豫型 $g_parallel$）自旋-光子耦合——电场调制量子点位置使波函数采样 SOC 梯度，无需额外磁性元件。28Si 中残余 SOC 虽弱，但通过点位置优化可达可用耦合强度——与微磁体路线形成"无磁"对照（对磁场敏感的兼容场景）。
 
 ![[assets/figures/spin-photon-coupling/2f2dcb0d2231aa25c1d3272b7ad9267a43642633982619a1b460b50c8cf3b7a3.jpg]]
 
-*内禀 SOC 的耦合构造：量子点位置电场调制的横/纵向自旋-光子耦合——无微磁体路线。图源：Guo et al. (2023)，Fig. 1。*
+_内禀 SOC 的耦合构造：量子点位置电场调制的横/纵向自旋-光子耦合——无微磁体路线。图源：Guo et al. (2023)，Fig. 1。_
 
 ![[assets/figures/spin-photon-coupling/d5126ba67ed778d57657665046f533b2b61d8af67ecce3d97116985317d312bc.jpg]]
 
-*耦合强度的参数依赖：SOC 梯度采样与点尺寸/位置的联合优化——28Si 中可达的耦合窗口。图源：Guo et al. (2023)，Fig. 2。*
+_耦合强度的参数依赖：SOC 梯度采样与点尺寸/位置的联合优化——28Si 中可达的耦合窗口。图源：Guo et al. (2023)，Fig. 2。_
 
 **开创性的综合论述**：cQED 与自旋比特结合的早期系统理论（2006，满谷/谢系）——量子总线架构扩展到自旋自由代的完整分析：单比特/两比特动力学、与 Wallraff/Schuster 实验的对接。词条作为该领域的文档化记录，此文是理论源头之一。
 
 ![[assets/figures/spin-photon-coupling/a4a5c74405d008df480afd710cde6b85de421d87bc13da186c12ef7fec8fadd0.jpg]]
 
-*cQED-自旋比特的早期理论框架：量子总线架构的自旋扩展——词条理论源头文献。图源：满谷/谢系 (2006)，Fig. 1。*
+_cQED-自旋比特的早期理论框架：量子总线架构的自旋扩展——词条理论源头文献。图源：满谷/谢系 (2006)，Fig. 1。_
 
 ![[assets/figures/spin-photon-coupling/36ebcddf04e516adabf932016520a1cbe7d801803e27cf3cd34c4f3eb08f0589.jpg]]
 
-*单/两比特动力学：理论预测与早期实验的对接。图源：满谷/谢系 (2006)，Fig. 2。*
+_单/两比特动力学：理论预测与早期实验的对接。图源：满谷/谢系 (2006)，Fig. 2。_
 
 ## 参数与量级
 
 下表汇总本站论文中所列工作中实际演示或理论评估的自旋–光子耦合参数。电荷–光子耦合 $g_c$、自旋–光子耦合 $g_s$、腔耗散 $\kappa$ 与自旋退相干 $\gamma_s$ 是四个核心参数。
 
-| 体系 | 自旋比特编码 | $g_c/2\pi$ | $g_s/2\pi$（评估/实测） | $\kappa/2\pi$ | $\gamma_s/2\pi$ | 来源 |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| Si/SiGe 单自旋 + 微磁体 | LD 单自旋 | — | 约 5–11 MHz（实验） | 1–5 MHz | 2.4–2.5 MHz | 综述 |
-| Si/SiGe 翻转模式 RDQD + TiN 3.5 kΩ 腔 | flopping-mode | 175 MHz（$g_0$） | 21.8 MHz（$g_s/2\pi$），$2g_s/2\pi=43.5$ MHz（实测） | 7.5 MHz（杂化后） | 4.6 MHz | |
-| Si/SiGe 翻转模式 LDQD + TiN 3.5 kΩ 腔 | flopping-mode | 同上 | 13.8 MHz（$g_s/2\pi$），$2g_s/2\pi=27.6$ MHz（实测） | 6.8 MHz（杂化后） | 2.2 MHz | |
-| Si/SiGe 三量子点 RX 比特 + TiN 腔 | 共振交换 | 168 MHz（$g_{c0}$） | 65 MHz（$g_\mathrm{RX}/2\pi$） | — | 16.9 MHz | |
-| 锗纳米线双量子点（$\varepsilon=0$） | 空穴自旋（理论） | 15 MHz（实测） | 约 3 MHz（评估） | 6.6 MHz | 约 10 MHz（理论） | |
-| 锗纳米线单量子点（$|\varepsilon|\gg 2t_c$） | 空穴自旋（理论） | 15 MHz（实测） | 0.22 MHz（评估） | 6.6 MHz | 约 10 MHz（理论） | |
-| 锗硅自组织纳米线单量子点 | 空穴自旋 | 几十 MHz | 接近强耦合水平（评估） | — | — | |
-| InAs 纳米线 | 空穴/电子自旋（理论） | — | 约 0.2 MHz | — | — | 引用 |
+| 体系                                  | 自旋比特编码          |          $g_c/2\pi$ |                              $g_s/2\pi$（评估/实测） |     $\kappa/2\pi$ |   $\gamma_s/2\pi$ | 来源    |
+| ------------------------------------- | --------------------- | ------------------: | ---------------------------------------------------: | ----------------: | ----------------: | ------- |
+| Si/SiGe 单自旋 + 微磁体               | LD 单自旋             |                   — |                                  约 5–11 MHz（实验） |           1–5 MHz |       2.4–2.5 MHz | 综述    |
+| Si/SiGe 翻转模式 RDQD + TiN 3.5 kΩ 腔 | flopping-mode         |    175 MHz（$g_0$） | 21.8 MHz（$g_s/2\pi$），$2g_s/2\pi=43.5$ MHz（实测） | 7.5 MHz（杂化后） |           4.6 MHz |         |
+| Si/SiGe 翻转模式 LDQD + TiN 3.5 kΩ 腔 | flopping-mode         |                同上 | 13.8 MHz（$g_s/2\pi$），$2g_s/2\pi=27.6$ MHz（实测） | 6.8 MHz（杂化后） |           2.2 MHz |         |
+| Si/SiGe 三量子点 RX 比特 + TiN 腔     | 共振交换              | 168 MHz（$g_{c0}$） |                       65 MHz（$g_\mathrm{RX}/2\pi$） |                 — |          16.9 MHz |         |
+| 锗纳米线双量子点（$\varepsilon=0$）   | 空穴自旋（理论）      |      15 MHz（实测） |                                     约 3 MHz（评估） |           6.6 MHz | 约 10 MHz（理论） |         |
+| 锗纳米线单量子点（$                   | \varepsilon           |         \gg 2t_c$） |                                     空穴自旋（理论） |    15 MHz（实测） |  0.22 MHz（评估） | 6.6 MHz | 约 10 MHz（理论） |     |
+| 锗硅自组织纳米线单量子点              | 空穴自旋              |            几十 MHz |                               接近强耦合水平（评估） |                 — |                 — |         |
+| InAs 纳米线                           | 空穴/电子自旋（理论） |                   — |                                           约 0.2 MHz |                 — |                 — | 引用    |
 
 量级判读：
 
@@ -264,14 +265,13 @@ $$
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]通过 $g_0\propto\sqrt{Z_r}$ 同时放大 $g_c$ 与 $g_s$；TiN 3.5 kΩ 腔的 $\kappa/2\pi=2.2\ \mathrm{MHz}$ 是当前自旋比特强耦合演示的硬件支撑。
 - [[materials-devices/micromagnet|微磁体]]是 Si/SiGe 路线中引入自旋–电荷混合的核心元件；其梯度场是 $g_s\propto B_x$ 的物理来源。
 - [[qubit-control/electric-dipole-spin-resonance|EDSR]]是单个自旋通过自旋–电荷混合翻转的机制，与自旋–光子耦合共用同一套混合机制：两者都从 $g_c$ 经同一矩阵元 $d_{01}^{(2)}$ 转换而来。
-- [[circuit-qed/nv-center-cavity-bus|NV 色心腔总线]]是互补的磁耦合路线：量子点自旋经微磁体混入电荷走电偶极耦合，NV 色心直接用腔的微波磁场（磁偶极）——同一总线思想在两类自旋体系上的两种实现。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]在双量子点零失谐点把 $g_s$ 推高一个数量级，是目前 Si/SiGe 平台上自旋–光子强耦合的最高 $g_s$ 来源。
 - [[qubit-control/resonant-exchange-qubit|共振交换量子比特]]可与腔直接耦合，避免微磁体集成； 在 Si/SiGe 三量子点上测得 $g_\mathrm{RX}/2\pi=65\ \mathrm{MHz}$。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]利用内禀自旋–轨道耦合，可省去微磁体；、 在锗纳米线和应变锗上评估 $g_s$。
 - [[circuit-qed/strong-coupling|强耦合判据]]给出 $g_s>\kappa,\gamma_s$ 的实验指标； 论文以 $g_s>\kappa^\*,\gamma_s$ 为自旋比特的对应判据。
 
-
 ## 参考文献
 
 - 硅中自旋–光子强耦合的里程碑实验：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]；空穴体系见 [[references/hendrickx-2021|Hendrickx et al., Nature 591, 580 (2021)]] 及文献库内锗–腔耦合工作。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -2,12 +2,12 @@
 title: 色散频移
 description: 二能级系统远离共振时，通过虚光子交换把谐振腔有效频率按比特态平移 g²/Δ 的二阶微扰现象，是色散读出与腔介导耦合的共同基础。
 aliases:
- - 色散耦合
- - ac Stark 频移
- - dispersive shift
+  - 色散耦合
+  - ac Stark 频移
+  - dispersive shift
 tags:
- - 电路量子电动力学
- - 读出与测量
+  - 电路量子电动力学
+  - 读出与测量
 date: 2026-09-08
 source: QAtlas
 qatlas_id: qa_01m0qv7528ys7vz0cxmnq6b961
@@ -30,7 +30,15 @@ source_updated: 2026-08-24T09:17:17Z
 
 色散频移把"比特态"与"腔频"绑在一起，使测量腔的相位或频率响应成为比特态的非破坏性读出指针——这正是[[readout-measurement/dispersive-readout|色散读出]]的理论核心；同时它也通过虚光子把多个比特耦合到同一腔模，构成[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的桥梁。
 
-<!-- FIGURE: 三项色散频移的统一图示：横轴 $|\Delta|/g$，标注共振区（强耦合）与色散区（$\chi>\kappa,\gamma$）；纵轴分别画腔频平移、比特 ac Stark、Lamb 三条曲线 -->
+```mermaid
+flowchart LR
+  QD["量子点比特<br/>ωq"] -->|"失谐 Δ，虚光子耦合 g"| C["微波腔<br/>ωr"]
+  C --> S["腔频按量子点状态平移 ±χ"]
+  C --> A["光子数产生 AC Stark 频移 2χn"]
+  C --> L["真空涨落产生 Lamb 频移 χ"]
+```
+
+_量子点–腔处于色散区时不交换实光子，但二阶虚过程同时留下腔频、AC Stark 与 Lamb 三类可测频移。_
 
 ## 理论模型
 
@@ -86,22 +94,6 @@ $$
 
 色散耦合的强度因此直接受高阻抗腔 $Z_r$ 的放大——这正是半导体 cQED 几乎全部依赖[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线的核心理由。
 
-### transmon 的多能级修正
-
-对[[superconducting-qubits/transmon-qubit|transmon]]这类多能级比特，色散频移的公式需要加入非谐性 $\alpha$ 的修正。把 JC 模型替换为含三次非线性项的多能级模型
-
-$$
-\hat H=\hat H_{\mathrm{lin}}+\frac{\hbar\alpha}{2}\,b^\dagger b^\dagger b b
-$$
-
-做 Bogoliubov 变换对角化线性部分后，色散哈密顿量的腔频修正变为
-
-$$
-\chi=\frac{g^2\alpha}{\Delta(\Delta+\alpha)}\simeq\frac{g^2\alpha}{\Delta^2}.
-$$
-
-当 $|\Delta|\gg|\alpha|$（transmon 通常满足）时，分母的 $\alpha$ 修正使 $|\chi|$ 比 JC 模型的 $g^2/\Delta$ 小得多；同时 $\chi$ 与 $\alpha$ 同号——transmon 的负非谐性使 $\chi<0$。这个非谐性修正决定了 transmon 色散读出的"参数空间位置"，不能直接套用 JC 公式。
-
 ## 色散哈密顿量的三种解读
 
 ### 腔视角：腔频按比特态平移
@@ -126,16 +118,14 @@ $$
 
 ## 参数与量级
 
-色散频移的实用大小由三个参数共同决定：耦合 $g$、失谐 $\Delta$、以及比特非谐性 $\alpha$（transmon）。下表汇总本站论及的几个代表性工作以及本仓库论文给出的实验提取值。
+色散频移的实用大小主要由耦合 $g$ 与失谐 $\Delta$ 决定；对半导体量子点，还必须同时考虑电荷混合角、隧穿耦合和电荷噪声。下表汇总量子点–腔实验的代表参数。
 
-| 体系 / 来源 | $g/2\pi$ | $\Delta/2\pi$ | 非谐 $\alpha/2\pi$ | $\chi/2\pi$（实验或公式） |
-| --- | ---: | ---: | ---: | ---: |
-| GaAs DQD + NbTiN 反射腔 | $g_c/2\pi\sim 100$ MHz | 较大 | — | 比特态切换引起腔频几个 MHz 量级移动 |
-| Si/SiGe RDQD + TiN 腔 | $g_0/2\pi=175$ MHz | 调谐范围覆盖 $\omega_r=4.993$ GHz | — | 由 $\chi=g^2/\Delta$ 给出 |
-| Si/SiGe RDQD 翻转模式自旋 | $g_s/2\pi=21.75$ MHz | 偏离腔频若干 GHz | — | ac Stark 频移可见；读出由 $\chi$ 提供 |
-| GaAs DQD + SQUID 阵列腔 | $g/2\pi=103$ MHz | $\omega_a=5.565$ GHz、$\omega_r=6.53$ GHz | — | $\chi/2\pi=11$ MHz 实测 |
-| transmon + 共面腔 | $g/2\pi$ 由约瑟夫森能决定 | 工作点远离非谐 | $\alpha/2\pi\sim -200$ MHz | $|\chi|$ 由 $\chi=g^2\alpha/\Delta^2$ 给出；$\chi<0$ 与 $\alpha$ 同号 |
-| transmon 单发读出 | 几十 MHz | $\sim 6$ GHz | $\alpha/2\pi\sim -250$ MHz | $|\chi|/2\pi\sim 1$ MHz 量级 |
+| 体系 / 来源               |               $g/2\pi$ |                             $\Delta/2\pi$ | 非谐 $\alpha/2\pi$ |             $\chi/2\pi$（实验或公式） |
+| ------------------------- | ---------------------: | ----------------------------------------: | -----------------: | ------------------------------------: |
+| GaAs DQD + NbTiN 反射腔   | $g_c/2\pi\sim 100$ MHz |                                      较大 |                  — |   比特态切换引起腔频几个 MHz 量级移动 |
+| Si/SiGe RDQD + TiN 腔     |     $g_0/2\pi=175$ MHz |         调谐范围覆盖 $\omega_r=4.993$ GHz |                  — |             由 $\chi=g^2/\Delta$ 给出 |
+| Si/SiGe RDQD 翻转模式自旋 |   $g_s/2\pi=21.75$ MHz |                          偏离腔频若干 GHz |                  — | ac Stark 频移可见；读出由 $\chi$ 提供 |
+| GaAs DQD + SQUID 阵列腔   |       $g/2\pi=103$ MHz | $\omega_a=5.565$ GHz、$\omega_r=6.53$ GHz |                  — |               $\chi/2\pi=11$ MHz 实测 |
 
 > 自旋比特的色散频移通常比电荷比特小一到两个量级：PDF p. 78）测得 $2g_s/2\pi=43.5$ MHz，对应 $\chi_s/2\pi$ 仅约百 kHz 量级，需更高 $Q$ 腔或更长积分时间才能稳定读出。
 
@@ -157,43 +147,6 @@ $$
 $$
 
 由此可得腔内平均光子数 $n_p=\alpha_{\mathrm{fit}}P_p/(2\chi)$——）用此方法测出 $n_p\sim 1$ 的弱探测区。当 $n_p\to 0$（极弱探测）时残留的 $\chi$ 即 Lamb 频移，可用真空涨落来源自洽。
-
-### 光子数标定的动态范围：ac-Stark 与 EMIA 双法交叉验证（Schmidt 2018）
-
-ac-Stark 频移天然是一只"光子计数器"，但它受色散近似约束（$n\lesssim n_{\mathrm{crit}}$），高功率区失效。Schmidt 等（WMI）在同一芯片上把 transmon、微波腔与纳米机械弦组合成杂化系统，用两种独立方法标定腔平均光子数并交叉验证，把可用动态范围拉到**九个量级**。基准公式是对称耦合 λ/2 腔的平均光子数
-
-$$
-\bar n_c = \frac{2P_{\mathrm{appl}}}{\hbar\omega_p(\kappa^2+4\Delta_p^2)}\, x,
-\qquad x \equiv \Lambda\kappa_{\mathrm{ext}},
-$$
-
-其中 $P_{\mathrm{appl}}$ 为进入制冷机前的源功率、$\Lambda$ 为线路总衰减、$\kappa_{\mathrm{ext}}$ 为外耦合率——标定的全部困难集中在未知因子 $x$ 上，用两种物理独立的效应把它测出来：
-
-- **低功率区（ac-Stark 光子计数）**：transmon 频移随腔光子数线性变化
-
-$$
-\delta\omega = 2\frac{g_q^2}{\Delta_{qc}}\cdot\frac{\alpha}{\alpha+\Delta_{qc}}\cdot\bar n_c,
-$$
-
-其中 $g_q$ 为比特-腔耦合、$\Delta_{qc}=\omega_q-\omega_c$、$\alpha$ 为 transmon 非谐（注意与词条前文 $\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 的一致性——这里的 $\delta\omega$ 即 $2\chi\bar n_c$）。实验器件 $g_q/2\pi=134$ MHz、$\Delta_{qc}/2\pi=2.056$ GHz、$\alpha/2\pi=-188$ MHz，临界光子数 $n_{\mathrm{crit}}=\Delta_{qc}^2/(2g_q)^2\approx60$，工作区 $\bar n_c\leq28$；测得 $\delta\omega\cdot\kappa^2$ 随 $P_{\mathrm{appl}}$ 严格线性，给出 $x_{\mathrm{qb}}=(5.65\pm0.23)\ \mathrm{s^{-1}}$。
-
-- **高功率区（电致机械诱导吸收 EMIA）**：红边带驱动下机械弦的反斯托克斯场与探测场干涉，使机械线宽展宽
-
-$$
-\Gamma_{\mathrm{eff}} = \Gamma_m\left(1 + \frac{4g_{m0}^2}{\kappa\Gamma_m}\cdot\frac{2P_{\mathrm{appl}}\, x_{\mathrm{EMIA}}}{\hbar\omega_d(\kappa^2+4\Delta_{mc}^2)}\right),
-$$
-
-其中 $g_{m0}$ 为机电真空耦合（器件 $g_{m0}/2\pi=0.31$ Hz）、$\Gamma_m$ 为机械线宽（$\Gamma_m/2\pi=12.4$ Hz、$\Omega_m/2\pi=3.15018$ MHz 的 2 pg 纳米弦）。EMIA 在高光子数区依然线性，标定出 $x_{\mathrm{EMIA}}$ 与 $x_{\mathrm{qb}}$ **定量一致**——两种物理（量子比特谱学与经典机电干涉）在同一芯片上互为基准。
-
-![[assets/figures/dispersive-shift/schmidt2018-fig2-hybrid-sample.jpg]]
-
-*杂化标定器件：超导微波谐振腔 + transmon 比特 + 双端固支纳米机械弦单片集成（铝薄膜电子束蒸发 + 300 °C 退火产生高张应力 + 反应离子刻蚀释放）；机械弦长 60 µm、质量约 2 pg、距地平面 160 nm 间隙给出机电真空耦合 g_m0/2π=0.31 Hz。图源：Schmidt et al., J. Appl. Phys. (2018)，Fig. 2。*
-
-![[assets/figures/dispersive-shift/schmidt2018-fig3-acstark-calibration.jpg]]
-
-*ac-Stark 标定：乘积 δω·κ² 随输入功率 P_appl 的线性依赖（点为数据、线为拟合）——斜率结合光子数公式与器件参数给出标定因子 x_qb=(5.65±0.23) s⁻¹，工作在临界光子数 ~60 以下的少光子区。图源：Schmidt et al., J. Appl. Phys. (2018)，Fig. 3。*
-
-工程意义：任何用到 ac-Stark 的实验（读出功率标定、测量诱导退相干估算、[[circuit-qed/bosonic-cqed|玻色编码]]的腔光子管理）都需要知道 $\bar n_c$；单靠比特谱学只能覆盖低功率端，机电 EMIA 把标定延伸到高功率端且不需要知道线路衰减的先验值。
 
 ### 透射与反射的散射参数
 
@@ -220,7 +173,7 @@ $$
 n_{\mathrm{crit}}=\frac{\Delta^2}{4g^2}\simeq\frac{|\Delta|}{4|\chi|}\gg 1
 $$
 
-色散展开失效，必须回到完整 JC 或 Rabi 模型。在 transmon 体系中一般要求 $n_p<n_{\mathrm{crit}}/10$ 以维持色散读出的可解释性。对 $|\Delta|/2\pi\sim 6$ GHz、$g/2\pi\sim 50$ MHz 的典型值，$n_{\mathrm{crit}}$ 在数十到一百量级——这一上限决定了色散读出的最大可用探测功率。
+色散展开失效时必须回到完整 JC 或 Rabi 模型。量子点–腔体系通常要求探测光子数显著低于 $n_{\mathrm{crit}}=\Delta^2/(4g^2)$，这一上限决定了最大可用探测功率。
 
 <!-- FIGURE: $|\Delta|/g$ 区间划分与临界光子数 $n_{\mathrm{crit}}$ 边界，纵轴画 $|\chi|$ 与 $n_p$ 关系 -->
 
@@ -244,7 +197,7 @@ $$
 - **与[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]**与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]：$\chi=g^2/\Delta$ 把色散频移直接绑定到 $g$ 的微观来源；自旋比特经微磁体或自旋轨道获得的小 $g_s$ 给出 $\chi_s\ll\chi_c$。
 - **与[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]**：把多个比特共享同一腔模并在色散区做二阶微扰，可得两比特间的有效交换 $\sim g_1g_2/\Delta$——本质上是色散频移的"反向利用"。
 - **与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]**：$g_0\propto\sqrt{Z_r}$ 决定了 $\chi\propto Z_r$；半导体 cQED 中 $\chi/2\pi$ 从弱耦合腔的 $\lesssim 1$ MHz 提升到高阻抗腔的数 MHz 量级，是[[circuit-qed/strong-coupling|强耦合]]与色散读出同时改善的关键。
-- **与[[readout-measurement/purcell-filter|Purcell 滤波器]]**：减小 $\kappa$ 同时压窄读出带宽，会减小 $\chi/\kappa$ 区间；Purcell 滤波器在保护 $T_1$ 的同时必须保留足够的 $\chi/\kappa$。
+- **与Purcell 滤波器**：减小 $\kappa$ 同时压窄读出带宽，会减小 $\chi/\kappa$ 区间；Purcell 滤波器在保护 $T_1$ 的同时必须保留足够的 $\chi/\kappa$。
 
 ## 设计经验：调出色散读出工作点
 
@@ -254,10 +207,10 @@ $$
 2. **探测频率选在 $\omega_p=\omega_r-\chi$ 或 $\omega_r$ 上**：前者对小驱动功率敏感，后者在大功率下饱和但对频谱移动观察直接；
 3. **保持 $n_p\lesssim n_{\mathrm{crit}}/10$**：保证色散近似成立，同时把测量诱导退相干压到可接受范围；
 4. **同时优化 $\kappa$、$\eta$ 与 $\chi$**：SNR$\propto\chi^2/\kappa$ 与 $\eta t_m$，单纯减小 $\kappa$ 会拉长腔响应时间 $1/\kappa$，需配合 Purcell 滤波器与量子极限放大器；
-5. **transmon 体系需考虑非谐修正**：$\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 而非 $g^2/\Delta$；$\chi$ 与 $\alpha$ 同号，负非谐性使 $\chi<0$；
-6. **自旋比特的弱 $\chi$ 需要更长积分**：$\chi_s$ 通常比 $\chi_c$ 小一两个量级，必须用更高 $Q$ 腔或更长积分时间补偿。
+5. **自旋比特的弱 $\chi$ 需要更长积分**：$\chi_s$ 通常比 $\chi_c$ 小一两个量级，必须用更高 $Q$ 腔或更长积分时间补偿。
 
 ## 参考文献
 
-- Schmidt, P., Schwienbacher, D., Pernpeintner, M., Wulschner, F., Deppe, F., Marx, A., Gross, R., Huebl, H. Ultrawide-range photon number calibration using a hybrid system combining nano-electromechanics and superconducting circuit quantum electrodynamics. *Journal of Applied Physics* (2018). DOI: 10.1063/1.5052414；arXiv:1808.05482（QAtlas 缓存：1808.05482）。
+- Schmidt, P., Schwienbacher, D., Pernpeintner, M., Wulschner, F., Deppe, F., Marx, A., Gross, R., Huebl, H. Ultrawide-range photon number calibration using a hybrid system combining nano-electromechanics and superconducting circuit quantum electrodynamics. _Journal of Applied Physics_ (2018). DOI: 10.1063/1.5052414；arXiv:1808.05482（QAtlas 缓存：1808.05482）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -2,13 +2,13 @@
 title: 谷劈裂
 description: 硅等间接带隙半导体中量子点里把残留能谷二重简并分开的能隙，以及由此引入的泄漏与退相干通道。
 aliases:
- - 谷间劈裂
- - valley splitting
- - 能谷劈裂
+  - 谷间劈裂
+  - valley splitting
+  - 能谷劈裂
 tags:
- - 量子点基础
- - 能谷
- - 自旋量子比特
+  - 量子点基础
+  - 能谷
+  - 自旋量子比特
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qv1fqsach208v7wsca3wzx
@@ -61,11 +61,11 @@ $\Delta_v$ 是界面势在两个谷态之间的矩阵元，反映了界面锐利
 
 对 Si-MOS 的具体讨论：
 
-| 结构状态 | 点群 | 谷简并 |
-| --- | --- | --- |
-| 体硅 | $O_h$ | 六重 |
+| 结构状态                  | 点群     | 谷简并          |
+| ------------------------- | -------- | --------------- |
+| 体硅                      | $O_h$    | 六重            |
 | 应变硅（Si/SiGe、Si-MOS） | $D_{2d}$ | 二重 $\Gamma_2$ |
-| 电极加电势、不平整界面 | $C_{2v}$ | 完全劈裂 |
+| 电极加电势、不平整界面    | $C_{2v}$ | 完全劈裂        |
 
 谷劈裂 $E_\mathrm{VS}$ 对应 $\Gamma_2$ 在 $C_{2v}$ 下的能量差。
 
@@ -108,20 +108,22 @@ $$
 另有**低次谐波/Ge 尖峰**构型（$q\approx k_1$）：势与波函数各自以 $k_1$ 为主频、乘积却有效激发 $2k_1$ 机制，但需 $X_\mathrm{ww}\gtrsim12\%$ 的高 Ge 含量，增强较弱（$\nu/2\sigma\approx0.62$）且强自旋轨道副作用使比特控制复杂化——不如长周期摆动阱。
 
 ![[assets/figures/valley-splitting/thayil2025-fig1-brillouin-strain.jpg]]
-*能带与对称性框架：fcc 布里渊区中六个等价导带极小被双轴应变劈裂为 $\pm z$ 两谷；剪切应变沿 [110] 进一步把晶体对称性从四方降到正交，打破映射两个 fcc 子晶格的非点式螺旋对称（子晶格位移由 Kleinman 参数 ζ 控制），解锁 2k₁ 共振。图源：Thayil et al. (2025), Fig. 1。*
+_能带与对称性框架：fcc 布里渊区中六个等价导带极小被双轴应变劈裂为 $\pm z$
+
+两谷；剪切应变沿 [110] 进一步把晶体对称性从四方降到正交，打破映射两个 fcc 子晶格的非点式螺旋对称（子晶格位移由 Kleinman 参数 ζ 控制），解锁 2k₁ 共振。图源：Thayil et al. (2025), Fig. 1。_
 
 ![[assets/figures/valley-splitting/thayil2025-fig3-interface-width.jpg]]
-*界面宽度判据的重写：无剪切应变（ε_{x,y}=0）时确定性增强（灰色区）只覆盖约 1 ML 的锐界面；ε_{x,y}=0.05% 的剪切应变把窗口扩展到约 5 ML——共振分量从 n=0 转为由 n=−1（2k₁ 机制）主导。红色区为瑞利分布的 [25%, 75%] 分位。图源：Thayil et al. (2025), Fig. 3。*
+_界面宽度判据的重写：无剪切应变（ε_{x,y}=0）时确定性增强（灰色区）只覆盖约 1 ML 的锐界面；ε_{x,y}=0.05% 的剪切应变把窗口扩展到约 5 ML——共振分量从 n=0 转为由 n=−1（2k₁ 机制）主导。红色区为瑞利分布的 [25%, 75%] 分位。图源：Thayil et al. (2025), Fig. 3。_
 
 ![[assets/figures/valley-splitting/thayil2025-fig4-wiggle-well-resonances.jpg]]
-*摆动阱的共振地图（平均谷劈裂 vs Ge 调制波数 q 与幅度 X_ww）：无剪切应变时只在 q=2k₀ 有确定性共振；ε_{x,y}=0.1% 的剪切应变在 q=2k₁ 解锁新的长周期共振，且劈裂随剪切应变线性增长。图源：Thayil et al. (2025), Fig. 4。*
+_摆动阱的共振地图（平均谷劈裂 vs Ge 调制波数 q 与幅度 X_ww）：无剪切应变时只在 q=2k₀ 有确定性共振；ε_{x,y}=0.1% 的剪切应变在 q=2k₁ 解锁新的长周期共振，且劈裂随剪切应变线性增长。图源：Thayil et al. (2025), Fig. 4。_
 
 ![[assets/figures/valley-splitting/thayil2025-fig5a-separatrix-map.jpg]]
-*长周期摆动阱的两参数地图（剪切应变 × Ge 幅度）：虚线为 ν=2σ 分界（确定性增强区 vs 无序主导区）——大剪切应变下微小的 Ge 幅度即可进入确定性增强区，热点的统计权重被系统性压低。图源：Thayil et al. (2025), Fig. 5(a)。*
+_长周期摆动阱的两参数地图（剪切应变 × Ge 幅度）：虚线为 ν=2σ 分界（确定性增强区 vs 无序主导区）——大剪切应变下微小的 Ge 幅度即可进入确定性增强区，热点的统计权重被系统性压低。图源：Thayil et al. (2025), Fig. 5(a)。_
 
 ### 原子级紧束缚视角：合金键型与界面无序（Jiang 2012）
 
-上节的统一理论在连续介质框架内统计合金无序；原子级模拟给出互补且更细的机制图像。Jiang 等人用 **VFF 应变弛豫（修正 Keating 势，阱两侧各 25 nm SiGe）+ sp³d⁵s* 近邻紧束缚（电子结构区 4 nm）** 的链条在 NEMO-3D 中处理至 $5\times10^5$ 个原子，对 20 个随机原子构型样本统计平均。模型先过两道实验验证：区展开提取的体 SiGe X/L 谷带边与实测定量吻合（含 X–L 交叉），VFF 忠实复现 Si–Si/Si–Ge/Ge–Ge 的**三峰键长分布**——而虚拟晶体近似（VCA）只有一条平均键长，意味着 SiGe/Si 界面处存在 VCA 完全看不到的**位置无序**。
+上节的统一理论在连续介质框架内统计合金无序；原子级模拟给出互补且更细的机制图像。Jiang 等人用 _*VFF 应变弛豫（修正 Keating 势，阱两侧各 25 nm SiGe）+ sp³d⁵s* 近邻紧束缚（电子结构区 4 nm）_* 的链条在 NEMO-3D 中处理至 $5\times10^5$ 个原子，对 20 个随机原子构型样本统计平均。模型先过两道实验验证：区展开提取的体 SiGe X/L 谷带边与实测定量吻合（含 X–L 交叉），VFF 忠实复现 Si–Si/Si–Ge/Ge–Ge 的**三峰键长分布**——而虚拟晶体近似（VCA）只有一条平均键长，意味着 SiGe/Si 界面处存在 VCA 完全看不到的**位置无序**。
 
 结论按主题分四条：
 
@@ -131,24 +133,24 @@ $$
 - **键型 Gedankenexperiment**：25% Ge 的 8 原胞有序构型 {4,6}/{5,6}（无最近邻 Ge–Ge 键）给出偏高的 VS，而含一个 Ge–Ge 键的 {2,6} 把 VS 压回随机合金值——**只匹配带错位与有效质量不够，必须计入全部三类键**。
 
 ![[assets/figures/valley-splitting/jiang2012-fig2a-well-thickness.jpg]]
-*阱厚依赖（1 与 2 MV/m，逐单胞改变厚度）：计算复现实验观测的"阱越薄 VS 越大"趋势（4/5.3/10/20 nm 实验点，未调任何材料参数）；计算值系统性偏高是因为未含已知会压低 VS 的界面切斜（miscut），本文聚焦"平整阱 + 合金无序"。图源：Jiang et al. (2012), Fig. 2。*
+_阱厚依赖（1 与 2 MV/m，逐单胞改变厚度）：计算复现实验观测的"阱越薄 VS 越大"趋势（4/5.3/10/20 nm 实验点，未调任何材料参数）；计算值系统性偏高是因为未含已知会压低 VS 的界面切斜（miscut），本文聚焦"平整阱 + 合金无序"。图源：Jiang et al. (2012), Fig. 2。_
 
 ![[assets/figures/valley-splitting/jiang2012-fig5a-bond-types.jpg]]
-*键型效应（有序 25% Ge 势垒，实/虚线为 {4,6}/{5,6} 构型，对照随机势垒）：无 Ge-Ge 键的有序势垒 VS 高于随机情形；纳入最近邻 Ge-Ge 键（{2,6}，另见图 b）后 VS 被压回随机值——Ge–Ge 键是合金无序压低谷劈裂的关键微观通道。图源：Jiang et al. (2012), Fig. 5。*
+_键型效应（有序 25% Ge 势垒，实/虚线为 {4,6}/{5,6} 构型，对照随机势垒）：无 Ge-Ge 键的有序势垒 VS 高于随机情形；纳入最近邻 Ge-Ge 键（{2,6}，另见图 b）后 VS 被压回随机值——Ge–Ge 键是合金无序压低谷劈裂的关键微观通道。图源：Jiang et al. (2012), Fig. 5。_
 
 ### δ 掺杂 Si:P 层的谷劈裂与第一性计算基准（Drumm 2013）
 
 STM 光刻的原子精度器件把磷原子放进硅的单个原子层（δ 层），排成阵列、导线、隧道结与量子点——这一施主平台中谷简并的解除同样是首要问题，但量级与阱/点体系完全不同：$1/4$ ML $c(2\times2)$ Si:P 单层的谷劈裂（超胞折叠后 $\Gamma_1$–$\Gamma_2$ 带极小能差）达 **meV 量级**，文献预言却散布在 5–270 meV 之间。
 
 ![[assets/figures/valley-splitting/drumm2013-fig2-delta-layer.jpg]]
-*δ 掺杂 Si:P 层的原子模型（沿 [110] 视角，32 层）：Si（小灰球）与取代晶位的 P 原子构成单掺杂层，上下为 Si 包覆层——超胞周期边界会使相邻掺杂层人工耦合，收敛需要 ≥80 层包覆。图源：Drumm et al. (2013), Fig. 2。*
+_δ 掺杂 Si:P 层的原子模型（沿 [110] 视角，32 层）：Si（小灰球）与取代晶位的 P 原子构成单掺杂层，上下为 Si 包覆层——超胞周期边界会使相邻掺杂层人工耦合，收敛需要 ≥80 层包覆。图源：Drumm et al. (2013), Fig. 2。_
 
 Drumm 等人的贡献是**基组基准化**：以平面波 DFT（VASP，截止能可系统提升）为基准，80 层 Si 包覆下 $1/4$ ML 掺杂的谷劈裂收敛于 **93 meV**；局域数值轨道基 DZP（SIESTA）给 99.5 meV（偏差 7%，且因局域性可算两倍大的系统）；而此前计算常用的 **SZP 基给 145 meV——高估 55%**，即先前 ab initio 谷劈裂系统性高估逾 50% 的根源在于基组不完备。这条教训与上文"局域 EFT 参考能歧义"一节同构：跨方法对比必须显式基准化，否则数值差异会被误读为物理。
 
 体系本身还有两个敏感性：**隐式掺杂把掺杂层沿法向抹平、削弱限域**，谷劈裂从显式掺杂的 ~120 meV 跌到 ~7 meV；**P 原子排列**同样关键——[110] 对齐 ~270 meV、[100] 对齐 ~50 meV、二聚体 ~85、随机 ~80、团簇 ~65 meV。收敛判据方面，$\Gamma_1$–$\Gamma_2$ 在 80 层包覆收敛（40 层即差 <0.5 meV）；离子弛豫位移 <0.05 Å、能量收益 <37 meV，可忽略。
 
 ![[assets/figures/valley-splitting/drumm2013-fig5a-pw-convergence.jpg]]
-*平面波 DFT 的尺寸收敛（1/4 ML 掺杂，最低几个带极小能量 vs 包覆层数）：Γ₁–Γ₂ 差（即谷劈裂）在 80 层收敛到 93 meV，40 层即与之相差 0.5 meV 以内；费米面与 Γ₁ 的间距自 60 层起变化 <1 meV。图源：Drumm et al. (2013), Fig. 5。*
+_平面波 DFT 的尺寸收敛（1/4 ML 掺杂，最低几个带极小能量 vs 包覆层数）：Γ₁–Γ₂ 差（即谷劈裂）在 80 层收敛到 93 meV，40 层即与之相差 0.5 meV 以内；费米面与 Γ₁ 的间距自 60 层起变化 <1 meV。图源：Drumm et al. (2013), Fig. 5。_
 
 ### 非局域多谷包络函数理论：局域近似的参考能歧义（Ermoneit 2026）
 
@@ -181,44 +183,62 @@ $$
 修复方案是**投影局域模型**：把局域包络谱滤波投影回谷扇区（$\tilde{f}=\int\mathrm{d}z'\,\Delta_{k_0}(z-z')\,\mathrm{e}^{-\mathrm{i}k_0(z-z')}f_\mathrm{loc}(z')$ 后归一化），再用 $\tilde f$ 计算 $\Delta$。它按构造恢复参考能不变性，基准测试中在常规阱、摆动阱等情形与精确非局域结果符合良好（Ge 尖峰处倾向高估）。
 
 ![[assets/figures/valley-splitting/ermoneit2026-fig3-interface-width.jpg]]
-*界面宽度扫描下的谷劈裂：精确非局域模型（红线）与投影局域模型（橙虚线）几乎重合，而局域模型（色标为 0–1 eV 的参考能偏移 $U_0$）在锐界面区展现出强烈的非物理参考能依赖——同一结构、不同能量零点给出截然不同的 $E_\mathrm{VS}$。图源：Ermoneit et al. (2026), Fig. 3。*
+_界面宽度扫描下的谷劈裂：精确非局域模型（红线）与投影局域模型（橙虚线）几乎重合，而局域模型（色标为 0–1 eV 的参考能偏移 $U_0$
+
+）在锐界面区展现出强烈的非物理参考能依赖——同一结构、不同能量零点给出截然不同的 $E_\mathrm{VS}$
+
+。图源：Ermoneit et al. (2026), Fig. 3。_
 
 ![[assets/figures/valley-splitting/ermoneit2026-fig4-field-symmetry.jpg]]
-*镜像对称量子阱的对称性检验：对称性要求 $E_\mathrm{VS}(F)=E_\mathrm{VS}(-F)$，精确非局域与投影局域模型均满足；常规局域模型出现非物理的 $F\to-F$ 不对称与强参考能依赖（色标同上图）。图源：Ermoneit et al. (2026), Fig. 4。*
+_镜像对称量子阱的对称性检验：对称性要求 $E_\mathrm{VS}(F)=E_\mathrm{VS}(-F)$
+
+，精确非局域与投影局域模型均满足；常规局域模型出现非物理的 $F\to-F$
+
+不对称与强参考能依赖（色标同上图）。图源：Ermoneit et al. (2026), Fig. 4。_
 
 ![[assets/figures/valley-splitting/ermoneit2026-fig5-wiggle-resonance.jpg]]
-*摆动阱（Ge 幅度 $X_\mathrm{ww}=5\%$，扫描波数 $q$）的谷劈裂：$q=2k_0$ 与 $q=2k_1$ 两个共振峰被局域与非局域模型同时捕捉，但 $2k_1$ 共振附近局域模型表现出强烈的非物理参考能依赖，投影局域模型则紧贴精确结果。图源：Ermoneit et al. (2026), Fig. 5。*
+_摆动阱（Ge 幅度 $X_\mathrm{ww}=5\%$
+
+，扫描波数 $q$
+
+）的谷劈裂：$q=2k_0$
+
+与 $q=2k_1$
+
+两个共振峰被局域与非局域模型同时捕捉，但 $2k_1$
+
+共振附近局域模型表现出强烈的非物理参考能依赖，投影局域模型则紧贴精确结果。图源：Ermoneit et al. (2026), Fig. 5。_
 
 对建模实践的启示：用局域 EFT 报告谷劈裂数值时，应核对结果对参考能平移的稳定性（或直接使用投影局域/非局域模型）；对照实验拟合时尤其要警惕通过调 $U_0$ 达成的"符合"。摆动阱等构型的系统化剖面设计另见[[materials-devices/valley-splitting-optimization|谷劈裂外延剖面优化]]词条。
 
 ## 参数与量级
 
-| 体系 | 谷劈裂 $E_\mathrm{VS}$ | 典型测量方法 | 来源 |
-| --- | --- | --- | --- |
-| Si/SiGe 量子点 | 几 $\mu\mathrm{eV}$ – $100\ \mu\mathrm{eV}$ 量级 | 隧穿线随磁场的拐点（磁输运） | |
-| Si-MOS 量子点（典型） | $200$–$1000\ \mu\mathrm{eV}$ | 同上，Si/SiO₂ 界面势垒更陡 | |
-| Si-MOS 实验报道 | $\sim 170\ \mu\mathrm{eV}$（某样品） | $E_\mathrm{VS}=g\mu_\mathrm{B}B_\mathrm{kink}$ 拐点法，臂杆系数 $\alpha_\mathrm{LP}=0.33$ | |
-| Si-MOS（meV 量级） | 接近 $\sim 1\ \mathrm{meV}$ 的强电场极限 | 强电场下 $\Gamma_2$ 显著分离 | |
-| 含 Ge 量子阱全阵列（21 点） | 平均 $179\ \mu\mathrm{eV}$、最大 $540(30)\ \mu\mathrm{eV}$，瑞利分布 | DAPS，Intel Tunnel Falls，$\mathrm{Si_{0.972}Ge_{0.028}}$ 阱 | Marcks 2025 |
-| 谷劈裂空间关联长度 | $\ell_C=19.2\ \mathrm{nm}$（≈平均点半径）；局域范围衰减尺度 $6.4(6)\ \mathrm{nm}$ | 连续谷探针自相关拟合 | Marcks 2025 |
-| 阵列尺度关联 | $n=6$ 栅反关联、$n=12$ 正关联，总体约 $720\ \mathrm{nm}$ | 排列检验，$p<0.05$ | Marcks 2025 |
-| 应变锗空穴 | 应变直接解除谷简并，$E_\mathrm{VS}$ 不再是关心量 | — | |
-| 确定性增强的界面宽度窗口 | 无剪切应变约 1 ML；ε_{x,y}=0.05% 时扩至约 5 ML | 统一包络理论 | Thayil 2025 |
-| 长周期摆动阱确定性增强 | ε_{x,y}≳0.006%（高幅度）至 ≳0.035%（微幅度）；ν/2σ≈1.41 @ X_ww=15% | 统一包络理论 | Thayil 2025 |
-| SGM 台阶探针可靠性上界 | 轨道激发 2.92 meV ≫ 谷劈裂变化 | 针尖诱导点 + 紧束缚 | Cakar 2024 |
-| 谷依赖自旋劈裂诊断 | 反推 $E_z=6.77$ MV/m、4 个单原子台阶（−24.7/−2.9/18.7/40.4 nm）；预言 $E_{vs}=34.4\ \mu$eV vs 实验 29 μeV | 两谷 ESR 各向异性 + 紧束缚拟合 | Ferdous 2018 |
-| 共振隧穿读出判据 | 小谷区（E_VS<Δz）非线性可改善读出（需谷能级均匀）；两种谷区均有 t_dec/t_meas>100（误差 <1%） | 三-QD NEGF | Tanamoto 2025 |
-| QuBus 谷劈裂地图 | 40×400 nm，1.5–200 μeV；Rice 分布 γ=0.1 μeV、σ=64.3 μeV；点半径 18.2 nm、关联 <30 nm | 穿梭点自旋–谷谱 | Volmer 2026 |
-| 穿梭退相干阈值 | 自旋–谷共振绝热/二能级穿越分界 ~2.8 m/s（Δ_sv≲300 neV、dE_VS/dx≈3 μeV/nm）；10 μm 穿梭误差 <8% | 传送带穿梭 P_S | Volmer 2026 |
-| 局域包络理论的参考能歧义 | 锐界面/薄阱/Ge 尖峰时歧义度量 2\|R\| 显著，U₀ ~ 数百 meV 即强烈改变 E_VS^loc 预测 | 精确非局域多谷 EFT 基准 | Ermoneit 2026 |
-| 投影局域（谱滤波）模型 | 恢复参考能不变性；常规阱与摆动阱符合精确非局域结果，Ge 尖峰处倾向高估 | 一维基准模拟 | Ermoneit 2026 |
-| SiMOS 谷劈裂（ST 角度测绘） | 83.1(9) 与 180.3(3) µeV（两点，四能级拟合） | ST 自由感应衰减热点位置，14 个磁场取向 | Jacobson 2026 |
-| Si/SiGe（Intel 代工三点的 QD₁,QD₂） | 36.81(1) 与 46.86(1) µeV | 同上，5 个取向 | Jacobson 2026 |
-| 自旋–谷耦合 γ 平台对照 | SiMOS 0.730(3)/0.87(2) µeV vs Si/SiGe 0.0504(2)/0.0571(2) µeV（差一个量级）；η≈0.55–0.84 rad，面内最大沿 [110]、节点沿 [1̄10] | 四能级模型拟合 | Jacobson 2026 |
-| 热点附近线宽 | >5 MHz（电荷噪声敏感度增强），沿 [1̄10]/[3̄10] 取向更局部化 | FFT 线宽叠加 | Jacobson 2026 |
-| 原子级 TB：无序量级 | 3.8 nm 阱零场 VS ≈有序突变势垒计算的 1/3；电场升分布展宽；10×10 nm² 域未收敛 | sp³d⁵s* TB + VFF，20 样本（NEMO-3D，至 5×10⁵ 原子） | Jiang 2012 |
-| 原子级 TB：键型 | 含最近邻 Ge-Ge 键（{2,6} 构型）把 VS 压回随机合金值；只匹配带错位不够 | 有序合金 Gedankenexperiment（25% Ge） | Jiang 2012 |
-| δ 掺杂 Si:P 层谷劈裂 | 1/4 ML：PW-DFT 基准 93 meV（80 层包覆）、DZP 99.5 meV、SZP 145 meV（高估 55%）；隐式掺杂 ~7 vs 显式 ~120 meV；[110]~270/[100]~50 meV | 平面波 vs 局域基 DFT 收敛研究 | Drumm 2013 |
+| 体系                                | 谷劈裂 $E_\mathrm{VS}$                                                                                                               | 典型测量方法                                                                              | 来源          |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------- |
+| Si/SiGe 量子点                      | 几 $\mu\mathrm{eV}$ – $100\ \mu\mathrm{eV}$ 量级                                                                                     | 隧穿线随磁场的拐点（磁输运）                                                              |               |
+| Si-MOS 量子点（典型）               | $200$–$1000\ \mu\mathrm{eV}$                                                                                                         | 同上，Si/SiO₂ 界面势垒更陡                                                                |               |
+| Si-MOS 实验报道                     | $\sim 170\ \mu\mathrm{eV}$（某样品）                                                                                                 | $E_\mathrm{VS}=g\mu_\mathrm{B}B_\mathrm{kink}$ 拐点法，臂杆系数 $\alpha_\mathrm{LP}=0.33$ |               |
+| Si-MOS（meV 量级）                  | 接近 $\sim 1\ \mathrm{meV}$ 的强电场极限                                                                                             | 强电场下 $\Gamma_2$ 显著分离                                                              |               |
+| 含 Ge 量子阱全阵列（21 点）         | 平均 $179\ \mu\mathrm{eV}$、最大 $540(30)\ \mu\mathrm{eV}$，瑞利分布                                                                 | DAPS，Intel Tunnel Falls，$\mathrm{Si_{0.972}Ge_{0.028}}$ 阱                              | Marcks 2025   |
+| 谷劈裂空间关联长度                  | $\ell_C=19.2\ \mathrm{nm}$（≈平均点半径）；局域范围衰减尺度 $6.4(6)\ \mathrm{nm}$                                                    | 连续谷探针自相关拟合                                                                      | Marcks 2025   |
+| 阵列尺度关联                        | $n=6$ 栅反关联、$n=12$ 正关联，总体约 $720\ \mathrm{nm}$                                                                             | 排列检验，$p<0.05$                                                                        | Marcks 2025   |
+| 应变锗空穴                          | 应变直接解除谷简并，$E_\mathrm{VS}$ 不再是关心量                                                                                     | —                                                                                         |               |
+| 确定性增强的界面宽度窗口            | 无剪切应变约 1 ML；ε_{x,y}=0.05% 时扩至约 5 ML                                                                                       | 统一包络理论                                                                              | Thayil 2025   |
+| 长周期摆动阱确定性增强              | ε_{x,y}≳0.006%（高幅度）至 ≳0.035%（微幅度）；ν/2σ≈1.41 @ X_ww=15%                                                                   | 统一包络理论                                                                              | Thayil 2025   |
+| SGM 台阶探针可靠性上界              | 轨道激发 2.92 meV ≫ 谷劈裂变化                                                                                                       | 针尖诱导点 + 紧束缚                                                                       | Cakar 2024    |
+| 谷依赖自旋劈裂诊断                  | 反推 $E_z=6.77$ MV/m、4 个单原子台阶（−24.7/−2.9/18.7/40.4 nm）；预言 $E_{vs}=34.4\ \mu$eV vs 实验 29 μeV                            | 两谷 ESR 各向异性 + 紧束缚拟合                                                            | Ferdous 2018  |
+| 共振隧穿读出判据                    | 小谷区（E_VS<Δz）非线性可改善读出（需谷能级均匀）；两种谷区均有 t_dec/t_meas>100（误差 <1%）                                         | 三-QD NEGF                                                                                | Tanamoto 2025 |
+| QuBus 谷劈裂地图                    | 40×400 nm，1.5–200 μeV；Rice 分布 γ=0.1 μeV、σ=64.3 μeV；点半径 18.2 nm、关联 <30 nm                                                 | 穿梭点自旋–谷谱                                                                           | Volmer 2026   |
+| 穿梭退相干阈值                      | 自旋–谷共振绝热/二能级穿越分界 ~2.8 m/s（Δ_sv≲300 neV、dE_VS/dx≈3 μeV/nm）；10 μm 穿梭误差 <8%                                       | 传送带穿梭 P_S                                                                            | Volmer 2026   |
+| 局域包络理论的参考能歧义            | 锐界面/薄阱/Ge 尖峰时歧义度量 2\|R\| 显著，U₀ ~ 数百 meV 即强烈改变 E_VS^loc 预测                                                    | 精确非局域多谷 EFT 基准                                                                   | Ermoneit 2026 |
+| 投影局域（谱滤波）模型              | 恢复参考能不变性；常规阱与摆动阱符合精确非局域结果，Ge 尖峰处倾向高估                                                                | 一维基准模拟                                                                              | Ermoneit 2026 |
+| SiMOS 谷劈裂（ST 角度测绘）         | 83.1(9) 与 180.3(3) µeV（两点，四能级拟合）                                                                                          | ST 自由感应衰减热点位置，14 个磁场取向                                                    | Jacobson 2026 |
+| Si/SiGe（Intel 代工三点的 QD₁,QD₂） | 36.81(1) 与 46.86(1) µeV                                                                                                             | 同上，5 个取向                                                                            | Jacobson 2026 |
+| 自旋–谷耦合 γ 平台对照              | SiMOS 0.730(3)/0.87(2) µeV vs Si/SiGe 0.0504(2)/0.0571(2) µeV（差一个量级）；η≈0.55–0.84 rad，面内最大沿 [110]、节点沿 [1̄10]         | 四能级模型拟合                                                                            | Jacobson 2026 |
+| 热点附近线宽                        | >5 MHz（电荷噪声敏感度增强），沿 [1̄10]/[3̄10] 取向更局部化                                                                            | FFT 线宽叠加                                                                              | Jacobson 2026 |
+| 原子级 TB：无序量级                 | 3.8 nm 阱零场 VS ≈有序突变势垒计算的 1/3；电场升分布展宽；10×10 nm² 域未收敛                                                         | sp³d⁵s* TB + VFF，20 样本（NEMO-3D，至 5×10⁵ 原子）                                       | Jiang 2012    |
+| 原子级 TB：键型                     | 含最近邻 Ge-Ge 键（{2,6} 构型）把 VS 压回随机合金值；只匹配带错位不够                                                                | 有序合金 Gedankenexperiment（25% Ge）                                                     | Jiang 2012    |
+| δ 掺杂 Si:P 层谷劈裂                | 1/4 ML：PW-DFT 基准 93 meV（80 层包覆）、DZP 99.5 meV、SZP 145 meV（高估 55%）；隐式掺杂 ~7 vs 显式 ~120 meV；[110]~270/[100]~50 meV | 平面波 vs 局域基 DFT 收敛研究                                                             | Drumm 2013    |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -232,11 +252,11 @@ $$
 E_\mathrm{VS}=g\mu_\mathrm{B}B_\mathrm{kink}.
 $$
 
- 在 Si-MOS 样品中实际测得 $B_\mathrm{kink}\approx 1.49\ \mathrm{T}$，对应 $E_\mathrm{VS}=170\ \mu\mathrm{eV}$，臂杆系数 $\alpha_\mathrm{LP}=0.33$。第二、三、四个电子隧穿线斜率方向交替变化，恰好可以验证谷–自旋能级结构。该方法依赖 [[fundamentals/charge-stability-diagram|电荷稳定图]] 和精确的臂杆系数标定。
+在 Si-MOS 样品中实际测得 $B_\mathrm{kink}\approx 1.49\ \mathrm{T}$，对应 $E_\mathrm{VS}=170\ \mu\mathrm{eV}$，臂杆系数 $\alpha_\mathrm{LP}=0.33$。第二、三、四个电子隧穿线斜率方向交替变化，恰好可以验证谷–自旋能级结构。该方法依赖 [[fundamentals/charge-stability-diagram|电荷稳定图]] 和精确的臂杆系数标定。
 
 ### 微波谷谱（valley spectroscopy）
 
-把谷激发与微波光子耦合，在 [[circuit-qed/dispersive-readout|色散读出]] 框架下读取谷劈裂对应的频率响应。陈思思 2023 与 都用片上谐振腔探测三量子点中的谷态与激发能级：在双量子点–腔杂化系统中观测"谷劈裂能级信号"，再结合 [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]] 读取谷–自旋耦合强度）。这种做法的优势在于可同时获得能谷–微波光子的强耦合关系，把"谷物理"和[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]纳入同一张能谱图。
+把谷激发与微波光子耦合，在 [[readout-measurement/dispersive-readout|色散读出]] 框架下读取谷劈裂对应的频率响应。陈思思 2023 与 都用片上谐振腔探测三量子点中的谷态与激发能级：在双量子点–腔杂化系统中观测"谷劈裂能级信号"，再结合 [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]] 读取谷–自旋耦合强度）。这种做法的优势在于可同时获得能谷–微波光子的强耦合关系，把"谷物理"和[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]纳入同一张能谱图。
 
 ### 谷依赖自旋劈裂的各向异性：界面结构诊断（Ferdous 2018）
 
@@ -250,17 +270,17 @@ $$
 
 ![[assets/figures/valley-splitting/ferdous2018-fig2-valley-splitting-bfield.jpg]]
 
-*两谷态 ESR 频率差 f_v− − f_v+ 随外磁场的变化（[110] 与 [1̄10] 两个方向）：实验（红圆）对 B_ext 的斜率由内禀 SOI 给出，而 SOI 曲线与数据之间与 B 无关的平移由微磁体不均匀场 ΔB 补齐——两者缺一不可。图源：Ferdous et al. (2018), Fig. 2。*
+_两谷态 ESR 频率差 f_v− − f_v+ 随外磁场的变化（[110] 与 [1̄10] 两个方向）：实验（红圆）对 B_ext 的斜率由内禀 SOI 给出，而 SOI 曲线与数据之间与 B 无关的平移由微磁体不均匀场 ΔB 补齐——两者缺一不可。图源：Ferdous et al. (2018), Fig. 2。_
 
 ![[assets/figures/valley-splitting/ferdous2018-fig3c-dresselhaus-step-sign.jpg]]
 
-*界面台阶对内禀 SOI 的调制：量子点波函数相对单原子台阶的位置记为 x₀，有效 Dresselhaus 参数 β±（两谷态各自）随 x₀ 变化并在台阶两侧变号——点的微观位置决定谷依赖 SOI 的符号与幅度。图源：Ferdous et al. (2018), Fig. 3(c)。*
+_界面台阶对内禀 SOI 的调制：量子点波函数相对单原子台阶的位置记为 x₀，有效 Dresselhaus 参数 β±（两谷态各自）随 x₀ 变化并在台阶两侧变号——点的微观位置决定谷依赖 SOI 的符号与幅度。图源：Ferdous et al. (2018), Fig. 3(c)。_
 
 这一测量因此成为**界面结构的原位诊断**：对同时满足角度各向异性与 $B_\mathrm{ext}$ 依赖两个约束做迭代拟合，可反推垂直电场与台阶构型——Ferdous 等人由此得到 $E_z=6.77\ \mathrm{MV/m}$、四个沿 [100] 等距分布的单原子台阶（距点心 $-24.7$、$-2.9$、$18.7$、$40.4\ \mathrm{nm}$），且该构型预言 $E_{vs}=34.4\ \mu\mathrm{eV}$、与实验值 $29\ \mu\mathrm{eV}$ 吻合——微观界面图像与宏观谷劈裂自洽闭环。
 
 ![[assets/figures/valley-splitting/ferdous2018-fig4-inhomogeneous-field.jpg]]
 
-*微磁体不均匀场对 f_v− − f_v+ 的单独贡献 Δ(f_v−−f_v+)^ΔB：平界面时几乎为零，存在台阶时显著——谷–轨道杂化使两谷态偶极矩不同，空间变化磁场对它们的作用随之不同；贡献在台阶位于点附近时最大，且几乎不随 B_ext 变化。图源：Ferdous et al. (2018), Fig. 4。*
+_微磁体不均匀场对 f_v− − f_v+ 的单独贡献 Δ(f_v−−f_v+)^ΔB：平界面时几乎为零，存在台阶时显著——谷–轨道杂化使两谷态偶极矩不同，空间变化磁场对它们的作用随之不同；贡献在台阶位于点附近时最大，且几乎不随 B_ext 变化。图源：Ferdous et al. (2018), Fig. 4。_
 
 谷激发态本身的弛豫时间（高温运行与读出窗口的相关约束）见"自旋-谷弛豫寿命"一节及[[qubit-control/spin-decoherence|自旋退相干]]词条的声子弛豫理论——多极展开给出的谷弛豫曲线正是那里的定量参照。
 
@@ -269,7 +289,9 @@ $$
 Ferdous 式的逐点诊断之外，还有一条**批量测绘**路线：用[[qubit-control/singlet-triplet-qubit|S–T₀ 比特]]的自由感应衰减同时读出两点各自的自旋–谷热点。Jacobson 等人在两块器件——Sandia 制造的 SiMOS 双点（富集 500 ppm ²⁹Si、热氧化 SiO₂ 界面）与 Intel 代工的 Si/SiGe 三点器件（约 5 nm 富集 800 ppm ²⁹Si 阱、自然丰度 Si₀.₇Ge₀.₃ 势垒）——上，于 (4,0)/(3,1) 跃迁附近制备 S(3,1) 并让它被两点 Zeeman 能差 $\Delta E_Z$ 驱动旋转，原位扫描磁场大小并更换取向（SiMOS 14 个、Si/SiGe 5 个），对演化时间做 FFT 得到 S–T 旋转频率-磁场图谱：每个点在其 $\Delta_{\mathrm{vs},i}=g_i\mu_B B$ 处出现发散/间断——即自旋–谷热点，旋转频率由此成为谷劈裂的灵敏探针（Si/SiGe 的 $T_2^*\approx4.4\ \mu\mathrm{s}$ 由势垒 ⁷³Ge 与阱内残余 ²⁹Si 的 Overhauser 场主导）。
 
 ![[assets/figures/valley-splitting/jacobson2026-fig2c-st-fid.jpg]]
-*S–T₀ 自由感应衰减示例（Si/SiGe，B∥[110]=50 mT，30 分钟平均）：高斯衰减正弦拟合给出 $T_2^*=4.41\ \mu\mathrm{s}$；同器件沿 [100] 原位扫场时旋转频率在 ~324 与 ~412 mT 出现两处间断——两点各自的自旋–谷热点。图源：Jacobson et al. (2026), Fig. 2。*
+_S–T₀ 自由感应衰减示例（Si/SiGe，B∥[110]=50 mT，30 分钟平均）：高斯衰减正弦拟合给出 $T_2^*=4.41\ \mu\mathrm{s}$
+
+；同器件沿 [100] 原位扫场时旋转频率在 ~324 与 ~412 mT 出现两处间断——两点各自的自旋–谷热点。图源：Jacobson et al. (2026), Fig. 2。_
 
 数据用**四能级模型**统一拟合：基谷自旋二态 $\{|\tilde\uparrow_0^A\tilde\downarrow_0^B\rangle,|\tilde\downarrow_0^A\tilde\uparrow_0^B\rangle\}$ 加两点激发谷极化态，
 
@@ -291,17 +313,25 @@ $$
 $\gamma$ 为谷间自旋轨道矩阵元幅度、$\eta$ 为其相对 [100]/[010] 的相位——由 Rashba/Dresselhaus 矩阵元 $\gamma_{R,D}^{\uparrow\downarrow}$ 的叠加 $\gamma e^{i\eta}$ 推出。
 
 ![[assets/figures/valley-splitting/jacobson2026-fig3-simos-orientations.jpg]]
-*SiMOS 器件 14 个磁场取向下的 S–T 旋转频率-磁场图谱（FFT 归一化着色，红线为四能级模型拟合）：两处发散对应两点各自的 Zeeman–谷劈裂共振；发散宽度反映自旋–谷耦合强度、整体斜率反映 g 因子差。Si/SiGe 器件（5 个取向）的图谱形态类似而热点位置更低（谷劈裂更小）。图源：Jacobson et al. (2026), Fig. 3。*
+_SiMOS 器件 14 个磁场取向下的 S–T 旋转频率-磁场图谱（FFT 归一化着色，红线为四能级模型拟合）：两处发散对应两点各自的 Zeeman–谷劈裂共振；发散宽度反映自旋–谷耦合强度、整体斜率反映 g 因子差。Si/SiGe 器件（5 个取向）的图谱形态类似而热点位置更低（谷劈裂更小）。图源：Jacobson et al. (2026), Fig. 3。_
 
 拟合结果的**平台对照**是本文的核心发现：SiMOS 的谷劈裂（83.1(9) 与 180.3(3) µeV）比 Si/SiGe（36.81(1) 与 46.86(1) µeV）高 2–5 倍，**自旋–谷耦合 $\gamma$（0.730(3)/0.87(2) µeV）比 Si/SiGe（0.0504(2)/0.0571(2) µeV）大一个数量级**——两者都与 SiMOS 电子被更强地压在 Si/SiO₂ 界面一致（Si/SiGe 的较小带错位限制了可施加的电场）；g 因子差两平台相当，$\Delta\beta\gg\Delta\alpha$（Dresselhaus 主导）。而**角度依赖几乎不随平台改变**：$\eta\approx0.55$–0.84 rad $\approx\pi/4$，面内 $|\Gamma|$ 沿 [110] 取最大、节点沿 [1̄10]（含 [001] 法向的大圆上 $|\Gamma|=|\gamma|$）。
 
 ![[assets/figures/valley-splitting/jacobson2026-fig6-spin-valley-anisotropy.jpg]]
-*面内（B⊥[001]）自旋–谷耦合的角度依赖：两平台的四个点都在 [110] 晶向取最大——各向异性形状几乎相同、只差幅度重标度（SiMOS 比 Si/SiGe 大一个量级）。g 因子差的角度依赖同样两平台等价（差 π/2 旋转与重标度），在 $\phi=(2n-1)\pi/4$ 取极值。图源：Jacobson et al. (2026), Fig. 6。*
+_面内（B⊥[001]）自旋–谷耦合的角度依赖：两平台的四个点都在 [110] 晶向取最大——各向异性形状几乎相同、只差幅度重标度（SiMOS 比 Si/SiGe 大一个量级）。g 因子差的角度依赖同样两平台等价（差 π/2 旋转与重标度），在 $\phi=(2n-1)\pi/4$
+
+取极值。图源：Jacobson et al. (2026), Fig. 6。_
 
 **热点形态分类学**把频率-场曲线按 $\Delta g$ 符号分成三类（$\Delta g>0$、$\Delta g<0$、$\Delta g\approx0$）：前两类给出手性相反的斜渐近线，第三类在两处谷劈裂都出现纯发散。机理可用"惰性态"论证理解——同自旋的谷态之间没有谷间耦合，$|\tilde\uparrow_0^A\tilde\downarrow_0^B\rangle$ 对 $B$ 点热点"惰性"、能量只是随 g 因子差线性倾斜；另外两态经 $\Gamma_B$ 反交叉形成热点。
 
 ![[assets/figures/valley-splitting/jacobson2026-fig8-hotspot-taxonomy.jpg]]
-*自旋–谷热点的形态分类学（模型示例 $\Delta g\in\{10^{-3},-10^{-3},0\}$、$\Delta_\mathrm{vs}=40/75\ \mu$eV、$|\Gamma|=0.1\ \mu$eV）：Δg 的符号决定斜渐近线的手性，Δg≈0 时两处均为纯发散；发散宽度 ∝ 自旋–谷耦合、渐近线斜率 ∝ g 因子差——一条频率-场曲线同时定出三类参数。图源：Jacobson et al. (2026), Fig. 8。*
+_自旋–谷热点的形态分类学（模型示例 $\Delta g\in\{10^{-3},-10^{-3},0\}$
+
+、$\Delta_\mathrm{vs}=40/75\ \mu$
+
+eV、$|\Gamma|=0.1\ \mu$
+
+eV）：Δg 的符号决定斜渐近线的手性，Δg≈0 时两处均为纯发散；发散宽度 ∝ 自旋–谷耦合、渐近线斜率 ∝ g 因子差——一条频率-场曲线同时定出三类参数。图源：Jacobson et al. (2026), Fig. 8。_
 
 对操作的直接指引：**B∥[001] 最小化 g 因子差**（适合磁噪声受限的 Si/SiGe 比特），但热点效应在法向接近最大；热点附近 FFT 线宽可超过 5 MHz（电荷噪声敏感度增强的退相干），而线宽增宽沿特定取向（如 [1̄10]、[3̄10]）更局部化——SiMOS 比特若更怕 $T_1$/电荷噪声，选 [1̄10] 取向可在热点附近保持更窄线宽。附加结果：SiMOS 热点位置随磁场取向移动，提示**谷劈裂本身的磁场取向依赖**（磁场限域改变波函数对界面的采样）；Si/SiGe 三点器件换一对点（QD₂,QD₃）测量时出现多个频率分量，与制备 ramp 时间依赖一起指向**激发谷态的占据**。
 
@@ -318,27 +348,27 @@ $\gamma$ 为谷间自旋轨道矩阵元幅度、$\eta$ 为其相对 [100]/[010] 
 探针演示针对上界面 $y=500$ nm 处的**单原子台阶**：针尖点沿 $y$ 扫过台阶时，波函数跟随针尖移动，紧束缚模型计算的谷劈裂在台阶正上方出现急剧凹陷——缺陷位置由此被直接成像。可靠性由能标分离保证：谷劈裂的变化远低于 2.92 meV 的第一轨道激发能，测量不会被轨道混杂污染。既然芯片上谷劈裂涨落（约 20–300 µeV）的主要来源是合金无序与原子台阶，SGM 把"谷劈裂–材料缺陷"的空间关联测量从阵列统计推进到逐点成像。
 
 ![[assets/figures/valley-splitting/cakar2024-fig1-sgm-setup.jpg]]
-*实验方案示意：Si₀.₇Ge₀.₃/Si(5 nm)/Si₀.₇Ge₀.₃(50 nm) 异质结上叠层栅（screening/source/drain/plunger/barrier），SGM 针尖偏压 V_T、悬于表面上方 35 nm 并可在 xy 面自由移动，针尖诱导量子点（浅蓝）。图源：Cakar et al. (2024), Fig. 1。*
+_实验方案示意：Si₀.₇Ge₀.₃/Si(5 nm)/Si₀.₇Ge₀.₃(50 nm) 异质结上叠层栅（screening/source/drain/plunger/barrier），SGM 针尖偏压 V_T、悬于表面上方 35 nm 并可在 xy 面自由移动，针尖诱导量子点（浅蓝）。图源：Cakar et al. (2024), Fig. 1。_
 
 ![[assets/figures/valley-splitting/cakar2024-fig2b-loading-protocol.jpg]]
-*六步电子装载协议的栅压与针尖位置时序：(i–ii) 储库填充并在 plunger 栅下隔离单电子；(iii–iv) 针尖电压升高、plunger 降低，把电子转移到针尖势阱；(v) 各栅等电位平化势场；(vi) 针尖携电子移动 350 nm 到无栅区——全程保持绝热单电子占据。图源：Cakar et al. (2024), Fig. 2(b)。*
+_六步电子装载协议的栅压与针尖位置时序：(i–ii) 储库填充并在 plunger 栅下隔离单电子；(iii–iv) 针尖电压升高、plunger 降低，把电子转移到针尖势阱；(v) 各栅等电位平化势场；(vi) 针尖携电子移动 350 nm 到无栅区——全程保持绝热单电子占据。图源：Cakar et al. (2024), Fig. 2(b)。_
 
 ![[assets/figures/valley-splitting/cakar2024-fig3-step-edge-probe.jpg]]
-*谷劈裂的空间探针演示：上界面 y=500 nm 处的单原子台阶（势阱图叠加三个针尖位置 y_T=450/500/550 nm 的波函数概率幅）；针尖点扫过台阶时谷劈裂在 y_T=500 nm 出现急剧凹陷——缺陷位置被直接成像，且变化远低于 2.92 meV 轨道激发能。图源：Cakar et al. (2024), Fig. 3。*
+_谷劈裂的空间探针演示：上界面 y=500 nm 处的单原子台阶（势阱图叠加三个针尖位置 y_T=450/500/550 nm 的波函数概率幅）；针尖点扫过台阶时谷劈裂在 y_T=500 nm 出现急剧凹陷——缺陷位置被直接成像，且变化远低于 2.92 meV 轨道激发能。图源：Cakar et al. (2024), Fig. 3。_
 
 ### 谷劈裂对单发读出的限制
 
- 在 Si-MOS 中详细测量了"自旋选择性隧穿读出"和"泡利自旋阻塞读出"两条路径：前者受源漏费米面热展宽限制、后者在硅量子点里又受到谷激发态的限制。当 $E_\mathrm{VS}\lesssim 200\ \mu\mathrm{eV}$ 时，硅中两电子 $(1,1)$–$(0,2)$ 读取的窗口被压回 $E_\mathrm{VS}$ 量级，读出保真度会随温度与磁场条件漂移。这也解释了为什么 Si-MOS 比 Si/SiGe 更易在 $1\ \mathrm{K}$ 量级获得高保真单发读出。
+在 Si-MOS 中详细测量了"自旋选择性隧穿读出"和"泡利自旋阻塞读出"两条路径：前者受源漏费米面热展宽限制、后者在硅量子点里又受到谷激发态的限制。当 $E_\mathrm{VS}\lesssim 200\ \mu\mathrm{eV}$ 时，硅中两电子 $(1,1)$–$(0,2)$ 读取的窗口被压回 $E_\mathrm{VS}$ 量级，读出保真度会随温度与磁场条件漂移。这也解释了为什么 Si-MOS 比 Si/SiGe 更易在 $1\ \mathrm{K}$ 量级获得高保真单发读出。
 
 **尺寸与位置的定量依赖**：谷劈裂不仅由界面台阶决定，还随量子点的尺寸和位置系统变化——有效质量近似+原子级界面建模给出完整的参数图：小点（波函数紧贴界面，台阶效应强）劈裂大而涨落也大；大点劈裂小但更均匀；点在台阶间的位置决定劈裂的相位。这给"谷劈裂的可设计性"给出定量边界：通过点尺寸/位置设计可以规避低劈裂区，但不能完全消除涨落。
 
 ![[assets/figures/fundamentals-valley/5d8d5a8dd960dcf78a539c492beb995739405a737fdbdc7df4866c25c7418712.jpg]]
 
-*谷劈裂的尺寸/位置依赖：有效质量+原子界面的联合建模——小点劈裂大但涨落大，大点均匀但劈裂小。图源：arXiv:2310.17393，Fig. 1。*
+_谷劈裂的尺寸/位置依赖：有效质量+原子界面的联合建模——小点劈裂大但涨落大，大点均匀但劈裂小。图源：arXiv:2310.17393，Fig. 1。_
 
 ![[assets/figures/fundamentals-valley/ad3f8be932cbe54319264e7fcf4f74d41ec1bd5f684c4029aa262f060c329c3a.jpg]]
 
-*台阶位置的相位效应：点在台阶间的位置决定劈裂——可设计性的定量边界。图源：arXiv:2310.17393，Fig. 2。*
+_台阶位置的相位效应：点在台阶间的位置决定劈裂——可设计性的定量边界。图源：arXiv:2310.17393，Fig. 2。_
 
 **共振隧穿读出架构中的谷劈裂判据**：Tanamoto 与 Ono 用非平衡格林函数把谷劈裂的影响推进到"沟道-QD 共振隧穿读出"架构——比特-QD（$\mathrm{QD_1}$、$\mathrm{QD_3}$）与一条直接接晶体管的沟道-QD（$\mathrm{QD_2}$）并联，源漏电流 $I_D$ 的**非线性共振特征**区分比特态。自旋选择性来自隧穿选择定则：↑-电流只在比特处于 $|0\rangle$ 时与比特-QD 交换 ↑ 电子、↓-电流只在 $|1\rangle$ 时交换 ↓ 电子——每个 QD 都携带两条谷能级 $E_{V\mp}$（$E_\mathrm{VS}=E_{V+}-E_{V-}$，单态能级同样劈裂）时，沟道-QD 与比特-QD 的谷能级对齐决定共振窗口。结论按谷区分两半：
 
@@ -351,15 +381,15 @@ $$
 
 ![[assets/figures/valley-splitting/tanamoto2025-fig1-resonant-tunneling-architecture.jpg]]
 
-*共振隧穿读出架构：比特-QD（黄）与沟道-QD（绿）并排、沟道-QD 直连晶体管，源漏电流 I_D 反映比特态；读出模式（V_D≠0）下沟道-QD 能级扫过 QD 的共振能级 E_i。图源：Tanamoto & Ono (2025), Fig. 1。*
+_共振隧穿读出架构：比特-QD（黄）与沟道-QD（绿）并排、沟道-QD 直连晶体管，源漏电流 I_D 反映比特态；读出模式（V_D≠0）下沟道-QD 能级扫过 QD 的共振能级 E_i。图源：Tanamoto & Ono (2025), Fig. 1。_
 
 ![[assets/figures/valley-splitting/tanamoto2025-fig3-spin-selective-tunneling.jpg]]
 
-*小谷区的自旋选择性隧穿：↑-电流只在比特态 |0⟩ 时交换 ↑ 电子（上两幅）、↓-电流只在 |1⟩ 时交换 ↓ 电子（下两幅）；E_V± 与单态谷能级 E_ia/E_ib 的对齐决定共振窗口。图源：Tanamoto & Ono (2025), Fig. 3。*
+_小谷区的自旋选择性隧穿：↑-电流只在比特态 |0⟩ 时交换 ↑ 电子（上两幅）、↓-电流只在 |1⟩ 时交换 ↓ 电子（下两幅）；E_V± 与单态谷能级 E_ia/E_ib 的对齐决定共振窗口。图源：Tanamoto & Ono (2025), Fig. 3。_
 
 ![[assets/figures/valley-splitting/tanamoto2025-fig10-readout-decoherence-ratio.jpg]]
 
-*t_dec/t_meas 随 V_D 的变化（两组能级配置）：虚线以上满足 t_dec=100 ns 时可做 >100 次读出、实线以上对应 t_dec=1 μs 的同样判据——两种谷区都存在误差 <1% 的工作窗口。图源：Tanamoto & Ono (2025), Fig. 10。*
+_t_dec/t_meas 随 V_D 的变化（两组能级配置）：虚线以上满足 t_dec=100 ns 时可做 >100 次读出、实线以上对应 t_dec=1 μs 的同样判据——两种谷区都存在误差 <1% 的工作窗口。图源：Tanamoto & Ono (2025), Fig. 10。_
 
 ### 自旋-谷弛豫寿命与高温运行
 
@@ -369,21 +399,19 @@ $$
 
 ![[assets/figures/fundamentals-valley/35eed7a969d518c1025d6eb50c0fc9eb3f45af23bdbd1088a6d1620f395976a1.jpg]]
 
-*自旋-谷寿命的可调测量：$T_{1v}$ 随谷劈裂的变化——劈裂减小打开声子辅助弛豫通道，寿命急剧缩短。图源：Yang et al. (2013)，Fig. 1。*
+_自旋-谷寿命的可调测量：$T_{1v}$ 随谷劈裂的变化——劈裂减小打开声子辅助弛豫通道，寿命急剧缩短。图源：Yang et al. (2013)，Fig. 1。_
 
 ![[assets/figures/fundamentals-valley/52b96c31b61a6be145162dbfaaf6446a0797de16306820b89d4839d4ae080ebf.jpg]]
 
-*弛豫率的劈裂依赖：泄漏通道的动力学定量——"劈裂多大才够"的定量标定。图源：Yang et al. (2013)，Fig. 2。*
-
-**限域驱动的高温劈裂**：埋层硅量子阱中，强限域势（垂直方向的窄阱）把谷劈裂推到 **4K 以上**（$>4,k_BT$@4K）——高温运行（对照超导比特的 200 mK 路线）在半导体侧的谷劈裂条件被满足。限域增强的机理：窄阱提高界面处的波函数振幅，台阶散射效应增强。
+_弛豫率的劈裂依赖：泄漏通道的动力学定量——"劈裂多大才够"的定量标定。图源：Yang et al. (2013)，Fig. 2。_
 
 ![[assets/figures/fundamentals-valley/6c8a9993762250db34f759aa8a608079dac89efb16f1ce3b55ab02fb0b4996ce.jpg]]
 
-*限域驱动的高劈裂：埋层量子阱的强限域——谷劈裂超过 4K 热能，高温运行条件满足。图源：arXiv:2607.09570，Fig. 1。*
+_限域驱动的高劈裂：埋层量子阱的强限域——谷劈裂超过 4K 热能，高温运行条件满足。图源：arXiv:2607.09570，Fig. 1。_
 
 ![[assets/figures/fundamentals-valley/77f8488e62760f43bdf3be6ae3f8b60612f257e0ae2d5491174e4ad272c34098.jpg]]
 
-*机理与验证：窄阱增强界面波函数振幅——台阶散射效应增强的定量。图源：arXiv:2607.09570，Fig. 2。*
+_机理与验证：窄阱增强界面波函数振幅——台阶散射效应增强的定量。图源：arXiv:2607.09570，Fig. 2。_
 
 ### 跨阵列的介观关联：合金无序的统计指纹（Marcks 2025）
 
@@ -393,17 +421,17 @@ $$
 
 ![[assets/figures/valley-splitting-correlations/marcks2025-fig2-daps.jpg]]
 
-*DAPS 谷劈裂测量：(a) 双量子点单电子能级示意与脉冲时序——沿失谐轴脉冲越过极化线，谷激发态的热占据随谷劈裂变化反映到电荷态统计上；(b) 测得谱线用双洛伦兹拟合提取 $E_V$，误差由谱线线宽给出。图源：Marcks et al. (2025)，Fig. 2。*
+_DAPS 谷劈裂测量：(a) 双量子点单电子能级示意与脉冲时序——沿失谐轴脉冲越过极化线，谷激发态的热占据随谷劈裂变化反映到电荷态统计上；(b) 测得谱线用双洛伦兹拟合提取 $E_V$，误差由谱线线宽给出。图源：Marcks et al. (2025)，Fig. 2。_
 
 跨全阵列 21 个点的统计：平均谷劈裂 $\overline{E_V}=179\ \mu\mathrm{eV}$、最大 $540(30)\ \mu\mathrm{eV}$，直方图符合合金无序主导理论预言的瑞利分布（有限抽样下的偏斜属预期行为）；$E_V$ 与点半径无系统依赖，确认无序主导而非尺寸主导。阵列尺度的归一化自相关 $C_{V V,n}$ 在相隔 $n=6$ 个栅（负关联）与 $n=12$ 个栅（正关联）处出现最大幅度，对应约 720 nm 的总体关联长度——用**排列检验**（permutation test）评估显著性：把数据随机重排生成零分布，真实统计量落在零分布中的位置给出 p 值；以 $p=0.05$ 为界，$n=6$ 的反关联比 $n=12$ 的关联更显著。亚 100 nm（波函数尺度）与 >1 μm（器件尺度）两个长度尺度上的关联都与合金无序主导的模拟一致。
 
 ![[assets/figures/valley-splitting-correlations/marcks2025-fig5-full-array.jpg]]
 
-*全阵列谷劈裂：(a) 21 个量子点的 $E_V$（误差由 DAPS 线宽给出）；(b) 直方图与理论瑞利分布（实线）的对照；(c) $E_V$ 与电子半径无系统依赖；(d) 空间序列的傅里叶变换无长程振荡分量；(e) 归一化自相关 $C_{V V,n}$，$n=6$ 反关联、$n=12$ 正关联最大；(f) 排列检验 p 值。图源：Marcks et al. (2025)，Fig. 5。*
+_全阵列谷劈裂：(a) 21 个量子点的 $E_V$（误差由 DAPS 线宽给出）；(b) 直方图与理论瑞利分布（实线）的对照；(c) $E_V$ 与电子半径无系统依赖；(d) 空间序列的傅里叶变换无长程振荡分量；(e) 归一化自相关 $C_{V V,n}$，$n=6$ 反关联、$n=12$ 正关联最大；(f) 排列检验 p 值。图源：Marcks et al. (2025)，Fig. 5。_
 
 ![[assets/figures/valley-splitting-correlations/marcks2025-fig6-permutation.jpg]]
 
-*排列检验的显著性评估：(a) 随机重采样一维序列上的自相关零检验分布，(b) 对 $n=6,12$ 的零分布（直方图）与真实数据统计量（绿色虚线）对照，阴影面积为 p 值。图源：Marcks et al. (2025)，Fig. 6。*
+_排列检验的显著性评估：(a) 随机重采样一维序列上的自相关零检验分布，(b) 对 $n=6,12$ 的零分布（直方图）与真实数据统计量（绿色虚线）对照，阴影面积为 p 值。图源：Marcks et al. (2025)，Fig. 6。_
 
 对器件设计的含义：含百分之几 Ge 的量子阱确实抬高平均谷劈裂，但无序同样留下低劈裂"口袋"，会压低制造良率并威胁穿梭；跨栅与跨器件尺度的关联意味着相邻比特的谷致误差**不独立**，阵列级纠错与建模需要介观统计输入。
 
@@ -413,7 +441,7 @@ $$
 
 ![[assets/figures/valley-splitting/volmer2026-fig2-valley-map.jpg]]
 
-*穿梭通道的谷劈裂地图：(a) 不同 1DEC 位置 y 下 E_VS 随穿梭距离 d 的迹线；(b) 2800 个样本的直方图与 Rice 分布拟合（γ=0.1 μeV、σ=64.3 μeV）；(c) 自相关函数（高斯拟合，关联长度 ≈ 点半径）；(d) 线性插值得到的二维 E_VS(d,y) 地图。图源：Volmer et al. (2026), Fig. 2。*
+_穿梭通道的谷劈裂地图：(a) 不同 1DEC 位置 y 下 E_VS 随穿梭距离 d 的迹线；(b) 2800 个样本的直方图与 Rice 分布拟合（γ=0.1 μeV、σ=64.3 μeV）；(c) 自相关函数（高斯拟合，关联长度 ≈ 点半径）；(d) 线性插值得到的二维 E_VS(d,y) 地图。图源：Volmer et al. (2026), Fig. 2。_
 
 在这张已知地图上穿梭单个电子并测单态回返概率 $P_S(d,\tau_S)$，直接确认了移动自旋退相干理论预言的**两条谷致通道**：
 
@@ -422,13 +450,13 @@ $$
 
 ![[assets/figures/valley-splitting/volmer2026-fig3-shuttling-coherence.jpg]]
 
-*已知 E_VS 地图上的穿梭相干性：(a) y=0 的 E_VS 迹线叠加三个磁场的 Zeeman 能（水平线）——竖虚线为自旋–谷共振、点线为低 E_VS 区；(b–d) B=1.7/0.3/0.1 T 的 P_S(d,τ_S)：高场下相干损失对准低 E_VS 区、低场下对准第一个共振，且高速穿越（如 2.8 m/s）能保住振荡幅度；(e–g) 沿 τ_S 的 FFT 显示谷占据组分在过共振后消失。图源：Volmer et al. (2026), Fig. 3。*
+_已知 E_VS 地图上的穿梭相干性：(a) y=0 的 E_VS 迹线叠加三个磁场的 Zeeman 能（水平线）——竖虚线为自旋–谷共振、点线为低 E_VS 区；(b–d) B=1.7/0.3/0.1 T 的 P_S(d,τ_S)：高场下相干损失对准低 E_VS 区、低场下对准第一个共振，且高速穿越（如 2.8 m/s）能保住振荡幅度；(e–g) 沿 τ_S 的 FFT 显示谷占据组分在过共振后消失。图源：Volmer et al. (2026), Fig. 3。_
 
 **反复穿梭与运动变窄**：对同一段含低 $E_\mathrm{VS}$ 区的 280 nm 路径做 $n_\mathrm{rep}$ 次往返，快速频繁穿越反而进入**运动变窄**（motional narrowing）区——谷退相干被平均掉、$P_S$ 衰减显著变慢。配合**轨迹选择**（在 $E_\mathrm{VS}$ 地图上绕开问题区），10 μm 累计穿梭的误差 <8%，数十 μm 的相干上限由移动自旋与一个静止自旋的耦合（可用于生成纠缠）决定，而不再由谷物理决定——传送带穿梭由此拿到进入硅量子芯片互连方案的实证路线图。
 
 ![[assets/figures/valley-splitting/volmer2026-fig4-repetitive-shuttling.jpg]]
 
-*反复穿越 E_VS 景观的相干性：(a)(c)(e) E_VS 迹线局部与对应 Zeeman 能；(b)(d)(f) 不同速度/磁场下 P_S 随总穿梭时间 τ=2n_rep·τ_S 的衰减——快速频繁穿越低 E_VS 区进入运动变窄区、衰减变慢；(g) 谷激发率 γ 与 B 的指数衰减模型及六个拟合值；(h) 各参数组合下 P_S 随累计穿梭距离的归一化。图源：Volmer et al. (2026), Fig. 4。*
+_反复穿越 E_VS 景观的相干性：(a)(c)(e) E_VS 迹线局部与对应 Zeeman 能；(b)(d)(f) 不同速度/磁场下 P_S 随总穿梭时间 τ=2n_rep·τ_S 的衰减——快速频繁穿越低 E_VS 区进入运动变窄区、衰减变慢；(g) 谷激发率 γ 与 B 的指数衰减模型及六个拟合值；(h) 各参数组合下 P_S 随累计穿梭距离的归一化。图源：Volmer et al. (2026), Fig. 4。_
 
 ### 计算框架的第三块与构型扩展
 
@@ -436,27 +464,27 @@ $$
 
 ![[assets/figures/fundamentals-valley/df3065fb9eef651738ff0a9e582552af589e41a2a5e2c49de1d915aefddabe18.jpg]]
 
-*扩展区有效质量近似：含应变的谷劈裂计算——第三种理论框架。图源：arXiv:2309.05219，Fig. 1。*
+_扩展区有效质量近似：含应变的谷劈裂计算——第三种理论框架。图源：arXiv:2309.05219，Fig. 1。_
 
 ![[assets/figures/fundamentals-valley/f22c7b08aaee3a6b85fe70228dcb6b686294cd371e40d41f4897b3ff4171ed59.jpg]]
 
-*框架验证：三种方法的劈裂预测对照。图源：arXiv:2309.05219，Fig. 2。*
+_框架验证：三种方法的劈裂预测对照。图源：arXiv:2309.05219，Fig. 2。_
 
 **硅角点的电场调谐**：纳米线角点（corner dot）构型——电场直接调谐谷劈裂，构型自由度+电场自由度的双重调控。
 
 ![[assets/figures/fundamentals-valley/4a2f942a5871e7d10ae415fed65455f57c2c5670401bfc631d7597db482bef42.jpg]]
 
-*硅角点的谷劈裂电场调谐：纳米线角构型——构型+电场双重调控。图源：Ibberson et al. (2018)，Fig. 1。*
+_硅角点的谷劈裂电场调谐：纳米线角构型——构型+电场双重调控。图源：Ibberson et al. (2018)，Fig. 1。_
 
 ![[assets/figures/fundamentals-valley/519916958e7e4a11f7968864372e18e3ba1d206ab3b989e7f7907392a9c374ee.jpg]]
 
-*角点的调谐范围：电场扫描下的劈裂变化。图源：Ibberson et al. (2018)，Fig. 2。*
+_角点的调谐范围：电场扫描下的劈裂变化。图源：Ibberson et al. (2018)，Fig. 2。_
 
 **非微扰多谷有效质量理论**（Gamble 2016）：第四种框架——波函数的动量空间支撑被限制在两个低 lying 导带极小附近，谷间耦合非微扰地进入，配合静电模拟可直接算真实器件构型，且支持对随机界面的**高通量采样**。用它同时模拟 SNL 与 UNSW 两个单电子 Si-MOS 实验的谷劈裂-栅压曲线，发现理想平整界面下需要给全部电极加约 $-1.8\ \mathrm{V}$ 的统一偏移 $V_0$ 才能贴合数据——远超典型阈值电压漂移，本身即成为界面无序存在的定量判据；引入无序界面采样后理论与实验定量一致。
 
 ![[assets/figures/valley-splitting-mvemt/gamble2016-fig2-mvemt-vs-experiment.jpg]]
 
-*多谷有效质量理论与单电子 Si-MOS 实验的对照：(a) SNL 器件、(b) UNSW 器件，点为实验（误差带），曲线为用实验电压加 $0\sim-2\ \mathrm{V}$ 统一偏移 $V_0$ 生成的理论族；最佳拟合 $V_0\approx-1.8\ \mathrm{V}$ 远超典型阈值漂移，指向界面无序。右轴为对应的垂直电场。图源：Gamble et al. (2016)，Fig. 2。*
+_多谷有效质量理论与单电子 Si-MOS 实验的对照：(a) SNL 器件、(b) UNSW 器件，点为实验（误差带），曲线为用实验电压加 $0\sim-2\ \mathrm{V}$ 统一偏移 $V_0$ 生成的理论族；最佳拟合 $V_0\approx-1.8\ \mathrm{V}$ 远超典型阈值漂移，指向界面无序。右轴为对应的垂直电场。图源：Gamble et al. (2016)，Fig. 2。_
 
 ## 与其他概念的关系
 
@@ -472,7 +500,7 @@ $$
 - [[qubit-control/exchange-interaction|交换相互作用]]： 指出 Si-MOS 中"$E_\mathrm{VS}$ 在 meV 量级，对应磁场大于 $1\ \mathrm{T}$"——所以高于 $1\ \mathrm{T}$ 的工作磁场下 valley 激发态可以忽略，双比特门哈密顿量可以只保留自旋自由度）。
 - [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]： 强调，在异质结界面上人为引入原子台阶可以**人为放大**自旋–谷–轨道耦合，从而显著增强基于自旋–轨道耦合的 EDSR 翻转频率。实验上 $E_B=E_\mathrm{VS}$ 的自旋–谷热点本身就能把硅电子的内禀 SOC 驱动急剧放大（同时带来弛豫增强与 Chevron 畸变的代价），见该词条"自旋–谷热点增强的内禀 SOC"一节——热点谱学的反交叉拟合同时是逐点标定 $E_\mathrm{VS}$ 与自旋–谷耦合矩阵元的方法。
 - [[qubit-control/electric-dipole-spin-resonance|EDSR]] 的另一种实现：通过电压控制谷相位、间接调节自旋–轨道矩阵元。
-- [[circuit-qed/dispersive-readout|色散读出]] 与 [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]：用片上谐振腔探测谷态与谷能级。
+- [[readout-measurement/dispersive-readout|色散读出]] 与 [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]：用片上谐振腔探测谷态与谷能级。
 - [[materials-devices/charge-noise|电荷噪声]]：谷相位随电噪声起伏，会给 $E_\mathrm{VS}$ 引入额外低频涨落；这正是 所列"能谷劈裂及 SOC 效应的空间涨落"之一。
 - [[scaling-automation/spin-orbit-torque-control|SOT 操控]]：通过自旋轨道力矩改变杂散场方向，可在不破坏谷劈裂的前提下调节有效自旋–轨道耦合。
 - [[materials-devices/laser-annealing-contacts|激光退火欧姆接触]]：为保住单层精度 Ge 剖面与界面锐度（谷劈裂的设计资源）而生的接触工艺——把退火热预算从全局压到接触区，避免热扩散抹平谷劈裂工程。
@@ -481,19 +509,19 @@ $$
 - [[fundamentals/effective-2d-envelope-function|有效二维包络函数理论]]：把垂直方向按 Born–Oppenheimer 投影掉之后，谷劈裂与谷相位成为二维模型中自然涌现的局域场——量子点扫过原子台阶时谷相位呈约 $\pi/3$ 的系统调制、劈裂在 0.15–0.7 meV 间互补变化，为界面-谷参数映射提供分钟级正演工具。
 - [[scaling-automation/charge-shuttling|电荷穿梭]]（"全向穿梭"一节）：一维轨迹注定撞上低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），多通道与二维 clavette 栅传送带把绕开谷激发做成几何路由问题，前提正是这里的二维 $E_v$ 地图；双点中谷相位差 δφ 决定谷内/谷间隧穿分配（|t₋|/|t₊|=tan(δφ/2)）并可由电荷分布拟合或隧穿电流比读出，见该词条"单次转移的保真度理论"一节。
 
-
 ## 参考文献
 
 - 硅量子点中的谷劈裂与谷物理：[[references/zwanenburg-2013|Zwanenburg et al., RMP 85, 961 (2013)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
-- 跨阵列谷劈裂关联与合金无序统计：Marcks, J. C. et al. *Valley Splitting Correlations Across a Silicon Quantum Well Containing Germanium* (2025). arXiv:2504.12455（QAtlas 缓存：2504.12455）。
-- 非微扰多谷有效质量理论与单电子 Si-MOS 对照：Gamble, J. K. et al. *Valley splitting of single-electron Si MOS quantum dots* (2016). arXiv:1610.03388（QAtlas 缓存：1610.03388）。
-- Thayil, A., Ermoneit, L., Kantner, M. Theory of Valley Splitting in Si/SiGe Spin-Qubits: Interplay of Strain, Resonances and Random Alloy Disorder. *Physical Review B* (2025). DOI: 10.1103/4sdz-f9cr；arXiv:2412.20618（QAtlas 缓存：2412.20618）。
-- Cakar, E., Ercan, H. E., Fuchs, G., Denisov, A. O., Anderson, C. R. et al. Towards Utilizing Scanning Gate Microscopy as a High-Resolution Probe of Valley Splitting in Si/SiGe Heterostructures. *Applied Physics Letters* (2024). DOI: 10.1063/5.0217704；arXiv:2405.03596（QAtlas 缓存：2405.03596）。
-- Ferdous, R., Kawakami, E., Scarlino, P., Nowak, M. P., Ward, D. R., Savage, D. E., Lagally, M. G., Coppersmith, S. N., Friesen, M., Eriksson, M. A., Vandersypen, L. M. K., Rahman, R. Valley dependent anisotropic spin splitting in silicon quantum dots. *npj Quantum Information* 4, 26 (2018). DOI: 10.1038/s41534-018-0075-1；arXiv:1702.06210（QAtlas 缓存：1702.06210）。
-- Tanamoto, T., Ono, K. Effects of valley splitting on resonant-tunneling readout of spin qubits. *Applied Physics Letters* (2025). DOI: 10.1063/5.0260516；arXiv:2501.13289（QAtlas 缓存：2501.13289）。
-- Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. *Nature Communications* (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
+- 跨阵列谷劈裂关联与合金无序统计：Marcks, J. C. et al. _Valley Splitting Correlations Across a Silicon Quantum Well Containing Germanium_ (2025). arXiv:2504.12455（QAtlas 缓存：2504.12455）。
+- 非微扰多谷有效质量理论与单电子 Si-MOS 对照：Gamble, J. K. et al. _Valley splitting of single-electron Si MOS quantum dots_ (2016). arXiv:1610.03388（QAtlas 缓存：1610.03388）。
+- Thayil, A., Ermoneit, L., Kantner, M. Theory of Valley Splitting in Si/SiGe Spin-Qubits: Interplay of Strain, Resonances and Random Alloy Disorder. _Physical Review B_ (2025). DOI: 10.1103/4sdz-f9cr；arXiv:2412.20618（QAtlas 缓存：2412.20618）。
+- Cakar, E., Ercan, H. E., Fuchs, G., Denisov, A. O., Anderson, C. R. et al. Towards Utilizing Scanning Gate Microscopy as a High-Resolution Probe of Valley Splitting in Si/SiGe Heterostructures. _Applied Physics Letters_ (2024). DOI: 10.1063/5.0217704；arXiv:2405.03596（QAtlas 缓存：2405.03596）。
+- Ferdous, R., Kawakami, E., Scarlino, P., Nowak, M. P., Ward, D. R., Savage, D. E., Lagally, M. G., Coppersmith, S. N., Friesen, M., Eriksson, M. A., Vandersypen, L. M. K., Rahman, R. Valley dependent anisotropic spin splitting in silicon quantum dots. _npj Quantum Information_ 4, 26 (2018). DOI: 10.1038/s41534-018-0075-1；arXiv:1702.06210（QAtlas 缓存：1702.06210）。
+- Tanamoto, T., Ono, K. Effects of valley splitting on resonant-tunneling readout of spin qubits. _Applied Physics Letters_ (2025). DOI: 10.1063/5.0260516；arXiv:2501.13289（QAtlas 缓存：2501.13289）。
+- Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. _Nature Communications_ (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
 - Ermoneit, L., Thayil, A., Koprucki, T., Kantner, M. Exact Multi-Valley Envelope Function Theory of Valley Splitting in Si/SiGe Nanostructures (2026). DOI: 10.1103/md2x-s44y；arXiv:2602.14787（QAtlas 缓存：2602.14787）。
 - Jacobson, N. T., Foster, N. D., Jock, R. M., Rudolph, M., Mounce, A. M., Ward, D. R., Carroll, M. S., Luhman, D. R. Anisotropic spin-valley coupling in SiMOS and Si/SiGe quantum dots (2026). arXiv:2604.16713（QAtlas 缓存：2604.16713）。
-- Jiang, Z., Kharche, N., Boykin, T., Klimeck, G. Effects of Interface Disorder on Valley Splitting in SiGe/Si/SiGe Quantum Wells. *Applied Physics Letters* (2012). DOI: 10.1063/1.3692174；arXiv:1110.4097（QAtlas 缓存：1110.4097）。
-- Drumm, D. W., Budi, A., Per, M. C., Russo, S. P., Hollenberg, L. C. L. Ab initio calculation of valley splitting in monolayer δ-doped phosphorus in silicon. *Nanoscale Research Letters* 8, 111 (2013). DOI: 10.1186/1556-276X-8-111；arXiv:1201.3751（QAtlas 缓存：1201.3751）。
+- Jiang, Z., Kharche, N., Boykin, T., Klimeck, G. Effects of Interface Disorder on Valley Splitting in SiGe/Si/SiGe Quantum Wells. _Applied Physics Letters_ (2012). DOI: 10.1063/1.3692174；arXiv:1110.4097（QAtlas 缓存：1110.4097）。
+- Drumm, D. W., Budi, A., Per, M. C., Russo, S. P., Hollenberg, L. C. L. Ab initio calculation of valley splitting in monolayer δ-doped phosphorus in silicon. _Nanoscale Research Letters_ 8, 111 (2013). DOI: 10.1186/1556-276X-8-111；arXiv:1201.3751（QAtlas 缓存：1201.3751）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

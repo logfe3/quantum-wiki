@@ -2,14 +2,14 @@
 title: 界面缺陷
 description: 半导体–介质界面的局域能级，可俘获载流子并引起漂移、噪声和微波损耗。
 aliases:
- - 界面态
- - 缺陷态
- - 界面陷阱
- - dangling bond
+  - 界面态
+  - 缺陷态
+  - 界面陷阱
+  - dangling bond
 tags:
- - 材料与器件
- - 缺陷
- - 噪声
+  - 材料与器件
+  - 缺陷
+  - 噪声
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qvfgsxg109v95s0f7sd3ds
@@ -176,11 +176,11 @@ $$
 
 ![[assets/figures/interface-defects/wolfe2024-fig1-illumination-turnon.jpg]]
 
-*光照前后的器件开启曲线：四量子点器件的整体开启特性在 780 nm 光照后整体平移（蓝→红）——界面陷阱电荷的重排直接改写阈值电压。图源：Wolfe et al. (2024), Fig. 1。*
+_光照前后的器件开启曲线：四量子点器件的整体开启特性在 780 nm 光照后整体平移（蓝→红）——界面陷阱电荷的重排直接改写阈值电压。图源：Wolfe et al. (2024), Fig. 1。_
 
 ![[assets/figures/interface-defects/wolfe2024-fig3-threshold-vs-bias.jpg]]
 
-*阈值电压的偏置调定：施加栅偏压 V_B 并光照 15 分钟后测得的 V_T 随 V_B 变化——宽偏压范围内 V_T = V_B（单位斜率），阈值被"钉扎"到光照时所加的偏压上。图源：Wolfe et al. (2024), Fig. 3。*
+_阈值电压的偏置调定：施加栅偏压 V_B 并光照 15 分钟后测得的 V_T 随 V_B 变化——宽偏压范围内 V_T = V_B（单位斜率），阈值被"钉扎"到光照时所加的偏压上。图源：Wolfe et al. (2024), Fig. 3。_
 
 ## 对谐振腔的影响：损耗角正切与 TLF 耦合
 
@@ -214,22 +214,22 @@ $$
 
 ## 参数与量级
 
-| 量 | 典型值 | 体系 | 来源 |
-| --- | --- | --- | --- |
-| SiGe 势垒层厚度 $t_\text{SiGe}$ | $32\,\text{nm}$ | 应变锗异质结 | PDF p. 43 |
-| 界面 SiO<sub>x</sub> 厚度 $t_{\text{SiO}_x}$ | $1.5\,\text{nm}$ | 应变锗表面氧化 | PDF p. 43 |
-| Ge/SiGe 价带偏移 $\Delta E_v$ | $114\,\text{meV}$ | 应变锗 | PDF p. 43 |
-| 锗空穴有效质量 $m^*_\text{Ge}$ | $0.0728\,m_0$ | 应变锗 | PDF p. 43 |
-| SiGe 合金相对介电常数 $\epsilon_\text{SiGe}$ | $15.34$ | Si<sub>0.2</sub>Ge<sub>0.8</sub> | PDF p. 43 |
-| 实验温度 | $\sim 4.5\,\text{K}$，$k_BT\approx 3.88\times 10^{-4}\,\text{eV}$ | 稀释制冷机 | PDF p. 50 |
-| 直接隧穿电流密度 $J_\text{direct}$ | $\sim 10^{-30}\,\text{A/m}^{2}$ | 应变锗 | PDF p. 52 |
-| F-N 转变栅压 | $V_g\approx -3.5\,\text{V}$ | 应变锗 Hall-bar | PDF pp. 52, 56 |
-| TAT 电流密度范围 | $10^{-4}$–$10^{-1}\,\text{A/m}^{2}$ | 应变锗 | PDF p. 55 |
-| 异质结中位错密度 | $10^{6}$–$10^{8}\,\text{cm}^{-2}$ | 应变锗 | PDF pp. 49, 55 |
-| 陷阱能级（高斯分布均值） | $E_v+140\,\text{meV}$ | 应变锗 SiGe | PDF p. 57 |
-| TLF 有效耦合距离阈值 | $\sim 100\,\text{nm}$ | 谐振腔–界面 | PDF p. 65 |
-| 阈值电压漂移幅度 | 漂移至 $\sim -4.84\,\text{V}$（未钝化） | 应变锗 Hall-bar | PDF p. 33 |
-| 累积 $p_\text{it}$ 与 $V_g$ 线性 Pearson $R$ | $-0.9998$ | 应变锗逆向 S-P | PDF p. 45 |
+| 量                                           | 典型值                                                            | 体系                             | 来源           |
+| -------------------------------------------- | ----------------------------------------------------------------- | -------------------------------- | -------------- |
+| SiGe 势垒层厚度 $t_\text{SiGe}$              | $32\,\text{nm}$                                                   | 应变锗异质结                     | PDF p. 43      |
+| 界面 SiO<sub>x</sub> 厚度 $t_{\text{SiO}_x}$ | $1.5\,\text{nm}$                                                  | 应变锗表面氧化                   | PDF p. 43      |
+| Ge/SiGe 价带偏移 $\Delta E_v$                | $114\,\text{meV}$                                                 | 应变锗                           | PDF p. 43      |
+| 锗空穴有效质量 $m^*_\text{Ge}$               | $0.0728\,m_0$                                                     | 应变锗                           | PDF p. 43      |
+| SiGe 合金相对介电常数 $\epsilon_\text{SiGe}$ | $15.34$                                                           | Si<sub>0.2</sub>Ge<sub>0.8</sub> | PDF p. 43      |
+| 实验温度                                     | $\sim 4.5\,\text{K}$，$k_BT\approx 3.88\times 10^{-4}\,\text{eV}$ | 稀释制冷机                       | PDF p. 50      |
+| 直接隧穿电流密度 $J_\text{direct}$           | $\sim 10^{-30}\,\text{A/m}^{2}$                                   | 应变锗                           | PDF p. 52      |
+| F-N 转变栅压                                 | $V_g\approx -3.5\,\text{V}$                                       | 应变锗 Hall-bar                  | PDF pp. 52, 56 |
+| TAT 电流密度范围                             | $10^{-4}$–$10^{-1}\,\text{A/m}^{2}$                               | 应变锗                           | PDF p. 55      |
+| 异质结中位错密度                             | $10^{6}$–$10^{8}\,\text{cm}^{-2}$                                 | 应变锗                           | PDF pp. 49, 55 |
+| 陷阱能级（高斯分布均值）                     | $E_v+140\,\text{meV}$                                             | 应变锗 SiGe                      | PDF p. 57      |
+| TLF 有效耦合距离阈值                         | $\sim 100\,\text{nm}$                                             | 谐振腔–界面                      | PDF p. 65      |
+| 阈值电压漂移幅度                             | 漂移至 $\sim -4.84\,\text{V}$（未钝化）                           | 应变锗 Hall-bar                  | PDF p. 33      |
+| 累积 $p_\text{it}$ 与 $V_g$ 线性 Pearson $R$ | $-0.9998$                                                         | 应变锗逆向 S-P                   | PDF p. 45      |
 
 ## 实验特征与测量方法
 
@@ -267,94 +267,6 @@ $$
 
 <!-- FIGURE: 镂空谐振腔剖面示意图：氮化钛超导薄膜、Si 承托层、四周 SiO2 支撑柱、下方空气腔 -->
 
-## 超导电路侧的材料损耗全景
-
-半导体界面之外的另一套"从材料到器件"证据链在超导电路里：从块体材料到功能器件的加工过程中，**非晶绝缘膜与非平衡激发**（电子型与声子型准粒子）被逐步引入，成为耗散与涨落的来源。综述（Nature Reviews Materials 2021）系统梳理了这条材料学叙事：超导比特相干时间自 1999 年首次时域相干测量以来提升了**五个数量级**，每一步都对应一类材料缺陷的识别与压制。核心框架是**损耗预算**（loss budget）：把总退相干率分解到各个微观通道——非晶介质层的 TLS 损耗（$\tan\delta_{\mathrm{TLS}}$，与半导体侧的 TLF 物理同源）、导体表面氧化层、衬底-空气界面、准粒子与声子辐射等——再按通道逐个优化材料与工艺。
-
-另一条主线是**比特架构的材料权衡**：单约瑟夫森结的极简比特（制造容差宽）对局域噪声源敏感面更大；多结/多元件设计（transmon 大电容、fluxonium 大电感、对称 SQUID 等）用电路对称性与冗余换噪声保护，但每个新增界面都引入新的材料优化挑战。没有普优解——不同架构的材料优化方向不同，相干数据反过来提供了缺陷机制的互补诊断。
-
-```mermaid
-flowchart LR
-  A[块体材料 纯净] --> B[薄膜沉积]
-  B --> C[非晶绝缘层: TLS 损耗]
-  B --> D[表面氧化层: 表面损耗]
-  B --> E[衬底-空气界面]
-  A --> F[非平衡激发]
-  F --> G[准粒子 电子型]
-  F --> H[声子辐射 声子型]
-  C --> I[损耗预算: 逐通道分解]
-  D --> I
-  E --> I
-  G --> I
-  H --> I
-  I --> J[材料与工艺逐项优化]
-  J --> K[相干时间五量级提升]
-```
-
-![[assets/figures/interface-defects/9356277978e06069e9838e83853960b79222c52051b042c157176e88df0a420a.jpg]]
-
-*超导比特相干时间的演进全景：自 1999 年首次时域相干测量以来五个数量级的提升——每一阶跃都对应一类材料缺陷（TLS、表面氧化、准粒子等）的识别与工艺压制。图源：Nature Reviews Materials 综述（2021），DOI:10.1038/s41578-021-00370-4。*
-
-**铝-硅界面的损耗缓解落地**：综述框架之后，材料工程的具体数据来自 Plourde 组（2023）——铝-硅平面 transmon 的 $T_1$ 达 **270 µs**（平均）、最高观测 501 µs，对应 $Q=500$ 万。方法闭环与综述的建议一致：先用材料分析技术（SIMS 等）与数值仿真定位主导损耗源（衬底-金属界面与表面氧化层的 TLS 参与度），再针对性地设计缓解策略（衬底表面处理、金属沉积参数、封装环境控制）并用器件实测验证。这是"损耗预算→逐通道优化→相干提升"路线的定量落地案例。
-
-![[assets/figures/interface-defects/614550dfcf701f8480172c14ca6e519f57d3acf6abe9383849cfa8f933af363f.jpg]]
-
-*铝-硅平面 transmon 器件：界面介质损耗缓解策略的载体——材料分析与数值仿真定位衬底-金属界面与表面氧化层的 TLS 主导损耗，工艺优化后 T1 平均 270 µs（最高 501 µs，Q=5×10⁶）。图源：Plourde 组（2023），Fig. 1。*
-
-![[assets/figures/interface-defects/5f208dda09180fb147b9ef44ca8dc8f5d0ee89f336d5be4920b785612c08206c.jpg]]
-
-*损耗通道的量化分解：材料分析与数值仿真给出的损耗预算——界面/表面通道的参与度随工艺参数变化，缓解策略据此定向设计。图源：Plourde 组（2023），Fig. 3。*
-
-**钽（Ta）路线的氧化层稳定性**：α-Ta(110) 薄膜的表面氧化层表现出**低介质损耗与空气稳定性**——不同于多数超导表面氧化物在空气中持续劣化，Ta 的氧化层形成后稳定，介质损耗低。这是 Ta 成为高相干比特主力材料（Google/Princeton 路线）的材料学基础，与铝-硅缓解策略（上节）并列的材料选项。
-
-![[assets/figures/interface-defects/2621f36ee93b15210d021e38f0f83de7af394eacd4dce556bb63ab7fa30eaf3c.jpg]]
-
-*α-Ta(110) 薄膜的氧化层表征：表面氧化物的结构与损耗测量——低介质损耗且空气暴露后稳定，支撑 Ta 平台的高相干。图源：arXiv:2305.11395，Fig. 1。*
-
-![[assets/figures/interface-defects/4ffe31be03787027fb92be27bf21cf88ca561dc6069dc10245d399a5ef870ebc.jpg]]
-
-*氧化层的损耗对比：不同处理条件下 Ta 氧化层的介质损耗——稳定低损耗窗口为工艺优化给出方向。图源：arXiv:2305.11395，Fig. 2。*
-
-**分立电荷态的量子分辨**把 TLS 从"统计参数"升级为"可分辨量子对象"：与偏置电荷敏感 transmon 强耦合的单个介质 TLS，其两个本征态被观测到各有 **0.072e** 的分立偏置电荷（TLS 隧穿双阱的两个位置）、跃迁频率 2.9 GHz、弛豫时间超长——TLS 不再只是 $	andelta$ 里的损耗参数，而是能做相干光谱的"天然量子比特"。这一微观层级是界面缺陷词条证据链的最底层。
-
-![[assets/figures/interface-defects/90ada7211345737363f91f23c50fb252a3e5ab448a659f67deff67243c2acf57.jpg]]
-
-*TLS 分立电荷态观测：偏置电荷敏感 transmon 与单介质 TLS 强耦合——TLS 双阱的两个位置表现为 0.072e 的分立电荷差。图源：Hyalett et al. (2024)，Fig. 1。*
-
-![[assets/figures/interface-defects/51bd482d235453a2c6afe26ffb5120c4eebebcf299f6507ebf1af79259effecf.jpg]]
-
-*TLS 相干光谱：2.9 GHz 跃迁的弛豫测量——单个 TLS 的量子相干行为，微观层级的直接证据。图源：同上，Fig. 2。*
-
-**工业 300mm 产线的工艺验证**：IMEC 用**工业标准先进半导体制造工艺**（300mm 晶圆产线）制出高相干超导比特——相干时间达到实验室工艺的同等水平。这是材料证据链的工艺层里程碑：TLS 损耗控制、界面钝化、真空封装等关键工艺全部在量产环境下复现，超导比特从"实验室手工艺品"跨入"晶圆厂产品"时代。
-
-![[assets/figures/interface-defects/0729e30f7b7908a2849fb1b68737afeee537d9980fca454bebda7bd415dd4ad0.jpg]]
-
-*IMEC 300mm 产线制造的超导比特：工业标准工艺（晶圆级钝化、真空封装）——实验室相干指标在量产环境复现。图源：Van Damme et al. (2024)，Fig. 1。*
-
-![[assets/figures/interface-defects/47d046d9ca3b4dd7f3c41f13d97dc0f387bb9ca6c6e61076c6a5e96d12b22a43.jpg]]
-
-*产线比特的相干测量：$T_1$、$T_2$ 分布——工业工艺的统计一致性达到实验室水平。图源：Van Damme et al. (2024)，Fig. 2。*
-
-**双音谱学**是 TLS 表征的第二种方法：不依赖比特频率调谐（对照偏置电荷敏感法），用两个微波音同时驱动——TLS 与比特的强耦合在双音谱中产生特征线形，直接读出 TLS 参数。对频率不可调的比特（如固定频率 transmon 阵列）尤其有价值。
-
-![[assets/figures/interface-defects/ddc9f566a747f25f362f9384b78ed99c55da9f0265e195bb3d9468e4955a65f2.jpg]]
-
-*双音谱学方案：两个微波音的联合扫描——TLS-比特强耦合的特征谱线，无需调谐比特频率。图源：arXiv:2404.14039，Fig. 1。*
-
-![[assets/figures/interface-defects/b80044ee2094c1d12670d0cfbfa948c69e3e8d9b374eb31ccbd0a9ad02643e93.jpg]]
-
-*双音谱的 TLS 检测结果：特征线形直接读出 TLS 参数——固定频率比特阵列的 TLS 表征工具。图源：arXiv:2404.14039，Fig. 2。*
-
-**铌薄膜的微波损耗直接测量**（材料证据链第四块）：Nb 是二维 transmon 的主力电极材料，但多层材料-界面的叠层使 Nb 的损耗贡献一直难以单独标定——直接测量（谐振器法）把 Nb 膜的损耗率从叠层中剥离，材料清单的铌数据补齐（综述→铝硅→钽→铌四块齐全）。
-
-![[assets/figures/interface-defects/88fcd93f43328cc481f14c5ad1564b793e79afb5ce8e87fc790ddfa246b43e7d.jpg]]
-
-*Nb 膜微波损耗的直接测量：从多层叠层中剥离 Nb 的贡献。图源：arXiv:2407.08856，Fig. 1。*
-
-![[assets/figures/interface-defects/fa6448b0a6af3e2dbb2770684f8940f76d9485701bce660481d2cf7ba1060fd6.jpg]]
-
-*损耗率的测量结果：Nb 膜的品质因子。图源：arXiv:2407.08856，Fig. 2。*
-
 ## 与其他概念的关系
 
 - [[materials-devices/charge-noise|电荷噪声]]：界面态俘获/释放是低频电荷噪声的主要微观起源之一；其时间常数随温度与偏压变化，决定噪声谱的 $1/f^\alpha$ 形状——Si/SiGe 量子点的系统测量进一步表明各点感受到激活能分布不同的 TLS 系综，平均 $1/f$ 行为之下藏着显著的点间差异（Dutta–Horn 图像）。
@@ -365,7 +277,6 @@ flowchart LR
 - [[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/coulomb-diamond|库仑菱形]]：在阻塞区量子点电子数严格为整数，界面态俘获/释放改变邻近电化学势，使库仑峰位置随时间漂移——菱形边界的时域展宽本身即可作为界面态活性的度量。
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]：界面态的存在使能级寿命延长，PAT 实验提取的电荷弛豫与退相干时间反映了界面态–载流子相互作用的强度。
 - [[qubit-control/exchange-interaction|交换作用]]与[[qubit-control/ramsey-interferometry|Ramsey 干涉]]：界面态引起的电荷涨落通过 $g$ 因子、电场梯度和交换项传递到自旋比特，是 $T_2^{*}$ 的主要限制之一。
-- [[superconducting-qubits/junction-defect-modes|约瑟夫森结强耦合缺陷模]]：超导侧的"另一族"缺陷——结区零点电场（数 kV/m）中与比特相干强耦合（$g/2\pi\geq0.5$ MHz）的分立 TLS，与本文弱耦合 TLF 系综物理可分（清洗工艺改 $Q$ 不改其谱密度），共同构成超导比特损耗的两层结构。
 
 ## 工艺对策
 
@@ -377,5 +288,6 @@ flowchart LR
 
 ## 参考文献
 
-- Wolfe, M. A., Coe, B. X., Edwards, J. S., Kovach, T. J., et al. Control of threshold voltages in Si/SiGe quantum devices via optical illumination. *Physical Review Applied* 22, 034044 (2024). DOI: 10.1103/PhysRevApplied.22.034044；arXiv:2312.14011（QAtlas 缓存：2312.14011）。
+- Wolfe, M. A., Coe, B. X., Edwards, J. S., Kovach, T. J., et al. Control of threshold voltages in Si/SiGe quantum devices via optical illumination. _Physical Review Applied_ 22, 034044 (2024). DOI: 10.1103/PhysRevApplied.22.034044；arXiv:2312.14011（QAtlas 缓存：2312.14011）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

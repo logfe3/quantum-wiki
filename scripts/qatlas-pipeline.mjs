@@ -6,12 +6,18 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import YAML from "yaml"
+import { validatePlanScope } from "./qatlas-scope.mjs"
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const runsRoot = path.join(repositoryRoot, ".qatlas-cache", "runs")
 const cacheRoot = path.join(repositoryRoot, ".qatlas-cache", "papers")
 const promptDir = path.join(repositoryRoot, "scripts", "qatlas-prompts")
-const schemaPath = path.join(repositoryRoot, "scripts", "qatlas-schemas", "editorial-plan.schema.json")
+const schemaPath = path.join(
+  repositoryRoot,
+  "scripts",
+  "qatlas-schemas",
+  "editorial-plan.schema.json",
+)
 const bridgePath = path.join(repositoryRoot, "scripts", "qatlas-bridge.mjs")
 const contentRoot = path.join(repositoryRoot, "content")
 
@@ -92,9 +98,7 @@ function extractFrontmatter(text) {
 }
 
 function extractWikiLinks(body) {
-  return [...body.matchAll(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g)].map((match) =>
-    match[1].trim(),
-  )
+  return [...body.matchAll(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g)].map((match) => match[1].trim())
 }
 
 async function buildWikiIndex() {
@@ -111,8 +115,7 @@ async function buildWikiIndex() {
       aliases: Array.isArray(frontmatter.aliases) ? frontmatter.aliases.map(String) : [],
       tags: Array.isArray(frontmatter.tags) ? frontmatter.tags.map(String) : [],
       source: typeof frontmatter.source === "string" ? frontmatter.source : "",
-      qatlas_id:
-        typeof frontmatter.qatlas_id === "string" ? frontmatter.qatlas_id : "",
+      qatlas_id: typeof frontmatter.qatlas_id === "string" ? frontmatter.qatlas_id : "",
       wikiLinks: extractWikiLinks(body),
     })
   }
@@ -191,9 +194,7 @@ async function discoverPapers(config, options) {
   const imageSelection = String(options.images ?? "referenced")
   const index = await buildWikiIndex()
   const usedPapers = new Set((config.usedPapers ?? []).map(String))
-  console.log(
-    `Wiki index: ${index.pages.length} pages, ${index.categories.length} categories.`,
-  )
+  console.log(`Wiki index: ${index.pages.length} pages, ${index.categories.length} categories.`)
 
   const candidates = []
   const excluded = []
@@ -217,11 +218,19 @@ async function discoverPapers(config, options) {
     for (const item of items) {
       const existing = candidateMatchesWiki(item, index)
       if (existing) {
-        excluded.push({ paper_id: item.paper_id, title: item.title, reason: `already in wiki: ${existing}` })
+        excluded.push({
+          paper_id: item.paper_id,
+          title: item.title,
+          reason: `already in wiki: ${existing}`,
+        })
         continue
       }
       if (usedPapers.has(item.paper_id)) {
-        excluded.push({ paper_id: item.paper_id, title: item.title, reason: "already processed in an earlier auto round" })
+        excluded.push({
+          paper_id: item.paper_id,
+          title: item.title,
+          reason: "already processed in an earlier auto round",
+        })
         continue
       }
       if (candidates.some((entry) => entry.paper_id === item.paper_id)) continue
@@ -240,17 +249,8 @@ async function discoverPapers(config, options) {
     const identifier = candidate.arxiv_id || candidate.doi || candidate.paper_id
     process.stdout.write(`Fetching candidate ${candidate.title ?? candidate.paper_id} … `)
     try {
-      const manifest = await bridgeJson([
-        "fetch",
-        "--id",
-        identifier,
-        "--images",
-        imageSelection,
-      ])
-      const paperMarkdown = await readFile(
-        path.join(manifest.outputDirectory, "paper.md"),
-        "utf8",
-      )
+      const manifest = await bridgeJson(["fetch", "--id", identifier, "--images", imageSelection])
+      const paperMarkdown = await readFile(path.join(manifest.outputDirectory, "paper.md"), "utf8")
       const figures = JSON.parse(
         await readFile(path.join(manifest.outputDirectory, "figures.json"), "utf8"),
       )
@@ -265,7 +265,10 @@ async function discoverPapers(config, options) {
         authors: metadata.authors ?? candidate.authors ?? [],
         source_updated: manifest.sourceUpdatedAt,
         status: candidate.status,
-        cache_dir: path.relative(repositoryRoot, manifest.outputDirectory).split(path.sep).join("/"),
+        cache_dir: path
+          .relative(repositoryRoot, manifest.outputDirectory)
+          .split(path.sep)
+          .join("/"),
         markdown_chars: paperMarkdown.length,
         figures: (figures.figures ?? []).map((figure) => ({
           fig_no: figure.fig_no,
@@ -301,7 +304,8 @@ function validateAgainstSchema(value, schema, location = "root") {
       if (!(key in value)) errors.push(`${location}: missing required property "${key}"`)
     }
     for (const [key, subschema] of Object.entries(schema.properties ?? {})) {
-      if (key in value) errors.push(...validateAgainstSchema(value[key], subschema, `${location}.${key}`))
+      if (key in value)
+        errors.push(...validateAgainstSchema(value[key], subschema, `${location}.${key}`))
     }
     if (schema.additionalProperties === false) {
       const allowed = new Set(Object.keys(schema.properties ?? {}))
@@ -339,7 +343,8 @@ function validateAgainstSchema(value, schema, location = "root") {
     return errors
   }
   if (schema.enum) {
-    if (!schema.enum.includes(value)) errors.push(`${location}: value must be one of ${schema.enum.join(", ")}`)
+    if (!schema.enum.includes(value))
+      errors.push(`${location}: value must be one of ${schema.enum.join(", ")}`)
   }
   if (schema.type === "string") {
     if (typeof value !== "string") return [`${location}: expected string`]
@@ -355,6 +360,18 @@ function validateAgainstSchema(value, schema, location = "root") {
     if (!Number.isInteger(value)) errors.push(`${location}: expected integer`)
     if (schema.minimum !== undefined && value < schema.minimum) {
       errors.push(`${location}: value below minimum ${schema.minimum}`)
+    }
+    return errors
+  }
+  if (schema.type === "number") {
+    if (typeof value !== "number" || !Number.isFinite(value)) {
+      return [`${location}: expected number`]
+    }
+    if (schema.minimum !== undefined && value < schema.minimum) {
+      errors.push(`${location}: value below minimum ${schema.minimum}`)
+    }
+    if (schema.maximum !== undefined && value > schema.maximum) {
+      errors.push(`${location}: value above maximum ${schema.maximum}`)
     }
     return errors
   }
@@ -393,6 +410,15 @@ async function loadAndValidatePlan(runDir) {
       throw new Error(`editorial-plan.json references unknown paper ${candidateId}`)
     }
   }
+  const config = await loadIntegrationConfig()
+  const scopeErrors = validatePlanScope(plan, config)
+  if (scopeErrors.length > 0) {
+    throw new Error(
+      `editorial-plan.json failed quantum-dot scope validation:\n${scopeErrors
+        .map((error) => `  - ${error}`)
+        .join("\n")}`,
+    )
+  }
   return plan
 }
 
@@ -402,11 +428,15 @@ async function loadAndValidatePlan(runDir) {
 
 function runCodex(sandbox, prompt, timeoutMinutes) {
   return new Promise((resolve) => {
-    const child = spawn("codex", ["exec", "--ephemeral", `--sandbox`, sandbox, "-C", repositoryRoot, "-"], {
-      cwd: repositoryRoot,
-      shell: true,
-      stdio: ["pipe", "pipe", "pipe"],
-    })
+    const child = spawn(
+      "codex",
+      ["exec", "--ephemeral", `--sandbox`, sandbox, "-C", repositoryRoot, "-"],
+      {
+        cwd: repositoryRoot,
+        shell: true,
+        stdio: ["pipe", "pipe", "pipe"],
+      },
+    )
     let stdout = ""
     let stderr = ""
     const timer = setTimeout(() => child.kill(), timeoutMinutes * 60_000)
@@ -628,7 +658,7 @@ function nextBatchSize(state, autodiscovery) {
   return last
 }
 
-async function syncMainWithRemote() {
+async function verifyFeatureBranch() {
   const git = (args) =>
     new Promise((resolve) => {
       const child = spawn("git", args, { cwd: repositoryRoot, stdio: ["ignore", "pipe", "pipe"] })
@@ -651,50 +681,21 @@ async function syncMainWithRemote() {
   }
   const fetch = await git(["fetch", "github"])
   if (!fetch.ok) throw new Error(`git fetch failed: ${fetch.output}`)
-  const behind = await git(["rev-list", "--count", "main..github/main"])
-  if (behind.ok && Number.parseInt(behind.output.trim(), 10) > 0) {
-    const pull = await git(["pull", "--ff-only", "github", "main"])
-    if (!pull.ok) throw new Error(`git pull failed: ${pull.output}`)
-    console.log("Synced latest main from github.")
+  const branch = await git(["branch", "--show-current"])
+  if (!branch.ok) throw new Error(`git branch failed: ${branch.output}`)
+  const branchName = branch.output.trim()
+  if (branchName === "main" || !branchName.startsWith("feature/qatlas-")) {
+    throw new Error(
+      `QAtlas auto must run on a feature/qatlas-* branch, not "${branchName || "detached HEAD"}".`,
+    )
   }
-}
-
-async function commitBatchToMain(topic, roundIndex, papers) {
-  const git = (args) =>
-    new Promise((resolve) => {
-      const child = spawn("git", args, { cwd: repositoryRoot, stdio: ["ignore", "pipe", "pipe"] })
-      let output = ""
-      child.stdout.on("data", (chunk) => {
-        output += chunk
-      })
-      child.stderr.on("data", (chunk) => {
-        output += chunk
-      })
-      child.on("error", (error) => resolve({ ok: false, output: `${output}${error.message}` }))
-      child.on("close", (code) => resolve({ ok: code === 0, output }))
-    })
-  const status = await git(["status", "--porcelain"])
-  if (!status.ok || status.output.trim() === "") {
-    return { committed: false, message: "nothing to commit" }
+  const containsMain = await git(["merge-base", "--is-ancestor", "github/main", "HEAD"])
+  if (!containsMain.ok) {
+    throw new Error(
+      "The QAtlas feature branch is behind github/main; merge or rebase latest main before auto discovery.",
+    )
   }
-  const add = await git(["add", "content", "package.json", "qatlas.integration.yaml", "README.md", "quartz.config.yaml"])
-  if (!add.ok) throw new Error(`git add failed: ${add.output}`)
-  const identifiers = papers
-    .map((paper) => paper.arxiv_id || paper.doi || paper.paper_id)
-    .filter(Boolean)
-    .join(", ")
-  const message = [
-    `QAtlas auto batch ${roundIndex}: topic "${topic}"`,
-    "",
-    `Papers: ${identifiers || "(none)"}`,
-    "Generated by the QAtlas auto pipeline; review gate passed",
-    "(content gate, TypeScript, tests, production build).",
-  ].join("\n")
-  const commit = await git(["commit", "-m", message])
-  if (!commit.ok) throw new Error(`git commit failed: ${commit.output}`)
-  const push = await git(["push", "github", "main"])
-  if (!push.ok) throw new Error(`git push failed: ${push.output}`)
-  return { committed: true, message: commit.output.trim().split("\n")[0] }
+  console.log(`Feature branch ${branchName} contains latest github/main.`)
 }
 
 async function commandDiscover(options, usedPapers = []) {
@@ -722,10 +723,12 @@ async function commandDiscover(options, usedPapers = []) {
 }
 async function writeWorkOrder(runId) {
   const runDir = path.join(runsRoot, runId)
-  const candidatesDocument = JSON.parse(await readFile(path.join(runDir, "candidates.json"), "utf8"))
+  const candidatesDocument = JSON.parse(
+    await readFile(path.join(runDir, "candidates.json"), "utf8"),
+  )
   const wikiIndex = JSON.parse(await readFile(path.join(runDir, "wiki-index.json"), "utf8"))
   const schema = JSON.parse(await readFile(schemaPath, "utf8"))
-  const example = (schema.items.properties ?? null) ?? {}
+  const example = schema.items.properties ?? null ?? {}
   const indexSummary = {
     generatedAt: wikiIndex.generatedAt,
     categories: wikiIndex.categories,
@@ -743,7 +746,9 @@ async function writeWorkOrder(runId) {
     SCHEMA_EXAMPLE: JSON.stringify(example, null, 2),
   })
   await writeAtomicAbsolute(path.join(runDir, "work-order.md"), workOrder)
-  console.log(`Work order written to ${path.relative(repositoryRoot, path.join(runDir, "work-order.md"))}`)
+  console.log(
+    `Work order written to ${path.relative(repositoryRoot, path.join(runDir, "work-order.md"))}`,
+  )
   return { runDir, candidatesDocument }
 }
 
@@ -754,15 +759,18 @@ async function commandPlan(options) {
   if (executor === "codex") {
     console.log("Planning with codex (read-only sandbox) …")
     const workOrder = await readFile(path.join(runDir, "work-order.md"), "utf8")
-    const result = await runCodex("read-only", workOrder, parseNumberOption(options, "timeout-min", 30))
+    const result = await runCodex(
+      "read-only",
+      workOrder,
+      parseNumberOption(options, "timeout-min", 30),
+    )
     const plan = extractJsonArray(result.stdout)
-    if (!plan) throw new Error("Could not extract a JSON array from codex output; see stdout above.")
+    if (!plan)
+      throw new Error("Could not extract a JSON array from codex output; see stdout above.")
     await writeJson(path.join(runDir, "editorial-plan.json"), plan)
   }
   const plan = await loadAndValidatePlan(runDir)
-  const decisions = plan
-    .map((entry) => `${entry.paper_id}: ${entry.decision}`)
-    .join("\n  ")
+  const decisions = plan.map((entry) => `${entry.paper_id}: ${entry.decision}`).join("\n  ")
   console.log(`Editorial plan valid for run ${runId}:\n  ${decisions}`)
   console.log(
     `Candidates fetched: ${candidatesDocument.candidates.length}; excluded: ${candidatesDocument.excluded.length}.`,
@@ -794,9 +802,13 @@ async function commandGenerate(options) {
   const runId = await resolveRunId(options)
   const runDir = path.join(runsRoot, runId)
   const plan = await loadAndValidatePlan(runDir)
-  const candidatesDocument = JSON.parse(await readFile(path.join(runDir, "candidates.json"), "utf8"))
+  const candidatesDocument = JSON.parse(
+    await readFile(path.join(runDir, "candidates.json"), "utf8"),
+  )
   const wikiIndex = JSON.parse(await readFile(path.join(runDir, "wiki-index.json"), "utf8"))
-  const candidateById = new Map(candidatesDocument.candidates.map((candidate) => [candidate.paper_id, candidate]))
+  const candidateById = new Map(
+    candidatesDocument.candidates.map((candidate) => [candidate.paper_id, candidate]),
+  )
   const indexSummary = {
     generatedAt: wikiIndex.generatedAt,
     categories: wikiIndex.categories,
@@ -824,7 +836,11 @@ async function commandGenerate(options) {
   const executor = String(options.executor ?? "agent")
   if (executor === "codex") {
     console.log("Generating with codex (workspace-write sandbox) …")
-    const result = await runCodex("workspace-write", workOrder, parseNumberOption(options, "timeout-min", 30))
+    const result = await runCodex(
+      "workspace-write",
+      workOrder,
+      parseNumberOption(options, "timeout-min", 30),
+    )
     await writeAtomicAbsolute(path.join(runDir, "agent-result.md"), result.stdout)
   }
   const active = plan.filter((entry) => entry.decision !== "skip")
@@ -846,13 +862,13 @@ async function commandGenerate(options) {
     ...new Set(active.map((entry) => path.posix.dirname(entry.target_path))),
   ])
   if (!gate.ok) {
-    throw new Error("Content gate failed on the generated pages; fix the pages and re-run generate.")
+    throw new Error(
+      "Content gate failed on the generated pages; fix the pages and re-run generate.",
+    )
   }
   console.log(
     `Generation verified for run ${runId}: ${active.length} page(s) created/updated and gated.` +
-      (executor !== "codex"
-        ? `\nNext: npm run qatlas:pipeline -- review --run ${runId}`
-        : ""),
+      (executor !== "codex" ? `\nNext: npm run qatlas:pipeline -- review --run ${runId}` : ""),
   )
   return runId
 }
@@ -944,7 +960,7 @@ async function commandAuto(options) {
   let round = 1
   while (totalRounds <= 0 || round <= totalRounds) {
     console.log(`\n=== Round ${round} ===`)
-    await syncMainWithRemote()
+    await verifyFeatureBranch()
     const wikiIndex = await buildWikiIndex()
     const batchSize = nextBatchSize(state, autodiscovery)
     console.log(`Wiki index: ${wikiIndex.pages.length} pages. Batch size: ${batchSize}.`)
@@ -955,7 +971,9 @@ async function commandAuto(options) {
     let avoidDerived = false
     try {
       for (let attempt = 0; attempt < topicsToTry; attempt += 1) {
-        const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex, { avoidDerived })
+        const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex, {
+          avoidDerived,
+        })
         console.log(`Topic (${selection.origin}): "${selection.topic}"`)
         try {
           const discoverResult = await commandDiscover(
@@ -990,7 +1008,12 @@ async function commandAuto(options) {
     }
     if (discoverOutcome !== "ok" || !runId || !chosenTopic) {
       state.rounds += 1
-      state.history.push({ round, topic: null, outcome: "failed", reason: "no discoverable candidates" })
+      state.history.push({
+        round,
+        topic: null,
+        outcome: "failed",
+        reason: "no discoverable candidates",
+      })
       await saveAutoState(stateFile, state)
       console.log("Round failed at discovery; continuing to the next round.")
       results.push({ round, outcome: "failed" })
@@ -1006,7 +1029,8 @@ async function commandAuto(options) {
         await readFile(path.join(runsRoot, runId, "candidates.json"), "utf8"),
       )
       for (const candidate of discovered.candidates ?? []) {
-        if (!state.usedPapers.includes(candidate.paper_id)) state.usedPapers.push(candidate.paper_id)
+        if (!state.usedPapers.includes(candidate.paper_id))
+          state.usedPapers.push(candidate.paper_id)
       }
       await writeWorkOrder(runId)
       if (executor === "codex") {
@@ -1032,7 +1056,12 @@ async function commandAuto(options) {
       console.log(`Round failed: ${failureReason}`)
     }
     state.rounds += 1
-    state.history.push({ round, topic: chosenTopic.topic, outcome: roundOutcome, reason: failureReason || undefined })
+    state.history.push({
+      round,
+      topic: chosenTopic.topic,
+      outcome: roundOutcome,
+      reason: failureReason || undefined,
+    })
     await saveAutoState(stateFile, state)
     results.push({ round, outcome: roundOutcome, runId, topic: chosenTopic.topic })
     round += 1

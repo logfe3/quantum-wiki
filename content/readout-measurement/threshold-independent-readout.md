@@ -2,11 +2,11 @@
 title: 阈值无关读出
 description: 不依赖固定信号幅度阈值、而利用时间轨迹结构判定隧穿事件的单发读出方法。
 aliases:
- - 无阈值单发读出
- - 阈值无关单发读出
+  - 无阈值单发读出
+  - 阈值无关单发读出
 tags:
- - 读出与测量
- - 信号处理
+  - 读出与测量
+  - 信号处理
 date: 2026-09-08
 ---
 
@@ -118,18 +118,18 @@ $V^R(t_r,x_t)$ 的相图需要知道每条轨迹最大值在两个态下的分�
 
 以下数值取自硅量子点单自旋器件（四层重叠铝电极）在 $B_\mathrm{ext}=1.5\ \mathrm{T}$ 下的实测与模拟：
 
-| 量 | 数值 | 说明 |
-| --- | --- | --- |
-| $\Gamma_\uparrow^\mathrm{out}$ | $6.0\pm0.1\ \mathrm{kHz}$ | 激发态跳出速率 |
-| $\Gamma_\downarrow^\mathrm{out}$ | $27\pm2\ \mathrm{Hz}$ | 基态跳出速率（决定窗口上限） |
-| $\Gamma_\downarrow^\mathrm{in}$ | $1.39\pm0.04\ \mathrm{kHz}$ | 基态回填速率 |
-| 采样率 $\Gamma_s$ | $50\ \mathrm{kHz}$ | 采集卡 ATS-460 |
-| $1/T_1$ | $112\pm6\ \mathrm{s^{-1}}$ | 自旋弛豫速率 |
-| 电子温度 $T_e$ | $180.5\pm8.1\ \mathrm{mK}$ | $E_z/T_e=11.22$，略低于 13 的高可见度判据 |
-| $t_\mathrm{opt}^{STC}$ | $0.84\ \mathrm{ms}$ | 对应 $V^{STC}=97.15\%$ |
-| $V^R_\mathrm{max}$ | $85.4\%$ | 最佳 $(t_r,x_t)$ 处的读取可见度 |
-| $A_\mathrm{eff}$ 提升 | $\times 60$ | 误差 $<1\%$ 的参数空间面积 |
-| 高温边界 | $T_e=0.7\ \mathrm{K}$ @ $1.5\ \mathrm{T}$ | 超过此温度 $A_\mathrm{eff}$ 不再优于传统方法，此时 $V^R_\mathrm{max}\approx50\%$ |
+| 量                               | 数值                                      | 说明                                                                             |
+| -------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- |
+| $\Gamma_\uparrow^\mathrm{out}$   | $6.0\pm0.1\ \mathrm{kHz}$                 | 激发态跳出速率                                                                   |
+| $\Gamma_\downarrow^\mathrm{out}$ | $27\pm2\ \mathrm{Hz}$                     | 基态跳出速率（决定窗口上限）                                                     |
+| $\Gamma_\downarrow^\mathrm{in}$  | $1.39\pm0.04\ \mathrm{kHz}$               | 基态回填速率                                                                     |
+| 采样率 $\Gamma_s$                | $50\ \mathrm{kHz}$                        | 采集卡 ATS-460                                                                   |
+| $1/T_1$                          | $112\pm6\ \mathrm{s^{-1}}$                | 自旋弛豫速率                                                                     |
+| 电子温度 $T_e$                   | $180.5\pm8.1\ \mathrm{mK}$                | $E_z/T_e=11.22$，略低于 13 的高可见度判据                                        |
+| $t_\mathrm{opt}^{STC}$           | $0.84\ \mathrm{ms}$                       | 对应 $V^{STC}=97.15\%$                                                           |
+| $V^R_\mathrm{max}$               | $85.4\%$                                  | 最佳 $(t_r,x_t)$ 处的读取可见度                                                  |
+| $A_\mathrm{eff}$ 提升            | $\times 60$                               | 误差 $<1\%$ 的参数空间面积                                                       |
+| 高温边界                         | $T_e=0.7\ \mathrm{K}$ @ $1.5\ \mathrm{T}$ | 超过此温度 $A_\mathrm{eff}$ 不再优于传统方法，此时 $V^R_\mathrm{max}\approx50\%$ |
 
 要使 $V^{STC}$ 超过 99%，需同时满足 $E_z/T_e>13$、$T_1\Gamma_\uparrow^\mathrm{out}>100$、$\Gamma_s/\Gamma_\downarrow^\mathrm{in}>12$；该实验中后两条满足，瓶颈是 $E_z/T_e$，即电子温度偏高。
 
@@ -158,11 +158,11 @@ $$
 
 ![[assets/figures/threshold-independent-readout/e767fbc4e82ab2c36c9ed3f706efb3534b87ca1ae48aa478f81e94c342f034db.jpg]]
 
-*路径签名增强读出：时域测量轨迹 → 签名特征变换 → 态判别——整条轨迹的形状信息进入判决。图源：arXiv:2402.09532，Fig. 1。*
+_路径签名增强读出：时域测量轨迹 → 签名特征变换 → 态判别——整条轨迹的形状信息进入判决。图源：arXiv:2402.09532，Fig. 1。_
 
 ![[assets/figures/threshold-independent-readout/044525b6a31c397cdf98ade06ff64d5c97f489971051572d8afebc646df84ea6.jpg]]
 
-*判给保真度增强：路径签名方法与传统判别的对比——相同数据下保真度显著提升。图源：arXiv:2402.09532，Fig. 2。*
+_判给保真度增强：路径签名方法与传统判别的对比——相同数据下保真度显著提升。图源：arXiv:2402.09532，Fig. 2。_
 
 ## 与其他概念的关系
 
@@ -172,4 +172,4 @@ $$
 - 电荷信号由邻近传感器拾取，如[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET；信号链的带宽与滤波（贝塞尔低通）进入 Monte-Carlo 模型，连接[[materials-devices/charge-noise|电荷噪声]]环境。
 - 待测的 $P_I^\uparrow$ 通常来自[[qubit-control/single-spin-qubit|单自旋量子比特]]的 $T_1$ 弛豫曲线或门操作末态；修正后的 $P_E^\uparrow$ 直接改善这些实验的对比度。
 - 更大规模的阈值/边界自动标定属于[[scaling-automation/automatic-tuning|自动调控]]与电荷态识别问题；阈值无关思想（用模型修正代替死守最佳工作点）与之一脉相承。
-- 超导侧的对应课题是[[readout-measurement/readout-induced-leakage|读出诱导泄漏基准测试]]：当信号轨迹/直方图里混入根本不属于计算子空间的泄漏态时，任何基于 $g/e$ 模型的判决都会失明，需要在判决之外用协议级方法单独量化泄漏率。
+- 超导侧的对应课题是读出诱导泄漏基准测试：当信号轨迹/直方图里混入根本不属于计算子空间的泄漏态时，任何基于 $g/e$ 模型的判决都会失明，需要在判决之外用协议级方法单独量化泄漏率。

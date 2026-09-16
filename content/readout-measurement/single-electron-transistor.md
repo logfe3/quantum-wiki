@@ -2,15 +2,15 @@
 title: 单电子晶体管
 description: 用库仑岛与两侧隧穿势垒构成的高灵敏度电荷传感器；岛电荷改变一个 e 即可触发 SET 电流的周期性振荡。
 aliases:
- - SET
- - 库仑岛静电计
- - SET 电荷计
- - 单电子隧穿晶体管
- - single-electron transistor
+  - SET
+  - 库仑岛静电计
+  - SET 电荷计
+  - 单电子隧穿晶体管
+  - single-electron transistor
 tags:
- - 读出与测量
- - 电荷传感
- - 库仑阻塞
+  - 读出与测量
+  - 电荷传感
+  - 库仑阻塞
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qvh1s18grv8b7hnjs8xd9r
@@ -65,13 +65,13 @@ $\alpha_\mathrm{c}$ 越大，被测点一个电子所引起的 SET 岛电势改�
 
 SET 与[[readout-measurement/qpc-charge-sensor|QPC]] 的对比决定了它们的实验分工：
 
-| 维度 | SET（库仑岛） | QPC（窄通道） |
-| --- | --- | --- |
-| 探测信号 | $I_\mathrm{SET}$ 库仑振荡峰 | 通道电导 $G_\mathrm{QPC}$ |
-| 灵敏度 | $\sim 10^{-6}\,e/\sqrt{\mathrm{Hz}}$ 量级（RF-SET） | $\sim 10^{-4}\,e/\sqrt{\mathrm{Hz}}$ 量级（RF-QPC） |
-| 带宽 | 直流带宽极低（数十 kHz），RF-SET 可达 $\sim 100$ MHz | 直流几十 kHz，RF-QPC 可达 $\sim 10$ MHz |
-| 工艺难度 | 复杂（双隧穿结纳米尺度） | 较简单（与被测点同时加工） |
-| 适用场景 | 超导电荷量子比特读出（早期） | 半导体量子点邻位电荷传感（主流） |
+| 维度     | SET（库仑岛）                                        | QPC（窄通道）                                       |
+| -------- | ---------------------------------------------------- | --------------------------------------------------- |
+| 探测信号 | $I_\mathrm{SET}$ 库仑振荡峰                          | 通道电导 $G_\mathrm{QPC}$                           |
+| 灵敏度   | $\sim 10^{-6}\,e/\sqrt{\mathrm{Hz}}$ 量级（RF-SET）  | $\sim 10^{-4}\,e/\sqrt{\mathrm{Hz}}$ 量级（RF-QPC） |
+| 带宽     | 直流带宽极低（数十 kHz），RF-SET 可达 $\sim 100$ MHz | 直流几十 kHz，RF-QPC 可达 $\sim 10$ MHz             |
+| 工艺难度 | 复杂（双隧穿结纳米尺度）                             | 较简单（与被测点同时加工）                          |
+| 适用场景 | 超导电荷量子比特读出（早期）                         | 半导体量子点邻位电荷传感（主流）                    |
 
 总结道："单电子晶体管的探测带宽与探测灵敏度非常好，但是制作工艺比较复杂（Lu et al., 2003），而量子点接触或者量子点电荷探测器往往比较容易在量子点加工时同步制作完成，所以在实际试验中，我们往往采用后两种方式。"这一句概括了半导体量子点实验中 SET 早期盛行、QPC 后期占主导的工艺脉络。
 
@@ -86,12 +86,16 @@ $$
 其中 $\Delta G_\mathrm{SET}$ 是被测点电荷改变 $1e$ 引起的 SET 电导变化、$G_\mathrm{SET}$ 是工作点电导。这么大的相对响应正是强电容耦合的收益，可用于时间分辨电荷测量或电荷/自旋比特读出。
 
 ![[assets/figures/single-electron-transistor/wang2010-fig1-graphene-qd-set-sem.jpg]]
-*器件扫描电镜图：上方为直径 90 nm 的石墨烯量子点（主器件），下方为直径 180 nm 的 SET 库仑岛（电荷传感器），二者在一次刻蚀中成型、边缘间距 50 nm；亮线为势垒与侧栅，标尺 200 nm。图源：Wang et al. (2010), Fig. 1(a)。*
+_器件扫描电镜图：上方为直径 90 nm 的石墨烯量子点（主器件），下方为直径 180 nm 的 SET 库仑岛（电荷传感器），二者在一次刻蚀中成型、边缘间距 50 nm；亮线为势垒与侧栅，标尺 200 nm。图源：Wang et al. (2010), Fig. 1(a)。_
 
 **锁相跨导读出。** 直流背景大时，可在侧栅上叠加方波调制脉冲，用与脉冲同步的锁相放大器直接测 SET 跨导 $dI_\mathrm{SET}/dV_{sg}$：量子点单电子充放电表现为跨导曲线上的尖锐尖峰/凹陷。该方式最重要的价值在于**直测电流失效区仍可工作**——石墨烯量子点在侧栅 0.2–0.5 V 区间输运电流小到常规手段测不到，而 SET 跨导信号依然清晰，与直接输运的库仑振荡峰完美对齐。
 
 ![[assets/figures/single-electron-transistor/wang2010-fig2-charge-detection.jpg]]
-*同一侧栅扫下的三联图：(a) 量子点电导 $G_\mathrm{QD}$ 的库仑振荡；(b) SET 电导出现与之一一对应的台阶（约占总信号 30%）；(c) SET 跨导 $dI_\mathrm{SET}/dV_{sg}$ 的尖峰/凹陷，在 (a) 中无信号的 0.2–0.5 V 区间仍给出完整电荷态信息；红色虚线为对齐引导线，三幅图同一次扫描同步记录。图源：Wang et al. (2010), Fig. 2。*
+_同一侧栅扫下的三联图：(a) 量子点电导 $G_\mathrm{QD}$
+
+的库仑振荡；(b) SET 电导出现与之一一对应的台阶（约占总信号 30%）；(c) SET 跨导 $dI_\mathrm{SET}/dV_{sg}$
+
+的尖峰/凹陷，在 (a) 中无信号的 0.2–0.5 V 区间仍给出完整电荷态信息；红色虚线为对齐引导线，三幅图同一次扫描同步记录。图源：Wang et al. (2010), Fig. 2。_
 
 **带宽与灵敏度。** 以调制脉冲频率扫描 SET 跨导增益，−3 dB（0.707）点给出器件带宽约 600 Hz——受杂散电容限制，高频响应迅速下降。电荷灵敏度用标准折算法标定：在 SET 背栅上施加相当于 $5\times10^{-2}$ 个电子的信号、测到信噪比为 1 的响应，即
 
@@ -104,7 +108,11 @@ $$
 **探测激发态谱。** 在源漏偏压–侧栅平面上，SET 跨导信号复现出量子点的库仑菱形，且菱形边旁平行线的激发态谱线在探测器信号中比直接输运测量更清晰——高偏压下多个激发能级参与隧穿的细节因此可读。这对获取[[fundamentals/coulomb-diamond|库仑菱形]]之外的量子点能级信息（进而推断电子自旋态）至关重要。
 
 ![[assets/figures/single-electron-transistor/wang2010-fig4b-set-detected-diamonds.jpg]]
-*SET 跨导信号 $dI_\mathrm{SET}/dV_{sd}$–$V_{sg}$ 平面上的库仑菱形：与量子点直测菱形完全匹配，菱形边外多条平行线对应量子点激发态参与隧穿；这些谱线在探测器通道中比直接输运更醒目。图源：Wang et al. (2010), Fig. 4(b)。*
+_SET 跨导信号 $dI_\mathrm{SET}/dV_{sd}$
+
+–$V_{sg}$
+
+平面上的库仑菱形：与量子点直测菱形完全匹配，菱形边外多条平行线对应量子点激发态参与隧穿；这些谱线在探测器通道中比直接输运更醒目。图源：Wang et al. (2010), Fig. 4(b)。_
 
 石墨烯平台的物理动机在于其弱自旋轨道耦合与近乎消失的超精细相互作用（^{12}C 核自旋为零）——这正是[[materials-devices/bilayer-graphene-quantum-dot|石墨烯量子点]]走向"无核自旋量子世界"固态比特的出发点，而 QD+SET 同材集成是其中的读出基本单元。
 
@@ -194,11 +202,11 @@ $$
 
 ![[assets/figures/single-electron-transistor/schmidt2024-fig2-fdm-tia-readout.jpg]]
 
-*频分复用 TIA 读出方案：(a) 输入信号的频率表示——两个 SET 各分一个载波；(b) 可测参数与双态定义（|0⟩ 取库仑阻塞噪声底、|1⟩ 调到 g_m 峰）；(c) I/Q 平面上的双幅度判决（OOK 型阈值算法）。图源：Schmidt et al. (2024), Fig. 2。*
+_频分复用 TIA 读出方案：(a) 输入信号的频率表示——两个 SET 各分一个载波；(b) 可测参数与双态定义（|0⟩ 取库仑阻塞噪声底、|1⟩ 调到 g_m 峰）；(c) I/Q 平面上的双幅度判决（OOK 型阈值算法）。图源：Schmidt et al. (2024), Fig. 2。_
 
 ![[assets/figures/single-electron-transistor/schmidt2024-fig8-simultaneous-fidelity.jpg]]
 
-*双通道同时读出保真度随积分时间的变化：两个共集成 SET 在 T_i=2.2 µs、通道间距 1 MHz 下同时达到 99.9% 保真度（BER=10⁻³）——无谐振腔频分复用读出的首次演示。图源：Schmidt et al. (2024), Fig. 8。*
+_双通道同时读出保真度随积分时间的变化：两个共集成 SET 在 T_i=2.2 µs、通道间距 1 MHz 下同时达到 99.9% 保真度（BER=10⁻³）——无谐振腔频分复用读出的首次演示。图源：Schmidt et al. (2024), Fig. 8。_
 
 ### 传输式 RF-SET：免定向耦合器的读出（Fattal 2025）
 
@@ -218,35 +226,35 @@ $$
 
 ![[assets/figures/single-electron-transistor/fattal2025-fig1-transmission-rf-set-circuit.jpg]]
 
-*传输式 RF-SET 电路：PCB 上的共面波导经表面贴装耦合电容连接 Si/SiGe 芯片——单片集成的 SET（邻近双量子点）经键合线接到超导 Nb 螺旋电感构成阻抗变换谐振器，透射信号直接检测，无需定向耦合器。图源：Fattal et al. (2025), Fig. 1。*
+_传输式 RF-SET 电路：PCB 上的共面波导经表面贴装耦合电容连接 Si/SiGe 芯片——单片集成的 SET（邻近双量子点）经键合线接到超导 Nb 螺旋电感构成阻抗变换谐振器，透射信号直接检测，无需定向耦合器。图源：Fattal et al. (2025), Fig. 1。_
 
 ![[assets/figures/single-electron-transistor/fattal2025-fig5-turnon-regions.jpg]]
 
-*RF-SET 开启过程的三分区：总电容效应 C_T、RF 损耗 R_Loss 与 SET 电阻 R_SET 随全局开启电压的演化——分区行为是阻抗变换网络与器件设计的优化依据。图源：Fattal et al. (2025), Fig. 5。*
+_RF-SET 开启过程的三分区：总电容效应 C_T、RF 损耗 R_Loss 与 SET 电阻 R_SET 随全局开启电压的演化——分区行为是阻抗变换网络与器件设计的优化依据。图源：Fattal et al. (2025), Fig. 5。_
 
 ![[assets/figures/single-electron-transistor/fattal2025-fig6-snr-benchmark.jpg]]
 
-*读出基准：(a)(b) 用传输式 RF-SET 监测的单点电荷稳定图（积分 1 ms）；(c)(d) 沿路径跨越点间跃迁（ICT）与点–库跃迁（DRT）的 IQ 分布——高斯斑对给出 SNR 随积分时间的标度，SNR=1 最小积分时间达 0.1–1 μs 量级，与反射式方案相当。图源：Fattal et al. (2025), Fig. 6。*
+_读出基准：(a)(b) 用传输式 RF-SET 监测的单点电荷稳定图（积分 1 ms）；(c)(d) 沿路径跨越点间跃迁（ICT）与点–库跃迁（DRT）的 IQ 分布——高斯斑对给出 SNR 随积分时间的标度，SNR=1 最小积分时间达 0.1–1 μs 量级，与反射式方案相当。图源：Fattal et al. (2025), Fig. 6。_
 
 ## 参数与量级
 
-| 量 | 典型值 | 来源 |
-| --- | --- | --- |
-| 岛总电容 $C_\Sigma$ | 几 aF—几百 aF（纳米尺度金属岛或半导体岛） | |
-| 充电能 $E_C=e^2/C_\Sigma$ | 约 1 meV 量级 | ； |
-| 栅电容 $C_G$ 对应 $\Delta V_G$ | 单峰间距 $\Delta V_G=e/C_G$（典型 $\Delta V_G\sim$ 几 mV—几十 mV） | |
-| 隧穿电阻 $R_T$ | $R_T\gg h/e^2$（库仑阻塞条件） | |
-| 直流 SET 库仑振荡峰间距 | $\Delta V_G=e/C_G$ | |
-| 直流工作点电流 | $I_\mathrm{peak}\approx e V_\mathrm{SD}/(2 C_\Sigma R_T)$ | |
-| 直流带宽 | 数十 kHz 量级（受 $R_T C_p$ 限制） | ； |
-| RF-SET 谐振频率 | 332 MHz（Schoelkopf，$L=620$ nH、$C_p=0.37$ pF） | |
-| RF-SET 带宽 | 7–24 MHz 量级 | |
-| RF-SET 电荷灵敏度 | $3.2\times 10^{-6}\,e/\sqrt{\mathrm{Hz}}$（Schoelkopf 1998）；$2.4\times 10^{-5}\,e/\sqrt{\mathrm{Hz}}$（Wei Lu） | |
-| 石墨烯集成 SET 电荷灵敏度 | $1\times 10^{-3}\,e/\sqrt{\mathrm{Hz}}$（Wang 2010，$5\times10^{-2}e$ 信号 SNR=1 折算） | |
-| 石墨烯集成 SET 带宽 | 约 600 Hz（−3 dB，杂散电容限制） | |
-| 石墨烯集成单电子响应 | $\Delta G_\mathrm{SET}/G_\mathrm{SET}\approx 30\%$（QD–SET 间距 50 nm） | |
-| 射频功率 | $-90$ dBm 量级（折中灵敏度与反作用） | |
-| 传输式 RF-SET（Si/SiGe） | SNR=1 最小积分 0.1–1 μs（ICT 优于 DRT）；免定向耦合器；面内 0.5 T 磁场兼容 | Fattal 2025 |
+| 量                             | 典型值                                                                                                            | 来源        |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| 岛总电容 $C_\Sigma$            | 几 aF—几百 aF（纳米尺度金属岛或半导体岛）                                                                         |             |
+| 充电能 $E_C=e^2/C_\Sigma$      | 约 1 meV 量级                                                                                                     | ；          |
+| 栅电容 $C_G$ 对应 $\Delta V_G$ | 单峰间距 $\Delta V_G=e/C_G$（典型 $\Delta V_G\sim$ 几 mV—几十 mV）                                                |             |
+| 隧穿电阻 $R_T$                 | $R_T\gg h/e^2$（库仑阻塞条件）                                                                                    |             |
+| 直流 SET 库仑振荡峰间距        | $\Delta V_G=e/C_G$                                                                                                |             |
+| 直流工作点电流                 | $I_\mathrm{peak}\approx e V_\mathrm{SD}/(2 C_\Sigma R_T)$                                                         |             |
+| 直流带宽                       | 数十 kHz 量级（受 $R_T C_p$ 限制）                                                                                | ；          |
+| RF-SET 谐振频率                | 332 MHz（Schoelkopf，$L=620$ nH、$C_p=0.37$ pF）                                                                  |             |
+| RF-SET 带宽                    | 7–24 MHz 量级                                                                                                     |             |
+| RF-SET 电荷灵敏度              | $3.2\times 10^{-6}\,e/\sqrt{\mathrm{Hz}}$（Schoelkopf 1998）；$2.4\times 10^{-5}\,e/\sqrt{\mathrm{Hz}}$（Wei Lu） |             |
+| 石墨烯集成 SET 电荷灵敏度      | $1\times 10^{-3}\,e/\sqrt{\mathrm{Hz}}$（Wang 2010，$5\times10^{-2}e$ 信号 SNR=1 折算）                           |             |
+| 石墨烯集成 SET 带宽            | 约 600 Hz（−3 dB，杂散电容限制）                                                                                  |             |
+| 石墨烯集成单电子响应           | $\Delta G_\mathrm{SET}/G_\mathrm{SET}\approx 30\%$（QD–SET 间距 50 nm）                                           |             |
+| 射频功率                       | $-90$ dBm 量级（折中灵敏度与反作用）                                                                              |             |
+| 传输式 RF-SET（Si/SiGe）       | SNR=1 最小积分 0.1–1 μs（ICT 优于 DRT）；免定向耦合器；面内 0.5 T 磁场兼容                                        | Fattal 2025 |
 
 ## 实验特征与典型应用
 
@@ -258,8 +266,6 @@ $$
 
 **快速相图采集。** 把 RF-SET 与快速锯齿波扫描结合，可在数十秒内完成传统方法数十分钟的相图采集，测量速度提升约两个量级。
 
-**超导电荷量子比特的早期读出。** 在电路量子电动力学（circuit-QED）发展起来之前，超导量子比特的读出主要依靠 SET 或 DC-SQUID。但这两种读取方式与量子比特的强耦合导致相干时间较短、反作用影响显著，难以做到非破坏性测量。2004 年 Blais 等人提出 circuit-QED 后，SET 在超导比特读出中的角色被谐振腔色散读出取代。
-
 <!-- FIGURE: 双量子点被 SET 与 QPC 同时探测的器件俯视图：双点居中、SET 在一侧、QPC 在另一侧，分别由独立的源漏电极和栅极定义 -->
 
 ## 局限与替代方案
@@ -268,7 +274,7 @@ $$
 - **工作点漂移**：随栅压、温度、磁场变化，库仑振荡位置会漂移出灵敏区，需要周期性重新标定。
 - **直流带宽极低**：受 $R_T C_p$ 限制，直流 SET 仅数十 kHz 量级。
 - **射频反作用**：过高的射频功率会向岛注入散粒噪声与热激发，破坏被测态，需要折中灵敏度与反作用）。此外，传感库仑耦合本身的量子反作用（which-path 退相干）与功率反作用是两个独立通道——量子点型传感器的退相干能标由被测系统隧穿展宽 ħΓ 设定，与 QPC 型（k_BT）不同，见[[readout-measurement/charge-sensor-backaction|电荷传感反作用与 which-path 退相干]]。
-- **替代方案**：在半导体量子点体系中已被[[readout-measurement/qpc-charge-sensor|QPC]]取代主流地位；栅极色散读出（[[readout-measurement/gate-based-sensingate-based sensing]]）和[[readout-measurement/dispersive-readout|色散读出]]则在多比特共用射频线场景下提供了另一种非破坏性电荷传感路径。
+- **替代方案**：在半导体量子点体系中已被[[readout-measurement/qpc-charge-sensor|QPC]]取代主流地位；栅极色散读出（[[readout-measurement/gate-based-sensing|栅极色散读出]]）和[[readout-measurement/dispersive-readout|色散读出]]则在多比特共用射频线场景下提供了另一种非破坏性电荷传感路径。
 
 ## 与其他概念的关系
 
@@ -281,13 +287,13 @@ $$
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感器]]是 SET 的主要替代方案：两者都是邻位电容耦合的电荷传感，但 QPC 工艺简单、与被测点同时加工，因此在半导体量子点实验中取代 SET 成为主流。
 - [[readout-measurement/rf-reflectometry|射频反射测量]]是把 SET 的直流带宽从 kHz 推到 100 MHz 的关键技术，RF-SET 与 RF-QPC 共用同一套阻抗匹配与 IQ 解调框架。
 - [[readout-measurement/dispersive-readout|色散读出]]通过把电荷态映射为谐振腔频率/相位偏移实现非破坏性传感，与 SET 同样支持单发读出，但作用机制是色散频移而非源漏电流调制。
-- [[readout-measurement/single-shot-readout|单发读出]]在 SET 出现之前主要依赖 SET（早期超导比特实验），在 SET 出现后则更多依赖 QPC、栅极传感或色散读出。
 - [[materials-devices/charge-noise|电荷噪声]]既是 SET 主要噪声来源（限制灵敏度）也是 SET 可以测量的对象：工作点处 $I_\mathrm{SET}$ 的低频 $1/f$ 涨落直接反映被测点的电荷环境。
 - [[materials-devices/bilayer-graphene-quantum-dot|石墨烯量子点]]平台可实现 QD 与 SET 同材一次刻蚀集成：50 nm 近距强耦合给出每电子约 30% 的电导响应，是石墨烯自旋比特读出的基本单元。
 
 ## 参考文献
 
 - Fattal, I., Van Damme, J., Raes, B., Godfrin, C., Jaliel, G., Chen, K., Van Caekenberghe, T. et al. Radio frequency single electron transmission spectroscopy of a semiconductor Si/SiGe quantum dot. arXiv:2504.05016 (2025)（QAtlas 缓存：2504.05016）。
-- Schmidt, Q., Jadot, B., Martinez, B., Houriez, T., et al. Compact frequency multiplexed readout of silicon quantum dots in monolithic FDSOI 28nm technology. *ESSERC 2024*（2024）. DOI: 10.1109/ESSERC62670.2024.10719580；arXiv:2410.22565（QAtlas 缓存：2410.22565）。
-- Wang, L.-J. et al. A Graphene Quantum Dot with a Single Electron Transistor as Integrated Charge Sensor. *Applied Physics Letters* **97**, 262113 (2010). DOI: 10.1063/1.3533021；arXiv:1008.4868（QAtlas 缓存：1008.4868）。
+- Schmidt, Q., Jadot, B., Martinez, B., Houriez, T., et al. Compact frequency multiplexed readout of silicon quantum dots in monolithic FDSOI 28nm technology. _ESSERC 2024_（2024）. DOI: 10.1109/ESSERC62670.2024.10719580；arXiv:2410.22565（QAtlas 缓存：2410.22565）。
+- Wang, L.-J. et al. A Graphene Quantum Dot with a Single Electron Transistor as Integrated Charge Sensor. _Applied Physics Letters_ **97**, 262113 (2010). DOI: 10.1063/1.3533021；arXiv:1008.4868（QAtlas 缓存：1008.4868）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

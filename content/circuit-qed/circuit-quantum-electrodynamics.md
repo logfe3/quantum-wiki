@@ -2,12 +2,12 @@
 title: 电路量子电动力学
 description: 用量子化微波电路研究人工原子与单个或少量微波光子相互作用的框架。
 aliases:
- - cQED
- - circuit QED
- - 电路量子电动学
+  - cQED
+  - circuit QED
+  - 电路量子电动学
 tags:
- - 电路量子电动力学
- - 理论
+  - 电路量子电动力学
+  - 理论
 date: 2026-09-08
 ---
 
@@ -47,6 +47,7 @@ $$
 即[[circuit-qed/microwave-resonator|微波谐振腔]]的单模描述，通常略去零点能写成 $\hbar\omega_r a^\dagger a$。
 
 实际器件更多使用分布式的共面波导谐振腔（coplanar waveguide resonator，CPW resonator）：中心导体宽 $w$、与两侧地平面间隔 $s$，电磁场在有限长度的传输线内形成驻波。其单位长度几何电容与几何电感由保角映射给出
+
 $$
 C_l=4\varepsilon_0\varepsilon_{\mathrm{eff}}\frac{K(k')}{K(k)},\qquad
 L_l=\frac{\mu_0}{4}\frac{K(k')}{K(k)},\qquad
@@ -95,6 +96,7 @@ $$
 其中 $r$ 为偶极矩大小、$s$ 为量子点到地平面的距离，$\beta$ 是量子点的差分杠杆臂因子。第二个等号代入 $Z_r=\sqrt{L_0/C_0}$，清楚地显示 $g_0\propto\sqrt{Z_r}$：阻抗每提高一个量级，耦合约增强三倍（$\sqrt{10}$ 倍），高阻抗腔（从 $50\ \Omega$ 到数 $\mathrm{k}\Omega$）因此是提升耦合的核心手段；另一条途径是提高杠杆臂因子 $\beta$，依赖电极与异质结结构设计。
 
 全局耦合还要乘上比特本征态的偶极矩阵元才是有效耦合。以双量子点[[qubit-control/charge-qubit|电荷比特]]为例
+
 $$
 g_{\mathrm{eff}}=g_0\sin\theta=g_0\,\frac{2t_c}{\hbar\omega_q}
 $$
@@ -105,25 +107,25 @@ $$
 
 cQED 实验可按耦合强度 $g$ 与失谐 $\Delta=\omega_q-\omega_r$（以最大退相干率 $\gamma$ 为单位归一化）划分成几个性质迥异的区间：
 
-| 区间 | 条件 | 物理特征 | 典型用途 |
-| --- | --- | --- | --- |
-| 共振强耦合区 | $|\Delta|\ll g$，$g>\kappa,\gamma$ | 激发相干往返，能谱出现 $2g$ [[circuit-qed/vacuum-rabi-splitting\|真空 Rabi 劈裂]] | 量子态在比特与光子间转移 |
-| 准色散区 | $g<\Delta<10g$ | 交换与频移并存 | 过渡区间 |
-| 弱色散区 | $|\Delta|>10g$，$\chi<\kappa,\gamma$ | 腔频随比特态微小移动 | 连续弱测量、比特态探测、辐射控制延长相干 |
-| 强色散区 | $|\Delta|>10g$，$\chi=g^2/\Delta>\kappa,\gamma$ | 谱上可分辨比特态与光子数 | [[readout-measurement/dispersive-readout\|色散读出]]、QND 测量、光子数分辨、新型比特编码 |
+| 区间         | 条件           | 物理特征       | 典型用途                               |
+| ------------ | -------------- | -------------- | -------------------------------------- |
+| 共振强耦合区 | $              | \Delta         | \ll g$，$g>\kappa,\gamma$              | 激发相干往返，能谱出现 $2g$ [[circuit-qed/vacuum-rabi-splitting\|真空 Rabi 劈裂]] | 量子态在比特与光子间转移                                                                 |
+| 准色散区     | $g<\Delta<10g$ | 交换与频移并存 | 过渡区间                               |
+| 弱色散区     | $              | \Delta         | >10g$，$\chi<\kappa,\gamma$            | 腔频随比特态微小移动                                                              | 连续弱测量、比特态探测、辐射控制延长相干                                                 |
+| 强色散区     | $              | \Delta         | >10g$，$\chi=g^2/\Delta>\kappa,\gamma$ | 谱上可分辨比特态与光子数                                                          | [[readout-measurement/dispersive-readout\|色散读出]]、QND 测量、光子数分辨、新型比特编码 |
 
 这一"相图"给出 cQED 的通用设计语言：同一个器件只需调节比特频率（栅压或磁场），就能在"交换量子信息"与"读出量子信息"两种模式间切换。
 
 半导体量子点 cQED 的典型参数量级（取自本站论文中所列实验）：
 
-| 参数 | 典型量级 | 说明 |
-| --- | --- | --- |
-| 腔频 $\omega_r/2\pi$ | 4–8 GHz（如 4.993、7.332 GHz） | 须与比特频率（2–20 GHz）匹配 |
-| 腔耗散 $\kappa/2\pi$ | 约 0.5–8 MHz | 高阻抗腔品质因数可达数千 |
-| 电荷–光子耦合 $g_c/2\pi$ | 数十 MHz，最大 619 MHz | 619 MHz 对应 $g_c/\omega_r\sim0.11$，逼近超强耦合 |
-| 自旋–光子耦合 $g_s/2\pi$ | 约 7–22 MHz | 劈裂 $2g_s/2\pi$ 最大测得 43.5 MHz |
-| 电荷比特退相干 $\gamma_c/2\pi$ | 约 100 MHz（硅基最优），早期 GaAs 达 0.4–1.1 GHz | 强耦合的主要瓶颈 |
-| 自旋比特退相干 $\gamma_s/2\pi$ | 约 2–5 MHz | 自旋相干性好 1–2 个量级 |
+| 参数                           | 典型量级                                         | 说明                                              |
+| ------------------------------ | ------------------------------------------------ | ------------------------------------------------- |
+| 腔频 $\omega_r/2\pi$           | 4–8 GHz（如 4.993、7.332 GHz）                   | 须与比特频率（2–20 GHz）匹配                      |
+| 腔耗散 $\kappa/2\pi$           | 约 0.5–8 MHz                                     | 高阻抗腔品质因数可达数千                          |
+| 电荷–光子耦合 $g_c/2\pi$       | 数十 MHz，最大 619 MHz                           | 619 MHz 对应 $g_c/\omega_r\sim0.11$，逼近超强耦合 |
+| 自旋–光子耦合 $g_s/2\pi$       | 约 7–22 MHz                                      | 劈裂 $2g_s/2\pi$ 最大测得 43.5 MHz                |
+| 电荷比特退相干 $\gamma_c/2\pi$ | 约 100 MHz（硅基最优），早期 GaAs 达 0.4–1.1 GHz | 强耦合的主要瓶颈                                  |
+| 自旋比特退相干 $\gamma_s/2\pi$ | 约 2–5 MHz                                       | 自旋相干性好 1–2 个量级                           |
 
 <!-- FIGURE: 以 g/γ 与 Δ/γ 为轴的 cQED 参数相图，标注共振强耦合区、弱色散区与强色散区及其用途 -->
 
@@ -156,42 +158,10 @@ cQED 系统的信息几乎全部经腔的散射参数（$S_{11}$、$S_{21}$）�
 - **量子非破坏读出**：色散区测量算符与比特哈密顿量对易，投影测量不改变比特态，可重复测量提高保真度；
 - **腔作为量子总线**：多个比特共享同一腔模，在色散区经虚光子交换产生远程有效耦合 $\sim g_1g_2/\Delta$，是实现毫米级长程比特耦合与两比特门的主流方案，直接回应大规模扩展中近邻相互作用作用距离过短的难题。
 
-
-**学习路径导引**：面向初学者的全景综述（APS Reviews 类教学文）把超导比特设计谱系、耦合架构与测量方案组织成统一的学习框架——本站词条群恰好按这一框架分层展开：机制层（[[circuit-qed/jaynes-cummings-model|JC 模型]]→[[circuit-qed/strong-coupling|强耦合]]→[[circuit-qed/dispersive-shift|色散频移]]）、器件层（[[superconducting-qubits/transmon-qubit|transmon]]→[[superconducting-qubits/fluxonium-qubit|fluxonium]]→[[superconducting-qubits/gatemon-qubit|gatemon]]→[[superconducting-qubits/flowermon-qubit|flowermon]]）、应用层（[[readout-measurement/dispersive-readout|色散读出]]→[[circuit-qed/bosonic-cqed|玻色编码]]→[[scaling-automation/mmiqc-3d-integration|三维集成]]）。
-
-![[assets/figures/circuit-quantum-electrodynamics/cd2c4de4d8ede86b79a08490585e9b68c96feaddc2be697732b3567b96dfec01.jpg]]
-
-*cQED 学习框架总览：超导比特与电路量子电动力学的教学全景——器件谱系、耦合架构与测量方案的分层组织。图源：cQED 入门综述 (2018)，Fig. 1。*
-
-![[assets/figures/circuit-quantum-electrodynamics/fcaabfd46fc72fb5ab78459d337aa3cf5ef60322f303184f84f4dc0fd6459844.jpg]]
-
-*相干时间的指数提升：十五年间能量弛豫与退相干时间的演进——每代器件对应一类损耗机制的识别与压制。图源：cQED 入门综述 (2018)，Fig. 2。*
-
-**方法论工具箱**：开放量子系统方法综述把比特建模的主方程族系统化——Lindblad（马尔可夫、跳跃算符）、Redfield（弱耦合、非马尔可夫修正）、Floquet-Markov（周期驱动）、 generalized master equations（强耦合）——各方法适用的耦合强度/记忆时间/驱动 regime 明确划分，是学习路径导引的方法论延伸。
-
-![[assets/figures/circuit-quantum-electrodynamics/9e4e9bbfa222a786489024c75e8d351c4996b17fa9f98fa8dd4fa86ad46ab458.jpg]]
-
-*开放量子系统方法地图：Lindblad/Redfield/Floquet-Markov 等主方程方法的适用 regime 划分——耦合强度与记忆时间两个轴。图源：arXiv:2402.19241，Fig. 1。*
-
-![[assets/figures/circuit-quantum-electrodynamics/415ee6a52b2ca0ae241e8091ae39b430bb2884657be670df0e2b71b040cd8c46.jpg]]
-
-*方法应用示例：不同主方程在具体比特系统上的预测对比——方法选择的实践指南。图源：arXiv:2402.19241，Fig. 2。*
-
-**权威综述的二十年视角**（Blais/Schoelkopf/Girvin 系，Nature Physics 2020）：cQED 从 1999 年首次相干测量到量子纠错器件的二十年发展系统回顾——机制、器件、架构三条主线的演进脉络与每一步的驱动因素。与学习路径导引（前文）的入门综述互补：这篇是深度综述，覆盖物理细节与技术演进的完整因果链。
-
-![[assets/figures/circuit-quantum-electrodynamics/8b596841b225d051308e9c3bdb827108a53182f3db1ac879110d69b60ca1b0c6.jpg]]
-
-*cQED 二十年发展的系统框架：机制-器件-架构三条主线的演进。图源：Nature Physics 综述 (2020)，Fig. 1。*
-
-![[assets/figures/circuit-quantum-electrodynamics/644cf51cf227b6bec0f08695c048d8871054bb77301f7a62260ebfa4a0231d6c.jpg]]
-
-*技术演进因果链：相干时间提升-架构变化-纠错需求的关联。图源：Nature Physics 综述 (2020)，Fig. 2。*
-
 ## 与其他概念的关系
 
 - 最小模型与全部能级结构见[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]；共振极限的标志性观测是[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]，进入它的判据是[[circuit-qed/strong-coupling|强耦合]]；大失谐极限支撑[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。
 - 腔侧的实现路线：常规[[circuit-qed/microwave-resonator|微波谐振腔]]、提升耦合的[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与可调频的[[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]。
 - 比特侧的耦合通道：[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快退相干）与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体、自旋轨道、[[scaling-automation/flopping-mode-qubit|翻转模式]]等电荷混合机制）。
-- cQED 的更高层应用：腔不只是工具——[[circuit-qed/bosonic-cqed|玻色 cQED]]用谐振子的多能级空间直接编码容错量子比特，是 cQED 从"读出架构"到"计算平台"的方向延伸。
 - 多比特扩展经[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]实现；比特的"人工原子"载体是[[fundamentals/semiconductor-quantum-dot|半导体量子点]]与[[fundamentals/double-quantum-dot|双量子点]]上的[[qubit-control/charge-qubit|电荷比特]]、[[qubit-control/single-spin-qubit|单自旋量子比特]]、[[qubit-control/hole-spin-qubit|空穴自旋比特]]、[[qubit-control/resonant-exchange-qubit|共振交换量子比特]]等编码。
 - 性能瓶颈主要来自[[materials-devices/charge-noise|电荷噪声]]与材料界面质量（如[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/gaas-algaas|GaAs/AlGaAs]] 平台）；强驱动修饰谱需[[circuit-qed/floquet-dynamics|Floquet 动力学]]描述。

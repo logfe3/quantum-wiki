@@ -2,14 +2,14 @@
 title: 交换型两比特门
 description: 以双量子点交换相互作用为耦合源的两比特门家族，包括 CPHASE、CZ、√SWAP、SWAP 及其衍生门。
 aliases:
- - 交换门
- - SWAP
- - √SWAP
- - CPHASE
- - exchange gates
+  - 交换门
+  - SWAP
+  - √SWAP
+  - CPHASE
+  - exchange gates
 tags:
- - 量子比特操控
- - 两比特门
+  - 量子比特操控
+  - 两比特门
 date: 2026-09-16
 source: QAtlas
 qatlas_id: qa_01m0qvkmph5y7atd3rr2j5vqqy
@@ -28,7 +28,7 @@ $J$ 与塞曼能差 $\Delta E_Z$ 的比值决定本征态结构与可构造的�
 - $J \ll \Delta E_Z$：本征态近似为自旋直积态，反平行态 $|↑↓\rangle$、$|↓↑\rangle$ 的能级整体下移 $J/2$，以此可构造 CPhase/CZ 与 CROT/CNOT 门；
 - $J$ 在两者之间（$J \sim \Delta E_Z$）：本征态与直积态显著偏离，单比特门伴随额外的非共振相位累积，必须额外补偿。
 
- 2025 §1.3.5也指出，硅基体系下的 $U_{\sqrt{\mathrm{SWAP}}}$ 通过控制交换耦合的开启时间 $J t/\hbar = \pi/2$ 实现，$J t/\hbar = \pi$ 则给出完整 SWAP 门；$\sqrt{\mathrm{SWAP}}$ 再配合单比特基带门即可在理论上构造 CNOT。该论文同时给出 iSWAP 振荡（[Dijkema et al., 2021]，cavity-mediated iSWAP）、$\sqrt{\mathrm{iSWAP}}$（量子模拟中的双比特门）等扩展。
+2025 §1.3.5也指出，硅基体系下的 $U_{\sqrt{\mathrm{SWAP}}}$ 通过控制交换耦合的开启时间 $J t/\hbar = \pi/2$ 实现，$J t/\hbar = \pi$ 则给出完整 SWAP 门；$\sqrt{\mathrm{SWAP}}$ 再配合单比特基带门即可在理论上构造 CNOT。该论文同时给出 iSWAP 振荡（[Dijkema et al., 2021]，cavity-mediated iSWAP）、$\sqrt{\mathrm{iSWAP}}$（量子模拟中的双比特门）等扩展。
 
 <!-- FIGURE: 三大族交换型两比特门的本征态/工作点结构示意：J≫ΔEz 时 J(ε)≈Δ²/|ε| 的 S–T0 基；J≪ΔEz 时反平行态下移 J/2 的直积基；以及 J 关断态的 J_off≈150 kHz -->
 
@@ -91,9 +91,7 @@ $$
 \mathrm{SWAP} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} .
 $$
 
-$\sqrt{\mathrm{SWAP}}$ 与两个单比特 $\pi/2$ 旋转组合即可构造 CNOT（Loss & DiVincenzo, 1998, *Phys. Rev. A* 57, 120）；类似地，$\sqrt{\mathrm{SWAP}}$ 与 $-Y/2$ 单比特旋转组合给 iSWAP 的对应构造（ §1.3.4； 2025）。 2025 进一步把 SOT 辅助的单比特门与交换型 $\sqrt{\mathrm{SWAP}}$ 门组合，作为长程 SOT–微波–交换三层混合控制方案的核心两比特单元。
-
-工程上 $\sqrt{\mathrm{SWAP}}$/SWAP 路线要求 $J$ 远高于 $\Delta E_Z$，因此门演化时间极短——但同时要求 $J$ 的关断比足够大，否则空闲态下的 $J_\text{off}$ 会引入缓慢的非共振驱动相位。报告在 transmon 量子比特中 $\sim 15\,\mathrm{ns}$ 的 iSWAP 门需要在 2 GS/s 的 AWG 上以 $\geq 30$ 个采样点拟合以保证波形分辨率。
+$\sqrt{\mathrm{SWAP}}$ 与两个单比特 $\pi/2$ 旋转组合即可构造 CNOT（Loss & DiVincenzo, 1998, _Phys. Rev. A_ 57, 120）；类似地，$\sqrt{\mathrm{SWAP}}$ 与 $-Y/2$ 单比特旋转组合给 iSWAP 的对应构造（ §1.3.4； 2025）。 2025 进一步把 SOT 辅助的单比特门与交换型 $\sqrt{\mathrm{SWAP}}$ 门组合，作为长程 SOT–微波–交换三层混合控制方案的核心两比特单元。
 
 ## CPHASE/CZ 族：$J \ll \Delta E_Z$ 工作区
 
@@ -183,7 +181,7 @@ $$
 
 硅基体系下保真度超过 $99\%$ 的 CZ 门几乎都采用势垒脉冲， 在自然硅中通过正反电压脉冲（B1/B2 等大反向）把 $J$ 从几百 $\mathrm{kHz}$ 推到 $>20\,\mathrm{MHz}$，对称操作点处 $J \approx 6.25\,\mathrm{MHz}$、演化 $80\,\mathrm{ns}$。势垒脉冲的代价是势垒栅不可避免地牵动失谐，需要 [[scaling-automation/virtual-gates|虚拟栅极]]技术做动态补偿。
 
- §5.1指出 Si-MOS 样品的中间势垒栅 MB 没有高频控制线，势垒脉冲无法实施，必须采用 $J$ 常开 + 共振条件驱动的 CROT 路线；这是"样品条件决定门策略"的典型案例。
+§5.1指出 Si-MOS 样品的中间势垒栅 MB 没有高频控制线，势垒脉冲无法实施，必须采用 $J$ 常开 + 共振条件驱动的 CROT 路线；这是"样品条件决定门策略"的典型案例。
 
 ### 第三条路线：栅极角色互换（Park 2025）
 
@@ -191,52 +189,51 @@ Si/SiGe 平台有一个结构性不利：SiGe 间隔层把量子点与控制电�
 
 Park 等人给出的解法不改硬件、只换电压配置：在**等宽交叠纳米栅**器件上把靠近（远离）自旋比特的栅改作势垒（柱塞）栅——所谓 interchanged tuning。同一器件上原位切换角色后仍保持多比特控制，而交换耦合的可调性（对势垒脉冲幅度的指数斜率，单位 dec/V）全面提升：
 
-| 最近邻对比 | 常规配置 | 角色互换配置 |
-| --- | --- | --- |
-| 比特对 1 | 7.25 dec/V | 16.6 dec/V |
-| 比特对 2 | 3.87 dec/V | 11.4 dec/V |
-| 比特对 3 | 4.32 dec/V | 15.4 dec/V |
+| 最近邻对比 | 常规配置   | 角色互换配置 |
+| ---------- | ---------- | ------------ |
+| 比特对 1   | 7.25 dec/V | 16.6 dec/V   |
+| 比特对 2   | 3.87 dec/V | 11.4 dec/V   |
+| 比特对 3   | 4.32 dec/V | 15.4 dec/V   |
 
 ![[assets/figures/exchange-gates/park2025-fig1-interchanged-tuning.jpg]]
 
-*等宽交叠纳米栅与角色互换调谐：把靠近（远离）比特的纳米栅指派为势垒（柱塞）栅，电压重配置即原位切换调谐策略、同时保持多比特控制——SiGe 间隔层导致的杠杆臂劣势由此被绕开。图源：Park et al. (2025), Fig. 1。*
+_等宽交叠纳米栅与角色互换调谐：把靠近（远离）比特的纳米栅指派为势垒（柱塞）栅，电压重配置即原位切换调谐策略、同时保持多比特控制——SiGe 间隔层导致的杠杆臂劣势由此被绕开。图源：Park et al. (2025), Fig. 1。_
 
 约 16 dec/V 的可调性此前只在界面更近、杠杆臂更大的 Si-MOS 中实现过；角色互换让 Si/SiGe（比特远离电噪声界面的优势得以保留）也能达到同量级。实测 $J$ 随势垒脉冲幅度先指数增长、在大幅值处偏离单一指数——对应势垒被压低后两点并合为单个大量子点、隧穿耦合趋于饱和的渐近行为；高可调性本身使全耦合区间的精确标定成为可能。
 
 ![[assets/figures/exchange-gates/park2025-fig4-exchange-tunability.jpg]]
 
-*交换耦合可调性的对比：常规与角色互换配置下 J 随势垒脉冲幅度的依赖（衰减正弦振荡提取 J/2，聚焦实验常用的几 MHz 区间做指数拟合）——角色互换使所有最近邻对的可调性提升数倍至一个量级，并呈现双点并合导致的非单一指数行为。图源：Park et al. (2025), Fig. 4。*
+_交换耦合可调性的对比：常规与角色互换配置下 J 随势垒脉冲幅度的依赖（衰减正弦振荡提取 J/2，聚焦实验常用的几 MHz 区间做指数拟合）——角色互换使所有最近邻对的可调性提升数倍至一个量级，并呈现双点并合导致的非单一指数行为。图源：Park et al. (2025), Fig. 4。_
 
 这一策略还有测量学红利：量子点可以在任意栅下形成，把"探针点"挪到不同位置即可逐点测绘微磁体梯度场、[[fundamentals/valley-splitting|谷劈裂]]的空间分布与杂质噪声的空间特征。
 
 ## 参数与量级
 
-| 量 | 典型值 | 实验/来源 |
-| --- | --- | --- |
-| 交换能 $J$（GaAs，交换振荡） | 几十 $\mathrm{MHz}$ 至 $\mathrm{GHz}$ 量级 | |
-| 交换能 $J$（Si/SiGe，CZ 工作点） | $6.25\,\mathrm{MHz}$（演化 $80\,\mathrm{ns}$） | |
-| 交换能 $J$（Si-MOS，$J$ 常开） | $4.8(4)\,\mathrm{MHz}$（$\varepsilon=0$） | |
-| 交换能 $J$（Si-MOS，$J$ 关闭残余） | $\sim 150\,\mathrm{kHz}$ | |
-| $J$ 调节范围（势垒脉冲） | 几百 $\mathrm{kHz}$ 到 $\geq 20\,\mathrm{MHz}$ | |
-| $\Delta E_Z$（Si/SiGe 一维四点） | $\approx 42\,\mathrm{MHz}$ | |
-| $\Delta E_Z$（Si-MOS 双点） | $55.4\,\mathrm{MHz}$ | |
-| $J/\Delta E_Z$（$J$ 常开工作区） | $\approx 0.087$ | |
-| CZ 演化时间（Si/SiGe，势垒脉冲） | $80\,\mathrm{ns}$ | |
-| DCZ CZ/2 演化时间（Si-MOS） | $92.2\%$ 保真度对应单段 | |
-| CROT 拉比频率（Si-MOS，$J$ 常开） | $1.25\,\mathrm{MHz}$（$\pi$ 脉冲 $400\,\mathrm{ns}$） | |
-| CNOT 总时长（$J$ 常开，Si-MOS） | $t_\text{CNOT}=4\pi/J\approx 833\,\mathrm{ns}$ | |
-| $\sqrt{\mathrm{SWAP}}$ 时长（Hubbard 极限） | $J t/\hbar = \pi/2$；$J=4t^2/U$ | |
-| iSWAP 时长（超导 transmon 参考） | $\sim 15\,\mathrm{ns}$（30 个 AWG 点拟合） | |
-| CZ 门 RB 保真度（自然 Si/SiGe） | $90.96\pm 7.48\%$ | |
-| CPhase 门 CRB 保真度（自然 Si/SiGe 双点） | $92.0\pm0.5\%$（两比特空间，交错 CRB 提取） | |
-| 交换可调性（常规配置，Si/SiGe 等宽栅） | 7.25 / 3.87 / 4.32 dec/V（三个最近邻对） | Park 2025 |
-| 交换可调性（角色互换配置） | 16.6 / 11.4 / 15.4 dec/V——Si/SiGe 首次达 Si-MOS 量级 | Park 2025 |
-| 残余 ZZ 约束 | 单比特保真度要求 $J\ll\Omega$（附加 $(J/\Omega)ZZ$ 项） | Park 2025 |
-| DCZ Bell 态保真度（自然 Si/SiGe） | 平均 $91\%$（移除读出误差） | |
-| DCZ Bell 态保真度（Si-MOS） | $84.09\%$ | |
-| 单比特门保真度（自然 Si/SiGe） | $X,Y$ 门 $>99\%$（$83\,\mathrm{ns}$） | |
-| $\lambda$ 子空间相位补偿占比 | $\approx 3\%$ | |
-| 微磁体梯度（典型 EDSR） | $\partial B_x/\partial z$ 达 $0.1\,\mathrm{mT/nm}$ 量级 | |
+| 量                                          | 典型值                                                  | 实验/来源 |
+| ------------------------------------------- | ------------------------------------------------------- | --------- |
+| 交换能 $J$（GaAs，交换振荡）                | 几十 $\mathrm{MHz}$ 至 $\mathrm{GHz}$ 量级              |           |
+| 交换能 $J$（Si/SiGe，CZ 工作点）            | $6.25\,\mathrm{MHz}$（演化 $80\,\mathrm{ns}$）          |           |
+| 交换能 $J$（Si-MOS，$J$ 常开）              | $4.8(4)\,\mathrm{MHz}$（$\varepsilon=0$）               |           |
+| 交换能 $J$（Si-MOS，$J$ 关闭残余）          | $\sim 150\,\mathrm{kHz}$                                |           |
+| $J$ 调节范围（势垒脉冲）                    | 几百 $\mathrm{kHz}$ 到 $\geq 20\,\mathrm{MHz}$          |           |
+| $\Delta E_Z$（Si/SiGe 一维四点）            | $\approx 42\,\mathrm{MHz}$                              |           |
+| $\Delta E_Z$（Si-MOS 双点）                 | $55.4\,\mathrm{MHz}$                                    |           |
+| $J/\Delta E_Z$（$J$ 常开工作区）            | $\approx 0.087$                                         |           |
+| CZ 演化时间（Si/SiGe，势垒脉冲）            | $80\,\mathrm{ns}$                                       |           |
+| DCZ CZ/2 演化时间（Si-MOS）                 | $92.2\%$ 保真度对应单段                                 |           |
+| CROT 拉比频率（Si-MOS，$J$ 常开）           | $1.25\,\mathrm{MHz}$（$\pi$ 脉冲 $400\,\mathrm{ns}$）   |           |
+| CNOT 总时长（$J$ 常开，Si-MOS）             | $t_\text{CNOT}=4\pi/J\approx 833\,\mathrm{ns}$          |           |
+| $\sqrt{\mathrm{SWAP}}$ 时长（Hubbard 极限） | $J t/\hbar = \pi/2$；$J=4t^2/U$                         |           |
+| CZ 门 RB 保真度（自然 Si/SiGe）             | $90.96\pm 7.48\%$                                       |           |
+| CPhase 门 CRB 保真度（自然 Si/SiGe 双点）   | $92.0\pm0.5\%$（两比特空间，交错 CRB 提取）             |           |
+| 交换可调性（常规配置，Si/SiGe 等宽栅）      | 7.25 / 3.87 / 4.32 dec/V（三个最近邻对）                | Park 2025 |
+| 交换可调性（角色互换配置）                  | 16.6 / 11.4 / 15.4 dec/V——Si/SiGe 首次达 Si-MOS 量级    | Park 2025 |
+| 残余 ZZ 约束                                | 单比特保真度要求 $J\ll\Omega$（附加 $(J/\Omega)ZZ$ 项） | Park 2025 |
+| DCZ Bell 态保真度（自然 Si/SiGe）           | 平均 $91\%$（移除读出误差）                             |           |
+| DCZ Bell 态保真度（Si-MOS）                 | $84.09\%$                                               |           |
+| 单比特门保真度（自然 Si/SiGe）              | $X,Y$ 门 $>99\%$（$83\,\mathrm{ns}$）                   |           |
+| $\lambda$ 子空间相位补偿占比                | $\approx 3\%$                                           |           |
+| 微磁体梯度（典型 EDSR）                     | $\partial B_x/\partial z$ 达 $0.1\,\mathrm{mT/nm}$ 量级 |           |
 
 ## 实验特征与测量
 
@@ -285,10 +282,10 @@ Park 等人给出的解法不改硬件、只换电压配置：在**等宽交叠�
 
 <!-- FIGURE: 交换型两比特门相关概念关系图：以 J(ε,t,U) 为中心节点，向外连接三大族（√SWAP/SWAP、CPHASE/CZ、CROT/CNOT）、两种调控方式（失谐脉冲、势垒脉冲）、DCZ/解耦、虚拟栅极/电荷噪声等子模块 -->
 
-
 ## 参考文献
 
 - 交换门的原始方案与相干交换实验：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]、[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
 - 交换耦合的现代门实现：[[references/watson-2018|Watson et al., Nature 555, 633 (2018)]]、[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]。
-- Park, J., Jang, H., Sohn, H., Song, Y., Degli Esposti, D., Scappucci, G., Kim, D. Highly Tunable Two-Qubit Interactions in Si/SiGe Quantum Dots by Interchanging the Roles of Qubit-Defining Gates. *Nano Letters*（2025）. DOI: 10.1021/acs.nanolett.6c00044；arXiv:2512.20142（QAtlas 缓存：2512.20142）。
+- Park, J., Jang, H., Sohn, H., Song, Y., Degli Esposti, D., Scappucci, G., Kim, D. Highly Tunable Two-Qubit Interactions in Si/SiGe Quantum Dots by Interchanging the Roles of Qubit-Defining Gates. _Nano Letters_（2025）. DOI: 10.1021/acs.nanolett.6c00044；arXiv:2512.20142（QAtlas 缓存：2512.20142）。
+
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

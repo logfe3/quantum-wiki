@@ -5,6 +5,7 @@ import { readdir, readFile, stat } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import YAML from "yaml"
+import { validateContentScope } from "./qatlas-scope.mjs"
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const contentRoot = path.join(repositoryRoot, "content")
@@ -49,13 +50,14 @@ function embeddedAssets(body) {
   return [...body.matchAll(/!\[\[(assets\/[^\]|]+)(?:\|[^\]]+)?\]\]/g)].map((match) => match[1])
 }
 
-async function validateFile(file, rules) {
+async function validateFile(file, rules, config) {
   const relative = path.relative(repositoryRoot, file).split(path.sep).join("/")
   const text = await readFile(file, "utf8")
   const { frontmatter, body } = parseDocument(text, relative)
   if (String(frontmatter.source ?? "").toLowerCase() !== "qatlas") return null
 
   const errors = []
+  errors.push(...validateContentScope(relative, frontmatter, body, config))
   for (const key of ["title", "description", "tags", "date", "qatlas_id", "source_updated"]) {
     if (frontmatter[key] === undefined || frontmatter[key] === null || frontmatter[key] === "") {
       errors.push(`missing frontmatter field: ${key}`)
@@ -98,9 +100,9 @@ async function main() {
   const entries = process.argv.slice(2)
   const roots = entries.length > 0 ? entries : ["content"]
   const files = (await Promise.all(roots.map(markdownFiles))).flat()
-  const results = (await Promise.all(files.map((file) => validateFile(file, rules)))).filter(
-    Boolean,
-  )
+  const results = (
+    await Promise.all(files.map((file) => validateFile(file, rules, config)))
+  ).filter(Boolean)
   if (results.length === 0) {
     console.log("No QAtlas-backed content found to validate.")
     return

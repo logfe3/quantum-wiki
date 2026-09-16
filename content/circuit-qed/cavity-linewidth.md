@@ -2,17 +2,17 @@
 title: 腔线宽与品质因子
 description: 微波谐振腔的光子耗散速率 κ、内部/外部品质因子及其与强耦合、色散读出和比特退相干之间的关系。
 aliases:
- - 品质因子
- - 腔损耗率
- - 腔衰变率
- - κ
- - Q factor
- - cavity linewidth
- - 谐振腔线宽
- - 谐振腔品质因数
+  - 品质因子
+  - 腔损耗率
+  - 腔衰变率
+  - κ
+  - Q factor
+  - cavity linewidth
+  - 谐振腔线宽
+  - 谐振腔品质因数
 tags:
- - 电路量子电动力学
- - 谐振腔参数
+  - 电路量子电动力学
+  - 谐振腔参数
 date: 2026-09-08
 ---
 
@@ -26,7 +26,7 @@ $$
 \kappa = \kappa_i + \kappa_e
 $$
 
-即总腔耗散率，也就是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]主方程中驱动 $a$ 的耗散项。在频谱上，$\kappa$ 给出无加载腔的洛伦兹响应（见[[circuit-qed/microwave-resonator|微波谐振腔]]词条）的半高宽（full width at half maximum，FWHM），通常直接简称为"腔线宽"。在光机械与电机械语境里，$\kappa$ 与机械频率 $\omega_m$ 之比还决定边带分辨与量子反作用强度——进入[[circuit-qed/feedback-cooling|反馈冷却]]的反作用声子预算项 $\kappa^2/(\kappa^2+4\omega_m^2)$。
+即总腔耗散率，也就是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]主方程中驱动 $a$ 的耗散项。在频谱上，$\kappa$ 给出无加载腔的洛伦兹响应（见[[circuit-qed/microwave-resonator|微波谐振腔]]词条）的半高宽（full width at half maximum，FWHM），通常直接简称为"腔线宽"。在光机械与电机械语境里，$\kappa$ 与机械频率 $\omega_m$ 之比还决定边带分辨与量子反作用强度——进入反馈冷却的反作用声子预算项 $\kappa^2/(\kappa^2+4\omega_m^2)$。
 
 工程语境中，腔线宽常被换算成无量纲的**品质因子**（quality factor）
 
@@ -108,15 +108,13 @@ $$
 
 ## 可调线宽：EIT 与腔线宽变窄
 
-以上讨论中 $\kappa$ 由器件几何与环境固定；**腔线宽也可以被"调窄"**——电磁诱导透明（EIT）提供了控制场调节线宽的机制。把原子系综耦合进腔模，探针场 $\Omega_p$ 与控制场 $\Omega_c$ 的 Rabi 频率构成相干布居囚禁（CPT）：出现与光场解耦的**暗态**，腔内光子变成"亮态极化子"（与激发态强耦合，表现为真空 Rabi 劈裂）与"暗态极化子"（与激发态解耦，表现为窄透射窗）的叠加。透射谱的半高全宽（FWHM，以腔衰减率 $\kappa$ 为单位）随控制场强度连续可调：$\Omega_c=5\kappa$ 时谱等价于空腔（FWHM=1），$\Omega_c=\kappa$ 时进入腔-EIT 窄谱区。Santos 等人给出了单原子区线宽变窄的**基本极限**：线宽不能无限变窄，受可控参数与原子数的制约。同一物理在声学侧有直接类比：比特谱线内耦合尖锐 HBAR 模形成**声学诱导透明**（AIT），透射窗的表观线宽还受杂化与单原子激光效应调制——见[[circuit-qed/hbar-quantum-acoustodynamics|HBAR 量子声动力学]]词条的 AIT 表征一节。
-
 ![[assets/figures/cavity-linewidth/1d350d2ba38ec2c2e6b4489e0ff18ce949c27222de351c8cf0cac3e44607875f.jpg]]
 
-*腔-EIT 实验设置：$N_{at}$ 个原子与腔模耦合，探针场（probe）与控制场（control）共同构成 EIT 介质——控制场强度调节腔的透射线宽。图源：Santos et al. (2024)，Fig. 1(a)。*
+_腔-EIT 实验设置：$N_{at}$ 个原子与腔模耦合，探针场（probe）与控制场（control）共同构成 EIT 介质——控制场强度调节腔的透射线宽。图源：Santos et al. (2024)，Fig. 1(a)。_
 
 ![[assets/figures/cavity-linewidth/c81444cbc4c95a75c3b5926d6b79abccae789b940e78d498d9dd397897ab2774.jpg]]
 
-*EIT 腔线宽变窄的参数空间：FWHM（以 $\kappa$ 为单位）随 $g/\kappa$ 与 $\Omega_c/\kappa$ 的变化——控制场越弱、耦合越强，线宽越窄；$\Omega_c=5\kappa$ 时回到空腔极限（FWHM=1）。图源：Santos et al. (2024)，Fig. 2。*
+_EIT 腔线宽变窄的参数空间：FWHM（以 $\kappa$ 为单位）随 $g/\kappa$ 与 $\Omega_c/\kappa$ 的变化——控制场越弱、耦合越强，线宽越窄；$\Omega_c=5\kappa$ 时回到空腔极限（FWHM=1）。图源：Santos et al. (2024)，Fig. 2。_
 
 EIT 线宽变窄与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]的"提高 $Z_r$"是两条互补的线宽/耦合工程路线：前者靠介质相干性动态调节，后者靠器件几何静态设计；两者共同的物理基础都是[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]的非线性（暗态极化子与真空 Rabi 劈裂是同一哈密顿量的两个侧面）。
 
@@ -150,25 +148,25 @@ $\kappa_i$ 是本征损耗，由腔本身的电磁能量耗散通道决定：
 
 下表汇总本站论文中报告的腔参数。同一工作中不同腔型用于不同实验，因此数据点之间的差异主要来自腔型选择与工艺成熟度，而非单一物理量。
 
-| 腔型 | $Z_r$ | $\omega_r/2\pi$ | $\kappa/2\pi$ | $\kappa_i/2\pi$ | $\kappa_e/2\pi$ | $Q_L$ | 来源 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 50 Ω CPW 透射腔（锗硅纳米线 DQD） | 50 Ω | 5.92 GHz | — | — | — | — | |
-| 标准 CPW 反射腔耦合单量子点 | 50 Ω | 5.992 GHz | — | 14.53 MHz | — | $Q_i=824,\,Q_e=824$ | ，p. 23 |
-| 双端口透射腔（双 DQD） | 50 Ω | 6.53 GHz | — | 30.0 MHz | 数十 MHz | — | ，pp. 55、60 |
-| 全封闭 3D 铝腔（20 mK） | — | 9.45 GHz | $\sim 50$ kHz | — | — | $\sim 2\times10^5$ | ，p. 63 |
-| 铌 λ/4 同轴腔（≤45 mK，单光子） | — | ~6.5 GHz | — | — | — | $>1.4\times10^9$（平均 $(1.40\pm0.128)\times10^9$，最高 $1.47\times10^9$） | Oriani 2025 |
-| 开槽 3D 铝腔（20 mK） | — | — | — | — | — | $\sim 10^5$ | ，p. 63 |
-| 加直流引线的 3D 铝腔 | — | — | — | — | — | $\sim 8\times10^3$ | ，p. 63 |
-| NbTiN 高动态电感反射腔 | $\sim 2$ kΩ | 6.045 GHz | — | 11.3 MHz | 4.50 MHz | — | |
-| TiN $\lambda/2$ 腔（自旋强耦合用） | $\sim 3.5$ kΩ | 4.993 GHz | 2.2 MHz | — | — | $Q_L\sim 2270$ | ，p. 55 |
-| TiN $\lambda/2$ 腔（自旋强耦合用 7.3 GHz） | $\sim 2.5$ kΩ | 7.332 GHz | 5.13 MHz | — | — | $Q_L\sim 1430$ | ，p. 69 |
-| NbTiN 反射腔 / SQUID 阵列腔 | $\sim 1$ kΩ | 6.758 GHz | 58.9 MHz | 36.9 MHz | 22.0 MHz | — | ，p. 87 |
-| SQUID 阵列反射腔（38 SQUID） | $\sim 1$ kΩ | 5.6–6.23 GHz | 30–60 MHz | — | — | — | ，p. 41 |
+| 腔型                                       |         $Z_r$ | $\omega_r/2\pi$ | $\kappa/2\pi$ | $\kappa_i/2\pi$ | $\kappa_e/2\pi$ |                                                                      $Q_L$ | 来源         |
+| ------------------------------------------ | ------------: | --------------: | ------------: | --------------: | --------------: | -------------------------------------------------------------------------: | ------------ |
+| 50 Ω CPW 透射腔（锗硅纳米线 DQD）          |          50 Ω |        5.92 GHz |             — |               — |               — |                                                                          — |              |
+| 标准 CPW 反射腔耦合单量子点                |          50 Ω |       5.992 GHz |             — |       14.53 MHz |               — |                                                        $Q_i=824,\,Q_e=824$ | ，p. 23      |
+| 双端口透射腔（双 DQD）                     |          50 Ω |        6.53 GHz |             — |        30.0 MHz |        数十 MHz |                                                                          — | ，pp. 55、60 |
+| 全封闭 3D 铝腔（20 mK）                    |             — |        9.45 GHz | $\sim 50$ kHz |               — |               — |                                                         $\sim 2\times10^5$ | ，p. 63      |
+| 铌 λ/4 同轴腔（≤45 mK，单光子）            |             — |        ~6.5 GHz |             — |               — |               — | $>1.4\times10^9$（平均 $(1.40\pm0.128)\times10^9$，最高 $1.47\times10^9$） | Oriani 2025  |
+| 开槽 3D 铝腔（20 mK）                      |             — |               — |             — |               — |               — |                                                                $\sim 10^5$ | ，p. 63      |
+| 加直流引线的 3D 铝腔                       |             — |               — |             — |               — |               — |                                                         $\sim 8\times10^3$ | ，p. 63      |
+| NbTiN 高动态电感反射腔                     |   $\sim 2$ kΩ |       6.045 GHz |             — |        11.3 MHz |        4.50 MHz |                                                                          — |              |
+| TiN $\lambda/2$ 腔（自旋强耦合用）         | $\sim 3.5$ kΩ |       4.993 GHz |       2.2 MHz |               — |               — |                                                             $Q_L\sim 2270$ | ，p. 55      |
+| TiN $\lambda/2$ 腔（自旋强耦合用 7.3 GHz） | $\sim 2.5$ kΩ |       7.332 GHz |      5.13 MHz |               — |               — |                                                             $Q_L\sim 1430$ | ，p. 69      |
+| NbTiN 反射腔 / SQUID 阵列腔                |   $\sim 1$ kΩ |       6.758 GHz |      58.9 MHz |        36.9 MHz |        22.0 MHz |                                                                          — | ，p. 87      |
+| SQUID 阵列反射腔（38 SQUID）               |   $\sim 1$ kΩ |    5.6–6.23 GHz |     30–60 MHz |               — |               — |                                                                          — | ，p. 41      |
 
 按工程经验（、 总结）：
 
 - 标准 50 Ω 共面波导腔：$Q_L$ 在 $10^3$–$10^4$，对应 $\kappa/2\pi$ 数 MHz；
-- 三维金属腔：铝腔 $Q_L$ 可达 $10^5$–$10^6$，但与半导体直流引线集成困难，加引线后跌至 $10^3$–$10^4$；无焊缝铌同轴腔在单光子功率下 $Q_i$ 可越过 $10^9$（刻蚀化学与密封时机主导，见[[circuit-qed/niobium-coaxial-cavity|铌同轴谐振腔]]）；
+- 三维金属腔：铝腔 $Q_L$ 可达 $10^5$–$10^6$，但与半导体直流引线集成困难，加引线后跌至 $10^3$–$10^4$；无焊缝铌同轴腔在单光子功率下 $Q_i$ 可越过 $10^9$（刻蚀化学与密封时机主导，见铌同轴谐振腔）；
 - 高动态电感材料（NbTiN、TiN）腔：$Q_L\sim 10^3$，$T_c$ 高、临界场大，适合自旋比特实验；
 - SQUID 阵列腔：$Q_L\sim 10^2$–$10^3$，磁通可调但耗散偏高。
 
@@ -197,7 +195,7 @@ $$
 \kappa_P(\omega_q) = \frac{g^2\kappa}{\Delta^2+(\kappa/2)^2}.
 $$
 
-Purcell 滤波（参见[[readout-measurement/purcell-filter|Purcell 滤波]]词条）通过引入与腔匹配的带阻结构抑制这一通道，保护比特相干。
+Purcell 滤波（参见Purcell 滤波词条）通过引入与腔匹配的带阻结构抑制这一通道，保护比特相干。
 
 ### 合作因子与品质因子
 
@@ -254,7 +252,7 @@ $C>1$ 是"相干耦合占优"的前提之一。提升 $C$ 既要增大 $g$（用
 - **高阻抗腔**：（参见[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]）是同时提升 $Z_r$ 与压低 $\kappa_i$ 的硬件路线，承载了从 NbTiN 到 TiN 的多条器件工艺；
 - **比特退相干**：$\gamma$ 与 $\kappa$ 在合作因子 $C=g^2/(\kappa\gamma)$ 中对称出现，是判断比特–腔组合相干优劣的"两半"；
 - **腔介导耦合**：在色散区两比特经虚光子交换得到有效相互作用 $\sim g_1g_2/\Delta$，但若 $\kappa$ 太大、虚光子寿命短于比特–比特相位积累时间，远程耦合会被腔耗散拖垮，对应[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]词的硬件约束；
-- **Purcell 滤波**：（参见[[readout-measurement/purcell-filter|Purcell 滤波]]）通过外部带阻结构把有效 $\kappa$ 抑制到不影响比特自发辐射的水平，是 Purcell 效应反向应用的典型例；
-- **电压可调的 $\kappa$**：量子电路冰箱（QCR）用 SINIS 结的偏压脉冲把腔耗散率临时抬高约一个量级（$\kappa_{\mathrm{eff}}=\kappa_r+\delta\gamma_{\mathrm{QCR}}$）、关断时恢复本底——$\kappa$ 不再只是设计定死的几何量，而成为可纳秒级开关的工作参数，见[[superconducting-qubits/qubit-fast-reset|量子比特快速复位]]的 QCR 一节；
+- **Purcell 滤波**：（参见Purcell 滤波）通过外部带阻结构把有效 $\kappa$ 抑制到不影响比特自发辐射的水平，是 Purcell 效应反向应用的典型例；
+- **电压可调的 $\kappa$**：量子电路冰箱（QCR）用 SINIS 结的偏压脉冲把腔耗散率临时抬高约一个量级（$\kappa_{\mathrm{eff}}=\kappa_r+\delta\gamma_{\mathrm{QCR}}$）、关断时恢复本底——$\kappa$ 不再只是设计定死的几何量，而成为可纳秒级开关的工作参数，见量子比特快速复位的 QCR 一节；
 - **偏置线滤波保住 $\kappa_i$**：混合量子点–腔器件中，直流偏置线与腔的寄生电容是重要的外部泄漏通道；给每条偏置线串入片上 LC 低通滤波器（$C_f\approx1$ pF + $L_f\approx13$ nH，$f_c$ 处约 20 dB 衰减）可把 $Q$ 从 <1000 提升到 5400，见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的硅 cQED 架构一节——量子点 cQED 里 $\kappa$ 的预算必须把栅线泄漏计入。
 - **平台材料**：$\kappa_i$ 强烈依赖材料与界面工艺，主要平台为[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/strained-germanium|应变锗]]等异质结。
