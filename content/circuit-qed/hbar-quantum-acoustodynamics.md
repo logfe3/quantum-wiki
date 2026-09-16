@@ -78,7 +78,7 @@ HBAR 属于'超导电路+机械振子'大家族的体声波分支；综述把整
 
 *带隙内的非马尔可夫动力学：比特- TLS 池的相干能量交换（Solomon 方程建模）——TLS 寿命 34 µs 导致记忆效应，比特衰减偏离指数。图源：同上，Fig. 2。*
 
-**纳米机电梭**（nanoelectromechanical shuttle）给出混合机械系统的又一构型：质量块在两个超导岛之间往复运动的"梭"结构天然产生可调的比特-机械耦合——运动幅度决定耦合的阶数（线性 $propto x$ 或二次 $propto x^2$），实验者按需切换。二次耦合对机械基态的读出特别有价值（QND 型）。
+**纳米机电梭**（nanoelectromechanical shuttle）给出混合机械系统的又一构型：质量块在两个超导岛之间往复运动的"梭"结构天然产生可调的比特-机械耦合——运动幅度决定耦合的阶数（线性 $propto x$ 或二次 $propto x^2$），实验者按需切换。二次耦合对机械基态的读出特别有价值（QND 型）。机电接口也是计量工具：纳米弦的电致机械诱导吸收（EMIA）可在高功率区标定微波腔光子数，与 transmon 的 ac-Stark 法交叉覆盖九个量级动态范围（见[[circuit-qed/dispersive-shift|色散频移]]词条"光子数标定"一节）。
 
 ![[assets/figures/hbar-quantum-acoustodynamics/6d24de75e097f49fb8adaf692a990af9256ec3b8777d3b312e2ac75e1ea264ec.jpg]]
 

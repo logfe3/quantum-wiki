@@ -9,6 +9,9 @@ tags:
  - 电路量子电动力学
  - 读出与测量
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m0qv7528ys7vz0cxmnq6b961
+source_updated: 2026-08-24T09:17:17Z
 ---
 
 <div class="entry-lead">当比特频率远离腔频时，两者不再交换实光子，但量子涨落仍允许它们通过虚光子相互作用：腔的有效频率被比特态平移 $g^2/\Delta$，比特频率被光子数平移 $2\chi n$——这三种频移统称为色散频移，构成色散读出与腔介导耦合的共同基础。</div>
@@ -155,6 +158,43 @@ $$
 
 由此可得腔内平均光子数 $n_p=\alpha_{\mathrm{fit}}P_p/(2\chi)$——）用此方法测出 $n_p\sim 1$ 的弱探测区。当 $n_p\to 0$（极弱探测）时残留的 $\chi$ 即 Lamb 频移，可用真空涨落来源自洽。
 
+### 光子数标定的动态范围：ac-Stark 与 EMIA 双法交叉验证（Schmidt 2018）
+
+ac-Stark 频移天然是一只"光子计数器"，但它受色散近似约束（$n\lesssim n_{\mathrm{crit}}$），高功率区失效。Schmidt 等（WMI）在同一芯片上把 transmon、微波腔与纳米机械弦组合成杂化系统，用两种独立方法标定腔平均光子数并交叉验证，把可用动态范围拉到**九个量级**。基准公式是对称耦合 λ/2 腔的平均光子数
+
+$$
+\bar n_c = \frac{2P_{\mathrm{appl}}}{\hbar\omega_p(\kappa^2+4\Delta_p^2)}\, x,
+\qquad x \equiv \Lambda\kappa_{\mathrm{ext}},
+$$
+
+其中 $P_{\mathrm{appl}}$ 为进入制冷机前的源功率、$\Lambda$ 为线路总衰减、$\kappa_{\mathrm{ext}}$ 为外耦合率——标定的全部困难集中在未知因子 $x$ 上，用两种物理独立的效应把它测出来：
+
+- **低功率区（ac-Stark 光子计数）**：transmon 频移随腔光子数线性变化
+
+$$
+\delta\omega = 2\frac{g_q^2}{\Delta_{qc}}\cdot\frac{\alpha}{\alpha+\Delta_{qc}}\cdot\bar n_c,
+$$
+
+其中 $g_q$ 为比特-腔耦合、$\Delta_{qc}=\omega_q-\omega_c$、$\alpha$ 为 transmon 非谐（注意与词条前文 $\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 的一致性——这里的 $\delta\omega$ 即 $2\chi\bar n_c$）。实验器件 $g_q/2\pi=134$ MHz、$\Delta_{qc}/2\pi=2.056$ GHz、$\alpha/2\pi=-188$ MHz，临界光子数 $n_{\mathrm{crit}}=\Delta_{qc}^2/(2g_q)^2\approx60$，工作区 $\bar n_c\leq28$；测得 $\delta\omega\cdot\kappa^2$ 随 $P_{\mathrm{appl}}$ 严格线性，给出 $x_{\mathrm{qb}}=(5.65\pm0.23)\ \mathrm{s^{-1}}$。
+
+- **高功率区（电致机械诱导吸收 EMIA）**：红边带驱动下机械弦的反斯托克斯场与探测场干涉，使机械线宽展宽
+
+$$
+\Gamma_{\mathrm{eff}} = \Gamma_m\left(1 + \frac{4g_{m0}^2}{\kappa\Gamma_m}\cdot\frac{2P_{\mathrm{appl}}\, x_{\mathrm{EMIA}}}{\hbar\omega_d(\kappa^2+4\Delta_{mc}^2)}\right),
+$$
+
+其中 $g_{m0}$ 为机电真空耦合（器件 $g_{m0}/2\pi=0.31$ Hz）、$\Gamma_m$ 为机械线宽（$\Gamma_m/2\pi=12.4$ Hz、$\Omega_m/2\pi=3.15018$ MHz 的 2 pg 纳米弦）。EMIA 在高光子数区依然线性，标定出 $x_{\mathrm{EMIA}}$ 与 $x_{\mathrm{qb}}$ **定量一致**——两种物理（量子比特谱学与经典机电干涉）在同一芯片上互为基准。
+
+![[assets/figures/dispersive-shift/schmidt2018-fig2-hybrid-sample.jpg]]
+
+*杂化标定器件：超导微波谐振腔 + transmon 比特 + 双端固支纳米机械弦单片集成（铝薄膜电子束蒸发 + 300 °C 退火产生高张应力 + 反应离子刻蚀释放）；机械弦长 60 µm、质量约 2 pg、距地平面 160 nm 间隙给出机电真空耦合 g_m0/2π=0.31 Hz。图源：Schmidt et al., J. Appl. Phys. (2018)，Fig. 2。*
+
+![[assets/figures/dispersive-shift/schmidt2018-fig3-acstark-calibration.jpg]]
+
+*ac-Stark 标定：乘积 δω·κ² 随输入功率 P_appl 的线性依赖（点为数据、线为拟合）——斜率结合光子数公式与器件参数给出标定因子 x_qb=(5.65±0.23) s⁻¹，工作在临界光子数 ~60 以下的少光子区。图源：Schmidt et al., J. Appl. Phys. (2018)，Fig. 3。*
+
+工程意义：任何用到 ac-Stark 的实验（读出功率标定、测量诱导退相干估算、[[circuit-qed/bosonic-cqed|玻色编码]]的腔光子管理）都需要知道 $\bar n_c$；单靠比特谱学只能覆盖低功率端，机电 EMIA 把标定延伸到高功率端且不需要知道线路衰减的先验值。
+
 ### 透射与反射的散射参数
 
 通过输入–输出理论，透射式共面波导腔的透射系数为）
@@ -216,3 +256,8 @@ $$
 4. **同时优化 $\kappa$、$\eta$ 与 $\chi$**：SNR$\propto\chi^2/\kappa$ 与 $\eta t_m$，单纯减小 $\kappa$ 会拉长腔响应时间 $1/\kappa$，需配合 Purcell 滤波器与量子极限放大器；
 5. **transmon 体系需考虑非谐修正**：$\chi=g^2\alpha/\Delta(\Delta+\alpha)$ 而非 $g^2/\Delta$；$\chi$ 与 $\alpha$ 同号，负非谐性使 $\chi<0$；
 6. **自旋比特的弱 $\chi$ 需要更长积分**：$\chi_s$ 通常比 $\chi_c$ 小一两个量级，必须用更高 $Q$ 腔或更长积分时间补偿。
+
+## 参考文献
+
+- Schmidt, P., Schwienbacher, D., Pernpeintner, M., Wulschner, F., Deppe, F., Marx, A., Gross, R., Huebl, H. Ultrawide-range photon number calibration using a hybrid system combining nano-electromechanics and superconducting circuit quantum electrodynamics. *Journal of Applied Physics* (2018). DOI: 10.1063/1.5052414；arXiv:1808.05482（QAtlas 缓存：1808.05482）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
