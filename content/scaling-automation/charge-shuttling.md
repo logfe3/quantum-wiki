@@ -13,8 +13,8 @@ tags:
  - 阵列扩展
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhbqt97dgkp4239vxn4jb
-source_updated: 2026-09-02T20:24:32Z
+qatlas_id: qa_01m0qv6q2a6c28p9r6w6vpmv60
+source_updated: 2026-08-24T09:14:57Z
 ---
 
 <div class="entry-lead">交换相互作用把[[qubit-control/exchange-interaction|两比特门]]的有效范围限制在 ~50 nm，自旋–光子接口又要把比特接到厘米尺度的超导腔上——中间那 50 nm–10 µm 的"中尺度连接带"由**电荷穿梭**填补：像救火队传水桶一样，让一个电子沿量子点阵列逐对越过点间电荷跃迁，把量子态物理搬运到目的地。硅中 9 点阵列的演示已把单电子穿越时间压到 ~50 ns，比自然硅的退相位时间快一个量级。</div>
@@ -74,6 +74,49 @@ $$
 - **交换残余**：相邻点间残余交换与穿梭脉冲的配合决定装载/卸载阶段的保真度。
 
 锗空穴体系已实测高保真相干自旋输运（[[references/ge-shuttle-2024|9 点链穿梭并保持相干]]），硅电子的自旋穿梭保真度也在快速推进——电荷穿梭由此从"单电子泵"演变为阵列级**量子总线**与**寄存器间链路**的候选方案。
+
+## 单次转移的保真度理论：谷相位、相位误差与自旋翻转（Zhao 2018）
+
+"从电荷到自旋"一节的三条约束在 Zhao & Hu 的双点微观理论里被逐条定量化。**出发点**是硅双点的谷-轨道四能级模型（|L/R⟩ × |±⟩，谷劈裂通常远小于谷内轨道激发能）：两点谷轨道耦合的相位差 δφ 决定谷内与谷间隧穿耦合 $|t_\pm| = t_C\frac{1\pm\cos\delta\phi}{2}$ 的分配——δφ=0 时纯谷内、δφ=π 时纯谷间。
+
+**隧穿耦合与谷相位差的测量**：GaAs 的 DiCarlo 电荷分布拟合在硅上会系统出错。无谷间隧穿时左点占据 $P_L^{(1)} = \frac{1}{2}(1-\frac{\epsilon-\Delta_-}{2E_+})$ 与二能级公式相同；计入 $|t_-|$ 后修正为
+
+$$
+P_L^{(2)} = \cos^2\frac{\Theta}{2}\sin^2\frac{\theta_-}{2} + \sin^2\frac{\Theta}{2}\cos^2\frac{\theta_+}{2},
+\qquad \frac{|t_-|}{|t_+|} = \tan\frac{\delta\phi}{2},
+$$
+
+其中 $\tan\theta_\mp = |t_+|/(\epsilon\mp\Delta_-)$、$\tan\Theta = |t_-|/(E_++E_-+\Delta_+)$（$E_\pm$ 含失谐与谷劈裂失配 $\Delta_\pm$）。数值对照：δφ=π 时用旧公式拟合 $|t_+|$ 误差高达 65%，四能级公式仅 5% 且能同时提取 $|t_-|$。谷相位差还可从源漏共振隧穿读出——两个反交叉处的电流比 $I_A/I_B = \tan^2(\delta\phi/2)$，或经腔响应、LZS 干涉提取。
+
+**相位误差**：双点势修正有效 g 因子，$g_{\mathrm{eff}} = (E_{g,-,\uparrow}-E_{g,-,\downarrow})/\mu_B B$。零失谐处修正最大（激发轨道_gap 从单点 $\hbar\omega_0$ 缩到隧穿能 $t_C$ 量级，二阶自旋轨道微扰 $\propto 1/t_C$ 放大），转移累积相位误差
+
+$$
+\Phi_{\mathrm{error}} = \int \frac{1}{\hbar}\left[g_{\mathrm{eff}}(\tau)-g_s\right]\mu_B B\, d\tau
+$$
+
+在典型参数（l₀=10 nm、d=20 nm、谷劈裂 50 µeV）下、B=1.4 T、ε₀=0.06 meV 时达 −0.125π——用单点 g 因子估计动力学相位会留下可观误差。更隐蔽的是**谷依赖相位误差**：谷劈裂不同导致两谷自旋劈裂不同，自旋与谷即便无直接耦合也会纠缠；对谷求迹（谷不敏感的读出即此操作）后
+
+$$
+\rho_{\mathrm{spin}} = \mathrm{Tr}_V\left(|\psi_{VS}\rangle\langle\psi_{VS}|\right)
+$$
+
+成为混合态——**经典信息（自旋布居）完好而量子相干丢失**，相干损失与自旋-谷并发度同步（下图）。数值示例（|Δ_L|=60 µeV、|Δ_R|=30 µeV、E_z=40 µeV、E_x=1.6 µeV、10 ns 转移）显示相干指标随 δφ 显著下降。
+
+![[assets/figures/charge-shuttling/zhao2018-fig5-gfactor-correction.jpg]]
+
+*双点势对有效 g 因子的修正 δg = g_eff − g_s：(a) 随磁场的变化（零失谐）——B_c1、B_c2 两个热区（分别为自旋-谷与自旋-轨道反交叉）处 g 因子无定义、修正发生跳变；(b)(d) 随失谐的变化——零失谐处修正最大、远失谐时趋于单点值；(c)(e) 两热区附近的能级图（蓝为自旋向下、红为向上）。典型参数下 B=1.4 T、ε₀=0.06 meV 的累积相位误差达 −0.125π。图源：Zhao & Hu (2018)，Fig. 5。*
+
+![[assets/figures/charge-shuttling/zhao2018-fig6-sv-coherence-loss.jpg]]
+
+*谷依赖相位误差对自旋相干的摧毁：归一化指标（自旋布居 P_up、约化密度矩阵非对角元 2|ρ_spin(1,2)|、自旋-谷并发度 C）随谷相位差 δφ 的变化——布居几乎不变（经典信息保真），而相干与并发度同步大幅下降：自旋-谷纠缠使"对谷求迹"的读出把纯自旋态变成混合态。图源：Zhao & Hu (2018)，Fig. 6。*
+
+**自旋翻转**：硅的弱自旋轨道耦合让大多数反交叉在扫失谐时退化为交叉（快穿越、不翻转），例外是**零失谐附近的宽反交叉**——同一点内不同谷态的能差对失谐弱依赖，能级近乎平行，Landau–Zener 绝热概率大增：初态取第四能级（经两个远失谐反交叉）自旋存活率 98.5%，取第二能级（经两个零失谐宽反交叉）骤降到 86.6%（见[[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]词条的机制框架）。微磁体横向梯度 E_x（可比自旋轨道耦合大一个量级）下，(|Δ_L|, |Δ_R|) 相对 E_z 的关系把参数空间分成四区：**高场区**（两点谷劈裂均小于 E_z）无反交叉、最安全；**中场区**（一侧小于）单个反交叉、小而可观的翻转；**低场区**（均大于）双反交叉且干涉可增强或抵消翻转——最险的区域。
+
+![[assets/figures/charge-shuttling/zhao2018-fig9-spinflip-regions.jpg]]
+
+*微磁体存在时的转移保真度地图：自旋翻转误差 1−F_spin 在左右两点谷劈裂 (|Δ_L|, |Δ_R|) 参数空间中的分布（E_z=40 µeV、E_x=2 µeV、10 ns 扫描）——按三点能量关系分四区：高场区（左下，无反交叉）最安全；中场区（两侧条带）单反交叉致小误差；低场区（右上）双反交叉干涉形成明暗条纹、误差最大。图源：Zhao & Hu (2018)，Fig. 9。*
+
+**抑制方案**：利用双点内多个反交叉做概率性纠错的三步 LZ 协议——(1) 快扫过反交叉再慢速返回（二能级隧穿概率 $p=\exp(-2\pi E_x^2/\hbar v_{LZ1})$）+ 电荷测量投影，把初态压向更安全的近基态流形；(2) 执行转移（自旋翻转建模为幅度阻尼，$\Gamma_A=\exp[-\int\gamma_A d\tau]$）；(3) 对称的 LZ 操作 + 电荷投影恢复初态。以残余相干为指标，选择得当的 v_LZ1/v_LZ2 组合可显著优于直接转移——代价是电荷测量投影的概率性成功。
 
 ## 约束阵列中的穿梭程序自动生成（Sato 2024）
 
@@ -155,6 +198,9 @@ $$
 | 多通道暂停式转移成功率 | ≳95%（$t_0\gtrsim100\ \mu$eV、$\varepsilon_0\approx500\ \mu$eV、$\tau_{\mathrm{tot}}=10$–50 ns） | Németh 2024 |
 | 2D 穿梭泄漏 | 10 µm 行程口袋泄漏 <10⁻³（$t_p<10^{-5}$ meV）；设计窗口 $P\gtrsim35$ nm、$V_{\mathrm{amp}}\gtrsim75$ mV、$E_{\mathrm{orb}}>1.5$ meV | Németh 2024 |
 | 2D 单元控制线 | 4×4 clavette 栅单元 16 条独立线；绕行半径 R=50 nm | Németh 2024 |
+| 隧穿拟合误差 | δφ=π 时 DiCarlo 二能级公式拟合 \|t₊\| 误差 65%，四能级公式 5% | Zhao 2018 |
+| 转移相位误差 | Φ_error = −0.125π（B=1.4 T、ε₀=0.06 meV、谷劈裂 50 µeV 典型参数） | Zhao 2018 |
+| 宽反交叉自旋存活率 | 经远失谐反交叉 98.5% vs 经零失谐宽反交叉 86.6% | Zhao 2018 |
 
 ## 与其他概念的关系
 
@@ -166,11 +212,12 @@ $$
 - [[scaling-automation/two-dimensional-array|二维量子点阵列]]：行列共享门的二维架构把穿梭从可选优化变为独立寻址的必要条件；
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]：自旋态传输是穿梭的终极目标，要求总时间 $\ll T_2^*$ 并规避自旋–谷热点；
 - [[references/ge-shuttle-2024|锗量子点相干自旋输运]]：空穴体系中穿梭相干性的实验基准。
-- [[fundamentals/valley-splitting|谷劈裂]]：一维轨迹注定遭遇低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），全向穿梭把"绕开谷激发"从脉冲整形问题变成几何路由问题——需要先测绘 2D 谷劈裂地图。
+- [[fundamentals/valley-splitting|谷劈裂]]：一维轨迹注定遭遇低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），全向穿梭把"绕开谷激发"从脉冲整形问题变成几何路由问题——需要先测绘 2D 谷劈裂地图；谷相位差 δφ 的测量方案（隧穿耦合比、电流比、LZS 干涉）见"单次转移的保真度理论"一节。
 
 ## 参考文献
 
 - Mills, A. R., Zajac, D. M., Gullans, M. J., Schupp, F. J., Hazard, T. M., Petta, J. R. Shuttling a single charge across a one-dimensional array of silicon quantum dots. *Nature Communications* 10, 1063 (2019). DOI: 10.1038/s41467-019-08970-z；arXiv:1809.03976（QAtlas 缓存：1809.03976）。
 - Sato, N., Sekiguchi, T., Utsugi, T., Mizuno, H. Generating Shuttling Procedures for Constrained Silicon Quantum Dot Array (2024). arXiv:2401.14683（QAtlas 缓存：2401.14683）。
 - Németh, R., Bandaru, V. K., Alves, P., Brann, E., Eskandari, O. M., Soomro, H., Vivrekar, A., Eriksson, M. A., Losert, M. P., Friesen, M. Omnidirectional shuttling to avoid valley excitations in Si/SiGe quantum wells (2024). DOI: 10.1103/615j-xjyh；arXiv:2412.09574（QAtlas 缓存：2412.09574）。
+- Zhao, X., Hu, X. Quantum coherent electron transport in silicon quantum dots (2018). arXiv:1803.00749（QAtlas 缓存：1803.00749）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

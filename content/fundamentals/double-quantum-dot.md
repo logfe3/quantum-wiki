@@ -242,6 +242,7 @@ $$
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]：双量子点失谐上的周期驱动，PAT 图像与 LZS 图像在强微波下趋于一致；
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]：双量子点通过电偶极与微波腔耦合，有效强度 $g_\mathrm{eff}\propto\sin\theta$ 在 $\varepsilon=0$ 处最大；
 - [[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]与[[readout-measurement/rf-reflectometry|射频反射测量]]：在蜂窝图上读出全部电荷转移线的标准手段。
+- [[scaling-automation/charge-shuttling|电荷穿梭]]：硅双点的隧穿耦合拟合需要四能级（含谷）理论——DiCarlo 二能级公式在谷相位差 δφ→π 时误差达 65%，谷间耦合 |t₋| 只能从四能级电荷分布或电流比提取（见该词条"单次转移的保真度理论"一节）。
 
 
 ## 参考文献

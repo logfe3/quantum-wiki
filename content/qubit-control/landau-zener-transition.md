@@ -177,3 +177,4 @@ $$
 - 强微波驱动下与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]是同一物理的两副面孔；周期驱动情形的系统化处理见[[circuit-qed/floquet-dynamics|Floquet 动力学]]。
 - 在[[qubit-control/charge-qubit|电荷量子比特]]、[[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]与[[qubit-control/single-spin-qubit|单自旋量子比特]]中分别对应失谐反交叉、$S$–$T_+$ 反交叉与自旋翻转避免交叉的扫越操控。
 - 条纹对比度受[[materials-devices/charge-noise|电荷噪声]]限制；腔读出实现见[[readout-measurement/dispersive-readout|色散读出]]与[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]。
+- [[scaling-automation/charge-shuttling|电荷穿梭]]（"单次转移的保真度理论"一节）：硅双点的多个反交叉既是误差源（零失谐宽反交叉放大自旋翻转）也是资源——三步 LZ 协议借电荷测量投影概率性压制翻转误差。

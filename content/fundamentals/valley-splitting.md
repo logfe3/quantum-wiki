@@ -479,7 +479,7 @@ $$
 - [[materials-devices/valley-splitting-optimization|谷劈裂外延剖面优化]]：把摆动阱、窄阱、Ge 尖峰等构型统一为带谱约束的变分优化问题，得到可靠性更高且电场可调 200 µeV–1 meV 的调制摆动阱。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]：合金无序造成的谷劈裂器件间涨落不只是相干性问题——含真实合金无序的 RB 系综模拟显示，谷劈裂过小的器件会给可达隧穿耦合设上限，从而约束甚至完全禁止翻转模式 EDSR 操作，直接影响 FM 比特的良率。
 - [[fundamentals/effective-2d-envelope-function|有效二维包络函数理论]]：把垂直方向按 Born–Oppenheimer 投影掉之后，谷劈裂与谷相位成为二维模型中自然涌现的局域场——量子点扫过原子台阶时谷相位呈约 $\pi/3$ 的系统调制、劈裂在 0.15–0.7 meV 间互补变化，为界面-谷参数映射提供分钟级正演工具。
-- [[scaling-automation/charge-shuttling|电荷穿梭]]（"全向穿梭"一节）：一维轨迹注定撞上低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），多通道与二维 clavette 栅传送带把绕开谷激发做成几何路由问题，前提正是这里的二维 $E_v$ 地图。
+- [[scaling-automation/charge-shuttling|电荷穿梭]]（"全向穿梭"一节）：一维轨迹注定撞上低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），多通道与二维 clavette 栅传送带把绕开谷激发做成几何路由问题，前提正是这里的二维 $E_v$ 地图；双点中谷相位差 δφ 决定谷内/谷间隧穿分配（|t₋|/|t₊|=tan(δφ/2)）并可由电荷分布拟合或隧穿电流比读出，见该词条"单次转移的保真度理论"一节。
 
 
 ## 参考文献
