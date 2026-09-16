@@ -12,8 +12,8 @@ tags:
  - 微波
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvfr023jvf695fq5mzqndf
-source_updated: 2026-09-09T14:52:43Z
+qatlas_id: qa_01m0qvhzzc78barcv8edzcg375
+source_updated: 2026-09-09T14:50:58Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -382,6 +382,21 @@ $$
 
 实测中环境阻抗并非理想 $50\ \Omega$：环形器端口阻抗有明显的感抗振荡，会把振荡反映到 IMPA 的增益曲线中，需要对环形器逐个筛选、把工作频率微调以避开振荡峰；连接线缆上的驻波也会让环境阻抗随频率变化变密；通过微调泵浦频率 $f_p$ 改变增益中心是常见的实验对策。这一现象的完整定量理论见下节。
 
+## 动力学电感阻抗工程：KIMPA（Hung 2025）
+
+阻抗工程路线此前只被铝基约瑟夫森结实现过——它被锁在铝的临界温度与弱磁场里，且目标阻抗 $Z_\mathrm{NR}$ 被压在 $10\ \Omega$ 以下、需要数 pF 的大分流电容（平板电容还引入介质损耗）。Hung 等人（RIKEN）用**三级阻抗变换器**把它推广到动力学电感材料：在常规两段 $\lambda/4$ 变换之外增加一段特征阻抗 $180\ \Omega$ 的 $\lambda/4$ 传输线，把 $Z_\mathrm{NR}$ 的可达值提升一个量级到数十欧姆，分流电容需求随之降到 $330\ \mathrm{fF}$。
+
+![[assets/figures/parametric-amplifier/hung2025-fig1-kimpa-circuit.jpg]]
+*KIMPA 电路：高动力学电感 NbTiN $\lambda/4$ CPW（20 nm 厚、250 nm 宽纳米线）构成的非线性谐振器经三级阻抗变换器（两段 $\lambda/4$ 变换 + 一段 180 Ω 的 $\lambda/4$ 线）耦合到 50 Ω 环境，配 330 fF 分流电容，三波混频泵浦。图源：Hung et al. (2025), Fig. 1。*
+
+![[assets/figures/parametric-amplifier/hung2025-fig3-characterization.jpg]]
+*KIMPA 的反射谱表征：$S_{11}$ 的幅度与相位（蓝）随信号频率的变化与数值模型（含泵浦调制）吻合——阻抗工程后的非线性谐振器在 8.4 GHz 中心附近形成宽带工作区。图源：Hung et al. (2025), Fig. 3。*
+
+![[assets/figures/parametric-amplifier/hung2025-fig4-saturation.jpg]]
+*饱和功率表征：信号增益随失谐与输入功率的色图给出压缩行为——输出饱和功率达 $-51\pm3\ \mathrm{dBm}$，比约瑟夫森结基反射式放大器高约 25 dB，源于 NbTiN 纳米线的高临界电流。图源：Hung et al. (2025), Fig. 4。*
+
+性能包络：**17 dB 保相增益、450 MHz 带宽（中心 8.4 GHz）、附加噪声 0.5–1.3 量子、输出饱和功率 $-51\pm3$ dBm**。材料权衡由此清晰：动力学电感（NbN/NbTiN）以高 $T_c$、大临界电流换來输入压缩点 $-65$–$-55$ dBm、强磁场兼容（自旋比特读出的刚需，见[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]）与更高工作温度，代价是本征非线性低、需要更高泵浦功率才能达到同等带宽与增益——结基与 KI 基放大器的选择是运行条件、动态范围与泵浦约束之间的三角权衡。
+
 ## 环境法布里–珀罗干涉：增益谱的环境整形
 
 Kono 等人 2026 年把"环境失配"从麻烦升级为设计对象：JPA 与环形器之间的阻抗失配让这段波导成为一个**有效法布里–珀罗（FP）腔**——JPA 的反射界面与环形器的失配界面是两面"镜"，信号在腔内往返再回到 JPA 参与放大。基于量子输入输出理论，组合系统的解析反射谱 $S_{11}(\delta)$（$\delta$ 为相对 JPA 频率的失谐）由七个参数完全确定：JPA 的外耦合率 $\kappa$ 与内损耗率 $\kappa_0$、两面镜的透射率 $\eta$ 与 $\eta_0$、FP 腔**自由谱区** $\Delta$、**往返相位** $\varphi_0$ 与泵浦幅度 $\Omega_p$。核心定标判据由 $\Delta$ 相对 $\kappa$ 的比值给出：
@@ -402,7 +417,7 @@ $$
 
 *FP 干涉对增益谱的理论整形：不同自由谱区 Δ（相对 κ）下的计算增益谱——Δ>κ 时近似洛伦兹，Δ<κ 时出现间距 Δ 的纹波，Δ≈κ 时纹波融合为平顶谱（最大增益均取 20 dB）。图源：Kono et al. (2026), Fig. 3(b)。*
 
-实验（磁通驱动 SQUID 阵列 JPA，9.0–9.6 GHz 可调）证实并利用了这一图像：实测净增益谱随 JPA 频率剧烈变形——双峰、三峰乃至单峰平顶，解析模型逐谱拟合全部复现；拟合参数本身成为**环境诊断工具**（$\varphi_0$ 随 JPA 频率线性变化对应确定的腔长、$1-\eta$ 给出失配幅度，从而把"JPA 固有动力学"与"环境效应"干净分离）。性能量级：20 dB 净增益、3 dB 带宽 ~50 MHz（最高净增益 44 dB 时收窄到 ≲0.2 MHz）；在 $\omega_c/2\pi=9.375\ \mathrm{GHz}\pm\Delta$ 范围内，20 dB 带宽随 JPA 频率**周期性**地在 10–50 MHz 间变化（42 dB 时 0.1–1.5 MHz）——信号与 FP 反射的相长/相消干涉使带宽时增时减；1 dB 压缩点同样依赖往返相位 $\varphi_0$，动态范围可由工作点选择优化。
+实验（磁通驱动 SQUID 阵列 JPA，9.0–9.6 GHz 可调）证实并利用了这一图像：实测净增益谱随 JPA 频率剧烈变形——双峰、三峰乃至单峰平顶，解析模型逐谱拟合全部复现；拟合参数本身成为**环境诊断工具**（$\varphi_0$ 随 JPA 频率线性变化对应确定的腔长、$1-\eta$ 给出失配幅度，从而把"JPA 固有动力学"与"环境效应"干净分离）。性能量级：20 dB 净增益、3 dB 带宽 ~50 MHz（最高净增益 44 dB 时收窄到 ≲0.2 MHz）；在 $\omega_c/2\pi=9.375\ \mathrm{GHz}\pm\Delta$ 范围内，20 dB 带宽随 JPA 频率**周期性**地在 10–50 MHz 间变化（42 dB 时 0.1–1.5 MHz）——信号与 FP 反射的相长/相消干涉使带宽时增时减；1 dB 压缩点同样依赖往返相位 $\varphi_0$，动态范围可由工作点选择优化。行波器件侧，低温 TRL 校准的在役 S 参数测量证实了同一图像：JTWPA 的 $S_{11}/S_{22}$ 随增益的增长可由"泵关失配反射被逐次放大"的多次反射模型定量复现（$r_1=r_2\approx0.14$），见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]"在役 S 参数计量学"一节。
 
 ![[assets/figures/parametric-amplifier/kono2026-fig5a-measured-gain-spectra.jpg]]
 
@@ -441,6 +456,7 @@ $$
 | rf-SQUID 阵列 JPA 饱和功率 | 最高 $-91.5\ \mathrm{dBm}$、平均 $(-94.2\pm1.4)\ \mathrm{dBm}$ @ >20 dB 增益（$N=25$、$\beta=0.25/0.21$、$L_J=60$ pH、$Q\approx10$） | Kaufman 2025 |
 | rf-SQUID 阵列 JPA 带宽与量子效率 | 平均瞬时带宽 $(20\pm6)$ MHz；全链 $\eta=(62.4\pm1.4)\%$（弱测量反作用层析）；99.3% 态分离保真度（800 ns） | Kaufman 2025 |
 | rf-SQUID 阵列设计边界 | 最大可达增益沿 $(\beta Q)^{-1}$ 等值线，$(\beta Q)^{-1}\gtrsim0.65$ 无法达到 20 dB；最大饱和功率贴该边界（设计空间内相差 >10 dB） | Kaufman 2025 |
+| KIMPA（NbTiN 三级阻抗变换） | $Z_\mathrm{NR}$ 提升到数十 Ω（10×）、分流电容 330 fF；17 dB 增益、450 MHz 带宽@8.4 GHz、附加噪声 0.5–1.3 量子、输出饱和 $-51\pm3$ dBm（比 JJ 基高 ~25 dB） | Hung 2025 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -480,7 +496,7 @@ $$
 - **约瑟夫结行波参量放大器（JTWPA, Josephson traveling-wave parametric amplifier）**：把上千个几乎一致的约瑟夫森结 + 谐振单元串接成传输线，靠色散工程让三波/四波混频在宽频带内同时满足相位匹配，典型可在数 GHz 范围内维持 $\sim 20\ \mathrm{dB}$ 增益，饱和功率足以同时读取约 20 个超导量子比特。代价是制备工艺复杂、对结参数均一性要求极高；其器件结构、电流–相位关系谐波工程与增益–稳定性权衡见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]；
 - **动力学电感行波放大器（KTWPA, kinetic-inductance TWPA）**：利用超导薄膜的非线性动力学电感实现参量放大，工艺更简单但谐波控制更难；
 - **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；SNAIL-TWPA 的磁通偏置切换 3WM/4WM 与大信号谐波平衡建模见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]——磁通偏到 $0.4\Phi_0$ 抑制四波混频后，泵浦频率位于增益谱之外，可避免强泵浦对频谱内量子比特的意外激发。rf-SQUID TWPA 更进一步：线性色散与非线性强度可独立设计（配合多周期电容变化的双阻带色散工程），用与常规 JTWPA 相当的单元数把饱和功率抬高一个量级至 $-84\ \mathrm{dBm}$、增益带宽超过一个倍频程，打破"饱和功率换器件长度"的权衡——见该词条"rf-SQUID TWPA"一节；谐振式一侧，上文 rf-SQUID 阵列 JPA 的 $-91.5\ \mathrm{dBm}$ 说明同一单元思想在两种拓扑都奏效；
-- **Floquet 模式 TWPA**：把泵浦分解为周期调制的"模式"，可在更低泵浦功率下获得高增益。
+- **Floquet 模式 TWPA**：把信息编码在泵浦周期调制的瞬时 Floquet 模式（而非单频模式）以消除寄生边带泄漏，再绝热匹配回单频模式；首个实验实现给出 >20 dB 增益@3 GHz、<0.5 dB 插入损耗与本征量子效率 92.1%（TWPA 最高）——结构、wQED/测量诱导退相干效率定标与比特读出演示见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]"Floquet 模式 TWPA"一节；
 
 对 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
 
@@ -530,5 +546,6 @@ $$
 - Boutin, S., Toyli, D. M., Venkatramani, A. V., Eddins, A. W., Siddiqi, I., Blais, A. Effect of higher-order nonlinearities on amplification and squeezing in Josephson parametric amplifiers. *Physical Review Applied* 8, 054030 (2017). DOI: 10.1103/physrevapplied.8.054030；arXiv:1708.00020（QAtlas 缓存：1708.00020）。
 - Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
 - Kaufman, R., Liu, C., Cicak, K., Mesits, B., Xia, M., Zhou, C., Nowicki, M., Aumentado, J., Pekker, D., Hatridge, M. Simple, High Saturation Power, Quantum-limited, RF SQUID Array-based Josephson Parametric Amplifiers. *Physical Review Applied* 24, 014052 (2025). DOI: 10.1103/physrevapplied.24.014052；arXiv:2402.19435（QAtlas 缓存：2402.19435）。
+- Hung, C.-C., Kutsuma, H., Chang, C. W. S., van Loo, A. F., Nakamura, Y. Broadband Kinetic-Inductance Parametric Amplifiers with Impedance Engineering (2025). arXiv:2504.17145（QAtlas 缓存：2504.17145）。
 - 饱和功率的定量理论（$P_{1\mathrm{dB}}\propto\kappa/|K|$、SQUID 阵列稀释）：Planat, L. et al. *Physical Review Applied* 11, 034014 (2019)，见[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

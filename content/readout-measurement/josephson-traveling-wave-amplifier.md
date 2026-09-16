@@ -12,8 +12,8 @@ tags:
  - 约瑟夫森结
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhvsf7cmvkceca2vq33de
-source_updated: 2026-09-09T14:51:19Z
+qatlas_id: qa_01m0qvht5hs5w5prfcy1mc2avv
+source_updated: 2026-09-09T14:50:41Z
 ---
 
 <div class="entry-lead">谐振式 [[readout-measurement/parametric-amplifier|参量放大器]]（JPA/IMPA）的带宽被谐振腔卡死在数百 MHz 量级；把非线性元件从"一只腔"摊开成"一条线"——近千个 rf-SQUID 单元串接成的离散传输线——泵浦与信号边走边混频，就得到带宽数 GHz 的约瑟夫森行波参量放大器（JTWPA）。除了色散工程这条传统设计轴线，Guarcello 等人 2025 年的数值研究指出了第三个旋钮：约瑟夫森结**电流–相位关系（CPR）的谐波权重**。让 CPR 偏离纯正弦、带上二次谐波项，不仅能在零偏置下诱生三波混频，还把器件推入"高增益 ↔ 混沌失稳"的竞争区——最优权重 $J_{c_2}\approx-0.6$ 时，无需任何色散工程即可获得约 13 dB 增益。</div>
@@ -118,6 +118,26 @@ $$
 
 低功率区还有一条干净的自检规律：输出端各次谐波功率随输入泵浦功率的斜率比为 $1:2:3$——非线性转移函数 $y=y_0+ax+bx^2+cx^3+\cdots$ 的直接指纹，可用于检验模型与测量的一致性。
 
+## 在役 S 参数计量学：低温 TRL 校准（Shin 2024）
+
+TWPA 的性能表征长期依赖 SNR 改善与 Y-factor 噪声法，缺少对**器件本身微波参数**的在役计量。Shin 等人（NPL）用低温 **TRL（thru-reflect-line）校准**填补了这一空缺：两个 6 路低温射频开关在校准标准与 DUT 之间切换、把参考面移到开关端口（开关传输不确定度 <0.1 dB、反射约 0.04 线性单位；Line 标准特征阻抗 $49.94\pm0.03\ \Omega$ 且从 25 mK 到 296 K 温度不变），在 10 mK、DUT 输入 $\approx-110$ dBm（远低于增益压缩）下测得商用 JTWPA（Silent-Waves Argo）的全部四个 S 参数。
+
+![[assets/figures/josephson-traveling-wave-amplifier/shin2024-fig1-trl-setup.jpg]]
+*毫开尔文 S 参数校准架构：6 路低温开关组在 TRL 标准与 DUT（JTWPA 及其辅助网络，四种构型 A–D）之间切换并定义校准参考面；泵浦线按 50K/4K/800mK/100mK/10mK 各级 6/10/10/6/10 dB 衰减，10 mK 级加 0.25–10 GHz 带通。隔离器的位置是两难：放进参考面内会遮蔽 JTWPA 信息、放在外面其反射又会被近幺正的反向传输放大——必须整体理解 wider network 的反射。图源：Shin et al. (2024), Fig. 1。*
+
+泵关状态：4–8 GHz 插入损耗 3–6 dB（5.5–6.5 GHz 的 stop-band 除外）、$S_{11}/S_{22}\lesssim-10$ dB（接近 50 Ω 匹配）；定向耦合器与电缆的插损 <1 dB、回波 ≲−20 dB，可从结论中剔除。**在役增益**定义为 $S_{21}$(泵开)−$S_{21}$(泵关)。最有趣的在役现象是 $S_{11}$、$S_{22}$ 随增益显著上升（极端时超过 0 dB）——表面看像器件阻抗随增益变化，实际上用**多次反射模型**即可解释：
+
+$$
+\frac{V_\mathrm{out}}{V_\mathrm{in}} = r_1 + \frac{t_1^2\,g\,r_2}{1 - g\,r_2 r_1},
+$$
+
+其中 $r_i$、$t_i$（$t_i^2+r_i^2=1$，无耗）是两端口的线性反射/透射系数、$g=\sqrt{G}$ 为放大器的幅度增益——初始失配产生的反射在器件内往返并被逐次放大。用泵关数据（回波 3.5 dB → $r_1=r_2\approx0.14$）代入，模型定量复现 $S_{11}/S_{22}$ 随增益的增长：**在役性能可以由泵关 S 参数良好描述**，器件阻抗本身在泵浦下几乎不变。
+
+![[assets/figures/josephson-traveling-wave-amplifier/shin2024-fig4b-sparams-vs-gain.jpg]]
+*S 参数随增益的平均变化：实测点与多次反射模型（实线，由泵关 S11/S22 数据取 r₁=r₂≈0.14 计算）在测量误差内吻合——增益升高时的反射增长来自"初始失配反射被放大"，与[[readout-measurement/parametric-amplifier|参量放大器]]词条的环境法布里–珀罗干涉是同一物理的 TWPA 版。图源：Shin et al. (2024), Fig. 4。*
+
+这套计量学的用途：为阻抗工程改进提供定量输入（把失配反射从增益判读中剥离）、评估制造参数离散与外部因素对 TWPA 的实际影响，以及增益压缩附近的在役行为标定。
+
 ## rf-SQUID TWPA：解耦线性与非线性，−84 dBm 饱和功率
 
 Gaydamachenko 等人 2025 年的器件把"rf-SQUID 单元"这张牌打到了极致：每个单元由约瑟夫森结（$I_c=0.9\ \mu\mathrm{A}$）并联蜿蜒电感 $L_m=60\ \mathrm{pH}$ 构成，$\beta_L=L_m I_c/\varphi_0\approx0.16<1$（无回滞），全链 $N=2393$ 个单元（铌三层工艺、SiO₂ 衬底）。rf-SQUID 的电流–相位关系展开为
@@ -163,6 +183,32 @@ $$
 
 与谐振式路线的呼应：rf-SQUID 阵列 JPA（见[[readout-measurement/parametric-amplifier|参量放大器]]"rf-SQUID 阵列 JPA"一节）同样用几何电感旁路 + 相位分摊把谐振式器件的饱和功率推到 $-91.5\ \mathrm{dBm}$——rf-SQUID 单元的"线性/非线性解耦"在谐振与行波两种拓扑里都是抬高[[readout-measurement/amplifier-saturation-power|饱和功率]]的共用钥匙。
 
+## Floquet 模式 TWPA：以瞬时模式编码消除边带泄漏（Wang 2025）
+
+行波放大器的量子效率–带宽权衡有一个更根本的解法：**Floquet 模式 TWPA** 把信息编码在泵浦周期调制的**瞬时 Floquet 模式**而非单频模式上——寄生非线性过程的边带泄漏因模式结构而被消除；再沿器件**绝热地**把信息携带的 Floquet 模式匹配回单频模式，顺带获得方向性与对带外阻抗失配的不敏感（减少对隔离器的依赖、为与量子处理器单片集成铺路）。Wang 等人（MIT/LL）给出首个实验实现。
+
+![[assets/figures/josephson-traveling-wave-amplifier/wang2025-fig1-device.jpg]]
+*Floquet TWPA 的实现：200 mm 高阻硅晶圆上的标准超导比特工艺（铝地平面、Dolan 结、空气桥），5×40 mm 芯片内含 3008 组三结链 + 开端共面短截分布电容；每 8 个单胞插入 ~8 GHz 的集总 LC 相位匹配谐振器，结临界电流（4.62–13.1 µA）与短截长度沿器件渐变以实现绝热 Floquet 模式匹配。分布式共面电容把有效损耗角正切压到 tan δ_eff≈6×10⁻⁵——比 SiOₓ/Al₂O₃ 平板电容低 50 倍以上。图源：Wang et al. (2025), Fig. 1。*
+
+低损耗是 Floquet 方案的生死线：更长电长度意味着对材料耗散更敏感，若沿用 tan δ≈10⁻³ 的平板电容，理论预言本征量子效率会从 99.9% 跌到 ~90%。本器件的实测包络：
+
+- **增益/带宽/动态范围**：>20 dB 增益、3 GHz 瞬时带宽、$P_{1\mathrm{dB}}=-106.5$ dBm@21 dB 增益；
+- **插入损耗**：4–12 GHz 全带平均 <0.5 dB，且近零频率斜率（介质损耗 ∝ω）——剩余 ~0.11 dB 频率无关项归因于封装与失配；
+- **噪声**（wQED 单光子定标，见下）：本征量子效率 $\eta_{\mathrm{amp,i}}=92.1\pm7.6\%$（TWPA 最高纪录），系统效率 $\eta_{\mathrm{sys}}=83.6\pm2.6\%$（且不加任何衰减器改善匹配），系统噪声温度 $378\pm25$ mK（换出 TWPA 时 $3.99\pm0.25$ K）。
+
+![[assets/figures/josephson-traveling-wave-amplifier/wang2025-fig2c-gain-snri.jpg]]
+*增益与信噪比改善随泵浦功率的变化（泵频 7.71 GHz）：SNRi 峰 10.23 dB 出现在增益 20.18 dB 处，与增益峰（22.17 dB）仅差 1.98 dB——增益与信噪比最优点几乎重合，正是 Floquet 边带抑制优于常规 TWPA 的直接证据；泵功率超过约 −69.85 dBm 后噪声底突然抬升，标志参量自振荡的开始。图源：Wang et al. (2025), Fig. 2。*
+
+![[assets/figures/josephson-traveling-wave-amplifier/wang2025-fig2d-efficiency.jpg]]
+*效率提取（wQED 功率定标）：系统测量效率与本征放大器量子效率随泵浦功率的变化，最优工作区（灰带）内 η_sys=83.6±2.6%、η_amp,i=92.1±7.6%——下游链路（含 HEMT）对低效的贡献为 9.22±1.05%。图源：Wang et al. (2025), Fig. 2。*
+
+**wQED 功率定标**值得一提：对称耦合到传输线的比特在弱相干驱动下吸收并双向再辐射单光子，前向相消、背向相长——完美反射单光子；驱动功率升高后透射趋向 1。拟合功率依赖的透射即在低温端建立绝对功率基准，无需室温定标传递。把比特读出实验中的定标换成**测量诱导退相干**（AC Stark 移与退相干率对腔驱动功率/失谐的函数拟合），得到：
+
+![[assets/figures/josephson-traveling-wave-amplifier/wang2025-fig3b-readout-efficiency.jpg]]
+*比特读出中的系统测量效率：transmon 反射式读出 + Floquet TWPA，测量诱导退相干原位定标给出 65.1±5.8%——保相放大器用于超导比特读出的最高纪录（同时泵功率下增益 20.6 dB）；平均读出保真度 97.23%@0.5 µs 积分时间。图源：Wang et al. (2025), Fig. 3。*
+
+系统效率的下一个天花板已经可见：前置放大器与比特的插入损耗压掉之后，**下游链路（HEMT 噪声）把系统效率限制在 ~90%@20 dB 增益**——继续逼近理想量子测量需要更高增益、更低噪声 HEMT 或第二级近量子极限放大。
+
 ## 设计语境与适用边界
 
 - **与色散工程互补**：常规 JTWPA 用共振相位匹配（周期性嵌入 LC 谐振器）抵消相位失配；CPR 谐波工程提供了不改动传输线几何的另一条路线，13 dB 增益在**无色散工程**前提下获得。
@@ -184,4 +230,6 @@ $$
 - Shiri, D., Nilsson, H. R., Telluri, P., Fadavi Roudsari, A., Shumeiko, V., Fager, C., Delsing, P. Modeling and Harmonic Balance Analysis of Parametric Amplifiers for Qubit Read-out. *IEEE Microwave Magazine* (2024). DOI: 10.1109/mmm.2024.3429141；arXiv:2306.05177（QAtlas 缓存：2306.05177）。
 - Guarcello, C., Barone, C., Carapella, G., Filatrella, G., Giachero, A., Pagano, S. Effect of a 2nd-harmonic current–phase relation on the behavior of a Josephson Traveling Wave Parametric Amplifier. *Applied Physics Letters* (2025). DOI: 10.1063/5.0262555；arXiv:2502.00804（QAtlas 缓存：2502.00804）。
 - Gaydamachenko, V., Kissling, C., Grünhaupt, L. et al. An rf-SQUID-based traveling-wave parametric amplifier with −84 dBm input saturation power across more than one octave bandwidth (2025). DOI: 10.1103/1qk4-fzkq；arXiv:2503.02489（QAtlas 缓存：2503.02489）。
+- Wang, J., Peng, K., Knecht, J. M., Cunningham, G. D., Lombo, A., Yen, A., Zaidenberg, D. A., Gingras, M., Niedzielski, B. M., Stickler, H., Sliwa, K., Serniak, K., Schwartz, M. E., Oliver, W. D., O'Brien, K. P. High-Efficiency, Low-Loss Floquet-mode Traveling Wave Parametric Amplifier (2025). arXiv:2503.11812（QAtlas 缓存：2503.11812）。
+- Shin, S. H., Stanley, M., Wong, W. N., Sweetnam, T., Elarabi, A., Lindström, T., Ridler, N. M., de Graaf, S. E. In-operando microwave scattering-parameter calibrated measurement of a Josephson travelling wave parametric amplifier. *Review of Scientific Instruments* (2024). DOI: 10.1063/5.0220776；arXiv:2406.03063（QAtlas 缓存：2406.03063）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
