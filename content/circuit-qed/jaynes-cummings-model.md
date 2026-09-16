@@ -139,4 +139,4 @@ $$
 
 ## 与其他概念的关系
 
-JC 模型是[[circuit-quantum-electrodynamics|电路量子电动力学]]的最小构件：其共振极限对应[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合]]判据；色散极限对应[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。在半导体实现中，"二能级"可以是[[qubit-control/charge-qubit|电荷比特]]（电偶极强、退相干快）、经微磁体或自旋轨道机制获得电荷混合的[[circuit-qed/spin-photon-coupling|自旋比特]]，以及多量子点杂化编码；耦合的微观大小由[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的杠杆臂、混合角与腔阻抗决定。
+JC 模型是[[circuit-quantum-electrodynamics|电路量子电动力学]]的最小构件：其共振极限对应[[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合]]判据；色散极限对应[[readout-measurement/dispersive-readout|色散读出]]与 QND 测量。在半导体实现中，"二能级"可以是[[qubit-control/charge-qubit|电荷比特]]（电偶极强、退相干快）、经微磁体或自旋轨道机制获得电荷混合的[[circuit-qed/spin-photon-coupling|自旋比特]]，以及多量子点杂化编码；耦合的微观大小由[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]的杠杆臂、混合角与腔阻抗决定。JC 相互作用本身还可以被"按需开关"：纯纵向耦合器件用红边带驱动把纵向相互作用线性化为 g=g₀|⟨a⟩| 的有效 JC 阶梯（高开关比、耦合率由驱动设定），见[[circuit-qed/longitudinal-coupling|纵向耦合]]词条。

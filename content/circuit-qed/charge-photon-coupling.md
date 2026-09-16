@@ -235,5 +235,6 @@ two-tone 谱用一路探测微波（$\omega_p=\omega_r$）和一路驱动微波�
 ## 参考文献
 
 - Mi, X., Cady, J. V., Zajac, D. M., Stehlik, J., Edge, L. F., Petta, J. R. Circuit Quantum Electrodynamics Architecture for Gate-Defined Quantum Dots in Silicon. *Applied Physics Letters* 110, 043502 (2017). DOI: 10.1063/1.4974536；arXiv:1610.05571（QAtlas 缓存：1610.05571）。
+- 横向偶极耦合的对偶通道——纵向耦合（比特频率被腔坐标调制、辐射压的电路类比，硬件级纯纵向实现 g₀=2π×11.9 MHz 进入单光子强耦合区）见[[circuit-qed/longitudinal-coupling|纵向耦合]]词条。
 - 电荷–光子耦合在硅量子点–腔体系中的测定：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

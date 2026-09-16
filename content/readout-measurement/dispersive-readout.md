@@ -10,6 +10,9 @@ tags:
  - 读出与测量
  - 电路QED
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m0qvhbkb4t9maz0pq7t6jmmf
+source_updated: 2026-09-02T20:44:03Z
 ---
 
 <div class="entry-lead">色散读出让探测光子主要"感受"量子系统，而不与它共振交换激发：不同量子态使谐振腔频率略有不同，反射或透射相位于是成为读出指针。</div>
@@ -259,6 +262,24 @@ $$
 
 因此读出速度、SNR 与反作用必须联合优化。最直接的修正是插入[[readout-measurement/purcell-filter|Purcell 滤波器]]在比特频段抑制环境阻抗，在读出频段保持通畅，使上述 Purcell 极限被有效解除）。在低噪声侧，靠近量子极限的[[readout-measurement/parametric-amplifier|参量放大器]]（如 JPA、TWPA）进一步把放大器贡献的噪声光子数压到 1 以下。
 
+## 读出脉冲的最优控制（Zhou 2024）
+
+联合优化的另一个自由度是**读出脉冲的形状**。把耗散 LC 腔的 Langevin 方程（等价于主方程下相干态幅度 $\alpha(t)$ 的演化，耗散率 $\kappa$）写成线性控制问题——状态 $\alpha(t)$、控制场 $\varepsilon(t)$——**Pontryagin 极大原理**给出能量-时间双优的解析脉冲：最优控制 $\varepsilon=-\hat B^Tp$，伴随变量 $p$ 由边界条件（初态 $\alpha(0)=0$、末态 $|\alpha(t_f)\rangle=10e^{i\vartheta}$，$\vartheta=\pi/2+\tan^{-1}(\kappa/2\omega_r)$）唯一确定。
+
+![[assets/figures/dispersive-readout/zhou2024-fig2a-energy-cost.jpg]]
+*能量代价随脉冲时长 t_f 的变化（α_f=10、κ⁻¹≈16 µs）：优化脉冲（PMP）在绝热极限饱和为常数 4κ|α_f|²，而 Hahn 正弦脉冲 ε_h=Ω₀sin²(πt/2t_f) 与其 counter-diabatic（CD）辅助都按 κ²t_f 随时长线性增长；短脉冲区（t_f<10 µs）两者都指数上升，但优化脉冲始终更低——CD 比绝热基准节能、仍不敌能量最优解。图源：Zhou et al. (2024), Fig. 2。*
+
+三个层次的对比结论：
+
+1. **能量**：$J_E^\mathrm{opt}\to4\kappa|\alpha(t_f)|^2$（常数），Hahn 与 CD 均为 $\propto\kappa^2 t_f$——耗散越强、脉冲越长，最优脉冲的优势越大。
+2. **中间光子数**：两类脉冲到达同一末态 $\langle N\rangle=|\alpha_f|^2$，但优化脉冲**全程保持更低中间光子数**——对非谐性强、易电离的 transmon（高功率读出的已知瓶颈）更安全。
+3. **量子速度极限**：Mandelstam–Tamm 界 $\int_0^{t_f}\Delta H\,dt\geq S_0$（Fubini–Study 测地距离）给出最小时间随最大驱动幅度 $1/\varepsilon_\max$ 的标度；能量最优、时间最优与 Hahn+CD 三种方案的量子效率 $\eta$ 排序随之量化。
+
+用于色散读出（腔与比特色散耦合）时，优化脉冲在**低、中、高临界光子数**三个区间都给出高 SNR；共振腔或比特频率失配下的稳健性也系统表征过：
+
+![[assets/figures/dispersive-readout/zhou2024-fig5a-snr-mismatch.jpg]]
+*SNR 对共振腔频率失配的依赖（不同临界光子数 n̄_crit）：最优脉冲在失配窗口内保持高 SNR；在大临界光子数区间，色散读出加最优脉冲的 SNR 已可媲美纵向耦合读出方案（后者见[[circuit-qed/longitudinal-coupling|纵向耦合]]词条）——两条读出路线在性能上汇合。图源：Zhou et al. (2024), Fig. 5。*
+
 ## 与其他概念的关系
 
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]是色散读出的哈密顿量基础：把比特–腔耦合按 $g/\Delta$ 展开，得到色散频移 $\chi=g^2/\Delta$、AC Stark 频移 $2\chi n$ 与 Lamb 频移 $\chi$。[[circuit-qed/strong-coupling|强耦合]]判据 $g>\kappa,\gamma$ 与强色散判据 $\chi>\kappa,\gamma$ 是两个层次的可观测条件。
@@ -276,4 +297,5 @@ $$
 ## 参考文献
 
 - 色散读出与自旋–光子接口的实验基础：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
+- Zhou, M., Cárdenas-López, F. A., Sugny, D., Chen, X. Optimal Control for Open Quantum System in Circuit Quantum Electrodynamics (2024). arXiv:2412.20149（QAtlas 缓存：2412.20149）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

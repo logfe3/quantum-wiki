@@ -12,8 +12,8 @@ tags:
  - 三维腔
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvfjs2vrg6hpfc6t145rgy
-source_updated: 2026-09-09T00:18:42Z
+qatlas_id: qa_01m0qvjdmxgbxgx16haaxnba64
+source_updated: 2026-08-30T19:21:24Z
 ---
 
 <div class="entry-lead">三维 cQED 器件的建模长期依赖数值量化（黑箱电路量化、能量参与比 EPR），但两类方法都要为每个模式保留大量量子态才收敛，矩阵维度随模式数指数增长；而计算电磁学惯用的"解析解基准"（如散射的 Mie 级数）在 cQED 里一直空缺。Moon 等人设计了一个刻意保持解析可解的几何——同轴馈电的矩形波导腔、transmon 做成电小偶极天线——让哈密顿量的全部场参数都能用腔微扰论与天线理论闭式写出，并与 EPR、数值本征模方法全面对照：场论表述最少 Fock 态即收敛，扫频任务从 28 小时缩到 6 分钟。</div>
@@ -83,6 +83,23 @@ $$
 ![[assets/figures/analytical-3d-cqed/moon2024-fig11-zz-rate-vs-frequency.jpg]]
 *双比特 ZZ 速率 ζ 随一只比特频率的扫描（11–12 GHz，另一比特固定 11.5 GHz，经由在两比特位置均有峰的 TE₁₀₂ 模介导）：解析（含修正电容）、数值本征模与阻抗法结果一致，形状与 ac Stark 扫描的理论预期相似。图源：Moon et al. (2024), Fig. 11。*
 
+## 大规模分支：多比特器件的张量网络（González-García 2025）
+
+以上方法（黑箱量化、EPR、解析全波）服务**单器件**的精确建模；当对象是含比特与耦合器的 **2D transmon 阵列**时，精确对角化在数十个多能级 transmon 之外撞上指数墙，而 Schrieffer–Wolff 微扰在快两比特门所需的非微扰耦合区收敛困难。González-García 等人（Google Quantum AI）为此引入**张量网络**分支：以矩阵乘积态（MPS）为拟设、密度矩阵重整化群（DMRG）族算法求本征态。关键选型是 **DMRG-X**——源自多体定域化（MBL）物理，tensor 更新的目标函数按**空间轮廓**（重叠）而非最低能量选取，于是可以**不经先算全部低能态**直接取到定域激发态；新算法 **MTDMRG-X** 再结合多目标 DMRG，能同时瞄准强杂化的激发态集（单一 DMRG-X 在此低效），且逐目标集可独立并行、深入谱内部不增加开销；双格点更新用 Lanczos-X 加速。
+
+![[assets/figures/analytical-3d-cqed/gonzalezgarcia2025-fig4-transmon-lattice.jpg]]
+*目标系统：2D 芯片上比特与频率可调耦合器组成的 transmon 格点（连接关系示意）——多比特哈密顿量包含长程耦合，是 ED 不可及、微扰不可靠的典型规模。图源：González-García et al. (2025), Fig. 4。*
+
+两个直接服务处理器设计的应用：
+
+![[assets/figures/analytical-3d-cqed/gonzalezgarcia2025-fig5-localization.jpg]]
+*本征态定域化：低频谱按带结构组织，计算基矢对应的芯片本征态的定域化度量可判断器件是否工作在 MBL 区（高保真门的前提）而非混沌相——定域化指标随参数的演化即"工作区地图"。图源：González-García et al. (2025), Fig. 5。*
+
+![[assets/figures/analytical-3d-cqed/gonzalezgarcia2025-fig6-state-dependent-couplings.jpg]]
+*态依赖耦合：邻近比特的占据态如何改变目标比特对的单/双激发耦合（g 与 ζ）——门速度与寄生 ZZ 的折中由此在真实多体环境中量化，而非孤立双比特近似。图源：González-García et al. (2025), Fig. 6。*
+
+方法梯队由此完整：**单器件精确建模**（黑箱/EPR/解析全波，见上文）→ **双三比特机制分解**（SW 微扰、[[superconducting-qubits/zz-coupling|ZZ 相互作用]]的图解学）→ **大规模阵列**（MPS/DMRG-X/MTDMRG-X 的受控数值近似）——为模拟量子计算与交叉熵基准测试提供所需的精确多比特哈密顿量。
+
 ## 与其他概念的关系
 
 - [[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]：本词条是其三维器件一侧的"建模与验证"基础设施——黑箱量化、EPR 与宏观 cQED 场论三种量化路线的公共基准。
@@ -93,4 +110,5 @@ $$
 ## 参考文献
 
 - Moon, S., Na, D.-Y., Roth, T. E. Analytical Quantum Full-Wave Solutions for a 3D Circuit Quantum Electrodynamics System (2024). arXiv:2401.03033（QAtlas 缓存：2401.03033）。
+- González-García, S., Szasz, A., Pagano, A., Kafri, D., Vidal, G., Di Paolo, A. Multi-Target Density Matrix Renormalization Group X algorithm and its application to circuit quantum electrodynamics (2025). arXiv:2506.24109（QAtlas 缓存：2506.24109）。
 - 对照方法原文：黑箱量化与 EPR 方法的收敛行为讨论见该文引言及其参考文献 [8]–[10]。
