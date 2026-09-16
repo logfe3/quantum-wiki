@@ -1,6 +1,13 @@
 {
-  "source_digest": "9e5a24eb60460dcd17fe88b2c9a3bf2201e96b835534ab5209505a14a903b040",
+  "source_digest": "283060c0dcfb31d99fe4ab81ec1156e727f489aa9a50404b0a1de8dacb07eba2",
   "pages": [
+    {
+      "path": "content/circuit-qed/analytical-3d-cqed.md",
+      "title": "三维 cQED 全波解析解",
+      "topic": "circuit-qed",
+      "sha256": "24a9d10a4daab9c2ec503ddbbe68f4c86a0002baf129ad40534a738f605b2a25",
+      "split": "dev"
+    },
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
       "title": "玻色 cQED 与腔编码量子计算",
@@ -12,7 +19,7 @@
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
       "topic": "circuit-qed",
-      "sha256": "4fca7a131b655ec7fede698e6684403461e70cc951413a61f10aa1415188778e",
+      "sha256": "85ad7ca7dbe3398d17a1325f13c03a46c8699323f7c9f3f6e51323896b9016d1",
       "split": "test"
     },
     {
@@ -27,14 +34,14 @@
       "title": "电荷宇称涨落与准粒子隧穿",
       "topic": "circuit-qed",
       "sha256": "12023467e9bfb4a9f7f3df61ce691d870de95646b517181c495d81fc0e5a20a6",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/circuit-qed/charge-photon-coupling.md",
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
       "sha256": "9f260c154af64d5fd42f1636739abcae17bb9db57483c21930f03f8982c1624d",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
@@ -89,8 +96,15 @@
       "path": "content/circuit-qed/microwave-resonator.md",
       "title": "微波谐振腔",
       "topic": "circuit-qed",
-      "sha256": "3633549e7f0b379bea896b0e407309634373d6f69fb5330ba01764c95e63200a",
+      "sha256": "ed485453ffc164e1316af26009943e0050313e6ab8ec60851bde9e14e5ae024d",
       "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/niobium-coaxial-cavity.md",
+      "title": "铌同轴谐振腔",
+      "topic": "circuit-qed",
+      "sha256": "c2041abd165e637b80e7d173dedaee5f0b9c38f3d7652396908dbb7efd1cd0e1",
+      "split": "test"
     },
     {
       "path": "content/circuit-qed/nv-center-cavity-bus.md",
@@ -111,7 +125,7 @@
       "title": "SQUID 阵列谐振腔",
       "topic": "circuit-qed",
       "sha256": "64dcd4210dba392986014b0ed6d8c73d59ca1c6276c7ff233738d0f2df6a5d61",
-      "split": "test"
+      "split": "dev"
     },
     {
       "path": "content/circuit-qed/strong-coupling.md",
@@ -152,14 +166,14 @@
       "path": "content/fundamentals/constant-interaction-model.md",
       "title": "常相互作用模型",
       "topic": "fundamentals",
-      "sha256": "5b8528ed52b2018bd1c7948523f8ef9c1f87fe3a6e6c797d78ea1b9017b9ffc6",
+      "sha256": "c010c272ed45ce13bba46702db82928df9f7fe002df9dddf678e05c8000c82b6",
       "split": "train"
     },
     {
       "path": "content/fundamentals/coulomb-blockade.md",
       "title": "库仑阻塞",
       "topic": "fundamentals",
-      "sha256": "957b5ea07ef47c9e8ed5cb7b12c04ad8f3d7023639cc61edb0aba9982c497181",
+      "sha256": "cc2396142a431060040c62c04a2771b6776a3dea40a3053ad24cb8acf298ec6e",
       "split": "train"
     },
     {
@@ -173,7 +187,7 @@
       "path": "content/fundamentals/double-quantum-dot.md",
       "title": "双量子点",
       "topic": "fundamentals",
-      "sha256": "92bd177ff7c8f72c0007a79c15a593ef3b9b0079708b2f385ce0fb2f485386b9",
+      "sha256": "deee7c4554876d4802b7919b36aa64b633d84637d9a2b53361c67c6e7218b3f8",
       "split": "train"
     },
     {
@@ -229,7 +243,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "56e82d5f59e00e622d1679474f1ffbd3d4c33f4cfc25f88e3c1a2b3e2227adc2",
+      "sha256": "3073ad054d1989b16cf9bdb59da28d7a1a8f338079382c860f6ceeb47c5ca1cb",
       "split": "dev"
     },
     {
@@ -244,13 +258,13 @@
       "title": "双层石墨烯量子点",
       "topic": "materials-devices",
       "sha256": "908b367250fe293577264631241e6481869839126718bcfd49109decf2b2e5b2",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/materials-devices/charge-noise.md",
       "title": "电荷噪声",
       "topic": "materials-devices",
-      "sha256": "3b34cb15459e4a6f0136e1fb5678a681c8e337b2e51d1e319425f86720e23994",
+      "sha256": "7c6c52d97738724999bb3f7d39e9d2d72f9e9c4ab39ba2c9ef7976eba9b0d994",
       "split": "train"
     },
     {
@@ -265,7 +279,7 @@
       "title": "锗棚顶纳米线",
       "topic": "materials-devices",
       "sha256": "0699c6b821c6c253b39210b8beb71606062ccb2fa23993c2551e0c2a7d01a890",
-      "split": "test"
+      "split": "dev"
     },
     {
       "path": "content/materials-devices/interface-defects.md",
@@ -289,17 +303,24 @@
       "split": "train"
     },
     {
+      "path": "content/materials-devices/si-sige-nanomembrane.md",
+      "title": "Si/SiGe 纳米膜",
+      "topic": "materials-devices",
+      "sha256": "2cb29f33aaeeb1b2473f2569200cf56c740a0ca1af6ab86a75ae2b6a26c6098b",
+      "split": "test"
+    },
+    {
       "path": "content/materials-devices/silicon-mos.md",
       "title": "Si-MOS 量子点",
       "topic": "materials-devices",
-      "sha256": "2aa4d8fe961f97f93de1caf1af2b7fb19f65551e5ea714a63a30a24abdb55f3e",
+      "sha256": "a175c350e686c6177c36852083a3e47d70b01388edc03637caefe9025b1a74b1",
       "split": "train"
     },
     {
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "99eb107f938546a7e6de3888911ab2ce670d8ea33717102670456b3af3d9dce2",
+      "sha256": "1dd77d93405bbb0acc738e8cce9f85c059d58dccac5497cfaee18c3f2fdf3df6",
       "split": "train"
     },
     {
@@ -334,7 +355,7 @@
       "path": "content/qubit-control/dynamical-decoupling.md",
       "title": "动力学解耦",
       "topic": "qubit-control",
-      "sha256": "5c49f1d650cd1c65280c8c303ebb780e4309ad7a82754c02fe20a19d41b0932e",
+      "sha256": "febacad6ef0ac9e4dc5a6475b7b726fb1b5da636f027f00eac716c91111f4c50",
       "split": "train"
     },
     {
@@ -439,7 +460,7 @@
       "path": "content/qubit-control/single-qubit-gate.md",
       "title": "单比特门",
       "topic": "qubit-control",
-      "sha256": "a1b07f93acb3259cb8f3684183198f31cfedcc90bd6947433854ca50b7ff5b11",
+      "sha256": "51eab61a3640cc6bbb23b12a7624e431f5382bd5ea32ee9883940572692fa64b",
       "split": "train"
     },
     {
@@ -453,14 +474,14 @@
       "path": "content/qubit-control/singlet-triplet-qubit.md",
       "title": "单态–三重态量子比特",
       "topic": "qubit-control",
-      "sha256": "21e020f3cc1ff2c3b477af9b9bb9e6d522dba5d24ee16b4056c0a4fd8454df3c",
+      "sha256": "71c91dbe99020041c32334617ad350715338833f14b65fcb52e5436dc5f7dfcb",
       "split": "train"
     },
     {
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "afef46e9f653ad0ca855351f4ba6c7dfff2ca5313f6e3244972463f15bf381c7",
+      "sha256": "8796088e6aa3a017856f9d3e6d480fa0d6ed706215dae871447520c4aa1294dd",
       "split": "dev"
     },
     {
@@ -761,7 +782,7 @@
       "path": "content/superconducting-qubits/surface-tls-loss.md",
       "title": "表面 TLS 损耗与湿法刻蚀",
       "topic": "superconducting-qubits",
-      "sha256": "c83644910d7621993529bd5e437472b2c48bd549ba8e931d1afe6b42a2cc7189",
+      "sha256": "354cca3df114f46c3493ccbed5e6dbb2df1d10ec4eb06a7dec11a911fd4f20d6",
       "split": "train"
     },
     {
@@ -775,7 +796,7 @@
       "path": "content/superconducting-qubits/zz-coupling.md",
       "title": "ZZ 相互作用",
       "topic": "superconducting-qubits",
-      "sha256": "9ae5aba1a201bc46c5fd241f7d8329529590f6bdd5ccc4d7ef2c3be407082781",
+      "sha256": "534d50b095cb8b6c996e23495feb4dc00dc74297d7b34bbe3a3c4b563c561ec0",
       "split": "train"
     }
   ]
