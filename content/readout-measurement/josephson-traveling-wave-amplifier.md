@@ -12,8 +12,8 @@ tags:
  - 约瑟夫森结
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvehdta8pg92txh39j2v31
-source_updated: 2026-09-15T20:26:43Z
+qatlas_id: qa_01m0qvhvsf7cmvkceca2vq33de
+source_updated: 2026-09-09T14:51:19Z
 ---
 
 <div class="entry-lead">谐振式 [[readout-measurement/parametric-amplifier|参量放大器]]（JPA/IMPA）的带宽被谐振腔卡死在数百 MHz 量级；把非线性元件从"一只腔"摊开成"一条线"——近千个 rf-SQUID 单元串接成的离散传输线——泵浦与信号边走边混频，就得到带宽数 GHz 的约瑟夫森行波参量放大器（JTWPA）。除了色散工程这条传统设计轴线，Guarcello 等人 2025 年的数值研究指出了第三个旋钮：约瑟夫森结**电流–相位关系（CPR）的谐波权重**。让 CPR 偏离纯正弦、带上二次谐波项，不仅能在零偏置下诱生三波混频，还把器件推入"高增益 ↔ 混沌失稳"的竞争区——最优权重 $J_{c_2}\approx-0.6$ 时，无需任何色散工程即可获得约 13 dB 增益。</div>
@@ -118,6 +118,51 @@ $$
 
 低功率区还有一条干净的自检规律：输出端各次谐波功率随输入泵浦功率的斜率比为 $1:2:3$——非线性转移函数 $y=y_0+ax+bx^2+cx^3+\cdots$ 的直接指纹，可用于检验模型与测量的一致性。
 
+## rf-SQUID TWPA：解耦线性与非线性，−84 dBm 饱和功率
+
+Gaydamachenko 等人 2025 年的器件把"rf-SQUID 单元"这张牌打到了极致：每个单元由约瑟夫森结（$I_c=0.9\ \mu\mathrm{A}$）并联蜿蜒电感 $L_m=60\ \mathrm{pH}$ 构成，$\beta_L=L_m I_c/\varphi_0\approx0.16<1$（无回滞），全链 $N=2393$ 个单元（铌三层工艺、SiO₂ 衬底）。rf-SQUID 的电流–相位关系展开为
+
+$$
+i(\phi)=\frac{\Phi_0}{2\pi L_\mathrm{SQ}(\phi_\mathrm{dc})}\left[\phi-\beta\phi^2-\gamma\phi^3+\dots\right],\qquad
+\beta=\frac{\beta_L}{2}\frac{\sin\phi_\mathrm{dc}}{1+\beta_L\cos\phi_\mathrm{dc}},\quad
+\gamma=\frac{\beta_L}{6}\frac{\cos\phi_\mathrm{dc}}{1+\beta_L\cos\phi_\mathrm{dc}},
+$$
+
+其中 $L_\mathrm{SQ}(\phi_\mathrm{dc})=L_m/(1+\beta_L\cos\phi_\mathrm{dc})$ 是磁通可调的单元电感，$\phi_\mathrm{dc}$ 由外加磁通的自洽方程决定。把工作点磁通偏到 $\phi_\mathrm{dc}\approx\pi/2$ 附近，三波混频系数 $\beta$ 接近极值、Kerr 系数 $\gamma$ 接近零——**3WM 主导而自相位/交叉相位调制被抑制**；实际器件更取 $\Phi_\mathrm{ext}\approx0.3\Phi_0$，实测单元电感在功率升到 $-60\ \mathrm{dBm}$ 以上仍几乎不变，而同电感（95 pH）的裸约瑟夫森结在 $-65\ \mathrm{dBm}$ 就进入电压态——超导旁路给了泵浦电流"没有硬上限"的余地。
+
+**色散工程用多周期电容变化（mPCV）**：对地电容在三值 $C_1=10.5$、$C_2=68.2$、$C_3=50.4\ \mathrm{fF}$ 间以 24 单元为周期轮换，产生两个阻带——第一阻带之上放泵浦（实现相位匹配 $k_p-k_s-k_i\ll\pi/N$），第二阻带把 $f_{p+s}=f_p+f_s$ 上转换与 $2f_p$ 二次谐波等有害过程失配掉。与压低等离子体频率失配有害过程的常规路线相比，第一阻带以下的色散保持平坦，放大带宽因此更宽。理想 3WM 下信号带中心（$f_s\approx f_p/2$）增益与饱和功率为
+
+$$
+G=\cosh^2\!\left(\frac{|\beta|\,k_p\,\phi_p\,Na}{4}\right),\qquad
+P_{1\mathrm{dB}}\approx\frac{P_p}{4G_0},
+$$
+
+其中 $\phi_p=L_\mathrm{SQ}I_p/\varphi_0$ 是泵浦相位幅度、$a$ 为单元长度；4WM 器件因 SPM/XPM 引起的额外相位失配要再除以 2（$P_p/(8G_0)$，见[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]）。由于饱和功率正比于泵浦功率，而 rf-SQUID 的两个设计自由度允许**独立**设定线性色散（$k_p$，由 $L_\mathrm{SQ}$、$C_g$ 决定）与非线性强度（$\beta$，由磁通偏置决定），器件不再受"提高临界电流就要加长器件"的饱和–长度权衡约束。
+
+![[assets/figures/josephson-traveling-wave-amplifier/gaydamachenko2025-fig1-circuit-dispersion.jpg]]
+*rf-SQUID TWPA 的电路、实现与色散：(a) 强泵浦（$f_p$）与弱信号（$f_s$）在传输线上经 rf-SQUID 非线性混频产生闲频 $f_i=f_p-f_s$，单元为结（红）并联线性电感（紫）加对地电容（黄）；(b) 单元扫描电镜图（结尺寸 $1\times1\ \mu\mathrm{m}^2$）；(c) 多周期电容变化（mPCV，三值 $C_g$）产生的双阻带色散——泵浦置于第一阻带之上完成相位匹配，第二阻带失配上转换与二次谐波等有害过程。图源：Gaydamachenko et al. (2025), Fig. 1。*
+
+![[assets/figures/josephson-traveling-wave-amplifier/gaydamachenko2025-fig2-power-dependence.jpg]]
+*泵浦关闭时的功率依赖诊断：三个磁通偏置点下 $|S_{21}|$ 随探测功率的变化——约 11 GHz 处的阻带位置随磁通移动（单元电感可调），高功率下阻带的自相位调制偏移方向直接反映 Kerr 系数符号（正/可忽略/负）；单元电感随磁通的变化（点为实验、线为级联传输矩阵模型拟合，提取 $I_c=0.93\ \mu\mathrm{A}$、$L_m=58.6$ pH）及其随功率的稳定性（与 WRspice 单元仿真对照）。图源：Gaydamachenko et al. (2025), Fig. 2。*
+
+实测性能（磁通 $\Phi_\mathrm{ext}\approx0.33\Phi_0$、泵浦 $f_p=12.08\ \mathrm{GHz}$、$P_p\approx-56\ \mathrm{dBm}$）：**3.5–8.5 GHz 平均增益 20 dB——超过一个倍频程，为已报道 TWPA 中最宽的相对带宽**；4–8 GHz 内 90% 采样点增益 $(19.8\pm2.4)$ dB，输出端加 10 dB 衰减器改善匹配后纹波收窄到 $\pm1.5$ dB（3.6–8.3 GHz 全部超过 17 dB）。**输入饱和功率平均 $(-84\pm2)\ \mathrm{dBm}$**，比其它 JTWPA 高出一个数量级，而单元数与文献相当——$P_{1\mathrm{dB}}\approx P_p/(4G_0)$ 用实测泵浦功率预言 $-82\ \mathrm{dBm}$，与实验吻合；相敏模式的放大/去放大 extinction 比达 58 dB。提高泵浦功率先增增益、降饱和功率，越过最大增益点后饱和功率回升但噪声恶化——**调机应对准最低系统噪声而非最大增益**。
+
+![[assets/figures/josephson-traveling-wave-amplifier/gaydamachenko2025-fig3-gain-saturation-noise.jpg]]
+*增益、饱和与噪声全景：(a) 相对直通参考的优化增益谱（4–8 GHz 平均 20 dB）；(b) 不同平均增益下的增益分布箱线图；(c) 输入 1 dB 压缩点谱——4–8 GHz 平均 $(-84\pm2)$ dBm；(d) 平均 $P_{1\mathrm{dB}}$ 随平均增益的变化（颜色越深泵浦越强）：增益升则饱和降，越过最大增益后饱和回升但噪声代价见 (f)；(e) 以 TWPA 为首级的系统总噪声 2.2–3.8 光子；(f) 系统噪声与 ΔSNR 随平均增益的变化——最低噪声（19 dB 增益处）与最大 ΔSNR 对齐，而非与最大增益对齐。图源：Gaydamachenko et al. (2025), Fig. 3。*
+
+噪声用变温 50 Ω 负载的 Y-factor 变体与双模模型 $N_\mathrm{out}^s=G_\mathrm{sys}(N_\mathrm{in}^s+(G_{si}/G_{ss})N_\mathrm{in}^i+N_\mathrm{sys,exc})$ 评估；系统噪声分解
+
+$$
+N_\mathrm{sys}=2N_\mathrm{vac}+2\frac{1-\eta_1}{\eta_1}N_\mathrm{vac}+\frac{N_{T,\mathrm{exc}}}{\eta_1}+\frac{N_2}{\eta_1 G_{ss}}
+$$
+
+（$\eta_1$ 为 TWPA 前的传输效率、$N_{T,\mathrm{exc}}$ 为 TWPA 超出量子极限的附加噪声、$N_2$ 为后级折算噪声）表明总噪声由 **TWPA 自身 0.8–1.5 光子的超额噪声主导**，来源归于平板电容 SiOₓ 介质损耗与边带产生（换 SiNₓ 或氢化非晶硅介质可直接压低）；后级平均贡献 0.6 光子、TWPA 之前不足 0.1。ΔSNR 与 Y-factor 评估的均方根偏差 <0.5 dB，验证 ΔSNR 可作为无标定噪声源时的实用调机指标。
+
+![[assets/figures/josephson-traveling-wave-amplifier/gaydamachenko2025-fig4-noise-budget.jpg]]
+*19 dB 增益下系统噪声的堆叠分解：总量 2–4 光子中，TWPA 超额噪声 0.8–1.5 光子（归因于 SiOₓ 介质损耗与边带产生）为主要贡献，后级元件平均 0.6 光子，TWPA 之前的损耗贡献不足 0.1 光子——改进路径明确指向介质工艺与后级损耗。图源：Gaydamachenko et al. (2025), Fig. 4。*
+
+与谐振式路线的呼应：rf-SQUID 阵列 JPA（见[[readout-measurement/parametric-amplifier|参量放大器]]"rf-SQUID 阵列 JPA"一节）同样用几何电感旁路 + 相位分摊把谐振式器件的饱和功率推到 $-91.5\ \mathrm{dBm}$——rf-SQUID 单元的"线性/非线性解耦"在谐振与行波两种拓扑里都是抬高[[readout-measurement/amplifier-saturation-power|饱和功率]]的共用钥匙。
+
 ## 设计语境与适用边界
 
 - **与色散工程互补**：常规 JTWPA 用共振相位匹配（周期性嵌入 LC 谐振器）抵消相位失配；CPR 谐波工程提供了不改动传输线几何的另一条路线，13 dB 增益在**无色散工程**前提下获得。
@@ -138,4 +183,5 @@ $$
 
 - Shiri, D., Nilsson, H. R., Telluri, P., Fadavi Roudsari, A., Shumeiko, V., Fager, C., Delsing, P. Modeling and Harmonic Balance Analysis of Parametric Amplifiers for Qubit Read-out. *IEEE Microwave Magazine* (2024). DOI: 10.1109/mmm.2024.3429141；arXiv:2306.05177（QAtlas 缓存：2306.05177）。
 - Guarcello, C., Barone, C., Carapella, G., Filatrella, G., Giachero, A., Pagano, S. Effect of a 2nd-harmonic current–phase relation on the behavior of a Josephson Traveling Wave Parametric Amplifier. *Applied Physics Letters* (2025). DOI: 10.1063/5.0262555；arXiv:2502.00804（QAtlas 缓存：2502.00804）。
+- Gaydamachenko, V., Kissling, C., Grünhaupt, L. et al. An rf-SQUID-based traveling-wave parametric amplifier with −84 dBm input saturation power across more than one octave bandwidth (2025). DOI: 10.1103/1qk4-fzkq；arXiv:2503.02489（QAtlas 缓存：2503.02489）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

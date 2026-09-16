@@ -12,8 +12,8 @@ tags:
  - 微波
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvmh1y8d8s2nx4f6rq41aa
-source_updated: 2026-09-09T14:54:56Z
+qatlas_id: qa_01m0qvfr023jvf695fq5mzqndf
+source_updated: 2026-09-09T14:52:43Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -259,13 +259,44 @@ $$
 - 直接泵浦：信号光子在朗之万方程中贡献 $K \langle \delta\hat{a}^\dagger \delta\hat{a} \rangle$，使有效失谐减小、增益下降；
 - 从能量角度：固定泵浦功率时，提高信号功率意味着消耗更多泵浦光子，腔内稳态光子数减少、有效泵浦下降——称为**泵浦耗散（pump depletion）**。
 
-减小自科尔系数 $|K|$ 的绝对值可以提升饱和功率，但会同时减小非线性强度，因此是参数权衡的常见支点。
+减小自科尔系数 $|K|$ 的绝对值可以提升饱和功率，但会同时减小非线性强度，因此是参数权衡的常见支点。这一机制的定量理论（$P_{1\mathrm{dB}}\propto\kappa_\mathrm{eff}/|K_\mathrm{eff}|$、信号光子对最优泵浦条件的 ac-Stark 型推离、无拟合参数的实验对照与 SQUID 阵列稀释设计）见专页[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]。
 
 ### 窄带宽 JPA 的实测特性
 
  论文 §4.3 给出的代表器件参数：电容 $C = 3.4\ \mathrm{pF}$、SQUID 临界电感 $L_J = 80\ \mathrm{pH}$、SQUID 几何电感 $L_S \approx 15\ \mathrm{pH}$，对应最大谐振频率 $f_{\max} = 1/[2\pi\sqrt{(L_J + L_S)C}] \approx 8.85\ \mathrm{GHz}$。芯片工艺采用光刻剥离工艺的 4 层结构（地平面 / $\mathrm{SiO}_2$ 介质 / 电容上极板 / 双角度斜蒸发 SQUID），相对简单。带宽按 $\Gamma_{\mathrm{BW}} \propto \kappa \propto 1/C$ 估算在几十 MHz 量级。
 
 低温测试时两级环形器隔离输入/反射信号，反射信号经 4 K HEMT（约 40 dB）和室温放大器（约 55 dB）两级放大后到频谱仪或网络分析仪。完整测量流程为：(1) 测调制谱确认样品正常、(2) 粗扫工作参数（信号频率、磁通偏置、泵浦频率/功率）、(3) 精细调参提取带宽、(4) 测饱和功率、(5) 用 $\Delta\mathrm{SNR}$ 法推算噪声温度。定义"增益工作带宽"为**增益不小于 $15\ \mathrm{dB}$ 的最大连续频率范围**（有别于峰值半高宽定义），以实用为导向。论文报告该 JPA 工作带宽约 $50\ \mathrm{MHz}$、饱和信号输入功率约 $-20\ \mathrm{dBm}$（算上 $-101\ \mathrm{dB}$ 线路衰减后总饱和输入 $-121\ \mathrm{dBm}$）、工作带宽范围内噪声接近量子极限。
+
+## rf-SQUID 阵列 JPA：把谐振式饱和功率推到 JTWPA 量级
+
+单结/单环 JPA 即使拓宽带宽，也难以在 20 dB 增益下达到多腔同时读出所需的输入饱和功率——瓶颈在大信号下结上的电流与相位差。Kaufman 等人（NIST + 匹兹堡）的方案是**几何电感旁路的 rf-SQUID 阵列**：每个单元由约瑟夫森结（$L_J\approx 60\ \mathrm{pH}$、$5.5\ \mu\mathrm{A}$）并联一小段超导引线的几何电感 $L_s$（12–15 pH）构成，再把 $N=25$ 个单元串联分担相位。整阵零偏置有效电感约 290 pH，配 $C=2\ \mathrm{pF}$ 电容得到 $\omega_0/2\pi\approx 6\ \mathrm{GHz}$；另加耦合电容 $C_c\approx 0.26\ \mathrm{pF}$ 把谐振处的环境阻抗抬到约 $100\ \Omega$、品质因子提到 $Q\approx 10$。芯片用 NIST 改型铌三层工艺制备，结的高一致性保证了长阵列的良率。
+
+设计方法上他们拒绝一切非线性截断：对结正弦非线性的展开在接近饱和时需延伸到 7–8 阶才能描述行为，截断会遮蔽高功率物理。取而代之的是在时域直接求**周期稳态解**——含泵浦与信号的完整经典运动方程
+
+$$
+\partial_t^2\varphi(t) + \gamma\partial_t\varphi(t) + \omega_L^2\varphi(t) + \omega_J^2\sin\!\left[\frac{\varphi(t)+\varphi_\mathrm{ext}}{N}\right] = 2\gamma\partial_t\varphi_\mathrm{in}(t),
+$$
+
+其中 $\gamma=(CZ_0)^{-1}$ 是外耗散率、$\omega_L^2=1/(CL_s\cdot N)$ 与 $\omega_J^2=1/(CL_J)$ 是两个频率常数、$N$ 把相位降分摊到整个阵列。数值扫描给出清晰的设计空间：**最大可达增益沿 $(\beta Q)^{-1}$ 等值线**（$\beta=L_s/L_J$ 为旁路比），$(\beta Q)^{-1}\gtrsim 0.65$ 的区域根本打不到 20 dB 增益；而**最高饱和功率恰好分布在这条边界上**——设计空间内饱和功率相差超过 10 dB。这与 SNAIL/JPC 放大器里"高 $pQ$ 更安全"的讨论同构：$\beta$ 越小器件越线性、越难泵浦，饱和功率与可泵性在边界上达成最优折中。
+
+![[assets/figures/parametric-amplifier/kaufman2025-fig2-design-space.jpg]]
+*rf-SQUID 阵列 JPA 的设计空间：横轴旁路电感（给定 $L_J\approx 60$ pH）、纵轴品质因子 $Q$；虚线/点线为等 $(\beta Q)^{-1}$ 线，橙菱形与红方块为两个实际器件（$\beta=0.25$ 与 0.21）。可泵性（能否达到 20 dB 增益）与最大饱和功率都由同一比值 $(\beta Q)^{-1}\approx0.65$ 的边界划定。图源：Kaufman et al. (2025), Fig. 2。*
+
+![[assets/figures/parametric-amplifier/kaufman2025-fig2-p1db-prediction.jpg]]
+*周期稳态仿真预言的设计空间子区域输出 $P_{1\mathrm{dB}}$：最高饱和功率贴着可泵性边界分布，设计空间内相差逾 10 dB——饱和功率从一开始就是设计变量而非事后实测指标。图源：Kaufman et al. (2025), Fig. 2。*
+
+15 mK 下以 $2\omega$ 泵浦（三波混频）实测：多个偏置点增益超过 20 dB，**输入饱和功率最高 $-91.5\ \mathrm{dBm}$、平均 $(-94.2\pm1.4)\ \mathrm{dBm}$**，是已报道谐振式约瑟夫森参量放大器中的最高值之一，与含近百倍结数的 JTWPA 相当（饱和功率的标度理论见[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]）；平均瞬时带宽 $(20\pm6)\ \mathrm{MHz}$，增益形貌随泵浦失谐变化，部分归因于线阻抗纹波（器件线宽 300–500 MHz 与百 MHz 尺度的环境纹波相互作用，与上文环境法布里–珀罗干涉一节的机制一致）。泵浦功率较高（约 $-25$ 至 $-30\ \mathrm{dBm}$），但对照测量表明它未额外损害比特相干性；放大器开启时 $T_{2R}$ 的压低指向放大器与比特间隔离不足，可加环形器以少量量子效率为代价弥补。
+
+![[assets/figures/parametric-amplifier/kaufman2025-fig3b-saturation-power.jpg]]
+*$N=25$、旁路 14.5 pH 器件在多个偏置点上的输入饱和功率（黑线为接近平均值的代表性偏置点）：平均 $(-94.2\pm1.4)$ dBm、最高 −91.5 dBm——谐振式器件首次进入 JTWPA 的功率处理量级，足以支撑数百通道同时测量的功率需求（带宽尚待阻抗匹配网络扩展）。图源：Kaufman et al. (2025), Fig. 3(b)。*
+
+量子效率不用 Y-factor 而用**弱测量反作用层析**标定：放大器偏置在 25 dB 保相增益，把 transmon 制备到 $|+X\rangle$ 态后做两次顺序测量，第一次弱测量的反作用使 $\langle X\rangle_c$、$\langle Y\rangle_c$ 随测量结果 $Q_m$ 呈正弦振荡——频率由测量强度 $\bar I_m/\sigma$ 决定，幅度按量子效率指数衰减；独立设定测量强度后拟合振荡包络即得全链 $\eta$。
+
+![[assets/figures/parametric-amplifier/kaufman2025-fig4c-quantum-efficiency.jpg]]
+*弱测量反作用的层析：$I_m=0$ 线切的 $\langle X\rangle_c$、$\langle Y\rangle_c$ 振荡拟合给出全链量子效率 $(62.4\pm1.4)\%$（含损耗与 4 K/室温后级噪声，是 rf-SQUID JPA 本身的安全下界）——属保相放大已报道的最高值之列，说明高功率泵浦并未牺牲效率。图源：Kaufman et al. (2025), Fig. 4(c)。*
+
+![[assets/figures/parametric-amplifier/kaufman2025-fig4d-separation-fidelity.jpg]]
+*800 ns 积分读出脉冲的 IQ 直方图（超 $10^6$ 次计数，红/蓝为 $|g\rangle/|e\rangle$ 占比）高斯拟合给出 99.3% 态分离保真度；受限于该样品偏小的 $2\chi/\kappa=0.348$ 与读出诱导态跃迁（高腔光子数下 transmon 激发），而非放大器本身——高饱和放大链已经把瓶颈推回比特-腔一侧。图源：Kaufman et al. (2025), Fig. 4(d)。*
 
 ## 不换芯片扩带宽：并联 JPA 与轴子搜寻应用
 
@@ -407,6 +438,9 @@ $$
 | FP-JPA 净增益/带宽 | 20 dB @ ~50 MHz；最高 44 dB（片上 45 dB）时 ≲0.2 MHz | Kono 2026 |
 | FP 带宽周期变化 | 20 dB 下 10–50 MHz、42 dB 下 0.1–1.5 MHz（JPA 频率在 ω_c±Δ 内扫描） | Kono 2026 |
 | FP 谱形判据 | Δ>κ 洛伦兹 / Δ<κ 纹波（间距 Δ）/ Δ≈κ 平顶；1 dB 压缩点依赖往返相位 φ₀ | Kono 2026 |
+| rf-SQUID 阵列 JPA 饱和功率 | 最高 $-91.5\ \mathrm{dBm}$、平均 $(-94.2\pm1.4)\ \mathrm{dBm}$ @ >20 dB 增益（$N=25$、$\beta=0.25/0.21$、$L_J=60$ pH、$Q\approx10$） | Kaufman 2025 |
+| rf-SQUID 阵列 JPA 带宽与量子效率 | 平均瞬时带宽 $(20\pm6)$ MHz；全链 $\eta=(62.4\pm1.4)\%$（弱测量反作用层析）；99.3% 态分离保真度（800 ns） | Kaufman 2025 |
+| rf-SQUID 阵列设计边界 | 最大可达增益沿 $(\beta Q)^{-1}$ 等值线，$(\beta Q)^{-1}\gtrsim0.65$ 无法达到 20 dB；最大饱和功率贴该边界（设计空间内相差 >10 dB） | Kaufman 2025 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -445,7 +479,7 @@ $$
 
 - **约瑟夫结行波参量放大器（JTWPA, Josephson traveling-wave parametric amplifier）**：把上千个几乎一致的约瑟夫森结 + 谐振单元串接成传输线，靠色散工程让三波/四波混频在宽频带内同时满足相位匹配，典型可在数 GHz 范围内维持 $\sim 20\ \mathrm{dB}$ 增益，饱和功率足以同时读取约 20 个超导量子比特。代价是制备工艺复杂、对结参数均一性要求极高；其器件结构、电流–相位关系谐波工程与增益–稳定性权衡见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]；
 - **动力学电感行波放大器（KTWPA, kinetic-inductance TWPA）**：利用超导薄膜的非线性动力学电感实现参量放大，工艺更简单但谐波控制更难；
-- **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；SNAIL-TWPA 的磁通偏置切换 3WM/4WM 与大信号谐波平衡建模见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]——磁通偏到 $0.4\Phi_0$ 抑制四波混频后，泵浦频率位于增益谱之外，可避免强泵浦对频谱内量子比特的意外激发；
+- **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；SNAIL-TWPA 的磁通偏置切换 3WM/4WM 与大信号谐波平衡建模见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]——磁通偏到 $0.4\Phi_0$ 抑制四波混频后，泵浦频率位于增益谱之外，可避免强泵浦对频谱内量子比特的意外激发。rf-SQUID TWPA 更进一步：线性色散与非线性强度可独立设计（配合多周期电容变化的双阻带色散工程），用与常规 JTWPA 相当的单元数把饱和功率抬高一个量级至 $-84\ \mathrm{dBm}$、增益带宽超过一个倍频程，打破"饱和功率换器件长度"的权衡——见该词条"rf-SQUID TWPA"一节；谐振式一侧，上文 rf-SQUID 阵列 JPA 的 $-91.5\ \mathrm{dBm}$ 说明同一单元思想在两种拓扑都奏效；
 - **Floquet 模式 TWPA**：把泵浦分解为周期调制的"模式"，可在更低泵浦功率下获得高增益。
 
 对 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
@@ -495,4 +529,6 @@ $$
 - Kono, S., Ilves, J., van Loo, A. F., Sunada, Y., Chang, C. W. S., Takeda, Y., Yuki, K., Miyamura, T., Matsuura, K., Koshino, K., Nakamura, Y. High-gain and large-bandwidth Josephson parametric amplifier influenced by Fabry-Pérot interference. arXiv:2604.13881 (2026)（QAtlas 缓存：2604.13881）。
 - Boutin, S., Toyli, D. M., Venkatramani, A. V., Eddins, A. W., Siddiqi, I., Blais, A. Effect of higher-order nonlinearities on amplification and squeezing in Josephson parametric amplifiers. *Physical Review Applied* 8, 054030 (2017). DOI: 10.1103/physrevapplied.8.054030；arXiv:1708.00020（QAtlas 缓存：1708.00020）。
 - Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
+- Kaufman, R., Liu, C., Cicak, K., Mesits, B., Xia, M., Zhou, C., Nowicki, M., Aumentado, J., Pekker, D., Hatridge, M. Simple, High Saturation Power, Quantum-limited, RF SQUID Array-based Josephson Parametric Amplifiers. *Physical Review Applied* 24, 014052 (2025). DOI: 10.1103/physrevapplied.24.014052；arXiv:2402.19435（QAtlas 缓存：2402.19435）。
+- 饱和功率的定量理论（$P_{1\mathrm{dB}}\propto\kappa/|K|$、SQUID 阵列稀释）：Planat, L. et al. *Physical Review Applied* 11, 034014 (2019)，见[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
