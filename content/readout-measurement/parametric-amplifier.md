@@ -12,7 +12,7 @@ tags:
  - 微波
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvjmf3s6dpg55hwabs7b04
+qatlas_id: qa_01m0qvjnpz6md7emw6xqp82ft9
 source_updated: 2026-09-09T14:46:13Z
 ---
 
@@ -449,6 +449,34 @@ $$
 
 *实测增益（蓝实线）与不同理论模型的对比（泵浦 $\omega_p = 2\pi\times5.347$ GHz）：黄点划线为去掉变压器的全非线性 JPA——对照可见阻抗工程对带宽的扩展；红虚线为仅保留四次非线性的 IEJPA 模型，明显偏离实验；绿点线为保留 JPA 与变压器完整正弦非线性（至旋转波近似）的模型，正确预言带宽收窄、但远离泵浦处仍有偏差（马尔科夫近似的残余）。图源：Patel et al. (2025)，Fig. 4。*
 
+## Blochnium/Quarton 架构：BJPA 与频率选择性增益（Salmanogli 2025）
+
+理论提案路线的最新一支把**Blochnium**——Chirolli 等提出的四次非谐"准电荷"超导元件（见[[superconducting-qubits/fluxonium-qubit|Fluxonium 量子比特]]的近亲，但工作在电荷极限、以四阶非谐著称）——用作参量放大的非线性源。**BJPA（Blochnium JPA）**的基本单元是 **Quarton**：一个主 SQUID（约瑟夫森能 $E_{Jm}$）带 $M$ 个从 SQUID（$E_{Js}$），再把 $N$ 个 Quarton 串成 λ/4 谐振器阵列，寄生对地电容 $C_g$ 把单元链耦合为整体。分析流程是标准的电路量子化：先把 Lagrangian 写成矩阵形式 $\mathcal{L}_t = \frac{1}{2}\dot{\phi}^T\hat{C}\dot{\phi} - \frac{1}{2}\phi^T\hat{L}^{-1}\phi$（$\hat{C}$、$\hat{L}^{-1}$ 为三对角矩阵，编码从/主结的电容电感连接），由 $\Omega^2 = \hat{C}^{-1}\hat{L}^{-1}$ 的本征值/本征矢得到各模式的等效参数 $C_{\mathrm{eff}} = \Psi_i^T\hat{C}\Psi_i$、$L_{\mathrm{eff}}^{-1} = \Psi_i^T\hat{L}^{-1}\Psi_i$ 与阻抗 $Z_{\mathrm{eff}} = \sqrt{L_{\mathrm{eff}}/C_{\mathrm{eff}}}$，λ/4 谐振器由此映射为等效 LC 振子加非线性元件。
+
+关键结果在有效 Kerr 上：对余弦非线性行泰勒展开到四阶后，总哈密顿量化为
+
+$$
+H_t = \omega_{\mathrm{eff}}\, a^\dagger a - \frac{E_c}{6N}\left(\frac{1}{M} - \alpha_c^*\right) a^{\dagger 2} a^{2},
+$$
+
+其中 $E_c$ 是充电能、$N$ 是主 SQUID 数、$M$ 是每个 Quarton 的从结数、$\alpha_c^* \equiv \Gamma_{a_c}/M$ 是主/从结面积比（$E_{Jm} = \alpha_c E_{Js}$）。**结阵列几何直接进入非线性格式**——$1/M$ 与 $\alpha_c^*$ 之差可正可负，Kerr 因此可调乃至（原则上）消除：这是对[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]词条"SQUID 阵列按 $1/N^2$ 稀释 Kerr"路线的补充——Quarton 用主从两级层次代替均匀阵列，给出符号可控的设计自由度。动力学经量子朗之万方程 $\dot a = -i\omega_{\mathrm{eff}}a - iKa^\dagger aa - \frac{\kappa}{2}a + \sqrt{\kappa}a_{\mathrm{in}}$ 处理，相干泵浦的稳态归结为归一化三次方程 $[\frac{1}{4}+\delta^2]n - 2\delta\zeta n^2 + \zeta^3 n^3 - 1 = 0$（$n$ 为归一化腔内光子数、$\delta$ 为泵浦失谐/线宽、$\zeta \propto K$）。
+
+![[assets/figures/parametric-amplifier/salmanogli2025-fig24-blochnium-quarton.jpg]]
+
+*Blochnium/Quarton 结构（λ/4 谐振器实现）：N 个 Quarton 串联，每个 Quarton 含一个主 SQUID（约瑟夫森能 $E_{Jm}$）与 M 个从 SQUID（$E_{Js}$），寄生电容 $C_g$ 把链耦合为整体；相位降 φ 均匀分布到各 SQUID。主从两级层次使有效 Kerr 按 $E_c/6N(1/M-\alpha_c^*)$ 可调乃至消除。图源：Salmanogli et al. (2025)，Fig. 24。*
+
+**修改版 BJPA** 进一步把两个 Quarton（A、B）经中央谐振器耦合为一个单元再级联：9 节点 Lagrangian 的电容/电感矩阵出现新的 $C_X = C_1+C_2+C_s+2C_m+2C_j$ 与 $L_X = 4+L/L_s$ 项，动力学与原 BJPA 分道扬镳。最有趣的是它的**梳状频率选择性增益**：简并泵浦（$F_{\mathrm{pump}} = 7.12$ GHz，8×192 结）下，C 波段（4–8 GHz）内的增益谱不是平坦带而是~25 dB 尖峰与近 0 dB 深谷相间的梳齿。作者把这从缺陷转为设计：频分复用读出中把各比特腔频对准增益峰，峰间深谷天然压制非目标频率上比特能量向读出链的泄漏——增益谱与频率规划合为一体，免除外部滤波。
+
+![[assets/figures/parametric-amplifier/salmanogli2025-fig26-modified-bjpa.jpg]]
+
+*修改版 BJPA 单元：两个 Quarton（各含主 SQUID 与四个从结、共享寄生电容 $C_g$）经中央 λ/4 谐振器（Res.）耦合，多个单元级联成多级放大器——Quarton 主结经 $\phi_{\mathrm{ext}}$ 磁通偏置控制非线性能景。图源：Salmanogli et al. (2025)，Fig. 26。*
+
+![[assets/figures/parametric-amplifier/salmanogli2025-fig28-comb-gain.jpg]]
+
+*修改版 BJPA 的梳状增益谱（$F_{\mathrm{pump}}=7.12$ GHz、8×192 结、$P_{\mathrm{sig}}=-150$ dBm、$I_{\mathrm{pump}}=3.96$ µA）：C 波段内 25 dB 量级的增益尖峰与深谷相间——把频分复用读出的频率规划与放大器响应合为一体，增益峰对准各比特腔频、谷底压制非目标频率泄漏。图源：Salmanogli et al. (2025)，Fig. 28。*
+
+仿真对比表（均为理论/仿真值，实验尚待验证）：单结 JPA 增益 20–25 dB 但 $P_{1\mathrm{dB}}$ 仅 −115 至 −133 dBm；均匀结阵列把 $P_{1\mathrm{dB}}$ 抬到 −125 至 −95 dBm；BJPA（N=70、M=8）仿真 ~25 dB 增益、$P_{1\mathrm{dB}}\approx-92$ dBm、C 波段可调；修改版 BJPA 保持 ~25 dB 峰值、$P_{1\mathrm{dB}}$ 优于 ~−115 dBm、一阶输出模式占主导（三阶谐波被压制）。注意事项：BJPA 系列目前停留在理论建模与电路仿真层面，阻抗匹配（仿真中 $S_{11}$ 与 $S_{21}$ 差异小、提示端口失配）与大面积阵列的相位均匀性是落地前必须解决的工程问题；"Blochnium 高相干性、抗准粒子毒化"的器件学主张也仍需实验检验。
+
 ## 环境法布里–珀罗干涉：增益谱的环境整形
 
 Kono 等人 2026 年把"环境失配"从麻烦升级为设计对象：JPA 与环形器之间的阻抗失配让这段波导成为一个**有效法布里–珀罗（FP）腔**——JPA 的反射界面与环形器的失配界面是两面"镜"，信号在腔内往返再回到 JPA 参与放大。基于量子输入输出理论，组合系统的解析反射谱 $S_{11}(\delta)$（$\delta$ 为相对 JPA 频率的失谐）由七个参数完全确定：JPA 的外耦合率 $\kappa$ 与内损耗率 $\kappa_0$、两面镜的透射率 $\eta$ 与 $\eta_0$、FP 腔**自由谱区** $\Delta$、**往返相位** $\varphi_0$ 与泵浦幅度 $\Omega_p$。核心定标判据由 $\Delta$ 相对 $\kappa$ 的比值给出：
@@ -509,6 +537,7 @@ $$
 | rf-SQUID 阵列 JPA 带宽与量子效率 | 平均瞬时带宽 $(20\pm6)$ MHz；全链 $\eta=(62.4\pm1.4)\%$（弱测量反作用层析）；99.3% 态分离保真度（800 ns） | Kaufman 2025 |
 | rf-SQUID 阵列设计边界 | 最大可达增益沿 $(\beta Q)^{-1}$ 等值线，$(\beta Q)^{-1}\gtrsim0.65$ 无法达到 20 dB；最大饱和功率贴该边界（设计空间内相差 >10 dB） | Kaufman 2025 |
 | KIMPA（NbTiN 三级阻抗变换） | $Z_\mathrm{NR}$ 提升到数十 Ω（10×）、分流电容 330 fF；17 dB 增益、450 MHz 带宽@8.4 GHz、附加噪声 0.5–1.3 量子、输出饱和 $-51\pm3$ dBm（比 JJ 基高 ~25 dB） | Hung 2025 |
+| BJPA（Blochnium/Quarton，理论仿真） | Kerr = $E_c/6N(1/M-\alpha_c^*)$ 符号可调；~25 dB 增益、C 波段可调、$P_{1\mathrm{dB}}\approx-92$ dBm（N=70、M=8）；修改版梳状增益峰 ~25 dB、谷底压制泄漏 | Salmanogli 2025 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -599,5 +628,6 @@ $$
 - Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
 - Kaufman, R., Liu, C., Cicak, K., Mesits, B., Xia, M., Zhou, C., Nowicki, M., Aumentado, J., Pekker, D., Hatridge, M. Simple, High Saturation Power, Quantum-limited, RF SQUID Array-based Josephson Parametric Amplifiers. *Physical Review Applied* 24, 014052 (2025). DOI: 10.1103/physrevapplied.24.014052；arXiv:2402.19435（QAtlas 缓存：2402.19435）。
 - Hung, C.-C., Kutsuma, H., Chang, C. W. S., van Loo, A. F., Nakamura, Y. Broadband Kinetic-Inductance Parametric Amplifiers with Impedance Engineering (2025). arXiv:2504.17145（QAtlas 缓存：2504.17145）。
+- Salmanogli, A., Zandi, H., Esmaeili, M., Eskandari, A., Akbari, M. Technical Review on RF-Amplifiers for Quantum Computer Circuits: New Architectures of Josephson Parametric Amplifier (2025). arXiv:2507.13187（QAtlas 缓存：2507.13187）。
 - 饱和功率的定量理论（$P_{1\mathrm{dB}}\propto\kappa/|K|$、SQUID 阵列稀释）：Planat, L. et al. *Physical Review Applied* 11, 034014 (2019)，见[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -75,6 +75,7 @@ $$
 - [[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]：行波器件用巨大结数换取高饱和功率，rf-SQUID TWPA 把 $P_{1\mathrm{dB}}$ 提到 −84 dBm。
 - [[readout-measurement/dispersive-readout|色散读出]]与[[readout-measurement/readout-crosstalk|读出串扰]]：多比特频分复用时放大链的饱和功率决定可同时读出的比特数；接近饱和的互调失真还会引入额外的读出串扰。
 - [[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]：阵列稀释非线性（Kerr 按 $1/N^2$ 下降）是两个词条共享的电路思想。
+- [[readout-measurement/parametric-amplifier|参量放大器]]（"Blochnium/Quarton 架构"一节）：Quarton 主从两级结层次给出符号可控的有效 Kerr（$E_c/6N(1/M-\alpha_c^*)$），是均匀阵列稀释之外另一条理论上的 Kerr 工程路线（BJPA，仿真 $P_{1\mathrm{dB}}\approx-92$ dBm，尚待实验）。
 
 ## 参考文献
 
