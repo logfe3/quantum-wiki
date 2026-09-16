@@ -1,5 +1,5 @@
 {
-  "source_digest": "f8edfa4be56c73817c6526ea9d26e5b69b5b77719860595da55a2c4397b7fc53",
+  "source_digest": "eae95944f5a9628b03a2a45048c508db032f01984a428c4ebdc6a5e4d432bda6",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -229,7 +229,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "e38ecb6caa77a0451377163b34fd4a1c7689ea02d12a740c3de69c28b7bdf05c",
+      "sha256": "ffb8290fd63fa1099b7c3c4fba95d4796b81d239e0aee7e78f09e7cda2799893",
       "split": "dev"
     },
     {
@@ -285,7 +285,7 @@
       "path": "content/materials-devices/micromagnet.md",
       "title": "微磁体",
       "topic": "materials-devices",
-      "sha256": "65991bf10b9029ebc706d5ae29bf9ad4ed1610002b77c3ee11bb421b84855d2f",
+      "sha256": "65364ed0d86de73da7a36c7f539ed75ffa183fb9fba9f51d19198af8f45e5f70",
       "split": "train"
     },
     {
@@ -299,7 +299,7 @@
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "e708ee93d23291609a05094e2d33e0465fc74eb662199643b7b1bac84d452a51",
+      "sha256": "a2eebac0b92f51ceef2960c03a2ddd312fe7d46fad8326c7509d84db052b7078",
       "split": "train"
     },
     {
@@ -334,7 +334,7 @@
       "path": "content/qubit-control/electric-dipole-spin-resonance.md",
       "title": "电偶极自旋共振",
       "topic": "qubit-control",
-      "sha256": "9fc90c14462516e0a768531fd1c65f60579d94c9829391d6f9924c0f9bd2a1e3",
+      "sha256": "2299d81edf3f642ad66ffffa6acd6a5ba668d9def27e48f409d4bf1f334fe711",
       "split": "test"
     },
     {
@@ -453,7 +453,7 @@
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "91052e579737febf914dcecff0af39374a2ebad60db8dd8b7fe6c372ec707582",
+      "sha256": "86cef1ccfc974374033339e40e53ae3e8486e084cc22100bc6045ddd42522f73",
       "split": "dev"
     },
     {
@@ -502,7 +502,7 @@
       "path": "content/readout-measurement/gate-based-sensing.md",
       "title": "栅极射频传感",
       "topic": "readout-measurement",
-      "sha256": "473713ea6c1f25c94ff36f634bc6b25b1c3f396a055d800535f1e2cfad5d82e8",
+      "sha256": "45b31e72e9728f6e16adf99f06f1b64adcbbbe781ec3d6d84deb6d1feb9d4d67",
       "split": "test"
     },
     {
@@ -579,7 +579,7 @@
       "path": "content/readout-measurement/single-shot-readout.md",
       "title": "单发读出",
       "topic": "readout-measurement",
-      "sha256": "10a89b16576c194e2ac76c703b20c2d3f5bf84ea3a252e1add94346a15ed4abc",
+      "sha256": "ca55660953e16a6b1077e19c77816a39adafed9cf05aaac08be0c28f15fdb3bf",
       "split": "train"
     },
     {
@@ -628,7 +628,7 @@
       "path": "content/scaling-automation/frequency-homogenisation.md",
       "title": "全局操控与频率均匀化",
       "topic": "scaling-automation",
-      "sha256": "acb882f2db2d8a99474c60a6c782115b161612c034c53722a77c76c5ad1c0682",
+      "sha256": "cd0d5f03c873c6b93c4766562ec05fde2a44eebd89229bd8f0f34bf4dcdfae04",
       "split": "train"
     },
     {
