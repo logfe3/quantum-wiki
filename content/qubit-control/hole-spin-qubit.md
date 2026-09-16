@@ -140,6 +140,7 @@ $$
 
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]：空穴自旋比特是单自旋比特在价带的对应物，共享布洛赫球编码与塞曼劈裂图像，但物理机制（$p$ 轨道 SOC、各向异性 $g$）不同。
 - [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]：空穴比特的"快速操控"几乎完全依赖内禀 SOC 提供 EDSR，与硅电子通过微磁体梯度 EDSR 形成两条平行路线。
+- [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]：把硅纳米线空穴离域到双量子点即得空穴 FM 比特——内禀 SOC 提供自旋–电荷杂化、$\varepsilon=0$ 天然成为一阶电荷噪声甜点，实测 Rabi 达 130 MHz、单门品质因子 380，是空穴强自旋轨道在腔耦合架构里的直接兑现。
 - [[materials-devices/germanium-hut-wire|锗棚顶纳米线]] vs [[materials-devices/strained-germanium|应变锗空穴平台]]：前者是深探索物理与高性能单器件的优选，后者是 CMOS 兼容与二维阵列的工业路径。
 - [[qubit-control/geometric-quantum-gate|几何量子门]]：抗共振频率噪声的优化操控方案，在锗空穴比特上把单比特门保真度推进到 $>99.9\%$，超过容错阈值。
 - [[fundamentals/double-quantum-dot|双量子点]]与[[fundamentals/charge-stability-diagram|电荷稳定图]]：锗空穴比特常以双量子点为最小工作单元，漏电流读出与电荷稳定图直接挂钩。

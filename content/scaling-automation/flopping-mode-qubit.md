@@ -10,7 +10,10 @@ tags:
  - 扩展与自动化
  - 自旋量子比特
  - 强耦合
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qvhtxngk3ck8jfvbt03n2h
+source_updated: 2026-09-09T15:03:27Z
 ---
 
 <div class="entry-lead">翻转模式让一个自旋的轨道波函数在双量子点之间强烈摆动。这个"大电偶极"同时增强微磁体梯度下的 EDSR 和自旋–光子耦合，把单自旋比特的 Rabi 频率、品质因子与腔耦合强度都拉高一个量级。</div>
@@ -128,6 +131,9 @@ $$
 | 电子温度 $T_e$ | $85.9$–$182.7\ \mathrm{mK}$（无微波 vs. $-5\ \mathrm{dBm}$ 微波驱动） | |
 | 臂杆系数 $\alpha_\mathrm{LP}$ | $154\pm4\ \mathrm{meV/V}$（磁输运谱线标定） | |
 | 臂杆系数 $\alpha_\mathrm{BC}$ | $340\ \mathrm{meV/V}$（第二个量子点） | |
+| 空穴 FM（Si 纳米线 + NbN 腔） | $2t_c=44\ \mathrm{GHz}$；Rabi 至 130 MHz 无饱和；$T_2^{\mathrm{Rabi}}=2.1\ \mu s$ | Noirot 2026 |
+| 空穴 FM 单门品质因子 | $Q_\mathrm{gate}=2f_\mathrm{Rabi}T_2^{\mathrm{Rabi}}$ 最大 380（预期保真度 ~99.9%） | Noirot 2026 |
+| 空穴 FM 退相干 | Ramsey 甜点 160 ns（1/f 电荷噪声 $\sqrt{A_\varepsilon}\sim0.2\ \mu$eV/√Hz）；回波无甜点（260 ns→1 μs）——热光子散粒噪声主导；$T_1\propto B^{-2}$ 多模 Purcell+Johnson | Noirot 2026 |
 
 ## 实验特征与测量方法
 
@@ -182,6 +188,37 @@ $$
 - 比特的电学可调性较差：比特频率仍依赖 $E_z\propto g\mu_B B_\mathrm{ext}$，不能通过电极电压快速、独立地调节每个比特；
 - 单发读出需要快速穿过反交叉区，否则 Landau–Zener 隧穿会把激发态泄露到基态。
 
+## 空穴实现与"互易甜点"的实证（Noirot 2026）
+
+上文甜点理论预言"一阶电荷噪声保护与最大电偶极**天然共存**"（互易甜点，reciprocal sweetness），但长期缺乏实验实证——硅中电子的内禀自旋轨道弱，甜点观测条件苛刻。Noirot 等人用**硅纳米线空穴** FM 比特（纳米线几何带来特强自旋轨道）补上了这块：双点隧穿耦合做到 $2t_c=44\ \mathrm{GHz}$，空穴波函数完全离域（$\varepsilon=0$），接高阻抗 NbN 谐振腔做色散读出（无需电荷传感器）。自旋–电荷杂化使 $g$ 因子被磁场重整化（$g_s\propto B$），比特频率随 $B$ 可调超过一个量级，并在 $\varepsilon=0$ 处取极小——**天然的一阶失谐甜点**，同时电偶极与自旋–光子耦合 $g_s$ 最大（共振处真空 Rabi 劈裂直接验证 $g_s$；$|\varepsilon|>2t_c$ 时空穴局域化、$g_s$ 迅速淬灭）。
+
+![[assets/figures/flopping-mode-qubit/noirot2026-fig1-fm-levels-spectroscopy.jpg]]
+
+*空穴 FM 比特的能级与谱学：强自旋轨道下轨道成键态的自旋劈裂在 ε=0 附近被自旋–电荷杂化压低（实线 vs 无自旋轨道的 Zeeman 虚线），FM 比特编码在成键态的两条自旋劈裂能级间；比特频率随 B 大范围可调、共振处见真空 Rabi 劈裂（提取 g_s），两 tone 谱显示 ε=0 的一阶失谐甜点。图源：Noirot et al. (2026), Fig. 1。*
+
+**单比特性能**（$B=227\ \mathrm{mT}$、$f_\mathrm{qubit}=4.5\ \mathrm{GHz}$、甜点工作）：Rabi 频率随驱动幅度线性增长至 **130 MHz 无饱和**；$T_2^{\mathrm{Rabi}}$ 在 $f_\mathrm{Rabi}=20\ \mathrm{MHz}$ 附近达最大 $2.1\ \mu s$。单门品质因子
+
+$$
+Q_\mathrm{gate} = 2\, f_\mathrm{Rabi}\, T_2^{\mathrm{Rabi}}
+$$
+
+（可连续执行的门数）最大 **380**——对应约 99.9% 的预期保真度，比 FM 比特此前最好值**高出一个量级以上**。
+
+![[assets/figures/flopping-mode-qubit/noirot2026-fig2-rabi-performance.jpg]]
+
+*单比特性能：(a) 甜点处的 Rabi 振荡（衰减正弦拟合）；(b) Rabi 频率随驱动功率线性增长至 130 MHz 无饱和（斜率 0.5 指引线）；(c) T₂^Rabi 随 Rabi 频率先升后降（峰值 2.1 μs @20 MHz）；(d) 单门品质因子 Q_gate=2·f_Rabi·T₂^Rabi 最大 380。图源：Noirot et al. (2026), Fig. 2。*
+
+**相干性的光子主导分解**——利用 FM 比特的大频率可调性逐项排查：
+
+- **弛豫**：$T_1\propto B^{-2}$，与读出腔基模 Purcell（黑虚线）、**多模 Purcell**（青线）与 Johnson–Nyquist（橙线）模型的组合吻合——辐射弛豫是主通道；
+- **退相干**：Ramsey $T_\varphi^{*}$ 在甜点处达 160 ns 峰值、中间失谐处降至 30 ns——与 1/f 失谐电荷噪声（$\sqrt{A_\varepsilon}\sim0.2\ \mu\mathrm{eV}/\sqrt{\mathrm{Hz}}$）一致；但**回波 $T_\varphi^{e}$ 没有甜点行为**（$\varepsilon=0$ 处反而最小 260 ns、远离处升至 1 μs），且 $T_\varphi^{e}/T_\varphi^{*}\sim1.5$ 远小于低频噪声主导的预期——高频噪声源在起作用：**腔内热光子数涨落（散粒噪声）经 ac Stark 频移**主导退相干。
+
+![[assets/figures/flopping-mode-qubit/noirot2026-fig4-dephasing.jpg]]
+
+*退相干机制甄别：Ramsey（a）与 Hahn 回波（b）退相干时间随 ε 的变化——Ramsey 呈甜点行为（电荷噪声主导），回波却无甜点结构（ε=0 处最小 260 ns），指向腔热光子散粒噪声经 ac Stark 频移的高频退相干通道。图源：Noirot et al. (2026), Fig. 4。*
+
+结论反转了"FM 比特受电荷噪声限制"的默认图像：甜点生效后，**微波环境的优化**（腔模管理、热光子抑制、Purcell 滤波）成为提升 FM 比特相干的主战场——FM 比特由此确立为"快（百 MHz Rabi）+ 可靠（Q_gate≈380）+ 强腔耦合"的单比特候选。空穴体系的更多背景见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]。
+
 ## 实验实现要点
 
 - **强隧穿耦合**：$2t_c\gtrsim 800\ \mathrm{GHz}$ 的双量子点形成"准单点"，$(0,1)$–$(1,0)$ 反交叉线消失，零失谐工作点需要靠翻转模式频率谱反推，而非直接看电荷稳定图；
@@ -201,3 +238,8 @@ $$
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]与[[circuit-qed/strong-coupling|强耦合]]：翻转模式比特与高阻抗腔配合是当前在硅量子点中实现自旋–光子强耦合的主要路线之一；
 - [[qubit-control/resonant-exchange-qubit|共振交换量子比特]]：同样依赖梯度磁场与电偶极矩实现快速电控，但 RX 比特把比特频率放到交换能 $J$ 上而摆脱对 $B_\mathrm{ext}$ 的依赖，是翻转模式的互补替代方案；
 - [[qubit-control/singlet-triplet-qubit|单态–三重态比特]]：翻转模式可视为单电子版的"对称点"操作，与 S-T 比特中利用反交叉点做 adiabatic passage 的思路相通。
+
+## 参考文献
+
+- Noirot, L., Yu, C. X., Abadillo-Uriel, J. C., Dumur, É., Niebojewski, H., Bertrand, B., Maurand, R., Zihlmann, S. Coherence of a hole spin flopping-mode qubit in a circuit quantum electrodynamics environment. *Nature Physics* (2026). DOI: 10.1038/s41567-026-03262-y；arXiv:2503.10788（QAtlas 缓存：2503.10788）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

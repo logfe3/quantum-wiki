@@ -11,10 +11,10 @@ tags:
  - 三维集成
  - 超导工艺
  - 电路 QED
-date: 2026-09-15
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv5etenmdk1tey9p90h2x5
-source_updated: 2026-09-15T05:49:25Z
+qatlas_id: qa_01m0qv4cyr847f7k38r035q30w
+source_updated: 2026-09-09T14:50:30Z
 ---
 
 <div class="entry-lead">平面电路的引线都从芯片边缘走，比特一多就互相干扰；把电路"立起来"——微加工腔做屏蔽隔离、超导晶圆键合做层间连接、多层布线做信号分配——就是多层微波集成量子电路（MMIQC）。首个含 transmon 的演示器件做到了：微加工存储腔 34.3 µs 寿命（单光子能量下 Q 值 200 万）、g/2π=49 MHz 的强色散耦合——立体化不牺牲相干性。</div>
@@ -65,6 +65,18 @@ flowchart LR
 ```
 
 ## 设计工具链与扩展终点
+
+**同族的另一条早期路线：平面多层真空隙**。与 Brecht 的微加工腔几乎同期，Minev 等人提出并演示了"平面多层"（planar multilayer）cQED：两片蓝宝石衬底上各自光刻 Al 薄膜环，面对面堆叠、由样品架的机械台阶保持 **100 μm 真空隙**，构成回音壁（WG）TEM 双模谐振器——真空隙承担电磁储能（继承 3D 的高 Q），每层仍用标准光刻工艺（继承 2D 的几何精度与并行生产）。层间场束缚由波长/隙距的两个量级纵横比保证，样品架的电感参与比按 HFSS 估算 $\le10^{-8}$。双模分工明确：一个模过耦合（$Q=10^4$）接读出链、另一个保持高 $Q=2\times10^6$ 作存储——正是腔纠错协议所需的标准"读出+存储"构型。
+
+多层结构的核心难题是**跨层比特–腔耦合**：平面内做法要求把比特立在垂直于光刻面的方向上，不可制造。解法是**孔径 transmon（aperture transmon）**——比特作为谐振器导电边界上的一个开孔直接光刻在薄膜里（$0.05\times0.5\ \mathrm{mm}$ 岛），用**离面电场**与腔模耦合。演示器件的 transmon $T_1=70\ \mu s$，说明多层真空隙路线不牺牲比特相干。
+
+![[assets/figures/mmiqc-3d-integration/minev2016-fig2-multilayer-stack.jpg]]
+
+*平面多层 cQED 器件：两片蓝宝石上的 Al 薄膜环经样品架对准、由机械台阶保持 100 μm 真空隙构成回音壁 TEM 双模谐振器；transmon（插图）直接光刻在层 1 薄膜内、作为导电边界的开孔（孔径 transmon）以离面场与腔模耦合。图源：Minev et al. (2016), Fig. 2。*
+
+![[assets/figures/mmiqc-3d-integration/minev2016-fig4-coherence.jpg]]
+
+*器件相干性：比特自由衰减 T₁=70 μs；腔-腔-比特三体系统的能谱与时间演化支持腔纠错协议所需的读出+存储构型（读出模 Q=10⁴ 过耦合、存储模 Q=2×10⁶）。图源：Minev et al. (2016), Fig. 4。*
 
 **3D 电磁仿真的设计验证**：立体电路的参数（耦合 $g$、色散移 $\chi$、腔频 $\omega_r$）不再能靠平面经验公式估计——InductEx 这类三维电磁场求解工具（原为 RSFQ 电路开发）被系统用于超导比特版图的参数提取：读出操作的两比特芯片仿真覆盖全部无源结构，设计参数（电感、电容、耦合）从版图直接数值提取，闭合"设计→仿真→制造→测量"的验证环。
 
@@ -149,8 +161,10 @@ flowchart LR
 - [[circuit-qed/bosonic-cqed|玻色 cQED]]是微加工腔的天然"客户"：高 Q 立体腔正是猫态/GKP 码需要的长寿命存储，MMIQC 为玻色编码提供可扩展的硬件底座。
 - 与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]的平面路线互补：一个在"耦合强度"维度提升（$g\propto\sqrt{Z_r}$），一个在"隔离与布线"维度提升。
 - [[scaling-automation/quantum-dot-array|量子点阵列]]同样面临布线墙——半导体侧的 3D 集成（如背面互连）与超导 MMIQC 的工艺思想相通。
+- 3D cQED 家族还有"栅兼容"分支：铜腔侧壁挖凹槽放置带直流栅线的半导体–超导杂化器件（gatemon），器件区与腔模空间分离、经长条天线耦合——把需要栅压的杂化器件接入三维腔，见[[superconducting-qubits/gatemon-qubit|Gatemon 半导体纳米线量子比特]]的栅兼容三维腔一节。
 
 ## 参考文献
 
+- Minev, Z. K., Serniak, K., Pop, I. M., Leghtas, Z., Sliwa, K., Hatridge, M., Frunzio, L., Schoelkopf, R. J., Devoret, M. H. Planar multilayer circuit quantum electrodynamics. *Physical Review Applied* 5, 044021 (2016). DOI: 10.1103/physrevapplied.5.044021；arXiv:1509.01619（QAtlas 缓存：1509.01619）。
 - Brecht, T., Chu, Y., Axline, C., Pfaff, W., Blumoff, J. Z., Chou, K., Krayzman, L., Frunzio, L., & Schoelkopf, R. J. (2016). *Micromachined integrated quantum circuit containing a superconducting qubit*. [arXiv:1611.02166](https://arxiv.org/abs/1611.02166)
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

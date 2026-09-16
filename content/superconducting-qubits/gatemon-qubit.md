@@ -11,10 +11,10 @@ tags:
  - 约瑟夫森结
  - 半导体-超导体杂化
  - 电路 QED
-date: 2026-09-13
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv411ky8pbaxqpeecj0dsr
-source_updated: 2026-09-13T10:15:13Z
+qatlas_id: qa_01m0qvfbyhc20agft336f7p5rm
+source_updated: 2026-09-09T14:38:43Z
 ---
 
 <div class="entry-lead">Gatemon 把 transmon 的金属约瑟夫森结换成外延生长的 InAs/Al 半导体纳米线弱连接：约瑟夫森能由纳米线中超导近似的载流子密度决定，用一路静电栅压即可连续调谐。它保留了 transmon 的大 $E_J/E_C$ 设计，却把频率控制从磁通换成了电压——降低控制线耗散、回避磁通串扰，还允许在大磁场下工作，是拓扑量子计算与半导体-超导体杂化平台的关键器件。</div>
@@ -80,6 +80,18 @@ Gatemon 电容耦合到 $\lambda/2$ 超导传输线腔，实测真空 Rabi 劈�
 
 *Gatemon 量子相干：(a) $T_1$ 测量——30 ns 微波脉冲激发到 $|1\rangle$ 后按不同等待时间读出，实线为指数拟合；(b) Ramsey 实验确定 $T_2^*$。$V_G=3.4$ V 工作点下实测 $T_1\sim0.8\ \mu s$、$T_2\sim1\ \mu s$。图源：Larsen et al. (2015)，Fig. 4(a)。*
 
+### 栅兼容三维腔架构（Xia 2024）
+
+上面的构型都基于平面 CPW——栅线引入容易，但垂直磁场会显著劣化谐振器性能。三维腔天然耐磁场，可把杂化器件"藏"进真空里，代价是栅线难以引入：把电极直接插入腔内或用腔体本身加偏压，产生的电场相对片上栅都太弱；而把带栅器件芯片直接塞进腔又会显著拉低腔的品质因子。Xia 等人的解法是**在腔侧壁挖一个凹槽（recess）**：器件芯片一半在腔内、一半进凹槽，器件区与栅线全部位于凹槽内、与腔模空间分离——栅线（第三路 SMA 键合到芯片）带来的损耗与制作残留被隔离在腔外。腔体用**铜**（耐磁场、热锚好；铜腔超导比特相干 ~0.1 ms 的文献依据），TE101 模 ~5 GHz（70×5×30 mm）。器件为 InAs–Al 纳米线约瑟夫森结 + **长条 Nb 天线**（100 nm 厚、~0.2 mm 宽、腔内段 2.45 mm）——天线作电偶极与腔场耦合，与纳米线结构一起构成 gatemon。HFSS 仿真 + **能量参与比**法给出设计规律：天线腔内长度 $L$ 增大同时增强耦合 $g$ 并减小 $E_C$（设计点 $E_C\approx190\ \mathrm{MHz}$，gatemon 典型值）。实验验证了**栅可调腔频移**与**两 tone 比特谱**——任意需要直流栅压的杂化器件（含拓扑超导候选体系）由此获得三维 cQED 探测通道。
+
+![[assets/figures/gatemon-qubit/xia2024-fig1-gate-compatible-3d-cavity.jpg]]
+
+*栅兼容三维腔架构：(a) 铜腔实物（两个信号 SMA + 一个栅线 SMA）；(b)(c) 腔与凹槽的 3D/2D 示意；(d) 侧壁凹槽内的器件芯片（一半在腔内、一半在凹槽内）；(e)(f) 芯片光学像与器件区放大；(g)(h) 器件 SEM——InAs–Al 纳米线约瑟夫森结经 Nb 长条天线与腔模耦合，侧栅调谐 $E_J$。图源：Xia et al. (2024), Fig. 1。*
+
+![[assets/figures/gatemon-qubit/xia2024-fig4-cavity-shift-spectroscopy.jpg]]
+
+*架构验证：(a) 腔频移随栅压的变化——gatemon 的栅可调色散位移；(b) 两 tone 比特谱——栅压调谐的比特跃迁与腔模交叉；该技术把需要直流栅压的半导体–超导杂化器件接入三维 cQED。图源：Xia et al. (2024), Fig. 4。*
+
 ## 与其他概念的关系
 
 - 与[[superconducting-qubits/transmon-qubit|transmon]]同属大 $E_J/E_C$ 设计，但约瑟夫森结从金属氧化结换成半导体弱连接，频率调谐从磁通换成栅压；与[[superconducting-qubits/fluxonium-qubit|fluxonium]]的"大电感重塑势阱"路线也不同——gatemon 保持 transmon 形式的势阱，只改弱连接材料。
@@ -89,5 +101,6 @@ Gatemon 电容耦合到 $\lambda/2$ 超导传输线腔，实测真空 Rabi 劈�
 
 ## 参考文献
 
+- Xia, Z., Huo, J., Li, Z., Ying, J., Liu, Y., Tang, X.-Y. et al. Gate-Compatible Circuit Quantum Electrodynamics in a Three-Dimensional Cavity Architecture. *Physical Review Applied* 21, 034031 (2024). DOI: 10.1103/physrevapplied.21.034031；arXiv:2311.07337（QAtlas 缓存：2311.07337）。
 - Larsen, T. W., Petersson, K. D., Kuemmeth, F., Jespersen, T. S., Krogstrup, P., Nygård, J., & Marcus, C. M. (2015). *A Semiconductor Nanowire-Based Superconducting Qubit*. Physical Review Letters **115**, 127001. [DOI:10.1103/PhysRevLett.115.127001](https://doi.org/10.1103/PhysRevLett.115.127001) · [arXiv:1503.08339](https://arxiv.org/abs/1503.08339)
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
