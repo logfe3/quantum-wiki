@@ -1,5 +1,5 @@
 {
-  "source_digest": "e2996c1b0d83cf48d8fd3a01f7a6fabf2edbd2099c62ed149dbca859980cf82c",
+  "source_digest": "0914bd635af7f98dca5eeeffc2c0db6199d808bbda196264ba96e9c2fa5b6052",
   "pages": [
     {
       "path": "content/circuit-qed/analytical-3d-cqed.md",
@@ -12,7 +12,7 @@
       "path": "content/circuit-qed/bosonic-cqed.md",
       "title": "玻色 cQED 与腔编码量子计算",
       "topic": "circuit-qed",
-      "sha256": "cfbf9efe8b996a4f61835ed1ff77b672c0e04925eef356527a3e95f1b23ad0f3",
+      "sha256": "6b8424674580308f92967037e32d3c7459f453a03b3661327bb135454c963c29",
       "split": "train"
     },
     {
@@ -26,7 +26,7 @@
       "path": "content/circuit-qed/cavity-mediated-coupling.md",
       "title": "腔介导远程耦合",
       "topic": "circuit-qed",
-      "sha256": "5276cc1b8974953bc275137d07f2385bffc81150b9cbb6778a14a6ed25d741ef",
+      "sha256": "9fc9279152b8a068aa6a3abd01d00b9eddcf575fc371a5bdac960b6e60413b9b",
       "split": "train"
     },
     {
@@ -54,7 +54,7 @@
       "path": "content/circuit-qed/dispersive-shift.md",
       "title": "色散频移",
       "topic": "circuit-qed",
-      "sha256": "7c4f4bfd6867640246692d170e3cc2c4451c12d32c1d1999e78ee9a37b350f87",
+      "sha256": "c39a184f91bef59e76d18945eb905e4d3edb64c27a04c69dc76466886d92da9c",
       "split": "train"
     },
     {
@@ -82,28 +82,28 @@
       "path": "content/circuit-qed/giant-atom.md",
       "title": "人工巨原子",
       "topic": "circuit-qed",
-      "sha256": "82d73bce4fd6b5f55f7b57df4409d27837cd286ff8be7347cf0bd468899852e3",
+      "sha256": "d8efd8a1848152d81dafb3631c6aaf016db26270acc0f9def6f3b50be66a058f",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "10ab352e92d5d1f0b4e37cdeb73999eab538d8d2f2646b3354b889ed60458703",
+      "sha256": "57a9a94e177236a8a1f70a750162ce37c772ab77d2235b8c2563e9d88dd61288",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/high-impedance-resonator.md",
       "title": "高阻抗谐振腔",
       "topic": "circuit-qed",
-      "sha256": "2b34c07b8eab92093e70f2a40e61eef9cbf8203f1e55cfd55c29627758c5ed2c",
+      "sha256": "8bf787573e0a451b7a678622eac4b55b3c33edae481efe4ae8af95974ba87a5e",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/jaynes-cummings-model.md",
       "title": "Jaynes–Cummings 模型",
       "topic": "circuit-qed",
-      "sha256": "6e87c0c57248f4d235b1c840e5c618d974e8a63c72cc384442aeb4b42708a206",
+      "sha256": "3f6c6026643e280b8a10068e4a4d8d4a5f43bfcc3c62252ab68016e53b97a701",
       "split": "train"
     },
     {
@@ -142,6 +142,13 @@
       "split": "train"
     },
     {
+      "path": "content/circuit-qed/parity-assisted-state-generation.md",
+      "title": "宇称辅助的非经典光态制备",
+      "topic": "circuit-qed",
+      "sha256": "3c488d0c04ddef4995c033c81fa5fc7d132c606def5bdbc7c8933476558ed663",
+      "split": "train"
+    },
+    {
       "path": "content/circuit-qed/quantum-reservoir-computing.md",
       "title": "量子储备池计算",
       "topic": "circuit-qed",
@@ -166,14 +173,14 @@
       "path": "content/circuit-qed/strong-coupling.md",
       "title": "强耦合判据",
       "topic": "circuit-qed",
-      "sha256": "455673ff840f13cc13b1f6b0fb9ec1558efdc24e162bcaf6bf420a886bb2bfe9",
+      "sha256": "fd0682fd48d17f5f724a6de4e8ac0b40bbd6c16cd3beed24c0e621451e7c0d84",
       "split": "train"
     },
     {
       "path": "content/circuit-qed/superconducting-diode.md",
       "title": "超导二极管非互易性",
       "topic": "circuit-qed",
-      "sha256": "39059910029f04eb9b2bbf76825bdddbad8d788dbaca1aa2b09cff5492488ef0",
+      "sha256": "cfc1b129320232179a4d7452f375da2424bb59ccb6e7ed4b198dcd226601f790",
       "split": "dev"
     },
     {
@@ -181,6 +188,13 @@
       "title": "超电感与约瑟夫森结阵列",
       "topic": "circuit-qed",
       "sha256": "35dbdc8b1f27c371efdb798a97e7cfbd06fb0a043948f21ddb18ea4d3ca86e0e",
+      "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/superstrong-coupling.md",
+      "title": "超强耦合",
+      "topic": "circuit-qed",
+      "sha256": "87b1e222f7547daee20983cdd7909ba21061a251be545e137e7691cdf14993dc",
       "split": "train"
     },
     {
@@ -229,7 +243,7 @@
       "path": "content/fundamentals/double-quantum-dot.md",
       "title": "双量子点",
       "topic": "fundamentals",
-      "sha256": "deee7c4554876d4802b7919b36aa64b633d84637d9a2b53361c67c6e7218b3f8",
+      "sha256": "8a9ffe5388f75e405d9f19d02848e31825ea80b01e1c5b6f21ae0c11976d9808",
       "split": "train"
     },
     {
@@ -292,7 +306,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "a8a6e2f88ddf891bfb96eb8a8eecc1f77a7383a255252682cfb01fa1171bddc3",
+      "sha256": "595326bfe829cb7523d17d06e6f3f132f71b00698da9fbab1d5cae9865ad2fa9",
       "split": "dev"
     },
     {
@@ -474,7 +488,7 @@
       "path": "content/qubit-control/landau-zener-transition.md",
       "title": "Landau–Zener 跃迁",
       "topic": "qubit-control",
-      "sha256": "ec82a14453adbb9f0616aad97b052b8dc53b0cafbb2b5148112adad49bf28b24",
+      "sha256": "c3f31b708dff288c68260e0a15154404774f37c4030f083b05851d119d12b02e",
       "split": "train"
     },
     {
@@ -530,7 +544,7 @@
       "path": "content/qubit-control/single-qubit-gate.md",
       "title": "单比特门",
       "topic": "qubit-control",
-      "sha256": "24c7b8ccccd73ad033502d10b22ea7c30f8d02215802bfe40687defda5dd886e",
+      "sha256": "c8b3b29cb2570fa8f232c156be454eda0fb08de0962abd1c4d151acbd37d4096",
       "split": "train"
     },
     {
@@ -579,7 +593,7 @@
       "path": "content/readout-measurement/amplifier-saturation-power.md",
       "title": "参量放大器饱和功率",
       "topic": "readout-measurement",
-      "sha256": "f4945f4a44ea3238f712cd7800dc867e9f41511862c7892a4ae026e8ce05b3c8",
+      "sha256": "64daae048afe12abe23773d313ce235cd99ff22eb03ecd016ef80ebd2f75d62a",
       "split": "train"
     },
     {
@@ -628,7 +642,7 @@
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "7551cc05ba1b72046edf3d4d001404cbb5aba393d669a163808940eebbb727b6",
+      "sha256": "9d3fbe68248390010db9940fd07742dd0284cc20e9b1fa7e91374c3be9ea2e80",
       "split": "train"
     },
     {
@@ -663,7 +677,7 @@
       "path": "content/readout-measurement/qubit-thermometry.md",
       "title": "超导比特温度计",
       "topic": "readout-measurement",
-      "sha256": "d67c02c18c45dd04757e6e419fc10d97fd65c9eb3d6b805aa7b5db841d155694",
+      "sha256": "ca57036bb16aae7c014e64bf4b8bd84725e7bf8ff60e1c52f9036395c8365723",
       "split": "train"
     },
     {
@@ -712,14 +726,14 @@
       "path": "content/scaling-automation/automatic-tuning.md",
       "title": "自动调控",
       "topic": "scaling-automation",
-      "sha256": "033c147b33814021f756250e343e865a461a4cf5bcf637630a072aae195712ca",
+      "sha256": "d054463c657b303d45f5e138e2edd0477492038508b5322ade573c1b75ee8d7b",
       "split": "train"
     },
     {
       "path": "content/scaling-automation/charge-shuttling.md",
       "title": "电荷穿梭",
       "topic": "scaling-automation",
-      "sha256": "86bcae9ae9b76baff2dd3412f72a57b27c1ddc6d13ad965ed878c37111660d0d",
+      "sha256": "95c2026d40a4b8e803d32d4d53cfaec1a6eca250b199c6682958c064bb7626a7",
       "split": "train"
     },
     {
@@ -824,7 +838,7 @@
       "path": "content/superconducting-qubits/csfq-decoherence.md",
       "title": "可调电容并联 flux qubit 的退相干",
       "topic": "superconducting-qubits",
-      "sha256": "11ac90f171ea0983d2a909607fc528ecce4d2647ebbf338675e5abc5e47e69ba",
+      "sha256": "fe6fef5b6c0c6b612f01eb8c77b98aa4802d0e200e677e87e5959b7595e06a51",
       "split": "test"
     },
     {
@@ -852,7 +866,7 @@
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
       "title": "Fluxonium 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "5cbbbfa889fe7bfa29b08b2c552280ee59278db5662100ebbb726edb120414e7",
+      "sha256": "b7f7a209a7f57e11636963a8806899d3220992bbec8eb174c5163cec60932a47",
       "split": "train"
     },
     {
@@ -867,6 +881,20 @@
       "title": "约瑟夫森结强耦合缺陷模",
       "topic": "superconducting-qubits",
       "sha256": "6c432d8ae2bac7110c7a17ac47307e744460f4db2996d95ef96ed6600ce070d6",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/quantum-optimal-control.md",
+      "title": "量子最优控制与机器学习表征",
+      "topic": "superconducting-qubits",
+      "sha256": "4a765a1fda563db911c570b7356e937e6dd8676a23bd3665bde0ef46dcbb4d28",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/qubit-array-level-statistics.md",
+      "title": "比特阵列能级统计与混沌抑制",
+      "topic": "superconducting-qubits",
+      "sha256": "be8e1c93a68cab88006b030ec154e568208824b294699110d6d900bab0537ca9",
       "split": "train"
     },
     {
@@ -936,14 +964,14 @@
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "6c527e03ca055d845e1cad8e8a5bf45dc7557df807de5dd874f7b097d9dfba1d",
+      "sha256": "70d67e677ca6e8de02b46baa7779471d36d1323fcf205767ad68e3ec7a0d8c58",
       "split": "train"
     },
     {
       "path": "content/superconducting-qubits/zz-coupling.md",
       "title": "ZZ 相互作用",
       "topic": "superconducting-qubits",
-      "sha256": "5ea12d575dfc9c497be7507476b7a216437b7565864ee6e9d50901f28af8bea7",
+      "sha256": "6bea699e2ab470bc5e435f1a96d5a288ba7aed08a4ff93652b19a8dc78430c0b",
       "split": "train"
     }
   ]
