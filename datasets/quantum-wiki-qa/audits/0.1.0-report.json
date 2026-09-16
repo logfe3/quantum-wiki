@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "status": "approved",
   "decision_file": "datasets/quantum-wiki-qa/audits/0.1.0.jsonl",
-  "sample_size": 37,
-  "reviewed": 37,
-  "passed": 37,
+  "sample_size": 39,
+  "reviewed": 39,
+  "passed": 39,
   "failed": 0,
   "failure_rate": 0,
   "batch_reject_threshold": 0.05,
@@ -14,5 +14,5 @@
   "duplicate_ids": [],
   "missing_ids": [],
   "pending_ids": [],
-  "generated_at": "2026-09-16T04:17:18.421Z"
+  "generated_at": "2026-09-16T04:35:08.269Z"
 }
