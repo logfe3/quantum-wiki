@@ -60,7 +60,7 @@ $$
 两比特门的保真度报告有三条路线，口径不同，比较时要小心：
 
 1. **Bell 态层析**：制备 Bell 态并测密度矩阵，保真度上限受制备与读出误差影响，通常**高于**真实门保真度；
-2. **交织随机化基准（interleaved RB）**：把目标门嵌入 Clifford 序列，给出该门的平均保真度，是常用口径；
+2. **交织随机化基准（interleaved RB）**：把目标门嵌入 Clifford 序列，给出该门的平均保真度，是常用口径；标准/交错/同时/特征 RB 的完整方法学见[[qubit-control/randomized-benchmarking|随机化基准测试]]——正是这套方法（以 CRB 绕过两比特 Clifford 的编译开销）首次给出 Si/SiGe 双比特器件 CPhase 门 $92.0\pm0.5\%$ 的真实两比特保真度；
 3. **门集合层析（GST）**：完整重建误差生成元，能区分相干误差与随机误差，[[references/xue-2022|Xue et al. (2022)]] 与 [[references/philips-2022|Philips et al. (2022)]] 采用。
 
 代表性两比特门结果（文中报告值，非同条件对比）：

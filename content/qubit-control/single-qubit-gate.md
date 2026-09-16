@@ -112,7 +112,7 @@ $$
 | [[qubit-control/rabi-oscillation|Rabi 振荡]] | 驱动幅度–翻转角关系、$f_R$、驱动均匀性 | 校准 $\pi$、$\pi/2$ 脉冲幅值 |
 | [[qubit-control/ramsey-interferometry|Ramsey 干涉]] | $T_2^*$、频率漂移（准静态噪声） | 快门极限下读出频率精调 |
 | Hahn 回声 / [[qubit-control/dynamical-decoupling|动力学解耦]] | $T_2$、噪声谱 | 判断噪声类型（准静态 vs 高频） |
-| 随机化基准（RB） | Clifford 门平均保真度 | 排除态制备与测量误差 |
+| 随机化基准（RB） | Clifford 门平均保真度 | 排除态制备与测量误差；衰减拟合与保真度提取公式见[[qubit-control/randomized-benchmarking|随机化基准测试]] |
 | 门集成基准 / GST | 特定门保真度及误差生成元 | [[references/xue-2022|Xue et al.]] 用 GST 分解误差来源 |
 
 代表性单比特门保真度（文中报告值，非同条件对比）：

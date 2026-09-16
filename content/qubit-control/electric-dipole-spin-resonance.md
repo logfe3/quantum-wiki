@@ -229,7 +229,7 @@ EDSR 把"驱动"与"电荷敏感性"绑在了同一条耦合通道上，工程�
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]：锗空穴把 EDSR 推到本征 SOC 极致，Rabi 频率可比电子体系高两个量级；同时把电荷噪声直接注入自旋通道，$T_2^*$ 较短——磁场方向优化与[[qubit-control/geometric-quantum-gate|几何门]]是为缓解此问题。
 - [[qubit-control/charge-qubit|电荷比特]]：EDSR 是电荷比特线性驱动的延伸——电荷比特本身即由 $\varepsilon$ 直接驱动，不需要等效磁场；EDSR 把同一电场经 SOC 转换为自旋驱动，因此[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]与 EDSR 共用同一驱动源。
 - [[qubit-control/electric-quadrupole-spin-resonance|电四极自旋共振（EQSR）]]：同一交流电场的四极分量经 SOC 二阶微扰通道驱动激发轨道区自旋；多电子硅点简并点附近观测到的 Rabi 频率增强即源于此，EDSR 的偶极近似在那里失效。
-- [[scaling-automation/flopping-mode-qubit|翻转模式单自旋比特]]：EDSR 的高电偶极矩版本，把双量子点 $\varepsilon\approx0$ 处的隧穿耦合放大为有效驱动场；零失谐处的 Rabi 频率提升一个量级而 $T_2^*$ 基本不变。
+- [[scaling-automation/flopping-mode-qubit|翻转模式单自旋比特]]：EDSR 的高电偶极矩版本，把双量子点 $\varepsilon\approx0$ 处的隧穿耦合放大为有效驱动场；零失谐处的 Rabi 频率提升一个量级而 $T_2^*$ 基本不变。含真实噪声通道的 RB 系综模拟进一步给出保真度判据：只要 $T_1\gtrsim30\ \mu\mathrm{s}$（3 MHz Rabi），翻转模式即可在不足单点 EDSR 千分之一的驱动功率下达到同等门保真度；瓶颈从电荷噪声转移到弛豫环境。
 - [[materials-devices/micromagnet|微磁体]]：硅电子 EDSR 的物理载体——同一磁体同时提供驱动所需的 $b_\perp$ 与寻址所需的 $b_z$，优化微磁体几何即优化 EDSR 与寻址性能。
 - [[qubit-control/geometric-quantum-gate|几何量子门]]：用周期性驱动的累积相位规避对 $f_\text{Rabi}$ 稳定性的要求，在 $b_\perp$ 偏小或 $T_2^*$ 偏短的体系上把单比特门保真度推到 99% 以上。
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]、[[qubit-control/ramsey-interferometry|Ramsey 干涉]]、[[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]、[[qubit-control/dynamical-decoupling|动力学解耦]]：EDSR 在时间域呈现为这些通用操控协议的物理实现——哈密顿量相同，只是 $B_1$ 的来源不同。

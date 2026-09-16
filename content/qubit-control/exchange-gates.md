@@ -106,7 +106,7 @@ $$
 U_{\mathrm{CZ}} = Z_1(-\pi/2)\,Z_2(-\pi/2)\,U_{\mathrm{CPhase}}(\pi\hbar/J) = \operatorname{diag}(1, 1, 1, -1) .
 $$
 
-CZ 门的实现条件只有两点：(1) 精确控制 $J$ 与演化时间 $t$ 使累积相位恰为 $\pi$；(2) 校准两个单比特 $Z$ 旋转的相位。 在自然 Si/SiGe 一维四量子点中以 $\Delta E_Z \approx 42\,\mathrm{MHz}$、$J \approx 6.25\,\mathrm{MHz}$、演化时间 $80\,\mathrm{ns}$ 完成 CZ 门，随机基准测得保真度 $90.96 \pm 7.48\%$。
+CZ 门的实现条件只有两点：(1) 精确控制 $J$ 与演化时间 $t$ 使累积相位恰为 $\pi$；(2) 校准两个单比特 $Z$ 旋转的相位。 在自然 Si/SiGe 一维四量子点中以 $\Delta E_Z \approx 42\,\mathrm{MHz}$、$J \approx 6.25\,\mathrm{MHz}$、演化时间 $80\,\mathrm{ns}$ 完成 CZ 门，随机基准测得保真度 $90.96 \pm 7.48\%$。要绕开两比特 Clifford 编译开销（平均 8.25 个单比特门 + 1.5 个 CPhase）拿到更紧的 CPhase 保真度，可用[[qubit-control/randomized-benchmarking|随机化基准测试]]的特征 RB（CRB）变体：以单比特 Clifford 对为参考序列、两比特 Pauli 为特征群交错 CPhase，在同类 Si/SiGe 双点器件上提取出 $92.0\pm0.5\%$ 的两比特空间 CPhase 保真度。
 
 ### 对称工作点与电荷噪声抑制
 
@@ -201,6 +201,7 @@ $$
 | $\sqrt{\mathrm{SWAP}}$ 时长（Hubbard 极限） | $J t/\hbar = \pi/2$；$J=4t^2/U$ | |
 | iSWAP 时长（超导 transmon 参考） | $\sim 15\,\mathrm{ns}$（30 个 AWG 点拟合） | |
 | CZ 门 RB 保真度（自然 Si/SiGe） | $90.96\pm 7.48\%$ | |
+| CPhase 门 CRB 保真度（自然 Si/SiGe 双点） | $92.0\pm0.5\%$（两比特空间，交错 CRB 提取） | |
 | DCZ Bell 态保真度（自然 Si/SiGe） | 平均 $91\%$（移除读出误差） | |
 | DCZ Bell 态保真度（Si-MOS） | $84.09\%$ | |
 | 单比特门保真度（自然 Si/SiGe） | $X,Y$ 门 $>99\%$（$83\,\mathrm{ns}$） | |

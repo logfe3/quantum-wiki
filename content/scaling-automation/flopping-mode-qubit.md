@@ -12,8 +12,8 @@ tags:
  - 强耦合
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhtxngk3ck8jfvbt03n2h
-source_updated: 2026-09-09T15:03:27Z
+qatlas_id: qa_01m0qvhtrxk36mh4ams1bvs1ny
+source_updated: 2026-09-09T15:00:23Z
 ---
 
 <div class="entry-lead">翻转模式让一个自旋的轨道波函数在双量子点之间强烈摆动。这个"大电偶极"同时增强微磁体梯度下的 EDSR 和自旋–光子耦合，把单自旋比特的 Rabi 频率、品质因子与腔耦合强度都拉高一个量级。</div>
@@ -134,6 +134,10 @@ $$
 | 空穴 FM（Si 纳米线 + NbN 腔） | $2t_c=44\ \mathrm{GHz}$；Rabi 至 130 MHz 无饱和；$T_2^{\mathrm{Rabi}}=2.1\ \mu s$ | Noirot 2026 |
 | 空穴 FM 单门品质因子 | $Q_\mathrm{gate}=2f_\mathrm{Rabi}T_2^{\mathrm{Rabi}}$ 最大 380（预期保真度 ~99.9%） | Noirot 2026 |
 | 空穴 FM 退相干 | Ramsey 甜点 160 ns（1/f 电荷噪声 $\sqrt{A_\varepsilon}\sim0.2\ \mu$eV/√Hz）；回波无甜点（260 ns→1 μs）——热光子散粒噪声主导；$T_1\propto B^{-2}$ 多模 Purcell+Johnson | Noirot 2026 |
+| 模拟 FM 保真度持平 SD 所需 $T_1$ | $\sim30\ \mu$s（3 MHz Rabi）、$\sim5\ \mu$s（10 MHz Rabi） | Young 2025 |
+| 模拟 FM vs SD 驱动功率 | 同失真度下 <1/1000；10 MHz Rabi 下失真度再低一个量级、功率仍低两个量级 | Young 2025 |
+| 模拟噪声参数 | 超精细 $8.6\times10^{-8}\ \mathrm{T/\sqrt{Hz}}$；栅极参考电荷噪声 $10^{-5}\ \mathrm{V/\sqrt{Hz}}$（1/f，OU 系综）；$B_z=0.2\ \mathrm{T}$，梯度 $3\times10^5\ \mathrm{T/m}$ | Young 2025 |
+| 模拟器件系综 | 5 个合金无序实现，双点 $t_c\approx10$–$23\ \mu$eV，谷劈裂 33–335 μeV；谷劈裂上限可禁止 FM（Device #5） | Young 2025 |
 
 ## 实验特征与测量方法
 
@@ -219,6 +223,40 @@ $$
 
 结论反转了"FM 比特受电荷噪声限制"的默认图像：甜点生效后，**微波环境的优化**（腔模管理、热光子抑制、Purcell 滤波）成为提升 FM 比特相干的主战场——FM 比特由此确立为"快（百 MHz Rabi）+ 可靠（Q_gate≈380）+ 强腔耦合"的单比特候选。空穴体系的更多背景见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]。
 
+## 保真度基准模拟：SD 与 FM EDSR 的系统对比（Young 2025）
+
+低驱动功率是翻转模式的卖点，但其门保真度相对传统单点 EDSR（SD EDSR）究竟如何，长期缺乏系统评估。Young 等人对 Si/SiGe 器件系综做了含真实噪声通道的**随机化基准测试全模拟**，给出了第一份定量答卷。器件模型取 3 nm 厚 Si 量子阱 + 50 nm 厚 Si₀.₇Ge₀.₃间隔层、五个 50 nm 宽栅极（G1–G5），垂直塞曼场 $B_z=0.2\ \mathrm{T}$、横向磁场梯度 $\partial B_y/\partial x = 3\times10^5\ \mathrm{T/m}$；SiGe 势垒中以显式 Ge 缺陷分布实现**合金无序**，每个器件实现一套独立的[[fundamentals/valley-splitting|谷劈裂]]与隧穿耦合（模拟的 5 个器件双点隧穿耦合 $t_c\approx10$–$23\ \mu\mathrm{eV}$，谷劈裂 33–335 μeV 不等）。噪声通道分频段：低频（1 Hz–100 MHz）超精细噪声（$b_z\approx8.6\times10^{-8}\ \mathrm{T/\sqrt{Hz}}$，1/f 型）与栅极参考（gate-referred）电荷噪声（$10^{-5}\ \mathrm{V/\sqrt{Hz}}$），以 50 ns 步长的动力学准静态近似演化；高频 $T_1$ 弛豫（电荷噪声 + 电子–声子耦合）以 Lindblad 过程加入。模拟 RB 深度 1–10000 门、每深度 25 条随机 Clifford 序列，两端各留 50 μs SPAM 窗口。
+
+![[assets/figures/flopping-mode-qubit/young2025-fig1-device-layout.jpg]]
+
+*模拟器件结构：(a) 器件叠层剖面——3 nm Si 量子阱埋于 50 nm Si₀.₇Ge₀.₃间隔层下，五个栅极 G1–G5 提供面内限域势；(b) SD 与 FM EDSR 两种工作模式下的限域势 V(x)——SD 模式电子孤立于 G2 或 G4 之下，FM 模式电子离域于 G2–G4 构成的双量子点、G3 设定点间势垒，微波驱动分别加在 G3（SD）与 G4（FM）；(c) 量子阱放大视图（白=Si、蓝=Ge），黑色为 FM 基态电荷密度。图源：Young et al. (2025), Fig. 1。*
+
+模拟的 RB 回退概率 $P_r$ 随单比特 Clifford 门数 $C_{N1}$ 衰减，拟合形式与实验一致：
+
+$$
+P_r = A\,\alpha^{C_{N1}} + B,
+$$
+
+其中 $\alpha$ 是去极化参数（只含门误差），$A$、$B$ 吸收 SPAM 误差（拟合方法详见[[qubit-control/randomized-benchmarking|随机化基准测试]]）。
+
+![[assets/figures/flopping-mode-qubit/young2025-fig3-simulated-rb.jpg]]
+
+*Device #2 在 3 MHz Rabi 频率下的模拟 RB：(a) SD EDSR 模式与 (b) FM EDSR 模式（标注隧穿耦合 $t_c$），含全部噪声源；深色线为拟合平均、浅色为单次 RB 迹。图源：Young et al. (2025), Fig. 3。*
+
+**逐通道归因**是这篇工作的核心价值（Fig. 4，失真度对驱动幅度平方 $\Delta V^2$——正比于驱动功率——作图）：
+
+- **只开电荷噪声**：失真度–功率关系在器件间、甚至两种模式间高度一致；SD EDSR 基本不受电荷噪声影响，能拿到最低失真度，但代价是显著更高的驱动功率；
+- **加超精细噪声**：FM 的优势显现——两种模式最终都受磁噪声限制，而 FM 靠波函数在两个阱上的**离域**平均掉了部分超精细涨落；把 Rabi 频率提到 10 MHz 还可借更短门时间压制超精细误差，失真度比 SD 低一个量级、驱动功率仍低两个量级；
+- **加 $T_1$ 弛豫**：对 FM 打击最重，成为 FM 模式的主导噪声通道。与 SD 失真度持平要求 $T_1\gtrsim30\ \mu\mathrm{s}$（3 MHz Rabi）或 $T_1\gtrsim5\ \mu\mathrm{s}$（10 MHz Rabi）——此时所需驱动功率仍不到 SD 的 **1/1000**。这些 $T_1$ 要求恰在实验已观测值的范围内。
+
+![[assets/figures/flopping-mode-qubit/young2025-fig4-infidelity-power.jpg]]
+
+*失真度随驱动功率（$\Delta V^2$）的变化，跨全部模拟器件实现与多档隧穿耦合，逐通道加入噪声：仅电荷噪声（左）、加超精细（中）、全通道含 $T_1$（右）。红/蓝点为 3 MHz Rabi 的 SD/FM，粉点为 10 MHz Rabi 的 FM。SD 对电荷噪声不敏感但耗功率；FM 受电荷噪声与 $T_1$ 限制但功率优势达 2–3 个量级。图源：Young et al. (2025), Fig. 4。*
+
+**隧穿耦合的权衡**：FM 性能强烈依赖 $t_c$——更高的 $t_c$ 使比特更"自旋化"、对电荷噪声更不敏感，但同时降低驱动灵敏度、需要更大驱动幅度才能达到目标 Rabi 频率。**合金无序的器件间后果**：对 SD 模式影响甚微，但 FM 的性能在器件间涨落很大——谷劈裂的变化尤其大，给可达隧穿耦合设了上限，可能约束甚至完全禁止某器件的 FM 操作（模拟中 Device #5 因一侧谷劈裂过小被排除）。
+
+结合 Noirot 2026 的实验（上节），本节模拟给出互补的工程结论：在甜点/离域生效的前提下，FM 的单比特保真度瓶颈从电荷噪声转移到**弛豫环境**（$T_1$、腔光子），驱动功率预算则比 SD 宽裕三个量级——这对需要 $10^6$–$10^8$ 物理比特的容错规模是实质性优势。
+
 ## 实验实现要点
 
 - **强隧穿耦合**：$2t_c\gtrsim 800\ \mathrm{GHz}$ 的双量子点形成"准单点"，$(0,1)$–$(1,0)$ 反交叉线消失，零失谐工作点需要靠翻转模式频率谱反推，而非直接看电荷稳定图；
@@ -241,5 +279,6 @@ $$
 
 ## 参考文献
 
+- Young, S. M., Brickson, M., Petta, J. R., Jacobson, N. T. Benchmarking low-power flopping-mode spin qubit fidelities in Si/SiGe devices with alloy disorder (2025). arXiv:2503.10578（QAtlas 缓存：2503.10578）。
 - Noirot, L., Yu, C. X., Abadillo-Uriel, J. C., Dumur, É., Niebojewski, H., Bertrand, B., Maurand, R., Zihlmann, S. Coherence of a hole spin flopping-mode qubit in a circuit quantum electrodynamics environment. *Nature Physics* (2026). DOI: 10.1038/s41567-026-03262-y；arXiv:2503.10788（QAtlas 缓存：2503.10788）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
