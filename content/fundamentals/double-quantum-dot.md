@@ -228,6 +228,7 @@ $$
 ## 与其他概念的关系
 
 - [[fundamentals/semiconductor-quantum-dot|半导体量子点]]：双量子点由两个单点组成，继承了库仑阻塞、电化学势、隧穿耦合等所有单点概念；
+- [[materials-devices/si-sige-nanomembrane|Si/SiGe 纳米膜]]：双量子点调控能力的"最低平台验证"——湿法转移膜上首次做出栅控双点，隧穿耦合经 QPC 线型拟合在 0.97–9.1 GHz 平滑可调、200 ps 脉冲下电荷稳定；
 - [[fundamentals/constant-interaction-model|常相互作用模型]]：给出双量子点电容网络与静电能的定量预言；
 - [[fundamentals/electrochemical-potential|电化学势]] $\mu_1,\mu_2$ 的简并条件定义了蜂窝图的全部边界；
 - [[fundamentals/charging-energy|充电能]] $E_{C1},E_{C2},E_{Cm}$ 决定蜂窝沿栅压方向的周期与原胞被劈开的间距；

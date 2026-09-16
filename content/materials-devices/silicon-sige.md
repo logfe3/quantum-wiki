@@ -202,7 +202,7 @@ $$
 
 ## 材料生长与器件工艺
 
-异质结用化学气相沉积（CVD）生长，顺序是：P 型 Si(100) 衬底 → Ge 组分渐变的 SiGe 缓冲层（约 $3\ \mathrm{\mu m}$，降低穿透位错）→ 化学机械抛光（CMP）平整界面 → 固定组分 SiGe 虚拟衬底（$500\ \mathrm{nm}$）→ Si 量子阱（$10\ \mathrm{nm}$）→ SiGe 间隔层（$30\ \mathrm{nm}$）→ Si 帽层（$2\ \mathrm{nm}$，防氧化）。
+异质结用化学气相沉积（CVD）生长，顺序是：P 型 Si(100) 衬底 → Ge 组分渐变的 SiGe 缓冲层（约 $3\ \mathrm{\mu m}$，降低穿透位错）→ 化学机械抛光（CMP）平整界面 → 固定组分 SiGe 虚拟衬底（$500\ \mathrm{nm}$）→ Si 量子阱（$10\ \mathrm{nm}$）→ SiGe 间隔层（$30\ \mathrm{nm}$）→ Si 帽层（$2\ \mathrm{nm}$，防氧化）。应变渐变并非唯一路线：液相释放的弹性应变弛豫用湿法转移的 SiGe 纳米膜做虚拟衬底，完全不引入失配位错（代价是距量子阱 625 nm 处出现非外延键合界面），首个膜上双量子点已验证全部调控能力——见[[materials-devices/si-sige-nanomembrane|Si/SiGe 纳米膜]]词条。
 
 三个厚度是折中出来的：
 

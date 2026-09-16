@@ -182,7 +182,7 @@ Si-MOS 中的单比特操控主要通过两种途径：
 - [[qubit-control/cnot-gate|CNOT 门]]的常开协议与 [[qubit-control/dynamical-decoupling|动态解耦]] CZ（DCZ）在 Si-MOS 双量子点中都已实现，分别对应相位补偿与脉冲解耦两种保真度提升路线。
 - [[readout-measurement/single-shot-readout|单发读出]]沿用 Elzerman 能量选择读出，配合 [[readout-measurement/threshold-independent-readout|阈值无关读出]]后处理获得稳定可见度。
 - [[readout-measurement/rf-reflectometry|射频反射读出]]在 Si-MOS 中需要使用 [[scaling-automation/spin-orbit-torque-control|劈裂栅极]]方案绕开引线栅极的射频泄露。硅中积累型栅传感器的第一个系统实证（Rossi 2017，$f_R=343\ \mathrm{MHz}$、杠杆臂约 $0.1\ \mathrm{eV/V}$）见[[readout-measurement/gate-based-sensing|栅极射频传感]]。
-- [[qubit-control/singlet-triplet-qubit|S–T₀]] 比特在 Si-MOS 中受惠于较高谷劈裂，初始化与读出泄漏更少。
+- [[qubit-control/singlet-triplet-qubit|S–T₀]] 比特在 Si-MOS 中受惠于较高谷劈裂，初始化与读出泄漏更少。ST 自由感应衰减的角度测绘进一步定量了这一优势：SiMOS 的谷劈裂比 Si/SiGe 高 2–5 倍、自旋–谷耦合大一个量级（更强的界面限域所致），而各向异性形状两平台几乎相同（面内最大沿 [110]）——见[[fundamentals/valley-splitting|谷劈裂]]词条"自旋–谷耦合的角度测绘"一节。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]已在 Si-MOS 双点对称点演示，使 Rabi 频率与品质因子提高约一个数量级。
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/strained-germanium|应变锗]]、[[materials-devices/germanium-hut-wire|锗纳米线]]等其他平台在迁移率、谷简并、自旋轨道强度和制备工艺上各有取舍，Si-MOS 的独特优势是 CMOS 兼容性与较高的谷劈裂。
 

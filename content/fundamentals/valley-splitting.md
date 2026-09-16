@@ -11,8 +11,8 @@ tags:
  - 自旋量子比特
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvm2dksn5tv5bhvswjdkh6
-source_updated: 2026-08-26T22:30:54Z
+qatlas_id: qa_01m23a3zt9e3ajhdwse9f1xc6e
+source_updated: 2026-09-09T15:29:34Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -181,6 +181,10 @@ $$
 | 穿梭退相干阈值 | 自旋–谷共振绝热/二能级穿越分界 ~2.8 m/s（Δ_sv≲300 neV、dE_VS/dx≈3 μeV/nm）；10 μm 穿梭误差 <8% | 传送带穿梭 P_S | Volmer 2026 |
 | 局域包络理论的参考能歧义 | 锐界面/薄阱/Ge 尖峰时歧义度量 2\|R\| 显著，U₀ ~ 数百 meV 即强烈改变 E_VS^loc 预测 | 精确非局域多谷 EFT 基准 | Ermoneit 2026 |
 | 投影局域（谱滤波）模型 | 恢复参考能不变性；常规阱与摆动阱符合精确非局域结果，Ge 尖峰处倾向高估 | 一维基准模拟 | Ermoneit 2026 |
+| SiMOS 谷劈裂（ST 角度测绘） | 83.1(9) 与 180.3(3) µeV（两点，四能级拟合） | ST 自由感应衰减热点位置，14 个磁场取向 | Jacobson 2026 |
+| Si/SiGe（Intel 代工三点的 QD₁,QD₂） | 36.81(1) 与 46.86(1) µeV | 同上，5 个取向 | Jacobson 2026 |
+| 自旋–谷耦合 γ 平台对照 | SiMOS 0.730(3)/0.87(2) µeV vs Si/SiGe 0.0504(2)/0.0571(2) µeV（差一个量级）；η≈0.55–0.84 rad，面内最大沿 [110]、节点沿 [1̄10] | 四能级模型拟合 | Jacobson 2026 |
+| 热点附近线宽 | >5 MHz（电荷噪声敏感度增强），沿 [1̄10]/[3̄10] 取向更局部化 | FFT 线宽叠加 | Jacobson 2026 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -225,6 +229,47 @@ $$
 *微磁体不均匀场对 f_v− − f_v+ 的单独贡献 Δ(f_v−−f_v+)^ΔB：平界面时几乎为零，存在台阶时显著——谷–轨道杂化使两谷态偶极矩不同，空间变化磁场对它们的作用随之不同；贡献在台阶位于点附近时最大，且几乎不随 B_ext 变化。图源：Ferdous et al. (2018), Fig. 4。*
 
 谷激发态本身的弛豫时间（高温运行与读出窗口的相关约束）见"自旋-谷弛豫寿命"一节及[[qubit-control/spin-decoherence|自旋退相干]]词条的声子弛豫理论——多极展开给出的谷弛豫曲线正是那里的定量参照。
+
+### 自旋–谷耦合的角度测绘：ST 自由感应衰减与平台对照（Jacobson 2026）
+
+Ferdous 式的逐点诊断之外，还有一条**批量测绘**路线：用[[qubit-control/singlet-triplet-qubit|S–T₀ 比特]]的自由感应衰减同时读出两点各自的自旋–谷热点。Jacobson 等人在两块器件——Sandia 制造的 SiMOS 双点（富集 500 ppm ²⁹Si、热氧化 SiO₂ 界面）与 Intel 代工的 Si/SiGe 三点器件（约 5 nm 富集 800 ppm ²⁹Si 阱、自然丰度 Si₀.₇Ge₀.₃ 势垒）——上，于 (4,0)/(3,1) 跃迁附近制备 S(3,1) 并让它被两点 Zeeman 能差 $\Delta E_Z$ 驱动旋转，原位扫描磁场大小并更换取向（SiMOS 14 个、Si/SiGe 5 个），对演化时间做 FFT 得到 S–T 旋转频率-磁场图谱：每个点在其 $\Delta_{\mathrm{vs},i}=g_i\mu_B B$ 处出现发散/间断——即自旋–谷热点，旋转频率由此成为谷劈裂的灵敏探针（Si/SiGe 的 $T_2^*\approx4.4\ \mu\mathrm{s}$ 由势垒 ⁷³Ge 与阱内残余 ²⁹Si 的 Overhauser 场主导）。
+
+![[assets/figures/valley-splitting/jacobson2026-fig2c-st-fid.jpg]]
+*S–T₀ 自由感应衰减示例（Si/SiGe，B∥[110]=50 mT，30 分钟平均）：高斯衰减正弦拟合给出 $T_2^*=4.41\ \mu\mathrm{s}$；同器件沿 [100] 原位扫场时旋转频率在 ~324 与 ~412 mT 出现两处间断——两点各自的自旋–谷热点。图源：Jacobson et al. (2026), Fig. 2。*
+
+数据用**四能级模型**统一拟合：基谷自旋二态 $\{|\tilde\uparrow_0^A\tilde\downarrow_0^B\rangle,|\tilde\downarrow_0^A\tilde\uparrow_0^B\rangle\}$ 加两点激发谷极化态，
+
+$$
+H=\begin{pmatrix}
+\delta B/2 & J/2 & \Gamma_A & 0\\
+J/2 & -\delta B/2 & 0 & \Gamma_B\\
+\Gamma_A^* & 0 & \Delta_{\mathrm{vs},A}-g\mu_B B & 0\\
+0 & \Gamma_B^* & 0 & \Delta_{\mathrm{vs},B}-g\mu_B B
+\end{pmatrix},
+$$
+
+其中 $\delta(\theta,\varphi)=\mu_B(\Delta\alpha-\Delta\beta\sin 2\varphi)\sin^2\theta$ 是 Rashba/Dresselhaus 之差给出的 g 因子差（$\theta,\varphi$ 为磁场相对晶轴的取向），$\Gamma_i$ 是自旋–谷耦合，其角度依赖为
+
+$$
+|\Gamma(\theta,\varphi)|=\frac{\gamma}{2}\sqrt{3+\cos 2\theta-2\cos\!\bigl(2(\varphi+\eta)\bigr)\sin^2\theta},
+$$
+
+$\gamma$ 为谷间自旋轨道矩阵元幅度、$\eta$ 为其相对 [100]/[010] 的相位——由 Rashba/Dresselhaus 矩阵元 $\gamma_{R,D}^{\uparrow\downarrow}$ 的叠加 $\gamma e^{i\eta}$ 推出。
+
+![[assets/figures/valley-splitting/jacobson2026-fig3-simos-orientations.jpg]]
+*SiMOS 器件 14 个磁场取向下的 S–T 旋转频率-磁场图谱（FFT 归一化着色，红线为四能级模型拟合）：两处发散对应两点各自的 Zeeman–谷劈裂共振；发散宽度反映自旋–谷耦合强度、整体斜率反映 g 因子差。Si/SiGe 器件（5 个取向）的图谱形态类似而热点位置更低（谷劈裂更小）。图源：Jacobson et al. (2026), Fig. 3。*
+
+拟合结果的**平台对照**是本文的核心发现：SiMOS 的谷劈裂（83.1(9) 与 180.3(3) µeV）比 Si/SiGe（36.81(1) 与 46.86(1) µeV）高 2–5 倍，**自旋–谷耦合 $\gamma$（0.730(3)/0.87(2) µeV）比 Si/SiGe（0.0504(2)/0.0571(2) µeV）大一个数量级**——两者都与 SiMOS 电子被更强地压在 Si/SiO₂ 界面一致（Si/SiGe 的较小带错位限制了可施加的电场）；g 因子差两平台相当，$\Delta\beta\gg\Delta\alpha$（Dresselhaus 主导）。而**角度依赖几乎不随平台改变**：$\eta\approx0.55$–0.84 rad $\approx\pi/4$，面内 $|\Gamma|$ 沿 [110] 取最大、节点沿 [1̄10]（含 [001] 法向的大圆上 $|\Gamma|=|\gamma|$）。
+
+![[assets/figures/valley-splitting/jacobson2026-fig6-spin-valley-anisotropy.jpg]]
+*面内（B⊥[001]）自旋–谷耦合的角度依赖：两平台的四个点都在 [110] 晶向取最大——各向异性形状几乎相同、只差幅度重标度（SiMOS 比 Si/SiGe 大一个量级）。g 因子差的角度依赖同样两平台等价（差 π/2 旋转与重标度），在 $\phi=(2n-1)\pi/4$ 取极值。图源：Jacobson et al. (2026), Fig. 6。*
+
+**热点形态分类学**把频率-场曲线按 $\Delta g$ 符号分成三类（$\Delta g>0$、$\Delta g<0$、$\Delta g\approx0$）：前两类给出手性相反的斜渐近线，第三类在两处谷劈裂都出现纯发散。机理可用"惰性态"论证理解——同自旋的谷态之间没有谷间耦合，$|\tilde\uparrow_0^A\tilde\downarrow_0^B\rangle$ 对 $B$ 点热点"惰性"、能量只是随 g 因子差线性倾斜；另外两态经 $\Gamma_B$ 反交叉形成热点。
+
+![[assets/figures/valley-splitting/jacobson2026-fig8-hotspot-taxonomy.jpg]]
+*自旋–谷热点的形态分类学（模型示例 $\Delta g\in\{10^{-3},-10^{-3},0\}$、$\Delta_\mathrm{vs}=40/75\ \mu$eV、$|\Gamma|=0.1\ \mu$eV）：Δg 的符号决定斜渐近线的手性，Δg≈0 时两处均为纯发散；发散宽度 ∝ 自旋–谷耦合、渐近线斜率 ∝ g 因子差——一条频率-场曲线同时定出三类参数。图源：Jacobson et al. (2026), Fig. 8。*
+
+对操作的直接指引：**B∥[001] 最小化 g 因子差**（适合磁噪声受限的 Si/SiGe 比特），但热点效应在法向接近最大；热点附近 FFT 线宽可超过 5 MHz（电荷噪声敏感度增强的退相干），而线宽增宽沿特定取向（如 [1̄10]、[3̄10]）更局部化——SiMOS 比特若更怕 $T_1$/电荷噪声，选 [1̄10] 取向可在热点附近保持更窄线宽。附加结果：SiMOS 热点位置随磁场取向移动，提示**谷劈裂本身的磁场取向依赖**（磁场限域改变波函数对界面的采样）；Si/SiGe 三点器件换一对点（QD₂,QD₃）测量时出现多个频率分量，与制备 ramp 时间依赖一起指向**激发谷态的占据**。
 
 ### 通过电荷跃迁观测谷–轨道耦合
 
@@ -411,4 +456,5 @@ $$
 - Tanamoto, T., Ono, K. Effects of valley splitting on resonant-tunneling readout of spin qubits. *Applied Physics Letters* (2025). DOI: 10.1063/5.0260516；arXiv:2501.13289（QAtlas 缓存：2501.13289）。
 - Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. *Nature Communications* (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
 - Ermoneit, L., Thayil, A., Koprucki, T., Kantner, M. Exact Multi-Valley Envelope Function Theory of Valley Splitting in Si/SiGe Nanostructures (2026). DOI: 10.1103/md2x-s44y；arXiv:2602.14787（QAtlas 缓存：2602.14787）。
+- Jacobson, N. T., Foster, N. D., Jock, R. M., Rudolph, M., Mounce, A. M., Ward, D. R., Carroll, M. S., Luhman, D. R. Anisotropic spin-valley coupling in SiMOS and Si/SiGe quantum dots (2026). arXiv:2604.16713（QAtlas 缓存：2604.16713）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
