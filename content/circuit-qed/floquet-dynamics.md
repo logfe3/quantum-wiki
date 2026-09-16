@@ -10,7 +10,10 @@ aliases:
 tags:
  - 电路量子电动力学
  - 强驱动
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qvgnh68gm682tewwe1xpxb
+source_updated: 2026-09-05T08:14:00Z
 ---
 
 <div class="entry-lead">当量子点被强周期驱动时，"吸收一束独立光子"的图像会变得零散；Floquet 理论把时间周期性本身当作对称性，用准能量（quasienergy）把多光子跃迁、免交叉和布居重分布统一到一张能带图里。</div>
@@ -155,6 +158,30 @@ Floquet 框架下还预言了与"消耗"互补的另一类现象：在合适的�
 
 这套"耦合系统 Floquet 理论"是色散读出理论（[[readout-measurement/dispersive-readout|色散读出]]）的推广：色散读出只考虑 $\sum_j g_j^2\chi_j(\omega)$ 的简单叠加，忽略了腔介导的量子点间相互作用；当 $g/\kappa$ 较大时该近似失效，新理论是更准确的替代。
 
+## Floquet 预热化：大步长 Trotter 电路的数字量子模拟
+
+上文都是**连续驱动**的 Floquet 系统；另一支是**数字版**——把哈密顿量演化做一阶 Lie–Suzuki–Trotter 分解、并故意把步长 $dt$ 取得很大（周期 $T=2dt$）。步长超过阈值后 Trotter 误差不再有界、系统不再忠实模拟原哈密顿量，但它本身成为一个合法的 Floquet 系统，拥有自己的非平衡动力学。其普适图像是：
+
+$$
+\text{Floquet 系统持续从驱动吸能}\ \longrightarrow\ \text{最终加热到无限温}，
+\qquad
+t_{\text{heat}}\ \propto\ \exp(\text{驱动频率})\ \text{指数增长}
+$$
+
+加热之前的漫长中间态即**预热化（prethermalization）平台**——观测量先驰豫到一个准稳平台、远晚于此才升到无限温值。这给含噪声中等规模器件指出一条实用路线：不需要忠实模拟哈密顿量，只需在预热化平台窗口内测量预热态。
+
+Funo 等人在 IBM 156 比特超导器件 ibm_fez 上对一维 $\mathbf Z_2$ 格点规范理论（费米子+规范场**同时**模拟、不按惯例用高斯约束消去规范场）演示了这条路线。经典 MPS 对照（$N=13$）先定标：忠实模拟所需的 $dt=0.5$ 要 **25–30 步以上**才热化——对含噪声器件太难；把步长拉大后，$dt=1.0$ 在 **8–16 步**出现无振荡的预热化平台、$dt=1.4$ 在 **8–25 步**出现含振荡的平台。器件实验据此选平台窗口执行：配合误差缓解（含零噪声外推），**38 与 116 比特**的 Floquet 电路最多跑通 **10 个 Trotter 步**，成功到达预热化早期——为高能物理问题的量子模拟提供了基准。
+
+![[assets/figures/floquet-dynamics/funo2024-fig1-mps-prethermalization.jpg]]
+
+*经典 MPS 定标（N=13，K=m=1.0）：不同 Trotter 步长 dt 下的热化动力学——dt=0.5（忠实模拟）需 25–30 步以上才热化；dt=1.0 与 dt=1.4 分别在 8–16 与 8–25 步出现预热化平台（后者含振荡），为含噪声器件选出可执行的测量窗口。图源：Funo et al. (2024), Fig. 1。*
+
+![[assets/figures/floquet-dynamics/funo2024-fig4-quantum-prethermalization.jpg]]
+
+*ibm_fez 上的量子模拟（N=13 → 器件 38 比特）：配合误差缓解的 Floquet 电路最多执行 10 个 Trotter 步，观测量的演化进入预热化早期——与 MPS 定标的平台窗口一致；38/116 比特电路为格点规范理论数字模拟的规模基准。图源：Funo et al. (2024), Fig. 4。*
+
+适用边界：预热化窗口的长度随步长与模型参数变化，需经典可解极限先行定标；器件噪声深度（有效保真度×电路体积）决定可走的 Trotter 步数上限——步长加大换来的窗口要大到盖过这一上限才有实验意义。
+
 ## 参数与量级
 
 半导体量子点 cQED 系统中 Floquet 实验的典型参数（取自本站论文中所列工作）：
@@ -173,6 +200,8 @@ Floquet 框架下还预言了与"消耗"互补的另一类现象：在合适的�
 | 失谐涨落 $\sigma_\varepsilon$ | 几 $\mu\mathrm{eV}$（准静态电荷噪声） | ； |
 | Floquet 增益峰值 $|S_{21}|_{\max}$ | 约 $1.16$（NbTiN 透射腔）；约 $1.1$（SQUID 反射腔） | ； |
 | 增益临界 $g/\kappa$ | $\gtrsim 1$（$\approx 5$ 时增益清晰可测） | |
+| 数字版预热化窗口（MPS 定标 N=13） | dt=1.0：8–16 步平台（无振荡）；dt=1.4：8–25 步（含振荡）；忠实模拟 dt=0.5 需 >25–30 步 | Funo 2024 |
+| Z₂ 规范理论器件规模 | ibm_fez 156 比特；38/116 比特电路配合误差缓解最多 10 个 Trotter 步 | Funo 2024 |
 
 ## 实验特征与测量
 
@@ -232,3 +261,9 @@ Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生�
 - [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]系统中，Floquet 理论需要从单比特推广到耦合系统矩阵；色散读出近似忽略的量子点间相互作用此时进入 Floquet 响应函数。
 - [[readout-measurement/dispersive-readout|色散读出]]给出 Floquet 动力学进入实验信号的具体公式（$\chi^{(0)}$ 在 $S_{11},S_{21}$ 中的位置）。
 - [[superconducting-qubits/spin-locked-qubit|自旋锁定量子比特]]：连续失谐驱动 transmon 的缀饰态就是 Floquet 本征态；其"时钟条件"（准能级对失谐的微分灵敏度为零）把 Floquet 框架变成了相位噪声保护的工程工具。
+- [[superconducting-qubits/remote-qubit-self-testing|远程超导比特自检验]]与数字量子模拟：前者把周期驱动下的关联统计用于设备无关认证，后者（大步长 Trotter 电路 = Floquet 系统 + 预热化平台）把 Floquet 框架从连续驱动推广到数字演化——见上文"Floquet 预热化"一节。
+
+## 参考文献
+
+- Funo, K. et al. Floquet prethermalization of $\mathbf Z_2$ lattice gauge theory on superconducting qubits. arXiv:2408.10079 (2024)（QAtlas 缓存：2408.10079）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
