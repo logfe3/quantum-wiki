@@ -78,7 +78,7 @@ H_{\mathrm{eff}} = \tilde g_{zz}(t)\,\tilde\sigma_z^{1}\sigma_z^{2},
 \tilde g_{zz}(t) = \tfrac14\{E_{\tilde 00}(t) - E_{\tilde 01}(t) - E_{\tilde 10}(t) + E_{\tilde 11}(t)\}
 $$
 
-其中 $\tilde\sigma_z^1$ 是被驱动比特缀饰基的 Pauli-Z、$\sigma_z^2$ 是未驱动比特的 Pauli-Z，$E_{\tilde ij}(t)$ 是缀饰比特处于 $|\tilde i\rangle$、比特 2 处于 $|j\rangle$、耦合器基态的瞬时（Floquet）能量。实现 CZ（差单比特 Z 旋转）只需 $\int_0^{T_g}\tilde g_{zz}(t)\,dt=\pi/4$。绝热 ZZ 门天然待在计算基内、不依赖瞄准跃迁，对串扰多体误差项也更鲁棒；自旋锁定还把直接二阶 ZZ 相互作用压小，使器件可以工作在跨立（straddling）区间之外。
+其中 $\tilde\sigma_z^1$ 是被驱动比特缀饰基的 Pauli-Z、$\sigma_z^2$ 是未驱动比特的 Pauli-Z，$E_{\tilde ij}(t)$ 是缀饰比特处于 $|\tilde i\rangle$、比特 2 处于 $|j\rangle$、耦合器基态的瞬时（Floquet）能量。实现 CZ（差单比特 Z 旋转）只需 $\int_0^{T_g}\tilde g_{zz}(t)\,dt=\pi/4$。绝热 ZZ 门天然待在计算基内、不依赖瞄准跃迁，对串扰多体误差项也更鲁棒；自旋锁定还把直接二阶 ZZ 相互作用压小，使器件可以工作在跨立（straddling）区间之外。ZZ 相互作用在可调耦合器架构中的完整机制分解（九条能级排斥、两类零 ZZ 区与设计旋钮）另见[[superconducting-qubits/zz-coupling|ZZ 相互作用]]词条。
 
 ![[assets/figures/spin-locked-qubit/zuk2023-fig5-bus-below-qubit.jpg]]
 

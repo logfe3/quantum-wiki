@@ -12,6 +12,9 @@ tags:
  - 电路量子电动力学
  - 多比特
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m0qvgr1g0c80bf147rmq85j2
+source_updated: 2026-09-05T01:19:10Z
 ---
 
 <div class="entry-lead">腔模的空间尺度远大于量子点间直接交换作用范围。只要多个比特都耦合到同一模式，它们即使不相邻，也能通过虚或真实光子互相作用，由此把近邻耦合扩展到芯片乃至模块尺度。</div>
@@ -231,12 +234,45 @@ $$
 
 即有效耦合随两个失谐的调和均值倒数缩放——$\Delta$ 较大的比特（远离腔）对 $J_{\mathrm{eff}}$ 的贡献会被 $\Delta$ 较小的一侧主导。这一点在 的 RX 比特设计中得到利用：通过 $\varepsilon$、$\Delta$ 两个失谐参量在电学上独立调节 RX 比特的频率与电偶极权重，从而在保持 $g_{\mathrm{RX}}$ 不变的前提下改变比特–腔失谐。
 
+## 谐振腔诱导相位的长程 ZZ：RIP 门推到亚米级
+
+上面两条轴线（共振交换 / 色散虚光子交换）都假设腔是被动媒介；Deng 等人（南京大学）的方案把腔变成**主动驱动的相位工厂**，把总线距离从芯片尺度推到 0.01–0.5 m（按 2 mm 比特间距折算为间隔 5–250 个比特）。架构为"多模腔"：一根长距谐振腔 $R_c$（传输线或同轴电缆，其高阶模自由谱区 FSR 很小）两端各接一个基频高于比特的驱动谐振腔 $R_l$、$R_r$，由它们选通长腔的特定高阶模；两个失谐微波（IQ 驱动）分别打到驱动腔上。
+
+![[assets/figures/cavity-mediated-coupling/deng2024-fig1-architecture.jpg]]
+*长程 CZ 的耦合架构：左右两个 transmon 经多模腔连接——中央长距谐振腔 $R_c$（传输线/同轴电缆）+ 两个辅助驱动谐振腔（基频高于比特），绿色为可选的匹配结构；同一芯片内用 CPW 谐振腔与多层布线延伸，跨封装用同轴电缆互联。图源：Deng et al. (2025), Fig. 1。*
+
+物理机制是**谐振腔诱导相位（resonator-induced phase, RIP）门**：色散区中腔模式被比特态 dressing（色散移 $\chi^{(q,p)}$），IQ 驱动让腔从真空出发沿比特态依赖的轨迹在相空间走一闭合圈回到真空，期间积累纠缠相位
+
+$$
+\theta_{ZZ} = \mu_{11,00} - \mu_{10,00} - \mu_{01,00},\qquad
+\dot\mu_{jk,nm}(t) = -\sum_{p=r,l}\left(\chi_{jk}^{p} - \chi_{nm}^{p}\right)\alpha_{jk}^{p}\,\alpha_{nm}^{p*},
+$$
+
+其中 $\alpha_{jk}^{p}$ 是比特处于 $|jk\rangle$ 时第 $p$ 个腔模的相干幅度（由态依赖的光子演化方程 $\dot\alpha_{jk}^{p} = -(\tilde\Delta_{jk}^{p}\alpha_{jk}^{p} + i\tilde\epsilon^{p}/2) + \sum_p g^{(p,c)}\alpha_{jk}^{c}$ 给出，$\tilde\Delta$ 含 dressing 与耗散、$\tilde\epsilon$ 为驱动幅度）。值得注意的是**单边驱动无效**——只驱动一个腔无法同时色散耦合两个比特；必须两个驱动腔与长腔的特定高阶模共振，IQ 驱动的联合演化才携带两比特信息。稳态下 ZZ 速率有解析表达
+
+$$
+\mathrm{Re}[\dot\theta_{zz}] \approx \frac{\tilde\epsilon^{2}\bar\chi^{2}}{4\Delta}\left[\frac{9}{9\Delta^{2}-18g^{2}-6\Delta\bar\chi+\bar\chi^{2}} - \frac{2}{2\Delta^{2}-3\Delta\bar\chi+\bar\chi^{2}}\right],
+$$
+
+（$g$ 为腔间耦合、$\bar\chi$ 平均色散移、$\Delta$ 驱动失谐；虚部由腔耗散 $\kappa$ 给出损耗）。
+
+![[assets/figures/cavity-mediated-coupling/deng2024-fig2-rip-mechanism.jpg]]
+*RIP 机制的相空间图像与标定：驱动模与高阶模的频率都被比特态 dressing，IQ 驱动（绿）牵引多模系统沿态依赖轨迹演化并回到真空，留下纠缠相位；标定用常规 CZ 手续——目标比特制备 $|+\rangle$、控制比特置 $|g\rangle/|e\rangle$，比较投影相位即得控制相。图源：Deng et al. (2025), Fig. 2。*
+
+![[assets/figures/cavity-mediated-coupling/deng2024-fig3a-zz-detuning.jpg]]
+*长程 ZZ 相互作用随驱动失谐的变化（$\tilde\epsilon^{l}/2\pi=-\tilde\epsilon^{r}/2\pi=200$ MHz、$\chi/2\pi\approx20$ MHz、$g/2\pi=100$ MHz）：数值模拟（蓝虚线）与解析公式（黑实线）吻合，ZZ 强度超过 3 MHz——与此前 RIP 门在同一量级。图源：Deng et al. (2025), Fig. 3。*
+
+![[assets/figures/cavity-mediated-coupling/deng2024-fig3c-zz-fsr.jpg]]
+*ZZ 强度随自由谱区（FSR，由耦合距离决定）的反比缩放：FSR 减小（距离拉长）时 ZZ 收敛到零；增大腔间耦合 $g$ 并优化失谐可以补偿——FSR=200 MHz、$g/2\pi=80$ MHz、$\Delta/2\pi=50$ MHz 时仍有 2.85 MHz。图源：Deng et al. (2025), Fig. 3。*
+
+性能与工程要点：**CZ 保真度在 160 ns 内超过 99.9%**（FSR 1.4 GHz；模拟量子过程层析 99.37% @ 100 ns、99.58% @ 125 ns、99.98% @ 180 ns）；驱动脉冲按 Martinis–Geller 快绝热波形优化后，**剩余光子在约 100 ns 内压到 $\sim10^{-3}$**（FSR 0.2 GHz 时），避免残存光子带来的额外退相干。模拟开销本身是工程约束：平均光子数 $\bar n\approx1$ 需要每腔 7 能级、$\bar n\approx2$ 需 13 能级，全空间维度从 3087 涨到 19773。这一长程 ZZ 与可调耦合器架构中的静态 ZZ（机制分解见[[superconducting-qubits/zz-coupling|ZZ 相互作用]]）互补：后者服务近邻门与串扰压制，前者为高连通纠错码（如 LDPC 码）提供非局域连接。
+
 ## 扩展能力与代价
 
 腔总线带来的不只是"远程耦合"——它同时引入若干新的工程问题：
 
  1. **集体衰减与频率拥挤**：腔的耗散 $\kappa$ 直接耦合到所有挂在它上面的比特，任何一个比特的纯态操作都会把腔频移动 $\chi_k$；两个比特靠近时它们的色散响应区会重叠，造成频率拥挤。 p. 82 报告 5 比特同时接近共振时工作点会持续漂移，因此被迫放弃把 5 个比特同时调到共振，改用多比特关联谱作诊断；
- 2. **残余 ZZ 耦合与状态相关频移**：除主项 $J_{\mathrm{eff}}$ 之外，色散极限还会引入 $\sigma_z^1\sigma_z^2$ 形式的耦合（即所谓 ZZ 耦合），表现为两比特各自频率被对方状态微小修正。这一效应在比特数增多时迅速扩大，可能超过量子门保真度容差；
+ 2. **残余 ZZ 耦合与状态相关频移**：除主项 $J_{\mathrm{eff}}$ 之外，色散极限还会引入 $\sigma_z^1\sigma_z^2$ 形式的耦合（即所谓 ZZ 耦合），表现为两比特各自频率被对方状态微小修正。这一效应在比特数增多时迅速扩大，可能超过量子门保真度容差（超导可调耦合器架构中 ZZ 的完整机制分解与"误差源↔门资源"双重身份见[[superconducting-qubits/zz-coupling|ZZ 相互作用]]词条）；
  3. **校准与控制复杂度**：多比特共享同一总线，每个比特的失谐独立可调但色散响应相互纠缠，$C_{\mathrm{total}}>1$ 后腔响应的拟合需要把多个比特的耦合强度与失谐同时作为参数。这是 [[circuit-qed/strong-coupling|强耦合]]词条所描述的"高协同性"体系的代价；
  4. **"连得上"≠"并行运行"**：比特数增多并不自动意味着可并行操控比特频率。要实现可独立寻址的并行门，要么为每个比特配置独立的微磁体或局部磁场，要么为每个比特配置独立的局部总线（如 SQUID 阵列腔可在不同频率区域提供多模总线，见 [[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]）。
 
@@ -255,3 +291,8 @@ $$
  - 比特侧的通道由 [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快速退相干）与 [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体梯度、自旋轨道、翻转模式）决定；[[scaling-automation/flopping-mode-qubit|翻转模式比特]] 与 [[qubit-control/resonant-exchange-qubit|共振交换量子比特]] 都是为兼顾"电学可调 + 与腔强耦合"而提出的编码。
  - 近邻作用的对照：[[qubit-control/exchange-interaction|交换相互作用]]、[[fundamentals/tunnel-coupling|隧穿耦合]]与 [[qubit-control/cnot-gate|CNOT]] 门通过直接相互作用实现，工作距离百纳米；腔介导耦合通过共享模式跨越芯片尺度。当阵列规模超过几个比特时，两者通常混合使用：节点内用近邻，节点间用腔总线。
  - 性能瓶颈：[[materials-devices/charge-noise|电荷噪声]]仍是色散频移 $\chi_k=g_k^2/\Delta_k$ 与有效交换 $J_{\mathrm{eff}}$ 稳定性的主要限制；不同平台（[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]）在退相干和电荷噪声量级上各有差异。
+
+## 参考文献
+
+- Deng, X., Zheng, W., Liao, X., Zhou, H., Ge, Y. et al. Long-Range $ZZ$ Interaction via Resonator-Induced Phase in Superconducting Qubits. *Physical Review Letters* 134, 020801 (2025). DOI: 10.1103/physrevlett.134.020801；arXiv:2408.16617（QAtlas 缓存：2408.16617）。
+- 可调耦合器架构中静态 ZZ 的机制分解：Fors, S. P., Fernández-Pendás, J., Frisk Kockum, A. (2024). arXiv:2408.15402，见[[superconducting-qubits/zz-coupling|ZZ 相互作用]]词条。

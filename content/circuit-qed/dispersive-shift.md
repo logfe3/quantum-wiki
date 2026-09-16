@@ -63,7 +63,7 @@ $$
 H_{\mathrm{disp}}\approx\omega_r a^\dagger a+\frac{1}{2}\left(\omega_q+2\chi\,a^\dagger a+\chi\right)\sigma_z
 $$
 
-由此 ac Stark 频移把比特频率变成光子数的函数：腔内多一个光子，比特频率移动 $2\chi$。
+由此 ac Stark 频移把比特频率变成光子数的函数：腔内多一个光子，比特频率移动 $2\chi$。这一"态依赖频移×受驱腔"的组合还能反过来当门引擎用：谐振腔诱导相位（RIP）门用两路失谐驱动让多模腔回到真空并留下依赖于两比特态的纠缠相位，把长程 ZZ 推到亚米级——见[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]的"谐振腔诱导相位的长程 ZZ"一节。
 
 > **取名记号**：英文文献中 "dispersive shift" 常专指腔频移动 $\chi=g^2/\Delta$；本站把 "ac Stark shift" 与 "Lamb shift" 并列为 $\chi$ 量级修正的两类。本词条统称三者即"色散频移"。
 
