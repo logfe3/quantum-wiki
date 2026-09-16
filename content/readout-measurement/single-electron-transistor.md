@@ -13,8 +13,8 @@ tags:
  - 库仑阻塞
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m237d20vvdnh4y7bht18tg0s
-source_updated: 2026-09-09T16:03:04Z
+qatlas_id: qa_01m0qvh1s18grv8b7hnjs8xd9r
+source_updated: 2026-09-04T05:51:53Z
 ---
 
 <div class="entry-lead">单电子晶体管（single-electron transistor, SET）的核心是一只库仑岛：岛电荷改变一个电子，岛源漏电流便被周期性调制，岛外的静电计由此获得单 e 量级的灵敏度。</div>
@@ -182,6 +182,24 @@ RF-SET 同样适用波分复用（wavelength division multiplexing, WDM）：多
 
 <!-- FIGURE: RF-SET 测量电路示意图：射频源经定向耦合器、低温衰减器进入样品盒；SET 与电感 L、寄生电容构成谐振电路；反射信号经环形器、低温放大器、室温放大器后由 IQ 混频器解调 -->
 
+### 无谐振腔的片上频分复用：CTIA 读出（Schmidt 2024）
+
+谐振腔路线（无论反射式还是 WDM）每个通道都要一个电感谐振器，体积与规模化互斥。CEA/Quobly 的替代方案把 SET 的输出当**电流**处理：两个 28 nm FDSOI 单片共集成的 SET（背栅 $V_{bg}=4\ \mathrm{V}$ 帮助双顶栅之间形成单点，顶/背栅耦合比 ~8.5）分别用不同频率的载波调制栅压或源极，电流求和后由片上**电容反馈跨阻放大器（CTIA）**放大，经缓冲器沿单根线送到室温做并行 I/Q 解调——频分多址（FDMA）+ 开关键控（OOK）式判决，完全不需要谐振腔。CTIA 实测（4.2 K）：跨阻增益 121 dB·Ω、带宽 25 MHz、输入参考噪声 90 fA/√Hz、功耗 428 µW。通道正交条件为频差超过积分时间的倒数，
+
+$$
+\Delta F > 1/T_i,
+$$
+
+实测 $\Delta F=1\ \mathrm{MHz}$、$T_i=2.2\ \mu\mathrm{s}$ 时双通道同时读出保真度 **99.9%（BER=10⁻³）**——满足自旋比特读出的速度与保真度要求；栅调制（读 $g_m$）与源调制（读 $g_{ds}$）两种模式给出相同的库仑菱形特征，为不同量子核网络架构留出选择。
+
+![[assets/figures/single-electron-transistor/schmidt2024-fig2-fdm-tia-readout.jpg]]
+
+*频分复用 TIA 读出方案：(a) 输入信号的频率表示——两个 SET 各分一个载波；(b) 可测参数与双态定义（|0⟩ 取库仑阻塞噪声底、|1⟩ 调到 g_m 峰）；(c) I/Q 平面上的双幅度判决（OOK 型阈值算法）。图源：Schmidt et al. (2024), Fig. 2。*
+
+![[assets/figures/single-electron-transistor/schmidt2024-fig8-simultaneous-fidelity.jpg]]
+
+*双通道同时读出保真度随积分时间的变化：两个共集成 SET 在 T_i=2.2 µs、通道间距 1 MHz 下同时达到 99.9% 保真度（BER=10⁻³）——无谐振腔频分复用读出的首次演示。图源：Schmidt et al. (2024), Fig. 8。*
+
 ### 传输式 RF-SET：免定向耦合器的读出（Fattal 2025）
 
 反射式 RF-SET 的链路离不开定向耦合器（或双环形器）分离入射/反射——多通道扩展时这是可观的硬件开销。Fattal 等人（IMEC）演示了**传输式**替代：Si/SiGe 平台上与双量子点单片集成的 SET，经键合线接到**超导 Nb 螺旋电感**构成阻抗变换网络，载波经耦合电容穿过谐振器、透射信号直接检测——
@@ -270,5 +288,6 @@ $$
 ## 参考文献
 
 - Fattal, I., Van Damme, J., Raes, B., Godfrin, C., Jaliel, G., Chen, K., Van Caekenberghe, T. et al. Radio frequency single electron transmission spectroscopy of a semiconductor Si/SiGe quantum dot. arXiv:2504.05016 (2025)（QAtlas 缓存：2504.05016）。
+- Schmidt, Q., Jadot, B., Martinez, B., Houriez, T., et al. Compact frequency multiplexed readout of silicon quantum dots in monolithic FDSOI 28nm technology. *ESSERC 2024*（2024）. DOI: 10.1109/ESSERC62670.2024.10719580；arXiv:2410.22565（QAtlas 缓存：2410.22565）。
 - Wang, L.-J. et al. A Graphene Quantum Dot with a Single Electron Transistor as Integrated Charge Sensor. *Applied Physics Letters* **97**, 262113 (2010). DOI: 10.1063/1.3533021；arXiv:1008.4868（QAtlas 缓存：1008.4868）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

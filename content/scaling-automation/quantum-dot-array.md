@@ -39,7 +39,7 @@ $$
 H=-\sum_{i}\mu_i n_i+\sum_{i}U_i\,n_{i\uparrow}n_{i\downarrow}+\sum_{i\neq j}V_{ij}\,n_i n_j-\sum_{\langle i,j\rangle,\sigma}t_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)-\sum_{\langle i,j\rangle',\sigma}t'_{ij}\left(c_{i\sigma}^{\dagger}c_{j\sigma}+\mathrm{H.c.}\right)
 $$
 
-其中 $\langle i,j\rangle'$ 表示次近邻格点对，$U_i$ 即各点的[[fundamentals/charging-energy|充电能]]。模型参数与旋钮一一对应：$\mu_i$ 由能级栅（plunger）设定，$t_{ij}$、$t'_{ij}$ 由势垒栅设定，$U_i$ 主要由点尺寸决定、近似固定，$V_{ij}$ 随点间距衰减。与常相互作用模型相比，它能定量再现[[fundamentals/charge-stability-diagram|电荷稳定图]]中点间隧穿线的弯曲（能级杂化），这是纯静电模型做不到的。量子点阵列模拟 Hubbard 模型的想法最早由 Stafford 与 Das Sarma 于 1994 年提出，目标正是研究强关联体系的多体物理——莫特转变。
+其中 $\langle i,j\rangle'$ 表示次近邻格点对，$U_i$ 即各点的[[fundamentals/charging-energy|充电能]]。模型参数与旋钮一一对应：$\mu_i$ 由能级栅（plunger）设定，$t_{ij}$、$t'_{ij}$ 由势垒栅设定，$U_i$ 主要由点尺寸决定、近似固定，$V_{ij}$ 随点间距衰减。与常相互作用模型相比，它能定量再现[[fundamentals/charge-stability-diagram|电荷稳定图]]中点间隧穿线的弯曲（能级杂化），这是纯静电模型做不到的。量子点阵列模拟 Hubbard 模型的想法最早由 Stafford 与 Das Sarma 于 1994 年提出，目标正是研究强关联体系的多体物理——莫特转变。相互作用谱系再往强关联端走一格：单点内 $U/t$ 类比量（密度降低、$r_s$ 增大）足够大时，电子在点内自组织为空间分立构型——即[[fundamentals/wigner-molecule|Wigner 分子]]；Hubbard 图像与 Wigner 图像的分界是阵列模拟与单点多体物理共享的判据问题。
 
 ### 强耦合极限：从 Hubbard 到 Heisenberg
 

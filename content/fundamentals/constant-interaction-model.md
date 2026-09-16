@@ -8,10 +8,10 @@ aliases:
 tags:
  - 量子点基础
  - 模型
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m235n0a732fmef1ya3jgzb1x
-source_updated: 2026-09-09T14:01:19Z
+qatlas_id: qa_01m0qvgh43m1xbdn6mee6yjran
+source_updated: 2026-09-05T15:34:38Z
 ---
 
 <div class="entry-lead">常相互作用模型把复杂电子–电子相互作用压缩成一个经典充电项，再叠加离散单粒子能级，是解释库仑阻塞和电荷稳定图的最小模型。</div>
@@ -158,6 +158,20 @@ $$
 
 结果：峰间距分布**单峰、近高斯**，既不遵从 Wigner 猜想、也没有自旋简并双峰；归一化涨落 $\sigma_\mathrm{rms}\approx0.06$，对应约 115 µeV——是平均能级间距 $\Delta\epsilon$ 的 7.5 倍、CI+RMT 预言的 **15 倍**（考虑 $k_BT\approx\Delta\epsilon$ 的热展宽修正后为 30–45 倍）。由于 $E_C/\Delta\epsilon\approx125$，涨落幅度 $\approx0.06\,E_C$ 强烈指向**加电子能的涨落随 $E_C$ 而非 $\Delta\epsilon$ 标度**——电子–电子相互作用（充电能本身的涨落）主导了统计，CI+RMT 组合在此区间失效；自旋简并的双峰结构也被 $r_s>1$ 的相互作用冲掉。这一"峰间距统计"自此成为检验 CI 模型适用边界的标准实验范式。
 
+### 超越 CI：含谷自由度的 Hartree-Fock 建模（Liang 2024）
+
+CI 失效之后的下一步是单 Slater 行列式的 Hartree-Fock：完整多体解是行列式的叠加、复杂度随电子数指数增长，HF 用一个行列式换取模拟数十电子的能力（已演示至拉长硅量子点中的 20 电子）。针对硅的两个复杂性——强 e-e 相互作用与导带双谷——Liang 等人把哈密顿量写成四个**自旋-谷-轨道**自由度的形式：面内用有效质量近似（$m_x=m_y=0.19m_0$），纵向 z 用二近邻紧束缚（跃迁参数 $t_i$）纳入谷，配以典型 40 meV 的垂直电场与各向异性简谐约束（各向异性参数 $\alpha$）。把介电常数人为调大可关闭相互作用项，得到纯泡利关联的单粒子对照。
+
+![[assets/figures/constant-interaction-model/liang2024-fig4-interaction-energy.jpg]]
+
+*电子-电子相互作用的重要性：逐项能量分解显示库仑能贡献超过总能量的一半，且占比随电子数增长但非线性——波函数被排斥力推向高势区域的形变与直接相互作用同等重要，单粒子图像（CI 的底座）在多电子硅点中系统性失效。图源：Liang et al. (2024), Fig. 4。*
+
+![[assets/figures/constant-interaction-model/liang2024-fig5-anisotropy.jpg]]
+
+*约束各向异性 α 对量子点形成的影响：各向异性改变电荷密度与填充序列——多电子建模是器件设计验证（如利用高轨道态的编码方案）与实验数据解读之间的桥。图源：Liang et al. (2024), Fig. 5。*
+
+两条结论把 CI 词条的叙事接续下去：其一，**e-e 相互作用贡献超过总能量一半**且占比随电子数非线性增长（波函数形变与直接排斥同等重要）；其二，各向异性 $\alpha$ 系统性改变点的形成与填充——为利用高轨道态的多电子比特方案（如[[qubit-control/electric-quadrupole-spin-resonance|电四极自旋共振]]）提供建模基础。相互作用再往上、密度再往下，电荷密度本身开始分立化——那就进入[[fundamentals/wigner-molecule|Wigner 分子]]的领域。
+
 
 ## 与其他概念的关系
 
@@ -172,4 +186,5 @@ $$
 
 - 常相互作用模型及其在输运实验中的验证：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
 - Simmel, F., Abusch-Magder, D., Wharam, D. A., Kastner, M. A., Kotthaus, J. P. Statistics of the Coulomb blockade peak spacings of a silicon quantum dot (1999). arXiv:cond-mat/9901274（QAtlas 缓存：cond-mat_9901274）。
+- Liang, D. H., Feng, M., Mai, P. Y., Cifuentes, J. D., et al. Electronic Correlations in Multielectron Silicon Quantum Dots. *IEEE NANO 2024*（2024）. DOI: 10.1109/NANO61778.2024.10628628；arXiv:2407.04289（QAtlas 缓存：2407.04289）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

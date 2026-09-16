@@ -31,7 +31,7 @@ Si-MOS（silicon metal-oxide-semiconductor）量子点直接复用工业 MOSFET 
 
 ### 常相互作用模型与电化学势
 
-Si-MOS 中[[fundamentals/semiconductor-quantum-dot|量子点]]的[[fundamentals/coulomb-blockade|库仑阻塞]]、[[fundamentals/charging-energy|充电能]]与[[fundamentals/coulomb-diamond|库仑菱形]]全部沿用[[fundamentals/constant-interaction-model|常相互作用模型]]（constant interaction model, CI 模型）。设量子点与源、漏、栅的总电容为 $C_\Sigma=C_S+C_D+C_G$，含 $N$ 个电子的总能量为
+Si-MOS 中[[fundamentals/semiconductor-quantum-dot|量子点]]的[[fundamentals/coulomb-blockade|库仑阻塞]]、[[fundamentals/charging-energy|充电能]]与[[fundamentals/coulomb-diamond|库仑菱形]]全部沿用[[fundamentals/constant-interaction-model|常相互作用模型]]（constant interaction model, CI 模型）。多电子硅点（利用高轨道态的编码方案常需装载多个电子）的电子结构则需要超越 CI：含谷自由度（z 向紧束缚）的 Hartree-Fock 建模给出 e-e 相互作用贡献超总能量一半、各向异性系统性改变填充序列等定量结论——为 MOS 器件模型验证提供工具，见 CI 词条"超越 CI"一节。设量子点与源、漏、栅的总电容为 $C_\Sigma=C_S+C_D+C_G$，含 $N$ 个电子的总能量为
 
 $$
 U(N)=\frac{\left[-|e|(N-N_0)+C_S V_S+C_D V_D+C_G V_G\right]^2}{2C_\Sigma}+\sum_{n=1}^{N}E_n
