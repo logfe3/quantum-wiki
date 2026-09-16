@@ -73,7 +73,7 @@ $$
 
 ## 与其他概念的关系
 
-- [[circuit-qed/microwave-resonator|微波谐振腔]]：本词条是其"损耗通道"在磁场维度的延伸——TLS 与准粒子之外，涡旋耗散是混合系统特有的第三条通道，对策（材料、几何、钉扎）互不冲突可叠加。
+- [[circuit-qed/microwave-resonator|微波谐振腔]]：本词条是其"损耗通道"在磁场维度的延伸——TLS 与准粒子之外，涡旋耗散是混合系统特有的第三条通道，对策（材料、几何、钉扎）互不冲突可叠加。面内磁场还有计量学用途：薄膜电极 transmon 在数百 mT 内对面内场稳健，且频率压制由 Fraunhofer 效应主导——扫 B_|| 可调 ω₁₀ 至与结能隙不对称共振以测定 ω_LR、判定准粒子非平衡区间，见[[circuit-qed/charge-parity-fluctuation|电荷宇称涨落与准粒子隧穿]]词条。
 - [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：高动态电感材料（NbTiN/NbN）天然具备高 $B_{c2}$，是耐磁场与高阻抗两条需求的共同材料基础；SQUID 阵列腔则相反，磁通敏感与强磁场根本冲突。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]：自旋比特的 Zeeman 劈裂需要约 1 T 磁场，耐磁场腔是该体系的准入硬件；本文的 1 T 纳米线读出即其直接应用。
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]：腔读出电荷稳定图（Honeycomb 耗散图样）是不依赖直流输运的电荷传感方式，与量子点–腔的电荷耦合共享同一物理。

@@ -266,4 +266,5 @@ Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生�
 ## 参考文献
 
 - Funo, K. et al. Floquet prethermalization of $\mathbf Z_2$ lattice gauge theory on superconducting qubits. arXiv:2408.10079 (2024)（QAtlas 缓存：2408.10079）。
+- Chirolli, L., Polo, J., Catelani, G., Amico, L. Synthetic fractional flux quanta in a ring of superconducting qubits (2025). DOI: 10.1103/d3rk-kh1k；arXiv:2409.06511（QAtlas 缓存：2409.06511）——Floquet 方法的脉冲工程化分支（Leviton 协议给 hopping 加 Peierls 相位），见[[superconducting-qubits/synthetic-flux-qubit-ring|合成磁通与分数磁通量子]]词条。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

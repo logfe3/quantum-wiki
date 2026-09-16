@@ -14,8 +14,8 @@ tags:
  - 参量放大
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvehvajtq5qdekmpryk22b
-source_updated: 2026-09-15T17:50:59Z
+qatlas_id: qa_01m0qvgwbcmg0qvnnhtjse22ft
+source_updated: 2026-09-04T19:46:31Z
 ---
 
 <div class="entry-lead">把[[readout-measurement/parametric-amplifier|参量放大器]]的两个正交分量分别看作"增益模"与"损耗模"，简并参量放大器就变成了教科书里的 PT 二聚体（PT-dimer）：泵浦强度扮演增益/损耗，泵浦失谐扮演两模之间的耦合。Gaikwad 等人在三波混频 JPA 的时间域瞬态响应中，直接观测到失谐越过阈值 $\delta=\nu$ 时本征值从实变虚的 PT 对称性破缺相变——超导微波电路由此获得了第一个"无损增益"型奇异点平台。</div>
@@ -89,6 +89,28 @@ $$
 - **瞬态而非稳态**：PT 动力学因输出端口耗散只出现在瞬态（微秒量级）响应中，工作点必须"每次重新开机"——这既是实验技巧（相位锁定外差），也意味着稳态增益谱本身不直接显示奇异点。
 - **自克尔是主要非理想性**：$\chi/2\pi\approx0.095\ \mathrm{MHz}$ 使相变边界不对称、并可能限制奇异点附近的量子特性研究。
 
+## 高阶推广：非厄米量子比特与 2^n 阶奇异点的纠缠加速（Feyisa 2024）
+
+上述 PT 二聚体是**二阶**奇异点。同一概念家族可以沿"阶数"与"用途"两个方向推广：把非厄米性装进**量子比特**本身，奇异点的阶数随比特数指数增长，并反过来成为多体纠缠的加速器。
+
+**非厄米比特的构造**（已在超导电路中实验实现）：驱动-耗散的 transmon 是个 qutrit $\{|g\rangle,|e\rangle,|f\rangle\}$；用三维腔中的阻抗失配元件让 $|e\rangle$ 比 $|f\rangle$ 衰减得快、并把 $|g\rangle$ 选择性移出，$\{|e\rangle,|f\rangle\}$ 子空间就构成一个非厄米比特。$n$ 个这样弱耦合的比特由
+
+$$
+\hat H=\sum_{j=1}^{n}\left[\left(\Delta_j-\frac{i\gamma_j}{2}\right)\hat\sigma_j^\dagger\hat\sigma_j+\Omega_j\hat\sigma_j^x\right]+\sum_{j\neq k}J_{jk}\left(\hat\sigma_j^\dagger\hat\sigma_k+\hat\sigma_j\hat\sigma_k^\dagger\right)
+$$
+
+描述（$\Omega_j$ 驱动幅度、$\Delta_j$ 失谐、$\gamma_j$ 为 $|e\rangle$ 衰减率），$\Delta_j=0$ 时满足被动 PT 对称。**关键结果**：在共振 Rabi 频率 $\Omega=\gamma/4$ 处，$n$ 个无耦合比特出现 $2^n$ 阶奇异点——阶数恰好等于希尔伯特空间维数（三比特为 8 阶，全部本征值聚为 $E_{\mathrm{EP}}=-3i\gamma/4$）；弱耦合 $J=10^{-3}\ \mathrm{rad/\mu s}$ 把它劈裂为四阶与三阶奇异点、并在两侧生成二阶奇异点（强耦合区仍存），更弱的耦合（$10^{-4}$–$10^{-6}$）给出五阶。
+
+![[assets/figures/pt-symmetry-parametric-amplifier/feyisa2024-fig2-tripartite-entanglement.jpg]]
+*三比特纠缠动力学（纠缠熵与残余三体缠结）：PT 对称区（Ω≥Ω_EP）内靠近八阶奇异点时，布居与相位的同时重排使三体纠缠迅速生成——比厄米比特在弱耦合下快数千倍。图源：Feyisa et al. (2024), Fig. 2。*
+
+在 PT 对称区（$\Omega\geq\Omega_{\mathrm{EP}}$，相等虚本征值经归一化移除、实本征值主导动力学），靠近高阶奇异点的**多体纠缠生成比厄米情形加速上千倍**；厄米比特并非不能生成高保真 GHZ 态——用强驱动与大耦合常数也能在可比时间内达到保真度 $>0.9995$，代价是控制资源。方案对大 $n$ 可扩展，把非厄米性与高阶奇异点定位成多体量子技术的资源。
+
+![[assets/figures/pt-symmetry-parametric-amplifier/feyisa2024-fig4-four-qubit-entanglement.jpg]]
+*四比特情形：更高阶（2⁴=16 阶）奇异点的影响使四体纠缠生成比三比特更快——阶数随比特数指数增长的直接回报。图源：Feyisa et al. (2024), Fig. 4。*
+
+与本词条主体的对照由此清晰：参量放大器里 PT 破缺给出**二阶**奇异点的增益/损耗物理（读出应用），非厄米比特里 $2^n$ 阶奇异点给出**多体动力学**的加速（纠缠生成应用）——同一数学结构的两个工程出口。
+
 ## 与其他概念的关系
 
 - [[readout-measurement/parametric-amplifier|参量放大器]]：PT 对称性破缺是简并（相敏）工作模式的新视角——同一台 JPA，既能当量子极限放大器用（稳态增益），也能当 PT 二聚体用（瞬态动力学）；泵浦失谐在标准增益理论里只是调谐参数，在 PT 图像里则成为决定对称相的"耦合"。
@@ -114,4 +136,5 @@ $$
 ## 参考文献
 
 - Gaikwad, C., Kowsari, D., Chen, W., Murch, K. W. Observing Parity Time Symmetry Breaking in a Josephson Parametric Amplifier. *Physical Review Research* 5, L042024 (2023). DOI: 10.1103/physrevresearch.5.l042024；arXiv:2306.14980（QAtlas 缓存：2306.14980）。
+- Feyisa, C. G., You, J. S., Ku, H.-Y., Jen, H. H. Accelerating multipartite entanglement generation in non-Hermitian superconducting qubits. *Quantum Science and Technology* (2024). DOI: 10.1088/2058-9565/adafd9；arXiv:2409.03414（QAtlas 缓存：2409.03414）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

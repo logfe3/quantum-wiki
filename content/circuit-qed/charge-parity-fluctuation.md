@@ -13,8 +13,8 @@ tags:
  - 实时测量
 date: 2026-09-13
 source: QAtlas
-qatlas_id: qa_01m0qv25xx9q7y3whwamkj3zcx
-source_updated: 2026-09-12T20:56:50Z
+qatlas_id: qa_01m0qvgr3vft2dystm4npejzhd
+source_updated: 2026-09-05T01:12:28Z
 ---
 
 <div class="entry-lead">准粒子跨过约瑟夫森结每隧穿一次，就往岛上留（或带走）一个不成对电子，把比特的宇称从偶翻成奇——跃迁频率随即移动半个宇称周期。用色散读出把宇称变成实时电报信号，可以数出每一次隧穿：实测开关时间约 0.8 ms，且准粒子隧穿只贡献约 5% 的弛豫事件——它不是相干的主要瓶颈，但决定着毫秒级相干的边界。</div>
@@ -185,6 +185,30 @@ Ramsey 序列的宇称检测之外，还有**不需要脉冲序列**的连续探
 
 在 20–170 mK 范围升温重测：宇称开关率 $\Gamma_{\mathrm{rts}}$、$\Gamma_{00}^{eo}$、$\Gamma_{11}^{eo}$、$\Gamma_{10}^{eo}$ 同步上升，$T_1$ 却对温度不敏感直到约 150 mK——之后 $R_{10}(\tau\to0)$ 变号，标志准粒子隧穿成为主导弛豫机制。用式 (2) 反推 $T_r=20$ mK 时的准粒子密度 $n_{\mathrm{qp}}=0.04\pm0.01\ \mu\mathrm{m}^{-3}$，与计量学器件中报道的最低值一致；低温下 $\Gamma_{10}^{eo}$ 的压制比热平衡分布预期的弱得多，说明残余准粒子来自红外辐射等非热来源——改进屏蔽可进一步压低。
 
+## 能隙不对称结：四个非平衡区间与参数提取陷阱（Marchegiani 2025）
+
+上面的叙事假设结两侧超导体相同。实际上标准 Al-AlO$_x$-Al 结的顶层比底层厚（保证膜连续性），而铝能隙在 100 nm 以下随厚度强烈变化——结天然带有**能隙不对称** $\delta\Delta$，其频率 $\omega_{\mathrm{LR}}/2\pi=\delta\Delta/2\pi\hbar$ 可达数 GHz、与比特频率 $\omega_{10}$ 可比甚至更大。当 $\omega_{\mathrm{LR}}>\omega_{10}$ 时，跨结隧穿要付出 $\delta\Delta$ 的能量代价，准粒子被**困在低能隙电极**——比特天然免疫于准粒子（3D transmon 实验证实，多比特器件中还能压制关联错误）。这相当于内建的能隙工程。
+
+代价是：捕获让准粒子远离平衡。Marchegiani 与 Catelani 把准粒子-比特耦合的速率方程推广到中间温度（$k_BT\lesssim\omega_{\mathrm{LR}},\omega_{10}$），稳态数值解给出**四个定性不同的区间**：
+
+![[assets/figures/charge-parity-fluctuation/marchegiani2025-fig1-regimes.jpg]]
+*四个非平衡区间的示意（两侧态密度与准粒子分布）：高能隙侧过剩准粒子用化学势 μ_L 描述；低能隙侧按能量是否超过 Δ_L 分成两群，各有化学势 μ_R> 与 μ_R<。(a) 完全非平衡；(b) 局域准平衡（μ_R>=μ_R<≠μ_L）；(c) 全局准平衡（三者相等）；再升温到 k_BT∼Δ 即全平衡。图源：Marchegiani & Catelani (2025), Fig. 1。*
+
+对宇称开关率 $\Gamma_P=p_0(\Gamma_{01}^{eo}+\Gamma_{00}^{eo})+p_1(\Gamma_{10}^{eo}+\Gamma_{11}^{eo})$ 的温度依赖给出可检验的指纹：
+
+![[assets/figures/charge-parity-fluctuation/marchegiani2025-fig4-parity-rates.jpg]]
+*宇称开关率与激发/弛豫比随温度的变化（小不对称 ω_LR/2π=0.5 GHz 与大不对称 5 GHz；点划线为 Γ₀₀^ph=600 Hz、ω_LR/2π=6 GHz 的变体）：小不对称在 T≲25 mK 出现非单调（隧穿与低能隙侧弛豫的竞争使能量超过 Δ_L 的准粒子累积），大不对称则单调上升；虚线为全局准平衡模型的计算——形状可拟合但提取的结参数失真。图源：Marchegiani & Catelani (2025), Fig. 4。*
+
+**方法论警告**：用全局准平衡假设拟合"宇称寿命 vs 温度"的实验数据可以得到合理的曲线形状，但反推出的参数（能隙不对称、准粒子产生率）并不准确——这正是低温柔景解释中容易踩中的陷阱。出路是同时测激发/弛豫比，并把 $\omega_{\mathrm{LR}}$ 独立定准：
+
+- **SQUID 垂直场调频**：把 $\omega_{10}$ 调到共振条件 $\omega_{10}=\omega_{\mathrm{LR}}$ 处准粒子隧穿增强、宇称率出现峰，已实验实现（数十 MHz 分辨率）；
+- **单结器件用面内场** $B_\parallel$（数十至数百 mT）：对薄膜电极的结，频率压制由结面积的 **Fraunhofer 效应**主导（$I_c\propto\mathrm{Sinc}[\pi B/B_\Phi]$）而 $\omega_{\mathrm{LR}}$ 几乎不变——transmon 已被证明对面内场稳健到数百 mT（见[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]的材料逻辑），扫 $B_\parallel$ 即等价于扫 $\omega_{10}$。
+
+![[assets/figures/charge-parity-fluctuation/marchegiani2025-fig5a-inplane-field.jpg]]
+*面内磁场方案示意：B_|| 平行于结平面，一方面经 Fraunhofer 效应调制临界电流（从而调 ω₁₀）、另一方面对薄膜能隙的压制在薄电极结中数百 mT 内由前者主导——ω_LR 近似不变，宇称率随 B_|| 的扫描在共振处出现峰，用于测定能隙不对称。图源：Marchegiani & Catelani (2025), Fig. 5。*
+
+计算基准：光子辅助宇称开关率 $\Gamma_{00}^{\mathrm{ph}}\sim300$ Hz；外加陷阱（能隙工程衬底、正常金属/超导陷阱、涡旋核）未纳入模型，可能引入 $\mu_L\geq\mu_{R>}\geq\mu_{R<}$ 次序被违反的更多区间。
+
 ## 与其他概念的关系
 
 - 宇称检测的物理基础是[[readout-measurement/dispersive-readout|色散读出]]：跃迁频率对宇称的依赖正是电荷色散的表现，高保真度单发读出（$F=0.92$）是实时宇称追踪的前提。
@@ -197,4 +221,5 @@ Ramsey 序列的宇称检测之外，还有**不需要脉冲序列**的连续探
 ## 参考文献
 
 - Ristè, D., Bultink, C. C., Tiggelman, M. J., Schouten, R. N., Lehnert, K. W., & DiCarlo, L. (2013). *Millisecond charge-parity fluctuations and induced decoherence in a superconducting qubit*. Nature Communications **4**, 1913. [DOI:10.1038/ncomms2936](https://doi.org/10.1038/ncomms2936) · [arXiv:1212.5459](https://arxiv.org/abs/1212.5459)
+- Marchegiani, G., Catelani, G. Nonequilibrium regimes for quasiparticles in superconducting qubits with gap-asymmetric junctions. *Communications Physics* (2025). DOI: 10.1038/s42005-025-02052-x；arXiv:2408.17218（QAtlas 缓存：2408.17218）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
