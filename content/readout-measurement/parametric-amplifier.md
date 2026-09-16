@@ -10,10 +10,10 @@ aliases:
 tags:
  - 读出与测量
  - 微波
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m23b0kqng5rz8jh47zy6ztjn
-source_updated: 2026-09-09T17:00:04Z
+qatlas_id: qa_01m0qv6602s5jfhytambn1x6kz
+source_updated: 2026-09-09T15:01:57Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -161,6 +161,47 @@ $$
 $$
 
 即腔光场达到稳态后，**信息采集速率**与 2 倍**测量微波驱动引起的退相干速率**之比。$\eta = 1$ 时意味着以最大速率、最小代价提取量子比特信息；$\eta = 0$ 时只是引起退相干而没有获得任何有用信息。
+
+## 高阶非线性修正：Kerr 项对增益、量子效率与压缩的限制
+
+上文的输入输出理论建立在"理想二次哈密顿量"上，把约瑟夫森余弦势只保留到四阶（Kerr）甚至更低。Boutin 等人对三种常用泵浦方案做了系统的高阶修正分析：**单色电流泵浦**经位移变换后同时产生三次项与四次项修正 $\mu \hat d^{\dagger 2}\hat d + \mu^* \hat d^\dagger \hat d^2 + \Lambda \hat d^{\dagger 2}\hat d^2$；**双色电流泵浦**与**单色磁通泵浦**的三次项相消，只剩单个 Kerr 四次项 $\Lambda \hat d^{\dagger 2}\hat d^2$。其中 Kerr 系数
+
+$$
+\Lambda = -\frac{E_J \Phi_{\mathrm{zpf}}^4}{4} = -\frac{E_C}{2}
+$$
+
+$E_J$ 是约瑟夫森能、$\Phi_{\mathrm{zpf}}$ 是磁通零点涨落、$E_C$ 是充电能（$\Lambda$ 即 transmon 型电路的自克尔，符号为负）。用两个泵浦 tone 替代单个电流泵，对理想 DPA 行为的偏离可降低约两个数量级；用约瑟夫森结阵列稀释非线性时 Kerr 按 $1/N^2$ 下降。
+
+### 量子效率的重新定义与保相情形
+
+把放大器附加噪声折算为输入端等效分束器，量子效率由输入–输出涨落关系定义：
+
+$$
+\langle|\hat a_{\mathrm{out}}|^2\rangle = \frac{G}{\eta}\left[(1-\eta)\frac{1}{2} + \eta\,\langle|\hat a_{\mathrm{in}}|^2\rangle\right],
+\qquad
+\eta = \frac{1}{1+2\mathcal{A}} \le \frac{G}{2G-1}
+$$
+
+其中 $G$ 是功率增益、$\mathcal{A}=(1-\eta)/2\eta$ 是折算到输入端的附加噪声、不等号来自保相放大的量子极限 $\mathcal{A}\ge\tfrac12(1-1/G)$——大增益下保相测量的量子效率上界为 $\eta\le 1/2$。数值主方程计算给出一个反直觉结论：**保相模式下 Kerr 修正几乎无害**——即使增益 20 dB、$|\Lambda|=0.01\kappa$，量子效率仍贴着量子极限（$|\Lambda|/\kappa=10^{-4}$ 与 $10^{-3}$ 的曲线与极限线几乎不可分辨），无需任何参数调谐。
+
+![[assets/figures/parametric-amplifier/boutin2017-fig7-phase-preserving-quantum-efficiency.jpg]]
+*保相量子效率 η 随增益的变化（Kerr 修正，$\omega=\Delta=\gamma=0$）：$|\Lambda|/\kappa=10^{-4}$（蓝菱形）与 $10^{-3}$（绿方块）在整个参数范围内均贴近量子极限（黑虚线）；只有更大的 Kerr（红圆）在高增益区出现可见下降。图源：Boutin et al. (2017), Fig. 7。*
+
+### 相敏情形：相位选择成为生死线
+
+同一个 Kerr 修正对相敏测量却是致命的：增益矩阵因 Kerr 变得非对称，非零交叉增益 $g_{12}$ 把共轭正交分量的噪声混入被测分量。此时量子效率 $\eta(\theta)$ 依赖于测量相位 $\theta$，且**最优相位不再是增益最大的相位 $\theta_m$，而是交叉增益 $|g_{12}|$ 最小的相位 $\theta_o$**。定量地：增益 25 dB、$|\Lambda/\kappa|=10^{-2}$ 时，$\theta_o$ 相位的量子效率约 0.9，而 $\theta_m$ 相位接近于零——两者相位差不到 0.2 rad（约 12°）。高增益 JPA 做相敏放大/压缩实验时，必须完整表征增益矩阵的相位与频率依赖再选工作点。
+
+![[assets/figures/parametric-amplifier/boutin2017-fig9a-phase-sensitive-efficiency-reduction.jpg]]
+*相敏量子效率的退化：(a) $1-\eta$ 随相敏增益的增大——实线为最大增益相位 $\theta_m$、虚线为最小交叉增益相位 $\theta_o$；增益 25 dB、$|\Lambda/\kappa|=10^{-2}$ 时 $\theta_o$ 仍保有 $\eta\approx0.9$ 而 $\theta_m$ 几乎完全退化。图源：Boutin et al. (2017), Fig. 9(a)。*
+
+### 压缩饱和与非高斯特征
+
+作为压缩源，理想 DPA 的（中心频率）压缩水平随增益无界增长；一旦考虑有限带宽滤波（实验常用的 256 ns boxcar 滤波、约 4 MHz 带宽），即使理想 JPA 也会因压缩带宽随增益收窄而饱和——这是增益–带宽权衡的又一体现。Kerr 修正则带来额外的饱和与回退：同一 JPA 从单色电流泵改为双色电流泵即可显著抬升最大压缩水平。在磁通泵浦 JPA 的实验上（器件 $C=3.2\ \mathrm{pF}$、$L_J(\Phi=0)=45\ \mathrm{pH}$、几何电感 35 pH、参与比 $p=0.8$，对应 $\Lambda/2\pi=-1.55\ \mathrm{MHz}$、$\bar\kappa/2\pi=130\ \mathrm{MHz}$、$\gamma=\kappa/10$，全部由独立测量给出、无拟合参数），数值计算定量重现了实测的最大压缩水平，证明高增益区压缩饱和的主因是高阶修正而非此前猜测的双稳阈值——饱和发生在泵浦功率低于分岔点之处。
+
+![[assets/figures/parametric-amplifier/boutin2017-fig11-squeezing-experiment-vs-numerics.jpg]]
+*磁通驱动 JPA 压缩水平的实验–数值对比：绿三角与红方块为测量链增益两种估计对应的实验上下界（误差棒为统计误差），蓝圆为无拟合参数的数值结果，浅蓝点划线为理想 DPA 预期——高阶修正解释了高增益区压缩水平的饱和。图源：Boutin et al. (2017), Fig. 11。*
+
+高阶修正还破坏输出场的高斯性：理想 DPA 输出是高斯压缩态，含三次项时 Wigner 函数呈"月牙形"畸变、仅含 Kerr 四次项时呈"S 形"畸变；三阶累积量在纯 Kerr 情形严格为零、四阶累积量随增益与非线性增强。实验用 Lucy–Richardson 反卷积直接成像了输出场 Husimi Q 函数：24 dB 增益下观测到明显的 S 形非高斯畸变，与数值预言一致。改进路径有三：双色电流泵或磁通泵消除三次项、结阵列/附加线性电感稀释 Kerr、按 $\theta_o$ 相位与最优频率工作。
 
 ## 基于约瑟夫森结的实现：JPA
 
@@ -332,6 +373,11 @@ $$
 | 并联 JPA 单只带宽/增益 | 48–52 MHz @ 20 dB（三只中心频率错开，1.2–1.33 GHz） | Uchaikin 2024 |
 | 并联 JPA 组合覆盖 | 约 140 MHz（单次降温，约为单只 3 倍） | Uchaikin 2024 |
 | 并联 JPA 系统噪声温度 | 约 150 mK（Y-factor 法，36 mK 恒温噪声源） | Uchaikin 2024 |
+| 高阶修正 Kerr 系数（磁通泵浦实验器件） | $\Lambda/2\pi=-1.55\ \mathrm{MHz}$（$C=3.2\ \mathrm{pF}$、$L_J=45\ \mathrm{pH}$、参与比 0.8，由独立测量推得） | Boutin 2017 |
+| 磁通泵浦实验腔衰减率 | $\bar\kappa/2\pi=130\ \mathrm{MHz}$、$\gamma=\kappa/10$ | Boutin 2017 |
+| Kerr 对保相量子效率的影响 | $|\Lambda|=0.01\kappa$、增益 20 dB 时仍近量子极限 | Boutin 2017 |
+| Kerr 对相敏量子效率的影响 | 增益 25 dB、$|\Lambda/\kappa|=10^{-2}$：$\theta_o$ 相位 $\eta\approx0.9$、$\theta_m$ 相位 $\approx0$（相位差 <0.2 rad） | Boutin 2017 |
+| 压缩水平滤波带宽 | 256 ns boxcar（约 4 MHz），理想 JPA 亦因带宽收窄而饱和 | Boutin 2017 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -370,7 +416,7 @@ $$
 
 - **约瑟夫结行波参量放大器（JTWPA, Josephson traveling-wave parametric amplifier）**：把上千个几乎一致的约瑟夫森结 + 谐振单元串接成传输线，靠色散工程让三波/四波混频在宽频带内同时满足相位匹配，典型可在数 GHz 范围内维持 $\sim 20\ \mathrm{dB}$ 增益，饱和功率足以同时读取约 20 个超导量子比特。代价是制备工艺复杂、对结参数均一性要求极高；其器件结构、电流–相位关系谐波工程与增益–稳定性权衡见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]；
 - **动力学电感行波放大器（KTWPA, kinetic-inductance TWPA）**：利用超导薄膜的非线性动力学电感实现参量放大，工艺更简单但谐波控制更难；
-- **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；
+- **SNAIL / rf-SQUID 阵列型**：在饱和功率与增益–带宽乘积上寻找更优折中，用更多结的人工非线性替代单个 SQUID；SNAIL-TWPA 的磁通偏置切换 3WM/4WM 与大信号谐波平衡建模见专页[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]——磁通偏到 $0.4\Phi_0$ 抑制四波混频后，泵浦频率位于增益谱之外，可避免强泵浦对频谱内量子比特的意外激发；
 - **Floquet 模式 TWPA**：把泵浦分解为周期调制的"模式"，可在更低泵浦功率下获得高增益。
 
 对 §4.4 中提到的低温放大器方案而言，JTWPA 是工业级、IMPA 是实验室级、JPA 是单比特级——三者各有适用场景。
@@ -413,9 +459,10 @@ $$
 - 参量放大器提升的量子效率直接进入色散读出的信噪比——参见[[readout-measurement/dispersive-readout|色散读出]]。相敏放大器的 $N_a = 0$ 在理论上比保相放大的 $N_a = 0.5$ 高出 $50\%$ 的量子效率，对[[readout-measurement/single-shot-readout|单发读出]]与[[readout-measurement/threshold-independent-readout|阈值无关读出]]影响显著。
 - 多比特读出时多腔共享总线，需要[[readout-measurement/readout-crosstalk|读出串扰]]抑制；IMPA 的宽带宽让所有比特腔都落在增益带内，从而用同一台首级放大器服务整条总线——这是 FDM 的硬件前提。
 - 在物理实现层面，JPA 是[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]非线性电路的具体应用之一：SQUID 提供的非线性电感与[[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]中"原子"扮演的角色类似，只不过这里是把它当作非线性介质利用而非与腔交换激发。[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]路线则把同样的非线性推到传输线整体的非线性电感中（KTWPA）。
-- 量子效率 $\eta$ 还可以从信息论解读：$\lim_{t\to\infty} \Gamma_m/(2\Gamma_d) = \eta$，把放大器噪声与测量诱导退相干挂钩——这与[[readout-measurement/dispersive-readout|色散读出]]的腔光场动力学分析是同一思路。
+- 量子效率 $\eta$ 还可以从信息论解读：$\lim_{t\to\infty} \Gamma_m/(2\Gamma_d) = \eta$，把放大器噪声与测量诱导退相干挂钩——这与[[readout-measurement/dispersive-readout|色散读出]]的腔光场动力学分析是同一思路。高增益下 Kerr 修正使相敏量子效率强烈依赖相位（见上文"高阶非线性修正"一节），而简并工作模式的瞬态动力学还映射出 PT 对称性破缺相变——见[[readout-measurement/pt-symmetry-parametric-amplifier|参量放大器中的 PT 对称性破缺]]。
 
 ## 参考文献
 
+- Boutin, S., Toyli, D. M., Venkatramani, A. V., Eddins, A. W., Siddiqi, I., Blais, A. Effect of higher-order nonlinearities on amplification and squeezing in Josephson parametric amplifiers. *Physical Review Applied* 8, 054030 (2017). DOI: 10.1103/physrevapplied.8.054030；arXiv:1708.00020（QAtlas 缓存：1708.00020）。
 - Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
