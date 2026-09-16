@@ -254,4 +254,5 @@ $C>1$ 是"相干耦合占优"的前提之一。提升 $C$ 既要增大 $g$（用
 - **比特退相干**：$\gamma$ 与 $\kappa$ 在合作因子 $C=g^2/(\kappa\gamma)$ 中对称出现，是判断比特–腔组合相干优劣的"两半"；
 - **腔介导耦合**：在色散区两比特经虚光子交换得到有效相互作用 $\sim g_1g_2/\Delta$，但若 $\kappa$ 太大、虚光子寿命短于比特–比特相位积累时间，远程耦合会被腔耗散拖垮，对应[[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]词的硬件约束；
 - **Purcell 滤波**：（参见[[readout-measurement/purcell-filter|Purcell 滤波]]）通过外部带阻结构把有效 $\kappa$ 抑制到不影响比特自发辐射的水平，是 Purcell 效应反向应用的典型例；
+- **电压可调的 $\kappa$**：量子电路冰箱（QCR）用 SINIS 结的偏压脉冲把腔耗散率临时抬高约一个量级（$\kappa_{\mathrm{eff}}=\kappa_r+\delta\gamma_{\mathrm{QCR}}$）、关断时恢复本底——$\kappa$ 不再只是设计定死的几何量，而成为可纳秒级开关的工作参数，见[[superconducting-qubits/qubit-fast-reset|量子比特快速复位]]的 QCR 一节；
 - **平台材料**：$\kappa_i$ 强烈依赖材料与界面工艺，主要平台为[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]] 与[[materials-devices/strained-germanium|应变锗]]等异质结。

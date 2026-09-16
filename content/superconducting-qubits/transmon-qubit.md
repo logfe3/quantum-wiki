@@ -162,7 +162,7 @@ $$
 
 ## 操控、读出与泄漏
 
-- **单比特操控**：在 $\omega_{01}$ 附近施加 I/Q 微波包络，旋转速率由驱动幅度和 $\langle0|\hat n|1\rangle$ 决定。脉冲过短时频谱覆盖 $\omega_{12}$，造成 $|2\rangle$ 泄漏；实际常用带导数正交分量的脉冲抑制这一误差。
+- **单比特操控**：在 $\omega_{01}$ 附近施加 I/Q 微波包络，旋转速率由驱动幅度和 $\langle0|\hat n|1\rangle$ 决定。脉冲过短时频谱覆盖 $\omega_{12}$，造成 $|2\rangle$ 泄漏；实际常用带导数正交分量的脉冲抑制这一误差。共振驱动之外还有两条参量路线：泵浦固有 Kerr 项的[[superconducting-qubits/subharmonic-drive|次谐波驱动]]（$\omega_q/3$ 三光子过程，Rabi 速率 ∝ 幅度³，驱动线可低通滤波保相干），以及把计算基搬上连续驱动缀饰态的[[superconducting-qubits/spin-locked-qubit|自旋锁定量子比特]]（时钟条件下对相位噪声一阶免疫）。
 - **色散读出**：读取腔的相位或幅度响应，辨认腔频的 $\pm\chi$ 位移。为获得单发信噪比，输出链通常结合[[readout-measurement/parametric-amplifier|约瑟夫森参量放大器]]和低噪声低温放大器。
 - **多比特复用**：多个读取腔可以频分复用，但腔间耦合、放大器饱和和公共馈线会引入[[readout-measurement/readout-crosstalk|读取串扰]]。
 

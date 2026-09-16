@@ -11,10 +11,10 @@ tags:
  - 超导量子比特
  - 耗散工程
  - 初始化
-date: 2026-09-15
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvggr1cjxy422bh8w6cmyc
-source_updated: 2026-09-05T16:43:52Z
+qatlas_id: qa_01m0qvegtystvk2daaw3am4tjw
+source_updated: 2026-09-16T00:05:56Z
 ---
 
 <div class="entry-lead">快速复位是量子纠错、比特复用编译与开放系统模拟的共同前提，但它天然与比特保护矛盾：复位需要一条通向耗散浴的通路，而通路本身又会把比特的相干性漏给环境。Ding 等人 2025 年的架构用两片片上双工器（diplexer）把这对矛盾拆到两条频带上——高通支路照常传读出信号（读出腔可以放在比特频率之上，减少测量诱导跃迁），低通支路里一个 4.23 GHz 驻波"耗散模"专职复位；比特平时停在两支滤波器的共同阻带里，看不见任何耗散通道。把可调 transmon 调到与耗散模共振，100 ns 内 |e⟩→|g⟩ 复位残余误差仅 2.7%；利用相干布居反转还可压到 27 ns。</div>
@@ -52,6 +52,42 @@ $$
 ![[assets/figures/qubit-fast-reset/ding2025-fig4ab-reset-efficiency.jpg]]
 *|e⟩→|g⟩ 复位效率：(a) 实验时序（平台时间 $t_p$ 内比特与耗散模共振）；(b) 复位后残余布居随共振保持时间的指数衰减，特征速率 Γ≈1/(21 ns)，100 ns（约 5Γ⁻¹）后残余误差约 2.7%。图源：Ding et al. (2025), Fig. 4(a–b)。*
 
+## 量子电路冰箱：电压可调的耗散旋钮
+
+与双工器"频率上分道"不同，**量子电路冰箱（QCR, quantum-circuit refrigerator）**在时域上做文章：给读出腔并联一个超导–绝缘–正常金属–绝缘–超导（SINIS）结，平时不加偏压、SINIS 对腔"隐形"，复位瞬间加电压脉冲——偏压驱动的**光子辅助准粒子隧穿**开始从腔抽取能量，腔的耗散率被临时抬高。耗散率的电压依赖写作
+
+$$
+\kappa_{\mathrm{eff}}(V_b) = \kappa_r + \delta\gamma_{\mathrm{QCR}}(V_b)
+$$
+
+其中 $\kappa_r$ 是无偏压时的本底腔耗散率，$\delta\gamma_{\mathrm{QCR}}$ 是 QCR 附加冷却速率。微观上它由 SINIS 在腔光子数态 $|m\rangle\to|m'\rangle$ 之间的跃迁率给出：$\delta\gamma_{\mathrm{QCR}}=\Gamma_{0,1}(V_b)-\Gamma_{1,0}(V_b)$，跃迁率 $\Gamma_{m,m'}$ 由隧穿电阻 $R_T$（实测 72 kΩ）、normal 岛充电能与态分布函数决定。实验上用脉冲前后腔信号幅度比的对数斜率提取 $\delta\gamma_{\mathrm{QCR}}$：最优偏压在 $eV_b/2\Delta=1.03$（$\Delta$ 为 Al 铅的超导能隙 193 μeV）附近，腔耗散率较本底（$\kappa_r=2.36\times10^6\ \mathrm{s^{-1}}$）**提升约一个数量级**，且理论曲线（无拟合参数）与实测吻合。
+
+![[assets/figures/qubit-fast-reset/yoshioka2023-fig1a-qcr-device.jpg]]
+
+*QCR 器件总览：Nb（紫）刻蚀出读出腔与馈线；腔的一端经叉指电容耦合 SINIS 结（Cu/Al 双角度蒸发），另一端耦合 transmon 比特；SINIS 偏压线由 bias-T 分离直流与脉冲。图源：Yoshioka et al. (2023), Fig. 1(a)。*
+
+![[assets/figures/qubit-fast-reset/yoshioka2023-fig3b-qcr-relaxation-vs-bias.jpg]]
+
+*腔耗散率随 SINIS 偏压的变化：横轴为归一化偏压 eV_b/2Δ；黑点划线为 QCR 关闭时的本底 κ_r，绿点为开启后的实测值，蓝/红理论线分别给出 δγ_QCR 与 κ_eff=κ_r+δγ_QCR——阈值之上耗散率增大约一个量级，eV_b/2Δ≈1.03 处 ON/OFF 比最大。图源：Yoshioka et al. (2023), Fig. 3(b)。*
+
+### 复位协议与实测速度
+
+复位协议沿用微波侧带方案：两个驱动脉冲把激发态能量搬运成腔光子、再靠腔耗散泄放——$\Omega_{\mathrm{Rabi}}$ 脉冲把 $|e,0\rangle$ 泵到 $|f,0\rangle$，$g_{\mathrm{Rabi}}$ 脉冲使 $|f,0\rangle$ 与 $|g,1\rangle$ 交换能量，腔光子以 $\kappa_{\mathrm{eff}}$ 泄放后比特落回 $|g,0\rangle$。系统哈密顿量（含侧带项）为
+
+$$
+\hat H/\hbar = \omega_r \hat a^\dagger\hat a + \omega_{ge}\hat b^\dagger\hat b + \frac{\alpha}{2}\hat b^{\dagger2}\hat b^2 + \lambda(\hat b^\dagger\hat a + \hat b\hat a^\dagger) + \frac{g_{\mathrm{Rabi}}}{\sqrt2}(\hat b^{\dagger2}\hat a\, e^{i\omega_{f0g1}t} + \mathrm{h.c.}) + \frac{\Omega_{\mathrm{Rabi}}}{\sqrt2}(\hat b\, e^{i\omega_{ef}t} + \mathrm{h.c.})
+$$
+
+其中 $\hat a$（$\hat b$）是腔（比特）算符，$\lambda/2\pi=136\ \mathrm{MHz}$ 是比特–腔耦合，$\omega_{f0g1}/2\pi=2.499\ \mathrm{GHz}$ 是侧带跃迁频率；两脉冲幅度取满足 $\Omega_{\mathrm{Rabi}}$–$g_{\mathrm{Rabi}}$ 最优配比（实验固定 $g_{\mathrm{Rabi}}/2\pi=28.4\ \mathrm{MHz}$）。器件参数：$\omega_r/2\pi=6.538\ \mathrm{GHz}$、$\omega_{ge}/2\pi=4.663\ \mathrm{GHz}$、$\alpha/2\pi=-261.8\ \mathrm{MHz}$、$T_1=9.6\ \mu s$。最优偏压下实测：**残布居在约 180 ns 内降到 1% 以下（99% 复位）**，与主方程模拟一致；由此推出的稳态基态占据 99.89% 与实测 $99.5\pm0.5\%$ 吻合。对比之下，靠该比特自然弛豫达到 99% 需要 42 μs——加速两百多倍。f0g1 强脉冲的 ac-Stark 频移与 QCR 偏压引起的 Lamb 频移都需要事先校准。
+
+![[assets/figures/qubit-fast-reset/yoshioka2023-fig5-initialization-time.jpg]]
+
+*最优参数（eV/2Δ=1.03、g_Rabi/2π=28.4 MHz）下的初始化实测：横轴为初始化脉冲长度，纵轴为 Rabi 布居测量提取的 |e⟩ 残布居——约 180 ns 处越过 99% 复位线，与主方程数值模拟吻合。图源：Yoshioka et al. (2023), Fig. 5。*
+
+### 速度极限与权衡
+
+QCR 路线的复位速度由腔耗散率上限决定，而后者反比于 SINIS 隧穿电阻：降低 $R_T$、增大 SINIS–腔耦合电容可把 99% 复位压到 100 ns 以内。理论极限是 SINIS 直接耦合比特（预言 6 ns），但代价是比特寿命缩短约 12.6%；经腔中介的方案对比特相干的代价小于 1%——这是"耗散通路物理隔离（双工器）"与"耗散旋钮电压开关（QCR）"两条路线共享的核心权衡。QCR 关闭时仍需核对偏压状态对比特 $T_1$ 的影响；f0g1 泵浦线的高功率脉冲也要求对 ac-Stark 做逐幅度校准。
+
 ## 适用条件与边界
 
 - **需要频率可调比特**：复位依赖把比特调到耗散模共振，固定频率比特需改用参量调制或全微波驱动等方案。
@@ -66,9 +102,10 @@ $$
 - [[readout-measurement/dispersive-readout|色散读出]]：高通支路承载的频分复用读出不受复位架构影响，腔在比特之上的配置还降低了测量诱导态跃迁。
 - [[readout-measurement/readout-induced-leakage|读出诱导泄漏]]：泄漏态清算是复位协议的任务之一，从 $|f\rangle$ 态的级联复位是两条词条的共同接口。
 - [[superconducting-qubits/transmon-qubit|transmon 量子比特]]：实验载体为频率可调 transmon，其 SQUID 调频范围决定能否够到耗散模。
-- 与量子电路冰箱、内禀 Purcell 滤波器、参量磁通调制等方案一道，本架构属于超导比特"耗散工程"复位工具箱的一员。
+- 与量子电路冰箱（见上文 QCR 一节：SINIS 偏压把腔耗散率电压可调地抬高约一个量级）、内禀 Purcell 滤波器、参量磁通调制等方案一道，本架构属于超导比特"耗散工程"复位工具箱的一员。
 
 ## 参考文献
 
+- Yoshioka, T., Mukai, H., Tomonaga, A., Takada, S., Okazaki, Y., Kaneko, N., Nakamura, S., Tsai, J.-S. Active Initialization Experiment of Superconducting Qubit Using Quantum-circuit Refrigerator. arXiv:2306.10212 (2023)（QAtlas 缓存：2306.10212）。
 - Ding, J., Li, Y., Wang, H., Xue, G., Su, T., Wang, C., Sun, W., Li, F., Zhang, Y., Gao, Y., Peng, J., Jiang, Z. H., Yu, Y., Yu, H., Yan, F. Multi-Purpose Architecture for Fast Reset and Protective Readout of Superconducting Qubits. *Physical Review Applied* 23, 014012 (2025). DOI: 10.1103/PhysRevApplied.23.014012；arXiv:2407.21332（QAtlas 缓存：2407.21332）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

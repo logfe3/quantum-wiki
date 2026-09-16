@@ -160,3 +160,4 @@ PAT 用连续微波驱动、把电荷转移过程"打开"为电流；而[[readou
 - [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/jaynes-cummings-model|JC 模型]]：PAT 是腔量子电动力学在"经典极限"下的对应，色散读出与 PAT 共振条件在数学上接续；
 - [[materials-devices/gaas-algaas|GaAs/AlGaAs 异质结]]：传统 GaAs 双量子点是 PAT 谱学的标准平台，非掺杂 GaAs 把 $T_2^*$ 的天花板提高到了接近传统器件的水平；
 - [[materials-devices/charge-noise|电荷噪声]]：PAT 共振峰的展宽部分源于低频电荷噪声，是测量 [[materials-devices/charge-noise|电荷噪声]]对相干时间影响的直接途径。
+- [[superconducting-qubits/subharmonic-drive|次谐波驱动]]：超导比特侧的对应物——用三个驱动光子合成一个比特光子（$\omega_q/3$ 泵浦 Kerr 项），同样是周期驱动能级的多光子共振；transmon 谱学中熟悉的 $gf/2$ 双光子峰在那里推广为 $gf/6$ 八波过程。

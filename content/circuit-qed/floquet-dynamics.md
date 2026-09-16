@@ -231,3 +231,4 @@ Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生�
 - [[circuit-qed/strong-coupling|强耦合]]（$g>\kappa,\gamma$）是 Floquet 态消耗与增益条纹能被分辨的实验前提；$g/\kappa$ 的大小直接决定增益能否出现。
 - [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]系统中，Floquet 理论需要从单比特推广到耦合系统矩阵；色散读出近似忽略的量子点间相互作用此时进入 Floquet 响应函数。
 - [[readout-measurement/dispersive-readout|色散读出]]给出 Floquet 动力学进入实验信号的具体公式（$\chi^{(0)}$ 在 $S_{11},S_{21}$ 中的位置）。
+- [[superconducting-qubits/spin-locked-qubit|自旋锁定量子比特]]：连续失谐驱动 transmon 的缀饰态就是 Floquet 本征态；其"时钟条件"（准能级对失谐的微分灵敏度为零）把 Floquet 框架变成了相位噪声保护的工程工具。
