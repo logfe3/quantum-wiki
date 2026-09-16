@@ -11,8 +11,8 @@ tags:
  - 自旋量子比特
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m23a3zt9e3ajhdwse9f1xc6e
-source_updated: 2026-09-09T15:29:34Z
+qatlas_id: qa_01m0qv1fqsach208v7wsca3wzx
+source_updated: 2026-08-24T08:37:37Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -119,6 +119,37 @@ $$
 ![[assets/figures/valley-splitting/thayil2025-fig5a-separatrix-map.jpg]]
 *长周期摆动阱的两参数地图（剪切应变 × Ge 幅度）：虚线为 ν=2σ 分界（确定性增强区 vs 无序主导区）——大剪切应变下微小的 Ge 幅度即可进入确定性增强区，热点的统计权重被系统性压低。图源：Thayil et al. (2025), Fig. 5(a)。*
 
+### 原子级紧束缚视角：合金键型与界面无序（Jiang 2012）
+
+上节的统一理论在连续介质框架内统计合金无序；原子级模拟给出互补且更细的机制图像。Jiang 等人用 **VFF 应变弛豫（修正 Keating 势，阱两侧各 25 nm SiGe）+ sp³d⁵s* 近邻紧束缚（电子结构区 4 nm）** 的链条在 NEMO-3D 中处理至 $5\times10^5$ 个原子，对 20 个随机原子构型样本统计平均。模型先过两道实验验证：区展开提取的体 SiGe X/L 谷带边与实测定量吻合（含 X–L 交叉），VFF 忠实复现 Si–Si/Si–Ge/Ge–Ge 的**三峰键长分布**——而虚拟晶体近似（VCA）只有一条平均键长，意味着 SiGe/Si 界面处存在 VCA 完全看不到的**位置无序**。
+
+结论按主题分四条：
+
+- **无序是主效应**：3.8 nm 阱零场 VS 只有无序突变势垒连续模型预言的约 1/3；阱厚 <10 nm 时样本间标准差显著增大——波函数非均匀渗入势垒使"有效阱厚"依赖样本。
+- **电场**：升至 20 MV/m 时 VS 增大、阱厚依赖被三角阱冲洗，但统计分布更宽（波函数更深地探入无序势垒）。
+- **域尺寸**：10×10 nm² 横向域的样本涨落大、平均值都未收敛到大域极限——为量子点尺寸做无序平均时要检查域收敛。
+- **键型 Gedankenexperiment**：25% Ge 的 8 原胞有序构型 {4,6}/{5,6}（无最近邻 Ge–Ge 键）给出偏高的 VS，而含一个 Ge–Ge 键的 {2,6} 把 VS 压回随机合金值——**只匹配带错位与有效质量不够，必须计入全部三类键**。
+
+![[assets/figures/valley-splitting/jiang2012-fig2a-well-thickness.jpg]]
+*阱厚依赖（1 与 2 MV/m，逐单胞改变厚度）：计算复现实验观测的"阱越薄 VS 越大"趋势（4/5.3/10/20 nm 实验点，未调任何材料参数）；计算值系统性偏高是因为未含已知会压低 VS 的界面切斜（miscut），本文聚焦"平整阱 + 合金无序"。图源：Jiang et al. (2012), Fig. 2。*
+
+![[assets/figures/valley-splitting/jiang2012-fig5a-bond-types.jpg]]
+*键型效应（有序 25% Ge 势垒，实/虚线为 {4,6}/{5,6} 构型，对照随机势垒）：无 Ge-Ge 键的有序势垒 VS 高于随机情形；纳入最近邻 Ge-Ge 键（{2,6}，另见图 b）后 VS 被压回随机值——Ge–Ge 键是合金无序压低谷劈裂的关键微观通道。图源：Jiang et al. (2012), Fig. 5。*
+
+### δ 掺杂 Si:P 层的谷劈裂与第一性计算基准（Drumm 2013）
+
+STM 光刻的原子精度器件把磷原子放进硅的单个原子层（δ 层），排成阵列、导线、隧道结与量子点——这一施主平台中谷简并的解除同样是首要问题，但量级与阱/点体系完全不同：$1/4$ ML $c(2\times2)$ Si:P 单层的谷劈裂（超胞折叠后 $\Gamma_1$–$\Gamma_2$ 带极小能差）达 **meV 量级**，文献预言却散布在 5–270 meV 之间。
+
+![[assets/figures/valley-splitting/drumm2013-fig2-delta-layer.jpg]]
+*δ 掺杂 Si:P 层的原子模型（沿 [110] 视角，32 层）：Si（小灰球）与取代晶位的 P 原子构成单掺杂层，上下为 Si 包覆层——超胞周期边界会使相邻掺杂层人工耦合，收敛需要 ≥80 层包覆。图源：Drumm et al. (2013), Fig. 2。*
+
+Drumm 等人的贡献是**基组基准化**：以平面波 DFT（VASP，截止能可系统提升）为基准，80 层 Si 包覆下 $1/4$ ML 掺杂的谷劈裂收敛于 **93 meV**；局域数值轨道基 DZP（SIESTA）给 99.5 meV（偏差 7%，且因局域性可算两倍大的系统）；而此前计算常用的 **SZP 基给 145 meV——高估 55%**，即先前 ab initio 谷劈裂系统性高估逾 50% 的根源在于基组不完备。这条教训与上文"局域 EFT 参考能歧义"一节同构：跨方法对比必须显式基准化，否则数值差异会被误读为物理。
+
+体系本身还有两个敏感性：**隐式掺杂把掺杂层沿法向抹平、削弱限域**，谷劈裂从显式掺杂的 ~120 meV 跌到 ~7 meV；**P 原子排列**同样关键——[110] 对齐 ~270 meV、[100] 对齐 ~50 meV、二聚体 ~85、随机 ~80、团簇 ~65 meV。收敛判据方面，$\Gamma_1$–$\Gamma_2$ 在 80 层包覆收敛（40 层即差 <0.5 meV）；离子弛豫位移 <0.05 Å、能量收益 <37 meV，可忽略。
+
+![[assets/figures/valley-splitting/drumm2013-fig5a-pw-convergence.jpg]]
+*平面波 DFT 的尺寸收敛（1/4 ML 掺杂，最低几个带极小能量 vs 包覆层数）：Γ₁–Γ₂ 差（即谷劈裂）在 80 层收敛到 93 meV，40 层即与之相差 0.5 meV 以内；费米面与 Γ₁ 的间距自 60 层起变化 <1 meV。图源：Drumm et al. (2013), Fig. 5。*
+
 ### 非局域多谷包络函数理论：局域近似的参考能歧义（Ermoneit 2026）
 
 词条前述各理论框架（二能级哈密顿量、统一包络方程、多谷有效质量理论）都建立在"缓变包络 + 局域势"的有效质量语言上。Ermoneit 等人指出：在硅这类多谷半导体里，这一惯例有一个隐藏的失效模式——**局域包络函数理论（local EFT）的谷间耦合不是规范不变的**——并给出严格处理谷扇区投影的精确理论作为替代。
@@ -185,6 +216,9 @@ $$
 | Si/SiGe（Intel 代工三点的 QD₁,QD₂） | 36.81(1) 与 46.86(1) µeV | 同上，5 个取向 | Jacobson 2026 |
 | 自旋–谷耦合 γ 平台对照 | SiMOS 0.730(3)/0.87(2) µeV vs Si/SiGe 0.0504(2)/0.0571(2) µeV（差一个量级）；η≈0.55–0.84 rad，面内最大沿 [110]、节点沿 [1̄10] | 四能级模型拟合 | Jacobson 2026 |
 | 热点附近线宽 | >5 MHz（电荷噪声敏感度增强），沿 [1̄10]/[3̄10] 取向更局部化 | FFT 线宽叠加 | Jacobson 2026 |
+| 原子级 TB：无序量级 | 3.8 nm 阱零场 VS ≈有序突变势垒计算的 1/3；电场升分布展宽；10×10 nm² 域未收敛 | sp³d⁵s* TB + VFF，20 样本（NEMO-3D，至 5×10⁵ 原子） | Jiang 2012 |
+| 原子级 TB：键型 | 含最近邻 Ge-Ge 键（{2,6} 构型）把 VS 压回随机合金值；只匹配带错位不够 | 有序合金 Gedankenexperiment（25% Ge） | Jiang 2012 |
+| δ 掺杂 Si:P 层谷劈裂 | 1/4 ML：PW-DFT 基准 93 meV（80 层包覆）、DZP 99.5 meV、SZP 145 meV（高估 55%）；隐式掺杂 ~7 vs 显式 ~120 meV；[110]~270/[100]~50 meV | 平面波 vs 局域基 DFT 收敛研究 | Drumm 2013 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -457,4 +491,6 @@ $$
 - Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. *Nature Communications* (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
 - Ermoneit, L., Thayil, A., Koprucki, T., Kantner, M. Exact Multi-Valley Envelope Function Theory of Valley Splitting in Si/SiGe Nanostructures (2026). DOI: 10.1103/md2x-s44y；arXiv:2602.14787（QAtlas 缓存：2602.14787）。
 - Jacobson, N. T., Foster, N. D., Jock, R. M., Rudolph, M., Mounce, A. M., Ward, D. R., Carroll, M. S., Luhman, D. R. Anisotropic spin-valley coupling in SiMOS and Si/SiGe quantum dots (2026). arXiv:2604.16713（QAtlas 缓存：2604.16713）。
+- Jiang, Z., Kharche, N., Boykin, T., Klimeck, G. Effects of Interface Disorder on Valley Splitting in SiGe/Si/SiGe Quantum Wells. *Applied Physics Letters* (2012). DOI: 10.1063/1.3692174；arXiv:1110.4097（QAtlas 缓存：1110.4097）。
+- Drumm, D. W., Budi, A., Per, M. C., Russo, S. P., Hollenberg, L. C. L. Ab initio calculation of valley splitting in monolayer δ-doped phosphorus in silicon. *Nanoscale Research Letters* 8, 111 (2013). DOI: 10.1186/1556-276X-8-111；arXiv:1201.3751（QAtlas 缓存：1201.3751）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
