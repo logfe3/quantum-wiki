@@ -600,13 +600,15 @@ function deriveTopicsFromWikiIndex(wikiIndex, seedTopics) {
     .slice(0, 12)
 }
 
-function pickNextTopic(state, seedTopics, wikiIndex) {
+function pickNextTopic(state, seedTopics, wikiIndex, { avoidDerived = false } = {}) {
   const derived = deriveTopicsFromWikiIndex(wikiIndex, seedTopics)
   const used = new Set(state.usedTopics.map((topic) => topic.toLowerCase()))
   const unusedSeed = seedTopics.find((topic) => !used.has(topic.toLowerCase()))
   if (unusedSeed) return { topic: unusedSeed, origin: "seed" }
-  const unusedDerived = derived.find((topic) => !used.has(topic.toLowerCase()))
-  if (unusedDerived) return { topic: unusedDerived, origin: "derived-from-main" }
+  if (!avoidDerived) {
+    const unusedDerived = derived.find((topic) => !used.has(topic.toLowerCase()))
+    if (unusedDerived) return { topic: unusedDerived, origin: "derived-from-main" }
+  }
   // All known topics used: restart the cycle with round-robin over the seed
   // list (ordered by knowledge-gap priority) instead of always returning to
   // seedTopics[0]. usedPapers keeps paper-level dedup across cycles.
@@ -950,9 +952,10 @@ async function commandAuto(options) {
     let runId = null
     let chosenTopic = null
     let discoverOutcome = "failed"
+    let avoidDerived = false
     try {
       for (let attempt = 0; attempt < topicsToTry; attempt += 1) {
-        const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex)
+        const selection = pickNextTopic(state, autodiscovery.seed_topics ?? [], wikiIndex, { avoidDerived })
         console.log(`Topic (${selection.origin}): "${selection.topic}"`)
         try {
           const discoverResult = await commandDiscover(
@@ -969,6 +972,7 @@ async function commandAuto(options) {
           if ((discovered.candidates ?? []).length === 0) {
             console.log(`Topic "${selection.topic}" returned no candidates; trying the next topic.`)
             state.usedTopics.push(selection.topic)
+            if (selection.origin === "derived-from-main") avoidDerived = true
             continue
           }
           runId = candidateRunId
@@ -978,6 +982,7 @@ async function commandAuto(options) {
         } catch (error) {
           console.log(`Discover failed for "${selection.topic}": ${error.message}`)
           state.usedTopics.push(selection.topic)
+          if (selection.origin === "derived-from-main") avoidDerived = true
         }
       }
     } catch (error) {

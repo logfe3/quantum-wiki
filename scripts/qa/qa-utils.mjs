@@ -45,7 +45,7 @@ export function cleanMarkdown(markdown) {
     )
     .replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1")
     .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<[^>]+>/g, "")
+    .replace(/<\/?[a-zA-Z][^>]*>/g, "")
     .replace(/\\\*/g, "*")
     .split(/\r?\n/)
     .map((line) => line.trimEnd())
