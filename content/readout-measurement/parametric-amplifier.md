@@ -12,8 +12,8 @@ tags:
  - 微波
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv6602s5jfhytambn1x6kz
-source_updated: 2026-09-09T15:01:57Z
+qatlas_id: qa_01m0qvmh1y8d8s2nx4f6rq41aa
+source_updated: 2026-09-09T14:54:56Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -349,7 +349,33 @@ $$
 
 ### 测量线路的实际影响
 
-实测中环境阻抗并非理想 $50\ \Omega$：环形器端口阻抗有明显的感抗振荡，会把振荡反映到 IMPA 的增益曲线中，需要对环形器逐个筛选、把工作频率微调以避开振荡峰；连接线缆上的驻波也会让环境阻抗随频率变化变密；通过微调泵浦频率 $f_p$ 改变增益中心是常见的实验对策。
+实测中环境阻抗并非理想 $50\ \Omega$：环形器端口阻抗有明显的感抗振荡，会把振荡反映到 IMPA 的增益曲线中，需要对环形器逐个筛选、把工作频率微调以避开振荡峰；连接线缆上的驻波也会让环境阻抗随频率变化变密；通过微调泵浦频率 $f_p$ 改变增益中心是常见的实验对策。这一现象的完整定量理论见下节。
+
+## 环境法布里–珀罗干涉：增益谱的环境整形
+
+Kono 等人 2026 年把"环境失配"从麻烦升级为设计对象：JPA 与环形器之间的阻抗失配让这段波导成为一个**有效法布里–珀罗（FP）腔**——JPA 的反射界面与环形器的失配界面是两面"镜"，信号在腔内往返再回到 JPA 参与放大。基于量子输入输出理论，组合系统的解析反射谱 $S_{11}(\delta)$（$\delta$ 为相对 JPA 频率的失谐）由七个参数完全确定：JPA 的外耦合率 $\kappa$ 与内损耗率 $\kappa_0$、两面镜的透射率 $\eta$ 与 $\eta_0$、FP 腔**自由谱区** $\Delta$、**往返相位** $\varphi_0$ 与泵浦幅度 $\Omega_p$。核心定标判据由 $\Delta$ 相对 $\kappa$ 的比值给出：
+
+$$
+\Delta>\kappa:\ \text{近似洛伦兹增益}\qquad
+\Delta<\kappa:\ \text{间距为}\ \Delta\ \text{的纹波}\qquad
+\Delta\approx\kappa:\ \text{纹波融合成平顶增益谱}
+$$
+
+——FP 干涉不只是畸变源：把 $\Delta$ 设计到与 $\kappa$ 匹配可以**整形出平顶宽带增益**，这是 IMPA 阻抗变换之外的另一条环境工程路线。设计的底层权衡是：增益带宽 $B\approx\kappa/(2\sqrt G)$ 要求 $\Omega_p\approx\kappa$（泵浦效率随约瑟夫森参与比 $p_J$ 上升），而压缩点 $\propto 1/K$（$K$ 为自克尔）随 $p_J$ 下降——**泵浦效率与动态范围在 $p_J$ 上对立**。
+
+![[assets/figures/parametric-amplifier/kono2026-fig1-jpa-fabry-perot-circuit.jpg]]
+
+*JPA–波导–环形器组合：磁通驱动集总元件 JPA（电容并联 SQUID 阵列）经波导接环形器，环形器的阻抗失配提供弱反射——JPA 与失配点之间形成有效法布里–珀罗腔，往返反射波重新进入 JPA 参与干涉。图源：Kono et al. (2026), Fig. 1。*
+
+![[assets/figures/parametric-amplifier/kono2026-fig3b-fp-gain-regimes.jpg]]
+
+*FP 干涉对增益谱的理论整形：不同自由谱区 Δ（相对 κ）下的计算增益谱——Δ>κ 时近似洛伦兹，Δ<κ 时出现间距 Δ 的纹波，Δ≈κ 时纹波融合为平顶谱（最大增益均取 20 dB）。图源：Kono et al. (2026), Fig. 3(b)。*
+
+实验（磁通驱动 SQUID 阵列 JPA，9.0–9.6 GHz 可调）证实并利用了这一图像：实测净增益谱随 JPA 频率剧烈变形——双峰、三峰乃至单峰平顶，解析模型逐谱拟合全部复现；拟合参数本身成为**环境诊断工具**（$\varphi_0$ 随 JPA 频率线性变化对应确定的腔长、$1-\eta$ 给出失配幅度，从而把"JPA 固有动力学"与"环境效应"干净分离）。性能量级：20 dB 净增益、3 dB 带宽 ~50 MHz（最高净增益 44 dB 时收窄到 ≲0.2 MHz）；在 $\omega_c/2\pi=9.375\ \mathrm{GHz}\pm\Delta$ 范围内，20 dB 带宽随 JPA 频率**周期性**地在 10–50 MHz 间变化（42 dB 时 0.1–1.5 MHz）——信号与 FP 反射的相长/相消干涉使带宽时增时减；1 dB 压缩点同样依赖往返相位 $\varphi_0$，动态范围可由工作点选择优化。
+
+![[assets/figures/parametric-amplifier/kono2026-fig5a-measured-gain-spectra.jpg]]
+
+*实测净增益谱（约 20 dB，JPA 频率 9.0–9.6 GHz 扫描）：因低温布线中的阻抗失配，谱形随 JPA 频率显著偏离洛伦兹——出现双峰/三峰/平顶等干涉图样；解析输入输出模型（含 FP 腔）对全部谱形定量拟合，参数随频率的演化给出环境失配与腔长的诊断。图源：Kono et al. (2026), Fig. 5(a)。*
 
 ## 参数与量级
 
@@ -378,6 +404,9 @@ $$
 | Kerr 对保相量子效率的影响 | $|\Lambda|=0.01\kappa$、增益 20 dB 时仍近量子极限 | Boutin 2017 |
 | Kerr 对相敏量子效率的影响 | 增益 25 dB、$|\Lambda/\kappa|=10^{-2}$：$\theta_o$ 相位 $\eta\approx0.9$、$\theta_m$ 相位 $\approx0$（相位差 <0.2 rad） | Boutin 2017 |
 | 压缩水平滤波带宽 | 256 ns boxcar（约 4 MHz），理想 JPA 亦因带宽收窄而饱和 | Boutin 2017 |
+| FP-JPA 净增益/带宽 | 20 dB @ ~50 MHz；最高 44 dB（片上 45 dB）时 ≲0.2 MHz | Kono 2026 |
+| FP 带宽周期变化 | 20 dB 下 10–50 MHz、42 dB 下 0.1–1.5 MHz（JPA 频率在 ω_c±Δ 内扫描） | Kono 2026 |
+| FP 谱形判据 | Δ>κ 洛伦兹 / Δ<κ 纹波（间距 Δ）/ Δ≈κ 平顶；1 dB 压缩点依赖往返相位 φ₀ | Kono 2026 |
 | 量子极限附加噪声 $N_a$ | $0.5$（保相）、$0$（相敏） | Caves 1982 |
 
 ## 实验特征与低温测量
@@ -463,6 +492,7 @@ $$
 
 ## 参考文献
 
+- Kono, S., Ilves, J., van Loo, A. F., Sunada, Y., Chang, C. W. S., Takeda, Y., Yuki, K., Miyamura, T., Matsuura, K., Koshino, K., Nakamura, Y. High-gain and large-bandwidth Josephson parametric amplifier influenced by Fabry-Pérot interference. arXiv:2604.13881 (2026)（QAtlas 缓存：2604.13881）。
 - Boutin, S., Toyli, D. M., Venkatramani, A. V., Eddins, A. W., Siddiqi, I., Blais, A. Effect of higher-order nonlinearities on amplification and squeezing in Josephson parametric amplifiers. *Physical Review Applied* 8, 054030 (2017). DOI: 10.1103/physrevapplied.8.054030；arXiv:1708.00020（QAtlas 缓存：1708.00020）。
 - Uchaikin, S. et al. Improving Amplification Bandwidth by Combining Josephson Parametric Amplifiers for Active Axion Search Experiments at IBS/CAPP. *Journal of Low Temperature Physics* (2024). DOI: 10.1007/s10909-024-03090-5（QAtlas 缓存：10.1007_s10909-024-03090-5）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
