@@ -1,12 +1,12 @@
 {
-  "source_digest": "ed11cfbe716803b6f78143a82c26b5075a48fe64ecd023455ec38c462ee9c7e2",
+  "source_digest": "fc122cffb42300c42f61e2dbd25401e1c80f12b959e37a1a875ba0ec4dd2733c",
   "pages": [
     {
       "path": "content/circuit-qed/analytical-3d-cqed.md",
       "title": "三维 cQED 全波解析解",
       "topic": "circuit-qed",
       "sha256": "8224b309cca2fa82db96437d7adeee4855248527c516f52ffa2a4027c743eacb",
-      "split": "dev"
+      "split": "test"
     },
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -19,7 +19,7 @@
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
       "topic": "circuit-qed",
-      "sha256": "85ad7ca7dbe3398d17a1325f13c03a46c8699323f7c9f3f6e51323896b9016d1",
+      "sha256": "d9d08e814edabbf7b0d9ed9a29b2d7f26e48837f11e19e30a82ce009f258f6f1",
       "split": "test"
     },
     {
@@ -41,7 +41,7 @@
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
       "sha256": "a942ccd41c389f2011b816f9b64ff0a7d3f93b9594bf0c05b8760080e93c5000",
-      "split": "train"
+      "split": "dev"
     },
     {
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
@@ -55,6 +55,13 @@
       "title": "色散频移",
       "topic": "circuit-qed",
       "sha256": "7c4f4bfd6867640246692d170e3cc2c4451c12d32c1d1999e78ee9a37b350f87",
+      "split": "train"
+    },
+    {
+      "path": "content/circuit-qed/feedback-cooling.md",
+      "title": "微波光机械反馈冷却",
+      "topic": "circuit-qed",
+      "sha256": "7e1792bf41a069d55856fd67213af6f5100b2d0924a8f56d597e7227f5ed05cc",
       "split": "train"
     },
     {
@@ -72,10 +79,17 @@
       "split": "train"
     },
     {
+      "path": "content/circuit-qed/giant-atom.md",
+      "title": "人工巨原子",
+      "topic": "circuit-qed",
+      "sha256": "82d73bce4fd6b5f55f7b57df4409d27837cd286ff8be7347cf0bd468899852e3",
+      "split": "train"
+    },
+    {
       "path": "content/circuit-qed/hbar-quantum-acoustodynamics.md",
       "title": "高次体声波谐振器量子声动力学",
       "topic": "circuit-qed",
-      "sha256": "9735a2895d38799181c78e0d20958221b3f9a4dbb7036c6d08835f0d8c2fd74b",
+      "sha256": "10ab352e92d5d1f0b4e37cdeb73999eab538d8d2f2646b3354b889ed60458703",
       "split": "train"
     },
     {
@@ -153,7 +167,7 @@
       "title": "超导二极管非互易性",
       "topic": "circuit-qed",
       "sha256": "39059910029f04eb9b2bbf76825bdddbad8d788dbaca1aa2b09cff5492488ef0",
-      "split": "train"
+      "split": "dev"
     },
     {
       "path": "content/circuit-qed/superinductance.md",
@@ -187,7 +201,7 @@
       "path": "content/fundamentals/constant-interaction-model.md",
       "title": "常相互作用模型",
       "topic": "fundamentals",
-      "sha256": "c010c272ed45ce13bba46702db82928df9f7fe002df9dddf678e05c8000c82b6",
+      "sha256": "84e8446d96191829ea11504b6d8ea6bac5558e1d0f8bdccd53b1a05c342a053e",
       "split": "train"
     },
     {
@@ -229,14 +243,14 @@
       "path": "content/fundamentals/pinch-off.md",
       "title": "夹断",
       "topic": "fundamentals",
-      "sha256": "e23a0498bbebce32975a0961546bf3d31e03ea7bd244c47456c73ea5f91e7aa3",
+      "sha256": "d9ca7219716e68605474f21b91fbe47157bd1784cb81ff53146a3e3b850f04f9",
       "split": "train"
     },
     {
       "path": "content/fundamentals/semiconductor-quantum-dot.md",
       "title": "半导体量子点",
       "topic": "fundamentals",
-      "sha256": "bdc3948a2ad4376d89a2eb8bae5c076c52b8089dddb0878143038425674cf47a",
+      "sha256": "ebe5aedb8536b2f5aff4dce8a6d7226bf377417b5f3cb127fbcaf44b667361b2",
       "split": "train"
     },
     {
@@ -268,6 +282,13 @@
       "split": "dev"
     },
     {
+      "path": "content/fundamentals/wigner-molecule.md",
+      "title": "Wigner 分子",
+      "topic": "fundamentals",
+      "sha256": "634e713c5548a7b869b1f3d62f70f0063cb6d540dab37178f3d8bad97ea23101",
+      "split": "train"
+    },
+    {
       "path": "content/fundamentals/zeeman-effect.md",
       "title": "Zeeman 效应",
       "topic": "fundamentals",
@@ -285,7 +306,7 @@
       "path": "content/materials-devices/charge-noise.md",
       "title": "电荷噪声",
       "topic": "materials-devices",
-      "sha256": "7c6c52d97738724999bb3f7d39e9d2d72f9e9c4ab39ba2c9ef7976eba9b0d994",
+      "sha256": "d00837ebf327f5f55797ae862c7c2016afcf2b8042bfef86e2df1d359506a679",
       "split": "train"
     },
     {
@@ -306,7 +327,7 @@
       "path": "content/materials-devices/interface-defects.md",
       "title": "界面缺陷",
       "topic": "materials-devices",
-      "sha256": "1fdda035de958f826707d757cfdb2a8677e6e2bc1644d21599363dde4d1d0921",
+      "sha256": "3ba8dab60358e91e5b0d70e095917be9c4cb896411c1c1f395c18e2d7f43d87a",
       "split": "train"
     },
     {
@@ -334,14 +355,14 @@
       "path": "content/materials-devices/silicon-mos.md",
       "title": "Si-MOS 量子点",
       "topic": "materials-devices",
-      "sha256": "a175c350e686c6177c36852083a3e47d70b01388edc03637caefe9025b1a74b1",
+      "sha256": "a6e0fb86d38ff3ea456eb1b09bb1b4fa4ffab0df634ddcc7172bdcff90c5cfdb",
       "split": "train"
     },
     {
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "28873444a744c3be5a211db1261da756367b638dbeccdd5d54e8147b7d79d955",
+      "sha256": "632850b77f2e6f84269bb2ecf152e78b71daca7740fb4074653128828dde138a",
       "split": "train"
     },
     {
@@ -376,7 +397,7 @@
       "path": "content/qubit-control/dynamical-decoupling.md",
       "title": "动力学解耦",
       "topic": "qubit-control",
-      "sha256": "916306997b2864d2cada70b2ed250c79a7f5ab6b2e7aec4173dc97a10ebb5508",
+      "sha256": "29d4b59a2dcd334236567caf69e452164bdfa08717c072ce79b290590377a666",
       "split": "train"
     },
     {
@@ -390,7 +411,7 @@
       "path": "content/qubit-control/electric-quadrupole-spin-resonance.md",
       "title": "电四极自旋共振",
       "topic": "qubit-control",
-      "sha256": "9247c423a9f43ecfb9eff5942f09f46520e3da590ab30398eba0c86e71dbbcb7",
+      "sha256": "16cb551f7bb994be86523895c45cae50ebc2f33dfe08264004eaef633789c375",
       "split": "train"
     },
     {
@@ -509,7 +530,7 @@
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "086407e5355b787ada68cd90b8a5585c2d9c033f37e0d024a134c20fd28dc57f",
+      "sha256": "c79d795f43f3ec14eb464f1db8c7baa528e1853a63cb19274556919e4fdbcbe2",
       "split": "test"
     },
     {
@@ -537,7 +558,7 @@
       "path": "content/readout-measurement/amplifier-saturation-power.md",
       "title": "参量放大器饱和功率",
       "topic": "readout-measurement",
-      "sha256": "fcd442b53f456dc467d96bdb490043281ded2ccd7ff68e033cfe95c034e773a6",
+      "sha256": "f8c2734cfb4c85782e41bddf1991f2a9e6bf146ae38dbb490d79fe463c4e7ec9",
       "split": "train"
     },
     {
@@ -551,7 +572,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "1e1277eab52fbe06599c5f71fc92cfcfd055903030f77e0cada8a81e45610c47",
+      "sha256": "a1a2ad45d2a5a6a7550d2e12a087820f6837008b53fea2b98c9df95f1cfd1d40",
       "split": "train"
     },
     {
@@ -572,21 +593,21 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "221f5740912fb5305596a36830b05d2dd7748e563351ea51777e2807c52bbdcb",
+      "sha256": "f138cb2cda73d9fcf39274670ff411c437ece052f86b330115656bed770f8366",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/kinetic-inductance-twpa.md",
       "title": "动力学电感行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "8fc5ddf7880a74daf1122d0bca251c27534327428d512c5c637f6507dad3449d",
+      "sha256": "a33a7e9b488f6eb4d3590ae18747b3f18e6f80a3fb11cac566dcf910a0480727",
       "split": "dev"
     },
     {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "741e3f8a4464a2ae1cbb5c605340366095527a87ce276d5bc52d77f853c406cb",
+      "sha256": "ac6992cac5b8e556b4880179b87ce810a8e73ce5d0bd3f866c71eb56199db837",
       "split": "train"
     },
     {
@@ -600,7 +621,7 @@
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "14ec1124074cbfc2693658ccf13fdfb70901c090913b8eb8a4287a4792662093",
+      "sha256": "8cc5b8be552c7e506f76938d67401869620c17fd2f9ae37506fd87906ca2e5af",
       "split": "train"
     },
     {
@@ -621,7 +642,7 @@
       "path": "content/readout-measurement/qubit-thermometry.md",
       "title": "超导比特温度计",
       "topic": "readout-measurement",
-      "sha256": "280db33fac098d4498998835edea75533b51b287bc175ae6f17bb5edc8463df9",
+      "sha256": "d67c02c18c45dd04757e6e419fc10d97fd65c9eb3d6b805aa7b5db841d155694",
       "split": "train"
     },
     {
@@ -642,14 +663,14 @@
       "path": "content/readout-measurement/rf-reflectometry.md",
       "title": "射频反射测量",
       "topic": "readout-measurement",
-      "sha256": "651bec1bb893a4203cc9a136e0a8658cbf824c521baed05f58a842dbb61c63d9",
+      "sha256": "75ba1c73da6f792e9d590ffd8cf85fadab6a7e398e80c330e40f2128437eddf7",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/single-electron-transistor.md",
       "title": "单电子晶体管",
       "topic": "readout-measurement",
-      "sha256": "e172d800b0148f972e858a967a321ce3253af18d8751d0a7208f95ce2594d9cf",
+      "sha256": "416e37118809117b27d18b655e21eff983faf6fa258fa76eb8f7902e20bf8051",
       "split": "train"
     },
     {
@@ -670,7 +691,7 @@
       "path": "content/scaling-automation/automatic-tuning.md",
       "title": "自动调控",
       "topic": "scaling-automation",
-      "sha256": "0ce11aeb77d71ba544c1d9b87ce63375afc89654c189998ad4dbe7c955383aad",
+      "sha256": "033c147b33814021f756250e343e865a461a4cf5bcf637630a072aae195712ca",
       "split": "train"
     },
     {
@@ -698,7 +719,7 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "ea838998c7722e62f2730b25226b4f7abe2d3132656a73b20da487282f5fb627",
+      "sha256": "277bd1c4cbbce91854767a2c4a87098aa2b3b23e7bd802fa68a99cdcd5377b2e",
       "split": "dev"
     },
     {
@@ -733,14 +754,14 @@
       "path": "content/scaling-automation/multiplexed-qd-characterization.md",
       "title": "大规模量子点多路复用表征",
       "topic": "scaling-automation",
-      "sha256": "123288732818c716a49e0cf8d3f3b7276e77399547dcd73e54b47949d03966e4",
+      "sha256": "b861bc951b9ff335ce97c5fb49b005033f8c05f7ededc680792c980c51f57454",
       "split": "dev"
     },
     {
       "path": "content/scaling-automation/quantum-dot-array.md",
       "title": "量子点阵列",
       "topic": "scaling-automation",
-      "sha256": "7e1445cb224fbfdb17a6fa304a447086486498b5ec84d0a0ba0eb7faa51b1534",
+      "sha256": "3788126eb4d5cd7227dcc2231105ca34902f9a15d2cb5672e4ce63ee3f50f55b",
       "split": "train"
     },
     {
@@ -789,7 +810,7 @@
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
       "title": "Fluxonium 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "acc7af616ed11494912189ded37a7395faaf8068e635265fcaf3d1ce5ae2b0f3",
+      "sha256": "5cbbbfa889fe7bfa29b08b2c552280ee59278db5662100ebbb726edb120414e7",
       "split": "train"
     },
     {
@@ -852,7 +873,7 @@
       "path": "content/superconducting-qubits/t1-fluctuation-statistics.md",
       "title": "比特寿命涨落统计",
       "topic": "superconducting-qubits",
-      "sha256": "446cdac8a7765e97d1e8b4c47b07f30a32e105573e1e8c949ebc7015d11708c5",
+      "sha256": "7a0df3207a6508b8e6b6d402a38a966e323edf72a4dbfc17adbdca9506ea1a43",
       "split": "train"
     },
     {
@@ -866,7 +887,7 @@
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "110b1220d78550e60d5fcd0ef61556a4bb3dec4b959382f0716a117c7df67f55",
+      "sha256": "232ad03d19a64590cd6126e07649b5b8e5ffdf0a87bf37bc0aedc2846997452b",
       "split": "train"
     },
     {
