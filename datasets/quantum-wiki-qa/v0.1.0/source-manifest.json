@@ -1,12 +1,12 @@
 {
-  "source_digest": "87922de42dcaae17d97eff129a909d47010f4c89713e22a31a80f41c4fb83d0b",
+  "source_digest": "e2996c1b0d83cf48d8fd3a01f7a6fabf2edbd2099c62ed149dbca859980cf82c",
   "pages": [
     {
       "path": "content/circuit-qed/analytical-3d-cqed.md",
       "title": "三维 cQED 全波解析解",
       "topic": "circuit-qed",
       "sha256": "8224b309cca2fa82db96437d7adeee4855248527c516f52ffa2a4027c743eacb",
-      "split": "test"
+      "split": "dev"
     },
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -41,7 +41,7 @@
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
       "sha256": "a942ccd41c389f2011b816f9b64ff0a7d3f93b9594bf0c05b8760080e93c5000",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/circuit-qed/circuit-quantum-electrodynamics.md",
@@ -75,7 +75,7 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "66ac58253bce12a4a05c0285efda5dbc32dfbc3f615842c1b633c19463f8e2ee",
+      "sha256": "bd0204192b046448f651be532b77272059c705e7f4f111bfa25fb3c1af5987ec",
       "split": "train"
     },
     {
@@ -107,6 +107,13 @@
       "split": "train"
     },
     {
+      "path": "content/circuit-qed/line-graph-flat-band.md",
+      "title": "线图格子平带与 cQED 格子",
+      "topic": "circuit-qed",
+      "sha256": "4fb91d5963400bf53c529c5c86109d7eaecf4e64d0e5ef6a3740f3a29b93472d",
+      "split": "test"
+    },
+    {
       "path": "content/circuit-qed/longitudinal-coupling.md",
       "title": "纵向耦合",
       "topic": "circuit-qed",
@@ -117,7 +124,7 @@
       "path": "content/circuit-qed/microwave-resonator.md",
       "title": "微波谐振腔",
       "topic": "circuit-qed",
-      "sha256": "aea26fc74c6e2dbb35c83f1c0e2d5b18ab7f4aa4e76bfb519d5b1eb2e1046b93",
+      "sha256": "5b0b6439b693dc000db08a39d2d754d615617ea82eab5edc59d0c6bcf0c61099",
       "split": "train"
     },
     {
@@ -285,7 +292,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "439081fead56176d90801e3013f21616bbd6a46387c584debb029173cba0f87d",
+      "sha256": "a8a6e2f88ddf891bfb96eb8a8eecc1f77a7383a255252682cfb01fa1171bddc3",
       "split": "dev"
     },
     {
@@ -369,7 +376,7 @@
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "632850b77f2e6f84269bb2ecf152e78b71daca7740fb4074653128828dde138a",
+      "sha256": "059512e0202e3f198defafd27f14a6c93ebd376610c846883f629a810ecf3520",
       "split": "train"
     },
     {
@@ -544,7 +551,7 @@
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "c79d795f43f3ec14eb464f1db8c7baa528e1853a63cb19274556919e4fdbcbe2",
+      "sha256": "0bff512a2625cf60c8f48c3a3442ccca8f32440bbfabc96784762537ad5280f3",
       "split": "test"
     },
     {
@@ -663,7 +670,7 @@
       "path": "content/readout-measurement/readout-crosstalk.md",
       "title": "读出串扰",
       "topic": "readout-measurement",
-      "sha256": "597ec5f0463b177afefbed9a437bd2524fa930acacfb0af2a9a332bded60b4aa",
+      "sha256": "bcaf7a4803ac94de25363aee889bb49c99f3ed9edb42defb3d6d66713059d91f",
       "split": "test"
     },
     {
@@ -712,7 +719,7 @@
       "path": "content/scaling-automation/charge-shuttling.md",
       "title": "电荷穿梭",
       "topic": "scaling-automation",
-      "sha256": "772b834f07907cc217f425d7863de6061049d7821a965b337cf5a2c2421fb439",
+      "sha256": "86bcae9ae9b76baff2dd3412f72a57b27c1ddc6d13ad965ed878c37111660d0d",
       "split": "train"
     },
     {
@@ -733,8 +740,8 @@
       "path": "content/scaling-automation/cryo-electronics.md",
       "title": "低温电子学",
       "topic": "scaling-automation",
-      "sha256": "277bd1c4cbbce91854767a2c4a87098aa2b3b23e7bd802fa68a99cdcd5377b2e",
-      "split": "dev"
+      "sha256": "302d012cc2048dbdc69064438d45457b1ea3cb5606baaf4064037db835b7572a",
+      "split": "train"
     },
     {
       "path": "content/scaling-automation/flopping-mode-qubit.md",
@@ -747,8 +754,15 @@
       "path": "content/scaling-automation/frequency-homogenisation.md",
       "title": "全局操控与频率均匀化",
       "topic": "scaling-automation",
-      "sha256": "9841c41041d16352327d345b0cd369e34a9392f08108e2833327e5fcc993b81c",
+      "sha256": "4a39320986afb925a579ca253c39f3db0ab170437698a6ba80d99f9a6f369f2b",
       "split": "train"
+    },
+    {
+      "path": "content/scaling-automation/hot-spin-qubit-operation.md",
+      "title": "高温自旋比特运行",
+      "topic": "scaling-automation",
+      "sha256": "73e7eaa483ab095253294c1c62856b351d12ac378ffda4d72770754250c58d1e",
+      "split": "test"
     },
     {
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
@@ -768,7 +782,7 @@
       "path": "content/scaling-automation/multiplexed-qd-characterization.md",
       "title": "大规模量子点多路复用表征",
       "topic": "scaling-automation",
-      "sha256": "b861bc951b9ff335ce97c5fb49b005033f8c05f7ededc680792c980c51f57454",
+      "sha256": "3853f7b8434650ca0476cae2b6dea20d6dcc3de474293bc6ea361437d7de305e",
       "split": "dev"
     },
     {
@@ -789,14 +803,14 @@
       "path": "content/scaling-automation/thouless-pumping-jja.md",
       "title": "约瑟夫森结阵列中的 Thouless 量子泵浦",
       "topic": "scaling-automation",
-      "sha256": "bffd6b1e26d864aff538fbfef0a9d22746f8148a4919e2d46a78b24df177c4f7",
-      "split": "test"
+      "sha256": "46a16baeb26d8ad6b2e20a46f91016b0cd22dcf5edeaeae06c39d73f7438b526",
+      "split": "dev"
     },
     {
       "path": "content/scaling-automation/two-dimensional-array.md",
       "title": "二维量子点阵列",
       "topic": "scaling-automation",
-      "sha256": "e1ed9f565fb3d298833a1f963620ddc671b7e9283ee96f854bb6d8e82001d7e9",
+      "sha256": "37859a4b34f1ffcf32d648d9903c34edc764b8fdc0865617593eb10fa9342855",
       "split": "test"
     },
     {
@@ -812,6 +826,20 @@
       "topic": "superconducting-qubits",
       "sha256": "11ac90f171ea0983d2a909607fc528ecce4d2647ebbf338675e5abc5e47e69ba",
       "split": "test"
+    },
+    {
+      "path": "content/superconducting-qubits/flat-band-localization.md",
+      "title": "平带局域化与 Aharonov–Bohm 笼蔽",
+      "topic": "superconducting-qubits",
+      "sha256": "cb433efdf9e9d21475ae118b19e65c796ba738666b96a622a531485b6d5dd93b",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/floquet-anisotropic-transverse-interactions.md",
+      "title": "横向各向异性相互作用的 Floquet 工程",
+      "topic": "superconducting-qubits",
+      "sha256": "cc8f77200a5383d1da40be34a2095603e578043b85c6198cd2ba077248ced59e",
+      "split": "train"
     },
     {
       "path": "content/superconducting-qubits/flowermon-qubit.md",
@@ -849,6 +877,13 @@
       "split": "train"
     },
     {
+      "path": "content/superconducting-qubits/real-time-qec-decoding.md",
+      "title": "实时低延迟量子纠错解码",
+      "topic": "superconducting-qubits",
+      "sha256": "e99a43fc1ea00859eeb13553195e102871ec0062ab52c3068363bdee8760f23b",
+      "split": "train"
+    },
+    {
       "path": "content/superconducting-qubits/remote-qubit-self-testing.md",
       "title": "远程超导比特自检验",
       "topic": "superconducting-qubits",
@@ -880,7 +915,7 @@
       "path": "content/superconducting-qubits/synthetic-flux-qubit-ring.md",
       "title": "合成磁通与分数磁通量子",
       "topic": "superconducting-qubits",
-      "sha256": "ecb5d7d2729517718065361cdab5cb5d51773af547e92b21e3c13f3bc76ce87f",
+      "sha256": "262c1292c22beecbadfc81140da11c4aafa2f35cffaa39612f8aced4ed5e02a2",
       "split": "train"
     },
     {
@@ -901,14 +936,14 @@
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "232ad03d19a64590cd6126e07649b5b8e5ffdf0a87bf37bc0aedc2846997452b",
+      "sha256": "6c527e03ca055d845e1cad8e8a5bf45dc7557df807de5dd874f7b097d9dfba1d",
       "split": "train"
     },
     {
       "path": "content/superconducting-qubits/zz-coupling.md",
       "title": "ZZ 相互作用",
       "topic": "superconducting-qubits",
-      "sha256": "18a82d4d4c3d4d268cca4feae6491a27d8692083fd8f51833c93dd172b7ccf41",
+      "sha256": "5ea12d575dfc9c497be7507476b7a216437b7565864ee6e9d50901f28af8bea7",
       "split": "train"
     }
   ]
