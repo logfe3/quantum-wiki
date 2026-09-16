@@ -73,12 +73,13 @@ test("audit gate rejects incomplete coverage", async () => {
 
 test("audit gate rejects a batch above the five-percent failure threshold", async () => {
   const template = await readJsonl(templatePath)
+  const failCount = Math.ceil(template.length * 0.05) + 1
   const decisions = template.map((record, index) =>
-    reviewedDecision(record, index < 2 ? "fail" : "pass"),
+    reviewedDecision(record, index < failCount ? "fail" : "pass"),
   )
   const { result, report } = await runChecker(decisions)
   assert.equal(result.status, 1)
   assert.equal(report.status, "rejected")
-  assert.equal(report.failed, 2)
+  assert.equal(report.failed, failCount)
   assert.ok(report.failure_rate > report.batch_reject_threshold)
 })
