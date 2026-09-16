@@ -9,10 +9,10 @@ tags:
  - 量子点基础
  - 能谷
  - 自旋量子比特
-date: 2026-09-15
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhd1y5pnmhzdv73qgh3ja
-source_updated: 2026-09-02T17:02:04Z
+qatlas_id: qa_01m0qv5nm4rfxd67q224yxckbj
+source_updated: 2026-09-09T15:41:24Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -134,6 +134,7 @@ $$
 | 确定性增强的界面宽度窗口 | 无剪切应变约 1 ML；ε_{x,y}=0.05% 时扩至约 5 ML | 统一包络理论 | Thayil 2025 |
 | 长周期摆动阱确定性增强 | ε_{x,y}≳0.006%（高幅度）至 ≳0.035%（微幅度）；ν/2σ≈1.41 @ X_ww=15% | 统一包络理论 | Thayil 2025 |
 | SGM 台阶探针可靠性上界 | 轨道激发 2.92 meV ≫ 谷劈裂变化 | 针尖诱导点 + 紧束缚 | Cakar 2024 |
+| 谷依赖自旋劈裂诊断 | 反推 $E_z=6.77$ MV/m、4 个单原子台阶（−24.7/−2.9/18.7/40.4 nm）；预言 $E_{vs}=34.4\ \mu$eV vs 实验 29 μeV | 两谷 ESR 各向异性 + 紧束缚拟合 | Ferdous 2018 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -152,6 +153,32 @@ $$
 ### 微波谷谱（valley spectroscopy）
 
 把谷激发与微波光子耦合，在 [[circuit-qed/dispersive-readout|色散读出]] 框架下读取谷劈裂对应的频率响应。陈思思 2023 与 都用片上谐振腔探测三量子点中的谷态与激发能级：在双量子点–腔杂化系统中观测"谷劈裂能级信号"，再结合 [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]] 读取谷–自旋耦合强度）。这种做法的优势在于可同时获得能谷–微波光子的强耦合关系，把"谷物理"和[[circuit-qed/cavity-mediated-coupling|腔介导耦合]]纳入同一张能谱图。
+
+### 谷依赖自旋劈裂的各向异性：界面结构诊断（Ferdous 2018）
+
+两个谷态 $v_\pm$ 各自的自旋劈裂可以不相等——在带微磁体的 Si/SiGe 量子点中旋转面内外磁场方向、分别读出两个谷态的 ESR 频率 $f_{v\pm}$，其差值 $f_{v_-}-f_{v_+}$（MHz 量级）随角度呈现清晰各向异性，而 $f_{v\pm}$ 本身（GHz 量级）的各向异性由微磁体**均匀场** $B_\mathrm{micro}^\theta$ 主导（$f_{v_-}\approx g\mu_B|\boldsymbol B_\mathrm{ext}+\boldsymbol B_\mathrm{micro}^\theta|/h$）。$f_{v_-}-f_{v_+}$ 的结构则可干净地拆成两部分：
+
+$$
+f_{v_-}-f_{v_+} = \underbrace{\text{斜率}\ \tfrac{d(f_{v_-}-f_{v_+})}{dB_\mathrm{ext}}}_{\text{内禀 SOI（随 } B_\mathrm{ext}\text{ 线性）}} + \underbrace{\text{平移（与 } B_\mathrm{ext}\text{ 无关）}}_{\text{微磁体不均匀场 } \Delta\boldsymbol B^\theta}
+$$
+
+原子级紧束缚计算表明：仅含内禀 SOI 的曲线复现实验对 $B_\mathrm{ext}$ 的**斜率**；加上微磁体均匀场不足以对齐数据；只有再加入不均匀场 $\Delta\boldsymbol B^\theta$ 才定量吻合。其微观机制是**界面台阶导致的谷–轨道杂化**使两谷态波函数不再相同、偶极矩之差 $\langle x_-\rangle-\langle x_+\rangle\neq0$，空间变化的磁场因此对两谷态产生不同频移；台阶同样调制内禀 SOI——有效 Dresselhaus 参数 $\beta_\pm$ 在单原子台阶两侧**变号**。
+
+![[assets/figures/valley-splitting/ferdous2018-fig2-valley-splitting-bfield.jpg]]
+
+*两谷态 ESR 频率差 f_v− − f_v+ 随外磁场的变化（[110] 与 [1̄10] 两个方向）：实验（红圆）对 B_ext 的斜率由内禀 SOI 给出，而 SOI 曲线与数据之间与 B 无关的平移由微磁体不均匀场 ΔB 补齐——两者缺一不可。图源：Ferdous et al. (2018), Fig. 2。*
+
+![[assets/figures/valley-splitting/ferdous2018-fig3c-dresselhaus-step-sign.jpg]]
+
+*界面台阶对内禀 SOI 的调制：量子点波函数相对单原子台阶的位置记为 x₀，有效 Dresselhaus 参数 β±（两谷态各自）随 x₀ 变化并在台阶两侧变号——点的微观位置决定谷依赖 SOI 的符号与幅度。图源：Ferdous et al. (2018), Fig. 3(c)。*
+
+这一测量因此成为**界面结构的原位诊断**：对同时满足角度各向异性与 $B_\mathrm{ext}$ 依赖两个约束做迭代拟合，可反推垂直电场与台阶构型——Ferdous 等人由此得到 $E_z=6.77\ \mathrm{MV/m}$、四个沿 [100] 等距分布的单原子台阶（距点心 $-24.7$、$-2.9$、$18.7$、$40.4\ \mathrm{nm}$），且该构型预言 $E_{vs}=34.4\ \mu\mathrm{eV}$、与实验值 $29\ \mu\mathrm{eV}$ 吻合——微观界面图像与宏观谷劈裂自洽闭环。
+
+![[assets/figures/valley-splitting/ferdous2018-fig4-inhomogeneous-field.jpg]]
+
+*微磁体不均匀场对 f_v− − f_v+ 的单独贡献 Δ(f_v−−f_v+)^ΔB：平界面时几乎为零，存在台阶时显著——谷–轨道杂化使两谷态偶极矩不同，空间变化磁场对它们的作用随之不同；贡献在台阶位于点附近时最大，且几乎不随 B_ext 变化。图源：Ferdous et al. (2018), Fig. 4。*
+
+谷激发态本身的弛豫时间（高温运行与读出窗口的相关约束）见"自旋-谷弛豫寿命"一节及[[qubit-control/spin-decoherence|自旋退相干]]词条的声子弛豫理论——多极展开给出的谷弛豫曲线正是那里的定量参照。
 
 ### 通过电荷跃迁观测谷–轨道耦合
 
@@ -289,4 +316,5 @@ $$
 - 非微扰多谷有效质量理论与单电子 Si-MOS 对照：Gamble, J. K. et al. *Valley splitting of single-electron Si MOS quantum dots* (2016). arXiv:1610.03388（QAtlas 缓存：1610.03388）。
 - Thayil, A., Ermoneit, L., Kantner, M. Theory of Valley Splitting in Si/SiGe Spin-Qubits: Interplay of Strain, Resonances and Random Alloy Disorder. *Physical Review B* (2025). DOI: 10.1103/4sdz-f9cr；arXiv:2412.20618（QAtlas 缓存：2412.20618）。
 - Cakar, E., Ercan, H. E., Fuchs, G., Denisov, A. O., Anderson, C. R. et al. Towards Utilizing Scanning Gate Microscopy as a High-Resolution Probe of Valley Splitting in Si/SiGe Heterostructures. *Applied Physics Letters* (2024). DOI: 10.1063/5.0217704；arXiv:2405.03596（QAtlas 缓存：2405.03596）。
+- Ferdous, R., Kawakami, E., Scarlino, P., Nowak, M. P., Ward, D. R., Savage, D. E., Lagally, M. G., Coppersmith, S. N., Friesen, M., Eriksson, M. A., Vandersypen, L. M. K., Rahman, R. Valley dependent anisotropic spin splitting in silicon quantum dots. *npj Quantum Information* 4, 26 (2018). DOI: 10.1038/s41534-018-0075-1；arXiv:1702.06210（QAtlas 缓存：1702.06210）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

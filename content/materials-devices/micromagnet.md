@@ -307,6 +307,7 @@ Q=\frac{d\mathbf{B}_{\mathrm{tr}}^{\mathrm{tot}}/dy}{\sqrt{\left(d\mathbf{B}_{\m
 - 在[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]方向，它把自旋与电荷杂化，使自旋比特能与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]达到[[circuit-qed/strong-coupling|强耦合]]，实现[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]与长程比特互连。
 - 在[[scaling-automation/flopping-mode-qubit|翻转模式比特]]中，微磁体的横向、纵向场差直接进入双点哈密顿量，成为 $t_{SO}$ 与 $\delta E_z$ 两个参数。
 - 器件层面，它与[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/silicon-sige|Si/SiGe]] 的栅极堆叠工艺深度耦合，是[[scaling-automation/two-dimensional-array|二维阵列]]与[[scaling-automation/quantum-dot-array|量子点阵列]]扩展中的关键约束之一。
+- 它的不均匀场 $\Delta\boldsymbol B$ 还参与谷物理：谷–轨道杂化使两谷态偶极矩不同，$\Delta\boldsymbol B$ 对它们产生与外磁场无关的不同频移——这正是谷依赖自旋劈裂测量中"平移"分量的来源，反推出界面台阶构型的诊断方法见[[fundamentals/valley-splitting|谷劈裂]]词条的谷依赖自旋劈裂一节。
 
 
 ## 参考文献
