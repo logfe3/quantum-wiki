@@ -8,10 +8,10 @@ aliases:
 tags:
  - 量子比特操控
  - 电荷
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m237473wvnxd2t2aefj5gm4v
-source_updated: 2026-09-09T17:46:10Z
+qatlas_id: qa_01m0qv6dhh4btc1k7d1f7y332q
+source_updated: 2026-09-09T15:07:52Z
 ---
 
 <div class="entry-lead">电荷量子比特把"电子在左点还是右点"编码成二能级。它的电偶极矩大、门操作快、易与微波腔耦合，但也因此对电场与电荷噪声敏感。</div>
@@ -135,6 +135,30 @@ $$
 
 在两个 $\pi/2$ 微波脉冲之间插入等待时间 $t_e$，构成 [[qubit-control/ramsey-interferometry|Ramsey]] 序列；进一步在 $t_e$ 中点加入 $\pi$ 相位翻转脉冲，则得到 Hahn 回波，能拟合得到去低频噪声影响后的 $T_2$。
 
+### 全微波操控与时间域色散读出：经腔接口
+
+上文的微波驱动仍需本地栅把微波送到双量子点、读出另靠电荷传感器。Scarlino 等人 2019 年在 GaAs/AlGaAs 电荷比特–高阻抗 SQUID 阵列腔系统（腔线宽 $\kappa_{\mathrm{tot}}/2\pi=23+7=30\ \mathrm{MHz}$ 过耦合、共振时 $g/2\pi\sim57\ \mathrm{MHz}$、$\nu_q(\delta=0)=2t\sim\nu_r=5.695\ \mathrm{GHz}$）演示了**全微波链路**：合成微波脉冲经腔驱动比特跃迁，读出用比特态对腔频的色散频移完成——控制与读出共用同一条腔接口。
+
+**腔内光子数的 ac-Stark 标定**。色散耦合使比特频率随腔内平均光子数移动（ac-Stark 频移）：
+
+$$
+\tilde{\omega}_q = \omega_q + (1+2n_r)\,\frac{g^2}{\Delta_{r,q}}
+$$
+
+其中 $\omega_q$ 是零光子极限的比特频率、$n_r$ 是腔内平均光子数、$g$ 与 $\Delta_{r,q}=\omega_r-\omega_q$ 分别是耦合强度与腔–比特失谐。用独立标定的 $g$ 与 $\Delta_{r,q}$，从两 tone 谱中比特频率随腔输入功率的**线性**移动即可反标出 $n_r$——这是量子点 cQED 实验里最常用的腔光子数定标手段（读出功率是否进入单光子区由此判定）。
+
+![[assets/figures/qubit-control/scarlino2019-fig2-ac-stark-photon-calibration.jpg]]
+
+*ac-Stark 频移标定腔内光子数：DQD 处于 δ=0、腔驱动频率固定在 ν_r=5.070 GHz（2t=3.71 GHz、2g/2π=75 MHz），横轴为腔输入功率、纵轴为两 tone 谱测得的比特频率——线性移动拟合（实线）给出腔内光子数 n_r 随输入功率的对应（顶轴）。图源：Scarlino et al. (2019), Fig. 2。*
+
+**时间域色散读出**。先定出态依赖的腔频移 $\chi=g^2/\Delta_{r,q}$：比特留在基态（蓝迹）与用连续 tone 饱和成完全混合态（$P_g=P_e=1/2$，橙迹）两种情况下测腔反射系数，比较腔频得 $\chi/2\pi\sim5\ \mathrm{MHz}$。随后即可做脉冲化读出：读出点选在腔响应最陡的频率上，正交分量 $Q$ 随时间分离出两个比特态，典型读出时间 $t_{\mathrm{meas}}=400\ \mathrm{ns}$（含平均）。
+
+![[assets/figures/qubit-control/scarlino2019-fig3-timedomain-dispersive-readout.jpg]]
+
+*时间域色散读出：(a)(b) 比特处于基态（蓝）与饱和混合态（橙）时的腔反射幅值与相位——两者腔频差即色散位移 χ/2π≈5 MHz（g/2π≈55 MHz）；红虚线为时间域测量选定的读出频率。(c) 读出阶段 Q 正交分量随时间的响应：无脉冲（|g⟩，蓝）与施加 π 脉冲（|e⟩，红）后清晰分离，典型读出时间 400 ns。图源：Scarlino et al. (2019), Fig. 3。*
+
+**相干性结果**。全微波链路下（$2t=4.033\ \mathrm{GHz}$、$\delta=0$）：最快 $\pi$ 脉冲用高斯包络标准差 $\sigma\sim0.25\ \mathrm{ns}$（AWG 最大幅度 $A_0\sim150\ \mathrm{mV}$），脉冲期间平均 Rabi 频率高达 $\sim800\ \mathrm{MHz}$；Ramsey 自由感应衰减 $T_{2,\mathrm{R}}\sim23.4\pm0.7\ \mathrm{ns}$、能量弛豫 $T_1\sim42.3\pm0.3\ \mathrm{ns}$、Hahn 回波 $T_{2,\mathrm{echo}}\sim43.1\pm4.3\ \mathrm{ns}$——$T_2\ll2T_1$ 表明纯退相干主导，回波只把寿命翻倍说明还有快于序列时间的涨落。低功率谱线宽度给出 $\gamma_2/2\pi=3.3\pm0.2\ \mathrm{MHz}$（$T_2\sim48\pm2\ \mathrm{ns}$），**比同型 GaAs 器件此前报告低约 10 倍**、已接近非掺杂 SiGe 电荷比特水平——把操控与读出都搬到腔接口（减少本地电极上的强微波与开关噪声）是相干性改善的候选原因之一。器件与耦合细节见[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]。
+
 ### 光子辅助隧穿与光场耦合
 
 把失谐视为量子化的微波光子场驱动时，电子可以"借"或"还"整数个光子能量在阻塞区外的失谐点上发生[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]（PAT）。令光子频率为 $f$，则光子辅助的隧穿条件为
@@ -169,6 +193,9 @@ $$
 | Si/SiGe 四量子点 Larmor/Ramsey | 约 10 GHz（$T_2^*\approx150$ ps）/ 56 GHz（$T_2^*\sim51$ ps） | Ward 2016 |
 | Si/SiGe 双 DQD 电容耦合 $\Delta\varepsilon_R$ | 约 75 µeV ≈ 18.3 GHz；条件 π 翻转约 80 ps | Ward 2016 |
 | Si/SiGe 杠杆臂 $\alpha$ | 约 135 µeV/mV（LZS 频率斜率） | Ward 2016 |
+| GaAs 全微波操控（经腔） | 最快 π 脉冲 σ≈0.25 ns（平均 Rabi ~800 MHz）；$T_{2,R}=23.4$ ns、$T_1=42.3$ ns、$T_{2,\mathrm{echo}}=43.1$ ns | Scarlino 2019 |
+| GaAs 全微波退相干率 | $\gamma_2/2\pi=3.3\pm0.2$ MHz（$T_2\approx48$ ns），比此前 GaAs 报告低约 10 倍 | Scarlino 2019 |
+| 色散读出位移/时间 | $\chi/2\pi\sim5$ MHz（g/2π≈55 MHz）；$t_{\mathrm{meas}}=400$ ns | Scarlino 2019 |
 
 ## 实验特征
 
@@ -255,6 +282,7 @@ $$
 
 ## 参考文献
 
+- Scarlino, P., van Woerkom, D. J., Stockklauser, A., Koski, J. V., Collodo, M. C., Gasparinetti, S., Reichl, C., Wegscheider, W., Ihn, T., Ensslin, K., Wallraff, A. All-Microwave Control and Dispersive Readout of Gate-Defined Quantum Dot Qubits in Circuit Quantum Electrodynamics. *Physical Review Letters* 122, 206802 (2019). DOI: 10.1103/physrevlett.122.206802；arXiv:1711.01906（QAtlas 缓存：1711.01906）。
 - 电荷比特作为量子点最早可全电控编码的框架：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]；现代综述见 [[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
 - Ward, D. R. et al. State-conditional coherent charge qubit oscillations in a Si/SiGe quadruple quantum dot. *npj Quantum Information* 2, 16032 (2016). DOI: 10.1038/npjqi.2016.32；arXiv:1604.07956（QAtlas 缓存：1604.07956）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

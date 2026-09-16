@@ -8,7 +8,10 @@ aliases:
 tags:
  - 读出与测量
  - 微波滤波
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qvehh4zdjzfrqqkggnbb4q
+source_updated: 2026-09-15T19:55:01Z
 ---
 
 <div class="entry-lead">想加快色散读出，往往要增大谐振腔线宽；但开放的腔也给量子比特提供更强的辐射逃逸通道。Purcell 滤波器在两个目标之间"开一扇频率选择的门"。</div>
@@ -119,6 +122,9 @@ $$
 | 保护带宽 $\Gamma_{100}$ | 400 MHz（$\omega_F/2\pi=5$ GHz 设计）；毫秒级 $T_1$ 保护带宽可达 1 GHz | |
 | 隔离度 | $>20\ \mathrm{dB}$（带宽 $>1$ GHz，）；30 dB（阻抗变换线式，） | 实测 |
 | 插入损耗 | 带通腔式 $<0.002\ \mathrm{dB}$（仿真）；阻抗变换线式 $<3\ \mathrm{dB}$（实测，最好近似无损） | |
+| 4 阶传输线带通（实测） | 中心 5.7 GHz、带宽 500 MHz；4 只比特读出腔 5.7–6.0 GHz 两两接第 2/3 级 | Yan 2023 |
+| $T_1$ 保护标度 | 对称 $N=2k$ 或 $2k-1$ 阶 $\propto\Delta_{q,r}^{2k+2}$；非对称大插入损耗 $\propto\Delta_{q,r}^{2N+2}$（单极 $N=1$ 即 $\Delta^4$） | Yan 2023 |
+| 无滤波参考极限 | $\kappa_r/2\pi=15$ MHz、$\Delta_{q,r}/2\pi=1$ GHz、$c_{q,r}/2\pi=100$ MHz 时 $T_1=1\ \mu s$ | Yan 2023 |
 
 ## 实验特征与验证
 
@@ -169,6 +175,34 @@ Purcell 滤波器的仿真验证不能只算 $S$ 参数： 的做法是在电磁
 ![[assets/figures/purcell-filter/a85afdb2f88b49c8f7037a3b24c43bae7c2fb72680da6a4b0727a79628766ec8.jpg]]
 
 *4.3 K 实测散射参数：PF-C 与 PF-M 两种设计的 $S_{21}$——通带 794/915 MHz（与仿真吻合），带外快速滚降提供 Purcell 保护；通带宽度决定可复用的读出腔数（7~9 个）。图源：Park et al. (2023)，Fig. 2。*
+
+## 多阶带通的综合设计：从 g 系数到局域态密度
+
+Yan 等人 2023 年给出把带通 Purcell 滤波器做成**系统化微波工程**的完整流程：先取归一化 $N$ 阶**低通原型**（响应型式给定后由插入损耗法与 Cauer 综合算出元件值 $g_j$），做**带通变换**，再用**导纳逆变器** $J_n$ 把串联臂折成只剩并联 LC 谐振器——最后翻译成耦合模图像：第 $j$ 级谐振器 $B_j$ 的耗散率为 $\kappa_j$、相邻级间耦合为 $c_{j,j+1}$，首级耗散率由原型系数直接给出
+
+$$
+\kappa_1 = \frac{\Delta\omega}{g_0 g_1}
+$$
+
+其中 $\Delta\omega$ 是目标带宽、$g_0$、$g_1$ 是原型源阻抗数与首个元件值。这一步暴露出一个此前被忽视的设计自由度——**插入损耗**：0 dB 插入损耗的对称设计 $\kappa_1=\kappa_N$（输入输出对称）；大插入损耗（如 20 dB）设计 $\kappa_1\ll\kappa_N$，输入弱耦合、输出强耦合——滤波器内无耗散元件，"插入损耗"全部来自输入端反射，恰好让散射信号几乎全部从输出端口流出，**同时改善读出量子效率与 Purcell 保护**。
+
+![[assets/figures/purcell-filter/yan2023-fig1-bandpass-design-flow.jpg]]
+
+*N 阶带通滤波器设计流程：低通原型（g 系数）→ 带通变换 → 导纳逆变器 J_n（只剩并联 LC 谐振器）→ 耦合模图像（各级耗散 κ_j、级间耦合 c_{j,j+1}）；末端为 6 阶设计（中心 6 GHz、带宽 600 MHz）的传输系数——0 dB（蓝）与 20 dB（橙）插入损耗两种方案。图源：Yan et al. (2023), Fig. 1。*
+
+**读出腔接在哪一级？** 用**局域态密度**（LDOS）回答：第 $j$ 级的 $\rho_j(\omega)=\mathrm{diag}\,\mathrm{Im}\,G^R_{jk}(\omega)$（推迟格林函数对角元的虚部）给出接在该级的读出腔看到的态密度，腔耗散 $\kappa_r\propto\rho_j(\omega_r)$、Purcell 保护由比值 $\rho_j(\omega_r)/\rho_j(\omega_q)$ 量化。LDOS 的结构有"陷阱"：大插入损耗滤波器的 $\rho_j$ 在通带内有 $j-1$ 个**近零点**——读出腔频率落在上面就几乎不耗散、无法读出；对称滤波器则把读出腔接到**中间级**（$N=6$ 时 $j=3$ 或 4）保护最好。
+
+![[assets/figures/purcell-filter/yan2023-fig2-ldos-filter-stages.jpg]]
+
+*6 阶带通滤波器各级的局域态密度 ρ_j(ω)（0 dB 蓝与 20 dB 橙；中心 6 GHz、带宽 600 MHz）：20 dB 设计的第 j 级有 j−1 个通带内近零点，读出腔频率须避开；ρ_j(ω_q)（ω_q 在阻带）决定接该级的比特保护——对称设计中间级最优。图源：Yan et al. (2023), Fig. 2。*
+
+**保护能力的标度律**：无滤波时比特寿命被限制为 $T_1=(\Delta_{q,r}/c_{q,r})^2\kappa_r^{-1}$（$\kappa_r/2\pi=15\ \mathrm{MHz}$、$\Delta_{q,r}/2\pi=1\ \mathrm{GHz}$、$c_{q,r}/2\pi=100\ \mathrm{MHz}$ 时仅 $1\ \mu s$）。带 $N$ 阶滤波器后：对称设计（阶数 $N=2k$ 或 $2k-1$）$T_1\propto\Delta_{q,r}^{2k+2}$；非对称大插入损耗设计 $T_1\propto\Delta_{q,r}^{2N+2}$——单极带通（$N=1$）的 $T_1\propto\Delta^4$ 正是其特例。**加级数等于指数级加深保护**，同时通带更宽、可复用腔更多。
+
+**传输线实现与四比特复用**：用传输线段替代集总 LC 即得紧凑版——实验做出 4 阶对称（零插入损耗）滤波器（中心 5.7 GHz、带宽 500 MHz），4 只 transmon 的读出腔（5.7–6.0 GHz）两两接到第 2、第 3 级，实测 $|S_{21}|$ 的四个凹陷与耦合模模拟吻合；磁通调频测得各比特 $T_1$ 随频率的变化，高频段数据落在 4 阶滤波模拟线之上、明显优于单极带通与无滤波极限，计入 $20\ \mu s$ 本征损耗后全段吻合。
+
+![[assets/figures/purcell-filter/yan2023-fig4c-t1-vs-qubit-frequency.jpg]]
+
+*4 阶对称滤波器（中心 5.7 GHz、带宽 500 MHz）上比特 T₁ 随比特频率的实测（蓝点，比特读出腔 5.800 GHz）：虚线为 4 阶对称滤波（橙）、单极带通（红）与无滤波（黑）的 T₁ 极限模拟，实线为计入本征损耗（T₁=20 μs）后的 4 阶与单极预言——高频段实测明显优于单极方案，与 4 阶模拟吻合。图源：Yan et al. (2023), Fig. 4(c)。*
 
 ## 非线性滤波：器件端抗光子噪声
 
@@ -229,3 +263,8 @@ Purcell 滤波器的仿真验证不能只算 $S$ 参数： 的做法是在电磁
 - 在频分复用多比特读取中，每腔独立的滤波器同时是抑制[[readout-measurement/readout-crosstalk|读取串扰]]的手段。
 - 滤波器保护的最终指标是比特的 $T_1$，其完整预算应包含芯片上全部外部阻抗的贡献并实测验证，而非只看理想 $S$ 参数；在半导体量子点–腔杂化体系中，弱杂化区的谱线展宽现象同样源于 Purcell 效应。
 - 滤波思路的频率分配极端是[[superconducting-qubits/qubit-fast-reset|量子比特快速复位]]架构：用片上双工器把读出（高通支路）与耗散（低通支路驻波模）物理分离，比特停在共同阻带内获得保护的同时保留一条可开关的复位通路——"保护"与"耗散"不再共用一个谐振器。
+
+## 参考文献
+
+- Yan, H., Wu, X., Lingenfelter, A., Joshi, Y. J., Andersson, G., Conner, C. R., Chou, M.-H., Grebel, J., Miller, J. M., Povey, R. G., Qiao, H., Clerk, A. A., Cleland, A. N. Broadband Bandpass Purcell Filter for Circuit Quantum Electrodynamics. *Applied Physics Letters* 122, 254001 (2023). DOI: 10.1063/5.0161893；arXiv:2306.06258（QAtlas 缓存：2306.06258）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
