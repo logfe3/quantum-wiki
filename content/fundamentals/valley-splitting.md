@@ -11,8 +11,8 @@ tags:
  - 自旋量子比特
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv5nm4rfxd67q224yxckbj
-source_updated: 2026-09-09T15:41:24Z
+qatlas_id: qa_01m0qvhjcagre8pth49d4ga5bh
+source_updated: 2026-09-02T02:09:42Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -135,6 +135,9 @@ $$
 | 长周期摆动阱确定性增强 | ε_{x,y}≳0.006%（高幅度）至 ≳0.035%（微幅度）；ν/2σ≈1.41 @ X_ww=15% | 统一包络理论 | Thayil 2025 |
 | SGM 台阶探针可靠性上界 | 轨道激发 2.92 meV ≫ 谷劈裂变化 | 针尖诱导点 + 紧束缚 | Cakar 2024 |
 | 谷依赖自旋劈裂诊断 | 反推 $E_z=6.77$ MV/m、4 个单原子台阶（−24.7/−2.9/18.7/40.4 nm）；预言 $E_{vs}=34.4\ \mu$eV vs 实验 29 μeV | 两谷 ESR 各向异性 + 紧束缚拟合 | Ferdous 2018 |
+| 共振隧穿读出判据 | 小谷区（E_VS<Δz）非线性可改善读出（需谷能级均匀）；两种谷区均有 t_dec/t_meas>100（误差 <1%） | 三-QD NEGF | Tanamoto 2025 |
+| QuBus 谷劈裂地图 | 40×400 nm，1.5–200 μeV；Rice 分布 γ=0.1 μeV、σ=64.3 μeV；点半径 18.2 nm、关联 <30 nm | 穿梭点自旋–谷谱 | Volmer 2026 |
+| 穿梭退相干阈值 | 自旋–谷共振绝热/二能级穿越分界 ~2.8 m/s（Δ_sv≲300 neV、dE_VS/dx≈3 μeV/nm）；10 μm 穿梭误差 <8% | 传送带穿梭 P_S | Volmer 2026 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -215,6 +218,27 @@ $$
 
 *台阶位置的相位效应：点在台阶间的位置决定劈裂——可设计性的定量边界。图源：arXiv:2310.17393，Fig. 2。*
 
+**共振隧穿读出架构中的谷劈裂判据**：Tanamoto 与 Ono 用非平衡格林函数把谷劈裂的影响推进到"沟道-QD 共振隧穿读出"架构——比特-QD（$\mathrm{QD_1}$、$\mathrm{QD_3}$）与一条直接接晶体管的沟道-QD（$\mathrm{QD_2}$）并联，源漏电流 $I_D$ 的**非线性共振特征**区分比特态。自旋选择性来自隧穿选择定则：↑-电流只在比特处于 $|0\rangle$ 时与比特-QD 交换 ↑ 电子、↓-电流只在 $|1\rangle$ 时交换 ↓ 电子——每个 QD 都携带两条谷能级 $E_{V\mp}$（$E_\mathrm{VS}=E_{V+}-E_{V-}$，单态能级同样劈裂）时，沟道-QD 与比特-QD 的谷能级对齐决定共振窗口。结论按谷区分两半：
+
+$$
+\underbrace{E_\mathrm{VS}<\Delta_z\ \text{（小谷区）}}_{\text{电流非线性反而可改善读出，前提：谷能级不均匀性小}}\qquad
+\underbrace{E_\mathrm{VS}>\Delta_z\ \text{（大谷区）}}_{\text{谷能级不均匀性直接使读出退化}}
+$$
+
+（中间区 $E_\mathrm{VS}\approx\Delta_z$ 有自旋翻转，该理论未处理。）两种情形都存在 $t_\mathrm{dec}/t_\mathrm{meas}>100$ 的工作区——按 $t_\mathrm{dec}=1$–$100\ \mathrm{ns}$ 估算可支持 100 次以上重复读出、测量误差 <1%，与表面码要求的重复测量兼容。谷能级不均匀性（如 $E_{\mathrm{VS}1}=10$、$E_{\mathrm{VS}2}=20$、$E_{\mathrm{VS}3}=50\ \mu\mathrm{eV}$ 的非均匀组合）是主要的破坏因素——与上文的介观统计结论一致。
+
+![[assets/figures/valley-splitting/tanamoto2025-fig1-resonant-tunneling-architecture.jpg]]
+
+*共振隧穿读出架构：比特-QD（黄）与沟道-QD（绿）并排、沟道-QD 直连晶体管，源漏电流 I_D 反映比特态；读出模式（V_D≠0）下沟道-QD 能级扫过 QD 的共振能级 E_i。图源：Tanamoto & Ono (2025), Fig. 1。*
+
+![[assets/figures/valley-splitting/tanamoto2025-fig3-spin-selective-tunneling.jpg]]
+
+*小谷区的自旋选择性隧穿：↑-电流只在比特态 |0⟩ 时交换 ↑ 电子（上两幅）、↓-电流只在 |1⟩ 时交换 ↓ 电子（下两幅）；E_V± 与单态谷能级 E_ia/E_ib 的对齐决定共振窗口。图源：Tanamoto & Ono (2025), Fig. 3。*
+
+![[assets/figures/valley-splitting/tanamoto2025-fig10-readout-decoherence-ratio.jpg]]
+
+*t_dec/t_meas 随 V_D 的变化（两组能级配置）：虚线以上满足 t_dec=100 ns 时可做 >100 次读出、实线以上对应 t_dec=1 μs 的同样判据——两种谷区都存在误差 <1% 的工作窗口。图源：Tanamoto & Ono (2025), Fig. 10。*
+
 ### 自旋-谷弛豫寿命与高温运行
 
 上节的静态建模之外，谷劈裂的两个动态维度：
@@ -260,6 +284,29 @@ $$
 *排列检验的显著性评估：(a) 随机重采样一维序列上的自相关零检验分布，(b) 对 $n=6,12$ 的零分布（直方图）与真实数据统计量（绿色虚线）对照，阴影面积为 p 值。图源：Marcks et al. (2025)，Fig. 6。*
 
 对器件设计的含义：含百分之几 Ge 的量子阱确实抬高平均谷劈裂，但无序同样留下低劈裂"口袋"，会压低制造良率并威胁穿梭；跨栅与跨器件尺度的关联意味着相邻比特的谷致误差**不独立**，阵列级纠错与建模需要介观统计输入。
+
+### 穿梭通道的 E_VS 地图与移动自旋相干性（Volmer 2026）
+
+阵列统计之上还有"穿梭通道内逐点"的维度：Volmer 等人在浓缩 ${}^{28}\mathrm{Si}/\mathrm{Si_{0.7}Ge_{0.3}}$ 的 QuBus 传送带穿梭器件上，用穿梭点自身的自旋–谷谱测出 **40 nm × 400 nm 的二维 $E_\mathrm{VS}(d,y)$ 地图**——$E_\mathrm{VS}$ 在 1.5–200 μeV 间大幅起伏，直方图服从 Rice 分布（确定性分量 $\gamma=0.1(7)\ \mu\mathrm{eV}$、无序展宽 $\sigma=64.3(8)\ \mu\mathrm{eV}$，合金无序主导），自相关拟合给出穿梭点半径 $18.2(2)\ \mathrm{nm}$、30 nm 之外无关联——地图方法本身成为异质结质量的基准工具。
+
+![[assets/figures/valley-splitting/volmer2026-fig2-valley-map.jpg]]
+
+*穿梭通道的谷劈裂地图：(a) 不同 1DEC 位置 y 下 E_VS 随穿梭距离 d 的迹线；(b) 2800 个样本的直方图与 Rice 分布拟合（γ=0.1 μeV、σ=64.3 μeV）；(c) 自相关函数（高斯拟合，关联长度 ≈ 点半径）；(d) 线性插值得到的二维 E_VS(d,y) 地图。图源：Volmer et al. (2026), Fig. 2。*
+
+在这张已知地图上穿梭单个电子并测单态回返概率 $P_S(d,\tau_S)$，直接确认了移动自旋退相干理论预言的**两条谷致通道**：
+
+1. **低 $E_\mathrm{VS}$ 区**：$B=1.7\ \mathrm{T}$（$E_Z>\max E_\mathrm{VS}$，无共振）时，ST 振荡幅度恰好在第一个 $E_\mathrm{VS}<5\ \mu\mathrm{eV}$ 的位置骤降——谷激发直接抢占占据数；
+2. **自旋–谷共振**（$E_Z=E_\mathrm{VS}(d)$）：低速**绝热**穿越共振触发自旋–谷 flip-flop，把自旋叠加转化为谷叠加、随即被 $E_\mathrm{VS}$ 涨落快速退相（拟合自旋–谷耦合 $\Delta_{sv}\lesssim300\ \mathrm{neV}$、共振处 $dE_\mathrm{VS}/dx\approx3\ \mu\mathrm{eV/nm}$）；速度超过约 $2.8\ \mathrm{m/s}$ 后穿越变为**二能级式**，共振无损通过。
+
+![[assets/figures/valley-splitting/volmer2026-fig3-shuttling-coherence.jpg]]
+
+*已知 E_VS 地图上的穿梭相干性：(a) y=0 的 E_VS 迹线叠加三个磁场的 Zeeman 能（水平线）——竖虚线为自旋–谷共振、点线为低 E_VS 区；(b–d) B=1.7/0.3/0.1 T 的 P_S(d,τ_S)：高场下相干损失对准低 E_VS 区、低场下对准第一个共振，且高速穿越（如 2.8 m/s）能保住振荡幅度；(e–g) 沿 τ_S 的 FFT 显示谷占据组分在过共振后消失。图源：Volmer et al. (2026), Fig. 3。*
+
+**反复穿梭与运动变窄**：对同一段含低 $E_\mathrm{VS}$ 区的 280 nm 路径做 $n_\mathrm{rep}$ 次往返，快速频繁穿越反而进入**运动变窄**（motional narrowing）区——谷退相干被平均掉、$P_S$ 衰减显著变慢。配合**轨迹选择**（在 $E_\mathrm{VS}$ 地图上绕开问题区），10 μm 累计穿梭的误差 <8%，数十 μm 的相干上限由移动自旋与一个静止自旋的耦合（可用于生成纠缠）决定，而不再由谷物理决定——传送带穿梭由此拿到进入硅量子芯片互连方案的实证路线图。
+
+![[assets/figures/valley-splitting/volmer2026-fig4-repetitive-shuttling.jpg]]
+
+*反复穿越 E_VS 景观的相干性：(a)(c)(e) E_VS 迹线局部与对应 Zeeman 能；(b)(d)(f) 不同速度/磁场下 P_S 随总穿梭时间 τ=2n_rep·τ_S 的衰减——快速频繁穿越低 E_VS 区进入运动变窄区、衰减变慢；(g) 谷激发率 γ 与 B 的指数衰减模型及六个拟合值；(h) 各参数组合下 P_S 随累计穿梭距离的归一化。图源：Volmer et al. (2026), Fig. 4。*
 
 ### 计算框架的第三块与构型扩展
 
@@ -317,4 +364,6 @@ $$
 - Thayil, A., Ermoneit, L., Kantner, M. Theory of Valley Splitting in Si/SiGe Spin-Qubits: Interplay of Strain, Resonances and Random Alloy Disorder. *Physical Review B* (2025). DOI: 10.1103/4sdz-f9cr；arXiv:2412.20618（QAtlas 缓存：2412.20618）。
 - Cakar, E., Ercan, H. E., Fuchs, G., Denisov, A. O., Anderson, C. R. et al. Towards Utilizing Scanning Gate Microscopy as a High-Resolution Probe of Valley Splitting in Si/SiGe Heterostructures. *Applied Physics Letters* (2024). DOI: 10.1063/5.0217704；arXiv:2405.03596（QAtlas 缓存：2405.03596）。
 - Ferdous, R., Kawakami, E., Scarlino, P., Nowak, M. P., Ward, D. R., Savage, D. E., Lagally, M. G., Coppersmith, S. N., Friesen, M., Eriksson, M. A., Vandersypen, L. M. K., Rahman, R. Valley dependent anisotropic spin splitting in silicon quantum dots. *npj Quantum Information* 4, 26 (2018). DOI: 10.1038/s41534-018-0075-1；arXiv:1702.06210（QAtlas 缓存：1702.06210）。
+- Tanamoto, T., Ono, K. Effects of valley splitting on resonant-tunneling readout of spin qubits. *Applied Physics Letters* (2025). DOI: 10.1063/5.0260516；arXiv:2501.13289（QAtlas 缓存：2501.13289）。
+- Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. *Nature Communications* (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
