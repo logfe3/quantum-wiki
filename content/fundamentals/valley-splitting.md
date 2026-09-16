@@ -478,6 +478,7 @@ $$
 - [[materials-devices/laser-annealing-contacts|激光退火欧姆接触]]：为保住单层精度 Ge 剖面与界面锐度（谷劈裂的设计资源）而生的接触工艺——把退火热预算从全局压到接触区，避免热扩散抹平谷劈裂工程。
 - [[materials-devices/valley-splitting-optimization|谷劈裂外延剖面优化]]：把摆动阱、窄阱、Ge 尖峰等构型统一为带谱约束的变分优化问题，得到可靠性更高且电场可调 200 µeV–1 meV 的调制摆动阱。
 - [[scaling-automation/flopping-mode-qubit|翻转模式量子比特]]：合金无序造成的谷劈裂器件间涨落不只是相干性问题——含真实合金无序的 RB 系综模拟显示，谷劈裂过小的器件会给可达隧穿耦合设上限，从而约束甚至完全禁止翻转模式 EDSR 操作，直接影响 FM 比特的良率。
+- [[fundamentals/effective-2d-envelope-function|有效二维包络函数理论]]：把垂直方向按 Born–Oppenheimer 投影掉之后，谷劈裂与谷相位成为二维模型中自然涌现的局域场——量子点扫过原子台阶时谷相位呈约 $\pi/3$ 的系统调制、劈裂在 0.15–0.7 meV 间互补变化，为界面-谷参数映射提供分钟级正演工具。
 
 
 ## 参考文献

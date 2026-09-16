@@ -228,6 +228,7 @@ $$
 - [[qubit-control/exchange-interaction|交换相互作用]]负责两比特门；SOC 则是单比特 EDSR 与漏电流读取的核心。
 - [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]通过 SOC 把自旋态杂化到电荷态上，从而获得与腔光子的有效耦合。
 - [[scaling-automation/spin-orbit-torque-control|自旋轨道力矩操控]]是另一类基于 SOC 的基带门控机制，但作用于宏观磁体而非量子点自旋。
+- [[qubit-control/hole-excited-state-rabi|空穴激发态巨拉比跃迁]]：硅空穴点中 SOC 带混合与态的镜面对称性共同决定哪些跃迁被电场强烈驱动——激发双态与基态双态沿驱动方向对称性相反时，Rabi 频率可比常规基态双态跃迁高四个量级。
 
 
 ## 参考文献

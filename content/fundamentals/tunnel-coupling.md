@@ -197,6 +197,7 @@ $$
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]共振线之间的距离 $\alpha\varepsilon=\sqrt{(hf)^2-(2t_c)^2}$ 是从微波谱提取 $2t_c$ 的独立手段，常作为电荷转移线拟合的交叉校验。
 - [[scaling-automation/virtual-gates|虚拟电极]]通过解耦势垒方向与柱塞方向，使 $t_c$ 可以在不移动电化学势的情况下独立调节，是阵列化器件中隧穿耦合调控的关键工程工具。
 - [[materials-devices/charge-noise|电荷噪声]]通过 $\sin\theta$ 间接进入比特退相干——隧穿耦合越大，比特对噪声越敏感。
+- [[fundamentals/effective-2d-envelope-function|有效二维包络函数理论]]：仿真侧的警示——台阶界面下固定高度切片会把 $t$ 算错一到两个量级，必须把垂直基态能量修正 $\epsilon_0(x,y)$ 并入二维有效势，才能以二维成本复现全三维的 $t$。
 
 ## 参考文献
 

@@ -190,6 +190,7 @@ $$
 - 与[[readout-measurement/single-shot-readout|单发读出]]与[[materials-devices/charge-noise|电荷噪声]]：泡利自旋阻塞把自旋态映射为电荷信号依赖 $(0,2)$ 区 $S$–$T$ 能隙，电荷噪声则同时是退相干来源和读出误判的来源——测量与操控在 $J(\varepsilon)$ 的两端互为镜像。
 - 与[[scaling-automation/virtual-gates|虚拟栅极]]：对称工作点的精确标定与动态补偿离不开虚拟栅极，它是把"用势垒调 $J$、不污染失谐"工程化的核心工具。
 - 与[[circuit-qed/jaynes-cummings-model|JC 模型]]与[[qubit-control/resonant-exchange-qubit|共振交换比特]]：常开 $J$ 的 RX 比特天然带电偶极矩，因此与微波谐振腔的耦合强度由 $g_{\mathrm{RX}}$ 描述；JC 阶梯与色散读出可以原样套用。
+- 与[[fundamentals/effective-2d-envelope-function|有效二维包络函数理论]]：$J$ 对波函数交叠指数敏感，是该降维方法最严苛的试金石——带垂直约束修正的二维计算与全三维偏差可压到 50% 以内，为势垒栅压标定提供分钟级仿真。
 
 <!-- FIGURE: 交换相互作用相关概念的关系图：以 J(t, ε, U) 为中心节点，向外连接隧穿耦合 t、充电能 U、失谐 ε、对称工作点、S–T0/单自旋/RX/杂化比特编码、DCZ/解耦、LZSM/单发读出、虚拟栅极/电荷噪声等子模块 -->
 

@@ -138,7 +138,7 @@ $Q$ 越高意味着在相干时间内可完成越多的旋转循环；$Q\gtrsim 
 - **电荷比特（[[qubit-control/charge-qubit|charge qubit]]）**：以双量子点中电子在左/右的位置作为逻辑态，能级差 $\hbar\omega_q$ 可达数百 MHz 至 GHz。微波直接驱动门电极即可获得 $\Omega_R$ 在 100 MHz 量级的 Rabi 振荡——门快但对电荷噪声敏感；可同时用于 [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]、[[qubit-control/lzsm-interference|LZSM 干涉]]等高频实验。
 - **单自旋比特（[[qubit-control/single-spin-qubit|single-spin qubit]]）**：以电子自旋 $|\uparrow\rangle/|\downarrow\rangle$ 为基态。早期通过片上 ESR 天线施加横向交变磁场，$\Omega_R=\gamma B_1$，典型 $f_\text{Rabi}$ 在 MHz 量级；现代实验普遍改用 [[qubit-control/electric-dipole-spin-resonance|EDSR]]，用交流电场代替天线，配合微磁体磁场梯度或内禀自旋轨道耦合把电场转换为有效交变磁场。
 - **翻转模式单自旋比特（flopping mode qubit）**：在双量子点对称点 $\varepsilon=0$ 处工作，载流子波函数在两量子点间高度杂化，电偶极增强使 $f_\text{Rabi}$ 与 $Q$ 同步提升约一个量级；同时获得电荷比特式的甜点（对失谐电荷噪声不敏感）。该思路也用于 [[qubit-control/resonant-exchange-qubit|共振交换比特]] 与 [[qubit-control/hybrid-qubit|杂化比特]]。
-- **空穴自旋比特（[[qubit-control/hole-spin-qubit|hole-spin qubit]]）**：在 Ge、Si/Ge 异质结中利用内禀自旋轨道耦合做 EDSR，$f_\text{Rabi}$ 可达数百 MHz；磁场方向与微磁体几何的优化可同时改善相干时间与操控保真度。
+- **空穴自旋比特（[[qubit-control/hole-spin-qubit|hole-spin qubit]]）**：在 Ge、Si/Ge 异质结中利用内禀自旋轨道耦合做 EDSR，$f_\text{Rabi}$ 可达数百 MHz；磁场方向与微磁体几何的优化可同时改善相干时间与操控保真度。理论预言硅空穴点中激发双态参与的跃迁幅度还可再高 1–4 个量级（见[[qubit-control/hole-excited-state-rabi|空穴激发态巨拉比跃迁]]）。
 - **单三重态比特（[[qubit-control/singlet-triplet-qubit|singlet-triplet qubit]]）**：通常用电脉冲做 $J$ 调制实现 $|S\rangle$ 与 $|T_0\rangle$ 之间的 Landau–Zener 翻转；微波 Rabi 振荡方案也有报道，但应用较少。
 - **腔驱动读出（[[readout-measurement/dispersive-readout|dispersive readout]]）**：比特与 [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 腔]]耦合时，连续微波可同时驱动比特 Rabi 振荡与腔透射信号，二者时间分辨的对比可分离纯退相位 $T_\varphi$ 与能量弛豫 $T_1$。
 
