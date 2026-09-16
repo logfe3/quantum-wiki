@@ -2,43 +2,43 @@
   "name": "quantum-wiki-qa",
   "version": "0.1.0",
   "language": "zh-CN",
-  "build_id": "8d50444b735fdb49",
-  "source_digest": "eae95944f5a9628b03a2a45048c508db032f01984a428c4ebdc6a5e4d432bda6",
+  "build_id": "bbbaf0ce4c59ae52",
+  "source_digest": "12f18fe6a84dea3689f1aa79b13fc0de28056de0006b4a32b14631605c05394c",
   "config_sha256": "d8786d2ef5295f22538f8f6bf05aec7b2a73cd8e653fd3303d0179116d4c4d3e",
   "pipeline_sha256": "bc9545d936be00de897d58b698f8bc4de93492fa44945a049760df1467339c46",
   "release_status": "draft_pending_semantic_audit",
-  "source_pages": 106,
-  "accepted_pairs": 597,
+  "source_pages": 107,
+  "accepted_pairs": 603,
   "rejected_pairs": 39,
   "audit_sample_size": 33,
-  "audit_rate_actual": 0.0553,
+  "audit_rate_actual": 0.0547,
   "batch_reject_threshold": 0.05,
   "counts": {
     "split": {
       "dev": 63,
-      "test": 59,
-      "train": 475
+      "test": 60,
+      "train": 480
     },
     "task_type": {
-      "fill_in_the_blank": 106,
-      "multiple_choice": 105,
-      "problem_solving": 202,
-      "short_answer": 92,
-      "true_false": 92
+      "fill_in_the_blank": 107,
+      "multiple_choice": 106,
+      "problem_solving": 204,
+      "short_answer": 93,
+      "true_false": 93
     },
     "difficulty": {
-      "graduate": 97,
+      "graduate": 99,
       "research": 105,
-      "undergraduate": 395
+      "undergraduate": 399
     },
     "topic": {
       "circuit-qed": 111,
       "fundamentals": 84,
-      "materials-devices": 56,
+      "materials-devices": 55,
       "qubit-control": 131,
-      "readout-measurement": 93,
+      "readout-measurement": 94,
       "scaling-automation": 72,
-      "superconducting-qubits": 50
+      "superconducting-qubits": 56
     }
   },
   "construction": {

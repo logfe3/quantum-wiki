@@ -155,7 +155,7 @@ npm run undeploy:local
 - `content/circuit-qed/`：腔与电路 QED，13 个词条；
 - `content/readout-measurement/`：读出与测量，11 个词条；
 - `content/scaling-automation/`：扩展与自动化，9 个词条；
-- `content/references/`：24 篇参考文献全文页；
+- `content/references/`：26 篇参考文献全文页；
 - `content/assets/`：词条使用的图片与附件；
 - `quartz.config.yaml`：Quartz 插件、布局与站点基址配置；
 - `qatlas.integration.yaml`：QAtlas 服务地址、缓存目录与发布质量规则；

@@ -1,6 +1,6 @@
 ---
 title: 参考文献库
-description: 本站引用的 24 篇 arXiv / 期刊文献总目录，覆盖量子点、超导量子比特、操控、读出、自旋-光子接口与自动调控。
+description: 本站引用的 26 篇 arXiv / 期刊文献总目录，覆盖量子点、超导量子比特、操控、读出、自旋-光子接口与自动调控。
 aliases:
  - 文献库
  - 参考文献
@@ -11,7 +11,7 @@ tags:
 date: 2026-09-12
 ---
 
-本页汇总 wiki 各词条引用的 24 篇文献。每篇文献在站内有对应的**机器可读全文页**（由 [QuantumAtlas](https://qatlas.hfnl.app.chenzhaoyun.com/en) 从 arXiv 预印本转换而来，公式与图注以原文为准），词条中的 `[[references/…]]` 双链均指向这些页面。引用请以正式出版物（DOI 链接）为准。
+本页汇总 wiki 各词条引用的 26 篇文献。每篇文献在站内有对应的**机器可读全文页**（由 [QuantumAtlas](https://qatlas.hfnl.app.chenzhaoyun.com/en) 从 arXiv 预印本转换而来，公式与图注以原文为准），词条中的 `[[references/…]]` 双链均指向这些页面。引用请以正式出版物（DOI 链接）为准。
 
 ## 综述与奠基文献
 

@@ -1,5 +1,5 @@
 {
-  "source_digest": "eae95944f5a9628b03a2a45048c508db032f01984a428c4ebdc6a5e4d432bda6",
+  "source_digest": "12f18fe6a84dea3689f1aa79b13fc0de28056de0006b4a32b14631605c05394c",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "8311c50745eefb68298a42ea7cb6790f0d2885a23137823dc58c2167010af49e",
+      "sha256": "d5df8b5737be21defc8f4a66e5a86e93b60200509747b68c7e4ef9e7605f3f8f",
       "split": "train"
     },
     {
@@ -250,7 +250,7 @@
       "path": "content/materials-devices/charge-noise.md",
       "title": "电荷噪声",
       "topic": "materials-devices",
-      "sha256": "0a61b15673e0a7a4fcd6ce2e00e17b3067414a5493280a0c71e7929eae2ddd6b",
+      "sha256": "3b34cb15459e4a6f0136e1fb5678a681c8e337b2e51d1e319425f86720e23994",
       "split": "train"
     },
     {
@@ -369,7 +369,7 @@
       "path": "content/qubit-control/hole-spin-qubit.md",
       "title": "空穴自旋量子比特",
       "topic": "qubit-control",
-      "sha256": "4a2b16b0d8d4ab3908db69ab120ad6be476b628b3b89b1a848396bae02e5b21b",
+      "sha256": "57c565c3951f96b145559116bebe903bc8761ae851b0c6ab01b37e21d4169a54",
       "split": "train"
     },
     {
@@ -453,7 +453,7 @@
       "path": "content/qubit-control/spin-decoherence.md",
       "title": "自旋退相干",
       "topic": "qubit-control",
-      "sha256": "86cef1ccfc974374033339e40e53ae3e8486e084cc22100bc6045ddd42522f73",
+      "sha256": "afef46e9f653ad0ca855351f4ba6c7dfff2ca5313f6e3244972463f15bf381c7",
       "split": "dev"
     },
     {
@@ -509,14 +509,14 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "d27096a62e69e4b2c8171040216c804966a7fbe379a4203b0d2876bc72fe9cf1",
+      "sha256": "411b73857d70b41d5edfecdad74a7455860e77dbcf586697844c2ae2421265dc",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "f6131792be47ab1abe78c38834b06b77138cfa5f46437237f5d0baca46c048d8",
+      "sha256": "a8fff54c37adb9bd3237ad376d5e92dcd01f5ce287202bad08fbfb805d3d2e89",
       "split": "train"
     },
     {
@@ -565,14 +565,14 @@
       "path": "content/readout-measurement/rf-reflectometry.md",
       "title": "射频反射测量",
       "topic": "readout-measurement",
-      "sha256": "109f29e5d4fff56bbcdcfbb6f9d878a068316882151464a456edd5a53682e74a",
+      "sha256": "e2b32811cde5e796fc66f91b5de373b2cfb6c0284015a5daab6f09d31fdb532a",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/single-electron-transistor.md",
       "title": "单电子晶体管",
       "topic": "readout-measurement",
-      "sha256": "0b5dc8c3b1359c2f8d3b72535e1a6a2822158c4ccc16bc7dfaef537a7872d1d0",
+      "sha256": "e172d800b0148f972e858a967a321ce3253af18d8751d0a7208f95ce2594d9cf",
       "split": "train"
     },
     {
@@ -621,7 +621,7 @@
       "path": "content/scaling-automation/flopping-mode-qubit.md",
       "title": "翻转模式量子比特",
       "topic": "scaling-automation",
-      "sha256": "60440979dac4694f51ef0775ad1ba66559e9a60d35ccd7c844949828731818cb",
+      "sha256": "57d7960d1099a6f8e9a64f003638608cf521124a5d7aca895c1b403fc4d78d2d",
       "split": "train"
     },
     {
@@ -635,7 +635,7 @@
       "path": "content/scaling-automation/mmiqc-3d-integration.md",
       "title": "多层微波集成量子电路与三维集成",
       "topic": "scaling-automation",
-      "sha256": "1b2d8ae84362e4802b8bc653348339a04d7c027778a7f03f9a21fd0c7ad956b7",
+      "sha256": "c3f87d69e20eac95cf1652a29bf517810dd03a24d2b5c5be42279866bdb6de80",
       "split": "train"
     },
     {
@@ -663,7 +663,7 @@
       "path": "content/scaling-automation/thouless-pumping-jja.md",
       "title": "约瑟夫森结阵列中的 Thouless 量子泵浦",
       "topic": "scaling-automation",
-      "sha256": "50c179e23897e1ef4b0c9705dbc22f46140e4d127d8ef86a4b1d6eeb1c3fb9d5",
+      "sha256": "afebfadc70a13bb2dc0c9946a12836c3588e2c4e7df2bf79244464926b1471be",
       "split": "dev"
     },
     {
@@ -705,7 +705,7 @@
       "path": "content/superconducting-qubits/gatemon-qubit.md",
       "title": "Gatemon 半导体纳米线量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "6d8d84154d78645ef50ad9f2d0c55dde466785774204806e24a4309bb496e5de",
+      "sha256": "8e0d174e8493a7b786063a647c4f2603d179fd3836b3ee6efb052c1d13e94459",
       "split": "train"
     },
     {
@@ -720,6 +720,13 @@
       "title": "量子比特快速复位",
       "topic": "superconducting-qubits",
       "sha256": "4ae879e58d574ef20fd4910bb20de7e939ccd1762dfe2f951cd27e0efc8e51f2",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/remote-qubit-self-testing.md",
+      "title": "远程超导比特自检验",
+      "topic": "superconducting-qubits",
+      "sha256": "0260daed576cb178701d80755416960e8eee5e34598d191f1a331f0f4ffdb6bc",
       "split": "train"
     },
     {
@@ -740,7 +747,7 @@
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "07e98dc5a3d4a73a6ab97466fb775f5109f8e063ab8e832fa774aca5a1017025",
+      "sha256": "d2e9b881ff387fff306f4a1ebd4ae34e4c846c6eb1a98414112324bc5540992f",
       "split": "train"
     }
   ]
