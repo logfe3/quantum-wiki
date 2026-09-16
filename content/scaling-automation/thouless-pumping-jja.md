@@ -63,6 +63,7 @@ $$
 
 - 硬件载体是[[circuit-qed/superinductance|约瑟夫森结阵列与超电感]]的可调版本：每个岛的栅控来自[[superconducting-qubits/gatemon-qubit|gatemon]]的半导体-超导体杂化工艺，库仑阻塞物理与[[fundamentals/coulomb-blockade|库仑阻塞]]一致。
 - 逐岛栅控的电压分配由[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]与[[scaling-automation/virtual-gates|虚拟电极]]描述；岛间相位与电荷的一致性控制也依赖[[scaling-automation/frequency-homogenisation|频率均匀化]]的思想。
+- [[superconducting-qubits/flat-band-localization|平带局域化与 Aharonov–Bohm 笼蔽]]：transmon 平台上另一类含规范场的格点模拟——参数耦合相位提供合成磁通、磁通调带色散。
 - 半导体-超导体杂化岛与[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]等纳米结构平台同属材料学基础；岛链上的电荷泵浦与[[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]的输运物理同源，但这里是拓扑保护的定量输运。
 - 超导平台的量子模拟家族还有数字一支：大步长 Trotter 电路作为 Floquet 系统的 Z₂ 格点规范理论模拟（预热化平台内测量，38/116 比特），见[[circuit-qed/floquet-dynamics|Floquet 驱动动力学]]的"Floquet 预热化"一节——模拟拓扑物态（本词条）与模拟规范理论动力学的预热态是同一平台路线的两条支线。家族的玻色子模拟一支：电容耦合 transmon 环经 Leviton Floquet 调制注入合成磁通、模拟吸引玻色子的亮孤子并读出分数磁通量子，见[[superconducting-qubits/synthetic-flux-qubit-ring|合成磁通与分数磁通量子]]词条。
 

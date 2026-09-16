@@ -257,6 +257,7 @@ Li 等人把这一凝聚态现象搬进单个 transmon：用任意波形发生�
 - [[qubit-control/landau-zener-transition|Landau–Zener 跃迁]]是 Floquet 免交叉附近的瞬态图像；Floquet 理论则把它推广到稳态干涉与平均能量曲线。
 - [[circuit-qed/jaynes-cummings-model|Jaynes–Cummings 模型]]描述无驱动二能级–腔耦合；含驱动时需要把 JC 模型换成 Floquet 化的耦合系统。
 - [[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]提供腔输入输出框架与色散响应公式；Floquet 动力学把这一框架的"时间依赖性"明确吸收进 Floquet 表象。
+- [[superconducting-qubits/floquet-anisotropic-transverse-interactions|横向各向异性相互作用的 Floquet 工程]]：Floquet 方法的"相互作用合成"应用——蓝/红边带驱动把原生 JC 耦合改写为幅度与复相位独立的 XX/YY 任意配比，并用合成空间 AB 干涉校准整条链。
 - [[circuit-qed/strong-coupling|强耦合]]（$g>\kappa,\gamma$）是 Floquet 态消耗与增益条纹能被分辨的实验前提；$g/\kappa$ 的大小直接决定增益能否出现。
 - [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]系统中，Floquet 理论需要从单比特推广到耦合系统矩阵；色散读出近似忽略的量子点间相互作用此时进入 Floquet 响应函数。
 - [[readout-measurement/dispersive-readout|色散读出]]给出 Floquet 动力学进入实验信号的具体公式（$\chi^{(0)}$ 在 $S_{11},S_{21}$ 中的位置）。
