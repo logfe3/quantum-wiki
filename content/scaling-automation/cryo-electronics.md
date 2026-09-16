@@ -236,6 +236,7 @@ $$
 - [[readout-measurement/rf-reflectometry|射频反射读出]]把链路上限从 kHz 提到 100 MHz 以上，对应 cryo-electronics 切换到匹配网络 + 高频衰减 + cryo-LNA 的配置。
 - 屏蔽与滤波改进的验证由[[scaling-automation/multi-time-tomography|多时间量子过程层析]]承担：改进前后各跑一次多时间层析，过程矩阵之差即噪声通道的真实变化——准粒子、串扰等非马尔可夫关联由此定量化。
 - [[superconducting-qubits/real-time-qec-decoding|实时低延迟量子纠错解码]]：经典控制侧扩展性的又一环——FPGA 解码器与门序列器同机箱集成，把通信/控制延迟压到 3.1 µs，是容错逻辑时钟率的前提。
+- [[scaling-automation/multiplexed-qd-characterization|大规模量子点多路复用表征]]与[[scaling-automation/hot-spin-qubit-operation|高温自旋比特运行]]：从两端夹击布线墙——片上 FET 开关树把引脚数按 Rent 定律压缩（16 区近十倍、2 K/强磁场运行），比特侧则把可用温区推到 750 mK 靠近集成电子学的散热预算。
 - [[readout-measurement/parametric-amplifier|参量放大器]]（J-Amp/J-TWPA）是 cryo-electronics 在量子比特读出端的近量子极限放大，与本节 HEMT 形成代次互补；其中行波方案（JTWPA）的器件原理与设计维度见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]专页。
 - [[circuit-qed/purcell-filter|Purcell filter]]把"读出链路对 qubit 退相干的影响"用 $Q_p$ 与 $\omega_p$ 解析地纳入链路设计，是 cryo-electronics 在 readout 端的设计参数。
 - [[materials-devices/charge-noise|电荷噪声]]是 cryo-electronics 必须抑制的扰动源；指出同轴线 + 热沉方案能直接降低离子注入区因加热产生的额外电荷跳变。

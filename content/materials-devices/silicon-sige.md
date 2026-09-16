@@ -285,8 +285,8 @@ $$
 
 - 异质结提供[[fundamentals/two-dimensional-carrier-gas|二维电子气]]，栅极再把它切成[[fundamentals/semiconductor-quantum-dot|量子点]]、[[fundamentals/double-quantum-dot|双量子点]]乃至[[scaling-automation/quantum-dot-array|量子点阵列]]。
 - 单点性质经[[fundamentals/coulomb-blockade|库仑阻塞]]与[[fundamentals/coulomb-diamond|库仑菱形]]表征，双点及以上经[[fundamentals/charge-stability-diagram|电荷稳定图]]表征，参数换算依赖杠杆臂与[[fundamentals/constant-interaction-model|常相互作用模型]]。
-- 比特层面：[[qubit-control/single-spin-qubit|单自旋量子比特]]由[[qubit-control/electric-dipole-spin-resonance|EDSR]] + [[materials-devices/micromagnet|微磁体]]操控，两比特门经[[qubit-control/exchange-interaction|交换相互作用]]实现；读出用[[readout-measurement/single-shot-readout|单发读出]]或[[readout-measurement/dispersive-readout|色散读出]]。
-- 扩展层面：[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]是阵列可调性的前提，[[scaling-automation/two-dimensional-array|二维阵列]]是表面码纠错的物理载体。
+- 比特层面：[[qubit-control/single-spin-qubit|单自旋量子比特]]由[[qubit-control/electric-dipole-spin-resonance|EDSR]] + [[materials-devices/micromagnet|微磁体]]操控，两比特门经[[qubit-control/exchange-interaction|交换相互作用]]实现；读出用[[readout-measurement/single-shot-readout|单发读出]]或[[readout-measurement/dispersive-readout|色散读出]]；高谷劈裂外延设计（$\gtrsim0.1$ meV）把运行温区推到 750 mK 仍保 99.8% 单比特保真度，见[[scaling-automation/hot-spin-qubit-operation|高温自旋比特运行]]。
+- 扩展层面：[[scaling-automation/virtual-gates|虚拟栅极]]与[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]是阵列可调性的前提，[[scaling-automation/two-dimensional-array|二维阵列]]是表面码纠错的物理载体；片上 FET 开关树复用（16 建造区、~2 K 运行）把外延平台的表征与读出引线按 Rent 定律压缩，见[[scaling-automation/multiplexed-qd-characterization|大规模量子点多路复用表征]]。
 - 杂化层面：[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]把[[circuit-qed/charge-photon-coupling|电荷–光子耦合]]与[[circuit-qed/spin-photon-coupling|自旋–光子耦合]]推入[[circuit-qed/strong-coupling|强耦合]]区，为远程互连铺路。
 - 限制层面：[[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是当前相干时间的主要瓶颈。
 - 编码层面：[[qubit-control/charge-qubit|电荷量子比特]]在非掺杂 Si/SiGe 四量子点上已实现双轴相干控制与 80 ps 条件 π 相位翻转（电容耦合 ≈18 GHz），是平台快门控动力学的实验基准。

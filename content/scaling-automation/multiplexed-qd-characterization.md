@@ -13,8 +13,8 @@ tags:
  - 器件表征
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvf6t7f3zjww937ze5632s
-source_updated: 2026-09-09T12:57:36Z
+qatlas_id: qa_01m0qvh1xqphjmbssq7md56c1s
+source_updated: 2026-09-04T04:58:55Z
 ---
 
 <div class="entry-lead">比特数上千之后，瓶颈先出现在"怎么测完"而不是"怎么算好"：一根射频线经[[readout-measurement/rf-reflectometry|射频反射测量]]读一个器件的传统流程，对上千器件意味着上千次布线与数周机时。多路复用表征借用 DRAM 的思路——片上行列选址开关（TDMA）把 1024 个量子点挂到同一条读出线上，5 分钟扫完全场，再用机器学习批量提取参数，把量子点表征变成了可做统计的"农场"作业。</div>
@@ -66,6 +66,22 @@ $$
 
 最实用的发现是**低温量子点参数与室温晶体管行为直接相关**：$V_{1e}$ 与同一器件的室温阈值电压 $V_{th}$ 呈线性关联，观测到的 $V_{th}$ 变异性几乎完全解释 $V_{1e}$ 的分散。这意味着量子点良率与均匀性可以在**室温晶圆级测试**中预估——不必把每片样品都泡进稀释制冷机再发现设计问题。对走向制造的硅量子技术，这打开了产线前工艺监测（in-line process monitoring）的通道。
 
+## 外延平台上的 FET 开关树复用（Wolfe 2024）
+
+Thomas 农场走的是"量子点本身即 CMOS 晶体管"的代工路线；Wolfe 等（UW-Madison/Sandia）在另一端给出**外延 Si/SiGe 量子器件与经典电路的单片共集成**：同一芯片上用场效应晶体管开关树多路复用 16 个"建造区"（每个区内可光刻任意栅定量子器件），把欧姆接触引线压缩近十倍。框架用经典互连理论的语言量化——引脚数 $T$ 与器件数 $g$ 服从 Rent 定律 $T \propto g^{p}$：无复用时 $p\approx1$，现代经典处理器做到 $p=0.36$，而容错规模的量子处理器（$\sim10^9$ 物理比特）必须把 Rent 指数压到远小于 1。
+
+实现上，每个开关由四个 FET 组成：$\{G_{11}, G_{22}\}$ 共栅、$\{G_{12}, G_{21}\}$ 反相栅，二进制互补使开关只有两个数字态；$N$ 级开关树给出 $2^N$ 个二进制地址 $S=\{S_0,\dots,S_3\}$（16 区用 4 位）。此前硅上复用实现让非激活器件**浮空**，FET 漏极充至未知电压造成漂移与迟滞；本工作新增接地 FET 通路，让所有非激活器件钉在确定电位——这是把复用从"演示"推向"可重复测量"的关键工程修正。
+
+![[assets/figures/multiplexed-qd-characterization/wolfe2024-fig2-multiplexer-scheme.jpg]]
+
+*FET 开关树复用方案：(a) 11.5×11.5 mm² 芯片上的 16 个建造区；(b) 器件经开关网络接室温控制模块的电路示意——蓝色为地址 S=0000 的电流路径，其余器件经新增接地通路钉在确定电位（橙色）；(c) 开关 3 的显微照片及对应的假色电流路径；(d) 四 FET 开关电路；(e) 地址 0000 建造区中的霍尔条（交流锁相测量标注）；(f) 建造区中心台面异质结构堆叠。图源：Wolfe et al. (2024)，Fig. 2。*
+
+演示负载是每个区内电子束光刻的霍尔条：四端交流锁相测出电阻率张量（$n_{2D} = B/(e\rho_{xy})$、$\mu = 1/(e\,n_{2D}\rho_{xx})$），16 个器件单次降温完成全场统计——电容单位面积均值 $7.67\times10^{11}\ \mathrm{e/Vcm^2}$、**相对方差仅 0.4%**（栅介质质量），电子迁移率相对标准差约 10%、穿渗密度约 15%。整机在 **~2 K（泵浦 ⁴He 回路）与强磁场**下运行并在阵列上观测到整数量子霍尔效应——同时验证了复用电路在"高温"（对量子器件而言）与高 B 环境的存活能力，这直接对接[[scaling-automation/hot-spin-qubit-operation|高温自旋比特运行]]的温度区间。基于此，作者提出大规模硅量子处理器的读出愿景：稀疏比特阵列 + 共享控制模块 + 片上开关路由。
+
+![[assets/figures/multiplexed-qd-characterization/wolfe2024-fig1-processor-blueprint.jpg]]
+
+*带片上集成经典电路的量子处理器蓝图：蓝色为需要输入输出信号的密集比特阵列，绿色为共享控制模块（可容纳 cryo-CMOS 等），红色为路由开关阵列——插图为首位地址 $S_0$ 控制的四 FET 开关电路。开关树使一套控制引脚被整个阵列网格共享，把处理器的 Rent 指数压向经典处理器水平。图源：Wolfe et al. (2024)，Fig. 1。*
+
 ## 与其他概念的关系
 
 - [[readout-measurement/rf-reflectometry|射频反射测量]]：农场表征的物理测量层，$t_{\min}$ 是其灵敏度的系统级汇总指标；
@@ -74,8 +90,10 @@ $$
 - [[scaling-automation/quantum-dot-array|量子点阵列]]与[[materials-devices/silicon-mos|Si-MOS 量子点]]：商业代工 CMOS 几何既是被测对象也是复用器载体；
 - [[scaling-automation/automatic-tuning|自动调控]]：大规模表征提供阵列调谐所需的先验统计（$V_{1e}$ 分布、杠杆臂典型值）；
 - [[scaling-automation/charge-shuttling|电荷穿梭]]：TDMA 读出选址与穿梭传输互补，共同构成大规模阵列的访问体系。
+- [[scaling-automation/hot-spin-qubit-operation|高温自旋比特运行]]：FET 复用电路在 ~2 K 与强磁场下的运行验证了其在集成电子学温度区间的存活能力。
 
 ## 参考文献
 
 - Thomas, E. J., Ciriano-Tejel, V. N., Wise, D. F., Prete, D., de Kruijf, M., Ibberson, D. J., Noah, G. M., Gomez-Saiz, A., Gonzalez-Zalba, M. F., Johnson, M. A. I., Morton, J. J. L. Rapid cryogenic characterisation of 1024 integrated silicon quantum dots (2023). DOI: 10.1038/s41928-024-01304-y；arXiv:2310.20434（QAtlas 缓存：2310.20434）。
+- Wolfe, M. A., McJunkin, T., Ward, D. R., Campbell, D., Friesen, M., Eriksson, M. A. On-chip cryogenic multiplexing of Si/SiGe quantum devices (2024). arXiv:2410.13721（QAtlas 缓存：2410.13721）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

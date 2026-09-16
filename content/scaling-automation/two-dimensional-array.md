@@ -200,6 +200,7 @@ $$
 - 点间[[fundamentals/tunnel-coupling|隧穿耦合]] $t$ 既进入扩展 Fermi–Hubbard 模型的动能项，又在强耦合极限下决定[[qubit-control/exchange-interaction|交换相互作用]] $J\approx 4t^2/U$——同一个参数同时服务量子模拟和量子计算两种用途。
 - 二维阵列态的感知依赖[[readout-measurement/qpc-charge-sensor|QPC 电荷传感]]或 SET 探测器以及[[readout-measurement/rf-reflectometry|射频反射测量]]的复用；与[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]杂化后则进入[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]范畴。
 - 器件材料背景见[[materials-devices/silicon-sige|Si/SiGe 异质结]]。
+- 二维化的下一跳是**全向穿梭**：像素化 clavette 栅在阵列上实现任意方向传送带输运、按谷劈裂地图绕行，为二维阵列提供架构级量子路由（见[[scaling-automation/charge-shuttling|电荷穿梭]]"全向穿梭"一节）。
 
 
 ## 参考文献

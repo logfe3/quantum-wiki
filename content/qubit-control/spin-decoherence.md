@@ -228,7 +228,7 @@ $$
 - [[qubit-control/ramsey-interferometry|Ramsey 干涉]]是 $T_2^*$ 的标准测量协议；它对低频 $1/f$ 噪声最敏感，是 $T_2$ 的"下限"。
 - [[qubit-control/rabi-oscillation|Rabi 振荡]]的衰减 $T_2^\mathrm{Rabi}$ 与 Ramsey、Hahn、CPMG 一起构成完整的相干图景：分别反映驱动期间、自由演化期间、聚焦低频噪声后的相干性。
 - [[qubit-control/dynamical-decoupling|动力学解耦]]通过 $\pi$ 脉冲"对消"而非"消除"低频噪声，是把 $T_2^*$ 推向 $T_2$ 本征值的主要工程手段；它同时给出测量噪声谱的工具（DD noise spectroscopy）。
-- [[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是退相干的两大来源；材料工艺、同位素纯化、栅极介电优化与 DD 共同组成延长 $T_2$ 的多重防线——Si/SiGe 的噪声谱测量显示噪声幅值随栅氧厚度与温度上升（50 mK–1 K 近似线性），升温运行或加厚介质层都会付出噪声代价。
+- [[materials-devices/charge-noise|电荷噪声]]与[[materials-devices/interface-defects|界面缺陷]]是退相干的两大来源；材料工艺、同位素纯化、栅极介电优化与 DD 共同组成延长 $T_2$ 的多重防线——Si/SiGe 的噪声谱测量显示噪声幅值随栅氧厚度与温度上升（50 mK–1 K 近似线性），升温运行或加厚介质层都会付出噪声代价；350–750 mK 系统扫描实测 $T_2^*$ 温和下降（17–32%），见[[scaling-automation/hot-spin-qubit-operation|高温自旋比特运行]]。
 - [[qubit-control/electric-dipole-spin-resonance|EDSR]]与[[materials-devices/micromagnet|微磁体]]加快 Rabi 频率的同时把电荷、磁场噪声耦合进比特频率，是"驱动强"与"相干好"难以兼得的根源。
 - [[qubit-control/singlet-triplet-qubit|单态–三重态量子比特]]以交换相互作用 $J$ 为 $z$ 轴，$T_2^*$ 主要由电荷噪声决定；它的回波逻辑（DCZ）与自旋比特完全平行。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]因强自旋–轨道耦合使 $T_2^*$ 较短（数十至上百 ns），但 $T_2^\mathrm{CPMG}$ 可突破 ms 量级；DD 在该体系同时是最重要的延长手段和噪声谱诊断工具。

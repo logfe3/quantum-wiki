@@ -13,8 +13,8 @@ tags:
  - 阵列扩展
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvfkb9bwnzxef4pjg2hhf2
-source_updated: 2026-09-08T23:05:04Z
+qatlas_id: qa_01m0qvhbqt97dgkp4239vxn4jb
+source_updated: 2026-09-02T20:24:32Z
 ---
 
 <div class="entry-lead">交换相互作用把[[qubit-control/exchange-interaction|两比特门]]的有效范围限制在 ~50 nm，自旋–光子接口又要把比特接到厘米尺度的超导腔上——中间那 50 nm–10 µm 的"中尺度连接带"由**电荷穿梭**填补：像救火队传水桶一样，让一个电子沿量子点阵列逐对越过点间电荷跃迁，把量子态物理搬运到目的地。硅中 9 点阵列的演示已把单电子穿越时间压到 ~50 ns，比自然硅的退相位时间快一个量级。</div>
@@ -103,6 +103,40 @@ $$
 
 ——只要单次穿梭足够好（四次方仍胜过一次串扰），"先撤离再操作"就优于"忍受串扰"。模拟确认了规避方案的输出态保真度更高。这一判据把穿梭的工程需求（单步保真度）与阵列架构收益直接挂钩：按当前硅穿梭实验的进展，$f_{sh}$ 每提高一个量级，可支撑的电路规模按 $m\sqrt n$ 放大。
 
+## 全向穿梭：绕开谷激发的二维方案（Németh 2024）
+
+一维传送带有一个被无序物理注定的问题：合金无序主导（ADD）区谷劈裂的涨落 $\sigma_\Delta \approx \bar E_v/\sqrt\pi$，而长轨迹上必然撞到 $\bar E_v$ 低得危险的位点（$\bar E_v=100\ \mu$eV 时典型谷劈裂景观里危险点密度很高），电子在那里经 Landau–Zener 过程跃入激发谷。规避手段里最有效的一招是**横向绕行**：把轨迹横移 $\Delta y \gtrsim 100\ \mathrm{nm}$（须大于点直径 $2l_{\mathrm{dot}}\approx28\ \mathrm{nm}$）绕开危险区——但常规穿梭器件的横向控制只有 $\Delta y\approx20\ \mathrm{nm}$，先天不足。Németh 等（UW-Madison）据此提出两级方案：
+
+**多通道穿梭**：并联通道间用屏蔽栅（S₁–S₃）控制失谐 ε 与隧道耦合 $t_c$，通道间距给出 $\Delta y\gtrsim100\ \mathrm{nm}$。转移过程用双通道×双谷的四能级哈密顿量建模，谷相位差 $\delta\phi=\phi_L-\phi_R\neq0$ 时隧道矩阵元中出现**谷间耦合项**
+
+$$
+t_{eg} = \frac{t_c}{2}\left(e^{i\phi_L} - e^{i\phi_R}\right),
+$$
+
+它把左通道的谷基态直接投到右通道的谷激发态——这正是多通道方案的主要误差源（$\delta\phi=\pm\pi$ 时必然激发）。仿真（每点平均 10⁴ 次随机谷耦合抽样，$\sigma_\Delta=56.4\ \mu$eV）：**暂停式**转移（纵向传送带暂停、$\varepsilon(\tau)=\varepsilon_0(-1+2\tau/\tau_{\mathrm{tot}})$、$t_c(\tau)=t_0\sin(\pi\tau/\tau_{\mathrm{tot}})$）在 $t_0\gtrsim100\ \mu$eV、$\varepsilon_0\approx500\ \mu$eV、$\tau_{\mathrm{tot}}=10$–50 ns 时成功率 $\gtrsim95\%$；**运动式**转移（不停带、$v_x\sim1$ m/s）在通道间失谐涨落非关联时显著劣化——且暂停式本身不可扩展（全通道电子须同时暂停、退相干累积）。结论：通道隧道转移这条路先天受限。
+
+**全二维 clavette 栅传送带**：把门做成 2D 单元的"clavette"像素栅（4×4 单元仅 16 条控制线），电压按双轴正弦叠加
+
+$$
+V_{ij}(\tau) = \frac{V_{\mathrm{amp}}}{2}\left[\cos\left(\Omega_x\tau+\delta\theta_{ij}^x\right) + \cos\left(\Omega_y\tau+\delta\theta_{ij}^y\right)\right],
+$$
+
+独立调 $\Omega_{x(y)}$ 即得任意方向运动（方向角 $\varphi_{\mathrm{sh}}=\tan^{-1}(\Omega_y/\Omega_x)$，速度 $v_{x(y)}=2\Omega_{x(y)}P/\pi$）；绕行用半圆轨迹（半径 R=50 nm，$v_x=v\sin(\pi\tau/\tau_{\mathrm{circ}})$、$v_y=v\cos(\pi\tau/\tau_{\mathrm{circ}})$）。这类器件需刻蚀沉积与垂直通孔的工业工艺，无法用重叠栅实现。泄漏评估用五口袋×双谷的十能级 Lindblad 仿真（含谷耦合 $\Delta_j$ 无序与声子弛豫）：10 µm 行程的口袋间泄漏在 $t_p<10^{-5}\ \mathrm{meV}$ 时低于 $10^{-3}$；静电仿真扫描 $V_{\mathrm{amp}}$ 与栅距 $P$ 给出高保真窗口——**$P\gtrsim35\ \mathrm{nm}$、$V_{\mathrm{amp}}\gtrsim75\ \mathrm{mV}$ 同时保 $t_p<10^{-5}\ \mathrm{meV}$ 与 $E_{\mathrm{orb}}>1.5\ \mathrm{meV}$**（口袋间隧道与轨道激发双双压制），且窗口在很宽参数范围内稳健。
+
+![[assets/figures/charge-shuttling/nemeth2024-fig1-shuttling-schemes.jpg]]
+
+*三种穿梭几何与谷劈裂规避：(a) 常规单通道——屏蔽栅只能提供 ~20 nm 横向控制，clavier 栅正弦驱动形成移动势阱；(b) 多通道——独立屏蔽栅 S₁–S₃ 控制通道间失谐与隧道，横移可达 ≳100 nm；(c) 全二维——clavette 像素栅组成 2D 单元，双轴正弦驱动实现任意方向输运；(d) 典型低谷劈裂区分布图（平均 100 µeV、点直径 28 nm），三种几何的横向绕行能力逐级增强。图源：Németh et al. (2024)，Fig. 1。*
+
+![[assets/figures/charge-shuttling/nemeth2024-fig3h-operating-window.jpg]]
+
+*2D 穿梭器的高保真设计窗口：轨道激发能 $E_{\mathrm{orb}}$ 与口袋间隧道耦合 $t_p$ 的等值线随栅距 P 与正弦电压幅度 $V_{\mathrm{amp}}$ 的变化，紫色阴影为同时满足 $t_p<10^{-5}\ \mathrm{meV}$、$E_{\mathrm{orb}}>1.5\ \mathrm{meV}$ 的窗口（约 $P\gtrsim35$ nm、$V_{\mathrm{amp}}\gtrsim75$ mV）——口袋泄漏与轨道激发在宽参数范围内同时被压制。图源：Németh et al. (2024)，Fig. 3 面板 (h)。*
+
+由此提出**模块化架构**：比特 plaquette（比特 + 读出/控制电子学环绕 2D 穿梭器布置）内部全连通、plaquette 之间用 2D 穿梭互连绕开谷危险区、经典控制电子学穿插其间——穿梭从"点间搬运"升级为架构级的量子路由层。
+
+![[assets/figures/charge-shuttling/nemeth2024-fig4-2d-architecture.jpg]]
+
+*基于 2D 穿梭的模块化量子计算架构：比特 plaquette（比特、读出与控制电子学布置在 2D 穿梭器周边）+ 量子互连（2D 穿梭器）+ 穿插其间的经典控制电子学三技术叠加——plaquette 内全连通，互连允许电子绕开低谷劈裂区路由。图源：Németh et al. (2024)，Fig. 4。*
+
 ## 参数与量级
 
 | 量 | 典型值 | 来源 |
@@ -117,6 +151,10 @@ $$
 | 编译验证 | 10/30/50 比特、1–300 门随机电路，实用时间内完成 | Sato 2024 |
 | 单比特门穿梭开销 | $O(6m\sqrt n)$ 次穿梭（m 门、n 比特） | Sato 2024 |
 | 串扰规避判据 | $f_{sh}^4>f_{ct}$ | Sato 2024 |
+| 谷劈裂涨落（ADD 区） | $\sigma_\Delta\approx\bar E_v/\sqrt\pi$（$\bar E_v=100\ \mu$eV 时 56.4 µeV）；绕行判据 $\Delta y\gtrsim100$ nm | Németh 2024 |
+| 多通道暂停式转移成功率 | ≳95%（$t_0\gtrsim100\ \mu$eV、$\varepsilon_0\approx500\ \mu$eV、$\tau_{\mathrm{tot}}=10$–50 ns） | Németh 2024 |
+| 2D 穿梭泄漏 | 10 µm 行程口袋泄漏 <10⁻³（$t_p<10^{-5}$ meV）；设计窗口 $P\gtrsim35$ nm、$V_{\mathrm{amp}}\gtrsim75$ mV、$E_{\mathrm{orb}}>1.5$ meV | Németh 2024 |
+| 2D 单元控制线 | 4×4 clavette 栅单元 16 条独立线；绕行半径 R=50 nm | Németh 2024 |
 
 ## 与其他概念的关系
 
@@ -128,9 +166,11 @@ $$
 - [[scaling-automation/two-dimensional-array|二维量子点阵列]]：行列共享门的二维架构把穿梭从可选优化变为独立寻址的必要条件；
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]：自旋态传输是穿梭的终极目标，要求总时间 $\ll T_2^*$ 并规避自旋–谷热点；
 - [[references/ge-shuttle-2024|锗量子点相干自旋输运]]：空穴体系中穿梭相干性的实验基准。
+- [[fundamentals/valley-splitting|谷劈裂]]：一维轨迹注定遭遇低谷劈裂区（$\sigma_\Delta\approx\bar E_v/\sqrt\pi$），全向穿梭把"绕开谷激发"从脉冲整形问题变成几何路由问题——需要先测绘 2D 谷劈裂地图。
 
 ## 参考文献
 
 - Mills, A. R., Zajac, D. M., Gullans, M. J., Schupp, F. J., Hazard, T. M., Petta, J. R. Shuttling a single charge across a one-dimensional array of silicon quantum dots. *Nature Communications* 10, 1063 (2019). DOI: 10.1038/s41467-019-08970-z；arXiv:1809.03976（QAtlas 缓存：1809.03976）。
 - Sato, N., Sekiguchi, T., Utsugi, T., Mizuno, H. Generating Shuttling Procedures for Constrained Silicon Quantum Dot Array (2024). arXiv:2401.14683（QAtlas 缓存：2401.14683）。
+- Németh, R., Bandaru, V. K., Alves, P., Brann, E., Eskandari, O. M., Soomro, H., Vivrekar, A., Eriksson, M. A., Losert, M. P., Friesen, M. Omnidirectional shuttling to avoid valley excitations in Si/SiGe quantum wells (2024). DOI: 10.1103/615j-xjyh；arXiv:2412.09574（QAtlas 缓存：2412.09574）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
