@@ -1,5 +1,5 @@
 {
-  "source_digest": "fea9340094c1e94f73d0529768dc5d575b2205fb9e3e4b1a5da73a7e59f44700",
+  "source_digest": "f8edfa4be56c73817c6526ea9d26e5b69b5b77719860595da55a2c4397b7fc53",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -12,7 +12,7 @@
       "path": "content/circuit-qed/cavity-linewidth.md",
       "title": "腔线宽与品质因子",
       "topic": "circuit-qed",
-      "sha256": "da96150aaf6ab41a6d5e74dc5a5b424ed6f281835f371240fa4f59b63c0a14a2",
+      "sha256": "4fca7a131b655ec7fede698e6684403461e70cc951413a61f10aa1415188778e",
       "split": "test"
     },
     {
@@ -33,7 +33,7 @@
       "path": "content/circuit-qed/charge-photon-coupling.md",
       "title": "电荷–光子耦合",
       "topic": "circuit-qed",
-      "sha256": "ee7faa8fbf2f498742be90a7604ffb505a61db550de8ce8830f42ba12c0687fc",
+      "sha256": "9f260c154af64d5fd42f1636739abcae17bb9db57483c21930f03f8982c1624d",
       "split": "dev"
     },
     {
@@ -61,7 +61,7 @@
       "path": "content/circuit-qed/floquet-dynamics.md",
       "title": "Floquet 驱动动力学",
       "topic": "circuit-qed",
-      "sha256": "938a9832609d70dd43026c2a44f3ac4f39927706616fa897333811761396a3fe",
+      "sha256": "8311c50745eefb68298a42ea7cb6790f0d2885a23137823dc58c2167010af49e",
       "split": "train"
     },
     {
@@ -313,7 +313,7 @@
       "path": "content/qubit-control/charge-qubit.md",
       "title": "电荷量子比特",
       "topic": "qubit-control",
-      "sha256": "4555282d3ddd4c6eb98806a7c4262928bf7b52beb0f36194ff0a9245931f11ce",
+      "sha256": "f3a28b384994ae3c0e96b96bca41e10e356fcc59a20e8fc9245cf61b7eb643e0",
       "split": "train"
     },
     {
@@ -404,7 +404,7 @@
       "path": "content/qubit-control/photon-assisted-tunneling.md",
       "title": "光子辅助隧穿",
       "topic": "qubit-control",
-      "sha256": "3112eb8dd3c6b9f067d459d6bfdfecb11331f9bba75bad043fca3931fe3c5efe",
+      "sha256": "ef924b896947cb93fb543dafaf38b2ad8cbcf2daf11bb54ebb63c40af6965ca4",
       "split": "train"
     },
     {
@@ -488,7 +488,7 @@
       "path": "content/readout-measurement/dispersive-readout.md",
       "title": "色散读出",
       "topic": "readout-measurement",
-      "sha256": "06a83114f730c48ecdc64ebb5d244202b5062c9b239d73f7dfade32c1067f869",
+      "sha256": "916fba721f78bf66e3bb3bf32a4c56615588beb3eceaca03d59fed66533bc2a4",
       "split": "train"
     },
     {
@@ -509,21 +509,28 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "10d953419a04071e2d5d0b0a2787a101230958d9dadfa38a0330f8fc94dbc1d4",
+      "sha256": "d27096a62e69e4b2c8171040216c804966a7fbe379a4203b0d2876bc72fe9cf1",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "5592c0becc969dae9c64c32fef811321b18be685794b33242b2728e12985a929",
+      "sha256": "f6131792be47ab1abe78c38834b06b77138cfa5f46437237f5d0baca46c048d8",
+      "split": "train"
+    },
+    {
+      "path": "content/readout-measurement/pt-symmetry-parametric-amplifier.md",
+      "title": "参量放大器中的 PT 对称性破缺",
+      "topic": "readout-measurement",
+      "sha256": "6ce169a14016e498f2f5616a4af4d5f7a5cd0469d7f86f4b9595d2c179212a5f",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/purcell-filter.md",
       "title": "Purcell 滤波器",
       "topic": "readout-measurement",
-      "sha256": "d8b2ee7cf142a3f296b44bc94e5f2b123da24cf0ca3c9bb42e9eac9a037d7342",
+      "sha256": "14ec1124074cbfc2693658ccf13fdfb70901c090913b8eb8a4287a4792662093",
       "split": "train"
     },
     {
@@ -678,14 +685,14 @@
       "title": "可调电容并联 flux qubit 的退相干",
       "topic": "superconducting-qubits",
       "sha256": "11ac90f171ea0983d2a909607fc528ecce4d2647ebbf338675e5abc5e47e69ba",
-      "split": "test"
+      "split": "dev"
     },
     {
       "path": "content/superconducting-qubits/flowermon-qubit.md",
       "title": "Flowermon 扭转铜酸比特",
       "topic": "superconducting-qubits",
       "sha256": "e34449954fdae66d5322c7694e72f709e01c49bd49d566545d0c3705a3ccc7a3",
-      "split": "dev"
+      "split": "train"
     },
     {
       "path": "content/superconducting-qubits/fluxonium-qubit.md",
@@ -712,14 +719,28 @@
       "path": "content/superconducting-qubits/qubit-fast-reset.md",
       "title": "量子比特快速复位",
       "topic": "superconducting-qubits",
-      "sha256": "03d94755d07a8b47e45d3c5e550477bcb8f1a1fb65426e46cf5340e523b76349",
+      "sha256": "4ae879e58d574ef20fd4910bb20de7e939ccd1762dfe2f951cd27e0efc8e51f2",
       "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/spin-locked-qubit.md",
+      "title": "自旋锁定量子比特",
+      "topic": "superconducting-qubits",
+      "sha256": "c88b8b0f08b1ade7527acddecb7be988efd443e2f75d51122641d2021ee0fb56",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/subharmonic-drive.md",
+      "title": "次谐波驱动",
+      "topic": "superconducting-qubits",
+      "sha256": "432440098058792f4e9702e8fe472799c029293776e35279bae66ff2975147d2",
+      "split": "test"
     },
     {
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "3af91d37928ab0a83c97b6979843e53ea743a0bb6eba4191f10fb0a0577c6f80",
+      "sha256": "07e98dc5a3d4a73a6ab97466fb775f5109f8e063ab8e832fa774aca5a1017025",
       "split": "train"
     }
   ]
