@@ -67,6 +67,7 @@ $$
 - **行波器件的对应量**：3WM 行波放大器中泵浦耗散主导饱和，$P_{1\mathrm{dB}}\approx P_p/(4G_0)$（4WM 因 SPM/XPM 相位失配再减半为 $P_p/(8G_0)$），rf-SQUID 单元可解耦线性与非线性参数从而打破饱和-长度权衡——见[[readout-measurement/josephson-traveling-wave-amplifier|约瑟夫森行波参量放大器]]词条"rf-SQUID TWPA"一节。低插损架构同时抬高饱和功率：CP-JTWPA 在 20.5 dB 增益下做到 −99 dBm（同词条"CP-JTWPA"一节）。
 - **谐振式的最新高点**：rf-SQUID 阵列 JPA（几何电感旁路 + $\beta=L_s/L_J$ 设计空间）把谐振式器件的 $P_{1\mathrm{dB}}$ 推到 $-91.5\ \mathrm{dBm}$，与结数多两个量级的 JTWPA 相当——见[[readout-measurement/parametric-amplifier|参量放大器]]词条"rf-SQUID 阵列 JPA"一节。
 - **动力学电感分支的天然优势**：非线性来自薄膜而非结的[[readout-measurement/kinetic-inductance-twpa|KI-TWPA]]在 15 dB 增益下 $P_{1\mathrm{dB}}$ 达 $-58\ \mathrm{dBm}$——比约瑟夫森式器件高约一个量级，多谐振腔阵列同时读出的功率预算因此宽裕得多（其代价是色散工程更繁重）。
+- **工艺维度的互补路线**：单步电子束光刻的 IEJPA（[[readout-measurement/parametric-amplifier|参量放大器]]词条"单步光刻阻抗工程 JPA"一节）用 3 结阵列集总变压器把谐振式 $P_{1\mathrm{dB}}$ 做到 $-114\ \mathrm{dBm}$——饱和功率与多步工艺 state-of-the-art（$-108$ 至 $-110\ \mathrm{dBm}$）相当而制备周转显著缩短，其建模教训是阻抗工程区的高增益必须保留结的完整正弦非线性（四次截断失效）。
 
 ## 与其他概念的关系
 

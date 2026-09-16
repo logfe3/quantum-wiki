@@ -12,8 +12,8 @@ tags:
  - 微波
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhzzc78barcv8edzcg375
-source_updated: 2026-09-09T14:50:58Z
+qatlas_id: qa_01m0qvjmf3s6dpg55hwabs7b04
+source_updated: 2026-09-09T14:46:13Z
 ---
 
 <div class="entry-lead">参量放大器被放在低温读出链前端，用高增益把极弱的腔信号抬到后级放大器噪声之上，同时尽量少添加噪声。</div>
@@ -396,6 +396,58 @@ $$
 *饱和功率表征：信号增益随失谐与输入功率的色图给出压缩行为——输出饱和功率达 $-51\pm3\ \mathrm{dBm}$，比约瑟夫森结基反射式放大器高约 25 dB，源于 NbTiN 纳米线的高临界电流。图源：Hung et al. (2025), Fig. 4。*
 
 性能包络：**17 dB 保相增益、450 MHz 带宽（中心 8.4 GHz）、附加噪声 0.5–1.3 量子、输出饱和功率 $-51\pm3$ dBm**。材料权衡由此清晰：动力学电感（NbN/NbTiN）以高 $T_c$、大临界电流换來输入压缩点 $-65$–$-55$ dBm、强磁场兼容（自旋比特读出的刚需，见[[circuit-qed/field-resilient-resonator|耐磁场超导谐振腔]]）与更高工作温度，代价是本征非线性低、需要更高泵浦功率才能达到同等带宽与增益——结基与 KI 基放大器的选择是运行条件、动态范围与泵浦约束之间的三角权衡。
+
+## 单步光刻阻抗工程 JPA：IEJPA（Patel 2025）
+
+阻抗工程与阻抗匹配路线共同的隐性成本是**工艺步数**：常规 IE-JPA 用多步光刻（光刻与电子束曝光交替、穿插介质与金属沉积）制作变压器与 JPA；Klopfenstein 锥阻抗匹配更是要厘米尺度的混合微带-CPW 结构。Patel 等人（IISc）的 IEJPA 把整套器件——阻抗变压器与 JPA——压进**单次电子束光刻 + Dolan 桥双角（±45°）铝蒸发**：MAA/PMMA 双层胶一次曝光成型，全部约瑟夫森结（JPA 的 dc-SQUID 与变压器的结阵列）在同一次原位氧化（700 mTorr、20 分钟）中形成。器件全平面、无传输线段：JPA 由 dc-SQUID（面积 $138\ \mu\mathrm{m}^2$、零偏临界电流 $1.8\ \mu\mathrm{A}$）并联 $1.6\ \mathrm{pF}$ 叉指电容构成；变压器是**三个标称相同的约瑟夫森结串联**（每个临界电流 585 nA，模拟 1.69 nH 线性电感）再串 $420\ \mathrm{fF}$ 叉指电容，形成集总串联 LC——用结阵列而非几何电感是为了把芯片足迹压到最小。
+
+![[assets/figures/parametric-amplifier/patel2025-fig1-iejpa-micrograph.jpg]]
+
+*IEJPA 假色光学显微照片：(a) 整体布局——左侧绿色为输入焊盘、蓝色为阻抗变压器（集总串联 LC）、黄色为 JPA 本体；(b) 变压器结阵列的放大视图；(c) JPA 中 SQUID 的放大视图。变压器与 JPA 在同一次电子束光刻中成型。图源：Patel et al. (2025)，Fig. 1。*
+
+15 mK 下反射式四波混频运行，优化后（泵浦 5.347 GHz、$-88\ \mathrm{dBm}$）实测 **18 dB 增益、400 MHz 带宽**（中心约 5.3 GHz），**附加噪声逼近 0.5 光子量子极限，1 dB 压缩点约 $-114\ \mathrm{dBm}$**。与多步工艺的 state-of-the-art 对比：阻抗工程路线 20 dB/640 MHz/$-110\ \mathrm{dBm}$，阻抗匹配路线 15 dB/700 MHz/$-108\ \mathrm{dBm}$——指标相当而工艺显著简化，直接提升器件良率与制备周转，也使片上集成进量子比特架构（省去芯片间互连的插损）更现实。
+
+![[assets/figures/parametric-amplifier/patel2025-fig2a-gain.jpg]]
+
+*实测功率增益随信号频率的变化（泵浦 5.342 GHz、$-88\ \mathrm{dBm}$）：横轴信号频率、纵轴增益，约 18 dB 平坦增益覆盖约 400 MHz；增益曲线上的纹波来自 JPA 与轻微失配的环形器端口之间线缆中的驻波，缩短连线可减小。图源：Patel et al. (2025)，Fig. 2 面板 (a)。*
+
+附加噪声用泵浦开/关的信噪比变化配合 Friis 公式估计：
+
+$$
+n_{\mathrm{add}} = L\,T_{\mathrm{HEMT}}\left[\frac{\mathrm{SNR}_{\mathrm{off}}}{\mathrm{SNR}_{\mathrm{on}}} - \frac{1}{G}\right]\frac{k_b}{\hbar\omega},
+$$
+
+其中 $T_{\mathrm{HEMT}}$ 是 HEMT 线性化噪声温度（取数据手册标称 3.6 K），$L$ 是 JPA 输出到 HEMT 输入之间的损耗（实测约 1.8 dB，主要来自环形器与线缆），$G$ 是 JPA 增益，$\mathrm{SNR}_{\mathrm{on/off}}$ 为泵浦开/关时频谱仪测得的信噪比，$k_b$、$\hbar$、$\omega$ 分别为玻尔兹曼常数、约化普朗克常数与信号角频率。该估计在增益带内逼近标准量子极限虚线；作者注明更精确的表征需 SNTJ 噪声温度计。
+
+![[assets/figures/parametric-amplifier/patel2025-fig2b-added-noise.jpg]]
+
+*估计的附加噪声光子数 $n_{\mathrm{add}}$ 随频率的变化：实线为 SNR/Friis 法估计值，虚线为量子极限放大器的标准量子极限（0.5 光子）——增益带内附加噪声逼近量子极限。图源：Patel et al. (2025)，Fig. 2 面板 (b)。*
+
+![[assets/figures/parametric-amplifier/patel2025-fig2c-p1db.jpg]]
+
+*1 dB 压缩点随频率的变化（磁通、泵浦频率与功率固定在最优工作点）：增益带内饱和输入功率约 $-114\ \mathrm{dBm}$，与[[readout-measurement/amplifier-saturation-power|参量放大器饱和功率]]词条讨论的 Kerr 稀释路线互补——这里的抓手是工艺与阻抗工程，而非结阵列稀释非线性。图源：Patel et al. (2025)，Fig. 2 面板 (c)。*
+
+### 全正弦非线性：四次截断在阻抗工程区失效
+
+这一工作还带来一个理论教训。既有阻抗工程 JPA 理论只保留 JPA 结的最低阶（四次）非线性、并把变压器当作线性电感；实测增益谱（18 dB 峰、带宽明显收窄）无法被该模型拟合。Patel 等人从第一性出发重推：完整哈密顿量 $\hat H = \hat H_J + \hat H_T + \hat H_{\mathrm{int}} + \hat H_{\mathrm{env}}$，其中 JPA 项保留**完整余弦非线性**
+
+$$
+\hat{H}_{J} = - \frac{\hbar \Omega_{J}}{4} (\hat{A}_{J} - \hat{A}_{J}^{\dagger})^{2} - E_{J} \cos\!\left(c_{2}(\hat{A}_{J} + \hat{A}_{J}^{\dagger})\right),
+$$
+
+$\Omega_J$ 是 JPA 谐振频率、$\hat A_J$ 是腔内模式湮灭算符、$E_J$ 是约瑟夫森能、$c_2 = (2\pi/\phi_0)\sqrt{\hbar Z_J/2}$ 是约瑟夫森结上的标度零点相位涨落（$Z_J = \Omega_J L_J$ 为线性化阻抗）。变压器项对 $M$ 个相同结的阵列同样保留完整余弦，环境耦合经马尔科夫近似给出变压器线宽 $\kappa = R\Omega_{T,\mathrm{eff}}/Z_T$。
+
+泵浦用强经典幅值处理：把 $\hat A_{T,J}(t) = (\alpha_{T,J} + \hat a_{T,J})e^{-i\omega_p t}$ 分解后，经典泵浦方程中出现**贝塞尔函数** $J_1(A_{\mathrm{eff}})$、$J_1(A_{\mathrm{jpa}})$ 项，线性化信号方程中出现 $J_0$（频率牵引）与 $J_2$（参量增益）项——这正是正弦非线性不做截断的直接指纹。联立信号–闲置方程与输入输出关系得散射形式
+
+$$
+\hat{a}_{\mathrm{out}}(\Delta) = \sqrt{G(\Delta)}\,\hat{a}_{\mathrm{in}}(\Delta) + \sqrt{G(\Delta) - 1}\,\hat{a}_{\mathrm{in}}^\dagger(-\Delta),
+$$
+
+其中 $\Delta = \omega_s - \omega_p$、$G(\Delta)$ 为增益。数值对照（器件参数 $\Omega_J/2\pi = 6.5\ \mathrm{GHz}$、$L_J = 0.37\ \mathrm{nH}$、$L_T = 1.9\ \mathrm{nH}$ 等全部取自独立表征）显示：只含四次非线性的模型（红虚线）系统性偏离实测；保留完整正弦非线性（绿点线）正确预言增益带宽收窄，但远离泵浦中心处仍有偏差——作者归因于推导 $\kappa$ 时的马尔科夫近似（本器件 $Q$ 不高，近似条件不严格满足）。与"rf-SQUID 阵列 JPA"一节拒绝非线性截断的时域周期稳态方法对照：两条路线殊途同归，都说明**阻抗工程区的高增益行为必须保留结的完整非线性**才能定量建模。
+
+![[assets/figures/parametric-amplifier/patel2025-fig4-gain-models.jpg]]
+
+*实测增益（蓝实线）与不同理论模型的对比（泵浦 $\omega_p = 2\pi\times5.347$ GHz）：黄点划线为去掉变压器的全非线性 JPA——对照可见阻抗工程对带宽的扩展；红虚线为仅保留四次非线性的 IEJPA 模型，明显偏离实验；绿点线为保留 JPA 与变压器完整正弦非线性（至旋转波近似）的模型，正确预言带宽收窄、但远离泵浦处仍有偏差（马尔科夫近似的残余）。图源：Patel et al. (2025)，Fig. 4。*
 
 ## 环境法布里–珀罗干涉：增益谱的环境整形
 
