@@ -14,8 +14,8 @@ tags:
  - 相干性
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qv28g8vwchh26yk4eqme96
-source_updated: 2026-09-09T15:42:10Z
+qatlas_id: qa_01m0qvk9x5jexm85d67mk56sw1
+source_updated: 2026-09-09T14:04:35Z
 ---
 
 <div class="entry-lead">自旋退相干不是单一物理量，而是由 $T_1$（纵向弛豫，丢失能量）与 $T_2$（横向退相干，丢失相位）两个独立时间常数连同其 Ramsey、Hahn echo、CPMG 等不同序列下表现出来的层级结构共同刻画的物理过程；前者由自旋–声子、电–声与自旋–轨道通道决定，后者由核自旋 Overhauser 场、电荷噪声与杂散磁场梯度通过比特频率 $f_0$ 注入的随机相位决定。</div>
@@ -115,6 +115,34 @@ Hahn 回波在中点插入 $\pi$ 脉冲把 $\eta$ 在前后两段反号，使低
 
 在工程上常用品质因子 $Q=2f_\mathrm{Rabi}\,T_2^\mathrm{Rabi}=T_2^\mathrm{Rabi}/t_\pi$ 描述"相干时间内能完成多少个 $\pi$ 操作"；对 Ramsey/Hahn 序列也有类似的 $Q^*=f_\mathrm{Rabi}\,T_2^*$ 与 $Q^\mathrm{Hahn}=f_\mathrm{Rabi}\,T_2^\mathrm{Hahn}$ §3.3.4）。
 
+### 非马尔可夫 1/f 噪声的随机模型与 GST 误差分解（Chiu 2025）
+
+滤波函数框架默认噪声平稳且常用准静态或经典系综近似；Si/SiGe 自旋比特的 1/f 电荷噪声却是典型的**非马尔可夫**过程（方差随时间发散），而 RB/GST 等表征协议的理论基础又是马尔可夫近似——这个错位常让从退相干时间反推的"噪声强度"失真。Chiu 等人给出闭环的建模-表征-优化流程：
+
+**微观到谱**：从[[qubit-control/electric-dipole-spin-resonance|EDSR]]的自旋-位置耦合出发构造自旋-声子型噪声通道（电荷噪声经微波磁体梯度进入自旋频率）， bath 关联函数用多指数模式叠加——每个模式以速率 $\gamma$ 指数衰减、幅度权重取
+
+$$
+P(\gamma) \propto 1/\gamma,
+$$
+
+叠加后即得 1/f 频谱。主方程虽是时间局域的，但耗散核随时间变化，仍属非马尔可夫；借助扩展辅助刘维尔空间可把记忆效应并入高效求解与后续最优控制。
+
+![[assets/figures/spin-decoherence/chiu2025-fig1-decoherence-simulation.jpg]]
+
+*随机噪声模型对退相干实验的复现：含非相干噪声的数值模拟（Ramsey/CPMG）与真实器件参数下的实验行为一致，优于纯相干（随机初相）噪声模型——为 GST 分析提供可信的噪声底。图源：Chiu et al. (2025), Fig. 1。*
+
+**GST 误差生成元的相干/非相干分解**：把含噪门的时间演化通道取矩阵对数得"误差生成元"，随机（非相干）部分形如 $S_P[\rho]=\sigma_p\rho\sigma_p-\rho$。在旋转框架中比特主要经 z 向随机误差生成元失去相干。关键结论：此前工作为拟合实验退相干时间而调大**相干**噪声强度，会**低估**门保真度；引入本模型的非相干通道后，误差生成元强度与实验一致、平均门保真度更贴近实测值。
+
+![[assets/figures/spin-decoherence/chiu2025-fig2-gst-generators.jpg]]
+
+*GST 误差生成元与纠缠不保真度比值：非马尔可夫 1/f 模型下的误差生成元分解（相干 vs 非相干）——随机误差生成元主导，避免了用过大相干噪声强度拟合退相干时间所导致的门保真度低估。图源：Chiu et al. (2025), Fig. 2。*
+
+**Krotov 优化脉冲**：在非马尔可夫噪声模型下用 Krotov 最优控制合成脉冲，可大幅降低 1/f 电荷噪声的误差贡献；且经 CPMG 滤波函数分析，针对非相干噪声优化的脉冲对相干噪声同样比常规高斯脉冲更鲁棒——"为一类噪声优化、对多类噪声受益"。
+
+![[assets/figures/spin-decoherence/chiu2025-fig4-filter-spectrum.jpg]]
+
+*优化脉冲的滤波谱：从控制矩阵 [R(t)] 转换的归一化滤波谱展示优化脉冲在多大频率范围上抑制电荷噪声——相比常规脉冲显著压低非马尔可夫误差贡献。图源：Chiu et al. (2025), Fig. 4。*
+
 ## 噪声通道与材料体系
 
 ### 超精细噪声：GaAs 与硅、锗的根本差异
@@ -210,5 +238,6 @@ $$
 ## 参考文献
 
 - Tahan, C., Joynt, R. Relaxation of excited spin, orbital, and valley qubit states in single electron silicon quantum dots. *Physical Review B* 89, 075302 (2014). DOI: 10.1103/physrevb.89.075302；arXiv:1301.0260（QAtlas 缓存：1301.0260）。
+- Chiu, W.-e., Huang, C.-H., Wu, Y.-H., Goan, H.-S. Effect of Stochastic Charge Noise in Si/SiGe Quantum-Dot Spin Qubits (2025). arXiv:2510.22189（QAtlas 缓存：2510.22189）。
 - 自旋退相干机制（核自旋、电荷噪声、自旋轨道）的系统论述：[[references/hanson-2007|Hanson et al., RMP 79, 1217 (2007)]]、[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

@@ -220,7 +220,7 @@ $$
 
 **降温前后的常规表征。** 先测沟道开启与逐栅夹断（pinch-off）曲线确认每个栅极都能关断沟道；再扫能级栅看[[fundamentals/coulomb-blockade|库仑阻塞]]峰。因为 $E_C\sim3\ \mathrm{meV}$ 相对 $4.2\ \mathrm{K}$ 的热涨落不够大，液氦温区一般看不到清晰库仑峰，必须进稀释制冷机。
 
-**单点参数。** 输运测量给出[[fundamentals/coulomb-diamond|库仑菱形]]，从中提取充电能与杠杆臂；库仑峰宽度可反推电子温度。二维四点阵列的实测显示四个点都能排空到零电子区，$\alpha$ 一致在 $0.12\ \mathrm{eV/V}$ 附近，而 $E_C$ 在 $2.68$–$3.74\ \mathrm{meV}$ 之间浮动，差异主要来自屏蔽栅形状。
+**单点参数。** 输运测量给出[[fundamentals/coulomb-diamond|库仑菱形]]，从中提取充电能与杠杆臂；库仑峰宽度可反推电子温度。二维四点阵列的实测显示四个点都能排空到零电子区，$\alpha$ 一致在 $0.12\ \mathrm{eV/V}$ 附近，而 $E_C$ 在 $2.68$–$3.74\ \mathrm{meV}$ 之间浮动，差异主要来自屏蔽栅形状。更早的 Pd 栅耗尽型双点（2010 年前后）已给出同一套表征流程的完整范例：交叉杠杆臂 $\alpha\approx0.07e$–$0.39e$、$E_C\approx1.5/1.6\ \mathrm{meV}$、偏压极性依赖的共隧穿亚结构，以及点间隧穿率的 WKB 指数标度（$\beta\approx0.056\ \mathrm{mV^{-1}}$）——见[[fundamentals/tunnel-coupling|隧穿耦合]]词条的输运谱学提取一节。
 
 **双点与阵列。** 用邻近的单电子晶体管（SET）作[[readout-measurement/qpc-charge-sensor|电荷传感]]测[[fundamentals/charge-stability-diagram|电荷稳定图]]，蜂窝的反交叉给出点间耦合；未掺杂高阻 2DEG 上传感点欧姆接反射仪不可行时，可把谐振电感接到传感点积累栅并以 $R_D$ 解耦欧姆接触——1 s 采完高分辨稳定图并支持单发电荷/自旋读出，见[[readout-measurement/gate-based-sensing|栅极射频传感]]的积累栅电导传感一节。栅极之间存在电容串扰，隧穿线并不与坐标轴平行，需要先建立[[scaling-automation/virtual-gates|虚拟栅极]]（由[[scaling-automation/cross-capacitance-matrix|串扰矩阵]]定义）才能独立调节各点电化学势。在 2×2 [[scaling-automation/two-dimensional-array|二维阵列]]中，两次"同步扫描"即可一次看到四对双点的反交叉，实验相图与 Hubbard 模型模拟（平均 $E_C=3\ \mathrm{meV}$、最近邻 $t=0.1\ \mathrm{meV}$、最近邻库仑 $V=0.2\ \mathrm{meV}$、次近邻 $t=0$、$V=0.05\ \mathrm{meV}$、$\alpha=0.12\ \mathrm{eV/V}$）相符。势垒栅对 $t_{ij}$ 的调控呈指数依赖；对角与反对角（次近邻）耦合在中心栅零压时接近零，正好满足表面码只要最近邻耦合的拓扑要求。
 

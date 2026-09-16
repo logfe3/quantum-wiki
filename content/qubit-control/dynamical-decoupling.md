@@ -51,7 +51,7 @@ $$
 \langle\delta\phi^2(t)\rangle=4\pi^2\sum_i\left(\frac{\partial f_{Q_i}}{\partial V_{G_i}}\right)^2\!\int_{-\infty}^{+\infty}\!df\, S_{G_i}(f)\,|\tilde\eta_t(f)|^2
 $$
 
-其中 $f_{Q_i}$ 是第 $i$ 个栅极对应的比特频率；$S_{G_i}(f)=\int dt\,e^{-2\pi ift}\langle\delta V_{G_i}(t)\delta V_{G_i}(0)\rangle$ 是栅极电压噪声的功率谱密度；$\tilde\eta_t(f)=\int dt\,e^{-2\pi ift}\eta_t(t)$ 是脉冲序列对应的滤波函数（filter function），$\eta_t(t)$ 在驱动期间为 $\pm 1$（按 $\pi$ 翻转符号）以把"哪段演化贡献什么相位"编码进来。
+其中 $f_{Q_i}$ 是第 $i$ 个栅极对应的比特频率；$S_{G_i}(f)=\int dt\,e^{-2\pi ift}\langle\delta V_{G_i}(t)\delta V_{G_i}(0)\rangle$ 是栅极电压噪声的功率谱密度；$\tilde\eta_t(f)=\int dt\,e^{-2\pi ift}\eta_t(t)$ 是脉冲序列对应的滤波函数（filter function），$\eta_t(t)$ 在驱动期间为 $\pm 1$（按 $\pi$ 翻转符号）以把"哪段演化贡献什么相位"编码进来。滤波函数分析也可以反过来指导**脉冲设计**：在非马尔可夫 1/f 电荷噪声模型下用 Krotov 最优控制合成的脉冲，其滤波谱在目标频段显著压低噪声权重，且对相干噪声也比常规高斯脉冲更鲁棒（见[[qubit-control/spin-decoherence|自旋退相干]]词条的随机噪声模型一节）。
 
 在 Ramsey 序列里滤波函数为
 

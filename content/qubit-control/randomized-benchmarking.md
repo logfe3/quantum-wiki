@@ -92,6 +92,7 @@ $$
 - [[qubit-control/exchange-gates|交换型两比特门]]：交错/CRB 版本专门用于提取 CPhase 等交换门的保真度；
 - [[readout-measurement/readout-crosstalk|读出串扰]]：同时 RB 量化的是**操控**串扰，与读出串扰互补，二者共同构成多比特系统的干扰图谱；
 - [[references/xue-2022|Xue et al. (2022)]]：同一方法学在六比特处理器上的延伸（GST 与系统串扰表征）。
+- [[qubit-control/spin-decoherence|自旋退相干]]：RB/GST 的理论底座是马尔可夫近似，而 1/f 电荷噪声是非马尔可夫的——GST 误差生成元的相干/非相干分解是量化这一模型违反、避免保真度低估的现成工具（见该词条"非马尔可夫 1/f 噪声的随机模型"一节）。
 
 ## 参考文献
 

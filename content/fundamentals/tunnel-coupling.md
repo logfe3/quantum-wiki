@@ -9,7 +9,10 @@ aliases:
 tags:
  - 量子点基础
  - 耦合
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qv0ee688ak6w0g4rx3f0ws
+source_updated: 2026-09-09T14:43:28Z
 ---
 
 <div class="entry-lead">隧穿耦合把分立量子点从纯电容网络变成量子“分子”。它决定反交叉能隙、交换作用、Landau–Zener 概率以及许多读出时间尺度。</div>
@@ -78,6 +81,34 @@ $$
 
 其中 $\delta\varepsilon_i=\varepsilon_i-\varepsilon_{i,0}$ 是电化学势相对反交叉中心的偏移。两个三相点之间的电荷转变线距离减去 $V_{12}$ 即为 $2t_c$；$V_{12}$ 可以从一个点多/少一个电子时另一个点转移线的偏移量独立标定。这一方法对最近邻、次近邻点对同样适用——只要目标双点之外的点都被置于大失谐处、构成孤立的二能级系统。
 
+### 输运谱学的逐点提取与 WKB 标度（Wild 2010）
+
+早期 Si/SiGe 双点的直流输运谱学给出了另一套互补的提取方法（Wild et al. 2010，Pd 栅耗尽型器件）。在偏置输运窗口 $eV_{SD}=750\ \mu\mathrm{eV}$ 下，[[fundamentals/charge-stability-diagram|电荷稳定图]]充电线的宽度直接标定四个杠杆臂（$\alpha_L^{bL}\approx0.18e$、$\alpha_R^{bR}\approx0.39e$、$\alpha_L^{bR}\approx0.31e$、$\alpha_R^{bL}\approx0.07e$），相邻充电线间距换算出两点充电能 $E_{CL}\approx1.5\ \mathrm{meV}$、$E_{CR}\approx1.6\ \mathrm{meV}$；偏压极性翻转时右侧点的充电线出现共隧穿亚结构、左侧点的线几乎消失——输运经右侧点共振隧穿、经库仑阻塞的左侧点共隧穿进行，是能级配置的手印。
+
+![[assets/figures/tunnel-coupling/wild2010-fig2-stability-diagram.jpg]]
+
+*偏置输运电荷稳定图：dc 电流随左右势垒栅压 V_bL、V_bR 变化（偏压 −750 µV），充电线宽度对应输运窗口 eV_SD——由此标定四个交叉杠杆臂，相邻线间距给出两点充电能 E_C ≈ 1.5 / 1.6 meV。图源：Wild et al. (2010), Fig. 2。*
+
+点间隧穿率的提取：在远离储库的深孤立区，三相点附近的反交叉用
+
+$$
+\Delta E = \sqrt{(2\Delta)^2 + (\hbar\Gamma_{id})^2} + E_C
+$$
+
+拟合（$2\Delta=\mu_R-\mu_L$ 是两点不对称能量、$E_C$ 是经典点间充电能、$\Gamma_{id}$ 是点间隧穿率；配合杠杆臂线性变换与坐标旋转），逐点得到 $\Gamma_{id}(V_{bR})$。全局拟合给 $E_C\approx435\ \mu\mathrm{eV}$，而 $\Gamma_{id}$ 随势垒栅压呈指数变化——这正是 WKB 直觉：
+
+$$
+\Gamma_{id} = \Gamma_0 \exp\!\left(-\,d\sqrt{m_e^* E_B}/\hbar\right) \;\sim\; \exp(\beta V_{bR}),
+$$
+
+其中 $d$ 是势垒宽度、$E_B=E_B^0-\alpha_B V_{bR}$ 是随栅压线性下降的势垒高度、$m_e^*$ 是有效质量；小栅压近似下标度因子 $\beta=0.056\pm0.023\ \mathrm{mV^{-1}}$。
+
+![[assets/figures/tunnel-coupling/wild2010-fig7-wkb-tunnel-rate.jpg]]
+
+*点间隧穿率的提取与 WKB 拟合：三角形为不同势垒栅压 V_bR 下由三相点附近反交叉拟合得到的 Γ_id（插图为例示反交叉），实线为 WKB 近似的指数拟合 exp(βV_bR)；深孤立区（左图）中隧穿率从 ≫1 Hz 降到 ≪1 Hz，充电线断续甚至消失——跨越测量带宽的直接证据。图源：Wild et al. (2010), Fig. 7。*
+
+这张指数标度图同时给出一个实用的实验判据：当 $\Gamma_{id}$（或点–储库隧穿率 $\Gamma_{L,R}$）降到测量带宽（~1 Hz）以下时，充电线在稳定图上断续或消失——"深孤立区"的边界可以直接从图上读出，这正是单电子泵浦与[[qubit-control/pauli-spin-blockade|泡利自旋阻塞]]读出所需要的工作区起点。
+
 **(3) 微波光谱。** 在电荷量子比特中，$\varepsilon=0$ 处的比特频率 $\omega_q=2t_c$（ 式 4.4 与式 5.7），用两路微波（探测腔 + 驱动）做双色调制谱即可从比特响应峰直接读出 $2t_c/(2\pi)$。当 $2t_c<\omega_q$ 时比特频率与腔频率可分别移动到同一频段，可观察避免交叉与真空 Rabi 劈裂；当 $2t_c>\omega_q$ 时比特与腔的耦合区连续穿越扫频范围，呈现与"$2t_c$ 较小"时显著不同的曲线。
 
 **(4) 库仑阻塞峰的热展宽。** 在弱点间隧穿（接近 0）下，单点库仑峰的半高宽正比于 $\sqrt{(\alpha k_\mathrm{B}T_e)^2+\dots}$，主要受电子温度和 SET 反作用、交流激励幅值等展宽机制限制；当 $2t_c$ 增大到与电子温度可比时，库仑峰在原本的半高宽基础上叠加量子隧穿效应引起的额外展宽，称为量子展宽（quantum broadening）。这一展宽为独立交叉校验 $2t_c$ 提供了一个粗略但稳定的途径。
@@ -99,6 +130,9 @@ $$
 | 点间隧穿耦合 $2t_c$ | $25\ \mu\mathrm{eV}$–$120\ \mu\mathrm{eV}$，指数可调 | 电子型非掺杂 GaAs DQD，250 mK | |
 | 点间隧穿耦合 $2t_c$ | $10\ \mu\mathrm{eV}$–$100\ \mu\mathrm{eV}$，指数可调 | 电子型非掺杂 GaAs DQD，10 mK | |
 | 点间隧穿耦合 $2t_c$ | $\sim 25\ \mu\mathrm{eV}$–$>200\ \mu\mathrm{eV}$，可调至接近零 | Si/SiGe 2×2 阵列的四个最近邻 | |
+| 点间隧穿率 WKB 标度 $\beta$ | $0.056\pm0.023\ \mathrm{mV^{-1}}$（Pd 栅 Si/SiGe DQD） | Wild 2010 | |
+| 反交叉拟合点间充电能 | $E_C\approx435\ \mu\mathrm{eV}$ | Wild 2010 | |
+| 深孤立区隧穿率 | $\Gamma$ 从 $\gg1$ Hz 降到 $\ll1$ Hz，充电线断续/消失 | Wild 2010 | |
 | 点间隧穿耦合 $2t_c$ | $2.7$、$6.8$、$11\ \mathrm{GHz}$（对应 $11.2$、$28.2$、$45.6\ \mu\mathrm{eV}$） | Si/SiGe DQD，分别 $V_M=0.42$、$0.444$、$0.452\ \mathrm{V}$ | |
 | 点间隧穿耦合 $2t_c$ | $2t_c/(2\pi)=9.4\ \mathrm{GHz}$（$\sim 39\ \mu\mathrm{eV}$） | Si/SiGe TQD 中的 RDQD 翻转模式比特 | |
 | 点间隧穿耦合 $2t_c$ | $2t_c/(2\pi)=8.0\ \mathrm{GHz}$（$\sim 33\ \mu\mathrm{eV}$） | Si/SiGe TQD 中的 LDQD 翻转模式比特 | |
@@ -163,3 +197,8 @@ $$
 - [[qubit-control/photon-assisted-tunneling|光子辅助隧穿]]共振线之间的距离 $\alpha\varepsilon=\sqrt{(hf)^2-(2t_c)^2}$ 是从微波谱提取 $2t_c$ 的独立手段，常作为电荷转移线拟合的交叉校验。
 - [[scaling-automation/virtual-gates|虚拟电极]]通过解耦势垒方向与柱塞方向，使 $t_c$ 可以在不移动电化学势的情况下独立调节，是阵列化器件中隧穿耦合调控的关键工程工具。
 - [[materials-devices/charge-noise|电荷噪声]]通过 $\sin\theta$ 间接进入比特退相干——隧穿耦合越大，比特对噪声越敏感。
+
+## 参考文献
+
+- Wild, A., Sailer, J., Nützel, J., Abstreiter, G., et al. Electrostatically defined Quantum Dots in a Si/SiGe Heterostructure. *New Journal of Physics* 12, 113019 (2010). DOI: 10.1088/1367-2630/12/11/113019；arXiv:1007.2404（QAtlas 缓存：1007.2404）。
+> 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

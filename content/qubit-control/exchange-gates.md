@@ -10,7 +10,10 @@ aliases:
 tags:
  - 量子比特操控
  - 两比特门
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m0qvkmph5y7atd3rr2j5vqqy
+source_updated: 2026-09-09T14:45:58Z
 ---
 
 <div class="entry-lead">交换型两比特门把两个电子自旋之间的[[qubit-control/exchange-interaction|交换相互作用]] $J$ 转化为可程序化的两比特酉演化，按 $J$ 与塞曼能差 $\Delta E_Z$ 的相对大小分出 $\sqrt{\mathrm{SWAP}}$/SWAP、CPHASE/CZ、CROT/CNOT 三大族，是半导体量子点中最常用的两比特门路线。</div>
@@ -182,6 +185,30 @@ $$
 
  §5.1指出 Si-MOS 样品的中间势垒栅 MB 没有高频控制线，势垒脉冲无法实施，必须采用 $J$ 常开 + 共振条件驱动的 CROT 路线；这是"样品条件决定门策略"的典型案例。
 
+### 第三条路线：栅极角色互换（Park 2025）
+
+Si/SiGe 平台有一个结构性不利：SiGe 间隔层把量子点与控制电极隔开，杠杆臂偏小，势垒栅对 $J$ 的调控力度先天不足——残余交换在多比特阵列里积累成多余的 $ZZ$ 相移。用微波驱动有残余耦合的比特时，时间演化算符中除了单比特操作项还多出一个正比于 $J/\Omega$ 的 $ZZ$ 项（$\Omega$ 是 Rabi 频率）；高保真单比特操作要求 $J\ll\Omega$，而两比特门又要求 $J$ 能在短时标内动态开关——两头都压在"可调性"上。
+
+Park 等人给出的解法不改硬件、只换电压配置：在**等宽交叠纳米栅**器件上把靠近（远离）自旋比特的栅改作势垒（柱塞）栅——所谓 interchanged tuning。同一器件上原位切换角色后仍保持多比特控制，而交换耦合的可调性（对势垒脉冲幅度的指数斜率，单位 dec/V）全面提升：
+
+| 最近邻对比 | 常规配置 | 角色互换配置 |
+| --- | --- | --- |
+| 比特对 1 | 7.25 dec/V | 16.6 dec/V |
+| 比特对 2 | 3.87 dec/V | 11.4 dec/V |
+| 比特对 3 | 4.32 dec/V | 15.4 dec/V |
+
+![[assets/figures/exchange-gates/park2025-fig1-interchanged-tuning.jpg]]
+
+*等宽交叠纳米栅与角色互换调谐：把靠近（远离）比特的纳米栅指派为势垒（柱塞）栅，电压重配置即原位切换调谐策略、同时保持多比特控制——SiGe 间隔层导致的杠杆臂劣势由此被绕开。图源：Park et al. (2025), Fig. 1。*
+
+约 16 dec/V 的可调性此前只在界面更近、杠杆臂更大的 Si-MOS 中实现过；角色互换让 Si/SiGe（比特远离电噪声界面的优势得以保留）也能达到同量级。实测 $J$ 随势垒脉冲幅度先指数增长、在大幅值处偏离单一指数——对应势垒被压低后两点并合为单个大量子点、隧穿耦合趋于饱和的渐近行为；高可调性本身使全耦合区间的精确标定成为可能。
+
+![[assets/figures/exchange-gates/park2025-fig4-exchange-tunability.jpg]]
+
+*交换耦合可调性的对比：常规与角色互换配置下 J 随势垒脉冲幅度的依赖（衰减正弦振荡提取 J/2，聚焦实验常用的几 MHz 区间做指数拟合）——角色互换使所有最近邻对的可调性提升数倍至一个量级，并呈现双点并合导致的非单一指数行为。图源：Park et al. (2025), Fig. 4。*
+
+这一策略还有测量学红利：量子点可以在任意栅下形成，把"探针点"挪到不同位置即可逐点测绘微磁体梯度场、[[fundamentals/valley-splitting|谷劈裂]]的空间分布与杂质噪声的空间特征。
+
 ## 参数与量级
 
 | 量 | 典型值 | 实验/来源 |
@@ -202,6 +229,9 @@ $$
 | iSWAP 时长（超导 transmon 参考） | $\sim 15\,\mathrm{ns}$（30 个 AWG 点拟合） | |
 | CZ 门 RB 保真度（自然 Si/SiGe） | $90.96\pm 7.48\%$ | |
 | CPhase 门 CRB 保真度（自然 Si/SiGe 双点） | $92.0\pm0.5\%$（两比特空间，交错 CRB 提取） | |
+| 交换可调性（常规配置，Si/SiGe 等宽栅） | 7.25 / 3.87 / 4.32 dec/V（三个最近邻对） | Park 2025 |
+| 交换可调性（角色互换配置） | 16.6 / 11.4 / 15.4 dec/V——Si/SiGe 首次达 Si-MOS 量级 | Park 2025 |
+| 残余 ZZ 约束 | 单比特保真度要求 $J\ll\Omega$（附加 $(J/\Omega)ZZ$ 项） | Park 2025 |
 | DCZ Bell 态保真度（自然 Si/SiGe） | 平均 $91\%$（移除读出误差） | |
 | DCZ Bell 态保真度（Si-MOS） | $84.09\%$ | |
 | 单比特门保真度（自然 Si/SiGe） | $X,Y$ 门 $>99\%$（$83\,\mathrm{ns}$） | |
@@ -260,4 +290,5 @@ $$
 
 - 交换门的原始方案与相干交换实验：[[references/loss-divincenzo-1998|Loss & DiVincenzo, PRA 57, 120 (1998)]]、[[references/petta-prb-2005|Petta et al., PRB 72, 161301(R) (2005)]]。
 - 交换耦合的现代门实现：[[references/watson-2018|Watson et al., Nature 555, 633 (2018)]]、[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]。
+- Park, J., Jang, H., Sohn, H., Song, Y., Degli Esposti, D., Scappucci, G., Kim, D. Highly Tunable Two-Qubit Interactions in Si/SiGe Quantum Dots by Interchanging the Roles of Qubit-Defining Gates. *Nano Letters*（2025）. DOI: 10.1021/acs.nanolett.6c00044；arXiv:2512.20142（QAtlas 缓存：2512.20142）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
