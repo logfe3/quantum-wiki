@@ -1,5 +1,5 @@
 {
-  "source_digest": "12f18fe6a84dea3689f1aa79b13fc0de28056de0006b4a32b14631605c05394c",
+  "source_digest": "9e5a24eb60460dcd17fe88b2c9a3bf2201e96b835534ab5209505a14a903b040",
   "pages": [
     {
       "path": "content/circuit-qed/bosonic-cqed.md",
@@ -19,7 +19,7 @@
       "path": "content/circuit-qed/cavity-mediated-coupling.md",
       "title": "腔介导远程耦合",
       "topic": "circuit-qed",
-      "sha256": "edf3c18f1c2edafa21f1ca7c192e8fa11f712c9221f84f4997b6e401deff8822",
+      "sha256": "a6ca8d6a9aa2eaad593b8bf656b391081b28440238187be3d79307535261217d",
       "split": "train"
     },
     {
@@ -47,7 +47,7 @@
       "path": "content/circuit-qed/dispersive-shift.md",
       "title": "色散频移",
       "topic": "circuit-qed",
-      "sha256": "1fb86827bf53f34861c5e7b1b8d6ddd0aa421f4149f85d1e5850682c43a53ce1",
+      "sha256": "7c4f4bfd6867640246692d170e3cc2c4451c12d32c1d1999e78ee9a37b350f87",
       "split": "train"
     },
     {
@@ -229,7 +229,7 @@
       "path": "content/fundamentals/valley-splitting.md",
       "title": "谷劈裂",
       "topic": "fundamentals",
-      "sha256": "ffb8290fd63fa1099b7c3c4fba95d4796b81d239e0aee7e78f09e7cda2799893",
+      "sha256": "56e82d5f59e00e622d1679474f1ffbd3d4c33f4cfc25f88e3c1a2b3e2227adc2",
       "split": "dev"
     },
     {
@@ -299,7 +299,7 @@
       "path": "content/materials-devices/silicon-sige.md",
       "title": "Si/SiGe 异质结",
       "topic": "materials-devices",
-      "sha256": "a2eebac0b92f51ceef2960c03a2ddd312fe7d46fad8326c7509d84db052b7078",
+      "sha256": "99eb107f938546a7e6de3888911ab2ce670d8ea33717102670456b3af3d9dce2",
       "split": "train"
     },
     {
@@ -307,6 +307,13 @@
       "title": "应变锗空穴平台",
       "topic": "materials-devices",
       "sha256": "b206c7fc6e4fa3e1acdab41d6556f7149ce030e102f5ab280b13b34e3c64fdac",
+      "split": "train"
+    },
+    {
+      "path": "content/materials-devices/valley-splitting-optimization.md",
+      "title": "谷劈裂外延剖面优化",
+      "topic": "materials-devices",
+      "sha256": "de747d194c37dddb0e278186d2d08257edc9705d4a3da11c4e97cd8db1d7249b",
       "split": "train"
     },
     {
@@ -478,6 +485,13 @@
       "split": "train"
     },
     {
+      "path": "content/readout-measurement/amplifier-saturation-power.md",
+      "title": "参量放大器饱和功率",
+      "topic": "readout-measurement",
+      "sha256": "e812061d8efe13520e47709fde0fc9ca84c4e66ba47929a0a773af0cfd3fadc5",
+      "split": "train"
+    },
+    {
       "path": "content/readout-measurement/charge-sensor-backaction.md",
       "title": "电荷传感反作用与 which-path 退相干",
       "topic": "readout-measurement",
@@ -509,14 +523,14 @@
       "path": "content/readout-measurement/josephson-traveling-wave-amplifier.md",
       "title": "约瑟夫森行波参量放大器",
       "topic": "readout-measurement",
-      "sha256": "411b73857d70b41d5edfecdad74a7455860e77dbcf586697844c2ae2421265dc",
+      "sha256": "c9973ffa4747a74eb9da9122d75cf0ec36b70c2586e3ebe38a3d0cc003ccfffc",
       "split": "train"
     },
     {
       "path": "content/readout-measurement/parametric-amplifier.md",
       "title": "参量放大器",
       "topic": "readout-measurement",
-      "sha256": "a8fff54c37adb9bd3237ad376d5e92dcd01f5ce287202bad08fbfb805d3d2e89",
+      "sha256": "f4c39d416dec2410506475e01583977bbda33781f9d92f5a96217577e8eb5fe1",
       "split": "train"
     },
     {
@@ -712,7 +726,7 @@
       "path": "content/superconducting-qubits/junction-defect-modes.md",
       "title": "约瑟夫森结强耦合缺陷模",
       "topic": "superconducting-qubits",
-      "sha256": "38a869886897afefa367d22561f1ae764f4e027448015dfcee65de43262f89d8",
+      "sha256": "66fd742551cd83d47c3bf77a8c62b515e5a597d77c6f8e0e478676fb4fbc8c8d",
       "split": "train"
     },
     {
@@ -733,7 +747,7 @@
       "path": "content/superconducting-qubits/spin-locked-qubit.md",
       "title": "自旋锁定量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "c88b8b0f08b1ade7527acddecb7be988efd443e2f75d51122641d2021ee0fb56",
+      "sha256": "d9be4e4b123a906407149468da06822597fb68c81e3d55912a29af9326af398a",
       "split": "train"
     },
     {
@@ -744,10 +758,24 @@
       "split": "test"
     },
     {
+      "path": "content/superconducting-qubits/surface-tls-loss.md",
+      "title": "表面 TLS 损耗与湿法刻蚀",
+      "topic": "superconducting-qubits",
+      "sha256": "c83644910d7621993529bd5e437472b2c48bd549ba8e931d1afe6b42a2cc7189",
+      "split": "train"
+    },
+    {
       "path": "content/superconducting-qubits/transmon-qubit.md",
       "title": "Transmon 量子比特",
       "topic": "superconducting-qubits",
-      "sha256": "d2e9b881ff387fff306f4a1ebd4ae34e4c846c6eb1a98414112324bc5540992f",
+      "sha256": "7a14fb1429879cf20e9c8d465ad559a0144b6e7dac05db3780fb19c921cf2495",
+      "split": "train"
+    },
+    {
+      "path": "content/superconducting-qubits/zz-coupling.md",
+      "title": "ZZ 相互作用",
+      "topic": "superconducting-qubits",
+      "sha256": "9ae5aba1a201bc46c5fd241f7d8329529590f6bdd5ccc4d7ef2c3be407082781",
       "split": "train"
     }
   ]
