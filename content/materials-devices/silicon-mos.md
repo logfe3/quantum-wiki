@@ -163,7 +163,7 @@ Si-MOS 中的单比特操控主要通过两种途径：
 
 - 与 [[materials-devices/gaas-algaas|GaAs/AlGaAs]] 相比，自然 Ga、As 核自旋完全消除，配合 ${}^{28}\mathrm{Si}$ 纯化使[[qubit-control/rabi-oscillation|Rabi 振荡]]外推的 $T_2^*$ 从 <100 ns 提升到数百纳秒到数十微秒量级。
 - 与 [[materials-devices/silicon-sige|Si/SiGe]] 相比，Si-MOS 中 Si/SiO₂ 界面在 $\langle 001\rangle$ 方向约束更强，谷劈裂高出 5–10 倍，允许 1 K 量级温度运行并集成低温 CMOS 控制电路。
-- 与 CMOS 工业全兼容，可直接使用 300 mm 晶圆产线，理论上可扩展到数百万量子比特规模。
+- 与 CMOS 工业全兼容，可直接使用 300 mm 晶圆产线，理论上可扩展到数百万量子比特规模。这条路线的保真度里程碑已兑现：300 mm 代工（DUV/电子束混合工艺 + 20 nm 热氧化界面 + 800 ppm ²⁸Si 外延）的 Si-MOS 比特经 RBM/GST 双基准测得 99.9% 单比特控制保真度（1 Hz 处电荷噪声仅 0.4 µeV）——见[[qubit-control/single-qubit-gate|单比特门]]词条"300 mm 晶圆厂路线"一节。
 
 **挑战**
 

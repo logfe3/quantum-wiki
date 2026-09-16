@@ -9,6 +9,9 @@ tags:
  - 量子点基础
  - 模型
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m235n0a732fmef1ya3jgzb1x
+source_updated: 2026-09-09T14:01:19Z
 ---
 
 <div class="entry-lead">常相互作用模型把复杂电子–电子相互作用压缩成一个经典充电项，再叠加离散单粒子能级，是解释库仑阻塞和电荷稳定图的最小模型。</div>
@@ -140,6 +143,22 @@ $$
 
 其中前三项——化学势、点内库仑排斥 $U_i$、点间排斥 $U_{ij}$——正对应 CI 模型的 $\mu(N)$、$E_C$ 与 $E_{Cm}$；CI 模型相当于丢掉隧穿项 $H_t$ 与交换项 $H_J$ 的经典极限。反过来，Hubbard 模型的参数 $U_i$、$U_{ij}$ 通常就用 CI 模型从蜂窝图标定。在多量子点阵列中，栅极–量子点交叉电容使 $\mu_i$ 同时依赖所有栅压，电荷转变线不再是直线簇，需要[[scaling-automation/cross-capacitance-matrix|交叉电容矩阵]]与[[scaling-automation/virtual-gates|虚拟栅极]]技术补偿，这仍是 CI 模型框架下的直接延伸。
 
+### 经典统计检验：峰间距分布 vs Wigner 猜想（Simmel 1999）
+
+CI 模型还有一个可被统计检验的推论：把单粒子能级 $\epsilon_i$ 视为无相互作用的随机谱，CI+随机矩阵理论（RMT）预言库仑振荡的**归一化峰间距** $S$（$\langle S\rangle=1$）服从 Wigner 猜想
+
+$$
+P_W(S)=\frac{\pi}{2}\,S\,e^{-\frac{\pi}{4}S^2},
+$$
+
+其涨落约 $0.52\langle S\rangle$；若能级有自旋简并，分布还应是双峰。Simmel 等人在硅 MOSFET 叠层栅量子点上做了强相互作用区间的检验——器件约 200×200 nm，$C_\Sigma\approx85$ aF、$E_C\approx1.9$ meV；Weyl 公式 $\Delta\epsilon=2\pi\hbar^2/(gm^*A)=15\ \mu$eV（$g=4$ 计入自旋与谷简并）给出 $E_C/\Delta\epsilon\approx125$、相互作用参数 $r_s=2.1$，均远超此前 GaAs/AlGaAs 实验（$r_s\approx1$）。关键的方法学差异是用**顶栅扫描改变密度**而非用 plunger 栅挤压器件——峰间距统计不被器件形变污染。
+
+![[assets/figures/constant-interaction-model/simmel1999-fig1a-device-cross-section.jpg]]
+*器件截面（叠层栅 Si MOSFET 量子点）：p 型 Si 衬底上依次为约 20 nm 下氧化层、下栅层、约 80 nm 上氧化层与覆盖全部源漏的上栅；上栅电压感生 Si/SiO₂ 界面处的二维电子气，下栅图形在其中凿出约 250×270 nm 的量子点——上栅扫密度、下栅控势垒，使峰间距统计免于器件形变干扰（320 mK 测量）。图源：Simmel et al. (1999), Fig. 1。*
+
+结果：峰间距分布**单峰、近高斯**，既不遵从 Wigner 猜想、也没有自旋简并双峰；归一化涨落 $\sigma_\mathrm{rms}\approx0.06$，对应约 115 µeV——是平均能级间距 $\Delta\epsilon$ 的 7.5 倍、CI+RMT 预言的 **15 倍**（考虑 $k_BT\approx\Delta\epsilon$ 的热展宽修正后为 30–45 倍）。由于 $E_C/\Delta\epsilon\approx125$，涨落幅度 $\approx0.06\,E_C$ 强烈指向**加电子能的涨落随 $E_C$ 而非 $\Delta\epsilon$ 标度**——电子–电子相互作用（充电能本身的涨落）主导了统计，CI+RMT 组合在此区间失效；自旋简并的双峰结构也被 $r_s>1$ 的相互作用冲掉。这一"峰间距统计"自此成为检验 CI 模型适用边界的标准实验范式。
+
+
 ## 与其他概念的关系
 
 - 模型的两条假设直接定义了[[fundamentals/charging-energy|充电能]] $E_C=e^2/C_\Sigma$ 与[[fundamentals/electrochemical-potential|电化学势]] $\mu(N)$，二者是本模型的核心输出；
@@ -152,4 +171,5 @@ $$
 ## 参考文献
 
 - 常相互作用模型及其在输运实验中的验证：[[references/vanderwiel-2002|van der Wiel et al., RMP 74, 801 (2002)]]。
+- Simmel, F., Abusch-Magder, D., Wharam, D. A., Kastner, M. A., Kotthaus, J. P. Statistics of the Coulomb blockade peak spacings of a silicon quantum dot (1999). arXiv:cond-mat/9901274（QAtlas 缓存：cond-mat_9901274）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

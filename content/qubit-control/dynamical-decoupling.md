@@ -12,6 +12,9 @@ tags:
  - 量子比特操控
  - 噪声
 date: 2026-09-08
+source: QAtlas
+qatlas_id: qa_01m0qv6qhgp1mk2am2vvmjws3r
+source_updated: 2026-09-09T14:48:24Z
 ---
 
 <div class="entry-lead">动力学解耦不是消灭噪声，而是让量子比特在序列不同区间对慢噪声积累相反相位，从而在末端重新聚焦；脉冲数越多，解耦"窗口"越推向高频、剩余噪声投影到比特相位上的面积越小，测得的相干时间越接近材料的本征退相干。</div>
@@ -65,6 +68,28 @@ P_\uparrow(\tau)\approx A\exp\!\left[-\left(\frac{\tau}{T_2}\right)^{1+\alpha'}\
 $$
 
 其中衰减指数 $\alpha'=0$ 对应白噪声、$\alpha'=1$ 对应准静态 $1/f$ 噪声、$0<\alpha'<1$ 则常见于实际体系（典型实验拟合给出 $\alpha'=0.5$–$0.9$）。这意味着 $T_2^\mathrm{CPMG}\propto N^\gamma$ 中 $\gamma$ 与 $\alpha$ 直接相关，是从数据反推噪声谱的入口。
+
+## 实验落地：SiMOS 自旋比特的噪声谱学（Chan 2018）
+
+Chan 等人把上述"CPMG=带通滤波器"的方案在 SiMOS 量子点自旋比特上完整落地（富集 ⁸⁰⁰ ppm ²⁹Si 外延、$B_\mathrm{dc}=1.4$ T、$f_0=38.7765$ GHz、g=1.9789），把比特当成纳米电路里的**噪声谱仪**。操作要领：固定 $\pi$ 脉冲间隔 $\tau_w$、逐步增加脉冲数 $N$ 直到自旋翻转概率完全衰减，对每个 $\tau_w$ 用拉伸指数 $P(t)=P_0\exp[-(t/T_2^S)^n]+P_\infty$ 提取 $T_2^S$，再按
+
+$$
+S(\omega)=\frac{\pi^2}{4\,T_2^S(\omega)},\qquad f=\frac{1}{2\tau_w}
+$$
+
+换算成噪声功率谱；可用频段为 1.3–50 kHz（低频端受 $T_2^\mathrm{H}$ 限制、高频端受最短 $\pi$ 脉冲限制）。器件的相干指标链为 $T_1\approx1$ s、$T_2^*=33\pm8\ \mu$s、$T_2^\mathrm{H}=401\pm42\ \mu$s、$T_2^\mathrm{CP}=1.5\pm0.2$ ms（N=7）、$T_2^\mathrm{CPMG}=6.7\pm2.9$ ms（N=122 饱和）；RBM 给出 Clifford 门 99.83%、本征门 99.91%（IQ 矢量微波源 + ESR 频率实时反馈），保证谱学不被控制脉冲限制。
+
+![[assets/figures/dynamical-decoupling/chan2018-fig2-randomized-benchmarking.jpg]]
+*随机化基准先行：各 Clifford 门（REF/I/X/Y/±X/2/±Y/2）交错基准给出 99.83% 门保真度、本征门 99.91%——先证明控制不是瓶颈，相干时间与噪声谱学数据才有意义。图源：Chan et al. (2018), Fig. 2。*
+
+![[assets/figures/dynamical-decoupling/chan2018-fig3b-noise-spectrum.jpg]]
+*SiMOS 量子点自旋比特的噪声功率谱（CPMG 谱学，误差棒为指数拟合 95% 置信区间）：f<2 kHz 段 α=−2.5（$C_1/\omega^{2.5}$，$C_1=3\times10^{13}$）；2–20 kHz 段 α=−0.8~−1 的近 1/f 电荷噪声（$C_2/\omega$ 或 $C_3/\omega^{0.8}$）；f>20 kHz 白噪声底 350 rad²/s；f≈3.6 kHz 的尖峰经独立测量溯源到 SIM928 直流电压源（0.2 Hz–50 kHz 平均 $V_\mathrm{rms}\approx1.27\ \mu$V）。图源：Chan et al. (2018), Fig. 3。*
+
+三个方法论结论值得单列：
+
+1. **谱的分区诊断**：低频 $\alpha=-2.5$ 段在同一低温磁体系统中的 Si:P 施主实验里系数不同（$C_1=6\times10^{11}$），提示该段未必是磁体线圈漂移；2–20 kHz 的近 1/f 段归为[[materials-devices/charge-noise|电荷噪声]]——量子点比施主对此更敏感，定量根源是更大的 Stark 位移（本器件 $dg/dV_{G1}=-36.21$ MHz/V、$dg/dV_{G2}=-22.88$ MHz/V）。
+2. **音调注入校准**：向栅极注入 20 kHz 正弦音（白底饱和频率），自旋上概率从约 $160\ \mu\mathrm{V_{pp}}$ 起在音调频率处显著下降——与施主体系的 ~200 µVpp 相当（其噪声底低 ~35 倍）；三次（6.66 kHz）与五次（4 kHz）**奇次**谐波可见而偶次谐波被 CPMG 滤波函数抑制，直接验证了滤波函数描述。
+3. **仪器峰溯源**：3.6 kHz 尖峰在施主实验中未见，对 SIM928 电压源做独立谱测量发现同频尖峰——噪声谱学能把测量电子学的缺陷定位到具体器件，指导滤波或换源。
 
 ## 关键序列家族
 
@@ -156,3 +181,7 @@ DCZ 不改变 CZ 自身的相位条件，但让条件演化过程中累积的低
 - [[qubit-control/exchange-interaction|交换相互作用]]条件演化本身可以被 DD 包裹，构成 DCZ 与交换振荡的标定方法。
 - [[qubit-control/hole-spin-qubit|空穴自旋量子比特]]因强自旋–轨道耦合使比特对电场敏感，是 DD 收益最明显的比特类型之一；同时其 $1/f$ 噪声强，DD 也是噪声谱分析的主要工具。
 - [[circuit-qed/circuit-quantum-electrodynamics|cQED]]中的腔介导耦合同样可以使用 DD 思想延长有效相干；色散读出侧的 DD 等价于"把腔探测时间分布到多个非相邻窗口"以抑制腔 $1/f$ 频移。
+
+## 参考文献
+
+- Chan, K. W., Huang, W., Yang, C. H., Hwang, J. C. C., Hensen, B., Tanttu, T., Hudson, F. E., Itoh, K. M., Laucht, A., Morello, A., Dzurak, A. S. Assessment of a silicon quantum dot spin qubit environment via noise spectroscopy. *Physical Review Applied* 10, 044017 (2018). DOI: 10.1103/physrevapplied.10.044017；arXiv:1803.01609（QAtlas 缓存：1803.01609）。

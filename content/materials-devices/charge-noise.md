@@ -61,7 +61,7 @@ S_q(\omega)=\frac{2\pi A_q}{|\omega|}
 S(f)=S_{\mathrm{hf}}\left(\frac{f_0}{f}\right)^{\alpha}
 $$
 
-前者中 $A_q$ 是失谐参数 $q$ 的噪声在 $1\ \mathrm{Hz}$ 处的功率，后者把谱指数 $\alpha$ 留作可拟合量、$f_0$ 为参考频率。理想 $1/f$ 对应 $\alpha=1$；实测值通常略小于 1（例如平面锗空穴器件上拟合得到 $\alpha\approx0.907$），仍属于典型的 $1/f$ 型电荷噪声。
+前者中 $A_q$ 是失谐参数 $q$ 的噪声在 $1\ \mathrm{Hz}$ 处的功率，后者把谱指数 $\alpha$ 留作可拟合量、$f_0$ 为参考频率。理想 $1/f$ 对应 $\alpha=1$；实测值通常略小于 1（例如平面锗空穴器件上拟合得到 $\alpha\approx0.907$），仍属于典型的 $1/f$ 型电荷噪声。CPMG 噪声谱学在 SiMOS 量子点上直接测得 2–20 kHz 段 $\alpha=-0.8\sim-1$ 的近 1/f 电荷噪声（白噪声底 350 rad²/s@>20 kHz），并把 3.6 kHz 尖峰溯源到直流电压源——见[[qubit-control/dynamical-decoupling|动力学解耦]]词条"实验落地"一节。
 
 $\alpha$ 不能直接测量，但可以从回波衰减的形状反推。Hahn 回波幅度随等待时间的衰减写成
 

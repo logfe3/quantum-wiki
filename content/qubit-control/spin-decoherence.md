@@ -103,7 +103,7 @@ $$
 
 $\alpha'=0$ 对应白噪声、$\alpha'=1$ 对应准静态 $1/f$ 噪声、$0<\alpha'<1$ 是混合噪声谱的常见取值 §2.4.2）。
 
-Hahn 回波在中点插入 $\pi$ 脉冲把 $\eta$ 在前后两段反号，使低频段 $|\tilde\eta_\mathrm{Hahn}(f)|^2\sim f^2$ 抑制低频噪声；CPMG-$N$ 把脉冲加密到 $N$ 个，滤波窗口推至 $f\sim N/\tau$，$T_2^\mathrm{CPMG}$ 可较 $T_2^\mathrm{Hahn}$ 再延长一个量级以上。完整推导与噪声谱重建见[[qubit-control/dynamical-decoupling|动力学解耦]]词条。
+Hahn 回波在中点插入 $\pi$ 脉冲把 $\eta$ 在前后两段反号，使低频段 $|\tilde\eta_\mathrm{Hahn}(f)|^2\sim f^2$ 抑制低频噪声；CPMG-$N$ 把脉冲加密到 $N$ 个，滤波窗口推至 $f\sim N/\tau$，$T_2^\mathrm{CPMG}$ 可较 $T_2^\mathrm{Hahn}$ 再延长一个量级以上。完整推导与噪声谱重建见[[qubit-control/dynamical-decoupling|动力学解耦]]词条。把比特反过来当"噪声谱仪"用（固定脉冲间隔提取 $T_2^S$、换算 $S(\omega)=\pi^2/4T_2^S$）可以把退相干分解为低频磁噪声、中频 1/f 电荷噪声与白噪声底并定位仪器峰——SiMOS 实例见该词条"实验落地"一节。
 
 ### 退相干时间层级与品质因子
 

@@ -10,8 +10,8 @@ tags:
  - 单比特门
 date: 2026-09-12
 source: QAtlas
-qatlas_id: qa_01m237dae87mkqcz8t49z0rtg8
-source_updated: 2026-09-09T16:02:31Z
+qatlas_id: qa_01m237dajertqkk22k381g93ng
+source_updated: 2026-09-09T14:50:49Z
 ---
 
 <div class="entry-lead">单比特门是在布洛赫球上把一个量子比特的态旋转到任意方向的物理操作。半导体量子点中，它由"让自旋绕磁场进动"的静态哈密顿量加上"控制进动轴或进动速率"的驱动场构成；不同方案的差别在于驱动场如何耦合进来——磁的、电的，还是纯交换的。</div>
@@ -126,6 +126,27 @@ $$
 | Si/SiGe，[[references/noiri-2022|Noiri 2022]] | 99.8% | 微磁体 EDSR，越过容错阈值 |
 | Si/SiGe，[[references/xue-2022|Xue 2022]] | 平均 99.72%（单比特子空间 GST） | 计入两比特空间后平均 99.16% |
 | 天然 Si/SiGe，Takeda 2016 | 99.6%（RB） | 优化微磁体 EDSR；Q=140 @ 10 MHz、800 MHz 分址劈裂、T2*≈2 µs |
+| Si-MOS 300 mm 晶圆厂，Stuyck 2024 | Clifford 99.91±0.01%（RB）；X_π/2 与 Y_π/2 均 99.97%（GST） | 工业代工路线的最高值，双基准交叉验证 |
+
+## 300 mm 晶圆厂路线：99.9% 单比特控制（Stuyck 2024）
+
+学术洁净室的自定义工艺流已经证明高保真控制；规模化真正关心的问题是**工业代工环境能否复现这一水平**。Stuyck 等人（Diraq + imec）在 300 mm 晶圆平面工艺上给出肯定答案：外延 800 ppm ${}^{28}\mathrm{Si}$ 衬底 + 20 nm 高质量热氧化 Si/SiO₂ 界面 + DUV/电子束混合光刻，SET 电荷传感邻接双量子点，180 mK 下经泡利自旋阻塞在 $(3,1)$–$(4,0)$ 跃迁完成初始化与读出。
+
+![[assets/figures/single-qubit-gate/stuyck2024-fig1-foundry-device.jpg]]
+*300 mm 工艺自旋比特器件：(a) CDSEM 图像；(b) 双量子点势阱截面示意（非等比）——先在 P1/P2 栅下装载 3/1 个电子，再耗尽 J2/RES 栅下的二维电子气完成孤立。图源：Stuyck et al. (2024), Fig. 1。*
+
+![[assets/figures/single-qubit-gate/stuyck2024-fig3-charge-noise.jpg]]
+*电荷传感器的噪声谱密度（两个工作点）：SET 电流涨落经 dI/dV 与杠杆臂（0.04，与 12 nm SiO₂ 器件一致）换算为能级涨落，$S_0/f^\alpha$ 拟合给出 1 Hz 处仅 0.4 µeV、α=0.23——比典型 1/f（α≈1）平坦得多的界面质量指标，是 20 nm 热氧化界面的直接回报。图源：Stuyck et al. (2024), Fig. 3。*
+
+片上 ESR 天线在 0.7 T 全局磁场（Larmor 频率 18.89 GHz）下驱动相干翻转：Rabi 频率可达 2 MHz，Rabi 品质因子 $Q=f_\mathrm{Rabi}\cdot T_2^\mathrm{Rabi}$ 达 100。控制脉冲用**高斯单边带调制**整形以抑制对第二个电子自旋与 PSB 读出的串扰，配合 FPGA 实时反馈（含 ESR 频率跟踪）执行两种社区标准基准：
+
+![[assets/figures/single-qubit-gate/stuyck2024-fig7-randomized-benchmarking.jpg]]
+*随机化基准：400 条随机序列、最长 5000 个 Clifford 门（每个 Clifford 由 X_π/2 与 Z_π/2 组成），拟合给出 Clifford 门保真度 99.91±0.01%；插图为高斯整形后的控制电压脉冲。图源：Stuyck et al. (2024), Fig. 7。*
+
+- **RBM**：Clifford 门保真度 $99.91\pm0.01\%$；
+- **GST**：$X_{\pi/2}$ 门 $99.97^{+0.03}_{-0.04}\%$、$Y_{\pi/2}$ 门 $99.97\pm0.03\%$——两种基准一致越过 99.9%。
+
+GST 误差分解显示**哈密顿（相干）误差低、随机误差占主导**——瓶颈在退相干而非控制波形，作者指出把 ${}^{28}\mathrm{Si}$ 纯度提高到当前 800 ppm 之上即可继续改善。这是"控制问题已在代工环境内解决、下一步交给材料"的标志性结论。
 
 ## 参数与量级
 
@@ -139,6 +160,7 @@ $$
 | 频率分址间隔 | $10$–$100\ \mathrm{MHz}$ | 斯塔克位移调出 |
 | 天然硅微磁体分址劈裂 | 约 800 MHz（ΔB_z≈30 mT） | Takeda 2016，串扰 0.02% @ 10 MHz |
 | Rabi 品质因子 Q=T2^Rabi/T_π | ~140（天然硅最优工作点，f_Rabi=10 MHz；f_Rabi 最高约 35 MHz） | Takeda 2016 |
+| 300 mm 晶圆厂 Si-MOS | Clifford 99.91%（RB）/99.97%（GST X、Y 门）；0.4 µeV@1 Hz 电荷噪声（α=0.23）；f_Rabi 至 2 MHz、Q 至 100；ESR 18.89 GHz@0.7 T | Stuyck 2024 |
 
 ## 与其他概念的关系
 
@@ -156,3 +178,4 @@ $$
 - 通用门越过容错阈值与工作区设计：[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]；GST 表征与串扰：[[references/xue-2022|Xue et al., Nature 601, 343 (2022)]]、[[references/philips-2022|Philips et al., Nature 609, 919 (2022)]]。
 - 各驱动机制的理论综述：[[references/burkard-2023|Burkard et al., Rev. Mod. Phys. 95, 025003 (2023)]]、[[references/hanson-2007|Hanson et al., Rev. Mod. Phys. 79, 1217 (2007)]]。
 - Takeda, K. et al. A fault-tolerant addressable spin qubit in a natural silicon quantum dot. *Science Advances* 2, e1600694 (2016). DOI: 10.1126/sciadv.1600694；arXiv:1602.07833（QAtlas 缓存：1602.07833）。
+- Stuyck, N. D., Feng, M. K., Lim, W. H., Serrano Ramirez, S., Escott, C. C., Botzem, T., Tanttu, T., Yang, C. H., Saraiva, A., Laucht, A., Kubicek, J., Jussot, J., Beyne, S., Raes, B., Li, R., Godfrin, C., Wan, D., De Greve, K., Dzurak, A. S. Demonstration of 99.9% single qubit control fidelity of a silicon quantum dot spin qubit made in a 300 mm foundry process. *IEEE Silicon Nanoelectronics Workshop (SNW)* (2024). DOI: 10.1109/snw63608.2024.10639218（QAtlas 缓存：10.1109_snw63608.2024.10639218）。
