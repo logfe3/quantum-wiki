@@ -23,7 +23,7 @@ $$
 
 量级。数十 kHz 的带宽只能看到时间平均信号，无法追踪微秒量级的单电子隧穿事件，也就做不了[[readout-measurement/single-shot-readout|单发读出]]；同时低频段恰是 $1/f$ 噪声（见[[materials-devices/charge-noise|电荷噪声]]）最重的区域。
 
-射频反射测量（radio-frequency reflectometry）的出路是**阻抗变换**：在传感器近旁放一个贴片电感 $L$，让它与不可避免的寄生电容 $C_p$ 组成谐振电路（储能电路，tank circuit），把传感器的高阻抗变换到传输线的特性阻抗 $Z_0=50\ \Omega$ 附近。这样测量频率被抬升到谐振频率 $\sim 200\ \mathrm{MHz}$ 的载波上，带宽由谐振电路的品质因子决定，可达数 MHz——比直流方案高约三个数量级。1998 年 Schoelkopf 等人首先在单电子晶体管上实现（RF-SET），带宽达百 MHz 量级；此后该技术被移植到 QPC（RF-QPC）和栅极（RF-DGS/栅极射频传感）上，只需改动片外电路而不需改动样品设计。多通道扩展时"每通道一个电感谐振器"成为体积瓶颈，替代路线是把 SET 输出当电流直接片上频分复用放大（跨阻放大器，免谐振腔）——见[[readout-measurement/single-electron-transistor|单电子晶体管]]词条的 CTIA 读出一节。
+射频反射测量（radio-frequency reflectometry）的出路是**阻抗变换**：在传感器近旁放一个贴片电感 $L$，让它与不可避免的寄生电容 $C_p$ 组成谐振电路（储能电路，tank circuit），把传感器的高阻抗变换到传输线的特性阻抗 $Z_0=50\ \Omega$ 附近。这样测量频率被抬升到谐振频率 $\sim 200\ \mathrm{MHz}$ 的载波上，带宽由谐振电路的品质因子决定，可达数 MHz——比直流方案高约三个数量级。1998 年 Schoelkopf 等人首先在单电子晶体管上实现（RF-SET），带宽达百 MHz 量级；此后该技术被移植到 QPC（RF-QPC）和栅极（RF-DGS/栅极射频传感）上，只需改动片外电路而不需改动样品设计。多通道扩展时"每通道一个电感谐振器"成为体积瓶颈，替代路线是把 SET 输出当电流直接片上频分复用放大（跨阻放大器，免谐振腔）——见[[readout-measurement/single-electron-transistor|单电子晶体管]]词条的 CTIA 读出一节。反射测量也是单体电荷涨落器研究的主力读出：输运峰边的电报噪声时间序列经 Allan 方差/隐马尔可夫分析即可逐个表征 TLF——见[[materials-devices/charge-noise|电荷噪声]]词条的单体 TLF 表征一节。
 
 ## 理论模型
 

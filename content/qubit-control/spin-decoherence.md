@@ -45,7 +45,7 @@ $$
 其中 $\delta f(t)=\delta f_\mathrm{hf}(t)+\delta f_\mathrm{charge}(t)+\delta f_\mathrm{grad}(t)$ 把三类主要噪声源累加：
 
 - **核自旋 Overhauser 场涨落** $\delta f_\mathrm{hf}$：电子与点内 $N\sim 10^4$–$10^6$ 个晶格核自旋通过费米接触超精细耦合 $H_\mathrm{hf}=A\,\mathbf{I}\cdot\mathbf{S}$，平均场 $\langle B_\mathrm{nuc}\rangle$ 对 GaAs 约 $1$–$5\ \mathrm{mT}$（相当于百 MHz 量级的拉莫尔频率偏移），涨落部分则随核自旋扩散、动态核极化过程在毫秒到秒尺度上漂移。 把核磁场等效为准静态场，明确写出 $H_\mathrm{hf}=g\mu_B \sum_i B_{\mathrm{nuc},i}\cdot \mathbf{S}_i$（式 2.12 与式 3.10），并把 S–T0、S–T+ 反交叉附近的相干动力学归因于 $\mathbf{d}B = (\mathbf{B}_{\mathrm{nuc},L}-\mathbf{B}_{\mathrm{nuc},R})/2$（即两点核磁场之差，式 2.13）。
-- **栅极电压电荷噪声 $\delta V_{G_i}(t)$**：通过自旋–轨道耦合或人工磁场梯度把噪声注入比特频率，$\delta f_\mathrm{charge}(t)=\sum_i (\partial f_0/\partial V_{G_i})\,\delta V_{G_i}(t)$。硅体系典型灵敏度 $|\partial f_0/\partial V_{G_i}|\sim 10$–$100\ \mathrm{MHz/mV}$；锗空穴自旋因强 SOC 可达 $0.1$–$10\ \mathrm{MHz/mV}$ 量级。
+- **栅极电压电荷噪声 $\delta V_{G_i}(t)$**：通过自旋–轨道耦合或人工磁场梯度把噪声注入比特频率，$\delta f_\mathrm{charge}(t)=\sum_i (\partial f_0/\partial V_{G_i})\,\delta V_{G_i}(t)$。硅体系典型灵敏度 $|\partial f_0/\partial V_{G_i}|\sim 10$–$100\ \mathrm{MHz/mV}$；锗空穴自旋因强 SOC 可达 $0.1$–$10\ \mathrm{MHz/mV}$ 量级。其微观载体（单体电荷涨落器）在 Si/SiGe 中已可逐个表征并经反馈钉扎——见[[materials-devices/charge-noise|电荷噪声]]词条的单体 TLF 表征与反馈稳定两节。
 - **杂散磁场梯度**：微磁体或邻近电极磁性材料提供的 $\partial B/\partial \mathbf{r}$ 与电子波函数位置变化耦合进入 $f_0$；梯度越强，EDSR 越快但同时也越容易把电场噪声转译为比特频率抖动。
 
 ### $T_1$ 与自旋–声子、自旋–轨道机制

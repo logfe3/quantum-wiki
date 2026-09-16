@@ -23,7 +23,7 @@ source_updated: 2026-09-09T14:48:24Z
 
 动力学解耦（dynamical decoupling，DD）起源于核磁共振：1950 年 E. Hahn 在 [[fundamentals/semiconductor-quantum-dot|量子点]]等固态自旋体系中流行的"Hahn 回波"序列（[[qubit-control/ramsey-interferometry|Ramsey]] + 中点 $\pi$ 脉冲）已经证明，只要噪声在两次自由演化中保持近似不变，前后段累积的相位可以互相抵消；1958 年 H. Y. Carr 与 E. M. Purcell 提出在演化中插入多个 $\pi$ 脉冲提高对快噪声的抑制，后由 S. Meiboom 与 D. Gill 改进为绕 $y$ 轴施加脉冲的 CPMG（Carr–Purcell–Meiboom–Gill）序列，从而避免 $\pi$ 脉冲面积误差累积。这一思路在 1990 年代被 L. Viola 与 S. Lloyd 推广到通用量子信息场景，并命名为"动力学解耦"。
 
-在半导体量子点体系里，DD 最初被用来压制电荷量子比特的低频电荷噪声；自旋比特广泛使用之后，DD 既被作为"延长 $T_2$"的工程手段，也被作为"测量噪声谱"的诊断手段（dynamical decoupling noise spectroscopy）。这里的"动力学"二字强调了脉冲由外加微波主动产生，区别于物质内禀的"自然解耦"（如自旋–电荷的某种对称点保护）。
+在半导体量子点体系里，DD 最初被用来压制电荷量子比特的低频电荷噪声；自旋比特广泛使用之后，DD 既被作为"延长 $T_2$"的工程手段，也被作为"测量噪声谱"的诊断手段（dynamical decoupling noise spectroscopy）。这里的"动力学"二字强调了脉冲由外加微波主动产生，区别于物质内禀的"自然解耦"（如自旋–电荷的某种对称点保护）。序列滤波之外还出现了"治本"路线：对可分辨的单体电荷涨落器，栅压反馈可把其低频噪声谱直接压低近一个量级（见[[materials-devices/charge-noise|电荷噪声]]词条的反馈稳定一节）——与序列层面的滤波互补。
 
 ## 从 Ramsey 衰衰减到回声重聚焦
 

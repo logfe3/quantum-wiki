@@ -11,8 +11,8 @@ tags:
  - 噪声
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m237r743za0t0gb7j8hxgxxq
-source_updated: 2026-09-09T15:54:21Z
+qatlas_id: qa_01m0qvggb6g4h0gt1hrezc8g2z
+source_updated: 2026-09-05T18:00:54Z
 ---
 
 <div class="entry-lead">电荷噪声是量子点实验里最"会变形"的噪声：它既能移动电荷跃迁线，也能通过电荷混合、交换作用或自旋轨道耦合转化为比特相位噪声。</div>
@@ -129,6 +129,40 @@ $$
 ![[assets/figures/charge-noise/nowak2023-fig4-correlation-prediction.jpg]]
 
 *关联预言：单个缺陷对自旋（ζ）与轨道（基态能量）两个通道的耦合乘积的空间分布——缺陷位于两通道耦合乘积大的位置时，两类噪声显著关联；缺陷密度 10¹⁰ cm⁻² 下该关联应可实测。图源：Nowak et al. (2023), Fig. 4。*
+
+### 单体 TLF 的表征：Allan 方差与隐马尔可夫（Ye 2024a）
+
+系综谱学（1/f 功率谱）难以回答"涨落器到底是什么"——少数几个 TLF 就足以产生平滑无特征的 1/f 谱。Ye 等人改从**时域单体**入手：在四量子点器件（8 nm 自然 Si 阱、交叠栅工艺、双射频电荷传感器、~10 mK）的输运峰上直接看到随机电报噪声（RTN），并用两种互补工具提取单体性质：
+
+- **Allan 方差**：量化信号在时间滞后 $t$ 后平均变化多少——单体 TLF 的 RTN 在 $t\approx$ 平均切换时间处出现峰，由此直接读出前向/反向跃迁率 $\Gamma_{01}$、$\Gamma_{10}$；
+- **因子隐马尔可夫模型（FHMM）**：多 TLF 混叠（不同输运峰上呈不同步高组合）时做状态解码与参数分离。
+
+![[assets/figures/charge-noise/ye2024a-fig2-rtn-traces.jpg]]
+
+*电压依赖的噪声环境：三个输运峰上的反射测量时间轨迹与电化学势涨落——第一峰呈恒定步高的单 TLF 电报噪声，第二、三峰呈多步高（多个 TLF）；切换时间对栅压的敏感依赖使同一批 TLF 在不同峰上"冻结"或"显形"。图源：Ye et al. (2024a), Fig. 2。*
+
+![[assets/figures/charge-noise/ye2024a-fig3-allan-gate-dependence.jpg]]
+
+*TLF 切换率的栅压依赖：Allan 方差随时间滞后与栅电压的二维图（峰位随栅压移动）——切换速率对栅压极度敏感，这是后续反馈稳定技术的物理基础。图源：Ye et al. (2024a), Fig. 3。*
+
+三条实验规律：**切换时间对栅压极度敏感**（同一 TLF 在邻近输运峰上被冻结或显形）；**随温度升高而缩短**；**随传感点电流增大而加快**（局部加热）。对主 TLF 的模型甄别排除纯声子辅助隧穿与纯热激活两种场景，最佳描述是**双稳电荷偶极子**（位于柱塞栅电极附近、被传感点电流加热）的隧穿+热激活混合翻转——隧穿不由电子-声子介导，而可能由流过传感点的 2DEG 电子介导。值得注意的是同一器件（此前在另一制冷机中）测得 1 Hz 处仅 $0.42\ \mu\mathrm{eV^2/Hz}$ 的 1/f 谱——**可分辨的单体 TLF 与低噪声水平、平滑 1/f 谱完全兼容**。
+
+### 反馈稳定噪声源：把 TLF 钉扎在选定态（Ye 2024b）
+
+抑制电荷噪声通常绕开噪声源（解耦、甜点、工艺）；Ye 等人演示了**直接控制噪声源**的新类别：利用切换时间的敏感栅压依赖，实时监测 TLF 状态并在其翻转后改变栅压配置：
+
+- **开环**：检测到 TLF 进入"1"态后切到快调谐（切换时间短）停留固定时间，再回到慢调谐；
+- **闭环**：在快调谐中持续监测，待 TLF 翻回目标态"0"再返回慢调谐——期望满足 $\tau_1^{\mathrm{fast}}<\tau_1^{\mathrm{feedback}}<\tau_1^{\mathrm{slow}}$。
+
+![[assets/figures/charge-noise/ye2024b-fig2-feedback-methods.jpg]]
+
+*两种反馈协议：开环——检测到翻转后切快调谐固定时长再返回；闭环——在快调谐中监测直到翻回目标态。下为实测时间序列（灰迹）与分段状态判读（调谐切换的电压脉冲造成大信号偏差）。TLF 造成约 10 µeV 的化学势涨落。图源：Ye et al. (2024b), Fig. 2。*
+
+两种方法都把 TLF 的**低频涨落压低近一个量级**，并能把 TLF 稳定在 0 态或 1 态中的任一个；实测性能与数值模拟一致。
+
+![[assets/figures/charge-noise/ye2024b-fig6-psd-suppression.jpg]]
+
+*反馈对功率谱的压制：无反馈 vs 开环/闭环反馈下 TLF 时间序列的功率谱——低频分量降低近一个量级。图源：Ye et al. (2024b), Fig. 6。*
 
 ## 噪声如何进入比特：三类耦合通道
 
@@ -368,6 +402,7 @@ $S_{BG}$ 为系统噪声本底。
 | 工作点 | 电荷比特对称点、交换门对称操作点、磁场取向甜点 | 消去一阶敏感度 |
 | 波形 | 势垒脉冲代替失谐脉冲控制 $J$ | 抑制电荷噪声对 $J$ 的干扰 |
 | 序列 | Hahn 回波 / CPMG 动力学解耦 | 滤除低频分量，$T_2$ 可提升数倍至数十倍 |
+| 反馈 | 单体 TLF 的开环/闭环稳定（栅压快/慢调谐切换） | 低频噪声功率谱降低近一个量级，可钉扎任一态（Ye 2024b） |
 | 器件设计 | 优化微磁体几何、优化腔电场分布远离缺陷区 | 减小纵向梯度、降低缺陷耦合 |
 
 ## 与其他概念的关系
@@ -385,4 +420,6 @@ $S_{BG}$ 为系统噪声本底。
 - Nowak, B., Cywiński, Ł. Correlations of spin splitting and orbital fluctuations due to 1/f charge noise in the Si/SiGe quantum dot. *Applied Physics Letters* 122, 242001 (2023). DOI: 10.1063/5.0156358；arXiv:2305.06011（QAtlas 缓存：2305.06011）。
 - 电荷噪声对门保真度的影响与对策：[[references/burkard-2023|Burkard et al., RMP 95, 025003 (2023)]]、[[references/ge-sweetspot-2024|Hendrickx et al., Nat. Mater. 23, 920 (2024)]]。
 - Connors, E. J., Nelson, J., Qiao, H., Edge, L. F., Nichol, J. M. Low-frequency charge noise in Si/SiGe quantum dots. *Physical Review B* 100, 165305 (2019). DOI: 10.1103/PhysRevB.100.165305；arXiv:1907.07549（QAtlas 缓存：1907.07549）。
+- Ye, F., Ellaboudy, A., Albrecht, D., Vudatha, R., et al. Characterization of individual charge fluctuators in Si/SiGe quantum dots. *Physical Review B* 110, 235305 (2024). DOI: 10.1103/PhysRevB.110.235305；arXiv:2401.14541（QAtlas 缓存：2401.14541）。
+- Ye, F., Ellaboudy, A., Nichol, J. M. Stabilizing an individual charge fluctuator in a Si/SiGe quantum dot. *Physical Review Applied* 23, 044063 (2025). DOI: 10.1103/PhysRevApplied.23.044063；arXiv:2407.05439（QAtlas 缓存：2407.05439）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

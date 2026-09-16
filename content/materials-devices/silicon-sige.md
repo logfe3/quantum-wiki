@@ -218,7 +218,7 @@ $$
 
 ## 实验特征与测量
 
-**降温前后的常规表征。** 先测沟道开启与逐栅夹断（pinch-off）曲线确认每个栅极都能关断沟道；再扫能级栅看[[fundamentals/coulomb-blockade|库仑阻塞]]峰。因为 $E_C\sim3\ \mathrm{meV}$ 相对 $4.2\ \mathrm{K}$ 的热涨落不够大，液氦温区一般看不到清晰库仑峰，必须进稀释制冷机。
+**降温前后的常规表征。** 先测沟道开启与逐栅夹断（pinch-off）曲线确认每个栅极都能关断沟道；再扫能级栅看[[fundamentals/coulomb-blockade|库仑阻塞]]峰。因为 $E_C\sim3\ \mathrm{meV}$ 相对 $4.2\ \mathrm{K}$ 的热涨落不够大，液氦温区一般看不到清晰库仑峰，必须进稀释制冷机。冷却后阈值电压的器件间漂移（标称相同器件可差 ~700 mV，源于界面陷阱电荷冻结）可用 780 nm 光照 + 栅偏置系统调定——宽偏压范围内阈值等于光照时所加偏压，见[[materials-devices/interface-defects|界面缺陷]]词条的光照阈值调定一节。
 
 **单点参数。** 输运测量给出[[fundamentals/coulomb-diamond|库仑菱形]]，从中提取充电能与杠杆臂；库仑峰宽度可反推电子温度。二维四点阵列的实测显示四个点都能排空到零电子区，$\alpha$ 一致在 $0.12\ \mathrm{eV/V}$ 附近，而 $E_C$ 在 $2.68$–$3.74\ \mathrm{meV}$ 之间浮动，差异主要来自屏蔽栅形状。更早的 Pd 栅耗尽型双点（2010 年前后）已给出同一套表征流程的完整范例：交叉杠杆臂 $\alpha\approx0.07e$–$0.39e$、$E_C\approx1.5/1.6\ \mathrm{meV}$、偏压极性依赖的共隧穿亚结构，以及点间隧穿率的 WKB 指数标度（$\beta\approx0.056\ \mathrm{mV^{-1}}$）——见[[fundamentals/tunnel-coupling|隧穿耦合]]词条的输运谱学提取一节。
 
