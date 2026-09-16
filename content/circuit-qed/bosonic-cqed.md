@@ -110,6 +110,7 @@ $$
 - [[circuit-qed/cavity-linewidth|腔线宽与品质因子]]决定光子寿命——玻色编码的容错增益与腔 Q 值直接挂钩，EIT 线宽变窄与材料路线（NbTa）都是寿命工程的一部分。
 - [[circuit-qed/charge-parity-fluctuation|电荷宇称涨落]]里的宇称监测技术与猫码的 Syndrome 提取同源：都是把宇称映射到可测频率/相位。
 - 与[[superconducting-qubits/transmon-qubit|transmon]]等"硬件比特"的分工：辅助比特提供非线性与快速操控，腔提供长寿命与编码空间——玻色 cQED 是两者优势的组合。
+- [[circuit-qed/quantum-reservoir-computing|量子储备池计算]]：同样把腔的多 Fock 能级当资源用——这边编码受保护的量子信息，那边做机器学习的非线性特征神经元，硬件可以几乎是同一套。
 
 ## 参考文献
 

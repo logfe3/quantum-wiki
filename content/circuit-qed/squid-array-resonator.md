@@ -156,6 +156,8 @@ $$
 - 在强周期驱动下，磁通可调性同时意味着非线性进入非线性区，必须区分想要的量子点动力学与腔自身非线性响应；
 - 与[[materials-devices/charge-noise|电荷噪声]]共处：高频电极电压对 $\omega_r$ 的扰动约 $10$–$20$ kHz 量级，扫描时仍需注意栅压对腔频的反向耦合。
 
+同一 SQUID 平台的对称性破缺版图：把对称 SQUID 换成非对称 SQUID 并加磁通偏置，即得[[circuit-qed/superconducting-diode|超导二极管]]——动力学电感变为方向依赖（$L_\pm$），为谐振腔与耦合带来内建非互易性；与这里"互易但可调"的阵列互为补充。
+
 ## 与其他概念的关系
 
 - 在[[circuit-qed/circuit-quantum-electrodynamics|cQED 体系]]中，SQUID 阵列腔是[[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]的一种实现方式，与 NbTiN/TiN 动态电感腔并列；

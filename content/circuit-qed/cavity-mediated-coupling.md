@@ -291,6 +291,7 @@ $$
  - 比特侧的通道由 [[circuit-qed/charge-photon-coupling|电荷–光子耦合]]（强偶极、快速退相干）与 [[circuit-qed/spin-photon-coupling|自旋–光子耦合]]（微磁体梯度、自旋轨道、翻转模式）决定；[[scaling-automation/flopping-mode-qubit|翻转模式比特]] 与 [[qubit-control/resonant-exchange-qubit|共振交换量子比特]] 都是为兼顾"电学可调 + 与腔强耦合"而提出的编码。
  - 近邻作用的对照：[[qubit-control/exchange-interaction|交换相互作用]]、[[fundamentals/tunnel-coupling|隧穿耦合]]与 [[qubit-control/cnot-gate|CNOT]] 门通过直接相互作用实现，工作距离百纳米；腔介导耦合通过共享模式跨越芯片尺度。当阵列规模超过几个比特时，两者通常混合使用：节点内用近邻，节点间用腔总线。
  - 性能瓶颈：[[materials-devices/charge-noise|电荷噪声]]仍是色散频移 $\chi_k=g_k^2/\Delta_k$ 与有效交换 $J_{\mathrm{eff}}$ 稳定性的主要限制；不同平台（[[materials-devices/gaas-algaas|GaAs/AlGaAs]]、[[materials-devices/silicon-sige|Si/SiGe]]、[[materials-devices/silicon-mos|Si-MOS]]、[[materials-devices/germanium-hut-wire|锗棚顶纳米线]]）在退相干和电荷噪声量级上各有差异。
+ - 互易性推广：常规腔介导耦合对两个比特对称；把耦合元件换成[[circuit-qed/superconducting-diode|超导二极管]]后耦合常数变为复数 $J_{12}=Je^{i\varphi}$，支持非互易的布居转移与方向性 Bell 态制备——腔总线的"单向"版本。
 
 ## 参考文献
 

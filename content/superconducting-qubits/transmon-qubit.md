@@ -189,7 +189,7 @@ $$
 \frac1{T_2}=\frac1{2T_1}+\frac1{T_\varphi}.
 $$
 
-当电荷噪声被指数压低后，实验瓶颈往往转移到材料损耗、磁通噪声、残余光子和准粒子；“对电荷不敏感”不能等同于“对环境完全不敏感”。材料侧的替代路线（如[[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物组件]]）与界面工艺优化（见[[superconducting-qubits/surface-tls-loss|表面 TLS 损耗]]）都在攻击同一瓶颈。
+当电荷噪声被指数压低后，实验瓶颈往往转移到材料损耗、磁通噪声、残余光子和准粒子；“对电荷不敏感”不能等同于“对环境完全不敏感”。材料侧的替代路线（如[[superconducting-qubits/tin-aln-qubit-components|TiN/AlN 全氮化物组件]]）与界面工艺优化（见[[superconducting-qubits/surface-tls-loss|表面 TLS 损耗]]）都在攻击同一瓶颈。transmon–腔系统也是可复用的计算载体：腔的 Fock 态占据概率可充当量子储备池的输出神经元，见[[circuit-qed/quantum-reservoir-computing|量子储备池计算]]。
 
 ## 典型参数与设计权衡
 
