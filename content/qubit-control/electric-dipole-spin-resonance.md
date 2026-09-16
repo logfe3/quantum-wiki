@@ -8,7 +8,10 @@ aliases:
 tags:
  - 量子比特操控
  - 自旋
-date: 2026-09-08
+date: 2026-09-16
+source: QAtlas
+qatlas_id: qa_01m2378rqn4vbpd92t4nbkrsra
+source_updated: 2026-09-09T16:39:50Z
 ---
 
 <div class="entry-lead">EDSR 让栅电极发出的电场驱动自旋。微波先推动载流子波函数在量子点内做受迫振荡，再由空间磁场梯度或内禀自旋轨道耦合把这一位移转换为随时间变化的有效磁场，从而在塞曼共振频率附近实现 Rabi 振荡。</div>
@@ -36,6 +39,36 @@ $$
 其中 $l_\text{SO}=\hbar/(m^*\sqrt{\alpha^2+\beta^2})$ 是自旋轨道长度（$\alpha,\beta$ 分别为 Rashba、Dresselhaus 系数），$l_\text{dot}$ 是量子点尺寸，$\Delta$ 是限制势能级间距（或 hh–lh 子带分裂），$\tilde\alpha$ 是无量纲的 SOC 强度。Ge 纳米线空穴体系 $l_\text{SO}\sim40$–$100\,\text{nm}$，比 GaAs 电子（$l_\text{SO}\gtrsim 1\,\mu\text{m}$）短一个量级以上，单位电场位移能产生更显著的自旋转动；同时空穴缺乏 $s$ 轨道超精细耦合，纯化 Ge 体系中核自旋噪声几乎可忽略。这两点是[[qubit-control/hole-spin-qubit|空穴自旋比特]]在 EDSR 速度与单比特门保真度上跑赢电子路线的物理基础。
 
 硅电子 EDSR 与锗空穴 EDSR 在哈密顿量结构上同构（都是 $H_\text{drive}=\tfrac12 g\mu_B B_\text{eff}(t)\,\sigma_\perp$），只是 $B_\text{eff}$ 的微观来源不同——前者源自微磁体的合成 SOC，后者源自材料的本征 SOC。这把两套看似独立的实验纳入同一物理图像，也意味着两套体系面对同一类噪声——电荷涨落通过 SOC 通道回灌到自旋频率——必须用同一思路解决。
+
+## 第三条路径：自旋–谷热点增强的内禀 SOC（硅电子）
+
+硅电子的内禀 SOC 通常被当作"太弱、不可用"，但 Si/SiGe 的谷自由度提供了一个例外窗口：当塞曼能逼近谷劈裂（$E_B=E_{vs}$，**自旋–谷热点**）时，$|\uparrow,v_0\rangle$ 与 $|\downarrow,v_1\rangle$ 两态经界面对称破缺诱导的自旋–谷杂化强烈混合，内禀 SOC 驱动强度被急剧放大。Willmes 等人 2026 年在 800 ppm 浓缩 ${}^{28}\mathrm{Si}/\mathrm{SiGe}$ 的 LD 比特上给出了第一个靠近热点的相干演示——器件本想用钴纳米磁体做 s-SOC，但磁体氧化失效（残余磁化仅 0.7 mT，远低于预期的 ≥10 mT），反倒做成了"纯 i-SOC"实验。
+
+![[assets/figures/electric-dipole-spin-resonance/willmes2026-fig1a-ld-qubit-device.jpg]]
+
+*器件与实验方案：(a) 伪彩 SEM——绿色/蓝色点为左/右量子点，琥珀色为（失效的）钴纳米磁体，微波经栅组 S2 驱动右点 EDSR，外磁场沿沟道方向；器件由穿梭段（S1–S4）、静态点（G1–G3）与 SET 组成，在 (3,1)–(4,0) 区以泡利自旋阻塞读出（200 μs 锁相）。图源：Willmes et al. (2026), Fig. 1(a)。*
+
+**热点谱学与 $E_{vs}$ 定标**。用虚拟栅 $g_{\mathrm{push}}$ 把右点沿沟道平移几 nm、改变局域谷劈裂，对外磁场逐点测共振频率并扣除线性塞曼斜率，得到的特征**反交叉**即热点位置（本文约 230 mT）。反交叉随 $g_{\mathrm{push}}$ 的移动同时给出 $E_{vs}(g_{\mathrm{push}})$ 地图与**自旋–谷耦合矩阵元 $|C|$**（决定反交叉宽度）——本文测得的 $|C|$ 比 Si/SiGe 此前报告**大约一个量级**。
+
+**Rabi 频率的增强与不对称**。Huang–Hu 四态模型给出热点附近的 Rabi 频率（i-SOC 路径，$\gamma_\pm=\mathrm{atan2}(|C|,E_\pm)$，$E_\pm$ 是到杂化态的能量差）：
+
+$$
+f_R \propto |C|\,\big|\langle v_0|\hat x|v_1\rangle\big|\,\frac{\sin\gamma_+}{E_+} \;(\text{i-SOC}) \qquad\text{vs.}\qquad \frac{\sin\gamma_+}{E_+}+\frac{\sin\gamma_-}{E_-}\;(\text{s-SOC})
+$$
+
+其中 $\langle v_0|\hat x|v_1\rangle$ 是谷间偶极矩阵元（对界面微观细节敏感、作唯象参数处理）；两条自旋–谷混合路径的相对相位由 SOC 的性质决定——s-SOC 破坏时间反演对称、路径相长，i-SOC 不破坏、路径相消，故 i-SOC 的增强峰更不对称。实验确在 $\Delta E_{vs}=E_{vs}-E_B\to0$ 处观察到 $f_R$ 急剧增大，且两侧不对称（$E_{vs}<E_B$ 侧饱和为非零常数、$E_{vs}>E_B$ 侧迅速归零）——不对称程度超出四态模型，提示谷间偶极矩阵元本身随点位置/合金无序非平凡变化。更靠近热点时 Chevron 图样严重畸变（唯象因子 $k$ 从 1 降到 0.45），无法可靠提取 $f_R$。
+
+![[assets/figures/electric-dipole-spin-resonance/willmes2026-fig2d-rabi-hotspot-enhancement.jpg]]
+
+*主结果——Rabi 频率随热点距离的变化：横轴 ΔE_vs = E_vs − E_B（由 g_push 扫描 E_vs、外磁场设定 E_B），多个磁场下 f_R 都在热点附近急剧增强且两侧明显不对称（红色区域 Chevron 畸变、无法提取）；不同磁场数据趋势一致，说明增强主要取决于能量空间中到热点的距离。图源：Willmes et al. (2026), Fig. 2(d)。*
+
+**相干性与保真度**。远离热点（$B_{\mathrm{ext}}=220\ \mathrm{mT}$、$f_R\approx0.85\ \mathrm{MHz}$、$X_{\pi/2}/Y_{\pi/2}$ 门集）：AllXY 标定后随机基准给 $p=0.971$、**平均 Clifford 保真度 98.6%**；Ramsey 中位 $T_2^*\approx2.3\ \mu s$（强烈依赖位置）。保真度比微磁体 s-SOC 的最好值差约三个量级，主要受频率噪声限制：测得电荷噪声 $\sqrt{S(1\,\mathrm{Hz})}\approx24\ \mu\mathrm{eV}/\sqrt{\mathrm{Hz}}$（1/f 型）只能部分解释 $T_2^*$，且 $T_2^*$ 对热点距离的依赖比纯电荷噪声模型更弱——作者推测热点附近**残余核自旋效应被增强**（动态核极化反馈、电子介导核翻转），这也与 Chevron 的不规则跳变相符。
+
+![[assets/figures/electric-dipole-spin-resonance/willmes2026-fig3a-ramsey.jpg]]
+
+*远离热点工作点的 Ramsey 实验（B_ext=220 mT，与随机基准同一静电位形）：衰减振荡拟合给出中位 T₂*≈2.3 μs——同位素纯度下偏短，热点提供的电荷噪声耦合通道与残余核自旋效应是候选解释。图源：Willmes et al. (2026), Fig. 3(a)。*
+
+**适用边界**：热点位置随谷劈裂逐点涨落（合金无序），把它当作规模化驱动策略不现实；但 i-SOC 操控让**无微磁体区域**（如穿梭通道）的比特表征成为可能，也是理解 s-SOC 器件中 i-SOC 修正是（比特均匀性、保真度来源）的必要一环。谷劈裂的统计分布与热点压制策略见[[fundamentals/valley-splitting|谷劈裂]]词条。
 
 ## 理论模型
 
@@ -122,6 +155,10 @@ $$
 | 量 | 典型值 | 实验条件 | 来源 |
 | --- | --- | --- | --- |
 | Rabi 频率（硅电子，Si/SiGe，1 倍频） | 10–30 MHz | 微磁体梯度 EDSR | 综述 |
+| 自旋–谷耦合矩阵元 \|C\|（i-SOC 热点实验） | 比 Si/SiGe 此前报告大约一个量级（反交叉宽度拟合） | 800 ppm ²⁸Si/SiGe，热点约 230 mT | Willmes 2026 |
+| 热点附近 i-SOC Rabi 频率 | 急剧增强、两侧不对称（$E_{vs}<E_B$ 侧饱和非零） | $f_R\approx0.85$ MHz @220 mT 工作点 | Willmes 2026 |
+| i-SOC 单比特 Clifford 保真度 | 98.6%（$p=0.971$）；$T_2^*\approx2.3\ \mu s$ | 远离热点、$X_{\pi/2}/Y_{\pi/2}$ 门集 | Willmes 2026 |
+| 热点附近 Chevron 畸变因子 k | 1 → 0.45（跨过 $\Delta E_{vs}=0$） | 靠近热点时无法可靠提取 $f_R$ | Willmes 2026 |
 | Rabi 频率（硅电子，Si-MOS） | 0.04–2.5 MHz | 微磁体梯度 EDSR | |
 | Rabi 频率（硅电子，翻转模式，零失谐） | 1.262 MHz（提升 1 个量级） | $2t_c\sim800\,\text{GHz}$ 双量子点 | |
 | 横向磁场梯度 $b_\perp$ | $\sim0.02\,\text{mT}$ | 翻转模式拟合 | |
@@ -204,5 +241,6 @@ EDSR 把"驱动"与"电荷敏感性"绑在了同一条耦合通道上，工程�
 
 ## 参考文献
 
+- Willmes, A., Oberländer, M., Beer, M., Dütz, D., Tu, J.-S., Trellenkamp, S., Lisker, M., Reichmann, F., Schreiber, L. R., Bluhm, H. Enhanced intrinsic spin-orbit driving of a Loss-DiVincenzo qubit near the spin-valley hotspot in Si/SiGe. arXiv:2608.23246 (2026)（QAtlas 缓存：2608.23246）。
 - EDSR 驱动的代表性实验与工作区设计：[[references/koppens-2006|Koppens et al., Nature 442, 766 (2006)]]、[[references/noiri-2022|Noiri et al., Nature 601, 338 (2022)]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。

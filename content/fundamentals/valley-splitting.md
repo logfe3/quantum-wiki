@@ -274,7 +274,7 @@ $$
 - [[qubit-control/single-spin-qubit|单自旋量子比特]]：自旋量子比特的能量基底由"最低谷 × 自旋"张成，谷劈裂决定最低谷与第一激发谷之间的能隙。
 - [[qubit-control/singlet-triplet-qubit|S–T₀ 比特]]：在硅双量子点中 $(0,2)$ 态能级差取决于谷与轨道的混合，$E_\mathrm{VS}$ 较小时读出窗口受限。
 - [[qubit-control/exchange-interaction|交换相互作用]]： 指出 Si-MOS 中"$E_\mathrm{VS}$ 在 meV 量级，对应磁场大于 $1\ \mathrm{T}$"——所以高于 $1\ \mathrm{T}$ 的工作磁场下 valley 激发态可以忽略，双比特门哈密顿量可以只保留自旋自由度）。
-- [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]： 强调，在异质结界面上人为引入原子台阶可以**人为放大**自旋–谷–轨道耦合，从而显著增强基于自旋–轨道耦合的 EDSR 翻转频率。
+- [[qubit-control/electric-dipole-spin-resonance|电偶极自旋共振]]： 强调，在异质结界面上人为引入原子台阶可以**人为放大**自旋–谷–轨道耦合，从而显著增强基于自旋–轨道耦合的 EDSR 翻转频率。实验上 $E_B=E_\mathrm{VS}$ 的自旋–谷热点本身就能把硅电子的内禀 SOC 驱动急剧放大（同时带来弛豫增强与 Chevron 畸变的代价），见该词条"自旋–谷热点增强的内禀 SOC"一节——热点谱学的反交叉拟合同时是逐点标定 $E_\mathrm{VS}$ 与自旋–谷耦合矩阵元的方法。
 - [[qubit-control/electric-dipole-spin-resonance|EDSR]] 的另一种实现：通过电压控制谷相位、间接调节自旋–轨道矩阵元。
 - [[circuit-qed/dispersive-readout|色散读出]] 与 [[circuit-qed/cavity-mediated-coupling|腔介导耦合]]：用片上谐振腔探测谷态与谷能级。
 - [[materials-devices/charge-noise|电荷噪声]]：谷相位随电噪声起伏，会给 $E_\mathrm{VS}$ 引入额外低频涨落；这正是 所列"能谷劈裂及 SOC 效应的空间涨落"之一。

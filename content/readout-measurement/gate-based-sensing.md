@@ -10,10 +10,10 @@ aliases:
 tags:
  - 读出与测量
  - 射频
-date: 2026-09-08
+date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m23atf35r96mggecrz8hgsb0
-source_updated: 2026-09-09T16:58:37Z
+qatlas_id: qa_01m2375hp68k6y22mbad3hr7rt
+source_updated: 2026-09-09T16:52:29Z
 ---
 
 <div class="entry-lead">栅极射频传感让同一根电极兼做"控制线"和"传感端口"：电荷重排改变栅极看到的复导纳，反射信号随之变化。</div>
@@ -243,6 +243,32 @@ $$
 
 *MOS 电容法设计射频工作点：(a) $C_{\mathrm{MOS}}$ 随 $V_{\mathrm{GD}}$ 的测量（误差棒为测量分辨率），红色阴影为峰-峰射频幅度、蓝色阴影为参与信号的有效 $\Delta C_{\mathrm{MOS}}$，插图为栅探测器与谐振电路串联的等效电路；(b)(c) 线性积累型量子点阵列的顶视图与剖面图，展示耗尽栅在点栅下方的走线（宽 $w$、长 $L$）。图源：Rossi et al., APL (2017)，Fig. 4。*
 
+## 积累栅电导传感：对高阻 2DEG 兼容的接法
+
+未掺杂 Si/SiGe 器件给栅极射频传感出了一道新题：2DEG 电阻率高（传感点势垒到键合 pad 估计有 20 kΩ，含欧姆接触与 2DEG 有限电阻率），GaAs 式"传感点欧姆接反射仪"行不通；纯色散栅传感又只能测电容、带宽有限。Volk 等人 2019 年的接法把两者接通：**谐振电感焊线接到传感点的积累栅 AG**，构成 136 MHz 的 L–AG 谐振；同时用一个**解耦电阻 $R_D$** 把传感点的欧姆接触与样品板射频地断开——射频载波经 $C_{\mathrm{AG}}$ 电容耦合进沟道后无路可泄，只能流经传感点电导，反射信号因此对**传感点电导**（而非仅量子电容）敏感，恢复了对电荷（而不只是电容）的快速感知。
+
+![[assets/figures/gate-based-sensing/volk2019-fig1c-accumulation-gate-reflectometry.jpg]]
+
+*积累栅反射仪电路：RF 载波（端口 1）激发 L–AG 谐振；积累栅工作电压经 R_B–C_C bias tee 加入，谐振的 RF 电压经电容耦合到硅沟道，沟道经解耦电阻 R_D 与低通滤波的低温线 W3 隔离——反射响应由传感点电导调制，定向耦合器 + 室温零拍混频（端口 2）读出。图源：Volk et al. (2019), Fig. 1(c)。*
+
+工作性能：谐振频率不随传感点调节漂移（容性/感性贡献不变），谐振处反射功率随库仑峰变化 12 dB（传感点电流同时变化 170 pA）；用 2 kHz 锯齿脉冲 + 逐行步进，**1 s 内**即可采完高分辨双点/三点电荷稳定图（直流输运需数分钟），降分辨率可到视频速率——支持"实时调点"。单发层面：对 0–1 电荷跃迁做方波脉冲，台阶 2.0 mV、噪声 0.42 mV，24 μs 积分下
+
+$$
+\mathrm{SNR} = \frac{2.0}{\sqrt2 \times 0.42} = 3.4
+\qquad\Longrightarrow\qquad
+1.5\times10^{-3}\ e/\sqrt{\mathrm{Hz}}
+$$
+
+外推 $t_{\min}=2.1\ \mu s$（SNR=1），实测最短 2.4 μs 单发轨迹；三能级脉冲（Elzerman 式）配合阈值判别或小波边沿检测即得**单发自旋读出**，1000 次平均中的"自旋鼓包"给出隧穿率统计。该技术还提供了一个免费的应用：正反向脉冲三角的非对称性直接判读点间自旋弛豫——逆时针轨迹在 $(1,1)$ 区出现脉冲三角，说明泡利阻塞的 $(1,1)\to(0,2)$ 弛豫超过 5 μs，而顺时针方向无反向三角，说明反向弛豫远快于此。
+
+![[assets/figures/gate-based-sensing/volk2019-fig2f-rf-stability-diagram.jpg]]
+
+*RF 积累栅传感的三点电荷稳定图（V_H 经平面拟合扣除背景）：左/右 plunger 电压平面上清晰分辨 (1,1,1) 等电荷区，虚线标出三点各占单电子的区域——单栅层、未掺杂 Si/SiGe、与脉冲栅操作兼容。图源：Volk et al. (2019), Fig. 2(f)。*
+
+![[assets/figures/gate-based-sensing/volk2019-fig4-singleshot-charge-spin-readout.jpg]]
+
+*单发电荷与自旋读出：(a)(b)(c) 方波脉冲跨越 0–1 跃迁，单发轨迹中逐电子进出点的台阶清晰可辨（80 次重复），200 条平均的指数拟合给出隧入/隧出时间 0.41/0.69 ms；(d)(e)(f) 三能级脉冲的单发自旋读出——自旋上电子在读出段的"先出后进"隧穿事件（箭头），1000 次平均的插图显示自旋鼓包。图源：Volk et al. (2019), Fig. 4。*
+
 ## 可变电容扩展谐振频率
 
 由于栅极端口的 $C_p$ 强烈依赖样品几何， 在砷化镓栅极探测器上引入一个变容二极管 $C_\mathrm{Diode}$（varactor），用偏置电压 $V_\mathrm{Diode}$ 调节，使谐振频率
@@ -289,6 +315,10 @@ $$
 | 带宽 | Si-MOS 劈裂栅 $>2\ \mathrm{MHz}$（$C_p<0.6\ \mathrm{pF}$） | , 135 |
 | 等效电阻（孤立石墨烯点） | $R_\mathrm{eff}\approx 25\ \mathrm{G\Omega}$，$C_\mathrm{eff}\approx 4.2\times 10^{-4}\ \mathrm{aF}$ | |
 | 反推隧穿率 | $\Gamma\approx 37\ \mathrm{MHz}$（由 $T_e=100\ \mathrm{mK}$、$\alpha\approx 0.05$） | |
+| 积累栅电导传感（Si/SiGe） | L–AG 谐振 136 MHz + R_D 解耦；谐振处反射变化 12 dB；1 s 采完高分辨稳定图 | Volk 2019 |
+| 单发积分时间/电荷灵敏度 | 24 μs 下 SNR=3.4；最短 2.4 μs；$1.5\times10^{-3}\ e/\sqrt{\mathrm{Hz}}$、$t_{\min}=2.1\ \mu s$ | Volk 2019 |
+| 传感点–pad 电阻 | 约 20 kΩ（含欧姆接触与 2DEG 电阻率，需 R_D 解耦） | Volk 2019 |
+| PSB 点间自旋弛豫判读 | $(1,1)\to(0,2)$ 弛豫 >5 μs（脉冲三角非对称） | Volk 2019 |
 
 ## 实验特征与标定流程
 
@@ -313,5 +343,6 @@ $$
 
 ## 参考文献
 
+- Volk, C., Chatterjee, A., Ansaloni, F., Marcus, C. M., Kuemmeth, F. Fast Charge Sensing of Si/SiGe Quantum Dots via a High-Frequency Accumulation Gate. *Nano Letters* 19, 5628 (2019). DOI: 10.1021/acs.nanolett.9b02149；arXiv:1906.10584（QAtlas 缓存：1906.10584）。
 - 栅极射频传感与强耦合读出的相关实验：[[references/samkharadze-2018|Samkharadze et al., Science 359, 1123 (2018)]]。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
