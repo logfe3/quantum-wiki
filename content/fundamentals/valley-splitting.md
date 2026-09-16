@@ -11,8 +11,8 @@ tags:
  - 自旋量子比特
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvhjcagre8pth49d4ga5bh
-source_updated: 2026-09-02T02:09:42Z
+qatlas_id: qa_01m0qvm2dksn5tv5bhvswjdkh6
+source_updated: 2026-08-26T22:30:54Z
 ---
 
 <div class="entry-lead">谷劈裂（valley splitting, $E_\mathrm{VS}$）是硅量子点里把 $z$ 方向上残存的能谷二重简并分开的能隙：它决定了最低谷能级用于自旋比特编码时的"清洁度"，过小则准简并的谷态成为泄漏与退相干通道，过大则需更大磁场才能进入自旋–谷解耦区间。</div>
@@ -119,6 +119,47 @@ $$
 ![[assets/figures/valley-splitting/thayil2025-fig5a-separatrix-map.jpg]]
 *长周期摆动阱的两参数地图（剪切应变 × Ge 幅度）：虚线为 ν=2σ 分界（确定性增强区 vs 无序主导区）——大剪切应变下微小的 Ge 幅度即可进入确定性增强区，热点的统计权重被系统性压低。图源：Thayil et al. (2025), Fig. 5(a)。*
 
+### 非局域多谷包络函数理论：局域近似的参考能歧义（Ermoneit 2026）
+
+词条前述各理论框架（二能级哈密顿量、统一包络方程、多谷有效质量理论）都建立在"缓变包络 + 局域势"的有效质量语言上。Ermoneit 等人指出：在硅这类多谷半导体里，这一惯例有一个隐藏的失效模式——**局域包络函数理论（local EFT）的谷间耦合不是规范不变的**——并给出严格处理谷扇区投影的精确理论作为替代。
+
+精确理论从 Burt–Foreman 型多谷展开出发，不对介观势做缓变近似，经远程能带微扰消去带间耦合后，导带包络满足**非局域**本征方程
+
+$$
+E_\alpha f_{c,\mathbf{k}_0,\alpha}(\mathbf{r}) = -\frac{\hbar^2}{2}\nabla\cdot m_{c,\mathbf{k}_0}^{-1}\nabla f_{c,\mathbf{k}_0,\alpha}(\mathbf{r}) + E_{c,\mathbf{k}_0}\, f_{c,\mathbf{k}_0,\alpha}(\mathbf{r}) + \sum_{\mathbf{k}_0'} \int \mathrm{d}^3r'\, u_{\mathbf{k}_0,\mathbf{k}_0'}^{c,c}(\mathbf{r},\mathbf{r}')\, f_{c,\mathbf{k}_0',\alpha}(\mathbf{r}'),
+$$
+
+其中 $m_{c,\mathbf{k}_0}^{-1}$ 是逆有效质量张量，非局域核 $u_{\mathbf{k}_0,\mathbf{k}_0'}^{c,c}(\mathbf{r},\mathbf{r}')$ 由"投影–相乘–投影"结构构成：Bloch 因子夹着介观势 $U$，两端各带一个把包络限制在谷专属布里渊区扇区内的截断 δ 函数。谷扇区投影被严格保留，正是哈密顿量自伴性与能量谱实值性的来源。
+
+关键定理是**参考能平移不变性**：全局势平移 $U\to U+U_0$ 在非局域模型里只平移谷内（对角）项、在谷间（非对角）项中严格相消。一阶简并微扰给出的谷间耦合矩阵元形式上与常规写法相同，
+
+$$
+\Delta = \int \mathrm{d}^3r\ \mathrm{e}^{-2\mathrm{i}\mathbf{k}_0\cdot\mathbf{r}}\, f_{\mathbf{k}_0^+}^{(0)*}(\mathbf{r})\, u_{\mathbf{k}_0^+}^{*}(\mathbf{r})\, U(\mathbf{r})\, u_{\mathbf{k}_0^-}(\mathbf{r})\, f_{\mathbf{k}_0^-}^{(0)}(\mathbf{r}),
+$$
+
+但此处的包络 $f^{(0)}$ 被限制在自己的谷扇区内（$f_{\mathbf{k}_0^-}^{(0)}=(f_{\mathbf{k}_0^+}^{(0)})^*$），因而 $\Delta\xrightarrow{U\to U+U_0}\Delta$ 唯一确定。常规局域理论把截断 δ 函数换成普通 δ 函数、丢掉扇区投影，包络便可携带谷扇区外的短波分量（谱泄漏）；同样的表达式随即失去唯一性：
+
+$$
+\Delta_\mathrm{loc} \xrightarrow{\ U\to U+U_0\ } \Delta_\mathrm{loc} + U_0 R,
+\qquad
+R = \sum_n C_n^{(2)} \int \mathrm{d}z\ \mathrm{e}^{-\mathrm{i}(2k_0+nG_{0,z})z}\left(f_\mathrm{loc}^{(0)}(z)\right)^2 ,
+$$
+
+其中 $R$ 是**歧义度量**（$G_{0,z}$ 为倒格矢竖直分量、$C_n^{(2)}$ 为 Bloch 因子乘积的傅里叶系数）：预测的 $E_\mathrm{VS}^\mathrm{loc}=2|\Delta_\mathrm{loc}+U_0R|$ 依赖能量零点的选取——而不同异质结/静电建模工作流的带边参考约定差异很容易引入几百 meV 量级的 $U_0$。这意味着局域 EFT 计算可以通过"调参考能"去拟合几乎任何实验值，其定量预测与实验解释的资格在锐变势景观中失效。数值量化表明：界面越锐利（几个单层）、量子阱越薄、剖面越尖锐（Ge 尖峰），$2|R|$ 越大；平滑界面的常规阱里歧义可忽略。
+
+修复方案是**投影局域模型**：把局域包络谱滤波投影回谷扇区（$\tilde{f}=\int\mathrm{d}z'\,\Delta_{k_0}(z-z')\,\mathrm{e}^{-\mathrm{i}k_0(z-z')}f_\mathrm{loc}(z')$ 后归一化），再用 $\tilde f$ 计算 $\Delta$。它按构造恢复参考能不变性，基准测试中在常规阱、摆动阱等情形与精确非局域结果符合良好（Ge 尖峰处倾向高估）。
+
+![[assets/figures/valley-splitting/ermoneit2026-fig3-interface-width.jpg]]
+*界面宽度扫描下的谷劈裂：精确非局域模型（红线）与投影局域模型（橙虚线）几乎重合，而局域模型（色标为 0–1 eV 的参考能偏移 $U_0$）在锐界面区展现出强烈的非物理参考能依赖——同一结构、不同能量零点给出截然不同的 $E_\mathrm{VS}$。图源：Ermoneit et al. (2026), Fig. 3。*
+
+![[assets/figures/valley-splitting/ermoneit2026-fig4-field-symmetry.jpg]]
+*镜像对称量子阱的对称性检验：对称性要求 $E_\mathrm{VS}(F)=E_\mathrm{VS}(-F)$，精确非局域与投影局域模型均满足；常规局域模型出现非物理的 $F\to-F$ 不对称与强参考能依赖（色标同上图）。图源：Ermoneit et al. (2026), Fig. 4。*
+
+![[assets/figures/valley-splitting/ermoneit2026-fig5-wiggle-resonance.jpg]]
+*摆动阱（Ge 幅度 $X_\mathrm{ww}=5\%$，扫描波数 $q$）的谷劈裂：$q=2k_0$ 与 $q=2k_1$ 两个共振峰被局域与非局域模型同时捕捉，但 $2k_1$ 共振附近局域模型表现出强烈的非物理参考能依赖，投影局域模型则紧贴精确结果。图源：Ermoneit et al. (2026), Fig. 5。*
+
+对建模实践的启示：用局域 EFT 报告谷劈裂数值时，应核对结果对参考能平移的稳定性（或直接使用投影局域/非局域模型）；对照实验拟合时尤其要警惕通过调 $U_0$ 达成的"符合"。摆动阱等构型的系统化剖面设计另见[[materials-devices/valley-splitting-optimization|谷劈裂外延剖面优化]]词条。
+
 ## 参数与量级
 
 | 体系 | 谷劈裂 $E_\mathrm{VS}$ | 典型测量方法 | 来源 |
@@ -138,6 +179,8 @@ $$
 | 共振隧穿读出判据 | 小谷区（E_VS<Δz）非线性可改善读出（需谷能级均匀）；两种谷区均有 t_dec/t_meas>100（误差 <1%） | 三-QD NEGF | Tanamoto 2025 |
 | QuBus 谷劈裂地图 | 40×400 nm，1.5–200 μeV；Rice 分布 γ=0.1 μeV、σ=64.3 μeV；点半径 18.2 nm、关联 <30 nm | 穿梭点自旋–谷谱 | Volmer 2026 |
 | 穿梭退相干阈值 | 自旋–谷共振绝热/二能级穿越分界 ~2.8 m/s（Δ_sv≲300 neV、dE_VS/dx≈3 μeV/nm）；10 μm 穿梭误差 <8% | 传送带穿梭 P_S | Volmer 2026 |
+| 局域包络理论的参考能歧义 | 锐界面/薄阱/Ge 尖峰时歧义度量 2\|R\| 显著，U₀ ~ 数百 meV 即强烈改变 E_VS^loc 预测 | 精确非局域多谷 EFT 基准 | Ermoneit 2026 |
+| 投影局域（谱滤波）模型 | 恢复参考能不变性；常规阱与摆动阱符合精确非局域结果，Ge 尖峰处倾向高估 | 一维基准模拟 | Ermoneit 2026 |
 
 <!-- FIGURE: 不同体系谷劈裂量级对比柱状图：Si/SiGe 几十 μeV、Si-MOS 200–1000 μeV、应变锗 Ge/SiGe 价带无谷简并；纵轴为对数能标 -->
 
@@ -354,6 +397,7 @@ $$
 - [[materials-devices/charge-noise|电荷噪声]]：谷相位随电噪声起伏，会给 $E_\mathrm{VS}$ 引入额外低频涨落；这正是 所列"能谷劈裂及 SOC 效应的空间涨落"之一。
 - [[scaling-automation/spin-orbit-torque-control|SOT 操控]]：通过自旋轨道力矩改变杂散场方向，可在不破坏谷劈裂的前提下调节有效自旋–轨道耦合。
 - [[materials-devices/laser-annealing-contacts|激光退火欧姆接触]]：为保住单层精度 Ge 剖面与界面锐度（谷劈裂的设计资源）而生的接触工艺——把退火热预算从全局压到接触区，避免热扩散抹平谷劈裂工程。
+- [[materials-devices/valley-splitting-optimization|谷劈裂外延剖面优化]]：把摆动阱、窄阱、Ge 尖峰等构型统一为带谱约束的变分优化问题，得到可靠性更高且电场可调 200 µeV–1 meV 的调制摆动阱。
 
 
 ## 参考文献
@@ -366,4 +410,5 @@ $$
 - Ferdous, R., Kawakami, E., Scarlino, P., Nowak, M. P., Ward, D. R., Savage, D. E., Lagally, M. G., Coppersmith, S. N., Friesen, M., Eriksson, M. A., Vandersypen, L. M. K., Rahman, R. Valley dependent anisotropic spin splitting in silicon quantum dots. *npj Quantum Information* 4, 26 (2018). DOI: 10.1038/s41534-018-0075-1；arXiv:1702.06210（QAtlas 缓存：1702.06210）。
 - Tanamoto, T., Ono, K. Effects of valley splitting on resonant-tunneling readout of spin qubits. *Applied Physics Letters* (2025). DOI: 10.1063/5.0260516；arXiv:2501.13289（QAtlas 缓存：2501.13289）。
 - Volmer, M., Struck, T., Tu, J.-S., Trellenkamp, S., Degli Esposti, D., Scappucci, G., Cywiński, Ł. et al. Impact of the local valley splitting on the coherence of conveyor-belt spin shuttling in ${}^{28}$Si/SiGe. *Nature Communications* (2026). DOI: 10.1038/s41467-026-74382-5；arXiv:2510.03773（QAtlas 缓存：2510.03773）。
+- Ermoneit, L., Thayil, A., Koprucki, T., Kantner, M. Exact Multi-Valley Envelope Function Theory of Valley Splitting in Si/SiGe Nanostructures (2026). DOI: 10.1103/md2x-s44y；arXiv:2602.14787（QAtlas 缓存：2602.14787）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
