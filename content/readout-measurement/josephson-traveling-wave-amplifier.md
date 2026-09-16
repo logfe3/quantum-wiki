@@ -223,7 +223,7 @@ $$
 - [[readout-measurement/rf-reflectometry|射频反射测量]]：JTWPA 作为首级近量子极限放大器嵌入反射读出链，把 HEMT 噪声贡献压到可忽略。
 - [[scaling-automation/cryo-electronics|低温电子学]]：JTWPA 是稀释制冷机读出链中 HEMT 之前的低温第一级候选，多比特频分复用读出依赖其宽带增益。
 - [[readout-measurement/dispersive-readout|色散读出]]：数 GHz 增益带宽让一台 JTWPA 同时服务整条多腔总线的频分复用读出。
-- [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：动力学电感行波放大器（KTWPA）与本词条器件共用"非线性电感摊开成线"的思路，只是非线性来自超导薄膜而非约瑟夫森结。
+- [[circuit-qed/high-impedance-resonator|高阻抗谐振腔]]：动力学电感行波放大器（[[readout-measurement/kinetic-inductance-twpa|KI-TWPA]]）与本词条器件共用"非线性电感摊开成线"的思路，只是非线性来自超导薄膜而非约瑟夫森结——动态范围高一个量级（1 dB 压缩 −58 dBm）、免结工艺，代价是需要短截线加载与周期调制做色散工程维持相位匹配。
 
 ## 参考文献
 

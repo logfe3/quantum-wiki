@@ -260,7 +260,7 @@ $$
 - **AC Stark 频移**：腔内光子数 $n$ 通过 $2\chi n$ 推比特频率，使比特共振条件被读出脉冲本身移动。这在标定 $\chi$ 时有用，但在长读出门操作时必须把 $n$ 锁稳；
 - **Purcell 弛豫**：比特激发态混入 $(g/\Delta)$ 比例的"单光子 + 比特基态"成分，这部分成分以 $\kappa$ 速率漏出腔外，等效于比特以 $\gamma^{\mathrm{Purcell}}\simeq\kappa_r g^2/\Delta^2$ 速率弛豫。对 transmon，这一约束可写为 $T_1^{\mathrm{Purcell}}\simeq 2\pi\alpha/(\kappa\chi)$，要求 $\kappa|\chi|\leqslant \pi\alpha/T_1$。
 
-因此读出速度、SNR 与反作用必须联合优化。最直接的修正是插入[[readout-measurement/purcell-filter|Purcell 滤波器]]在比特频段抑制环境阻抗，在读出频段保持通畅，使上述 Purcell 极限被有效解除）。在低噪声侧，靠近量子极限的[[readout-measurement/parametric-amplifier|参量放大器]]（如 JPA、TWPA）进一步把放大器贡献的噪声光子数压到 1 以下。
+因此读出速度、SNR 与反作用必须联合优化。最直接的修正是插入[[readout-measurement/purcell-filter|Purcell 滤波器]]在比特频段抑制环境阻抗，在读出频段保持通畅，使上述 Purcell 极限被有效解除）。在低噪声侧，靠近量子极限的[[readout-measurement/parametric-amplifier|参量放大器]]（如 JPA、TWPA）进一步把放大器贡献的噪声光子数压到 1 以下；首级放大器的动态范围同样重要——多比特频分复用读出时，信号总功率受首级 1 dB 压缩点约束，高动态范围的[[readout-measurement/kinetic-inductance-twpa|动力学电感行波参量放大器]]（压缩点 −58 dBm、附加噪声 0.5–1.5 量子、可片上集成全部射频元件）是候选方案之一。
 
 ## 读出脉冲的最优控制（Zhou 2024）
 
