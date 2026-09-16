@@ -167,6 +167,7 @@ GST 误差分解显示**哈密顿（相干）误差低、随机误差占主导**
 - 单比特门与[[qubit-control/exchange-gates|交换型两比特门]]、[[qubit-control/cnot-gate|CNOT 门]]、[[qubit-control/toffoli-gate|Toffoli 门]]共同构成普适量子逻辑；两比特门依赖[[qubit-control/exchange-interaction|交换相互作用]]，其物理由[[fundamentals/tunnel-coupling|隧穿耦合]]与[[fundamentals/charge-stability-diagram|电荷稳定图]]上的脉冲路径决定。
 - 驱动机制的选择与[[materials-devices/micromagnet|微磁体]]、[[fundamentals/spin-orbit-coupling|自旋轨道耦合]]、[[materials-devices/charge-noise|电荷噪声]]三个词条强关联：前者提供电驱动接口，后者设定保真度上限。
 - 多电子激发轨道占据的量子点中，[[qubit-control/electric-quadrupole-spin-resonance|电四极自旋共振（EQSR）]]在轨道近简并点提供另一条全电驱动通道，是 EDSR 之外无需微磁体的候选机制。
+- [[superconducting-qubits/quantum-optimal-control|量子最优控制与机器学习表征]]：门脉冲设计的模型侧升级（平台无关）——机器学习从数据学出的可微动力学模型替代易偏的物理模型，任意门脉冲在模型上直接梯度优化。
 - 门脉冲的执行质量受[[qubit-control/spin-decoherence|自旋退相干]]与[[qubit-control/dynamical-decoupling|动力学解耦]]策略约束；初始化与读出见[[qubit-control/spin-initialization|自旋初始化]]、[[readout-measurement/single-shot-readout|单发读出]]。
 - 空穴自旋特有的驱动与弛豫物理见[[qubit-control/hole-spin-qubit|空穴自旋量子比特]]；两比特门与处理器层面的整合见[[qubit-control/two-qubit-gate|两比特门]]。
 

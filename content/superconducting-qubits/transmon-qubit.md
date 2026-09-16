@@ -208,7 +208,7 @@ $$
 
 - Transmon 是 CPB 的大 $E_J/E_C$ 极限，但它的逻辑态是跨多个电荷数态的叠加，不是“固定电荷态”。
 - [[superconducting-qubits/fluxonium-qubit|Fluxonium 量子比特]]是与之互补的路线：同样依赖大 $E_J/E_C$ 压低电荷色散，但用大电感重塑势阱，在小电容下保留数百 MHz 的非谐性；两条路线在非谐性、磁通噪声和读出频移上各有取舍。
-- [[superconducting-qubits/flat-band-localization|平带局域化与 Aharonov–Bohm 笼蔽]]：transmon 阵列作为量子模拟器的一面——10 比特菱形格子用合成磁通在色散带与全平带间连续调谐，观测无序诱导的（退）局域化。
+- [[superconducting-qubits/flat-band-localization|平带局域化与 Aharonov–Bohm 笼蔽]]：transmon 阵列作为量子模拟器的一面——10 比特菱形格子用合成磁通在色散带与全平带间连续调谐，观测无序诱导的（退）局域化；阵列谱统计与混合非谐性混沌抑制见[[superconducting-qubits/qubit-array-level-statistics|比特阵列能级统计与混沌抑制]]。
 - 它与[[circuit-qed/circuit-quantum-electrodynamics|电路量子电动力学]]共同构成“人工原子＋微波腔”平台；强交流偶极矩使其容易达到[[circuit-qed/strong-coupling|强耦合]]。
 - 弱非谐性使[[circuit-qed/dispersive-shift|色散频移]]必须计入至少前三个能级，也使快速门需要显式控制泄漏。
 - 腔既提供[[readout-measurement/dispersive-readout|色散读出]]通道，也通过 Purcell 效应打开弛豫通道，因此读取速度和寿命需要由[[readout-measurement/purcell-filter|Purcell 滤波器]]共同优化。

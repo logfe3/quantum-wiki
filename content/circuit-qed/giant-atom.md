@@ -66,7 +66,7 @@ Hu 等人把这一概念工程化为**巨原子 JQF**：固定频率 transmon �
 ## 与其他概念的关系
 
 - [[readout-measurement/purcell-filter|Purcell 滤波器]]：同一问题（保护比特免经读出口衰减）的两代方案——被动频域滤波 vs 可调干涉滤波；
-- [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]：比特与巨原子本体都是 transmon——器件谱可调性来自 SQUID 磁通调谐；
+- [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]：比特与巨原子本体都是 transmon——器件谱可调性来自 SQUID 磁通调谐；巨原子的路径相位干涉工具也可用于双比特非互易（相干-耗散平衡方案见[[circuit-qed/superconducting-diode|超导二极管非互易性]]"相干-耗散平衡"一节）；
 - [[readout-measurement/dispersive-readout|色散读出]]：巨原子 JQF 保护的对象；读出速度由 $\kappa_r$ 决定而不再被 Purcell 权衡绑架；
 - [[circuit-qed/vacuum-rabi-splitting|真空 Rabi 劈裂]]与[[circuit-qed/strong-coupling|强耦合判据]]：巨原子谱学（超/次辐射）是它们在开放波导中的干涉推广；
 - [[circuit-qed/superconducting-diode|超导二极管]]：同为"把新物理元件嵌入 cQED 波导"的方向——一个做非互易路由，一个做选择性滤波。

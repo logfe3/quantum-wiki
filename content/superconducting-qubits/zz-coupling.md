@@ -92,6 +92,7 @@ $$
 - [[superconducting-qubits/transmon-qubit|Transmon 量子比特]]：ZZ 的载体与高激发态来源——非谐性 $\alpha_i$ 决定构型边界与极点位置。
 - [[superconducting-qubits/floquet-anisotropic-transverse-interactions|横向各向异性相互作用的 Floquet 工程]]：与纵向 ZZ 互补的调控目标——可调耦合器上的边带驱动合成任意配比的 XX/YY 横向相互作用，服务量子模拟而非门串扰抑制。
 - [[superconducting-qubits/real-time-qec-decoding|实时低延迟量子纠错解码]]：容错速度预算反过来约束 ZZ 工程——CZ 门保真度是稳定性实验逻辑错误率的主要器件瓶颈之一。
+- [[superconducting-qubits/qubit-array-level-statistics|比特阵列能级统计与混沌抑制]]：相反非谐性压制 ZZ 只是混合 transmon/CSFQ 阵列的第一重收益——能级统计显示局域化相可承受 >40% 更强耦合，且与 ZZ 相消可经非谐性比 η 独立调节。
 - [[superconducting-qubits/spin-locked-qubit|自旋锁定量子比特]]：其两比特门方案（绝热 ZZ 门）直接消费本词条的机制分解——零 ZZ 区即闲置工作点的候选。
 - [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：总线架构中 ZZ 作为"残余耦合"出现（该词条"扩展能力与代价"一节）；谐振腔诱导相位（RIP）方案还能把可控 ZZ 推广到亚米级距离，见该词条"谐振腔诱导相位的长程 ZZ"一节。
 - [[readout-measurement/dispersive-readout|色散读出]]与[[readout-measurement/readout-crosstalk|读出串扰]]的近亲：ZZ 本质是两个 $\chi$ 型态依赖频移的卷积，与色散移共享物理；多比特频繁分复用时残余 ZZ 是系统级串扰源。

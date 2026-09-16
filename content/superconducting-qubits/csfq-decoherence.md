@@ -69,6 +69,7 @@ $$
 - [[circuit-qed/charge-parity-fluctuation|电荷宇称涨落与准粒子隧穿]]是 transmon 侧的噪声分解模板（准粒子隧穿只占弛豫 5%）；本词条是 flux qubit 侧的对应物（1/f 磁通噪声 + 控制电子噪声 + 热噪声）——两条路线的噪声来源截然不同。
 - 1/f 磁通噪声与[[superconducting-qubits/fluxonium-qubit|fluxonium]]甜点的第一阶磁通噪声免疫同源：CSFQ 的工作点选择同样利用磁通偏置的一阶不敏感区。
 - 控制电子噪声的贡献把退相干与[[scaling-automation/cryo-electronics|低温电子学]]的滤波、衰减设计直接联系起来；热噪声的高频主导则要求衰减链按频段优化。
+- [[superconducting-qubits/qubit-array-level-statistics|比特阵列能级统计与混沌抑制]]：CSFQ 的正非谐性与 transmon 的负非谐性在谱统计上等价（玻色-哈伯德 U→−U 对称），交替混排两类比特则同时收获 ZZ 相消与抗混沌两重好处。
 
 ## 参考文献
 

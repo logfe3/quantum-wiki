@@ -13,8 +13,8 @@ tags:
  - 约瑟夫森器件
 date: 2026-09-16
 source: QAtlas
-qatlas_id: qa_01m0qvkdfd0jwcezvwzgpvb8yj
-source_updated: 2026-08-28T10:32:16Z
+qatlas_id: qa_01m0qvh4bdtpfjx2grg6ryagxx
+source_updated: 2026-09-03T18:25:30Z
 ---
 
 <div class="entry-lead">读出链里的环形器靠铁氧体磁体实现"只进不出"，笨重且难集成。超导二极管效应给出另一条路：同时打破 inversion 与时间反演对称后，超导态本身的正向/反向临界电流不相等——非互易性成为**基态性质**。把它做成 cQED 电路元件，方向依赖的电感直接 translate 成方向依赖的谐振频率与耦合相位，进而支撑非互易的比特-比特门：纠缠可以按指定方向"单向发货"。</div>
@@ -70,6 +70,38 @@ $$
 
 把初态 $|01\rangle$ 演化到 $t=\pi/4J$（half-iSWAP）：无衰变时四个 $\varphi$ 取值都给出携带可调非平庸相位的 Bell 态（$\mathrm{Im}[\rho]\neq0$）。加入集体交叉衰变后出现**真正的非互易**：$\varphi=+\pi/2$ 方向生成 $|\Psi_-\rangle$ 保真度约 80%，$\varphi=-\pi/2$ 方向低于 50%（约 30%）——二极管非互易性与衰变协同作用，使纠缠的生成与分发具有方向性。这构成**非互易 entangling 门**的最小演示：同一器件既是定向信号路由器又是定向纠缠源。
 
+## 相干-耗散平衡的非互易：波导 QED 路线（Ren 2024）
+
+上面两条路线的非互易来自超导二极管的方向依赖电感与复数耦合；Ren 等（西安交大）提出一条**免磁场、免非线性、免复杂构型**的替代：两个相干耦合的 transmon 同时接一段传输线波导，用**相干耦合 $J$ 与耗散耦合 $\Gamma$ 的平衡**直接造出方向性。相干项可由电容 $C_c$ 或中介腔给出（$H_{\mathrm{coh}}=J\sigma_1^+\sigma_2^-+\mathrm{h.c.}$），耗散项由波导连续模的储存库工程给出（交叉衰变 $\propto\Gamma e^{\pm i\varphi}$，$\varphi=k_0 d$ 为两比特间距 $d$ 累积的相位差）。自旋算符的演化方程中，比特 $n$ 受比特 $m$ 影响的"阻尼力"为 $|F_{nm}| = |iJ^* + \frac{\Gamma}{2}e^{\mp i\varphi}|$——相干与耗散两条通道的**矢量和**。非互易度用隔离比量化：
+
+$$
+\Delta F = \frac{|F_{12}|-|F_{21}|}{|F_{12}|+|F_{21}|}\in[-1,1],
+$$
+
+$\Delta F=0$ 互易、$\Delta F=\pm1$ 完全非互易（单向影响）。平衡条件干净利落：取 $\Gamma=2J$ 且
+
+$$
+J = i\frac{\Gamma}{2}e^{i\varphi}
+$$
+
+时一个方向的阻尼力**严格为零**——对 $\varphi=(4n+3)\pi/2$（即两比特间距 $(4n+3)\lambda_0/4$，$\lambda_0$ 为光子波长）得到 $\Delta F=-1$：$Q_1$ 强烈影响 $Q_2$ 而 $Q_1$ 完全不受 $Q_2$ 影响；间距 $(4n+1)\lambda_0/4$ 则反向。间距连续调谐即在互易/非互易之间切换——这与[[circuit-qed/giant-atom|人工巨原子]]用多耦合点路径相位差塑造环境耦合是同一波导 QED 工具箱。
+
+![[assets/figures/superconducting-diode/ren2024-fig1-wqed-platform.jpg]]
+
+*波导 QED 实现平台：(a) 两比特间各类相互作用的示意；(b) 一对超导比特接一维传输线；(c) 电路实现——两个 transmon（黑）经弯折传输线（灰）产生耗散耦合，直连电容 $C_c$ 提供相干耦合；两比特沿线的间距决定耗散耦合相位差 φ。图源：Ren et al. (2024)，Fig. 1。*
+
+![[assets/figures/superconducting-diode/ren2024-fig2a-isolation-ratio.jpg]]
+
+*隔离比 ΔF 在（耗散/相干耦合比 Γ/J × 相位差 φ）参数平面上的分布：Γ=2J 时 φ=(4n+3)π/2 给 ΔF=−1、φ=(4n+1)π/2 给 ΔF=+1（完全非互易），φ=nπ 恒为互易——间距调谐即可在两种行为间连续切换。图源：Ren et al. (2024)，Fig. 2 面板 (a)。*
+
+**非互易纠缠**是该方案的新量子现象：完全非互易条件下（Γ=2J、φ=3π/2），激发 $Q_1$ 会经单向通道把激发传给 $Q_2$、产生瞬态纠缠（并发度 $C_{1e}$ 升到极大）；反过来激发 $Q_2$ 时 $Q_1$ 的阻尼力为零、两者各自独立衰减，并发度 $C_{2e}$ 恒为零——**纠缠是否产生取决于初始激发放在哪个比特上**，打破"两个全同比特在二粒子纠缠中地位相同"的直觉。间距取 $n\lambda_0/2$（互易）时两种初态的并发度恢复一致。再对其中一个比特施加共振驱动，系统可被稳定进**非互易稳态纠缠**——驱动加在"源"端时稳态并发度显著高于加在"受端"。
+
+![[assets/figures/superconducting-diode/ren2024-fig3a-nonreciprocal-entanglement.jpg]]
+
+*非互易瞬态纠缠（并发度随时间）：φ=3π/2、Γ=2J 时，初始激发 Q₁（蓝）得到升到极大的并发度 C_{1e}，初始激发 Q₂（红）的并发度 C_{2e} 恒为零——纠缠的产生取决于激发方向；对照 φ=0（互易）时两者行为一致。图源：Ren et al. (2024)，Fig. 3 面板 (a)。*
+
+与 SQUID 二极管路线的对照：SD 用对称性破缺的基态性质（方向依赖电感）+ 复数耦合造方向性，需要磁通偏置与非线性；相干-耗散平衡路线只需要**线性**耦合与储存库工程，两比特间距就是方向性旋钮——代价是依赖波导连续模的耗散（速率 Γ 本身进入动力学），且目前同样停留在理论与数值方案阶段。
+
 ## 定位与前景
 
 - **vs 耗散型非互易**：参量泵浦环形器/隔离器靠时变耗散打破互易；SD 路线的非互易来自基态对称性，"passive"（单根磁通线控制）、可片上集成；
@@ -79,7 +111,7 @@ $$
 ## 与其他概念的关系
 
 - [[circuit-qed/squid-array-resonator|SQUID 阵列谐振腔]]：共用 SQUID 非线性电感平台——对称 SQUID 给出可调互易电感，非对称 SQUID + 磁通偏置给出非互易电感；
-- [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：互易版本的比特-比特耦合；SD 把耦合常数推广为复数并赋予方向；
+- [[circuit-qed/cavity-mediated-coupling|腔介导远程耦合]]：互易版本的比特-比特耦合；SD 把耦合常数推广为复数并赋予方向；相干-耗散平衡路线（"相干-耗散平衡"一节）则把耗散本身变成方向性资源——与该词条共享"耗散也是耦合"的储存库工程语言。
 - [[circuit-qed/floquet-dynamics|Floquet 驱动动力学]]：泵浦调谐的非互易谱移属于周期驱动调制家族；
 - [[superconducting-qubits/zz-coupling|ZZ 相互作用]]：另一类可调耦合——相位型耦合的互易对照；
 - [[circuit-qed/strong-coupling|强耦合判据]]：非互易耦合同样需在退相干前完成门操作（half-iSWAP 时标 π/4J）。
@@ -94,8 +126,11 @@ $$
 | 耦合相位扫描 | φ ∈ [−π/2, π/2]；±π/2 给出最大方向性 | Dirnegger 2025 |
 | 方向性 Bell 态 | φ=π/2：\|Ψ−⟩ 保真度 ~80%；φ=−π/2：<50%（~30%）；Γ/J=1 | Dirnegger 2025 |
 | 纠缠对比度峰值 | ΔC(t=π/4J) 最大于 Γ/J=2、φ=±π/2 | Dirnegger 2025 |
+| 相干-耗散平衡完全非互易条件 | Γ=2J、间距 (4n+3)λ₀/4（φ=(4n+3)π/2）→ ΔF=−1；(4n+1)λ₀/4 → ΔF=+1；φ=nπ 互易 | Ren 2024 |
+| 非互易瞬态纠缠 | 激发 Q₁ → C_{1e} 达极大；激发 Q₂ → C_{2e}=0（Γ=2J、φ=3π/2） | Ren 2024 |
 
 ## 参考文献
 
 - Dirnegger, N., Narang, P., Arora, A. Nonreciprocal quantum information processing with superconducting diodes in circuit quantum electrodynamics (2025). arXiv:2511.20758（QAtlas 缓存：2511.20758）。
+- Ren, Y.-M., Pan, X.-F., Yao, X.-Y., Huo, X.-W., Zheng, J.-C., Hei, X.-L., Qiao, Y.-F., Li, P.-B. Nonreciprocal interaction and entanglement between two superconducting qubits (2024). arXiv:2411.06775（QAtlas 缓存：2411.06775）。
 > 完整文献库（含各篇站内全文页）见 [[references/index|参考文献库]]。
